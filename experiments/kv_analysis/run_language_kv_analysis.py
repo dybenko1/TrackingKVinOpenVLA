@@ -11,6 +11,7 @@ from transformers import AutoModelForVision2Seq, AutoProcessor
 # The processor handles input just like humands understand, text and images and transforms it to numbers for the model
 # AutoModelForVision2Seq loads the VLA model
 
+from register_kv_hooks import KVHookManager
 
 
 MODEL_ID = "openvla/openvla-7b"
@@ -49,27 +50,18 @@ def load_model():
     return vla, processor
 
 
-def inspect_kv_projection_modules(vla):
-    print("\n=== K/V projection modules ===\n")
-
-    found = 0
-
-    for name, module in vla.named_modules():
-        if name.endswith("k_proj") or name.endswith("v_proj"):
-            print(f"{name}: {type(module)}")
-            found += 1
-
-    print(f"\nFound {found} K/V projection modules.")
-
-
 def main():
     vla, processor = load_model()
 
     print("\nModel loaded successfully.")
-    print("Model type:", type(vla))
-    print("Processor type:", type(processor))
 
-    inspect_kv_projection_modules(vla)
+    kv_hooks = KVHookManager()
+
+    kv_hooks.register(vla)
+
+    print("\nHooks are registered.")
+    print("\nNo K/V tensors have been captured yet,")
+    print("\nbecause we have not run inference")
 
 
 if __name__ == "__main__":
