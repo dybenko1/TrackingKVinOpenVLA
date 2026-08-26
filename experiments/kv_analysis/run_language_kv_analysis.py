@@ -5,6 +5,7 @@ register the hooks, run inference over multiple control steps, isolate
 the language-token positions, 
 and save/compare the captured K/V values.
 """
+from PIL import Image
 import torch
 from transformers import AutoModelForVision2Seq, AutoProcessor 
 # Autoprocessor loads OpenVLA's input processor, the one transforms image and language into tensors
@@ -15,6 +16,14 @@ from register_kv_hooks import KVHookManager
 
 
 MODEL_ID = "openvla/openvla-7b"
+
+# Change this to a real image on your machine
+# TODO
+IMAGE_PATH = "experiments/kv_analysis/inputs/imagenLIBERO.png"
+
+INSTRUCTION = "pick up the red object"
+
+
 
 
 def load_model():
@@ -53,15 +62,59 @@ def load_model():
 def main():
     vla, processor = load_model()
 
-    print("\nModel loaded successfully.")
-
+    # 1. Register the hooks
     kv_hooks = KVHookManager()
-
     kv_hooks.register(vla)
 
-    print("\nHooks are registered.")
-    print("\nNo K/V tensors have been captured yet,")
-    print("\nbecause we have not run inference")
+    # 2. Load one RGB image
+    image = Image.open(IMAGE_PATH).convert("RGB")
+
+    # 3. Build the prompt format expected by OpenVLA
+    prompt = (
+        f"In: What action should the robot take to {INSTRUCTION}?\n"
+        "Out:"
+    )
+
+    # 4. Processor converts image + text into tensors
+    inputs = processor(
+        prompt,
+        image,
+    )
+
+    # 5. Move processor outputs to the model device
+    if torch.cuda.is_available():
+        inputs = inputs.to(
+            "cuda",
+            dtype=torch.bfloat16,
+        )
+
+    # Important: clear old captures before this inference.
+    kv_hooks.clear()
+
+    # 6. Run one real OpenVLA inference
+    with torch.inference_mode():
+        action = vla.predict_action(
+            **inputs,
+            unnorm_key="bridge_orig",
+            do_sample=False,
+        )
+
+    print("\nPredicted action:")
+    print(action)
+
+    # 7. The hooks have now fired.
+    kv_hooks.summary()
+
+    # Example: inspect layer 0
+    layer_0 = kv_hooks.get_layer(0)
+
+    if layer_0 is not None:
+        print("\nLayer 0:")
+        print("K:", layer_0["k"].shape)
+        print("V:", layer_0["v"].shape)
+
+    # 8. Clean up hooks when finished
+    kv_hooks.remove()
 
 
 if __name__ == "__main__":
