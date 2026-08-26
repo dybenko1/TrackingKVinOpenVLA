@@ -54,7 +54,10 @@ class KVHookManager:
             layer_key = f"layer_{layer_idx}"
 
             if layer_key not in self.activations:
-                self.activations[layer_key] = {}
+                self.activations[layer_key] = {
+                    "k": [],
+                    "v": [],
+                }
 
             # Detach so the stored tensor is not connected to PyTorch autogra used 
             # for gradient calculation. This tells that we want this tensor as data
@@ -62,7 +65,7 @@ class KVHookManager:
             
             # Move to CPU so we don't fill GPU memory while
             # collecting tensors from all 32 layers.
-            self.activations[layer_key][kind] = (
+            self.activations[layer_key][kind].append(
                 output.detach().cpu()
                 # detach() removes the tensor from the autograd graph;
             )
@@ -163,19 +166,34 @@ class KVHookManager:
         ):
             values = self.activations[layer_name]
 
-            k = values.get("k")
-            v = values.get("v")
-
             print(f"\n{layer_name}")
 
-            if k is not None:
-                print(
-                    f"  K shape: {tuple(k.shape)} "
-                    f"dtype={k.dtype}"
-                )
+            for kind in ["k", "v"]:
+                tensors = values.get(kind, [])
 
-            if v is not None:
-                print(
-                    f"  V shape: {tuple(v.shape)} "
-                    f"dtype={v.dtype}"
-                )
+                print(f"  {kind.upper()} calls: {len(tensors)}")
+
+                for call_idx, tensor in enumerate(tensors):
+                    print(
+                        f"    call {call_idx}: "
+                        f"shape={tuple(tensor.shape)} "
+                        f"dtype={tensor.dtype}"
+                    )
+
+    def get_prefill(self, layer_idx):
+        """
+        Return the K and V tensors from the first forward call,
+        which corresponds to the prefill call in the current experiment.
+        """
+        layer_data = self.get_layer(layer_idx)
+
+        if layer_data is None:
+            return None
+
+        if len(layer_data["k"]) == 0 or len(layer_data["v"]) == 0:
+            return None
+
+        return {
+            "k": layer_data["k"][0],
+            "v": layer_data["v"][0],
+        }

@@ -106,12 +106,12 @@ def main():
     kv_hooks.summary()
 
     # Example: inspect layer 0
-    layer_0 = kv_hooks.get_layer(0)
+    prefill_0 = kv_hooks.get_prefill(0)
 
-    if layer_0 is not None:
-        print("\nLayer 0:")
-        print("K:", layer_0["k"].shape)
-        print("V:", layer_0["v"].shape)
+    if prefill_0 is not None:
+        print("\nLayer 0 prefill:")
+        print("K:", prefill_0["k"].shape)
+        print("V:", prefill_0["v"].shape)
 
     # 8. Clean up hooks when finished
     kv_hooks.remove()
