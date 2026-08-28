@@ -197,3 +197,30 @@ class KVHookManager:
             "k": layer_data["k"][0],
             "v": layer_data["v"][0],
         }
+
+    def get_language_prefill(
+    self,
+    layer_idx,
+    num_visual_tokens=256,
+    num_prompt_tokens=19,
+    ):
+        prefill = self.get_prefill(layer_idx)
+
+        if prefill is None:
+            return None
+
+        K = prefill["k"]
+        V = prefill["v"]
+
+        language_positions = [0] + list(
+            range(
+                num_visual_tokens + 1,
+                num_visual_tokens + num_prompt_tokens,
+            )
+        )
+
+        return {
+            "k": K[:, language_positions, :],
+            "v": V[:, language_positions, :],
+            "positions": language_positions,
+        }

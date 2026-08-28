@@ -81,25 +81,6 @@ def main():
         image,
     )
 
-    # Inspect the original language input before visual tokens
-    # are inserted into the LLM sequence.
-    input_ids = inputs["input_ids"]
-
-    print("\n=== Original text input ===")
-    print("input_ids shape:", input_ids.shape)
-
-    tokenizer = processor.tokenizer
-
-    token_ids = input_ids[0].tolist() # Grabbing tokens ids from the prompt [0] only, because image is [1]
-    tokens = tokenizer.convert_ids_to_tokens(token_ids)
-
-    for idx, (token_id, token) in enumerate(zip(token_ids, tokens)):
-        print(
-            f"text position {idx:2d}: "
-            f"id={token_id:6d}  token={repr(token)}"
-        )
-
-
     # 5. Move processor outputs to the model device
     if torch.cuda.is_available():
         inputs = inputs.to(
@@ -121,73 +102,14 @@ def main():
     print("\nPredicted action:")
     print(action)
 
-    # 7. The hooks have now fired.
-    kv_hooks.summary()
+    #7. Extract language K/V
+    language_0 = kv_hooks.get_language_prefill(0)
 
-    # Example: inspect layer 0
-    prefill_0 = kv_hooks.get_prefill(0)
-
-    if prefill_0 is not None:
-        print("\nLayer 0 prefill:")
-        print("K:", prefill_0["k"].shape)
-        print("V:", prefill_0["v"].shape)
-
-        # Number of positions entering the LLM during prefill.
-        prefill_seq_len = prefill_0["k"].shape[1]
-
-        # Number of original textual tokens.
-        text_seq_len = input_ids.shape[1]
-
-        # OpenVLA inserts the visual patch embeddings after BOS.
-        num_visual_tokens = prefill_seq_len - text_seq_len
-
-        print("\n=== Multimodal sequence composition ===")
-        print("Prefill sequence length:", prefill_seq_len)
-        print("Text token count:", text_seq_len)
-        print("Visual token count:", num_visual_tokens)
-
-        # OpenVLA sequence:
-        #
-        # [BOS] [VISUAL TOKENS] [REMAINING TEXT TOKENS]
-        #
-        bos_position = 0
-
-        visual_start = 1
-        visual_end = visual_start + num_visual_tokens
-
-        language_start = visual_end
-
-        print("\nPosition ranges inside LLM prefill:")
-        print(f"BOS:                 {bos_position}")
-        print(
-            f"Visual tokens:       "
-            f"{visual_start} ... {visual_end - 1}"
-        )
-        print(
-            f"Language tokens:     "
-            f"{language_start} ... {prefill_seq_len - 1}"
-        )
-
-        print("\n=== Text token -> multimodal position mapping ===")
-
-        for text_idx, (token_id, token) in enumerate(
-            zip(token_ids, tokens)
-        ):
-            if text_idx == 0:
-                multimodal_pos = 0
-            else:
-                multimodal_pos = (
-                    num_visual_tokens + text_idx
-                )
-
-            print(
-                f"text_idx={text_idx:2d}  "
-                f"multimodal_pos={multimodal_pos:3d}  "
-                f"id={token_id:6d}  "
-                f"token={repr(token)}"
-            )
-
-    
+    if language_0 is not None:
+        print("\nLayer 0 language prefill:")
+        print("K:", language_0["k"].shape)
+        print("V:", language_0["v"].shape)
+        print("Positions:", language_0["positions"])
 
     # 8. Clean up hooks when finished
     kv_hooks.remove()
