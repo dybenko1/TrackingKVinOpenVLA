@@ -154,3 +154,6 @@ wandb/
 
 # Simulation videos
 *.mp4
+
+# KV values cached in hooks
+*.pt
