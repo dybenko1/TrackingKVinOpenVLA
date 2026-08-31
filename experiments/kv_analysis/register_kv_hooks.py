@@ -201,8 +201,8 @@ class KVHookManager:
     def get_language_prefill(
     self,
     layer_idx,
+    num_prompt_tokens,
     num_visual_tokens=256,
-    num_prompt_tokens=19,
     ):
         prefill = self.get_prefill(layer_idx)
 
@@ -212,6 +212,8 @@ class KVHookManager:
         K = prefill["k"]
         V = prefill["v"]
 
+        # OpenVLA inserts the visual tokens immediatly after the BOS token. 
+        # Keep BOS and all roiginal prompt tokens, excluiding visual tokens
         language_positions = [0] + list(
             range(
                 num_visual_tokens + 1,
