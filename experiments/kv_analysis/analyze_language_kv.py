@@ -350,6 +350,101 @@ def main():
         )
 
 
+    # --------------------------------------------------
+    # Token × time heatmap
+    # --------------------------------------------------
+
+    import numpy as np
+
+    selected_layer = 31
+
+    num_steps = len(trajectory_kv)
+    num_tokens = trajectory_kv[0][selected_layer]["v"].shape[1]
+
+    # rows = tokens
+    # columns = transitions: step 0->1, 1->2, ...
+    v_l2_heatmap = np.zeros((num_tokens, num_steps - 1))
+
+    for token_idx in range(num_tokens):
+
+        for step in range(num_steps - 1):
+
+            current_v = trajectory_kv[step][selected_layer]["v"][
+                0, token_idx, :
+            ]
+
+            next_v = trajectory_kv[step + 1][selected_layer]["v"][
+                0, token_idx, :
+            ]
+
+            v_l2_heatmap[token_idx, step] = relative_l2(
+                current_v,
+                next_v
+            )
+
+    fig, ax = plt.subplots(figsize=(16, 10))
+
+    im = ax.imshow(
+        v_l2_heatmap,
+        aspect="auto",
+        interpolation="nearest",
+    )
+
+    ax.set_xlabel("Control-step transition")
+    ax.set_ylabel("Language token")
+
+    ax.set_title(
+        f"Token × Time V Relative L2 — Layer {selected_layer}"
+    )
+
+    ax.set_yticks(range(num_tokens))
+    ax.set_yticklabels(
+        [f"{i}: {tokens[i]}" for i in range(num_tokens)]
+    )
+
+    phase_boundaries = {
+        "reach/align": 30,
+        "grasp": 47,
+        "lift/transport": 57,
+        "approach plate": 75,
+        "place/release": 87,
+    }
+
+    for label, step in phase_boundaries.items():
+        ax.axvline(
+            step,
+            linestyle="--",
+            linewidth=1.2,
+        )
+
+        ax.text(
+            step + 0.5,
+            -0.7,
+            label,
+            rotation=90,
+            va="bottom",
+            fontsize=8,
+        )
+
+    cbar = fig.colorbar(im, ax=ax)
+    cbar.set_label("Relative L2 change")
+
+    plt.tight_layout()
+
+    heatmap_path = os.path.join(
+        PLOTS_DIR,
+        f"token_time_v_relative_l2_layer{selected_layer}.png"
+    )
+
+    plt.savefig(
+        heatmap_path,
+        dpi=200,
+        bbox_inches="tight",
+    )
+
+    plt.close()
+
+    print(f"Saved token × time heatmap to: {heatmap_path}")
 
 if __name__ == "__main__":
     main()

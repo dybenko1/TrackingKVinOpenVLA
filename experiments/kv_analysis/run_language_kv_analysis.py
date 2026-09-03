@@ -5,7 +5,7 @@ register the hooks, run inference over multiple control steps, isolate
 the language-token positions, 
 and save/compare the captured K/V values.
 """
-from PIL import Image
+from PIL import Image, ImageDraw
 import os
 import torch
 from transformers import AutoModelForVision2Seq, AutoProcessor 
@@ -150,11 +150,27 @@ def main():
     video_frames = []
 
     for step in range(max_steps + num_steps_wait):
+        # Prepare current simulator frame
+        frame_np = np.rot90(obs["agentview_image"], 2).copy()
+        frame = Image.fromarray(frame_np)
 
-         # Save current simulator frame
-        video_writer.append_data(
-            np.rot90(obs["agentview_image"], 2)
+        # Add step label
+        draw = ImageDraw.Draw(frame)
+
+        if step < num_steps_wait:
+            label = f"Settling: {step}"
+        else:
+            control_step = step - num_steps_wait
+            label = f"Control step: {control_step}"
+
+        draw.text(
+            (10, 10),
+            label,
+            fill="white",
         )
+
+        # Save labeled frame to video
+        video_writer.append_data(np.array(frame))
 
         # Let the environment settle before running the policy
         if step < num_steps_wait:
@@ -163,6 +179,8 @@ def main():
 
         # Save current simulator frame for video
         video_frames.append(obs["agentview_image"].copy())
+
+        
 
         # Current LIBERO observation
         image_np = np.rot90(obs["agentview_image"], 2)
