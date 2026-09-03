@@ -9,6 +9,8 @@ import torch.nn.functional as F
 import matplotlib.pyplot as plt
 import os
 
+from transformers import AutoTokenizer
+
 SELECTED_LAYERS = [0, 5, 10, 15, 20, 25, 31]
 
 PLOTS_DIR = "experiments/kv_analysis/outputs/plots"
@@ -58,7 +60,21 @@ def main():
         weights_only=False,
     )
 
+    prompt_token_ids = data["prompt_token_ids"]
     trajectory_kv = data["trajectory_kv"]
+
+    tokenizer = AutoTokenizer.from_pretrained(
+        data["model_id"],
+        trust_remote_code=True,
+    )
+
+    tokens = tokenizer.convert_ids_to_tokens(
+        prompt_token_ids.tolist()
+    )
+
+    print("\nPrompt tokens:")
+    for i, token in enumerate(tokens):
+        print(i, token)
 
     print("Instruction:")
     print(data["instruction"])
@@ -247,6 +263,91 @@ def main():
         "temporal_v_relative_l2.png",
     )
 
+
+    # --------------------------------------------------
+    # Token-wise analysis
+    # --------------------------------------------------
+
+    selected_layer = 31
+
+    num_tokens = trajectory_kv[0][selected_layer]["k"].shape[1]
+
+    token_results = []
+
+    for token_idx in range(num_tokens):
+
+        k_cosines = []
+        v_cosines = []
+
+        k_l2 = []
+        v_l2 = []
+
+        for step in range(len(trajectory_kv) - 1):
+
+            current = trajectory_kv[step][selected_layer]
+            next_step = trajectory_kv[step + 1][selected_layer]
+
+            # One token only: [4096]
+            k_current = current["k"][0, token_idx, :]
+            k_next = next_step["k"][0, token_idx, :]
+
+            v_current = current["v"][0, token_idx, :]
+            v_next = next_step["v"][0, token_idx, :]
+
+            k_cosines.append(
+                cosine_similarity(k_current, k_next)
+            )
+
+            v_cosines.append(
+                cosine_similarity(v_current, v_next)
+            )
+
+            k_l2.append(
+                relative_l2(k_current, k_next)
+            )
+
+            v_l2.append(
+                relative_l2(v_current, v_next)
+            )
+
+        token_results.append(
+            {
+                "token_idx": token_idx,
+                "k_cosine": sum(k_cosines) / len(k_cosines),
+                "v_cosine": sum(v_cosines) / len(v_cosines),
+                "k_relative_l2": sum(k_l2) / len(k_l2),
+                "v_relative_l2": sum(v_l2) / len(v_l2),
+            }
+        )
+
+
+    print(f"\nToken-wise stability at layer {selected_layer}:\n")
+
+    print(
+        f"{'Idx':<6}"
+        f"{'Token':<20}"
+        f"{'K cosine':<14}"
+        f"{'V cosine':<14}"
+        f"{'K rel-L2':<14}"
+        f"{'V rel-L2':<14}"
+    )
+
+    for result in token_results:
+
+        token_idx = result["token_idx"]
+
+        # language position 0 is BOS,
+        # then the remaining language tokens correspond to prompt tokens 1...
+        token = tokens[token_idx] if token_idx < len(tokens) else "?"
+
+        print(
+            f"{token_idx:<6}"
+            f"{token:<20}"
+            f"{result['k_cosine']:<14.6f}"
+            f"{result['v_cosine']:<14.6f}"
+            f"{result['k_relative_l2']:<14.6f}"
+            f"{result['v_relative_l2']:<14.6f}"
+        )
 
 
 
