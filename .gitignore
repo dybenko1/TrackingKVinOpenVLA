@@ -157,3 +157,7 @@ wandb/
 
 # KV values cached in hooks
 *.pt
+
+# Generated KV-analysis artifacts (data, figures, and rollout videos)
+experiments/kv_analysis/outputs/
+experiments/kv_analysis/outputs_legacy/

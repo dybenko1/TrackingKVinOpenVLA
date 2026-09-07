@@ -8,18 +8,17 @@ import torch.nn.functional as F
 
 import matplotlib.pyplot as plt
 import os
+from pathlib import Path
 
 from transformers import AutoTokenizer
 import numpy as np
 
 SELECTED_LAYERS = [0, 5, 10, 15, 20, 25, 31]
 
-PLOTS_DIR = "experiments/kv_analysis/outputs/plots"
-
-TRAJECTORY_PATH = (
-    "experiments/kv_analysis/outputs/"
-    "trajectory_task0_episode0.pt"
-)
+KV_ANALYSIS_DIR = Path(__file__).resolve().parents[1]
+PLOTS_DIR = KV_ANALYSIS_DIR / "outputs" / "plots"
+DATA_DIR = KV_ANALYSIS_DIR / "outputs" / "data"
+TRAJECTORY_PATH = DATA_DIR / "trajectory_task0_episode0.pt"
 
 def cosine_similarity(a, b):
     """
@@ -182,7 +181,7 @@ def main():
     plt.tight_layout()
 
     plt.savefig(
-        "experiments/kv_analysis/outputs/kv_relative_l2_by_layer.png",
+        PLOTS_DIR / "kv_relative_l2_by_layer.png",
         dpi=300
     )
     plt.close()
@@ -205,7 +204,7 @@ def main():
     plt.tight_layout()
 
     plt.savefig(
-        "experiments/kv_analysis/outputs/kv_cosine_by_layer.png",
+        PLOTS_DIR / "kv_cosine_by_layer.png",
         dpi=300
     )
     plt.close()
@@ -214,7 +213,7 @@ def main():
     # Temporal analysis
     # --------------------------------------------------
 
-    os.makedirs(PLOTS_DIR, exist_ok=True)
+    PLOTS_DIR.mkdir(parents=True, exist_ok=True)
 
     temporal_results = {}
 
@@ -585,8 +584,7 @@ def main():
     plt.tight_layout()
 
     plt.savefig(
-        "experiments/kv_analysis/outputs/"
-        "semantic_block_v_relative_l2_phases.png",
+        PLOTS_DIR / "semantic_block_v_relative_l2_phases.png",
         dpi=200,
     )
 
@@ -745,8 +743,7 @@ def main():
     plt.tight_layout()
 
     plt.savefig(
-        "experiments/kv_analysis/outputs/"
-        "memory_v_median_iqr_layers.png",
+        PLOTS_DIR / "memory_v_median_iqr_layers.png",
         dpi=200,
     )
 
@@ -798,8 +795,7 @@ def main():
     plt.tight_layout()
 
     plt.savefig(
-        "experiments/kv_analysis/outputs/"
-        "memory_v_median_heatmap.png",
+        PLOTS_DIR / "memory_v_median_heatmap.png",
         dpi=200,
     )
 
@@ -854,28 +850,24 @@ def main():
     plt.tight_layout()
 
     plt.savefig(
-        "experiments/kv_analysis/outputs/"
-        "memory_v_iqr_heatmap.png",
+        PLOTS_DIR / "memory_v_iqr_heatmap.png",
         dpi=200,
     )
 
     plt.close()
 
     np.save(
-        "experiments/kv_analysis/outputs/"
-        "memory_v_l2_all_layers.npy",
+        DATA_DIR / "memory_v_l2_all_layers.npy",
         memory_v_l2,
     )
 
     np.save(
-        "experiments/kv_analysis/outputs/"
-        "memory_v_median.npy",
+        DATA_DIR / "memory_v_median.npy",
         memory_median,
     )
 
     np.save(
-        "experiments/kv_analysis/outputs/"
-        "memory_v_iqr.npy",
+        DATA_DIR / "memory_v_iqr.npy",
         memory_iqr,
     )
 

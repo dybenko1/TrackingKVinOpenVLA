@@ -13,7 +13,8 @@ INITIAL_STATE_ID = 0
 
 RESOLUTION = 256
 
-OUTPUT_DIR = Path("experiments/kv_analysis/outputs")
+KV_ANALYSIS_DIR = Path(__file__).resolve().parents[1]
+OUTPUT_DIR = KV_ANALYSIS_DIR / "outputs" / "plots"
 OUTPUT_PATH = OUTPUT_DIR / "libero_observation.png"
 
 

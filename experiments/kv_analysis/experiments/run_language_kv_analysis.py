@@ -7,13 +7,14 @@ and save/compare the captured K/V values.
 """
 from PIL import Image, ImageDraw
 import os
+from pathlib import Path
 import torch
 from transformers import AutoModelForVision2Seq, AutoProcessor 
 
 from libero.libero import benchmark, get_libero_path
 from libero.libero.envs import OffScreenRenderEnv
 
-from register_kv_hooks import KVHookManager
+from experiments.kv_analysis.analysis.register_kv_hooks import KVHookManager
 
 import numpy as np
 
@@ -24,7 +25,9 @@ import imageio
 # running the openvla finetuned for LIBERO, not the base model
 MODEL_ID = "openvla/openvla-7b-finetuned-libero-spatial"
 
-OUTPUT_DIR = "experiments/kv_analysis/outputs"
+KV_ANALYSIS_DIR = Path(__file__).resolve().parents[1]
+OUTPUT_DIR = KV_ANALYSIS_DIR / "outputs" / "data"
+VIDEO_DIR = KV_ANALYSIS_DIR / "outputs" / "videos"
 
 TASK_SUITE = "libero_spatial"
 
@@ -132,7 +135,8 @@ def main():
     # Store language K/V for every OpenVLA control step
     trajectory_kv = []
 
-    video_path = "experiments/kv_analysis/libero_trajectory.mp4"
+    VIDEO_DIR.mkdir(parents=True, exist_ok=True)
+    video_path = VIDEO_DIR / "libero_trajectory.mp4"
     video_writer = imageio.get_writer(
         video_path,
         fps=20,
@@ -275,11 +279,8 @@ def main():
     print(f"\nSaved video to: {video_path}")
 
     # Saving KV to disk. Create output directory if it does not exist
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
-    kv_path = os.path.join(
-        OUTPUT_DIR,
-        "trajectory_task0_episode0.pt",
-    )
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    kv_path = OUTPUT_DIR / "trajectory_task0_episode0.pt"
     torch.save(
         {
             "model_id": MODEL_ID,
