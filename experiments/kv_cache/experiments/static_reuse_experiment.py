@@ -1,20 +1,14 @@
-"""Static stale-language-KV intervention for two OpenVLA control observations.
+"""Offline stale-language-KV substitution experiment for OpenVLA.
 
-This is deliberately *not* a compute-saving implementation.  It executes both
-multimodal prefills normally, clones their immediate post-prefill DynamicCaches,
-and substitutes selected language K/V slots from the previous observation into
-the current observation's fresh cache before decoding action tokens.
+This is not a compute-saving implementation. Both multimodal prefills are
+computed normally, then selected language K/V from step t replaces the
+corresponding entries in the fresh t+1 cache.
 
-Example (run inside the OpenVLA Docker environment):
+Important: the first action token still comes from the fresh t+1 prefill logits.
+Therefore, stale KV can only affect action tokens 2-7. This experiment tests
+post-prefill cache substitution, not yet full cross-step KV reuse during prefill.
 
-    python -m experiments.kv_cache.experiments.static_reuse_experiment \
-        --image-prev /path/to/step_t.png \
-        --image-current /path/to/step_t_plus_1.png \
-        --instruction "pick up the black bowl between the plate and the ramekin and place it on the plate" \
-        --reuse-layers 0-13 --reuse-component kv
-
-For an offline trajectory batch (no simulator interaction):
-
+Example:
     python -m experiments.kv_cache.experiments.static_reuse_experiment \
         --trajectory-dir experiments/kv_analysis/inputs/trajectory_frames \
         --reuse-layers 0-13 --reuse-component kv
