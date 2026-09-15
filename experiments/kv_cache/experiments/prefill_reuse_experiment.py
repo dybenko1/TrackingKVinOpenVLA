@@ -37,8 +37,9 @@ from __future__ import annotations
 import argparse
 import inspect
 import json
+import re
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Sequence
+from typing import Any, Dict, List, Optional, Sequence, Tuple
 
 import numpy as np
 import torch
@@ -242,13 +243,19 @@ def action_metrics(baseline_ids: torch.Tensor, reused_ids: torch.Tensor, baselin
     }
 
 
-def evaluate_pair(
+def evaluate_pair_from_snapshots(
     model: Any, processor: Any, device: torch.device, unnorm_key: str, action_dim: int,
-    previous_image: Path, current_image: Path, instruction: str, reuse_layers: Sequence[int], component: str,
+    previous: Dict[str, Any], baseline: Dict[str, Any], current_image: Path, instruction: str,
+    reuse_layers: Sequence[int], component: str,
 ) -> Dict[str, Any]:
+    """Evaluate one pair using already-captured normal prefills.
+
+    Batch mode passes the preceding pair's current baseline snapshot as
+    ``previous``.  This is only an efficiency reuse of an already-normal
+    prefill snapshot; it does not alter either the fresh baseline or the
+    during-prefill intervention for the evaluated current image.
+    """
     prompt = f"In: What action should the robot take to {instruction.lower()}?\nOut:"
-    previous = capture_normal_observation(model, processor, prompt, previous_image, device, unnorm_key)
-    baseline = capture_normal_observation(model, processor, prompt, current_image, device, unnorm_key)
     validate_compatible_prefills(
         previous["cache"], baseline["cache"], previous["input_ids"], baseline["input_ids"],
         previous["layout"], baseline["layout"], reuse_layers,
@@ -297,7 +304,6 @@ def evaluate_pair(
             "reuse_component": component,
             "intervention": "during_prefill_before_attention_via_DynamicCache_update",
         },
-        "previous_image": str(previous_image),
         "current_image": str(current_image),
         "layout": baseline["layout"],
         "cache": cache_summary(baseline["cache"]),
@@ -315,19 +321,233 @@ def evaluate_pair(
     return result
 
 
+def evaluate_pair(
+    model: Any, processor: Any, device: torch.device, unnorm_key: str, action_dim: int,
+    previous_image: Path, current_image: Path, instruction: str, reuse_layers: Sequence[int], component: str,
+) -> Dict[str, Any]:
+    """Single-pair wrapper preserving the original CLI behavior."""
+    prompt = f"In: What action should the robot take to {instruction.lower()}?\nOut:"
+    previous = capture_normal_observation(model, processor, prompt, previous_image, device, unnorm_key)
+    baseline = capture_normal_observation(model, processor, prompt, current_image, device, unnorm_key)
+    result = evaluate_pair_from_snapshots(
+        model, processor, device, unnorm_key, action_dim, previous, baseline, current_image,
+        instruction, reuse_layers, component,
+    )
+    result["previous_image"] = str(previous_image)
+    return result
+
+
+def discover_trajectory_frames(trajectory_dir: Path) -> Tuple[List[Dict[str, Any]], Optional[Dict[str, Any]]]:
+    """Return contiguous ordered frames, preferring rollout metadata when present."""
+    metadata_path = trajectory_dir / "trajectory_metadata.json"
+    metadata: Optional[Dict[str, Any]] = None
+    if metadata_path.is_file():
+        metadata = json.loads(metadata_path.read_text())
+        frames = list(metadata.get("frames", []))
+    else:
+        frames = []
+        for image_path in trajectory_dir.glob("step_*.png"):
+            match = re.fullmatch(r"step_(\d+)\.png", image_path.name)
+            if match:
+                frames.append({"step": int(match.group(1)), "image": image_path.name})
+    if len(frames) < 2:
+        raise ValueError(f"Need at least two trajectory frames in {trajectory_dir}.")
+    frames = sorted(frames, key=lambda frame: int(frame["step"]))
+    for expected, frame in enumerate(frames, start=int(frames[0]["step"])):
+        if int(frame["step"]) != expected:
+            raise ValueError("Trajectory frame indices must be consecutive; refusing non-adjacent pairing.")
+        image_path = trajectory_dir / frame["image"]
+        if not image_path.is_file():
+            raise FileNotFoundError(f"Trajectory frame listed but absent: {image_path}")
+    return frames, metadata
+
+
+def summarize_trajectory(results: Sequence[Dict[str, Any]]) -> Dict[str, Any]:
+    """Aggregate compact action-token and decoded-action sensitivity metrics."""
+    if not results:
+        raise ValueError("Cannot summarize an empty trajectory result set.")
+    exact = np.asarray([item["action_token_ids_exactly_equal"] for item in results], dtype=bool)
+    token_one = np.asarray([item["action_token_1_changed"] for item in results], dtype=bool)
+    token_differences = np.asarray(
+        [
+            np.asarray(item["baseline_action_token_ids"])
+            != np.asarray(item["prefill_reuse_action_token_ids"])
+            for item in results
+        ],
+        dtype=bool,
+    )
+    expected_shape = (len(results), 7)
+    assert token_differences.ndim == 2 and token_differences.shape == expected_shape, (
+        f"Expected element-wise [pair, action-token] differences with shape {expected_shape}, "
+        f"got {token_differences.shape}."
+    )
+    l2 = np.asarray([item["action_difference_l2"] for item in results], dtype=float)
+    absolute = np.asarray([item["action_difference_absolute_per_dimension"] for item in results], dtype=float)
+    max_index = int(np.argmax(l2))
+    changed_pairs = [
+        {
+            "previous_step": item["previous_step"],
+            "current_step": item["current_step"],
+            "differing_action_token_positions_1_indexed": item["differing_action_token_positions_1_indexed"],
+            "action_difference_l2": item["action_difference_l2"],
+        }
+        for item in results
+        if not item["action_token_ids_exactly_equal"]
+    ]
+    count = len(results)
+    return {
+        "number_of_evaluated_pairs": count,
+        "pairs_with_exact_7_token_equality": int(exact.sum()),
+        "percentage_with_exact_7_token_equality": float(100.0 * exact.mean()),
+        "pairs_with_any_action_token_change": int((~exact).sum()),
+        "percentage_with_any_action_token_change": float(100.0 * (~exact).mean()),
+        "pairs_with_action_token_1_change": int(token_one.sum()),
+        "percentage_with_action_token_1_change": float(100.0 * token_one.mean()),
+        "total_number_of_changed_action_tokens": int(token_differences.sum()),
+        "changed_token_count_by_position_1_to_7": token_differences.sum(axis=0).astype(int).tolist(),
+        "mean_decoded_action_l2_difference": float(l2.mean()),
+        "maximum_decoded_action_l2_difference": float(l2.max()),
+        "pair_with_maximum_l2_difference": {
+            "previous_step": results[max_index]["previous_step"],
+            "current_step": results[max_index]["current_step"],
+            "action_difference_l2": float(l2[max_index]),
+        },
+        "mean_absolute_action_difference_per_dimension": absolute.mean(axis=0).tolist(),
+        "maximum_absolute_action_difference_observed": float(absolute.max()),
+        "changed_pairs": changed_pairs,
+    }
+
+
+def default_trajectory_output(reuse_layers_spec: str, component: str) -> Path:
+    """Use configuration-specific filenames so K/V/KV runs never overwrite."""
+    safe_layers = re.sub(r"[^0-9A-Za-z-]+", "_", reuse_layers_spec).strip("_")
+    return PREFILL_OUTPUT_DIR / f"trajectory_layers_{safe_layers}_{component}.json"
+
+
+def print_trajectory_summary(summary: Dict[str, Any]) -> None:
+    print(f"Pairs evaluated: {summary['number_of_evaluated_pairs']}")
+    print(
+        "Exact 7-token matches: "
+        f"{summary['pairs_with_exact_7_token_equality']} "
+        f"({summary['percentage_with_exact_7_token_equality']:.2f}%)"
+    )
+    print(
+        "Action-token-1 changes: "
+        f"{summary['pairs_with_action_token_1_change']} "
+        f"({summary['percentage_with_action_token_1_change']:.2f}%)"
+    )
+    print(f"Mean decoded-action L2: {summary['mean_decoded_action_l2_difference']:.8f}")
+    print(f"Maximum decoded-action L2: {summary['maximum_decoded_action_l2_difference']:.8f}")
+    for item in summary["changed_pairs"]:
+        print(
+            f"  {item['previous_step']:03d}->{item['current_step']:03d}: "
+            f"changed tokens {item['differing_action_token_positions_1_indexed']}, "
+            f"L2={item['action_difference_l2']:.8f}"
+        )
+
+
+def run_trajectory_batch(
+    args: Any, model: Any, processor: Any, device: torch.device, unnorm_key: str,
+    action_dim: int, reuse_layers: Sequence[int], report: Dict[str, Any],
+) -> None:
+    """Evaluate i->i+1 pairs offline; never steps or resets LIBERO."""
+    frames, metadata = discover_trajectory_frames(args.trajectory_dir)
+    instruction = args.instruction or (metadata or {}).get("task_description")
+    if not instruction:
+        raise ValueError("Trajectory mode needs --instruction when trajectory_metadata.json has no task_description.")
+    if args.max_pairs is not None and args.max_pairs < 1:
+        raise ValueError("--max-pairs must be >= 1.")
+    pairs = list(zip(frames[:-1], frames[1:]))
+    if args.max_pairs is not None:
+        pairs = pairs[: args.max_pairs]
+    if not pairs:
+        raise ValueError("No adjacent trajectory pairs selected.")
+
+    prompt = f"In: What action should the robot take to {instruction.lower()}?\nOut:"
+    previous_frame = pairs[0][0]
+    previous_snapshot = capture_normal_observation(
+        model, processor, prompt, args.trajectory_dir / previous_frame["image"], device, unnorm_key
+    )
+    results: List[Dict[str, Any]] = []
+    for previous_frame, current_frame in pairs:
+        current_snapshot = capture_normal_observation(
+            model, processor, prompt, args.trajectory_dir / current_frame["image"], device, unnorm_key
+        )
+        result = evaluate_pair_from_snapshots(
+            model, processor, device, unnorm_key, action_dim, previous_snapshot, current_snapshot,
+            args.trajectory_dir / current_frame["image"], instruction, reuse_layers, args.reuse_component,
+        )
+        result.update(
+            {
+                "previous_step": int(previous_frame["step"]),
+                "current_step": int(current_frame["step"]),
+                "previous_image": previous_frame["image"],
+                "current_image": current_frame["image"],
+            }
+        )
+        results.append(result)
+        # This is the exact fresh baseline snapshot just computed for current;
+        # retain it only because it becomes the next pair's previous observation.
+        previous_snapshot = current_snapshot
+
+    configuration = {
+        "mode": "offline_adjacent_trajectory",
+        "trajectory_dir": str(args.trajectory_dir),
+        "instruction": instruction,
+        "model_id": args.model_id,
+        "unnorm_key": unnorm_key,
+        "reuse_layers": list(reuse_layers),
+        "reuse_component": args.reuse_component,
+        "max_pairs": args.max_pairs,
+        "pair_semantics": "Each result evaluates only adjacent i->i+1 recorded observations; no action is applied to LIBERO.",
+        "intervention": "during_prefill_before_attention_via_DynamicCache_update",
+    }
+    summary = summarize_trajectory(results)
+    output = args.batch_output or default_trajectory_output(args.reuse_layers, args.reuse_component)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text(
+        json.dumps(
+            {
+                "configuration": configuration,
+                "runtime_attention_report": report,
+                "per_pair_results": results,
+                "batch_summary": summary,
+            },
+            indent=2,
+        )
+        + "\n"
+    )
+    print_trajectory_summary(summary)
+    print("Saved trajectory result:", output)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--model-id", default=DEFAULT_MODEL_ID)
-    parser.add_argument("--image-prev", required=True, type=Path)
-    parser.add_argument("--image-current", required=True, type=Path)
-    parser.add_argument("--instruction", required=True)
+    parser.add_argument("--image-prev", type=Path, help="Previous image in single-pair mode.")
+    parser.add_argument("--image-current", type=Path, help="Current image in single-pair mode.")
+    parser.add_argument("--trajectory-dir", type=Path, help="Offline trajectory directory containing step_*.png frames.")
+    parser.add_argument("--max-pairs", type=int, default=None, help="Evaluate only the first N adjacent trajectory pairs.")
+    parser.add_argument("--instruction", help="Required for single-pair mode; defaults to trajectory metadata in trajectory mode.")
     parser.add_argument("--unnorm-key", default=None)
     parser.add_argument("--reuse-layers", default="0-13")
     parser.add_argument("--reuse-component", choices=("k", "v", "kv"), default="kv")
     parser.add_argument("--output", type=Path, default=PREFILL_OUTPUT_DIR / "prefill_reuse_result.json")
+    parser.add_argument("--batch-output", type=Path, default=None, help="Optional trajectory JSON path; defaults to a configuration-specific filename.")
     args = parser.parse_args()
-    if not args.image_prev.is_file() or not args.image_current.is_file():
-        raise FileNotFoundError("Both --image-prev and --image-current must be existing image files.")
+    single_pair = args.image_prev is not None or args.image_current is not None
+    trajectory = args.trajectory_dir is not None
+    if single_pair and trajectory:
+        raise ValueError("Use either --image-prev/--image-current or --trajectory-dir, not both.")
+    if not single_pair and not trajectory:
+        raise ValueError("Specify either --image-prev plus --image-current, or --trajectory-dir.")
+    if single_pair:
+        if args.image_prev is None or args.image_current is None or not args.instruction:
+            raise ValueError("Single-pair mode requires --image-prev, --image-current, and --instruction.")
+        if not args.image_prev.is_file() or not args.image_current.is_file():
+            raise FileNotFoundError("Both --image-prev and --image-current must be existing image files.")
+    elif not args.trajectory_dir.is_dir():
+        raise FileNotFoundError(f"Trajectory directory not found: {args.trajectory_dir}")
 
     model, processor, device = load_model_and_processor(args.model_id)
     report = runtime_attention_report(model)
@@ -335,20 +555,24 @@ def main() -> None:
     print("Active attention:", report["attention_class"], "(implementation:", report["attention_implementation"], ")")
     reuse_layers = parse_layer_spec(args.reuse_layers)
     unnorm_key = resolve_unnorm_key(model, args.unnorm_key)
-    result = evaluate_pair(
-        model, processor, device, unnorm_key, model.get_action_dim(unnorm_key), args.image_prev,
-        args.image_current, args.instruction, reuse_layers, args.reuse_component,
-    )
-    result["runtime_attention_report"] = report
-    args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(json.dumps(result, indent=2) + "\n")
-    print("Baseline action-token IDs:", result["baseline_action_token_ids"])
-    print("During-prefill-reuse action-token IDs:", result["prefill_reuse_action_token_ids"])
-    print("Action token 1 changed:", result["action_token_1_changed"])
-    print("Actions exactly equal:", result["actions_exactly_equal"])
-    print(f"L2 action difference: {result['action_difference_l2']:.8f}")
-    print("Inserted layers:", result["insertion_diagnostics"]["inserted_layers"])
-    print("Saved compact result:", args.output)
+    action_dim = model.get_action_dim(unnorm_key)
+    if trajectory:
+        run_trajectory_batch(args, model, processor, device, unnorm_key, action_dim, reuse_layers, report)
+    else:
+        result = evaluate_pair(
+            model, processor, device, unnorm_key, action_dim, args.image_prev,
+            args.image_current, args.instruction, reuse_layers, args.reuse_component,
+        )
+        result["runtime_attention_report"] = report
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(json.dumps(result, indent=2) + "\n")
+        print("Baseline action-token IDs:", result["baseline_action_token_ids"])
+        print("During-prefill-reuse action-token IDs:", result["prefill_reuse_action_token_ids"])
+        print("Action token 1 changed:", result["action_token_1_changed"])
+        print("Actions exactly equal:", result["actions_exactly_equal"])
+        print(f"L2 action difference: {result['action_difference_l2']:.8f}")
+        print("Inserted layers:", result["insertion_diagnostics"]["inserted_layers"])
+        print("Saved compact result:", args.output)
 
 
 if __name__ == "__main__":
