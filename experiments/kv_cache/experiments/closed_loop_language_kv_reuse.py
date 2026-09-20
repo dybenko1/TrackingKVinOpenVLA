@@ -28,6 +28,7 @@ from typing import Any, Dict, List, Optional, Sequence, Tuple
 import numpy as np
 import torch
 from PIL import Image
+from libero.libero import benchmark
 
 from experiments.kv_analysis.experiments.extract_libero_image import (
     DEFAULT_MODEL_ID,
@@ -35,7 +36,7 @@ from experiments.kv_analysis.experiments.extract_libero_image import (
     INITIAL_STATE_ID,
     TASK_ID,
     TASK_SUITE_NAME,
-    build_task_and_env,
+    create_libero_env,
     extract_libero_image,
     normalize_and_invert_openvla_gripper,
     prepare_openvla_policy_image,
@@ -63,6 +64,17 @@ from experiments.kv_cache.experiments.static_reuse_experiment import (
 CLOSED_LOOP_OUTPUT_DIR = OUTPUT_DIR / "closed_loop_language_kv_reuse"
 DEFAULT_REFRESH_INTERVAL = 2
 REUSE_LAYERS = tuple(range(14))
+
+
+def build_task_and_env_for(task_id: int) -> Tuple[Any, Any, Any, Any, str]:
+    """Create one deterministic LIBERO Spatial task environment by ID."""
+    task_suite = benchmark.get_benchmark_dict()[TASK_SUITE_NAME]()
+    if not 0 <= task_id < task_suite.n_tasks:
+        raise ValueError(f"task_id {task_id} is outside [0, {task_suite.n_tasks - 1}].")
+    task = task_suite.get_task(task_id)
+    initial_states = task_suite.get_task_init_states(task_id)
+    env, task_description = create_libero_env(task)
+    return task_suite, task, initial_states, env, task_description
 
 
 def seed_everything(seed: int) -> None:
@@ -177,8 +189,9 @@ def run_condition(
     processor: Any,
     device: torch.device,
     unnorm_key: str,
+    task_id: int,
     task_description: str,
-    initial_states: Any,
+    initial_state_id: int,
     horizon: int,
     settling_steps: int,
     seed: int,
@@ -198,9 +211,11 @@ def run_condition(
         raise ValueError("refresh_interval must be positive.")
 
     seed_everything(seed)
-    task_suite, _task, _states, env, task_from_env = build_task_and_env()
-    if task_from_env != task_description or task_suite.n_tasks < TASK_ID + 1:
+    task_suite, _task, initial_states, env, task_from_env = build_task_and_env_for(task_id)
+    if task_from_env != task_description:
         raise AssertionError("Condition environment does not match the requested LIBERO task.")
+    if not 0 <= initial_state_id < len(initial_states):
+        raise ValueError(f"initial_state_id {initial_state_id} is unavailable for task {task_id}.")
     prompt = f"In: What action should the robot take to {task_description.lower()}?\nOut:"
     condition_dir = output_dir / condition
     if save_frames:
@@ -212,7 +227,7 @@ def run_condition(
     termination_reason = "horizon_reached"
     try:
         env.reset()
-        observation = env.set_init_state(initial_states[INITIAL_STATE_ID])
+        observation = env.set_init_state(initial_states[initial_state_id])
         for settle_index in range(settling_steps):
             observation, _reward, done, _info = env.step(DEFAULT_STEP_ACTION)
             if done:
@@ -317,6 +332,9 @@ def run_condition(
         env.close()
 
     return {
+        "task_id": task_id,
+        "task_description": task_description,
+        "initial_state_id": initial_state_id,
         "condition": condition,
         "reuse_component": component,
         "success": bool(done),
@@ -363,15 +381,21 @@ def main() -> None:
     parser.add_argument("--save-frames", action=argparse.BooleanOptionalAction, default=False)
     parser.add_argument("--output-dir", type=Path, default=CLOSED_LOOP_OUTPUT_DIR)
     parser.add_argument("--conditions", nargs="+", choices=("baseline", "k", "kv"), default=("baseline", "k", "kv"))
+    parser.add_argument("--task-ids", nargs="+", type=int, default=(TASK_ID,))
+    parser.add_argument("--initial-state-ids", nargs="+", type=int, default=(INITIAL_STATE_ID,))
     args = parser.parse_args()
     if args.horizon < 1 or args.settling_steps < 0 or args.refresh_interval < 1:
         raise ValueError("--horizon and --refresh-interval must be positive and --settling-steps non-negative.")
     if tuple(REUSE_LAYERS) != tuple(parse_layer_spec("0-13")):
         raise AssertionError("Closed-loop experiment must use layers 0-13 exactly.")
 
-    seed_everything(args.seed)
-    _suite, _task, initial_states, _env, task_description = build_task_and_env()
-    _env.close()
+    task_descriptions: Dict[int, str] = {}
+    for task_id in args.task_ids:
+        _suite, _task, initial_states, _env, task_description = build_task_and_env_for(task_id)
+        _env.close()
+        if any(state_id < 0 or state_id >= len(initial_states) for state_id in args.initial_state_ids):
+            raise ValueError(f"An initial-state ID is unavailable for task {task_id}.")
+        task_descriptions[task_id] = task_description
     model, processor, device = load_model_and_processor(args.model_id)
     unnorm_key = resolve_unnorm_key(model, TASK_SUITE_NAME)
     report = runtime_attention_report(model)
@@ -379,20 +403,23 @@ def main() -> None:
     print("Active attention:", report["attention_class"])
     args.output_dir.mkdir(parents=True, exist_ok=True)
 
-    results = {}
-    for condition in args.conditions:
-        component = None if condition == "baseline" else condition
-        print(f"Running closed-loop condition: {condition}")
-        results[condition] = run_condition(
-            condition, component, model, processor, device, unnorm_key, task_description, initial_states,
-            args.horizon, args.settling_steps, args.seed, args.center_crop, args.save_frames, args.output_dir,
-            args.refresh_interval,
-        )
-        summary = results[condition]
-        print(
-            f"{condition}: success={summary['success']}, steps={summary['control_steps_executed']}, "
-            f"reason={summary['termination_reason']}"
-        )
+    results: List[Dict[str, Any]] = []
+    for task_id in args.task_ids:
+        for initial_state_id in args.initial_state_ids:
+            rollout_dir = args.output_dir / f"task_{task_id:02d}_state_{initial_state_id:02d}"
+            for condition in args.conditions:
+                component = None if condition == "baseline" else condition
+                print(f"Running task={task_id}, state={initial_state_id}, condition={condition}")
+                summary = run_condition(
+                    condition, component, model, processor, device, unnorm_key, task_id,
+                    task_descriptions[task_id], initial_state_id, args.horizon, args.settling_steps,
+                    args.seed, args.center_crop, args.save_frames, rollout_dir, args.refresh_interval,
+                )
+                results.append(summary)
+                print(
+                    f"task={task_id}, state={initial_state_id}, {condition}: success={summary['success']}, "
+                    f"steps={summary['control_steps_executed']}, reason={summary['termination_reason']}"
+                )
 
     output = args.output_dir / f"closed_loop_interval_{args.refresh_interval}.json"
     output.write_text(
@@ -401,8 +428,8 @@ def main() -> None:
                 "configuration": {
                     "checkpoint": args.model_id,
                     "task_suite": TASK_SUITE_NAME,
-                    "task_id": TASK_ID,
-                    "initial_state_id": INITIAL_STATE_ID,
+                    "task_ids": args.task_ids,
+                    "initial_state_ids": args.initial_state_ids,
                     "seed": args.seed,
                     "horizon": args.horizon,
                     "settling_steps": args.settling_steps,
@@ -412,7 +439,7 @@ def main() -> None:
                     "stage": "behavioral_deployment_not_compute_saving",
                 },
                 "runtime_attention_report": report,
-                "conditions": results,
+                "rollouts": results,
             },
             indent=2,
         )
