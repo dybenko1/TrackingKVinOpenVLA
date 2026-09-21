@@ -192,6 +192,80 @@ class DuringPrefillLanguageReuse:
                 )
 
 
+class DuringPrefillLanguageKProjectionSkip:
+    """Reuse post-RoPE language K without projecting those rows (Stage 2A)."""
+    def __init__(self, model: Any, previous_cache: DynamicCache, layout: Dict[str, List[int] | int], reuse_layers: Sequence[int]) -> None:
+        self.model, self.previous_cache, self.layout = model, previous_cache, layout
+        self.prefill_length = int(layout["prefill_length"])
+        self.language_start, self.language_end = layout["language"]
+        self.reuse_layers = set(reuse_layers)
+        self.original_forwards: Dict[int, Any] = {}
+        self.diagnostics: Dict[str, Any] = {"skipped_layers": [], "k_proj_input_rows": [], "full_k_proj_calls": []}
+
+    def __enter__(self) -> "DuringPrefillLanguageKProjectionSkip":
+        import types
+        from transformers.modeling_utils import ALL_ATTENTION_FUNCTIONS
+        from transformers.models.llama.modeling_llama import apply_rotary_pos_emb, eager_attention_forward
+
+        previous_layers = cache_layers(self.previous_cache)
+        modules = self.model.language_model.model.layers
+        for layer_idx in self.reuse_layers:
+            attention = modules[layer_idx].self_attn
+            original = attention.forward
+            self.original_forwards[layer_idx] = original
+
+            def forward(module: Any, hidden_states: torch.Tensor, position_embeddings: Any, attention_mask: Any,
+                        past_key_value: Optional[DynamicCache] = None, cache_position: Any = None, **kwargs: Any) -> Any:
+                # Delegate refresh/full-normal and one-token decode paths untouched.
+                if hidden_states.shape[-2] != self.prefill_length:
+                    self.diagnostics["full_k_proj_calls"].append({"layer": module.layer_idx, "rows": int(hidden_states.shape[-2])})
+                    return self.original_forwards[module.layer_idx](hidden_states, position_embeddings, attention_mask, past_key_value, cache_position, **kwargs)
+                if past_key_value is None:
+                    return self.original_forwards[module.layer_idx](hidden_states, position_embeddings, attention_mask, past_key_value, cache_position, **kwargs)
+                input_shape = hidden_states.shape[:-1]
+                hidden_shape = (*input_shape, -1, module.head_dim)
+                query_states = module.q_proj(hidden_states).view(hidden_shape).transpose(1, 2)
+                value_states = module.v_proj(hidden_states).view(hidden_shape).transpose(1, 2)
+                prefix_hidden = hidden_states[:, :self.language_start, :]
+                prefix_shape = (*prefix_hidden.shape[:-1], -1, module.head_dim)
+                self.diagnostics["k_proj_input_rows"].append({"layer": module.layer_idx, "rows": int(prefix_hidden.shape[-2])})
+                fresh_prefix_k = module.k_proj(prefix_hidden).view(prefix_shape).transpose(1, 2)
+                cos, sin = position_embeddings
+                query_states, _ = apply_rotary_pos_emb(query_states, query_states, cos, sin)
+                _, fresh_prefix_k = apply_rotary_pos_emb(fresh_prefix_k, fresh_prefix_k, cos[:, :self.language_start], sin[:, :self.language_start])
+                previous_k, _previous_v = previous_layers[module.layer_idx]
+                if previous_k.shape[-2] != self.prefill_length:
+                    raise AssertionError("Refresh-source prefill length mismatch.")
+                stale_language_k = previous_k[:, :, self.language_start:self.language_end + 1, :]
+                key_states = torch.cat((fresh_prefix_k, stale_language_k), dim=-2)
+                if key_states.shape[-2] != self.prefill_length:
+                    raise AssertionError("Reconstructed K has wrong prefill length.")
+                cache_kwargs = {"sin": sin, "cos": cos, "cache_position": cache_position}
+                key_states, value_states = past_key_value.update(key_states, value_states, module.layer_idx, cache_kwargs)
+                interface = eager_attention_forward if module.config._attn_implementation == "eager" else ALL_ATTENTION_FUNCTIONS[module.config._attn_implementation]
+                attn_output, attn_weights = interface(module, query_states, key_states, value_states, attention_mask,
+                    dropout=0.0 if not module.training else module.attention_dropout, scaling=module.scaling, **kwargs)
+                attn_output = module.o_proj(attn_output.reshape(*input_shape, -1).contiguous())
+                self.diagnostics["skipped_layers"].append(module.layer_idx)
+                return attn_output, attn_weights
+            attention.forward = types.MethodType(forward, attention)
+        return self
+
+    def __exit__(self, _type: Any, _value: Any, _traceback: Any) -> None:
+        modules = self.model.language_model.model.layers
+        for layer_idx, original in self.original_forwards.items():
+            modules[layer_idx].self_attn.forward = original
+
+    def validate_completed_prefill(self, cache: DynamicCache) -> None:
+        assert sorted(self.diagnostics["skipped_layers"]) == sorted(self.reuse_layers)
+        assert all(item["rows"] == self.language_start for item in self.diagnostics["k_proj_input_rows"])
+        language = slice(self.language_start, self.language_end + 1)
+        for layer in self.reuse_layers:
+            current_k, _current_v = cache_layers(cache)[layer]
+            previous_k, _previous_v = cache_layers(self.previous_cache)[layer]
+            assert torch.equal(current_k[:, :, language, :], previous_k[:, :, language, :])
+
+
 def run_prediction_with_prefill_snapshot(
     model: Any,
     inputs: Any,
