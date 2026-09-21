@@ -44,6 +44,7 @@ from experiments.kv_analysis.experiments.extract_libero_image import (
 )
 from experiments.kv_cache.experiments.prefill_reuse_experiment import (
     DuringPrefillLanguageReuse,
+    DuringPrefillLanguageKProjectionSkip,
     runtime_attention_report,
 )
 from experiments.kv_cache.experiments.static_reuse_experiment import (
@@ -115,7 +116,7 @@ def capture_prediction(
     prompt: str,
     device: torch.device,
     unnorm_key: str,
-    intervention: Optional[DuringPrefillLanguageReuse] = None,
+    intervention: Optional[Any] = None,
 ) -> Dict[str, Any]:
     """Run greedy policy inference and capture an independent prefill-only cache.
 
@@ -201,11 +202,11 @@ def run_condition(
     refresh_interval: int,
 ) -> Dict[str, Any]:
     """Run one real closed-loop rollout with fresh/reuse state-machine checks."""
-    if condition not in {"baseline", "k", "kv"}:
+    if condition not in {"baseline", "k", "kv", "k_skip"}:
         raise ValueError(f"Unsupported closed-loop condition {condition!r}.")
     if condition == "baseline" and component is not None:
         raise AssertionError("Baseline must not have an intervention component.")
-    if condition != "baseline" and component not in {"k", "kv"}:
+    if condition != "baseline" and component not in {"k", "kv", "k_skip"}:
         raise AssertionError("Reuse conditions must be K-only or K+V.")
     if refresh_interval < 1:
         raise ValueError("refresh_interval must be positive.")
@@ -279,9 +280,8 @@ def run_condition(
                 if refresh_source is None:
                     raise AssertionError("Reuse step has no stored refresh source.")
                 assert_refresh_source(refresh_source, expected_refresh_step)
-                intervention = DuringPrefillLanguageReuse(
-                    refresh_source["cache"], refresh_source["layout"], REUSE_LAYERS, component
-                )
+                intervention = (DuringPrefillLanguageKProjectionSkip(model, refresh_source["cache"], refresh_source["layout"], REUSE_LAYERS)
+                    if component == "k_skip" else DuringPrefillLanguageReuse(refresh_source["cache"], refresh_source["layout"], REUSE_LAYERS, component))
                 prediction = capture_prediction(
                     model, processor, image, prompt, device, unnorm_key, intervention=intervention
                 )
@@ -291,7 +291,11 @@ def run_condition(
                 )
                 intervention.validate_completed_prefill(prediction["cache"])
                 assert_refresh_source(refresh_source, expected_refresh_step)
-                intervention_diagnostics = intervention.diagnostics
+                intervention_diagnostics = (intervention.diagnostics if component != "k_skip" else {
+                    "inserted_layers": intervention.diagnostics["skipped_layers"],
+                    "layers": {"k_proj_input_rows": intervention.diagnostics["k_proj_input_rows"],
+                               "delegated_k_proj_rows": intervention.diagnostics["full_k_proj_calls"]},
+                })
                 source_refresh_step = expected_refresh_step
 
             environment_action = normalize_and_invert_openvla_gripper(prediction["policy_action"])
@@ -380,7 +384,7 @@ def main() -> None:
     parser.add_argument("--center-crop", action=argparse.BooleanOptionalAction, default=True)
     parser.add_argument("--save-frames", action=argparse.BooleanOptionalAction, default=False)
     parser.add_argument("--output-dir", type=Path, default=CLOSED_LOOP_OUTPUT_DIR)
-    parser.add_argument("--conditions", nargs="+", choices=("baseline", "k", "kv"), default=("baseline", "k", "kv"))
+    parser.add_argument("--conditions", nargs="+", choices=("baseline", "k", "kv", "k_skip"), default=("baseline", "k", "kv"))
     parser.add_argument("--task-ids", nargs="+", type=int, default=(TASK_ID,))
     parser.add_argument("--initial-state-ids", nargs="+", type=int, default=(INITIAL_STATE_ID,))
     args = parser.parse_args()
