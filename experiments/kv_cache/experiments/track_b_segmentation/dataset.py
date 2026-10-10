@@ -271,7 +271,11 @@ def _replay_trajectories() -> dict[str, Any]:
     ids_by_split: dict[str, set[str]] = {"training": set(), "calibration": set(), "evaluation": set()}
     for row in manifest["samples"]:
         ids_by_split[row["split"]].add(row["trajectory_id"])
-    if ids_by_split["train_calibration"] & ids_by_split["evaluation"]:
+    if ids_by_split["training"] & ids_by_split["calibration"]:
+        raise AssertionError("Trajectory leakage detected between training and calibration.")
+    if ids_by_split["training"] & ids_by_split["evaluation"]:
+        raise AssertionError("Trajectory leakage detected between training and evaluation.")
+    if ids_by_split["calibration"] & ids_by_split["evaluation"]:
         raise AssertionError("Trajectory leakage detected between calibration and evaluation.")
     manifest["sample_count"] = len(manifest["samples"])
     manifest["split_counts"] = {
@@ -404,6 +408,11 @@ def _extract_features(manifest: dict[str, Any]) -> dict[str, Any]:
         if pixel_values.shape[1] != 6:
             raise AssertionError(f"Expected OpenVLA's paired 6-channel input, got {tuple(pixel_values.shape)}.")
         dino_input, siglip_input = torch.split(pixel_values, [3, 3], dim=1)
+        # OpenVLA's loaded visual branches follow the checkpoint's BF16 dtype,
+        # while the processor emits FP32.  Match each native branch's weights
+        # explicitly instead of relying on autocast or changing model precision.
+        dino_input = dino_input.to(dtype=next(vision.featurizer.parameters()).dtype)
+        siglip_input = siglip_input.to(dtype=next(vision.fused_featurizer.parameters()).dtype)
         torch.cuda.synchronize(device)
         start = time.perf_counter()
         with torch.inference_mode():
@@ -442,6 +451,8 @@ def _extract_features(manifest: dict[str, Any]) -> dict[str, Any]:
         image = Image.open(OUT / first["rgb_path"]).convert("RGB")
         pixel_values = processor.image_processor(images=image, return_tensors="pt")["pixel_values"].to(device)
         dino_input, siglip_input = torch.split(pixel_values, [3, 3], dim=1)
+        dino_input = dino_input.to(dtype=next(vision.featurizer.parameters()).dtype)
+        siglip_input = siglip_input.to(dtype=next(vision.fused_featurizer.parameters()).dtype)
         with torch.inference_mode():
             dino, siglip = vision.featurizer(dino_input), vision.fused_featurizer(siglip_input)
         feature_spec = _feature_spec(model, processor, pixel_values, dino, siglip)
@@ -501,8 +512,38 @@ def extract_dataset(resume: bool = True) -> dict[str, Any]:
     if resume and manifest_path.exists():
         try:
             previous = json.loads(manifest_path.read_text())
-            all_files_exist = all((OUT / row["rgb_path"]).exists() for row in previous.get("samples", []))
-            if all_files_exist and previous.get("sample_count", 0) >= 200:
+            samples = previous.get("samples", [])
+            required_artifacts = (
+                ("rgb_observation_path", "rgb_observation_sha256"),
+                ("rgb_path", "policy_rgb_sha256"),
+                ("instance_segmentation_path", "instance_segmentation_sha256"),
+                ("oracle_semantic_mask_path", "oracle_semantic_mask_sha256"),
+                ("oracle_token_mask_path", "oracle_token_mask_sha256"),
+            )
+            all_files_valid = bool(samples)
+            for row in samples:
+                for path_field, hash_field in required_artifacts:
+                    artifact = OUT / row[path_field]
+                    expected = row.get("artifact_sha256", {}).get(hash_field)
+                    if not artifact.is_file() or not expected or sha256(artifact) != expected:
+                        all_files_valid = False
+                        break
+                if not all_files_valid:
+                    break
+            if all_files_valid and len(samples) >= 200:
+                ids_by_split: dict[str, set[str]] = {"training": set(), "calibration": set(), "evaluation": set()}
+                for row in samples:
+                    ids_by_split[row["split"]].add(row["trajectory_id"])
+                if (ids_by_split["training"] & ids_by_split["calibration"]
+                        or ids_by_split["training"] & ids_by_split["evaluation"]
+                        or ids_by_split["calibration"] & ids_by_split["evaluation"]):
+                    raise AssertionError("Trajectory leakage detected between Track B data splits.")
+                previous["sample_count"] = len(samples)
+                previous["split_counts"] = {
+                    split: sum(row["split"] == split for row in samples)
+                    for split in ("training", "calibration", "evaluation")
+                }
+                atomic_json(manifest_path, previous)
                 manifest = previous
             else:
                 manifest = _replay_trajectories()
