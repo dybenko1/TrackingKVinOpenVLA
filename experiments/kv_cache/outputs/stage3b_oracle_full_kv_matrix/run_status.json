@@ -1,5 +1,6 @@
 {
-  "status": "incomplete",
-  "message": "RuntimeError: Stage 3B validation exited with status 1; matrix was not launched.. Check supervisor.log and scenario files; incomplete results are not described as completed.",
-  "experiment_code_commit": "fa46e669f0eecc78c7624aa5ffcfc9f05d3780e8"
+  "status": "complete",
+  "scenarios_completed": 9,
+  "experiment_code_commit": "699fa6cbe7f0a8ece11cf6a96a0eef52634a7c36",
+  "latency_measured": false
 }

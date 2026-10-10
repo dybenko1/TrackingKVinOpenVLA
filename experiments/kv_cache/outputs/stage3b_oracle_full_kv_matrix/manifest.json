@@ -1,17 +1,72 @@
 [
   {
+    "path": "experiments/kv_cache/outputs/stage3b_oracle_full_kv_matrix/summary.json",
+    "bytes": 59295765,
+    "sha256": "afd4158fb8c7095a15cd9af8f971123813f22208c17f641c186c397dfedaec4d"
+  },
+  {
+    "path": "experiments/kv_cache/outputs/stage3b_oracle_full_kv_matrix/validation.json",
+    "bytes": 16732,
+    "sha256": "7974e4f1473d8ba772b57672dd8f3ee6ae0f4049394ca8b6cce1019bd966eb5d"
+  },
+  {
     "path": "experiments/kv_cache/outputs/stage3b_oracle_full_kv_matrix/REPORT.md",
-    "bytes": 290,
-    "sha256": "76467c4e7e97ad0226576624fbd210cce3c5ec8737e3b0f82ad462926ced95a0"
+    "bytes": 3964,
+    "sha256": "ed4309fbf1df5cc301b0758b144a458746505ce966f45c15b073670e258e5b28"
   },
   {
     "path": "experiments/kv_cache/outputs/stage3b_oracle_full_kv_matrix/run_status.json",
-    "bytes": 290,
-    "sha256": "4d17fa562e06170626611a81397c042d39bb36c3e6e7d5ce93a44973ade1b185"
+    "bytes": 155,
+    "sha256": "0a301728ba63f6d20faee5bef985d1f7b7ff33c03da0bc3b2aa56d6d35ad2fb0"
   },
   {
     "path": "experiments/kv_cache/outputs/stage3b_oracle_full_kv_matrix/execution_excerpt.log",
-    "bytes": 194,
-    "sha256": "5f51169fb46cb30dff70f7399ba1837f8f422419763d9ddec210e9dfefd1d8c4"
+    "bytes": 811,
+    "sha256": "31af02f43d9fc17ef15af5ec3ae5de55942e2dcf472e39c8494dd31bc8aea766"
+  },
+  {
+    "path": "experiments/kv_cache/outputs/stage3b_oracle_full_kv_matrix/task4_state0/results.json",
+    "bytes": 6952794,
+    "sha256": "e653869433731faa44f0fba0afe19eb382451ec1c8d7657926ccfc3cfaa0182b"
+  },
+  {
+    "path": "experiments/kv_cache/outputs/stage3b_oracle_full_kv_matrix/task4_state1/results.json",
+    "bytes": 7065828,
+    "sha256": "2ab9874949c2dff52bed5d671c42abb6279189f8b2372cc93aedb4311d3481a1"
+  },
+  {
+    "path": "experiments/kv_cache/outputs/stage3b_oracle_full_kv_matrix/task4_state2/results.json",
+    "bytes": 4759584,
+    "sha256": "c06fb95c24c82c9e1881377fe0bfdd9b240c1242cfd10388817c27ba4a03cd2b"
+  },
+  {
+    "path": "experiments/kv_cache/outputs/stage3b_oracle_full_kv_matrix/task5_state0/results.json",
+    "bytes": 4062201,
+    "sha256": "e36928f06618757436ff6a50c96f56c279a5e24050834f2ce18287c4ec071159"
+  },
+  {
+    "path": "experiments/kv_cache/outputs/stage3b_oracle_full_kv_matrix/task5_state1/results.json",
+    "bytes": 3639208,
+    "sha256": "8d7ed73950f3c849722b6909ba96efa6d9b090ad42843beb818b325f7e5d3e5f"
+  },
+  {
+    "path": "experiments/kv_cache/outputs/stage3b_oracle_full_kv_matrix/task5_state2/results.json",
+    "bytes": 6117683,
+    "sha256": "20717831fd443e04e330448b3e54eced1d90a403301b031d8c4ecae59361446d"
+  },
+  {
+    "path": "experiments/kv_cache/outputs/stage3b_oracle_full_kv_matrix/task7_state0/results.json",
+    "bytes": 5854317,
+    "sha256": "0d53f8d785e79250f05c38d77729e1da9efb8a5109090782faf21d547255482f"
+  },
+  {
+    "path": "experiments/kv_cache/outputs/stage3b_oracle_full_kv_matrix/task7_state1/results.json",
+    "bytes": 4534427,
+    "sha256": "39a5185e2a258d985d6cca31b74809e105803aff9ec4d8f35d659f7df33f862c"
+  },
+  {
+    "path": "experiments/kv_cache/outputs/stage3b_oracle_full_kv_matrix/task7_state2/results.json",
+    "bytes": 8263468,
+    "sha256": "ca431516b276c65117fb50e25a892cd53e488980aa8f9b47e2fc2d7d36a9d406"
   }
 ]

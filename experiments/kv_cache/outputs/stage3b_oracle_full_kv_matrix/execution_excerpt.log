@@ -1,3 +1,11 @@
-$ docker exec f5240fe761b5 bash -lc cd /opt/openvla && python experiments/kv_cache/experiments/stage3b_oracle_full_kv_matrix.py --validate-only
-Traceback (most recent call last):
-AssertionError
+[VALIDATION_PASS] six steps; 32 layers; Q full; foreground K/V fresh; background K/V sourced from fresh refresh; exact source provenance; decode delegated
+[VALIDATION_PASS] gate accepted; launching matrix
+[SCENARIO_COMPLETE] task=4 state=0 fresh=True/140 stage3b=False/220
+[SCENARIO_COMPLETE] task=4 state=1 fresh=True/145 stage3b=False/220
+[SCENARIO_COMPLETE] task=4 state=2 fresh=True/130 stage3b=True/124
+[SCENARIO_COMPLETE] task=5 state=0 fresh=True/105 stage3b=True/110
+[SCENARIO_COMPLETE] task=5 state=1 fresh=True/89 stage3b=True/103
+[SCENARIO_COMPLETE] task=5 state=2 fresh=True/90 stage3b=False/220
+[SCENARIO_COMPLETE] task=7 state=0 fresh=True/111 stage3b=True/194
+[SCENARIO_COMPLETE] task=7 state=1 fresh=True/120 stage3b=True/123
+[SCENARIO_COMPLETE] task=7 state=2 fresh=False/220 stage3b=False/220
