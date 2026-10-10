@@ -149,6 +149,7 @@ def main():
     if subprocess.check_output(["git", "status", "--porcelain"], cwd=REPO, text=True).strip():
         raise RuntimeError("Working tree must be clean before unattended Stage 3B supervisor starts.")
     log_path = OUT / "supervisor.log"
+    matrix_started = False
     try:
         status = log_run(["python", RUNNER, "--validate-only"], log_path)
         if status != 0:
@@ -157,6 +158,7 @@ def main():
         validation = json.loads(validation_path.read_text())
         assert validation["all_valid"] and validation["steps"] == 6 and validation["layers"] == list(range(32))
         with log_path.open("a") as f: f.write("[VALIDATION_PASS] gate accepted; launching matrix\n")
+        matrix_started = True
         status = log_run(["python", RUNNER, "--matrix"], log_path)
         if status != 0:
             raise RuntimeError(f"Stage 3B matrix exited with status {status}.")
@@ -174,10 +176,11 @@ def main():
         commit_push_results()
     except BaseException as exc:
         finalize("incomplete", f"{type(exc).__name__}: {exc}. Check supervisor.log and scenario files; incomplete results are not described as completed.")
-        try:
-            commit_push_results()
-        except BaseException as push_exc:
-            with (OUT / "supervisor.log").open("a") as f: f.write(f"\n[POSTRUN_SYNC_FAILED] {type(push_exc).__name__}: {push_exc}\n")
+        if matrix_started:
+            try:
+                commit_push_results()
+            except BaseException as push_exc:
+                with (OUT / "supervisor.log").open("a") as f: f.write(f"\n[POSTRUN_SYNC_FAILED] {type(push_exc).__name__}: {push_exc}\n")
         raise
 
 if __name__ == "__main__":

@@ -56,8 +56,8 @@ class MaskedKVOverwrite:
                 assert key.shape == old_k.shape and value.shape == old_v.shape
                 fresh_k, fresh_v = key.clone(), value.clone()
                 bi, fi = bg.to(key.device), fg.to(key.device)
-                key[:, :, bi, :].copy_(old_k[:, :, bi, :])
-                value[:, :, bi, :].copy_(old_v[:, :, bi, :])
+                key.index_copy_(2, bi, old_k.index_select(2, bi))
+                value.index_copy_(2, bi, old_v.index_select(2, bi))
                 assert torch.equal(key[:, :, bi, :], old_k[:, :, bi, :])
                 assert torch.equal(value[:, :, bi, :], old_v[:, :, bi, :])
                 assert torch.equal(key[:, :, fi, :], fresh_k[:, :, fi, :])
