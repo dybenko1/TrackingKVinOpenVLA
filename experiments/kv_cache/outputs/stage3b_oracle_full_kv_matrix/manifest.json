@@ -1,0 +1,17 @@
+[
+  {
+    "path": "experiments/kv_cache/outputs/stage3b_oracle_full_kv_matrix/REPORT.md",
+    "bytes": 290,
+    "sha256": "76467c4e7e97ad0226576624fbd210cce3c5ec8737e3b0f82ad462926ced95a0"
+  },
+  {
+    "path": "experiments/kv_cache/outputs/stage3b_oracle_full_kv_matrix/run_status.json",
+    "bytes": 290,
+    "sha256": "4d17fa562e06170626611a81397c042d39bb36c3e6e7d5ce93a44973ade1b185"
+  },
+  {
+    "path": "experiments/kv_cache/outputs/stage3b_oracle_full_kv_matrix/execution_excerpt.log",
+    "bytes": 194,
+    "sha256": "5f51169fb46cb30dff70f7399ba1837f8f422419763d9ddec210e9dfefd1d8c4"
+  }
+]

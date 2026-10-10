@@ -1,0 +1,3 @@
+$ docker exec f5240fe761b5 bash -lc cd /opt/openvla && python experiments/kv_cache/experiments/stage3b_oracle_full_kv_matrix.py --validate-only
+Traceback (most recent call last):
+AssertionError

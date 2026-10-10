@@ -1,0 +1,7 @@
+# Stage 3B run status
+
+Status: **INCOMPLETE**.
+
+RuntimeError: Stage 3B validation exited with status 1; matrix was not launched.. Check supervisor.log and scenario files; incomplete results are not described as completed.
+
+Implementation commit: `fa46e669f0eecc78c7624aa5ffcfc9f05d3780e8`.
