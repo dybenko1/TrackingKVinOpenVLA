@@ -1,0 +1,33 @@
+{
+  "experiment": "track_b_segmentation",
+  "model_id": "openvla/openvla-7b-finetuned-libero-spatial",
+  "tasks": [4, 5, 7],
+  "states": [0, 1, 2],
+  "training_state_id": 0,
+  "calibration_state_id": 1,
+  "evaluation_state_id": 2,
+  "seed": 7,
+  "r5_window_size": 5,
+  "r5_windows_per_trajectory": 7,
+  "expected_sample_count": 315,
+  "visual_token_grid": [16, 16],
+  "visual_token_count": 256,
+  "methods": [
+    "dino_pca_per_frame",
+    "dino_pca_calibration_basis",
+    "dino_lda",
+    "siglip_lda",
+    "fused_lda"
+  ],
+  "lda_training_only_pca_components": 128,
+  "lda_solver": "binary pooled-covariance linear discriminant",
+  "lda_shrinkage": "0.10 toward diagonal covariance target plus 1e-6 relative ridge",
+  "selected_threshold_rule": "maximize calibration reuse opportunity subject to unsafe foreground reuse <= 5%; if infeasible minimize unsafe reuse then maximize reuse",
+  "foreground_dilation": "8-neighbor one-cell expansion in the 16x16 token grid",
+  "source_current_mask": "union predicted foreground of current sample and its R5 source sample",
+  "run_action_generation": false,
+  "run_closed_loop_rollout": false,
+  "run_kv_skipping": false,
+  "output_dir": "experiments/kv_cache/outputs/track_b_segmentation",
+  "raw_features_committed": false
+}
