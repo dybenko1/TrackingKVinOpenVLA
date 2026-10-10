@@ -192,6 +192,64 @@ class DuringPrefillLanguageReuse:
                 )
 
 
+class DuringPrefillVisualKReuse:
+    """Temporarily replace only post-RoPE visual K before prefill attention.
+
+    This is deliberately separate from the validated language context.  It
+    retains compute-then-overwrite semantics and touches neither V nor decoding
+    updates (whose sequence length is one).
+    """
+    def __init__(self, previous_cache: DynamicCache, layout: Dict[str, List[int] | int], reuse_layers: Sequence[int]) -> None:
+        self.previous_cache, self.prefill_length = previous_cache, int(layout["prefill_length"])
+        self.visual_start, self.visual_end = layout["visual"]
+        self.language_start, self.language_end = layout["language"]
+        self.reuse_layers = set(reuse_layers)
+        self.original_update: Optional[Any] = None
+        self.diagnostics: Dict[str, Any] = {"inserted_layers": [], "decode_updates_untouched": 0, "layers": {}}
+
+    def __enter__(self) -> "DuringPrefillVisualKReuse":
+        self.original_update = DynamicCache.update
+        previous_layers = cache_layers(self.previous_cache)
+        if (self.visual_start, self.visual_end) != (1, 256):
+            raise AssertionError(f"Expected visual positions 1..256, got {self.visual_start}..{self.visual_end}.")
+
+        def update(cache: DynamicCache, key_states: torch.Tensor, value_states: torch.Tensor, layer_idx: int, cache_kwargs=None):
+            if layer_idx in self.reuse_layers and key_states.shape[-2] == self.prefill_length:
+                previous_k, previous_v = previous_layers[layer_idx]
+                if key_states.shape != previous_k.shape or value_states.shape != previous_v.shape:
+                    raise AssertionError(f"Layer {layer_idx} visual substitution shape mismatch.")
+                visual = slice(self.visual_start, self.visual_end + 1)
+                language = slice(self.language_start, self.language_end + 1)
+                with torch.no_grad():
+                    bos_k, bos_v = key_states[:, :, :1, :].clone(), value_states[:, :, :1, :].clone()
+                    fresh_visual_k = key_states[:, :, visual, :].clone()
+                    current_visual_v = value_states[:, :, visual, :].clone()
+                    language_k, language_v = key_states[:, :, language, :].clone(), value_states[:, :, language, :].clone()
+                    key_states[:, :, visual, :].copy_(previous_k[:, :, visual, :])
+                    assert torch.equal(key_states[:, :, visual, :], previous_k[:, :, visual, :])
+                    assert torch.equal(value_states[:, :, visual, :], current_visual_v)
+                    assert torch.equal(key_states[:, :, :1, :], bos_k) and torch.equal(value_states[:, :, :1, :], bos_v)
+                    assert torch.equal(key_states[:, :, language, :], language_k) and torch.equal(value_states[:, :, language, :], language_v)
+                self.diagnostics["inserted_layers"].append(layer_idx)
+                self.diagnostics["layers"][str(layer_idx)] = {"visual_k_fresh_vs_source_max_abs": float((fresh_visual_k - previous_k[:, :, visual, :]).abs().max())}
+            elif layer_idx in self.reuse_layers and key_states.shape[-2] == 1:
+                self.diagnostics["decode_updates_untouched"] += 1
+            return self.original_update(cache, key_states, value_states, layer_idx, cache_kwargs)
+        DynamicCache.update = update  # type: ignore[method-assign]
+        return self
+
+    def __exit__(self, _type: Any, _value: Any, _traceback: Any) -> None:
+        assert self.original_update is not None
+        DynamicCache.update = self.original_update  # type: ignore[method-assign]
+
+    def validate_completed_prefill(self, experimental_cache: DynamicCache) -> None:
+        assert sorted(self.diagnostics["inserted_layers"]) == sorted(self.reuse_layers)
+        assert self.diagnostics["decode_updates_untouched"] == len(self.reuse_layers) * 6
+        visual = slice(self.visual_start, self.visual_end + 1)
+        for layer in self.reuse_layers:
+            assert torch.equal(cache_layers(experimental_cache)[layer][0][:, :, visual, :], cache_layers(self.previous_cache)[layer][0][:, :, visual, :])
+
+
 class DuringPrefillLanguageKProjectionSkip:
     """Reuse post-RoPE language K without projecting those rows (Stage 2A)."""
     def __init__(self, model: Any, previous_cache: DynamicCache, layout: Dict[str, List[int] | int], reuse_layers: Sequence[int]) -> None:
