@@ -35,6 +35,16 @@ class AttentionRelevanceTests(unittest.TestCase):
         self.assertAlmostEqual(float(scores[37]), 0.25)
         self.assertAlmostEqual(float(scores[91]), 0.25)
 
+    def test_compact_text_query_rows_keep_original_sequence_positions(self):
+        full = _fixture_attention(260, 1, 256, (257, 258), salient=37)
+        compact = full[:, :, [257, 258], :]
+        scores = text_to_visual_scores(
+            [compact], [0, 1], query_token_positions=[257, 258],
+            visual_start=1, visual_count=256,
+        )
+        self.assertEqual(scores.shape, (256,))
+        self.assertEqual(int(np.argmax(scores)), 37)
+
     def test_top_fraction_excludes_oracle_foreground_and_random_matches_budget(self):
         fg = np.zeros(256, dtype=bool)
         fg[[0, 1, 2, 3]] = True

@@ -30,15 +30,18 @@ def text_to_visual_scores(
     attentions: Sequence[Any],
     query_positions: Sequence[int],
     *,
+    query_token_positions: Sequence[int] | None = None,
     visual_start: int = 1,
     visual_count: int = 256,
     probability_tolerance: float = 5e-3,
 ) -> np.ndarray:
     """Average text-query attention mass for each visual key across layers.
 
-    Each input must be a probability tensor shaped ``[B,H,Q,K]``. The selected
-    query positions must follow the entire visual block so every visual key is
-    causally visible. Reductions match the VLA-Cache reference convention:
+    Each input must be a probability tensor shaped ``[B,H,Q,K]``. Normally it
+    is a full self-attention matrix; a compact query-row tensor is also accepted
+    when ``query_token_positions`` supplies the original sequence positions of
+    those rows. Selected queries must follow the entire visual block so every
+    visual key is causally visible. Reductions match the VLA-Cache convention:
     average heads, selected text queries, then selected layers. Averaging batch
     as well makes this helper usable with batched CPU fixtures.
 
@@ -53,6 +56,9 @@ def text_to_visual_scores(
         raise ValueError("query_positions must be a non-empty one-dimensional sequence.")
     if visual_start < 0 or visual_count < 1:
         raise ValueError("visual_start and visual_count must define a non-empty nonnegative span.")
+    token_positions = queries if query_token_positions is None else np.asarray(query_token_positions, dtype=np.int64)
+    if token_positions.shape != queries.shape:
+        raise ValueError("query_token_positions must have one original sequence position per selected query row.")
 
     layer_scores = []
     expected_q = expected_k = None
@@ -61,8 +67,8 @@ def text_to_visual_scores(
         if probs.ndim != 4:
             raise ValueError(f"Layer {layer_index}: expected [B,H,Q,K], got shape {probs.shape}.")
         batch, heads, q_len, k_len = probs.shape
-        if batch < 1 or heads < 1 or q_len != k_len:
-            raise ValueError(f"Layer {layer_index}: expected square self-attention [B,H,L,L].")
+        if batch < 1 or heads < 1:
+            raise ValueError(f"Layer {layer_index}: expected non-empty [B,H,Q,K] attention.")
         if expected_q is not None and (q_len, k_len) != (expected_q, expected_k):
             raise ValueError("All selected layers must have matching query/key sequence lengths.")
         expected_q, expected_k = q_len, k_len
@@ -70,8 +76,10 @@ def text_to_visual_scores(
         if visual_end > k_len:
             raise ValueError(f"Layer {layer_index}: visual span ends at {visual_end}, sequence has {k_len} keys.")
         if np.any(queries < 0) or np.any(queries >= q_len):
-            raise ValueError(f"Layer {layer_index}: query position is outside sequence length {q_len}.")
-        if np.any(queries < visual_end - 1):
+            raise ValueError(f"Layer {layer_index}: query-row index is outside query dimension {q_len}.")
+        if np.any(token_positions < 0) or np.any(token_positions >= k_len):
+            raise ValueError(f"Layer {layer_index}: original query token position is outside key sequence length {k_len}.")
+        if np.any(token_positions < visual_end - 1):
             raise ValueError("Selected queries must follow the complete visual block for causal visibility.")
         if not np.isfinite(probs).all():
             raise ValueError(f"Layer {layer_index}: attention contains non-finite probabilities.")
