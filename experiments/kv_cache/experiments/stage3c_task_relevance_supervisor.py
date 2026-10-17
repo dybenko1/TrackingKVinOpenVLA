@@ -119,7 +119,9 @@ def git_sync(paths, message):
     mirror_supervisor_files()
     common = ["experiments/kv_cache/outputs/stage3c_oracle_task_relevance/queue_status.json",
               "experiments/kv_cache/outputs/stage3c_oracle_task_relevance/supervisor.log"]
-    run(["git", "add", "--", *paths, *common])
+    # outputs/ is globally gitignored because it contains large experiment
+    # artifacts; explicitly force-add only the requested Stage 3C paths.
+    run(["git", "add", "-f", "--", *paths, *common])
     run(["git", "diff", "--cached", "--check"])
     has_changes = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=REPO)
     if has_changes.returncode == 0:
