@@ -14,7 +14,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-REPO = Path(__file__).resolve().parents[2]
+REPO = Path(__file__).resolve().parents[3]
 OPENVLA = REPO
 OUT = REPO / "experiments" / "kv_cache" / "outputs" / "stage3c_oracle_task_relevance"
 SESSION = "stage3c-task-relevance"
