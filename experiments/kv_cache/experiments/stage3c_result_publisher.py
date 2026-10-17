@@ -15,8 +15,10 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[3]
 OUT = REPO / "experiments" / "kv_cache" / "outputs" / "stage3c_oracle_task_relevance"
+CONTAINER_OUT = "/opt/openvla/experiments/kv_cache/outputs/stage3c_oracle_task_relevance"
 STATUS = Path("/tmp/stage3c_oracle_task_relevance_queue_status.json")
 LOG = Path("/tmp/stage3c_oracle_task_relevance_publisher.log")
+SUPERVISOR_LOG = Path("/tmp/stage3c_oracle_task_relevance_supervisor.log")
 PUBLISHED = Path("/tmp/stage3c_oracle_task_relevance_published.json")
 LOCK = Path("/tmp/stage3c-result-git.lock")
 BRANCH = "main"
@@ -72,6 +74,17 @@ def validate_threshold(path: Path) -> bool:
     return len(seen) == 9
 
 
+def mirror_progress():
+    """Mirror host-writable durable queue state through the bound container."""
+    for source, target_name in ((STATUS, "queue_status.json"),
+                                (SUPERVISOR_LOG, "supervisor.log"),
+                                (LOG, "publisher.log")):
+        if source.exists():
+            subprocess.run(["docker", "exec", "stage3c-task-relevance", "cp", str(source),
+                            f"{CONTAINER_OUT}/{target_name}"], cwd=REPO,
+                           stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
+
 def publish(paths: list[str], message: str) -> str | None:
     lock_handle = LOCK.open("a+")
     fcntl.flock(lock_handle.fileno(), fcntl.LOCK_EX)
@@ -100,6 +113,7 @@ def main():
     published = load_json(PUBLISHED) or {"threshold_shas": {}, "final_sha": None}
     emit("Watching Stage 3C threshold outputs for validated completion.")
     while True:
+        mirror_progress()
         status = load_json(STATUS) or {}
         for pct in THRESHOLDS:
             key = str(pct)
@@ -128,6 +142,7 @@ def main():
             except Exception as exc:
                 emit(f"Final Stage 3C publication failed; artifacts retained locally: {exc!r}")
         if final:
+            mirror_progress()
             break
         time.sleep(20)
     return 0
