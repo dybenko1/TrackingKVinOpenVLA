@@ -1,0 +1,23 @@
+{
+  "cuda": {
+    "cuda_available": true,
+    "device_count": 1,
+    "device_name": "Orin",
+    "free_bytes": 49627942912,
+    "total_bytes": 65893371904
+  },
+  "cuda_probe_completed_at_unix": 1791618862.4404733,
+  "cuda_probe_output": "TRACK_B_RESOURCE_JSON={\"cuda_available\": true, \"device_count\": 1, \"device_name\": \"Orin\", \"free_bytes\": 49627942912, \"total_bytes\": 65893371904}",
+  "cuda_probe_return_code": 0,
+  "docker_stats": [
+    "jolly_lewin 0.01% 14.14GiB / 61.37GiB 26",
+    "beautiful_mahavira 0.06% 8.887MiB / 61.37GiB 26",
+    "priceless_hypatia 0.08% 11.36MiB / 61.37GiB 26"
+  ],
+  "target_container_processes": [
+    "PID                 PPID                STAT                ELAPSED             %CPU                %MEM                COMMAND",
+    "1213321             1213285             Ss                  21-22:25:16         0.0                 0.0                 /bin/sh -c echo \"starting tensorboard server with logs under ${TENSORBOARD_LOG_DIR}\" ; mkdir -p ${TENSORBOARD_LOG_DIR} ; tensorboard --bind_all --logdir ${TENSORBOARD_LOG_DIR} &> ${TENSORBOARD_SERVER_LOGS} & timeout 4 tail -f ${TENSORBOARD_SERVER_LOGS} ; sleep 0.5 ; /bin/bash",
+    "1213355             1213321             Sl                  21-22:25:15         0.0                 0.0                 /opt/venv/bin/python3.12 /opt/venv/bin/tensorboard --bind_all --logdir /data/logs/tensorboard",
+    "1213433             1213321             S+                  21-22:25:11         0.0                 0.0                 /bin/bash"
+  ]
+}

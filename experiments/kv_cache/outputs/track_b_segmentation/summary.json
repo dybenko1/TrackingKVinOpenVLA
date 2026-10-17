@@ -1,0 +1,1283 @@
+{
+  "actual_kv_reuse_performance_measured": false,
+  "classifier_overhead_ms": {
+    "dino_lda": {
+      "includes": "feature normalization/PCA projection/classifier score calculation; excludes vision-backbone forward",
+      "median_ms_per_observation": 15.990219078958035,
+      "p95_ms_per_observation": 31.94396486505866,
+      "timing_split": "evaluation only"
+    },
+    "dino_pca_calibration_basis": {
+      "includes": "feature normalization/PCA projection/classifier score calculation; excludes vision-backbone forward",
+      "median_ms_per_observation": null,
+      "p95_ms_per_observation": null,
+      "timing_split": "evaluation only"
+    },
+    "dino_pca_per_frame": {
+      "includes": "feature normalization/PCA projection/classifier score calculation; excludes vision-backbone forward",
+      "median_ms_per_observation": null,
+      "p95_ms_per_observation": null,
+      "timing_split": "evaluation only"
+    },
+    "fused_lda": {
+      "includes": "feature normalization/PCA projection/classifier score calculation; excludes vision-backbone forward",
+      "median_ms_per_observation": 15.962691977620125,
+      "p95_ms_per_observation": 31.988031696528196,
+      "timing_split": "evaluation only"
+    },
+    "siglip_lda": {
+      "includes": "feature normalization/PCA projection/classifier score calculation; excludes vision-backbone forward",
+      "median_ms_per_observation": 11.995045933872461,
+      "p95_ms_per_observation": 16.01726245135069,
+      "timing_split": "evaluation only"
+    }
+  },
+  "closed_loop_action_generation_run": false,
+  "code_commit": "1059cd3abd45246e97f0e7db8b8696e4e8b5621e",
+  "dataset_sample_count": 315,
+  "evaluation_metrics": [
+    {
+      "calibration_threshold_rule": "max calibration reuse opportunity subject to unsafe foreground reuse <= 5%; ties use recall",
+      "classifier_median_ms": null,
+      "classifier_p95_ms": null,
+      "false_negative_foreground_rate": 0.049763550381957074,
+      "false_positive_background_rate": 0.9648267986296155,
+      "fn": 684,
+      "foreground_iou": 0.4943977591036415,
+      "foreground_precision": 0.5075386648014301,
+      "foreground_recall": 0.9502364496180429,
+      "fp": 12673,
+      "mean_trajectory_false_negative_foreground_rate": 0.049773213250307924,
+      "mean_trajectory_false_positive_background_rate": 0.9648025554500804,
+      "mean_trajectory_foreground_iou": 0.4945619568708745,
+      "mean_trajectory_foreground_precision": 0.50744043904265,
+      "mean_trajectory_foreground_recall": 0.9502267867496922,
+      "mean_trajectory_predicted_background_fraction": 0.042633928571428566,
+      "mean_trajectory_reuse_opportunity": 0.042633928571428566,
+      "mean_trajectory_unsafe_fg_reuse": 0.049773213250307924,
+      "method": "dino_pca_per_frame",
+      "predicted_background_fraction": 0.04263392857142857,
+      "reuse_opportunity": 0.04263392857142857,
+      "selected_calibration_threshold": -59.58185958862305,
+      "split": "evaluation",
+      "tn": 462,
+      "tp": 13061,
+      "unsafe_fg_reuse": 0.049763550381957074,
+      "variant": "current",
+      "vision_backbone_median_ms": 93.74970011413097
+    },
+    {
+      "calibration_threshold_rule": "max calibration reuse opportunity subject to unsafe foreground reuse <= 5%; ties use recall",
+      "classifier_median_ms": null,
+      "classifier_p95_ms": null,
+      "false_negative_foreground_rate": 0.010112768279374318,
+      "false_positive_background_rate": 0.998629615531024,
+      "fn": 139,
+      "foreground_iou": 0.506514779242052,
+      "foreground_precision": 0.5091494218463496,
+      "foreground_recall": 0.9898872317206256,
+      "fp": 13117,
+      "mean_trajectory_false_negative_foreground_rate": 0.010109954935109843,
+      "mean_trajectory_false_positive_background_rate": 0.9986274359599037,
+      "mean_trajectory_foreground_iou": 0.5065154709588674,
+      "mean_trajectory_foreground_precision": 0.5091371293644446,
+      "mean_trajectory_foreground_recall": 0.9898900450648901,
+      "mean_trajectory_predicted_background_fraction": 0.00584077380952381,
+      "mean_trajectory_reuse_opportunity": 0.00584077380952381,
+      "mean_trajectory_unsafe_fg_reuse": 0.010109954935109843,
+      "method": "dino_pca_per_frame",
+      "predicted_background_fraction": 0.00584077380952381,
+      "reuse_opportunity": 0.00584077380952381,
+      "selected_calibration_threshold": -59.58185958862305,
+      "split": "evaluation",
+      "tn": 18,
+      "tp": 13606,
+      "unsafe_fg_reuse": 0.010112768279374318,
+      "variant": "dilated",
+      "vision_backbone_median_ms": 93.74970011413097
+    },
+    {
+      "calibration_threshold_rule": "max calibration reuse opportunity subject to unsafe foreground reuse <= 5%; ties use recall",
+      "classifier_median_ms": null,
+      "classifier_p95_ms": null,
+      "false_negative_foreground_rate": 0.03317570025463805,
+      "false_positive_background_rate": 0.9726684430909783,
+      "fn": 456,
+      "foreground_iou": 0.5010746201123638,
+      "foreground_precision": 0.5098407826587378,
+      "foreground_recall": 0.966824299745362,
+      "fp": 12776,
+      "mean_trajectory_false_negative_foreground_rate": 0.033164498533823535,
+      "mean_trajectory_false_positive_background_rate": 0.9726424614583123,
+      "mean_trajectory_foreground_iou": 0.5011697805747178,
+      "mean_trajectory_foreground_precision": 0.509759642182689,
+      "mean_trajectory_foreground_recall": 0.9668355014661764,
+      "mean_trajectory_predicted_background_fraction": 0.030319940476190476,
+      "mean_trajectory_reuse_opportunity": 0.030319940476190476,
+      "mean_trajectory_unsafe_fg_reuse": 0.033164498533823535,
+      "method": "dino_pca_per_frame",
+      "predicted_background_fraction": 0.030319940476190476,
+      "reuse_opportunity": 0.030319940476190476,
+      "selected_calibration_threshold": -59.58185958862305,
+      "split": "evaluation",
+      "tn": 359,
+      "tp": 13289,
+      "unsafe_fg_reuse": 0.03317570025463805,
+      "variant": "source_union",
+      "vision_backbone_median_ms": 93.74970011413097
+    },
+    {
+      "calibration_threshold_rule": "max calibration reuse opportunity subject to unsafe foreground reuse <= 5%; ties use recall",
+      "classifier_median_ms": null,
+      "classifier_p95_ms": null,
+      "false_negative_foreground_rate": 0.02204437977446344,
+      "false_positive_background_rate": 0.34921964217738866,
+      "fn": 303,
+      "foreground_iou": 0.7332533275147284,
+      "foreground_precision": 0.7455765710799268,
+      "foreground_recall": 0.9779556202255365,
+      "fp": 4587,
+      "mean_trajectory_false_negative_foreground_rate": 0.022042402802355268,
+      "mean_trajectory_false_positive_background_rate": 0.3491978610705752,
+      "mean_trajectory_foreground_iou": 0.7334832371505645,
+      "mean_trajectory_foreground_precision": 0.7458679474866745,
+      "mean_trajectory_foreground_recall": 0.9779575971976447,
+      "mean_trajectory_predicted_background_fraction": 0.3292782738095238,
+      "mean_trajectory_reuse_opportunity": 0.3292782738095238,
+      "mean_trajectory_unsafe_fg_reuse": 0.022042402802355268,
+      "method": "dino_pca_calibration_basis",
+      "predicted_background_fraction": 0.3292782738095238,
+      "reuse_opportunity": 0.3292782738095238,
+      "selected_calibration_threshold": -2.257373571395874,
+      "split": "evaluation",
+      "tn": 8548,
+      "tp": 13442,
+      "unsafe_fg_reuse": 0.02204437977446344,
+      "variant": "current",
+      "vision_backbone_median_ms": 93.74970011413097
+    },
+    {
+      "calibration_threshold_rule": "max calibration reuse opportunity subject to unsafe foreground reuse <= 5%; ties use recall",
+      "classifier_median_ms": null,
+      "classifier_p95_ms": null,
+      "false_negative_foreground_rate": 0.0,
+      "false_positive_background_rate": 0.776170536733917,
+      "fn": 0,
+      "foreground_iou": 0.5741436925647452,
+      "foreground_precision": 0.5741436925647452,
+      "foreground_recall": 1.0,
+      "fp": 10195,
+      "mean_trajectory_false_negative_foreground_rate": 0.0,
+      "mean_trajectory_false_positive_background_rate": 0.7761432168666684,
+      "mean_trajectory_foreground_iou": 0.5744246439208065,
+      "mean_trajectory_foreground_precision": 0.5744246439208065,
+      "mean_trajectory_foreground_recall": 1.0,
+      "mean_trajectory_predicted_background_fraction": 0.109375,
+      "mean_trajectory_reuse_opportunity": 0.109375,
+      "mean_trajectory_unsafe_fg_reuse": 0.0,
+      "method": "dino_pca_calibration_basis",
+      "predicted_background_fraction": 0.109375,
+      "reuse_opportunity": 0.109375,
+      "selected_calibration_threshold": -2.257373571395874,
+      "split": "evaluation",
+      "tn": 2940,
+      "tp": 13745,
+      "unsafe_fg_reuse": 0.0,
+      "variant": "dilated",
+      "vision_backbone_median_ms": 93.74970011413097
+    },
+    {
+      "calibration_threshold_rule": "max calibration reuse opportunity subject to unsafe foreground reuse <= 5%; ties use recall",
+      "classifier_median_ms": null,
+      "classifier_p95_ms": null,
+      "false_negative_foreground_rate": 0.021098581302291742,
+      "false_positive_background_rate": 0.3570612866387514,
+      "fn": 290,
+      "foreground_iou": 0.7298616761594793,
+      "foreground_precision": 0.7415265913474787,
+      "foreground_recall": 0.9789014186977083,
+      "fp": 4690,
+      "mean_trajectory_false_negative_foreground_rate": 0.021096780479521394,
+      "mean_trajectory_false_positive_background_rate": 0.3570427233273275,
+      "mean_trajectory_foreground_iou": 0.7300686430945413,
+      "mean_trajectory_foreground_precision": 0.7418052320947881,
+      "mean_trajectory_foreground_recall": 0.9789032195204785,
+      "mean_trajectory_predicted_background_fraction": 0.3249627976190476,
+      "mean_trajectory_reuse_opportunity": 0.3249627976190476,
+      "mean_trajectory_unsafe_fg_reuse": 0.021096780479521394,
+      "method": "dino_pca_calibration_basis",
+      "predicted_background_fraction": 0.3249627976190476,
+      "reuse_opportunity": 0.3249627976190476,
+      "selected_calibration_threshold": -2.257373571395874,
+      "split": "evaluation",
+      "tn": 8445,
+      "tp": 13455,
+      "unsafe_fg_reuse": 0.021098581302291742,
+      "variant": "source_union",
+      "vision_backbone_median_ms": 93.74970011413097
+    },
+    {
+      "calibration_threshold_rule": "max calibration reuse opportunity subject to unsafe foreground reuse <= 5%; ties use recall",
+      "classifier_median_ms": 15.990219078958035,
+      "classifier_p95_ms": 31.94396486505866,
+      "false_negative_foreground_rate": 0.03652237177155329,
+      "false_positive_background_rate": 0.0657023220403502,
+      "fn": 502,
+      "foreground_iou": 0.9065580503833516,
+      "foreground_precision": 0.9388203601304409,
+      "foreground_recall": 0.9634776282284467,
+      "fp": 863,
+      "mean_trajectory_false_negative_foreground_rate": 0.0365224629406406,
+      "mean_trajectory_false_positive_background_rate": 0.06569438756705769,
+      "mean_trajectory_foreground_iou": 0.9065521689264827,
+      "mean_trajectory_foreground_precision": 0.9388350135791165,
+      "mean_trajectory_foreground_recall": 0.9634775370593595,
+      "mean_trajectory_predicted_background_fraction": 0.4752232142857143,
+      "mean_trajectory_reuse_opportunity": 0.4752232142857143,
+      "mean_trajectory_unsafe_fg_reuse": 0.0365224629406406,
+      "method": "dino_lda",
+      "predicted_background_fraction": 0.4752232142857143,
+      "reuse_opportunity": 0.4752232142857143,
+      "selected_calibration_threshold": 0.36000001430511475,
+      "split": "evaluation",
+      "tn": 12272,
+      "tp": 13243,
+      "unsafe_fg_reuse": 0.03652237177155329,
+      "variant": "current",
+      "vision_backbone_median_ms": 93.74970011413097
+    },
+    {
+      "calibration_threshold_rule": "max calibration reuse opportunity subject to unsafe foreground reuse <= 5%; ties use recall",
+      "classifier_median_ms": 15.990219078958035,
+      "classifier_p95_ms": 31.94396486505866,
+      "false_negative_foreground_rate": 0.0,
+      "false_positive_background_rate": 0.5397792158355539,
+      "fn": 0,
+      "foreground_iou": 0.6597072234221262,
+      "foreground_precision": 0.6597072234221262,
+      "foreground_recall": 1.0,
+      "fp": 7090,
+      "mean_trajectory_false_negative_foreground_rate": 0.0,
+      "mean_trajectory_false_positive_background_rate": 0.539734343414758,
+      "mean_trajectory_foreground_iou": 0.6598194888377743,
+      "mean_trajectory_foreground_precision": 0.6598194888377743,
+      "mean_trajectory_foreground_recall": 1.0,
+      "mean_trajectory_predicted_background_fraction": 0.22488839285714288,
+      "mean_trajectory_reuse_opportunity": 0.22488839285714288,
+      "mean_trajectory_unsafe_fg_reuse": 0.0,
+      "method": "dino_lda",
+      "predicted_background_fraction": 0.22488839285714285,
+      "reuse_opportunity": 0.22488839285714285,
+      "selected_calibration_threshold": 0.36000001430511475,
+      "split": "evaluation",
+      "tn": 6045,
+      "tp": 13745,
+      "unsafe_fg_reuse": 0.0,
+      "variant": "dilated",
+      "vision_backbone_median_ms": 93.74970011413097
+    },
+    {
+      "calibration_threshold_rule": "max calibration reuse opportunity subject to unsafe foreground reuse <= 5%; ties use recall",
+      "classifier_median_ms": 15.990219078958035,
+      "classifier_p95_ms": 31.94396486505866,
+      "false_negative_foreground_rate": 0.033321207711895236,
+      "false_positive_background_rate": 0.07293490673772364,
+      "fn": 458,
+      "foreground_iou": 0.9036931238522751,
+      "foreground_precision": 0.9327483327483328,
+      "foreground_recall": 0.9666787922881047,
+      "fp": 958,
+      "mean_trajectory_false_negative_foreground_rate": 0.03332207431592101,
+      "mean_trajectory_false_positive_background_rate": 0.07292927273887294,
+      "mean_trajectory_foreground_iou": 0.9036896077343446,
+      "mean_trajectory_foreground_precision": 0.9327609376090843,
+      "mean_trajectory_foreground_recall": 0.966677925684079,
+      "mean_trajectory_predicted_background_fraction": 0.4700520833333333,
+      "mean_trajectory_reuse_opportunity": 0.4700520833333333,
+      "mean_trajectory_unsafe_fg_reuse": 0.03332207431592101,
+      "method": "dino_lda",
+      "predicted_background_fraction": 0.4700520833333333,
+      "reuse_opportunity": 0.4700520833333333,
+      "selected_calibration_threshold": 0.36000001430511475,
+      "split": "evaluation",
+      "tn": 12177,
+      "tp": 13287,
+      "unsafe_fg_reuse": 0.033321207711895236,
+      "variant": "source_union",
+      "vision_backbone_median_ms": 93.74970011413097
+    },
+    {
+      "calibration_threshold_rule": "max calibration reuse opportunity subject to unsafe foreground reuse <= 5%; ties use recall",
+      "classifier_median_ms": 11.995045933872461,
+      "classifier_p95_ms": 16.01726245135069,
+      "false_negative_foreground_rate": 0.0401600582029829,
+      "false_positive_background_rate": 0.019489912447658925,
+      "fn": 552,
+      "foreground_iou": 0.9422898364402542,
+      "foreground_precision": 0.9809651275187746,
+      "foreground_recall": 0.9598399417970171,
+      "fp": 256,
+      "mean_trajectory_false_negative_foreground_rate": 0.04015680086328648,
+      "mean_trajectory_false_positive_background_rate": 0.019488460491245196,
+      "mean_trajectory_foreground_iou": 0.9422993422042402,
+      "mean_trajectory_foreground_precision": 0.980969697787037,
+      "mean_trajectory_foreground_recall": 0.9598431991367136,
+      "mean_trajectory_predicted_background_fraction": 0.49966517857142856,
+      "mean_trajectory_reuse_opportunity": 0.49966517857142856,
+      "mean_trajectory_unsafe_fg_reuse": 0.04015680086328648,
+      "method": "siglip_lda",
+      "predicted_background_fraction": 0.49966517857142856,
+      "reuse_opportunity": 0.49966517857142856,
+      "selected_calibration_threshold": 0.6000000238418579,
+      "split": "evaluation",
+      "tn": 12879,
+      "tp": 13193,
+      "unsafe_fg_reuse": 0.0401600582029829,
+      "variant": "current",
+      "vision_backbone_median_ms": 93.74970011413097
+    },
+    {
+      "calibration_threshold_rule": "max calibration reuse opportunity subject to unsafe foreground reuse <= 5%; ties use recall",
+      "classifier_median_ms": 11.995045933872461,
+      "classifier_p95_ms": 16.01726245135069,
+      "false_negative_foreground_rate": 0.0,
+      "false_positive_background_rate": 0.5056718690521508,
+      "fn": 0,
+      "foreground_iou": 0.6742041497032423,
+      "foreground_precision": 0.6742041497032423,
+      "foreground_recall": 1.0,
+      "fp": 6642,
+      "mean_trajectory_false_negative_foreground_rate": 0.0,
+      "mean_trajectory_false_positive_background_rate": 0.5056900383686288,
+      "mean_trajectory_foreground_iou": 0.6742696016976444,
+      "mean_trajectory_foreground_precision": 0.6742696016976444,
+      "mean_trajectory_foreground_recall": 1.0,
+      "mean_trajectory_predicted_background_fraction": 0.2415550595238095,
+      "mean_trajectory_reuse_opportunity": 0.2415550595238095,
+      "mean_trajectory_unsafe_fg_reuse": 0.0,
+      "method": "siglip_lda",
+      "predicted_background_fraction": 0.2415550595238095,
+      "reuse_opportunity": 0.2415550595238095,
+      "selected_calibration_threshold": 0.6000000238418579,
+      "split": "evaluation",
+      "tn": 6493,
+      "tp": 13745,
+      "unsafe_fg_reuse": 0.0,
+      "variant": "dilated",
+      "vision_backbone_median_ms": 93.74970011413097
+    },
+    {
+      "calibration_threshold_rule": "max calibration reuse opportunity subject to unsafe foreground reuse <= 5%; ties use recall",
+      "classifier_median_ms": 11.995045933872461,
+      "classifier_p95_ms": 16.01726245135069,
+      "false_negative_foreground_rate": 0.03535831211349582,
+      "false_positive_background_rate": 0.02390559573658165,
+      "fn": 486,
+      "foreground_iou": 0.9430969485738673,
+      "foreground_precision": 0.9768658365873425,
+      "foreground_recall": 0.9646416878865042,
+      "fp": 314,
+      "mean_trajectory_false_negative_foreground_rate": 0.035355905550846035,
+      "mean_trajectory_false_positive_background_rate": 0.02391013550992686,
+      "mean_trajectory_foreground_iou": 0.943107163473282,
+      "mean_trajectory_foreground_precision": 0.9768772291367717,
+      "mean_trajectory_foreground_recall": 0.964644094449154,
+      "mean_trajectory_predicted_background_fraction": 0.4950520833333334,
+      "mean_trajectory_reuse_opportunity": 0.4950520833333334,
+      "mean_trajectory_unsafe_fg_reuse": 0.035355905550846035,
+      "method": "siglip_lda",
+      "predicted_background_fraction": 0.49505208333333334,
+      "reuse_opportunity": 0.49505208333333334,
+      "selected_calibration_threshold": 0.6000000238418579,
+      "split": "evaluation",
+      "tn": 12821,
+      "tp": 13259,
+      "unsafe_fg_reuse": 0.03535831211349582,
+      "variant": "source_union",
+      "vision_backbone_median_ms": 93.74970011413097
+    },
+    {
+      "calibration_threshold_rule": "max calibration reuse opportunity subject to unsafe foreground reuse <= 5%; ties use recall",
+      "classifier_median_ms": 15.962691977620125,
+      "classifier_p95_ms": 31.988031696528196,
+      "false_negative_foreground_rate": 0.034048744998181155,
+      "false_positive_background_rate": 0.03090978302245908,
+      "fn": 468,
+      "foreground_iou": 0.9382375803830117,
+      "foreground_precision": 0.9703281444127749,
+      "foreground_recall": 0.9659512550018189,
+      "fp": 406,
+      "mean_trajectory_false_negative_foreground_rate": 0.03404816811872168,
+      "mean_trajectory_false_positive_background_rate": 0.03090024800828861,
+      "mean_trajectory_foreground_iou": 0.9382481343642759,
+      "mean_trajectory_foreground_precision": 0.9703342278809894,
+      "mean_trajectory_foreground_recall": 0.9659518318812782,
+      "mean_trajectory_predicted_background_fraction": 0.4909598214285715,
+      "mean_trajectory_reuse_opportunity": 0.4909598214285715,
+      "mean_trajectory_unsafe_fg_reuse": 0.03404816811872168,
+      "method": "fused_lda",
+      "predicted_background_fraction": 0.4909598214285714,
+      "reuse_opportunity": 0.4909598214285714,
+      "selected_calibration_threshold": 0.5400000214576721,
+      "split": "evaluation",
+      "tn": 12729,
+      "tp": 13277,
+      "unsafe_fg_reuse": 0.034048744998181155,
+      "variant": "current",
+      "vision_backbone_median_ms": 93.74970011413097
+    },
+    {
+      "calibration_threshold_rule": "max calibration reuse opportunity subject to unsafe foreground reuse <= 5%; ties use recall",
+      "classifier_median_ms": 15.962691977620125,
+      "classifier_p95_ms": 31.988031696528196,
+      "false_negative_foreground_rate": 0.0,
+      "false_positive_background_rate": 0.49600304529881994,
+      "fn": 0,
+      "foreground_iou": 0.6784304047384008,
+      "foreground_precision": 0.6784304047384008,
+      "foreground_recall": 1.0,
+      "fp": 6515,
+      "mean_trajectory_false_negative_foreground_rate": 0.0,
+      "mean_trajectory_false_positive_background_rate": 0.49599162652272644,
+      "mean_trajectory_foreground_iou": 0.6784569594240834,
+      "mean_trajectory_foreground_precision": 0.6784569594240834,
+      "mean_trajectory_foreground_recall": 1.0,
+      "mean_trajectory_predicted_background_fraction": 0.2462797619047619,
+      "mean_trajectory_reuse_opportunity": 0.2462797619047619,
+      "mean_trajectory_unsafe_fg_reuse": 0.0,
+      "method": "fused_lda",
+      "predicted_background_fraction": 0.24627976190476192,
+      "reuse_opportunity": 0.24627976190476192,
+      "selected_calibration_threshold": 0.5400000214576721,
+      "split": "evaluation",
+      "tn": 6620,
+      "tp": 13745,
+      "unsafe_fg_reuse": 0.0,
+      "variant": "dilated",
+      "vision_backbone_median_ms": 93.74970011413097
+    },
+    {
+      "calibration_threshold_rule": "max calibration reuse opportunity subject to unsafe foreground reuse <= 5%; ties use recall",
+      "classifier_median_ms": 15.962691977620125,
+      "classifier_p95_ms": 31.988031696528196,
+      "false_negative_foreground_rate": 0.030338304838122953,
+      "false_positive_background_rate": 0.03547773125237914,
+      "fn": 417,
+      "foreground_iou": 0.937865034128492,
+      "foreground_precision": 0.9662171958822676,
+      "foreground_recall": 0.9696616951618771,
+      "fp": 466,
+      "mean_trajectory_false_negative_foreground_rate": 0.030339965915913026,
+      "mean_trajectory_false_positive_background_rate": 0.0354685754447539,
+      "mean_trajectory_foreground_iou": 0.9378714251200521,
+      "mean_trajectory_foreground_precision": 0.9662195421633206,
+      "mean_trajectory_foreground_recall": 0.969660034084087,
+      "mean_trajectory_predicted_background_fraction": 0.48683035714285716,
+      "mean_trajectory_reuse_opportunity": 0.48683035714285716,
+      "mean_trajectory_unsafe_fg_reuse": 0.030339965915913026,
+      "method": "fused_lda",
+      "predicted_background_fraction": 0.48683035714285716,
+      "reuse_opportunity": 0.48683035714285716,
+      "selected_calibration_threshold": 0.5400000214576721,
+      "split": "evaluation",
+      "tn": 12669,
+      "tp": 13328,
+      "unsafe_fg_reuse": 0.030338304838122953,
+      "variant": "source_union",
+      "vision_backbone_median_ms": 93.74970011413097
+    }
+  ],
+  "evaluation_trajectory_ids": [
+    "task4_state2",
+    "task5_state2",
+    "task7_state2"
+  ],
+  "experiment": "Track B \u00b7 OpenVLA native-feature offline foreground/background segmentation",
+  "feature_spec": {
+    "branch_channel_order": [
+      "DINOv2",
+      "SigLIP"
+    ],
+    "dino": {
+      "feature_dim": 1024,
+      "grid": [
+        16,
+        16
+      ],
+      "layer_norm_applied": false,
+      "num_blocks": 24,
+      "num_prefix_tokens_in_vit": 5,
+      "patch_size": 14,
+      "prefix_tokens_returned": false,
+      "runtime_feature_shape": [
+        1,
+        256,
+        1024
+      ],
+      "selected_block_index_zero_based": 22,
+      "timm_id": "vit_large_patch14_reg4_dinov2.lvd142m"
+    },
+    "fused_feature_dim": 2176,
+    "image_resize_strategy": "resize-naive",
+    "model_id": "openvla/openvla-7b-finetuned-libero-spatial",
+    "model_type": "openvla",
+    "openvla_visual_token_range_in_llm_prefill": [
+      1,
+      256
+    ],
+    "patch_sequence_order": "row-major raster order produced by timm ViT get_intermediate_layers",
+    "processor_crop_params": [
+      {
+        "output_size": [
+          224,
+          224
+        ]
+      },
+      {
+        "output_size": [
+          224,
+          224
+        ]
+      }
+    ],
+    "processor_does_letterbox": false,
+    "processor_input_sizes": [
+      [
+        3,
+        224,
+        224
+      ],
+      [
+        3,
+        224,
+        224
+      ]
+    ],
+    "processor_interpolations": [
+      "bicubic",
+      "bicubic"
+    ],
+    "processor_letterbox_fill": null,
+    "processor_means": [
+      [
+        0.485,
+        0.456,
+        0.406
+      ],
+      [
+        0.5,
+        0.5,
+        0.5
+      ]
+    ],
+    "processor_normalization_params": [
+      {
+        "inplace": false,
+        "mean": [
+          0.484375,
+          0.455078125,
+          0.40625
+        ],
+        "std": [
+          0.228515625,
+          0.2236328125,
+          0.224609375
+        ]
+      },
+      {
+        "inplace": false,
+        "mean": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "std": [
+          0.5,
+          0.5,
+          0.5
+        ]
+      }
+    ],
+    "processor_pixel_values_shape": [
+      1,
+      6,
+      224,
+      224
+    ],
+    "processor_resize_params": [
+      {
+        "antialias": true,
+        "interpolation": 3,
+        "max_size": null,
+        "size": [
+          224,
+          224
+        ]
+      },
+      {
+        "antialias": true,
+        "interpolation": 3,
+        "max_size": null,
+        "size": [
+          224,
+          224
+        ]
+      }
+    ],
+    "processor_stds": [
+      [
+        0.229,
+        0.224,
+        0.225
+      ],
+      [
+        0.5,
+        0.5,
+        0.5
+      ]
+    ],
+    "siglip": {
+      "feature_dim": 1152,
+      "grid": [
+        16,
+        16
+      ],
+      "layer_norm_applied": false,
+      "num_blocks": 27,
+      "num_prefix_tokens_in_vit": 0,
+      "patch_size": 14,
+      "prefix_tokens_returned": false,
+      "runtime_feature_shape": [
+        1,
+        256,
+        1152
+      ],
+      "selected_block_index_zero_based": 25,
+      "timm_id": "vit_so400m_patch14_siglip_224"
+    },
+    "spatial_correspondence": "Both branches receive channel groups from the same OpenVLA processor output and use 224x224 inputs with 14x14-pixel patches.",
+    "timm_model_ids": [
+      "vit_large_patch14_reg4_dinov2.lvd142m",
+      "vit_so400m_patch14_siglip_224"
+    ],
+    "use_fused_vision_backbone": true,
+    "vision_backbone_id": "dinosiglip-vit-so-224px",
+    "visual_projector_preserves_sequence_length": true,
+    "wrapper_forward_contract": "PrismaticVisionBackbone splits 6 channels into the configured branch inputs, calls the same two featurizers, and concatenates DINOv2 then SigLIP on the feature axis."
+  },
+  "finalized_at_unix": 1791619845.6361525,
+  "kv_reuse_suitability_metrics": [
+    {
+      "foreground_recall": 0.9502364496180429,
+      "method": "dino_pca_per_frame",
+      "predicted_background_fraction": 0.04263392857142857,
+      "reuse_opportunity": 0.04263392857142857,
+      "unsafe_fg_reuse": 0.049763550381957074,
+      "variant": "current"
+    },
+    {
+      "foreground_recall": 0.9898872317206256,
+      "method": "dino_pca_per_frame",
+      "predicted_background_fraction": 0.00584077380952381,
+      "reuse_opportunity": 0.00584077380952381,
+      "unsafe_fg_reuse": 0.010112768279374318,
+      "variant": "dilated"
+    },
+    {
+      "foreground_recall": 0.966824299745362,
+      "method": "dino_pca_per_frame",
+      "predicted_background_fraction": 0.030319940476190476,
+      "reuse_opportunity": 0.030319940476190476,
+      "unsafe_fg_reuse": 0.03317570025463805,
+      "variant": "source_union"
+    },
+    {
+      "foreground_recall": 0.9779556202255365,
+      "method": "dino_pca_calibration_basis",
+      "predicted_background_fraction": 0.3292782738095238,
+      "reuse_opportunity": 0.3292782738095238,
+      "unsafe_fg_reuse": 0.02204437977446344,
+      "variant": "current"
+    },
+    {
+      "foreground_recall": 1.0,
+      "method": "dino_pca_calibration_basis",
+      "predicted_background_fraction": 0.109375,
+      "reuse_opportunity": 0.109375,
+      "unsafe_fg_reuse": 0.0,
+      "variant": "dilated"
+    },
+    {
+      "foreground_recall": 0.9789014186977083,
+      "method": "dino_pca_calibration_basis",
+      "predicted_background_fraction": 0.3249627976190476,
+      "reuse_opportunity": 0.3249627976190476,
+      "unsafe_fg_reuse": 0.021098581302291742,
+      "variant": "source_union"
+    },
+    {
+      "foreground_recall": 0.9634776282284467,
+      "method": "dino_lda",
+      "predicted_background_fraction": 0.4752232142857143,
+      "reuse_opportunity": 0.4752232142857143,
+      "unsafe_fg_reuse": 0.03652237177155329,
+      "variant": "current"
+    },
+    {
+      "foreground_recall": 1.0,
+      "method": "dino_lda",
+      "predicted_background_fraction": 0.22488839285714285,
+      "reuse_opportunity": 0.22488839285714285,
+      "unsafe_fg_reuse": 0.0,
+      "variant": "dilated"
+    },
+    {
+      "foreground_recall": 0.9666787922881047,
+      "method": "dino_lda",
+      "predicted_background_fraction": 0.4700520833333333,
+      "reuse_opportunity": 0.4700520833333333,
+      "unsafe_fg_reuse": 0.033321207711895236,
+      "variant": "source_union"
+    },
+    {
+      "foreground_recall": 0.9598399417970171,
+      "method": "siglip_lda",
+      "predicted_background_fraction": 0.49966517857142856,
+      "reuse_opportunity": 0.49966517857142856,
+      "unsafe_fg_reuse": 0.0401600582029829,
+      "variant": "current"
+    },
+    {
+      "foreground_recall": 1.0,
+      "method": "siglip_lda",
+      "predicted_background_fraction": 0.2415550595238095,
+      "reuse_opportunity": 0.2415550595238095,
+      "unsafe_fg_reuse": 0.0,
+      "variant": "dilated"
+    },
+    {
+      "foreground_recall": 0.9646416878865042,
+      "method": "siglip_lda",
+      "predicted_background_fraction": 0.49505208333333334,
+      "reuse_opportunity": 0.49505208333333334,
+      "unsafe_fg_reuse": 0.03535831211349582,
+      "variant": "source_union"
+    },
+    {
+      "foreground_recall": 0.9659512550018189,
+      "method": "fused_lda",
+      "predicted_background_fraction": 0.4909598214285714,
+      "reuse_opportunity": 0.4909598214285714,
+      "unsafe_fg_reuse": 0.034048744998181155,
+      "variant": "current"
+    },
+    {
+      "foreground_recall": 1.0,
+      "method": "fused_lda",
+      "predicted_background_fraction": 0.24627976190476192,
+      "reuse_opportunity": 0.24627976190476192,
+      "unsafe_fg_reuse": 0.0,
+      "variant": "dilated"
+    },
+    {
+      "foreground_recall": 0.9696616951618771,
+      "method": "fused_lda",
+      "predicted_background_fraction": 0.48683035714285716,
+      "reuse_opportunity": 0.48683035714285716,
+      "unsafe_fg_reuse": 0.030338304838122953,
+      "variant": "source_union"
+    }
+  ],
+  "methods": [
+    {
+      "basis": "unsupervised per-frame first principal component",
+      "labels_used_for_calibration": true,
+      "method": "dino_pca_per_frame",
+      "polarity": "calibration label-selected global polarity after alignment to calibration PCA direction",
+      "reference_direction_cosine_abs_mean": 0.3647241226264409
+    },
+    {
+      "basis": "first component fit on calibration trajectories and held fixed",
+      "labels_used_for_calibration": true,
+      "method": "dino_pca_calibration_basis",
+      "polarity": "selected by foreground/background score difference on calibration labels"
+    },
+    {
+      "lda_actual_ridge": 4.8270920729368105e-09,
+      "lda_shrinkage": "0.10 toward the diagonal covariance target plus 1e-6 relative ridge (increased only if solve is singular)",
+      "lda_solver": "binary pooled-covariance linear discriminant",
+      "method": "dino_lda",
+      "normalization": "L2-normalize each branch per token; fused features normalize branches independently and scale by 1/sqrt(2)",
+      "pca_explained_variance_ratio_sum": 0.8035598397254944,
+      "pca_input_dim": 1024,
+      "pca_output_dim": 128,
+      "training_foreground_fraction": 0.4991815476190476,
+      "training_only_pca": true,
+      "training_tokens": 26880
+    },
+    {
+      "lda_actual_ridge": 3.47871706635547e-09,
+      "lda_shrinkage": "0.10 toward the diagonal covariance target plus 1e-6 relative ridge (increased only if solve is singular)",
+      "lda_solver": "binary pooled-covariance linear discriminant",
+      "method": "siglip_lda",
+      "normalization": "L2-normalize each branch per token; fused features normalize branches independently and scale by 1/sqrt(2)",
+      "pca_explained_variance_ratio_sum": 0.8539895415306091,
+      "pca_input_dim": 1152,
+      "pca_output_dim": 128,
+      "training_foreground_fraction": 0.4991815476190476,
+      "training_only_pca": true,
+      "training_tokens": 26880
+    },
+    {
+      "lda_actual_ridge": 3.901059650854008e-09,
+      "lda_shrinkage": "0.10 toward the diagonal covariance target plus 1e-6 relative ridge (increased only if solve is singular)",
+      "lda_solver": "binary pooled-covariance linear discriminant",
+      "method": "fused_lda",
+      "normalization": "L2-normalize each branch per token; fused features normalize branches independently and scale by 1/sqrt(2)",
+      "pca_explained_variance_ratio_sum": 0.7759274244308472,
+      "pca_input_dim": 2176,
+      "pca_output_dim": 128,
+      "training_foreground_fraction": 0.4991815476190476,
+      "training_only_pca": true,
+      "training_tokens": 26880
+    }
+  ],
+  "reuse_metrics_definition": {
+    "dilation": "binary 8-neighbor 3x3 expansion on the 16x16 grid; applied to predicted foreground",
+    "reuse_opportunity": "predicted background tokens / 256",
+    "source_union": "current predicted foreground unioned with the prediction for its R5 source frame",
+    "unsafe_fg_reuse": "oracle foreground tokens predicted as background / total oracle foreground tokens"
+  },
+  "semantic_segmentation_metrics": [
+    {
+      "false_negative_foreground_rate": 0.049763550381957074,
+      "false_positive_background_rate": 0.9648267986296155,
+      "fn": 684,
+      "foreground_iou": 0.4943977591036415,
+      "foreground_precision": 0.5075386648014301,
+      "foreground_recall": 0.9502364496180429,
+      "fp": 12673,
+      "method": "dino_pca_per_frame",
+      "tn": 462,
+      "tp": 13061,
+      "variant": "current"
+    },
+    {
+      "false_negative_foreground_rate": 0.010112768279374318,
+      "false_positive_background_rate": 0.998629615531024,
+      "fn": 139,
+      "foreground_iou": 0.506514779242052,
+      "foreground_precision": 0.5091494218463496,
+      "foreground_recall": 0.9898872317206256,
+      "fp": 13117,
+      "method": "dino_pca_per_frame",
+      "tn": 18,
+      "tp": 13606,
+      "variant": "dilated"
+    },
+    {
+      "false_negative_foreground_rate": 0.03317570025463805,
+      "false_positive_background_rate": 0.9726684430909783,
+      "fn": 456,
+      "foreground_iou": 0.5010746201123638,
+      "foreground_precision": 0.5098407826587378,
+      "foreground_recall": 0.966824299745362,
+      "fp": 12776,
+      "method": "dino_pca_per_frame",
+      "tn": 359,
+      "tp": 13289,
+      "variant": "source_union"
+    },
+    {
+      "false_negative_foreground_rate": 0.02204437977446344,
+      "false_positive_background_rate": 0.34921964217738866,
+      "fn": 303,
+      "foreground_iou": 0.7332533275147284,
+      "foreground_precision": 0.7455765710799268,
+      "foreground_recall": 0.9779556202255365,
+      "fp": 4587,
+      "method": "dino_pca_calibration_basis",
+      "tn": 8548,
+      "tp": 13442,
+      "variant": "current"
+    },
+    {
+      "false_negative_foreground_rate": 0.0,
+      "false_positive_background_rate": 0.776170536733917,
+      "fn": 0,
+      "foreground_iou": 0.5741436925647452,
+      "foreground_precision": 0.5741436925647452,
+      "foreground_recall": 1.0,
+      "fp": 10195,
+      "method": "dino_pca_calibration_basis",
+      "tn": 2940,
+      "tp": 13745,
+      "variant": "dilated"
+    },
+    {
+      "false_negative_foreground_rate": 0.021098581302291742,
+      "false_positive_background_rate": 0.3570612866387514,
+      "fn": 290,
+      "foreground_iou": 0.7298616761594793,
+      "foreground_precision": 0.7415265913474787,
+      "foreground_recall": 0.9789014186977083,
+      "fp": 4690,
+      "method": "dino_pca_calibration_basis",
+      "tn": 8445,
+      "tp": 13455,
+      "variant": "source_union"
+    },
+    {
+      "false_negative_foreground_rate": 0.03652237177155329,
+      "false_positive_background_rate": 0.0657023220403502,
+      "fn": 502,
+      "foreground_iou": 0.9065580503833516,
+      "foreground_precision": 0.9388203601304409,
+      "foreground_recall": 0.9634776282284467,
+      "fp": 863,
+      "method": "dino_lda",
+      "tn": 12272,
+      "tp": 13243,
+      "variant": "current"
+    },
+    {
+      "false_negative_foreground_rate": 0.0,
+      "false_positive_background_rate": 0.5397792158355539,
+      "fn": 0,
+      "foreground_iou": 0.6597072234221262,
+      "foreground_precision": 0.6597072234221262,
+      "foreground_recall": 1.0,
+      "fp": 7090,
+      "method": "dino_lda",
+      "tn": 6045,
+      "tp": 13745,
+      "variant": "dilated"
+    },
+    {
+      "false_negative_foreground_rate": 0.033321207711895236,
+      "false_positive_background_rate": 0.07293490673772364,
+      "fn": 458,
+      "foreground_iou": 0.9036931238522751,
+      "foreground_precision": 0.9327483327483328,
+      "foreground_recall": 0.9666787922881047,
+      "fp": 958,
+      "method": "dino_lda",
+      "tn": 12177,
+      "tp": 13287,
+      "variant": "source_union"
+    },
+    {
+      "false_negative_foreground_rate": 0.0401600582029829,
+      "false_positive_background_rate": 0.019489912447658925,
+      "fn": 552,
+      "foreground_iou": 0.9422898364402542,
+      "foreground_precision": 0.9809651275187746,
+      "foreground_recall": 0.9598399417970171,
+      "fp": 256,
+      "method": "siglip_lda",
+      "tn": 12879,
+      "tp": 13193,
+      "variant": "current"
+    },
+    {
+      "false_negative_foreground_rate": 0.0,
+      "false_positive_background_rate": 0.5056718690521508,
+      "fn": 0,
+      "foreground_iou": 0.6742041497032423,
+      "foreground_precision": 0.6742041497032423,
+      "foreground_recall": 1.0,
+      "fp": 6642,
+      "method": "siglip_lda",
+      "tn": 6493,
+      "tp": 13745,
+      "variant": "dilated"
+    },
+    {
+      "false_negative_foreground_rate": 0.03535831211349582,
+      "false_positive_background_rate": 0.02390559573658165,
+      "fn": 486,
+      "foreground_iou": 0.9430969485738673,
+      "foreground_precision": 0.9768658365873425,
+      "foreground_recall": 0.9646416878865042,
+      "fp": 314,
+      "method": "siglip_lda",
+      "tn": 12821,
+      "tp": 13259,
+      "variant": "source_union"
+    },
+    {
+      "false_negative_foreground_rate": 0.034048744998181155,
+      "false_positive_background_rate": 0.03090978302245908,
+      "fn": 468,
+      "foreground_iou": 0.9382375803830117,
+      "foreground_precision": 0.9703281444127749,
+      "foreground_recall": 0.9659512550018189,
+      "fp": 406,
+      "method": "fused_lda",
+      "tn": 12729,
+      "tp": 13277,
+      "variant": "current"
+    },
+    {
+      "false_negative_foreground_rate": 0.0,
+      "false_positive_background_rate": 0.49600304529881994,
+      "fn": 0,
+      "foreground_iou": 0.6784304047384008,
+      "foreground_precision": 0.6784304047384008,
+      "foreground_recall": 1.0,
+      "fp": 6515,
+      "method": "fused_lda",
+      "tn": 6620,
+      "tp": 13745,
+      "variant": "dilated"
+    },
+    {
+      "false_negative_foreground_rate": 0.030338304838122953,
+      "false_positive_background_rate": 0.03547773125237914,
+      "fn": 417,
+      "foreground_iou": 0.937865034128492,
+      "foreground_precision": 0.9662171958822676,
+      "foreground_recall": 0.9696616951618771,
+      "fp": 466,
+      "method": "fused_lda",
+      "tn": 12669,
+      "tp": 13328,
+      "variant": "source_union"
+    }
+  ],
+  "split_counts": {
+    "calibration": 105,
+    "evaluation": 105,
+    "training": 105
+  },
+  "status": "complete",
+  "temporal_consistency": [
+    {
+      "from_age": "aggregate",
+      "method": "dino_pca_per_frame",
+      "source_frame_id": "ALL_R5_WINDOWS",
+      "to_age": "aggregate",
+      "token_agreement": 0.9745628720238095,
+      "token_disagreement": 0.025437127976190466,
+      "trajectory_id": "ALL_EVALUATION"
+    },
+    {
+      "from_age": "aggregate",
+      "method": "dino_pca_calibration_basis",
+      "source_frame_id": "ALL_R5_WINDOWS",
+      "to_age": "aggregate",
+      "token_agreement": 0.9919084821428571,
+      "token_disagreement": 0.008091517857142905,
+      "trajectory_id": "ALL_EVALUATION"
+    },
+    {
+      "from_age": "aggregate",
+      "method": "dino_lda",
+      "source_frame_id": "ALL_R5_WINDOWS",
+      "to_age": "aggregate",
+      "token_agreement": 0.9929780505952381,
+      "token_disagreement": 0.0070219494047618625,
+      "trajectory_id": "ALL_EVALUATION"
+    },
+    {
+      "from_age": "aggregate",
+      "method": "siglip_lda",
+      "source_frame_id": "ALL_R5_WINDOWS",
+      "to_age": "aggregate",
+      "token_agreement": 0.9930710565476191,
+      "token_disagreement": 0.006928943452380931,
+      "trajectory_id": "ALL_EVALUATION"
+    },
+    {
+      "from_age": "aggregate",
+      "method": "fused_lda",
+      "source_frame_id": "ALL_R5_WINDOWS",
+      "to_age": "aggregate",
+      "token_agreement": 0.9931640625,
+      "token_disagreement": 0.0068359375,
+      "trajectory_id": "ALL_EVALUATION"
+    }
+  ],
+  "thresholds_selected_on_calibration_only": {
+    "dino_lda": {
+      "calibration_metrics": {
+        "false_negative_foreground_rate": 0.04968535050490268,
+        "false_positive_background_rate": 0.04903889813833812,
+        "fn": 679,
+        "foreground_iou": 0.9072935587536677,
+        "foreground_precision": 0.9524752475247524,
+        "foreground_recall": 0.9503146494950974,
+        "fp": 648,
+        "method": "dino_lda",
+        "predicted_background_fraction": 0.4927455357142857,
+        "reuse_opportunity": 0.4927455357142857,
+        "threshold": 0.36000001430511475,
+        "tn": 12566,
+        "tp": 12987,
+        "unsafe_fg_reuse": 0.04968535050490268
+      },
+      "rule": "max calibration reuse opportunity subject to unsafe foreground reuse <= 5%; ties use recall",
+      "target_unsafe_fg_reuse": 0.05,
+      "threshold": 0.36000001430511475
+    },
+    "dino_pca_calibration_basis": {
+      "calibration_metrics": {
+        "false_negative_foreground_rate": 0.04683155275867115,
+        "false_positive_background_rate": 0.31610413198123205,
+        "fn": 640,
+        "foreground_iou": 0.7300341870761643,
+        "foreground_precision": 0.7571935127594024,
+        "foreground_recall": 0.9531684472413289,
+        "fp": 4177,
+        "method": "dino_pca_calibration_basis",
+        "predicted_background_fraction": 0.3600074404761905,
+        "reuse_opportunity": 0.3600074404761905,
+        "threshold": -2.257373571395874,
+        "tn": 9037,
+        "tp": 13026,
+        "unsafe_fg_reuse": 0.04683155275867115
+      },
+      "rule": "max calibration reuse opportunity subject to unsafe foreground reuse <= 5%; ties use recall",
+      "target_unsafe_fg_reuse": 0.05,
+      "threshold": -2.257373571395874
+    },
+    "dino_pca_per_frame": {
+      "calibration_metrics": {
+        "false_negative_foreground_rate": 0.04888043319186302,
+        "false_positive_background_rate": 0.9284849402149236,
+        "fn": 668,
+        "foreground_iou": 0.5011760169654906,
+        "foreground_precision": 0.5144259310563185,
+        "foreground_recall": 0.951119566808137,
+        "fp": 12269,
+        "method": "dino_pca_per_frame",
+        "predicted_background_fraction": 0.06000744047619048,
+        "reuse_opportunity": 0.06000744047619048,
+        "threshold": -59.58185958862305,
+        "tn": 945,
+        "tp": 12998,
+        "unsafe_fg_reuse": 0.04888043319186302
+      },
+      "rule": "max calibration reuse opportunity subject to unsafe foreground reuse <= 5%; ties use recall",
+      "target_unsafe_fg_reuse": 0.05,
+      "threshold": -59.58185958862305
+    },
+    "fused_lda": {
+      "calibration_metrics": {
+        "false_negative_foreground_rate": 0.049831699107273524,
+        "false_positive_background_rate": 0.02595731799606478,
+        "fn": 681,
+        "foreground_iou": 0.9269041330573203,
+        "foreground_precision": 0.9742647058823529,
+        "foreground_recall": 0.9501683008927265,
+        "fp": 343,
+        "method": "fused_lda",
+        "predicted_background_fraction": 0.5041666666666667,
+        "reuse_opportunity": 0.5041666666666667,
+        "threshold": 0.5400000214576721,
+        "tn": 12871,
+        "tp": 12985,
+        "unsafe_fg_reuse": 0.049831699107273524
+      },
+      "rule": "max calibration reuse opportunity subject to unsafe foreground reuse <= 5%; ties use recall",
+      "target_unsafe_fg_reuse": 0.05,
+      "threshold": 0.5400000214576721
+    },
+    "siglip_lda": {
+      "calibration_metrics": {
+        "false_negative_foreground_rate": 0.04888043319186302,
+        "false_positive_background_rate": 0.011805660662933253,
+        "fn": 668,
+        "foreground_iou": 0.9403848936478079,
+        "foreground_precision": 0.9881404895849172,
+        "foreground_recall": 0.951119566808137,
+        "fp": 156,
+        "method": "siglip_lda",
+        "predicted_background_fraction": 0.510639880952381,
+        "reuse_opportunity": 0.510639880952381,
+        "threshold": 0.6000000238418579,
+        "tn": 13058,
+        "tp": 12998,
+        "unsafe_fg_reuse": 0.04888043319186302
+      },
+      "rule": "max calibration reuse opportunity subject to unsafe foreground reuse <= 5%; ties use recall",
+      "target_unsafe_fg_reuse": 0.05,
+      "threshold": 0.6000000238418579
+    }
+  },
+  "trajectory_counts": {
+    "calibration": 3,
+    "evaluation": 3,
+    "training": 3
+  },
+  "vision_backbone_ms": 93.74970011413097,
+  "vision_backbone_p95_ms": 109.33177368715405,
+  "visual_gallery": {
+    "files": [
+      "comparison_report.pdf",
+      "dilation_comparison.png",
+      "error_maps.png",
+      "feature_mapping_overlay.png",
+      "reuse_opportunity_vs_unsafe_fg_reuse.png",
+      "segmentation_overlays.png",
+      "temporal_task4_task4_state2_step0060.png",
+      "temporal_task5_task5_state2_step0040.png",
+      "temporal_task7_task7_state2_step0110.png"
+    ],
+    "representative_sample_avg_iou": {
+      "task4_state0_step0022": 0.8132118911350705,
+      "task4_state2_step0126": 0.8442338743045991,
+      "task5_state1_step0058": 0.8125520000938338,
+      "task7_state2_step0037": 0.7462910432929533,
+      "task7_state2_step0183": 0.814263884478555
+    },
+    "representative_sample_ids": [
+      "task4_state0_step0022",
+      "task5_state1_step0058",
+      "task7_state2_step0183",
+      "task4_state2_step0126",
+      "task7_state2_step0037"
+    ],
+    "temporal_sequences": [
+      {
+        "figure": "temporal_task4_task4_state2_step0060.png",
+        "source_sample_id": "task4_state2_step0060",
+        "steps": [
+          60,
+          61,
+          62,
+          63,
+          64
+        ],
+        "task_id": 4,
+        "trajectory_id": "task4_state2"
+      },
+      {
+        "figure": "temporal_task5_task5_state2_step0040.png",
+        "source_sample_id": "task5_state2_step0040",
+        "steps": [
+          40,
+          41,
+          42,
+          43,
+          44
+        ],
+        "task_id": 5,
+        "trajectory_id": "task5_state2"
+      },
+      {
+        "figure": "temporal_task7_task7_state2_step0110.png",
+        "source_sample_id": "task7_state2_step0110",
+        "steps": [
+          110,
+          111,
+          112,
+          113,
+          114
+        ],
+        "task_id": 7,
+        "trajectory_id": "task7_state2"
+      }
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "calibration_state_id": 1,
+  "code_commit": "1059cd3abd45246e97f0e7db8b8696e4e8b5621e",
+  "dataset_source": "Stage 3A Fresh action traces replayed offline with LIBERO oracle instance rendering",
+  "evaluation_state_id": 2,
+  "expected_sample_count": 315,
+  "experiment": "track_b_segmentation",
+  "foreground_dilation": "8-neighbor one-cell expansion in the 16x16 token grid",
+  "lda_shrinkage": "0.10 toward diagonal covariance target plus 1e-6 relative ridge",
+  "lda_solver": "binary pooled-covariance linear discriminant",
+  "lda_training_only_pca_components": 128,
+  "methods": [
+    "dino_pca_per_frame",
+    "dino_pca_calibration_basis",
+    "dino_lda",
+    "siglip_lda",
+    "fused_lda"
+  ],
+  "model_feature_source": "installed OpenVLA model vision_backbone.featurizer and fused_featurizer",
+  "model_id": "openvla/openvla-7b-finetuned-libero-spatial",
+  "output_dir": "experiments/kv_cache/outputs/track_b_segmentation",
+  "r5_window_size": 5,
+  "r5_windows_per_trajectory": 7,
+  "raw_features_committed": false,
+  "run_action_generation": false,
+  "run_closed_loop_rollout": false,
+  "run_kv_skipping": false,
+  "seed": 7,
+  "selected_threshold_rule": "maximize calibration reuse opportunity subject to unsafe foreground reuse <= 5%; if infeasible minimize unsafe reuse then maximize reuse",
+  "source_current_mask": "union predicted foreground of current sample and its R5 source sample",
+  "split_manifest": {
+    "calibration": "state_id 1, tasks 4/5/7",
+    "evaluation": "state_id 2, tasks 4/5/7",
+    "training": "state_id 0, tasks 4/5/7"
+  },
+  "states": [
+    0,
+    1,
+    2
+  ],
+  "tasks": [
+    4,
+    5,
+    7
+  ],
+  "training_state_id": 0,
+  "visual_token_count": 256,
+  "visual_token_grid": [
+    16,
+    16
+  ]
+}

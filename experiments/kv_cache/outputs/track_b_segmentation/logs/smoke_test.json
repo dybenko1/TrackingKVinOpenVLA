@@ -1,0 +1,77 @@
+{
+  "action_generation_run": false,
+  "classifier_check": "randomized PCA plus diagonal-shrinkage binary LDA fit and finite probabilities",
+  "completed_at_unix": 1791618853.735976,
+  "cpu_only": true,
+  "dilation_check": "one corner token expands to four in-bounds 8-neighbor cells",
+  "model_forwards_run": false,
+  "sampled_observations_available": 315,
+  "status": "passed",
+  "token_mapping_check": "one 14x14 foreground region maps to its matching 16x16 token",
+  "trajectory_trace_audits": [
+    {
+      "sampled_windows": 7,
+      "state_id": 0,
+      "task_id": 4,
+      "trace": "/opt/openvla/experiments/kv_cache/outputs/stage3a_oracle_masked_matrix/task4_state0/results.json",
+      "trace_sha256": "9c46e630502e37ebc447b5a06fc620bdedee8df583065f4ed149b7f8499f76d3"
+    },
+    {
+      "sampled_windows": 7,
+      "state_id": 1,
+      "task_id": 4,
+      "trace": "/opt/openvla/experiments/kv_cache/outputs/stage3a_oracle_masked_matrix/task4_state1/results.json",
+      "trace_sha256": "b819cf2f27d88845255009debad6c6b23de8427a87d0bda7af05021b3a81a2c1"
+    },
+    {
+      "sampled_windows": 7,
+      "state_id": 2,
+      "task_id": 4,
+      "trace": "/opt/openvla/experiments/kv_cache/outputs/stage3a_oracle_masked_matrix/task4_state2/results.json",
+      "trace_sha256": "c22ca84cf95176c3ecafe234aa9d7e1271bb8879891dae19177cf3620874a422"
+    },
+    {
+      "sampled_windows": 7,
+      "state_id": 0,
+      "task_id": 5,
+      "trace": "/opt/openvla/experiments/kv_cache/outputs/stage3a_oracle_masked_matrix/task5_state0/results.json",
+      "trace_sha256": "b50655eba498053cda7c9bec02faee4f4614a8e6773bcc4b2d3f557c36bfccc0"
+    },
+    {
+      "sampled_windows": 7,
+      "state_id": 1,
+      "task_id": 5,
+      "trace": "/opt/openvla/experiments/kv_cache/outputs/stage3a_oracle_masked_matrix/task5_state1/results.json",
+      "trace_sha256": "39a26e03f1b3094e823d0d3c4fa2884ed40e1ac886b4543cd06b62f86a9a4897"
+    },
+    {
+      "sampled_windows": 7,
+      "state_id": 2,
+      "task_id": 5,
+      "trace": "/opt/openvla/experiments/kv_cache/outputs/stage3a_oracle_masked_matrix/task5_state2/results.json",
+      "trace_sha256": "4a28e6edbf451d6278e53e4d5037bb058058a500def75bcd0e6d89fb370a547a"
+    },
+    {
+      "sampled_windows": 7,
+      "state_id": 0,
+      "task_id": 7,
+      "trace": "/opt/openvla/experiments/kv_cache/outputs/stage3a_oracle_masked_matrix/task7_state0/results.json",
+      "trace_sha256": "2dec1c80194873f3e68769a6095506ecd67ab3ece8c6bc5d7811062471530d22"
+    },
+    {
+      "sampled_windows": 7,
+      "state_id": 1,
+      "task_id": 7,
+      "trace": "/opt/openvla/experiments/kv_cache/outputs/stage3a_oracle_masked_matrix/task7_state1/results.json",
+      "trace_sha256": "4b11b8c563e0ccacf8fcd0d20de8489f7a24c1858e1116ac26d9f2595f8bb60c"
+    },
+    {
+      "sampled_windows": 7,
+      "state_id": 2,
+      "task_id": 7,
+      "trace": "/opt/openvla/experiments/kv_cache/outputs/stage3a_oracle_masked_matrix/task7_state2/results.json",
+      "trace_sha256": "be132e9b63c68babff08d051ff138eb56269d70a311ef1f19b3b8785e87caecd"
+    }
+  ],
+  "unsafe_reuse_check": "unsafe foreground reuse equals foreground false-negative rate"
+}
