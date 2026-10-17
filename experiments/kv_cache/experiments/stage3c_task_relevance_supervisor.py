@@ -20,8 +20,10 @@ OUT = REPO / "experiments" / "kv_cache" / "outputs" / "stage3c_oracle_task_relev
 SESSION = "stage3c-task-relevance"
 CONTAINER = "stage3c-task-relevance"
 IMAGE = "openvla-cached:latest"
-LOG = OUT / "supervisor.log"
-STATUS = OUT / "queue_status.json"
+LOG = Path("/tmp/stage3c_oracle_task_relevance_supervisor.log")
+STATUS = Path("/tmp/stage3c_oracle_task_relevance_queue_status.json")
+OUTPUT_LOG = OUT / "supervisor.log"
+OUTPUT_STATUS = OUT / "queue_status.json"
 LOCK = Path("/tmp/stage3c-task-relevance.lock")
 SCRIPT = "experiments.kv_cache.experiments.stage3c_oracle_task_relevance"
 MOUNTS = [
@@ -48,6 +50,17 @@ def emit(message):
 def save_status(data):
     data["updated_at"] = now()
     STATUS.write_text(json.dumps(data, indent=2))
+    mirror_supervisor_files()
+
+
+def mirror_supervisor_files():
+    """Copy host-writable /tmp state into the root-owned bind-mounted output dir."""
+    if not container_id():
+        return
+    for source, target in ((LOG, OUTPUT_LOG), (STATUS, OUTPUT_STATUS)):
+        if source.exists():
+            subprocess.run(["docker", "exec", CONTAINER, "cp", str(source), str(target)],
+                           cwd=REPO, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
 
 def run(command, *, check=True, capture=False):
@@ -103,7 +116,10 @@ def git_sync(paths, message):
     staged = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=REPO)
     if staged.returncode != 0:
         raise RuntimeError("Git index is not empty; refusing to combine or overwrite unrelated staged work.")
-    run(["git", "add", "--", *paths])
+    mirror_supervisor_files()
+    common = ["experiments/kv_cache/outputs/stage3c_oracle_task_relevance/queue_status.json",
+              "experiments/kv_cache/outputs/stage3c_oracle_task_relevance/supervisor.log"]
+    run(["git", "add", "--", *paths, *common])
     run(["git", "diff", "--cached", "--check"])
     has_changes = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=REPO)
     if has_changes.returncode == 0:
