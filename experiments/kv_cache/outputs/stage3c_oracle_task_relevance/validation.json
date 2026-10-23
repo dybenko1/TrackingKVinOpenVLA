@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "task_id": 4,
+  "state_id": 0,
+  "prefill_length": 292,
+  "visual_scores": 256,
+  "attention_shape": [
+    1,
+    32,
+    35,
+    292
+  ],
+  "query_positions": [
+    257,
+    291
+  ],
+  "backend": "sdpa",
+  "probability_row_sum_max_error": 4.172325134277344e-07,
+  "token_ids_equal": true,
+  "policy_action_exact": true,
+  "prefill_logits_exact": true,
+  "attention_capture_ms": 39.76853800122626,
+  "masked_reuse_validation": {
+    "source_step": 0,
+    "source_age": 1,
+    "oracle_foreground_tokens": 115,
+    "oracle_background_tokens": 141,
+    "task_relevant_background_protected": 35,
+    "background_tokens_reused": 106,
+    "layers_patched": 32,
+    "k_projected_rows_per_layer": 186,
+    "k_rows_reused_per_layer": 106,
+    "v_projected_rows_per_layer": 186,
+    "v_rows_reused_per_layer": 106,
+    "decode_calls_delegated": 192,
+    "cache_validation": "pass",
+    "finite_action": true
+  },
+  "caveat": "FP32 sidecar probabilities reconstructed from normal-pass Q/K; SDPA outputs are unchanged."
+}

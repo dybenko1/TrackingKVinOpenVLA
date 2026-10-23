@@ -1,0 +1,47 @@
+{
+  "status": "complete",
+  "experiment": "Stage 3C \u2014 Oracle Background + Task Relevance, Full-Layer K+V, R5",
+  "required_protection_budgets": [
+    10,
+    25,
+    50
+  ],
+  "completed_protection_budgets": [
+    10,
+    25,
+    50
+  ],
+  "threshold_results": [
+    {
+      "protection_percent": 10,
+      "successes": 9,
+      "total": 9,
+      "mean_skipped_k_rows": 359808.0,
+      "mean_skipped_v_rows": 359808.0
+    },
+    {
+      "protection_percent": 25,
+      "successes": 8,
+      "total": 9,
+      "mean_skipped_k_rows": 311971.55555555556,
+      "mean_skipped_v_rows": 311971.55555555556
+    },
+    {
+      "protection_percent": 50,
+      "successes": 9,
+      "total": 9,
+      "mean_skipped_k_rows": 188341.33333333334,
+      "mean_skipped_v_rows": 188341.33333333334
+    }
+  ],
+  "references": {
+    "fresh_successes": 8,
+    "fresh_total": 9,
+    "stage3a_successes": 8,
+    "stage3a_total": 9,
+    "stage3b_successes": 5,
+    "stage3b_total": 9
+  },
+  "latency_measured": false,
+  "method_caveat": "Adapted VLA-Cache-style task relevance; this is not a reproduction of the complete VLA-Cache algorithm."
+}

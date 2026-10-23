@@ -1,0 +1,73 @@
+{
+  "experiment": "Stage 3C \u2014 Oracle Background + Task Relevance, Full-Layer K+V, R5",
+  "model": "openvla/openvla-7b-finetuned-libero-spatial",
+  "suite": "libero_spatial",
+  "tasks": [
+    4,
+    5,
+    7
+  ],
+  "states": [
+    0,
+    1,
+    2
+  ],
+  "seed": 7,
+  "horizon": 220,
+  "settling_steps": 10,
+  "refresh_interval": 5,
+  "layers": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31
+  ],
+  "visual_positions": [
+    1,
+    256
+  ],
+  "components": [
+    "K",
+    "V"
+  ],
+  "budgets": [
+    0.1,
+    0.25,
+    0.5
+  ],
+  "relevance_layer": 15,
+  "attention_backend": "SDPA, unchanged",
+  "score_method": "FP32 read-only sidecar from normal-pass RoPE-applied Q/K; mean heads and actual prompt-text queries over visual keys",
+  "relevance_score_refresh_policy": "scores captured on fully fresh refresh and reused until next refresh",
+  "source_policy": "most recent independent fresh prefill only; reuse outputs never promoted",
+  "compute_skipping": "K/V for oracle foreground and protected background are fresh; only remaining oracle-background rows are skipped",
+  "latency_benchmark": false
+}

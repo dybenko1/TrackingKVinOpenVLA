@@ -1,0 +1,8 @@
+{
+  "torch_version": "2.6.0",
+  "cuda_version": "12.8",
+  "cuda_available": true,
+  "device": "cuda",
+  "device_name": "Orin",
+  "transformers_runtime": "4.49.0 (Stage 3B container)"
+}
