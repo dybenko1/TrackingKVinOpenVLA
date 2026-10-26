@@ -1,0 +1,85 @@
+{
+  "text_encoding_median_wall_ms_each": 24.737480998737738,
+  "tokenizer_median_wall_ms_each": 7.012126996414736,
+  "openvla_feature_forward_median_wall_ms": 27.98010699916631,
+  "openvla_final_block_continuation_median_cuda_ms_across_samples": 1.0382559895515442,
+  "openvla_penultimate_feature_cuda_events": {
+    "warmups": 5,
+    "repetitions": 30,
+    "mean_ms": 24.631015332539878,
+    "median_ms": 24.558287620544434,
+    "p95_ms": 25.04091167449951,
+    "std_ms": 0.17405020314457711
+  },
+  "openvla_final_block_continuation_cuda_events": {
+    "warmups": 10,
+    "repetitions": 100,
+    "mean_ms": 1.031580798625946,
+    "median_ms": 1.0295040011405945,
+    "p95_ms": 1.055084753036499,
+    "std_ms": 0.012363159386349715
+  },
+  "openvla_full_penultimate_plus_final_feature_cuda_events": {
+    "warmups": 5,
+    "repetitions": 30,
+    "mean_ms": 25.66537920633952,
+    "median_ms": 25.5654878616333,
+    "p95_ms": 26.066495895385742,
+    "std_ms": 0.31006151601090326
+  },
+  "final_block_plus_norm_cuda_events": {
+    "warmups": 10,
+    "repetitions": 100,
+    "mean_ms": 1.031580798625946,
+    "median_ms": 1.0295040011405945,
+    "p95_ms": 1.055084753036499,
+    "std_ms": 0.012363159386349715
+  },
+  "text_encoder_cuda_events": {
+    "warmups": 5,
+    "repetitions": 30,
+    "mean_ms": 24.566938591003417,
+    "median_ms": 24.552111625671387,
+    "p95_ms": 24.707172679901124,
+    "std_ms": 0.09749647920135235
+  },
+  "affinity_scoring_two_token_phrase_cuda_events": {
+    "warmups": 20,
+    "repetitions": 100,
+    "mean_ms": 0.6781753593683243,
+    "median_ms": 0.6762720048427582,
+    "p95_ms": 0.7001151889562607,
+    "std_ms": 0.01279554662454391
+  },
+  "affinity_scoring_longest_instruction_cuda_events": {
+    "warmups": 20,
+    "repetitions": 100,
+    "mean_ms": 0.6844207990169525,
+    "median_ms": 0.6838880181312561,
+    "p95_ms": 0.7105727851390838,
+    "std_ms": 0.01297314338372144
+  },
+  "longest_instruction_scored": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+  "original_pooled_image_encoder_cuda_events": {
+    "warmups": 5,
+    "repetitions": 30,
+    "mean_ms": 25.80069236755371,
+    "median_ms": 25.734031677246094,
+    "p95_ms": 26.164607048034668,
+    "std_ms": 0.18804745278786128
+  },
+  "notes": "CUDA timings synchronized; fixed tensors; warm-up/repetitions in each record. Patch-forward timing is diagnostic and excludes OpenVLA language prefill/action inference; text timing excludes tokenizer CPU processing except separately reported wall time; full model load is one-time and includes safetensors deserialization/copy to CUDA.",
+  "runtime": {
+    "device": "Orin",
+    "cuda": "12.8",
+    "torch": "2.6.0",
+    "timm": "0.9.16",
+    "open_clip_torch_isolated_version": "2.31.0",
+    "model_load_ms": 15642.671772002359,
+    "gpu_allocated_model_bytes": 2647418880,
+    "peak_model_bytes": 2647418880,
+    "text_tower_bf16_parameter_bytes_estimate": 899359200,
+    "affinity_peak_temporary_delta_bytes": 2369536,
+    "gpu_total_memory_bytes": 65893359616
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "experiment": "Stage 4A Phase 1 feasibility",
+  "status": "not_established_stop_at_gate",
+  "branch": "thesis/stage4a-siglip-foreground",
+  "runtime": {
+    "container_image": "openvla-cached:latest",
+    "torch": "2.6.0",
+    "cuda": "12.8",
+    "cuda_available": true,
+    "device": "Orin",
+    "free_cuda_gib_at_check": 46.54,
+    "transformers": "4.49.0",
+    "timm": "0.9.16",
+    "open_clip_python_package_installed": false,
+    "other_docker_workloads_active": false
+  },
+  "openvla_siglip": {
+    "model_id": "openvla/openvla-7b-finetuned-libero-spatial",
+    "vision_backbone_id": "dinosiglip-vit-so-224px",
+    "timm_model_id": "vit_so400m_patch14_siglip_224",
+    "patch_count": 256,
+    "patch_dim": 1152,
+    "grid": [16, 16],
+    "feature_block_zero_based": 25,
+    "feature_block_count": 27,
+    "feature_capture": "before final vision block and MAP image pooling",
+    "saved_track_b_feature_count": 315
+  },
+  "paired_siglip_checkpoint": {
+    "timm_hf_repo": "timm/ViT-SO400M-14-SigLIP",
+    "timm_hf_file": "open_clip_pytorch_model.bin",
+    "vision_pool": "MAP",
+    "vision_projection": "none",
+    "text_width": 1152,
+    "text_layers": 27,
+    "text_context_length": 16,
+    "checkpoint_file_bytes": 3509549856,
+    "google_transformers_checkpoint_byte_range_text_tower_bytes": 1798718400,
+    "paired_checkpoint_available_in_active_cache": false
+  },
+  "instruction_token_lengths_including_eos": {
+    "task4": 20,
+    "task5": 18,
+    "task7": 15,
+    "max_context": 16
+  },
+  "download_diagnostic": {
+    "initial_full_model_load": "stalled at 20 MiB for more than two minutes; interrupted before model inference",
+    "single_10mb_range_seconds": 8.71,
+    "four_parallel_10mb_ranges_total_seconds": 79.22,
+    "weights_downloaded_for_this_attempt": 0,
+    "model_or_dependency_changes": false
+  },
+  "uncompleted_required_diagnostics": [
+    "saved OpenVLA patch feature vs paired checkpoint layer-25 numerical alignment",
+    "matched, mismatched, and negative instruction patch heatmaps",
+    "patch-score variation and spatial plausibility review",
+    "post-hoc comparison with oracle masks"
+  ],
+  "policy_oracle_leakage": false,
+  "closed_loop_rollouts_run": 0,
+  "stage3a_stage3c_modified": false
+}

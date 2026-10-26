@@ -1,0 +1,48 @@
+{
+  "experiment": "Stage 4A Phase 1B — UNMATCH-inspired frozen SigLIP local affinity feasibility",
+  "openvla_checkpoint": "openvla/openvla-7b-finetuned-libero-spatial",
+  "openvla_snapshot_revision": "962318cec55ac10993ff0f5f43eda9a270b4c873",
+  "paired_siglip_repo": "timm/ViT-SO400M-14-SigLIP",
+  "paired_siglip_revision": "c85ba2402be4b49b5d178f2e2384fdf50f8c7961",
+  "paired_weights_sha256": "0a04a48b797e187a568335ab67e57a8958c32cee5a707a3feb6d4c97149dcd9c",
+  "track_b_samples": [
+    "task4_state0_step0000",
+    "task4_state0_step0048",
+    "task4_state0_step0112",
+    "task5_state0_step0000",
+    "task5_state0_step0052",
+    "task5_state0_step0104",
+    "task7_state0_step0000",
+    "task7_state0_step0051",
+    "task7_state0_step0109"
+  ],
+  "prompts": [
+    "black bowl",
+    "black",
+    "bowl",
+    "plate",
+    "robot gripper",
+    "wooden table",
+    "wooden",
+    "table",
+    "red cup",
+    "red",
+    "cup",
+    "blue bowl",
+    "it",
+    "the"
+  ],
+  "patch_grid": [
+    16,
+    16
+  ],
+  "patch_count": 256,
+  "text_context_length": 16,
+  "feature_variants": [
+    "OpenVLA fine-tuned penultimate block 25, unnormalized",
+    "OpenVLA fine-tuned final block 26 + final norm",
+    "paired pretrained final block + norm reference"
+  ],
+  "scope": "offline only; no segmentation fitting, action inference, KV reuse, or rollouts",
+  "runtime_command": "PYTHONPATH=/tmp/stage4a_openclip_pkg python -u experiments/kv_cache/experiments/stage4a_unmatch_siglip_diagnostics.py"
+}
