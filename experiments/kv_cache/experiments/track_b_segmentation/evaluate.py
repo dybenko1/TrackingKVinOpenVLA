@@ -414,6 +414,25 @@ def _error_grid(truth: np.ndarray, pred: np.ndarray) -> np.ndarray:
     return colors[categories]
 
 
+def _expand_token_rgb(token_rgb: np.ndarray, image_shape: tuple[int, int]) -> np.ndarray:
+    """Nearest-neighbor expand a 16×16 RGB token map to its matching policy image."""
+    height, width = map(int, image_shape)
+    token_rgb = np.asarray(token_rgb, dtype=np.float32)
+    if token_rgb.shape != (16, 16, 3):
+        raise ValueError(f"Expected a 16×16 RGB token map, got {token_rgb.shape}.")
+    if height % 16 == 0 and width % 16 == 0:
+        return np.repeat(
+            np.repeat(token_rgb, height // 16, axis=0), width // 16, axis=1
+        )
+    # Preserve the discrete token colors when a policy image is not divisible by 16.
+    pixels = np.clip(np.rint(token_rgb * 255), 0, 255).astype(np.uint8)
+    nearest = getattr(Image, "Resampling", Image).NEAREST
+    return np.asarray(
+        Image.fromarray(pixels).resize((width, height), resample=nearest),
+        dtype=np.float32,
+    ) / 255.0
+
+
 def _pillow_font(size: int) -> Any:
     from PIL import ImageFont
 
@@ -735,12 +754,18 @@ def _save_visuals(
             rgb = np.asarray(Image.open(OUT / row["rgb_path"]).convert("RGB"))
             truth = labels[sid]
             axes[r_index, 0].imshow(rgb)
-            axes[r_index, 1].imshow(np.repeat(np.repeat(truth.reshape(16, 16), 14, axis=0)[..., None], 3, axis=2) * np.array([0.9, 0.3, 0.2]))
+            oracle_grid = np.zeros((16, 16, 3), dtype=np.float32)
+            oracle_grid[truth.reshape(16, 16)] = (0.9, 0.3, 0.2)
+            axes[r_index, 1].imshow(_expand_token_rgb(oracle_grid, rgb.shape[:2]))
             _draw_grid(axes[r_index, 1])
             axes[r_index, 0].set_ylabel(f"{row['trajectory_id']} · t={row['time_step']}", fontsize=8)
             for i, method in enumerate(method_order, start=2):
                 pred = predictions[method]["current"][sid]
-                axes[r_index, i].imshow(_error_grid(truth, pred), interpolation="nearest")
+                # The grid overlay uses 224-pixel coordinates. Keep the error image in
+                # the same pixel extent/aspect as RGB; plotting the raw 16×16 map makes
+                # those fixed grid ticks expand the axes and leaves the mask tiny.
+                error_image = _expand_token_rgb(_error_grid(truth, pred), rgb.shape[:2])
+                axes[r_index, i].imshow(error_image, interpolation="nearest")
                 _draw_grid(axes[r_index, i])
                 stats = _metrics(truth, pred)
                 axes[r_index, i].text(
