@@ -1,0 +1,8 @@
+{
+  "torch": "2.6.0",
+  "cuda": "12.8",
+  "device": "Orin",
+  "device_type": "cuda",
+  "transformers_expected": "4.49.0",
+  "method": "existing Stage 3C attention sidecar + Stage 3B masked projection skip"
+}

@@ -1,0 +1,88 @@
+{
+  "experiment": "Stage 4A \u2014 Oracle-Free Lagged Attention Foreground Selection",
+  "model": "openvla/openvla-7b-finetuned-libero-spatial",
+  "suite": "libero_spatial",
+  "tasks": [
+    4,
+    5,
+    7
+  ],
+  "states": [
+    0,
+    1,
+    2
+  ],
+  "seed": 7,
+  "horizon": 220,
+  "settling_steps": 10,
+  "refresh_interval": 5,
+  "layers": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31
+  ],
+  "visual_positions": [
+    1,
+    256
+  ],
+  "components": [
+    "K",
+    "V"
+  ],
+  "attention_score_layer": 15,
+  "attention_backend": "SDPA unchanged; read-only FP32 Q/K sidecar",
+  "score_aggregation": "mean over text-query positions and attention heads for visual key positions 1..256",
+  "score_lag": "captured on fully fresh refresh; held for the following reuse steps until the next R5 refresh",
+  "selection": "stable descending attention ranking over all 256 positions; lower visual index breaks ties",
+  "fresh_budgets": {
+    "90": {
+      "requested_fraction": 0.9,
+      "fresh_tokens": 230,
+      "reuse_candidates": 26
+    },
+    "75": {
+      "requested_fraction": 0.75,
+      "fresh_tokens": 192,
+      "reuse_candidates": 64
+    },
+    "60": {
+      "requested_fraction": 0.6,
+      "fresh_tokens": 154,
+      "reuse_candidates": 102
+    }
+  },
+  "controls": "seeded random mask with same exact fresh-token count, sampled at each refresh and held through its R5 window",
+  "oracle_segmentation_in_policy": false,
+  "extra_model_or_trained_head": false,
+  "source": "independent clone of current fully fresh multimodal prefill only; reused caches never promoted",
+  "latency": "synchronized wall-clock diagnostic around policy inference with projection hooks; not a dedicated CUDA-event benchmark"
+}
