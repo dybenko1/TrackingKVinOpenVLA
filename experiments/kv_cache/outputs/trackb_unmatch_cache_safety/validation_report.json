@@ -1,0 +1,67 @@
+{
+  "status": "passed",
+  "original_scoring": {
+    "source_script": "stage4a_unmatch_siglip_diagnostics.py",
+    "function": "_local_affinity",
+    "primary_score": "max over valid text tokens for each visual patch (visual→text)",
+    "normalization": "FP32 L2 normalization for both feature vectors",
+    "matrix_orientation": "[valid_text_tokens, 256_visual_patches]",
+    "oracle_used_in_mask_policy": false,
+    "changed_scoring": false
+  },
+  "fast_validation": {
+    "otsu_fast_validation": "passed",
+    "cases": [
+      {
+        "input_unique": 256,
+        "mask_sum": 128,
+        "status": {
+          "valid": true,
+          "threshold": 0.5,
+          "foreground_direction": "score > threshold",
+          "foreground_count": 128,
+          "background_count": 128,
+          "unique_score_count": 256,
+          "between_class_variance": 4128.1884813533325,
+          "tie_rule": "equal scores stay in one class; lowest threshold wins objective ties",
+          "fallback": null
+        }
+      },
+      {
+        "input_unique": 1,
+        "mask_sum": 256,
+        "status": {
+          "valid": false,
+          "reason": "constant_scores",
+          "fallback": "all_fresh"
+        }
+      },
+      {
+        "input_unique": 2,
+        "mask_sum": 16,
+        "status": {
+          "valid": true,
+          "threshold": 0.5,
+          "foreground_direction": "score > threshold",
+          "foreground_count": 16,
+          "background_count": 240,
+          "unique_score_count": 2,
+          "between_class_variance": 3840.0,
+          "tie_rule": "equal scores stay in one class; lowest threshold wins objective ties",
+          "fallback": null
+        }
+      },
+      {
+        "input_unique": "nonfinite",
+        "mask_sum": 256,
+        "status": {
+          "valid": false,
+          "reason": "nonfinite",
+          "fallback": "all_fresh"
+        }
+      }
+    ]
+  },
+  "otsu_preflight": "completed",
+  "interpretation": "Otsu changes only score-to-mask conversion."
+}

@@ -1,0 +1,83 @@
+{
+  "experiment": "Track B — UNMATCH score cache safety",
+  "branch": "thesis/trackb-unmatch-cache-safety",
+  "model": "openvla/openvla-7b-finetuned-libero-spatial",
+  "openvla_snapshot": "962318cec55ac10993ff0f5f43eda9a270b4c873",
+  "paired_siglip": "timm/ViT-SO400M-14-SigLIP@c85ba2402be4b49b5d178f2e2384fdf50f8c7961",
+  "paired_weights_sha256": "0a04a48b797e187a568335ab67e57a8958c32cee5a707a3feb6d4c97149dcd9c",
+  "primary_visual_feature": "OpenVLA fine-tuned SigLIP penultimate block 25, 256x1152, as original UNMATCH diagnostics",
+  "text_feature": "paired SigLIP token states, exact original local-affinity path; context 16",
+  "scoring": "FP32 normalize; S=valid text states @ 256 patch states.T; per patch max over valid text tokens",
+  "mask": "per-frame exact Otsu on 256 scores; score > threshold is candidate fresh foreground; invalid/degenerate -> all fresh",
+  "cache": {
+    "components": [
+      "K",
+      "V"
+    ],
+    "layers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "R": 5,
+    "source": "latest fully fresh prefill only",
+    "attention_protection_fraction": 0.1,
+    "attention_protection": "Stage 3C layer-15 fresh-refresh scores; stable top-background, half-up rounding"
+  },
+  "scenarios": {
+    "tasks": [
+      4,
+      5,
+      7
+    ],
+    "states": [
+      0,
+      1,
+      2
+    ],
+    "seed": 7,
+    "horizon": 220,
+    "settling_steps": 10
+  },
+  "matched_random": {
+    "included": true,
+    "selection": "deterministic random foreground count matched per frame to Otsu count",
+    "seed_base": 74131
+  },
+  "original_gallery_reproduction": {
+    "review_png_sha256": "8f78a6adcb5b013bd70db5caabfc9e9dc93432cfa54661a8aee5a0ae84f772a3",
+    "matched_mismatch_png_sha256": "4ba285f6e15cc7985feba95fb305656562c8f5f5f2e31954846179cd2c3790f3",
+    "result": "byte-identical output regenerated from saved NPZ inputs in /tmp"
+  },
+  "code_sha256": "cea5b2bf9c59fec7169e402600ab13f549cf59413caa99cd11f20b81569b9eca",
+  "latency": "synchronized wall timing from processor input preparation through full predict_action; vision and score components also recorded; manual decode validation excluded"
+}
