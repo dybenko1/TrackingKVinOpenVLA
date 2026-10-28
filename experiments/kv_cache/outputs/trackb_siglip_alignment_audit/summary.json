@@ -1,0 +1,41 @@
+{
+  "experiment": "Track B SigLIP vision/text alignment audit",
+  "status": "complete",
+  "paired_global_image_text": {
+    "model": "timm/ViT-SO400M-14-SigLIP paired pretrained weights",
+    "matched_instruction_minus_red_cup_mean": 0.06327958881027168,
+    "black_bowl_minus_red_cup_mean": -0.004485326301720407,
+    "plate_minus_red_cup_mean": 0.035386513297756515
+  },
+  "vision_weight_drift": {
+    "paired_tensors": 342,
+    "openvla_tensors": 342,
+    "same_after_bf16_cast_tensor_count": 27,
+    "relative_l2": 0.14132250061902393,
+    "max_abs": 0.95416259765625,
+    "mean_abs": 0.006304339963989416,
+    "relative_l2_by_prefix": {
+      "attn_pool": 0.001634255259640613,
+      "blocks": 0.15937495908113564,
+      "norm": 0.0014965513978535236,
+      "patch_embed": 0.1975464116217308,
+      "pos_embed": 0.009184002589371113
+    },
+    "source_openvla_snapshot_revision": "962318cec55ac10993ff0f5f43eda9a270b4c873",
+    "source_openvla_shard": "/data/models/huggingface/models--openvla--openvla-7b-finetuned-libero-spatial/snapshots/962318cec55ac10993ff0f5f43eda9a270b4c873/model-00001-of-00004.safetensors"
+  },
+  "local_instruction_auc_mean_by_variant": {
+    "OpenVLA fine-tuned penultimate": 0.48466617318719213,
+    "OpenVLA fine-tuned final": 0.3336362907141278,
+    "paired pretrained final": 0.4481822665226519
+  },
+  "mean_matched_vs_mismatched_local_map_corr_by_variant": {
+    "OpenVLA fine-tuned penultimate": 0.7001095557566223,
+    "OpenVLA fine-tuned final": 0.7628777028906325,
+    "paired pretrained final": 0.7228061316491894
+  },
+  "text_special_pad_control_mean_valid_auroc": 0.48263120389085035,
+  "text_special_pad_control_mean_all_auroc": 0.48254778714076696,
+  "special_pad_control_mean_map_corr": 0.9999665163394776,
+  "data_provenance": "saved Stage 4A NPZ/JSON and Track B saved OpenVLA SigLIP features; no model fitting or policy rollout"
+}
