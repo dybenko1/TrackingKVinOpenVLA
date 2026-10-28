@@ -1,0 +1,200 @@
+{
+  "task4_state0": {
+    "fresh": {
+      "success": true,
+      "steps": 140,
+      "termination": "success"
+    },
+    "stage3b": {
+      "success": false,
+      "steps": 220,
+      "termination": "horizon"
+    },
+    "stage3c_oracle_10pct": {
+      "success": true,
+      "steps": 129,
+      "termination": "success"
+    },
+    "stage4a_attention_60pct_fresh": {
+      "success": false,
+      "steps": 220,
+      "termination": "horizon"
+    }
+  },
+  "task4_state1": {
+    "fresh": {
+      "success": true,
+      "steps": 145,
+      "termination": "success"
+    },
+    "stage3b": {
+      "success": false,
+      "steps": 220,
+      "termination": "horizon"
+    },
+    "stage3c_oracle_10pct": {
+      "success": true,
+      "steps": 143,
+      "termination": "success"
+    },
+    "stage4a_attention_60pct_fresh": {
+      "success": true,
+      "steps": 136,
+      "termination": "success"
+    }
+  },
+  "task4_state2": {
+    "fresh": {
+      "success": true,
+      "steps": 130,
+      "termination": "success"
+    },
+    "stage3b": {
+      "success": true,
+      "steps": 124,
+      "termination": "success"
+    },
+    "stage3c_oracle_10pct": {
+      "success": true,
+      "steps": 131,
+      "termination": "success"
+    },
+    "stage4a_attention_60pct_fresh": {
+      "success": true,
+      "steps": 127,
+      "termination": "success"
+    }
+  },
+  "task5_state0": {
+    "fresh": {
+      "success": true,
+      "steps": 105,
+      "termination": "success"
+    },
+    "stage3b": {
+      "success": true,
+      "steps": 110,
+      "termination": "success"
+    },
+    "stage3c_oracle_10pct": {
+      "success": true,
+      "steps": 111,
+      "termination": "success"
+    },
+    "stage4a_attention_60pct_fresh": {
+      "success": true,
+      "steps": 103,
+      "termination": "success"
+    }
+  },
+  "task5_state1": {
+    "fresh": {
+      "success": true,
+      "steps": 89,
+      "termination": "success"
+    },
+    "stage3b": {
+      "success": true,
+      "steps": 103,
+      "termination": "success"
+    },
+    "stage3c_oracle_10pct": {
+      "success": true,
+      "steps": 100,
+      "termination": "success"
+    },
+    "stage4a_attention_60pct_fresh": {
+      "success": true,
+      "steps": 100,
+      "termination": "success"
+    }
+  },
+  "task5_state2": {
+    "fresh": {
+      "success": true,
+      "steps": 90,
+      "termination": "success"
+    },
+    "stage3b": {
+      "success": false,
+      "steps": 220,
+      "termination": "horizon"
+    },
+    "stage3c_oracle_10pct": {
+      "success": true,
+      "steps": 88,
+      "termination": "success"
+    },
+    "stage4a_attention_60pct_fresh": {
+      "success": true,
+      "steps": 83,
+      "termination": "success"
+    }
+  },
+  "task7_state0": {
+    "fresh": {
+      "success": true,
+      "steps": 111,
+      "termination": "success"
+    },
+    "stage3b": {
+      "success": true,
+      "steps": 194,
+      "termination": "success"
+    },
+    "stage3c_oracle_10pct": {
+      "success": true,
+      "steps": 152,
+      "termination": "success"
+    },
+    "stage4a_attention_60pct_fresh": {
+      "success": true,
+      "steps": 112,
+      "termination": "success"
+    }
+  },
+  "task7_state1": {
+    "fresh": {
+      "success": true,
+      "steps": 120,
+      "termination": "success"
+    },
+    "stage3b": {
+      "success": true,
+      "steps": 123,
+      "termination": "success"
+    },
+    "stage3c_oracle_10pct": {
+      "success": true,
+      "steps": 124,
+      "termination": "success"
+    },
+    "stage4a_attention_60pct_fresh": {
+      "success": true,
+      "steps": 119,
+      "termination": "success"
+    }
+  },
+  "task7_state2": {
+    "fresh": {
+      "success": false,
+      "steps": 220,
+      "termination": "horizon"
+    },
+    "stage3b": {
+      "success": false,
+      "steps": 220,
+      "termination": "horizon"
+    },
+    "stage3c_oracle_10pct": {
+      "success": true,
+      "steps": 126,
+      "termination": "success"
+    },
+    "stage4a_attention_60pct_fresh": {
+      "success": true,
+      "steps": 134,
+      "termination": "success"
+    }
+  }
+}

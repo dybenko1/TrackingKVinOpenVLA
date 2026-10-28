@@ -2,9 +2,9 @@
   "docker_image": "openvla-cached:latest",
   "device": "Orin",
   "torch": "2.6.0",
-  "model_load_ms": 25732.223650993546,
+  "model_load_ms": 24118.939219013555,
   "openvla_gpu_allocated_bytes": 15095984640,
-  "paired_text_tower_load_ms": 17207.036520994734,
+  "paired_text_tower_load_ms": 18277.98266999889,
   "paired_text_tower_incremental_gpu_bytes": 911469568,
   "vision_forward_policy_extra_passes": 0,
   "text_cache": "one token-state encoding per unique instruction, reused per frame"

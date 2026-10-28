@@ -1,0 +1,116 @@
+[
+  {
+    "path": "outputs/trackb_unmatch_cache_safety/unmatch_otsu/task4_state0/results.json",
+    "size_bytes": 3051573,
+    "sha256": "b874c1f848077849aa6402b03cce6e4577c895e05275b754a73cbf14341f4b4f",
+    "publication": "local detailed raw record"
+  },
+  {
+    "path": "outputs/trackb_unmatch_cache_safety/unmatch_otsu/task4_state1/results.json",
+    "size_bytes": 5001005,
+    "sha256": "5629ff74edd0ff01efbf08b7540a461c46291c0694ca67181ca46fc003b4f5a2",
+    "publication": "local detailed raw record"
+  },
+  {
+    "path": "outputs/trackb_unmatch_cache_safety/unmatch_otsu/task4_state2/results.json",
+    "size_bytes": 2895991,
+    "sha256": "9c4523356ae654b902fd0dd7f31f0b9076f7373196d7f5c50bd0c20c0ac5b5d5",
+    "publication": "local detailed raw record"
+  },
+  {
+    "path": "outputs/trackb_unmatch_cache_safety/unmatch_otsu/task5_state0/results.json",
+    "size_bytes": 2273424,
+    "sha256": "114579d8595652d6c70bd207db8ead554233e2ceb11e1d4408f89dd5e8a58fbd",
+    "publication": "local detailed raw record"
+  },
+  {
+    "path": "outputs/trackb_unmatch_cache_safety/unmatch_otsu/task5_state1/results.json",
+    "size_bytes": 4948612,
+    "sha256": "aff78731cbafe10407e1e60d16e9ac978e912c20c161e3dbbbaf3d8dac50d661",
+    "publication": "local detailed raw record"
+  },
+  {
+    "path": "outputs/trackb_unmatch_cache_safety/unmatch_otsu/task5_state2/results.json",
+    "size_bytes": 2211453,
+    "sha256": "eea9f4dd446786193cadcec2367dc6ce7909fd8f2c32e30c483edc425dbeb0c6",
+    "publication": "local detailed raw record"
+  },
+  {
+    "path": "outputs/trackb_unmatch_cache_safety/unmatch_otsu/task7_state0/results.json",
+    "size_bytes": 2756115,
+    "sha256": "3fa457b2b65f8bc347922b5f7971bc382e31074d9b8df3f1fbfe98585c5b0b8f",
+    "publication": "local detailed raw record"
+  },
+  {
+    "path": "outputs/trackb_unmatch_cache_safety/unmatch_otsu/task7_state1/results.json",
+    "size_bytes": 2917391,
+    "sha256": "e4eb1f58b14e62b9e6310031a250c3b92c5cf5b15f1b0e5d6029d9d19a5fab3b",
+    "publication": "local detailed raw record"
+  },
+  {
+    "path": "outputs/trackb_unmatch_cache_safety/unmatch_otsu/task7_state2/results.json",
+    "size_bytes": 2980143,
+    "sha256": "e068d0c44c9046a7bf1683ac804fcc69dd2763026c65ef45579782e79e1aae1e",
+    "publication": "local detailed raw record"
+  },
+  {
+    "path": "outputs/trackb_unmatch_cache_safety/matched_random/task4_state0/results.json",
+    "size_bytes": 3032038,
+    "sha256": "7cd6430781b0113f47bf8f8db30a8b5e6bff1c4044ce6629a87df205915c7be4",
+    "publication": "local detailed raw record"
+  },
+  {
+    "path": "outputs/trackb_unmatch_cache_safety/matched_random/task4_state1/results.json",
+    "size_bytes": 4916063,
+    "sha256": "bccb532e36f580eb0624bd6a60e7f223cd467575e6d3b15114913555ea49fbd9",
+    "publication": "local detailed raw record"
+  },
+  {
+    "path": "outputs/trackb_unmatch_cache_safety/matched_random/task4_state2/results.json",
+    "size_bytes": 2725690,
+    "sha256": "dc0376d2f72bf86339294422a97599be2dfd62438b85811f4f0b090187a298f5",
+    "publication": "local detailed raw record"
+  },
+  {
+    "path": "outputs/trackb_unmatch_cache_safety/matched_random/task5_state0/results.json",
+    "size_bytes": 2316926,
+    "sha256": "4b6e88d01692848c0e3b638d42fc89e14e1cebbf14c0e2e743537bcb7bf91ef2",
+    "publication": "local detailed raw record"
+  },
+  {
+    "path": "outputs/trackb_unmatch_cache_safety/matched_random/task5_state1/results.json",
+    "size_bytes": 2375274,
+    "sha256": "a89062b6ea69697ab21491c8ac74b4e368e030718e3ef7660a74cfb00e66dbfc",
+    "publication": "local detailed raw record"
+  },
+  {
+    "path": "outputs/trackb_unmatch_cache_safety/matched_random/task5_state2/results.json",
+    "size_bytes": 2019816,
+    "sha256": "02449dc7244e07a92b768b70adfb8a70439015b51fe9222f5cc9af200a70da69",
+    "publication": "local detailed raw record"
+  },
+  {
+    "path": "outputs/trackb_unmatch_cache_safety/matched_random/task7_state0/results.json",
+    "size_bytes": 2853840,
+    "sha256": "5510e1518a26f22d6fda7012404a3b5c5860d4976555a52ecd36e85165876b2b",
+    "publication": "local detailed raw record"
+  },
+  {
+    "path": "outputs/trackb_unmatch_cache_safety/matched_random/task7_state1/results.json",
+    "size_bytes": 4941504,
+    "sha256": "44a402c64ccb5ca916d8370e08ded10258e2b75cf726dfb05e64fd59d9cd58d6",
+    "publication": "local detailed raw record"
+  },
+  {
+    "path": "outputs/trackb_unmatch_cache_safety/matched_random/task7_state2/results.json",
+    "size_bytes": 4927601,
+    "sha256": "a8764b5af77e7b3c9787e01a8b94439549b679addab4706a9bd1751d974fd213",
+    "publication": "local detailed raw record"
+  },
+  {
+    "path": "outputs/trackb_unmatch_cache_safety/logs/matrix_supervisor.log",
+    "size_bytes": 90701540,
+    "sha256": "3b408f1252553fa55aee192f417f46f8edb25e72578b7272fad798f4fbbede82",
+    "publication": "local raw log; not suitable for Git commit"
+  }
+]

@@ -1,0 +1,1 @@
+Supervisor shell could not create the log directory because the preflight output root was created by the container as root. The active matrix was left untouched; the directory was created through the existing container and tmux pane capture attached. The log contains output from the attachment point onward; earlier launch text remains in tmux scrollback.

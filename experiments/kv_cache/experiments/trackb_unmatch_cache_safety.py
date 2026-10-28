@@ -699,13 +699,30 @@ def run_validation(model, processor, text_model, device, key):
 
 
 def _aggregate_outputs():
-    files=[]; table=[]
+    files=[]; table=[]; matrix_checks=[]
     for condition in ("unmatch_otsu","matched_random"):
         for task in TASKS:
             for state in STATES:
                 p=OUT/condition/f"task{task}_state{state}"/"results.json"
                 if p.exists():
                     r=json.loads(p.read_text()); files.append(str(p.relative_to(ROOT)))
+                    errors=[]
+                    if r.get("status")!="complete": errors.append("scenario_status_not_complete")
+                    for step in r.get("records",[]):
+                        idx=int(step["step"]); refresh=(idx%5)==0; age=idx%5
+                        reused=int(step["reused_background_tokens"])
+                        if bool(step["refresh"])!=refresh: errors.append(f"step_{idx}_schedule")
+                        if int(step["source_age"])!=age: errors.append(f"step_{idx}_source_age")
+                        if not refresh and int(step["source_step"])!=idx-age: errors.append(f"step_{idx}_source_not_latest_refresh")
+                        if refresh and int(step["k_skipped_rows_total"])!=0: errors.append(f"step_{idx}_refresh_skipped_k")
+                        if refresh and int(step["v_skipped_rows_total"])!=0: errors.append(f"step_{idx}_refresh_skipped_v")
+                        if not refresh and int(step["k_skipped_rows_total"])!=reused*32: errors.append(f"step_{idx}_k_total")
+                        if not refresh and int(step["v_skipped_rows_total"])!=reused*32: errors.append(f"step_{idx}_v_total")
+                        if len(step.get("k_skipped_rows_per_layer",[]))!=32 or any(int(x)!=(0 if refresh else reused) for x in step.get("k_skipped_rows_per_layer",[])): errors.append(f"step_{idx}_k_layer_rows")
+                        if len(step.get("v_skipped_rows_per_layer",[]))!=32 or any(int(x)!=(0 if refresh else reused) for x in step.get("v_skipped_rows_per_layer",[])): errors.append(f"step_{idx}_v_layer_rows")
+                        if not step.get("all_32_layers_validated") or not step.get("source_fresh"): errors.append(f"step_{idx}_source_or_layer_validation")
+                        if not all(math.isfinite(float(a)) for a in step.get("policy_action",[])): errors.append(f"step_{idx}_nonfinite_action")
+                    matrix_checks.append({"condition":condition,"task_id":task,"state_id":state,"status":r.get("status"),"steps":r.get("steps"),"records":len(r.get("records",[])),"max_source_age":r.get("max_source_age"),"valid":not errors,"errors":errors})
                     reuse_steps=[x for x in r["records"] if not x["refresh"]]
                     denom_visual_rows=sum(32*256 for _ in reuse_steps)
                     table.append({"condition":condition,"task_id":task,"state_id":state,"success":r["success"],"steps":r["steps"],
@@ -719,7 +736,37 @@ def _aggregate_outputs():
                                   "source_fg_patches_reused_mean":float(np.mean([x["source_current_mask_metrics"]["reusable_source_fg_count"] for x in reuse_steps])) if reuse_steps else None})
     with (OUT/"per_scenario.csv").open("w",newline="") as f:
         w=csv.DictWriter(f,fieldnames=list(table[0]) if table else ["condition"]); w.writeheader(); w.writerows(table)
+    # Publish a compact per-step table while keeping full scores, masks, and
+    # layer-level raw records in the separate scenario JSON files.
+    step_fields=["condition","task_id","state_id","rollout_success","rollout_steps","step","refresh","source_step","source_age","attention_score_age","prefill_length","language_tokens","foreground_tokens","protected_background_tokens","reused_tokens","k_skipped_rows_total","v_skipped_rows_total","oracle_precision","oracle_recall","oracle_iou","oracle_score_auroc","source_current_mask_iou","reusable_source_fg_count","score_generation_ms","mask_generation_ms","vision_forward_ms","policy_predict_action_ms","total_predict_path_ms","token_ids","all_32_layers_validated","source_fresh","finite_action"]
+    step_path=OUT/"per_step_diagnostics.csv"
+    with step_path.open("w",newline="") as sf:
+        sw=csv.DictWriter(sf,fieldnames=step_fields);sw.writeheader()
+        for rel in files:
+            scenario=json.loads((ROOT/rel).read_text())
+            for rec in scenario["records"]:
+                oracle=rec.get("oracle_posthoc") or {}; temporal=rec.get("source_current_mask_metrics") or {}
+                sw.writerow({"condition":scenario["condition"],"task_id":scenario["task_id"],"state_id":scenario["state_id"],"rollout_success":scenario["success"],"rollout_steps":scenario["steps"],"step":rec["step"],"refresh":rec["refresh"],"source_step":rec["source_step"],"source_age":rec["source_age"],"attention_score_age":rec["attention_score_age"],"prefill_length":rec["prefill_length"],"language_tokens":rec["language_tokens"],"foreground_tokens":rec["selected_fresh_fg_tokens"],"protected_background_tokens":rec["protected_predicted_background_tokens"],"reused_tokens":rec["reused_background_tokens"],"k_skipped_rows_total":rec["k_skipped_rows_total"],"v_skipped_rows_total":rec["v_skipped_rows_total"],"oracle_precision":oracle.get("precision"),"oracle_recall":oracle.get("recall"),"oracle_iou":oracle.get("iou"),"oracle_score_auroc":oracle.get("score_auroc"),"source_current_mask_iou":temporal.get("source_current_mask_iou"),"reusable_source_fg_count":temporal.get("reusable_source_fg_count"),"score_generation_ms":rec["score_generation_ms"],"mask_generation_ms":rec["actual_mask_generation_ms"],"vision_forward_ms":rec["vision_forward_ms"],"policy_predict_action_ms":rec["policy_predict_action_ms"],"total_predict_path_ms":rec["total_predict_path_ms"],"token_ids":json.dumps(rec["token_ids"]),"all_32_layers_validated":rec["all_32_layers_validated"],"source_fresh":rec["source_fresh"],"finite_action":bool(np.isfinite(rec["policy_action"]).all())})
+    # Full per-scenario JSON and the run log are large; retain locally and
+    # publish their byte sizes/hashes without duplicating them in summaries.
+    manifest=[]
+    for rel in files:
+        p=ROOT/rel; h=hashlib.sha256()
+        with p.open("rb") as rf:
+            for chunk in iter(lambda:rf.read(1024*1024),b""):h.update(chunk)
+        manifest.append({"path":str(p.relative_to(ROOT)),"size_bytes":p.stat().st_size,"sha256":h.hexdigest(),"publication":"local detailed raw record"})
+    log_path=OUT/"logs"/"matrix_supervisor.log"
+    if log_path.exists():
+        h=hashlib.sha256()
+        with log_path.open("rb") as rf:
+            for chunk in iter(lambda:rf.read(1024*1024),b""):h.update(chunk)
+        manifest.append({"path":str(log_path.relative_to(ROOT)),"size_bytes":log_path.stat().st_size,"sha256":h.hexdigest(),"publication":"local raw log; not suitable for Git commit"})
+    _write_json(OUT/"raw_artifact_manifest.json",manifest)
     refs={}
+    def outcome(x):
+        """Keep only comparable outcome fields, not duplicate step-level logs."""
+        if not isinstance(x,dict): return {}
+        return {k:x[k] for k in ("success","steps","termination") if k in x}
     for task in TASKS:
         for state in STATES:
             tag=f"task{task}_state{state}"
@@ -727,9 +774,9 @@ def _aggregate_outputs():
             c3=ROOT/"outputs"/"stage3c_oracle_task_relevance"/"protect_10"/tag/"results.json"
             c4=ROOT/"outputs"/"stage4a_oracle_free_attention"/"fresh_60"/"attention"/tag/"results.json"
             if base.exists():
-                b=json.loads(base.read_text()); refs[tag]={"fresh":b.get("fresh",{}),"stage3b":b.get("stage3b_true_skip",{})}
-            if c3.exists(): refs.setdefault(tag,{})["stage3c_oracle_10pct"]=json.loads(c3.read_text())
-            if c4.exists(): refs.setdefault(tag,{})["stage4a_attention_60pct_fresh"]=json.loads(c4.read_text())
+                b=json.loads(base.read_text()); refs[tag]={"fresh":outcome(b.get("fresh",{})),"stage3b":outcome(b.get("stage3b_true_skip",{}))}
+            if c3.exists(): refs.setdefault(tag,{})["stage3c_oracle_10pct"]=outcome(json.loads(c3.read_text()))
+            if c4.exists(): refs.setdefault(tag,{})["stage4a_attention_60pct_fresh"]=outcome(json.loads(c4.read_text()))
     for row in table:
         ref=refs.get(f"task{row['task_id']}_state{row['state_id']}",{})
         for name,key_name in [("fresh","fresh"),("stage3b_true_skip","stage3b"),("stage3c_oracle_10pct","stage3c_oracle_10pct"),("stage4a_attention","stage4a_attention_60pct_fresh")]:
@@ -769,11 +816,13 @@ def _aggregate_outputs():
              "mean_source_current_mask_iou":float(np.mean([r["source_current_mask_metrics"]["source_current_mask_iou"] for r in all_reuse])) if all_reuse else None,
              "mean_source_fg_patches_that_are_reused":float(np.mean([r["source_current_mask_metrics"]["reusable_source_fg_count"] for r in all_reuse])) if all_reuse else None}
     _write_json(OUT/"historical_references.json",refs)
+    matrix_validation={"status":"passed" if len(matrix_checks)==18 and all(x["valid"] and x["records"]==x["steps"] and x["max_source_age"]==4 for x in matrix_checks) else "failed","expected_scenarios_per_condition":9,"scenario_checks":matrix_checks}
+    _write_json(OUT/"matrix_validation.json",matrix_validation)
     summary={"status":"complete" if all(sum(r["condition"]==c for r in table)==9 for c in ("unmatch_otsu","matched_random")) else "incomplete",
              "method":"original UNMATCH-inspired SigLIP visual→text max cosine + per-frame Otsu; Stage3C top10% lagged attention protection; R5 full-layer true K/V skip",
              "primary": condition_summary["unmatch_otsu"],
              "matched_random": condition_summary["matched_random"],
-             "per_scenario":table,"historical_references":refs,"result_files":files,
+             "per_scenario":table,"historical_references":refs,"matrix_validation":matrix_validation,"result_files":files,"per_step_diagnostics":"per_step_diagnostics.csv","raw_artifact_manifest":"raw_artifact_manifest.json",
              "latency_measured":bool(table),"latency_scope":"synchronized wall latency from processor input preparation through full predict_action, including one normal vision forward, current score/mask, and policy inference; excludes environment and manual decode validation"}
     _write_json(OUT/"summary.json",summary)
     _plot_aggregate(table,refs)
@@ -809,6 +858,9 @@ def _plot_aggregate(table, refs):
 
 def _write_report(preflight_result, validation_result, summary):
     refs={"Fresh":"experiments/kv_cache/outputs/stage4a_oracle_free_attention", "Stage 3C":"experiments/kv_cache/outputs/stage3c_oracle_task_relevance/protect_10", "Stage 3B":"experiments/kv_cache/outputs/stage3b_oracle_full_kv_matrix"}
+    latency=summary.get("primary",{})
+    random_latency=summary.get("matched_random",{})
+    latency_text=(f"Synchronized policy-path latency was measured from processor input preparation through `predict_action`, including one normal vision forward, current score/mask generation, and policy inference (environment stepping excluded): UNMATCH+Otsu mean {latency.get('mean_policy_path_ms'):.1f} ms, p50 {latency.get('p50_policy_path_ms'):.1f} ms, p95 {latency.get('p95_policy_path_ms'):.1f} ms; matched-random mean {random_latency.get('mean_policy_path_ms'):.1f} ms, p50 {random_latency.get('p50_policy_path_ms'):.1f} ms, p95 {random_latency.get('p95_policy_path_ms'):.1f} ms. This is not a paired Fresh-vs-cache speedup benchmark and should not be interpreted as one. Mean score-generation/mask-selection times for UNMATCH+Otsu were {latency.get('mean_siglip_score_generation_ms'):.2f}/{latency.get('mean_otsu_ms'):.2f} ms. Skipped row counts are structural, not latency claims.") if summary.get("latency_measured") else "Policy-path latency was not measured; skipped projection rows are structural counts, not latency claims."
     lines=["# Track B — UNMATCH score cache-safety experiment", "",
            "## Method", "",
            "The recovered Stage 4A score implementation was kept unchanged: FP32-normalized penultimate OpenVLA SigLIP patch and paired-checkpoint text token features; cosine matrix `[valid text tokens, 256 patches]`; patch score is the maximum cosine across valid instruction tokens. Otsu is applied per current frame; high-affinity scores are fresh candidates. Stage 3C's lagged layer-15 attention protection selects the top 10% of predicted background (half-up rounding, stable ties). Remaining predicted background K/V uses the latest fresh R5 source. Oracle masks are computed after policy selection solely for post-hoc metrics.","",
@@ -820,8 +872,8 @@ def _write_report(preflight_result, validation_result, summary):
     for cond in ("unmatch_otsu","matched_random"):
         subset=[r for r in summary.get("per_scenario",[]) if r["condition"]==cond]
         lines.append(f"| {cond} | {sum(r['success'] for r in subset)} | {len(subset)} |")
-    lines += ["", "Fresh historical reference: 8/9. Stage 3C oracle-assisted + 10% task-relevance protection: 9/9. Stage 3B oracle background full-layer KV: 5/9. Stage 4A oracle-free attention results are a separate mask policy; see the output's `references.json` and historical CSV. None of these small scenario sets establishes generalization.","",
-              "## Efficiency and limitations", "", "Skipped projection rows are structural counts, not latency. End-to-end latency was not measured in this run. SigLIP masking reuses the current OpenVLA vision-backbone output already needed by the policy; the runner captures its penultimate SigLIP branch during that same forward. Text states are computed from the paired pretrained text tower, cached by task instruction. The 16-token context can truncate task 4/5 instructions. Current-frame masks lag the K/V source by design, and source/current mask disagreement is observational only.","",
+    lines += ["", "Fresh historical reference: 8/9. Stage 3C oracle-assisted + 10% task-relevance protection: 9/9. Stage 3B oracle background full-layer KV: 5/9. Stage 4A oracle-free attention results are a separate mask policy; see `historical_references.json`. None of these small scenario sets establishes generalization.","",
+              "## Efficiency and limitations", "", latency_text+" SigLIP masking reuses the current OpenVLA vision-backbone output already needed by the policy; the runner captures its penultimate SigLIP branch during that same forward. Text states are computed from the paired pretrained text tower, cached by task instruction. The 16-token context can truncate task 4/5 instructions. Current-frame masks lag the K/V source by design, and source/current mask disagreement is observational only.","",
               "## Files and reproducibility", "", "Code: `experiments/kv_cache/experiments/trackb_unmatch_cache_safety.py`. Config: `configuration.json`. Validation: `validation.json`. Results are incrementally saved per scenario. No Stage 3/4 output was overwritten.",""]
     (OUT/"REPORT.md").write_text("\n".join(lines))
 
