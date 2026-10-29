@@ -1,0 +1,40 @@
+{
+  "experiment": "Track B DINOv2 ADE20K semantic segmentation visual trial",
+  "tasks": [
+    4,
+    5,
+    7
+  ],
+  "states": [
+    0,
+    1,
+    2
+  ],
+  "frames_per_scenario": 3,
+  "sampling": "earliest, median, latest among saved Track B sample frames; no LIBERO replay",
+  "input_image": "saved policy_rgb.png: OpenVLA-oriented/resized/cropped observation; DINOv2 ADE pipeline then rescales short side to 512",
+  "official_backbone": "Meta facebook/dinov2-large DINOv2 ViT-L/14; 24 blocks, 1024 dim, zero registers; final normalized patch tokens used by ADE config",
+  "official_backbone_hf_source": "Meta's official facebook/dinov2-large Transformers checkpoint, loaded with Dinov2Model; revision pinned",
+  "official_backbone_hf_revision": "0ff9d1340c9524c60f3f03e8573c57a1f8197f24",
+  "official_backbone_hf_sha256": "399fba97a95f22c36834418bc69373364a99af3a1153da1c0fb31db567c92e23",
+  "official_head": "cache/models/dinov2/ade20k/dinov2_vitl14_ade20k_linear_head.pth",
+  "official_head_url": "https://dl.fbaipublicfiles.com/dinov2/dinov2_vitl14/dinov2_vitl14_ade20k_linear_head.pth",
+  "official_head_sha256": "59137f319d7e83c79f3253ab7bf63041f1f884e54ba865a2c7ef0046655306a0",
+  "official_head_checkpoint_meta": {
+    "mmseg_version": "0.27.0+",
+    "exp_name": "vit_large_512_ade20k_40k_noconcat.py",
+    "iter": 39999,
+    "epoch": 32
+  },
+  "official_head_architecture": "MMSeg BNHead: BatchNorm2d(1024) then Conv2d(1024,150,1), applied to output index 3 of blocks [20,21,22,23]",
+  "native_probe": "same official head on saved OpenVLA DINO features (256x1024), no extra vision forward; known mismatch: OpenVLA reg4, block 22, no feature norm per Track B manifest, 224px policy preprocessing vs official register-free final block 23 and 512-short-side ADE preprocessing",
+  "inference_device": "cuda:0",
+  "vision_dtype": "torch.bfloat16",
+  "class_count": 150,
+  "oracle_used_for_inference": false,
+  "policy_or_KV_modified": false,
+  "official_DINOv2_source": "https://github.com/facebookresearch/dinov2",
+  "official_notebook": "https://github.com/facebookresearch/dinov2/blob/main/notebooks/semantic_segmentation.ipynb",
+  "head_checkpoint_source": "https://dl.fbaipublicfiles.com/dinov2/dinov2_vitl14/dinov2_vitl14_ade20k_linear_head.pth",
+  "official_test_preprocess": "MMSeg ADE20K config: RGB, keep aspect ratio with 512 short side, normalize 0..255 by mean [123.675,116.28,103.53] and std [58.395,57.12,57.375], center-pad to patch multiple 14 as notebook"
+}

@@ -1,0 +1,1059 @@
+{
+  "status": "complete",
+  "frame_count": 27,
+  "scenario_count": 9,
+  "official_success": true,
+  "native_head_application": "completed as compatibility probe; not a matched pretrained feature path",
+  "official_inference_ms": {
+    "median": 112.49426999711432,
+    "mean": 116.80289514791824,
+    "p95": 132.34721540356986,
+    "n": 27,
+    "scope": "synchronized wall-clock per-image path: PIL RGB resize/normalization prep, host-to-device tensor, DINOv2 backbone, ADE head, output resize and label decoding; after one warm-up and model load, excludes download/load"
+  },
+  "head_only_ms": {
+    "official_final_feature": 1.0456768035888673,
+    "openvla_cached_feature": 0.2558271884918213,
+    "scope": "ADE head only with features already on GPU; CUDA event timing"
+  },
+  "peak_cuda_memory_mib": 784,
+  "head_parameter_bytes": 631392,
+  "all_frames_top_classes": [
+    {
+      "sample_id": "task4_state0_step0000",
+      "task": 4,
+      "state": 0,
+      "phase": "early",
+      "top_classes": [
+        {
+          "class_id": 0,
+          "class": "wall",
+          "pixels": 15569,
+          "fraction": 0.3102877869897959
+        },
+        {
+          "class_id": 15,
+          "class": "table",
+          "pixels": 15290,
+          "fraction": 0.30472735969387754
+        },
+        {
+          "class_id": 3,
+          "class": "floor",
+          "pixels": 7934,
+          "fraction": 0.1581234056122449
+        },
+        {
+          "class_id": 10,
+          "class": "cabinet",
+          "pixels": 6577,
+          "fraction": 0.13107860331632654
+        },
+        {
+          "class_id": 137,
+          "class": "tray",
+          "pixels": 1581,
+          "fraction": 0.03150908801020408
+        }
+      ]
+    },
+    {
+      "sample_id": "task4_state0_step0072",
+      "task": 4,
+      "state": 0,
+      "phase": "middle",
+      "top_classes": [
+        {
+          "class_id": 15,
+          "class": "table",
+          "pixels": 18357,
+          "fraction": 0.36585220025510207
+        },
+        {
+          "class_id": 0,
+          "class": "wall",
+          "pixels": 16514,
+          "fraction": 0.32912149234693877
+        },
+        {
+          "class_id": 3,
+          "class": "floor",
+          "pixels": 6699,
+          "fraction": 0.13351004464285715
+        },
+        {
+          "class_id": 10,
+          "class": "cabinet",
+          "pixels": 2305,
+          "fraction": 0.04593829719387755
+        },
+        {
+          "class_id": 142,
+          "class": "plate",
+          "pixels": 1485,
+          "fraction": 0.029595822704081634
+        }
+      ]
+    },
+    {
+      "sample_id": "task4_state0_step0139",
+      "task": 4,
+      "state": 0,
+      "phase": "late",
+      "top_classes": [
+        {
+          "class_id": 0,
+          "class": "wall",
+          "pixels": 17331,
+          "fraction": 0.3454041772959184
+        },
+        {
+          "class_id": 15,
+          "class": "table",
+          "pixels": 11890,
+          "fraction": 0.2369658801020408
+        },
+        {
+          "class_id": 10,
+          "class": "cabinet",
+          "pixels": 8395,
+          "fraction": 0.16731106505102042
+        },
+        {
+          "class_id": 3,
+          "class": "floor",
+          "pixels": 6491,
+          "fraction": 0.12936463647959184
+        },
+        {
+          "class_id": 108,
+          "class": "plaything",
+          "pixels": 2262,
+          "fraction": 0.0450813137755102
+        }
+      ]
+    },
+    {
+      "sample_id": "task4_state1_step0000",
+      "task": 4,
+      "state": 1,
+      "phase": "early",
+      "top_classes": [
+        {
+          "class_id": 15,
+          "class": "table",
+          "pixels": 16554,
+          "fraction": 0.3299186862244898
+        },
+        {
+          "class_id": 0,
+          "class": "wall",
+          "pixels": 15726,
+          "fraction": 0.3134167729591837
+        },
+        {
+          "class_id": 3,
+          "class": "floor",
+          "pixels": 8003,
+          "fraction": 0.15949856505102042
+        },
+        {
+          "class_id": 10,
+          "class": "cabinet",
+          "pixels": 5407,
+          "fraction": 0.10776068239795919
+        },
+        {
+          "class_id": 142,
+          "class": "plate",
+          "pixels": 1566,
+          "fraction": 0.031210140306122448
+        }
+      ]
+    },
+    {
+      "sample_id": "task4_state1_step0072",
+      "task": 4,
+      "state": 1,
+      "phase": "middle",
+      "top_classes": [
+        {
+          "class_id": 15,
+          "class": "table",
+          "pixels": 17159,
+          "fraction": 0.341976243622449
+        },
+        {
+          "class_id": 0,
+          "class": "wall",
+          "pixels": 14317,
+          "fraction": 0.285335618622449
+        },
+        {
+          "class_id": 3,
+          "class": "floor",
+          "pixels": 8266,
+          "fraction": 0.16474011479591838
+        },
+        {
+          "class_id": 10,
+          "class": "cabinet",
+          "pixels": 1836,
+          "fraction": 0.03659119897959184
+        },
+        {
+          "class_id": 108,
+          "class": "plaything",
+          "pixels": 1757,
+          "fraction": 0.03501674107142857
+        }
+      ]
+    },
+    {
+      "sample_id": "task4_state1_step0144",
+      "task": 4,
+      "state": 1,
+      "phase": "late",
+      "top_classes": [
+        {
+          "class_id": 0,
+          "class": "wall",
+          "pixels": 15346,
+          "fraction": 0.305843431122449
+        },
+        {
+          "class_id": 15,
+          "class": "table",
+          "pixels": 12658,
+          "fraction": 0.2522720025510204
+        },
+        {
+          "class_id": 3,
+          "class": "floor",
+          "pixels": 6855,
+          "fraction": 0.13661910076530612
+        },
+        {
+          "class_id": 10,
+          "class": "cabinet",
+          "pixels": 6743,
+          "fraction": 0.13438695790816327
+        },
+        {
+          "class_id": 108,
+          "class": "plaything",
+          "pixels": 3377,
+          "fraction": 0.0673030931122449
+        }
+      ]
+    },
+    {
+      "sample_id": "task4_state2_step0000",
+      "task": 4,
+      "state": 2,
+      "phase": "early",
+      "top_classes": [
+        {
+          "class_id": 15,
+          "class": "table",
+          "pixels": 17305,
+          "fraction": 0.3448860012755102
+        },
+        {
+          "class_id": 0,
+          "class": "wall",
+          "pixels": 15581,
+          "fraction": 0.31052694515306123
+        },
+        {
+          "class_id": 3,
+          "class": "floor",
+          "pixels": 7141,
+          "fraction": 0.14231903698979592
+        },
+        {
+          "class_id": 10,
+          "class": "cabinet",
+          "pixels": 6122,
+          "fraction": 0.12201052295918367
+        },
+        {
+          "class_id": 142,
+          "class": "plate",
+          "pixels": 1564,
+          "fraction": 0.0311702806122449
+        }
+      ]
+    },
+    {
+      "sample_id": "task4_state2_step0062",
+      "task": 4,
+      "state": 2,
+      "phase": "middle",
+      "top_classes": [
+        {
+          "class_id": 15,
+          "class": "table",
+          "pixels": 20796,
+          "fraction": 0.41446109693877553
+        },
+        {
+          "class_id": 0,
+          "class": "wall",
+          "pixels": 15593,
+          "fraction": 0.31076610331632654
+        },
+        {
+          "class_id": 3,
+          "class": "floor",
+          "pixels": 6459,
+          "fraction": 0.12872688137755103
+        },
+        {
+          "class_id": 142,
+          "class": "plate",
+          "pixels": 1371,
+          "fraction": 0.027323820153061226
+        },
+        {
+          "class_id": 10,
+          "class": "cabinet",
+          "pixels": 1050,
+          "fraction": 0.020926339285714284
+        }
+      ]
+    },
+    {
+      "sample_id": "task4_state2_step0129",
+      "task": 4,
+      "state": 2,
+      "phase": "late",
+      "top_classes": [
+        {
+          "class_id": 15,
+          "class": "table",
+          "pixels": 14241,
+          "fraction": 0.28382095025510207
+        },
+        {
+          "class_id": 0,
+          "class": "wall",
+          "pixels": 13876,
+          "fraction": 0.276546556122449
+        },
+        {
+          "class_id": 10,
+          "class": "cabinet",
+          "pixels": 7498,
+          "fraction": 0.14943399234693877
+        },
+        {
+          "class_id": 3,
+          "class": "floor",
+          "pixels": 6047,
+          "fraction": 0.12051578443877552
+        },
+        {
+          "class_id": 108,
+          "class": "plaything",
+          "pixels": 4543,
+          "fraction": 0.09054129464285714
+        }
+      ]
+    },
+    {
+      "sample_id": "task5_state0_step0000",
+      "task": 5,
+      "state": 0,
+      "phase": "early",
+      "top_classes": [
+        {
+          "class_id": 0,
+          "class": "wall",
+          "pixels": 16866,
+          "fraction": 0.33613679846938777
+        },
+        {
+          "class_id": 15,
+          "class": "table",
+          "pixels": 16153,
+          "fraction": 0.32192681760204084
+        },
+        {
+          "class_id": 3,
+          "class": "floor",
+          "pixels": 5749,
+          "fraction": 0.1145766900510204
+        },
+        {
+          "class_id": 44,
+          "class": "chest of drawers",
+          "pixels": 3322,
+          "fraction": 0.06620695153061225
+        },
+        {
+          "class_id": 10,
+          "class": "cabinet",
+          "pixels": 2975,
+          "fraction": 0.059291294642857144
+        }
+      ]
+    },
+    {
+      "sample_id": "task5_state0_step0052",
+      "task": 5,
+      "state": 0,
+      "phase": "middle",
+      "top_classes": [
+        {
+          "class_id": 0,
+          "class": "wall",
+          "pixels": 15832,
+          "fraction": 0.31552933673469385
+        },
+        {
+          "class_id": 15,
+          "class": "table",
+          "pixels": 11505,
+          "fraction": 0.22929288903061223
+        },
+        {
+          "class_id": 3,
+          "class": "floor",
+          "pixels": 9747,
+          "fraction": 0.1942562181122449
+        },
+        {
+          "class_id": 10,
+          "class": "cabinet",
+          "pixels": 3173,
+          "fraction": 0.06323740433673469
+        },
+        {
+          "class_id": 44,
+          "class": "chest of drawers",
+          "pixels": 3028,
+          "fraction": 0.06034757653061224
+        }
+      ]
+    },
+    {
+      "sample_id": "task5_state0_step0104",
+      "task": 5,
+      "state": 0,
+      "phase": "late",
+      "top_classes": [
+        {
+          "class_id": 0,
+          "class": "wall",
+          "pixels": 16328,
+          "fraction": 0.32541454081632654
+        },
+        {
+          "class_id": 3,
+          "class": "floor",
+          "pixels": 11530,
+          "fraction": 0.22979113520408162
+        },
+        {
+          "class_id": 15,
+          "class": "table",
+          "pixels": 8871,
+          "fraction": 0.17679767219387754
+        },
+        {
+          "class_id": 108,
+          "class": "plaything",
+          "pixels": 3033,
+          "fraction": 0.060447225765306124
+        },
+        {
+          "class_id": 44,
+          "class": "chest of drawers",
+          "pixels": 2893,
+          "fraction": 0.05765704719387755
+        }
+      ]
+    },
+    {
+      "sample_id": "task5_state1_step0000",
+      "task": 5,
+      "state": 1,
+      "phase": "early",
+      "top_classes": [
+        {
+          "class_id": 0,
+          "class": "wall",
+          "pixels": 17041,
+          "fraction": 0.33962452168367346
+        },
+        {
+          "class_id": 15,
+          "class": "table",
+          "pixels": 15255,
+          "fraction": 0.3040298150510204
+        },
+        {
+          "class_id": 3,
+          "class": "floor",
+          "pixels": 6349,
+          "fraction": 0.12653459821428573
+        },
+        {
+          "class_id": 44,
+          "class": "chest of drawers",
+          "pixels": 3328,
+          "fraction": 0.0663265306122449
+        },
+        {
+          "class_id": 10,
+          "class": "cabinet",
+          "pixels": 3204,
+          "fraction": 0.06385522959183673
+        }
+      ]
+    },
+    {
+      "sample_id": "task5_state1_step0042",
+      "task": 5,
+      "state": 1,
+      "phase": "middle",
+      "top_classes": [
+        {
+          "class_id": 0,
+          "class": "wall",
+          "pixels": 16031,
+          "fraction": 0.3194953762755102
+        },
+        {
+          "class_id": 3,
+          "class": "floor",
+          "pixels": 10239,
+          "fraction": 0.20406170280612246
+        },
+        {
+          "class_id": 15,
+          "class": "table",
+          "pixels": 10142,
+          "fraction": 0.20212850765306123
+        },
+        {
+          "class_id": 44,
+          "class": "chest of drawers",
+          "pixels": 3440,
+          "fraction": 0.06855867346938775
+        },
+        {
+          "class_id": 10,
+          "class": "cabinet",
+          "pixels": 3438,
+          "fraction": 0.06851881377551021
+        }
+      ]
+    },
+    {
+      "sample_id": "task5_state1_step0084",
+      "task": 5,
+      "state": 1,
+      "phase": "late",
+      "top_classes": [
+        {
+          "class_id": 0,
+          "class": "wall",
+          "pixels": 16371,
+          "fraction": 0.32627152423469385
+        },
+        {
+          "class_id": 3,
+          "class": "floor",
+          "pixels": 10548,
+          "fraction": 0.21022002551020408
+        },
+        {
+          "class_id": 15,
+          "class": "table",
+          "pixels": 8307,
+          "fraction": 0.16555723852040816
+        },
+        {
+          "class_id": 108,
+          "class": "plaything",
+          "pixels": 3930,
+          "fraction": 0.07832429846938775
+        },
+        {
+          "class_id": 10,
+          "class": "cabinet",
+          "pixels": 3281,
+          "fraction": 0.06538982780612244
+        }
+      ]
+    },
+    {
+      "sample_id": "task5_state2_step0000",
+      "task": 5,
+      "state": 2,
+      "phase": "early",
+      "top_classes": [
+        {
+          "class_id": 0,
+          "class": "wall",
+          "pixels": 16927,
+          "fraction": 0.3373525191326531
+        },
+        {
+          "class_id": 15,
+          "class": "table",
+          "pixels": 16605,
+          "fraction": 0.3309351084183674
+        },
+        {
+          "class_id": 3,
+          "class": "floor",
+          "pixels": 5062,
+          "fraction": 0.10088488520408163
+        },
+        {
+          "class_id": 44,
+          "class": "chest of drawers",
+          "pixels": 3327,
+          "fraction": 0.06630660076530612
+        },
+        {
+          "class_id": 10,
+          "class": "cabinet",
+          "pixels": 2886,
+          "fraction": 0.057517538265306124
+        }
+      ]
+    },
+    {
+      "sample_id": "task5_state2_step0042",
+      "task": 5,
+      "state": 2,
+      "phase": "middle",
+      "top_classes": [
+        {
+          "class_id": 0,
+          "class": "wall",
+          "pixels": 16230,
+          "fraction": 0.32346141581632654
+        },
+        {
+          "class_id": 15,
+          "class": "table",
+          "pixels": 11216,
+          "fraction": 0.22353316326530612
+        },
+        {
+          "class_id": 3,
+          "class": "floor",
+          "pixels": 9728,
+          "fraction": 0.19387755102040816
+        },
+        {
+          "class_id": 44,
+          "class": "chest of drawers",
+          "pixels": 3552,
+          "fraction": 0.07079081632653061
+        },
+        {
+          "class_id": 10,
+          "class": "cabinet",
+          "pixels": 2761,
+          "fraction": 0.05502630739795918
+        }
+      ]
+    },
+    {
+      "sample_id": "task5_state2_step0089",
+      "task": 5,
+      "state": 2,
+      "phase": "late",
+      "top_classes": [
+        {
+          "class_id": 0,
+          "class": "wall",
+          "pixels": 17313,
+          "fraction": 0.3450454400510204
+        },
+        {
+          "class_id": 3,
+          "class": "floor",
+          "pixels": 10777,
+          "fraction": 0.2147839604591837
+        },
+        {
+          "class_id": 15,
+          "class": "table",
+          "pixels": 8114,
+          "fraction": 0.1617107780612245
+        },
+        {
+          "class_id": 44,
+          "class": "chest of drawers",
+          "pixels": 3303,
+          "fraction": 0.06582828443877552
+        },
+        {
+          "class_id": 10,
+          "class": "cabinet",
+          "pixels": 2927,
+          "fraction": 0.05833466198979592
+        }
+      ]
+    },
+    {
+      "sample_id": "task7_state0_step0000",
+      "task": 7,
+      "state": 0,
+      "phase": "early",
+      "top_classes": [
+        {
+          "class_id": 15,
+          "class": "table",
+          "pixels": 17906,
+          "fraction": 0.3568638392857143
+        },
+        {
+          "class_id": 0,
+          "class": "wall",
+          "pixels": 16948,
+          "fraction": 0.3377710459183674
+        },
+        {
+          "class_id": 3,
+          "class": "floor",
+          "pixels": 4441,
+          "fraction": 0.08850845025510204
+        },
+        {
+          "class_id": 10,
+          "class": "cabinet",
+          "pixels": 3850,
+          "fraction": 0.07672991071428571
+        },
+        {
+          "class_id": 44,
+          "class": "chest of drawers",
+          "pixels": 1913,
+          "fraction": 0.03812579719387755
+        }
+      ]
+    },
+    {
+      "sample_id": "task7_state0_step0052",
+      "task": 7,
+      "state": 0,
+      "phase": "middle",
+      "top_classes": [
+        {
+          "class_id": 15,
+          "class": "table",
+          "pixels": 18880,
+          "fraction": 0.3762755102040816
+        },
+        {
+          "class_id": 0,
+          "class": "wall",
+          "pixels": 17698,
+          "fraction": 0.352718431122449
+        },
+        {
+          "class_id": 44,
+          "class": "chest of drawers",
+          "pixels": 3574,
+          "fraction": 0.07122927295918367
+        },
+        {
+          "class_id": 3,
+          "class": "floor",
+          "pixels": 3276,
+          "fraction": 0.06529017857142858
+        },
+        {
+          "class_id": 10,
+          "class": "cabinet",
+          "pixels": 1499,
+          "fraction": 0.02987484056122449
+        }
+      ]
+    },
+    {
+      "sample_id": "task7_state0_step0109",
+      "task": 7,
+      "state": 0,
+      "phase": "late",
+      "top_classes": [
+        {
+          "class_id": 0,
+          "class": "wall",
+          "pixels": 15563,
+          "fraction": 0.31016820790816324
+        },
+        {
+          "class_id": 15,
+          "class": "table",
+          "pixels": 14221,
+          "fraction": 0.28342235331632654
+        },
+        {
+          "class_id": 10,
+          "class": "cabinet",
+          "pixels": 5280,
+          "fraction": 0.10522959183673469
+        },
+        {
+          "class_id": 3,
+          "class": "floor",
+          "pixels": 4257,
+          "fraction": 0.08484135841836735
+        },
+        {
+          "class_id": 108,
+          "class": "plaything",
+          "pixels": 3463,
+          "fraction": 0.0690170599489796
+        }
+      ]
+    },
+    {
+      "sample_id": "task7_state1_step0000",
+      "task": 7,
+      "state": 1,
+      "phase": "early",
+      "top_classes": [
+        {
+          "class_id": 15,
+          "class": "table",
+          "pixels": 18668,
+          "fraction": 0.37205038265306123
+        },
+        {
+          "class_id": 0,
+          "class": "wall",
+          "pixels": 16482,
+          "fraction": 0.32848373724489793
+        },
+        {
+          "class_id": 3,
+          "class": "floor",
+          "pixels": 4165,
+          "fraction": 0.0830078125
+        },
+        {
+          "class_id": 10,
+          "class": "cabinet",
+          "pixels": 2898,
+          "fraction": 0.05775669642857143
+        },
+        {
+          "class_id": 44,
+          "class": "chest of drawers",
+          "pixels": 2623,
+          "fraction": 0.05227598852040816
+        }
+      ]
+    },
+    {
+      "sample_id": "task7_state1_step0062",
+      "task": 7,
+      "state": 1,
+      "phase": "middle",
+      "top_classes": [
+        {
+          "class_id": 15,
+          "class": "table",
+          "pixels": 18527,
+          "fraction": 0.36924027423469385
+        },
+        {
+          "class_id": 0,
+          "class": "wall",
+          "pixels": 16544,
+          "fraction": 0.32971938775510207
+        },
+        {
+          "class_id": 3,
+          "class": "floor",
+          "pixels": 3843,
+          "fraction": 0.07659040178571429
+        },
+        {
+          "class_id": 44,
+          "class": "chest of drawers",
+          "pixels": 3481,
+          "fraction": 0.06937579719387756
+        },
+        {
+          "class_id": 142,
+          "class": "plate",
+          "pixels": 1575,
+          "fraction": 0.03138950892857143
+        }
+      ]
+    },
+    {
+      "sample_id": "task7_state1_step0119",
+      "task": 7,
+      "state": 1,
+      "phase": "late",
+      "top_classes": [
+        {
+          "class_id": 0,
+          "class": "wall",
+          "pixels": 15283,
+          "fraction": 0.30458785076530615
+        },
+        {
+          "class_id": 15,
+          "class": "table",
+          "pixels": 14024,
+          "fraction": 0.27949617346938777
+        },
+        {
+          "class_id": 3,
+          "class": "floor",
+          "pixels": 4435,
+          "fraction": 0.08838887117346939
+        },
+        {
+          "class_id": 10,
+          "class": "cabinet",
+          "pixels": 3892,
+          "fraction": 0.07756696428571429
+        },
+        {
+          "class_id": 108,
+          "class": "plaything",
+          "pixels": 3161,
+          "fraction": 0.06299824617346939
+        }
+      ]
+    },
+    {
+      "sample_id": "task7_state2_step0000",
+      "task": 7,
+      "state": 2,
+      "phase": "early",
+      "top_classes": [
+        {
+          "class_id": 15,
+          "class": "table",
+          "pixels": 18135,
+          "fraction": 0.36142777423469385
+        },
+        {
+          "class_id": 0,
+          "class": "wall",
+          "pixels": 16691,
+          "fraction": 0.33264907525510207
+        },
+        {
+          "class_id": 10,
+          "class": "cabinet",
+          "pixels": 3957,
+          "fraction": 0.07886240433673469
+        },
+        {
+          "class_id": 3,
+          "class": "floor",
+          "pixels": 3628,
+          "fraction": 0.07230548469387756
+        },
+        {
+          "class_id": 44,
+          "class": "chest of drawers",
+          "pixels": 2615,
+          "fraction": 0.05211654974489796
+        }
+      ]
+    },
+    {
+      "sample_id": "task7_state2_step0112",
+      "task": 7,
+      "state": 2,
+      "phase": "middle",
+      "top_classes": [
+        {
+          "class_id": 0,
+          "class": "wall",
+          "pixels": 15206,
+          "fraction": 0.3030532525510204
+        },
+        {
+          "class_id": 15,
+          "class": "table",
+          "pixels": 11710,
+          "fraction": 0.23337850765306123
+        },
+        {
+          "class_id": 3,
+          "class": "floor",
+          "pixels": 8222,
+          "fraction": 0.16386320153061223
+        },
+        {
+          "class_id": 44,
+          "class": "chest of drawers",
+          "pixels": 3228,
+          "fraction": 0.06433354591836735
+        },
+        {
+          "class_id": 108,
+          "class": "plaything",
+          "pixels": 3192,
+          "fraction": 0.06361607142857142
+        }
+      ]
+    },
+    {
+      "sample_id": "task7_state2_step0219",
+      "task": 7,
+      "state": 2,
+      "phase": "late",
+      "top_classes": [
+        {
+          "class_id": 0,
+          "class": "wall",
+          "pixels": 14068,
+          "fraction": 0.28037308673469385
+        },
+        {
+          "class_id": 3,
+          "class": "floor",
+          "pixels": 11440,
+          "fraction": 0.22799744897959184
+        },
+        {
+          "class_id": 15,
+          "class": "table",
+          "pixels": 7572,
+          "fraction": 0.15090880102040816
+        },
+        {
+          "class_id": 108,
+          "class": "plaything",
+          "pixels": 6298,
+          "fraction": 0.12551817602040816
+        },
+        {
+          "class_id": 10,
+          "class": "cabinet",
+          "pixels": 3906,
+          "fraction": 0.07784598214285714
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "ADE20K labels are generic scene categories and have no dedicated robot/gripper/tool classes.",
+    "OpenVLA-native head probe uses cached penultimate block-22 reg4 features with different preprocessing, while the released head expects final block-23 normalized register-free DINOv2 ViT-L/14 features; probe is not a valid native segmentation result.",
+    "No quantitative oracle evaluation or foreground/background threshold selection was performed."
+  ],
+  "artifacts": {
+    "global_overview": "global_overview.png",
+    "scenario_contact_sheets": 9,
+    "per_frame_panels": 27
+  }
+}
