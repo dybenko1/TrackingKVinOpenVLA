@@ -3,8 +3,8 @@
   "classifier_overhead_ms": {
     "dino_lda": {
       "includes": "feature normalization/PCA projection/classifier score calculation; excludes vision-backbone forward",
-      "median_ms_per_observation": 15.990219078958035,
-      "p95_ms_per_observation": 31.94396486505866,
+      "median_ms_per_observation": 2.8297090029809624,
+      "p95_ms_per_observation": 2.887564798584208,
       "timing_split": "evaluation only"
     },
     "dino_pca_calibration_basis": {
@@ -21,14 +21,14 @@
     },
     "fused_lda": {
       "includes": "feature normalization/PCA projection/classifier score calculation; excludes vision-backbone forward",
-      "median_ms_per_observation": 15.962691977620125,
-      "p95_ms_per_observation": 31.988031696528196,
+      "median_ms_per_observation": 7.5178699917159975,
+      "p95_ms_per_observation": 7.856204002746381,
       "timing_split": "evaluation only"
     },
     "siglip_lda": {
       "includes": "feature normalization/PCA projection/classifier score calculation; excludes vision-backbone forward",
-      "median_ms_per_observation": 11.995045933872461,
-      "p95_ms_per_observation": 16.01726245135069,
+      "median_ms_per_observation": 3.198985999915749,
+      "p95_ms_per_observation": 3.2411245978437364,
       "timing_split": "evaluation only"
     }
   },
@@ -218,8 +218,8 @@
     },
     {
       "calibration_threshold_rule": "max calibration reuse opportunity subject to unsafe foreground reuse <= 5%; ties use recall",
-      "classifier_median_ms": 15.990219078958035,
-      "classifier_p95_ms": 31.94396486505866,
+      "classifier_median_ms": 2.8297090029809624,
+      "classifier_p95_ms": 2.887564798584208,
       "false_negative_foreground_rate": 0.03652237177155329,
       "false_positive_background_rate": 0.0657023220403502,
       "fn": 502,
@@ -248,8 +248,8 @@
     },
     {
       "calibration_threshold_rule": "max calibration reuse opportunity subject to unsafe foreground reuse <= 5%; ties use recall",
-      "classifier_median_ms": 15.990219078958035,
-      "classifier_p95_ms": 31.94396486505866,
+      "classifier_median_ms": 2.8297090029809624,
+      "classifier_p95_ms": 2.887564798584208,
       "false_negative_foreground_rate": 0.0,
       "false_positive_background_rate": 0.5397792158355539,
       "fn": 0,
@@ -278,8 +278,8 @@
     },
     {
       "calibration_threshold_rule": "max calibration reuse opportunity subject to unsafe foreground reuse <= 5%; ties use recall",
-      "classifier_median_ms": 15.990219078958035,
-      "classifier_p95_ms": 31.94396486505866,
+      "classifier_median_ms": 2.8297090029809624,
+      "classifier_p95_ms": 2.887564798584208,
       "false_negative_foreground_rate": 0.033321207711895236,
       "false_positive_background_rate": 0.07293490673772364,
       "fn": 458,
@@ -308,8 +308,8 @@
     },
     {
       "calibration_threshold_rule": "max calibration reuse opportunity subject to unsafe foreground reuse <= 5%; ties use recall",
-      "classifier_median_ms": 11.995045933872461,
-      "classifier_p95_ms": 16.01726245135069,
+      "classifier_median_ms": 3.198985999915749,
+      "classifier_p95_ms": 3.2411245978437364,
       "false_negative_foreground_rate": 0.0401600582029829,
       "false_positive_background_rate": 0.019489912447658925,
       "fn": 552,
@@ -338,8 +338,8 @@
     },
     {
       "calibration_threshold_rule": "max calibration reuse opportunity subject to unsafe foreground reuse <= 5%; ties use recall",
-      "classifier_median_ms": 11.995045933872461,
-      "classifier_p95_ms": 16.01726245135069,
+      "classifier_median_ms": 3.198985999915749,
+      "classifier_p95_ms": 3.2411245978437364,
       "false_negative_foreground_rate": 0.0,
       "false_positive_background_rate": 0.5056718690521508,
       "fn": 0,
@@ -368,8 +368,8 @@
     },
     {
       "calibration_threshold_rule": "max calibration reuse opportunity subject to unsafe foreground reuse <= 5%; ties use recall",
-      "classifier_median_ms": 11.995045933872461,
-      "classifier_p95_ms": 16.01726245135069,
+      "classifier_median_ms": 3.198985999915749,
+      "classifier_p95_ms": 3.2411245978437364,
       "false_negative_foreground_rate": 0.03535831211349582,
       "false_positive_background_rate": 0.02390559573658165,
       "fn": 486,
@@ -398,8 +398,8 @@
     },
     {
       "calibration_threshold_rule": "max calibration reuse opportunity subject to unsafe foreground reuse <= 5%; ties use recall",
-      "classifier_median_ms": 15.962691977620125,
-      "classifier_p95_ms": 31.988031696528196,
+      "classifier_median_ms": 7.5178699917159975,
+      "classifier_p95_ms": 7.856204002746381,
       "false_negative_foreground_rate": 0.034048744998181155,
       "false_positive_background_rate": 0.03090978302245908,
       "fn": 468,
@@ -428,8 +428,8 @@
     },
     {
       "calibration_threshold_rule": "max calibration reuse opportunity subject to unsafe foreground reuse <= 5%; ties use recall",
-      "classifier_median_ms": 15.962691977620125,
-      "classifier_p95_ms": 31.988031696528196,
+      "classifier_median_ms": 7.5178699917159975,
+      "classifier_p95_ms": 7.856204002746381,
       "false_negative_foreground_rate": 0.0,
       "false_positive_background_rate": 0.49600304529881994,
       "fn": 0,
@@ -458,8 +458,8 @@
     },
     {
       "calibration_threshold_rule": "max calibration reuse opportunity subject to unsafe foreground reuse <= 5%; ties use recall",
-      "classifier_median_ms": 15.962691977620125,
-      "classifier_p95_ms": 31.988031696528196,
+      "classifier_median_ms": 7.5178699917159975,
+      "classifier_p95_ms": 7.856204002746381,
       "false_negative_foreground_rate": 0.030338304838122953,
       "false_positive_background_rate": 0.03547773125237914,
       "fn": 417,
@@ -665,7 +665,7 @@
     "visual_projector_preserves_sequence_length": true,
     "wrapper_forward_contract": "PrismaticVisionBackbone splits 6 channels into the configured branch inputs, calls the same two featurizers, and concatenates DINOv2 then SigLIP on the feature axis."
   },
-  "finalized_at_unix": 1791619845.6361525,
+  "finalized_at_unix": 1793012813.8161938,
   "kv_reuse_suitability_metrics": [
     {
       "foreground_recall": 0.9502364496180429,

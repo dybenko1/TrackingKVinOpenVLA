@@ -4,8 +4,8 @@
     "classifier_overhead_ms": {
       "dino_lda": {
         "includes": "feature normalization/PCA projection/classifier score calculation; excludes vision-backbone forward",
-        "median_ms_per_observation": 15.990219078958035,
-        "p95_ms_per_observation": 31.94396486505866,
+        "median_ms_per_observation": 2.8297090029809624,
+        "p95_ms_per_observation": 2.887564798584208,
         "timing_split": "evaluation only"
       },
       "dino_pca_calibration_basis": {
@@ -22,14 +22,14 @@
       },
       "fused_lda": {
         "includes": "feature normalization/PCA projection/classifier score calculation; excludes vision-backbone forward",
-        "median_ms_per_observation": 15.962691977620125,
-        "p95_ms_per_observation": 31.988031696528196,
+        "median_ms_per_observation": 7.5178699917159975,
+        "p95_ms_per_observation": 7.856204002746381,
         "timing_split": "evaluation only"
       },
       "siglip_lda": {
         "includes": "feature normalization/PCA projection/classifier score calculation; excludes vision-backbone forward",
-        "median_ms_per_observation": 11.995045933872461,
-        "p95_ms_per_observation": 16.01726245135069,
+        "median_ms_per_observation": 3.198985999915749,
+        "p95_ms_per_observation": 3.2411245978437364,
         "timing_split": "evaluation only"
       }
     },
