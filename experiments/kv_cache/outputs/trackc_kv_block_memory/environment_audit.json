@@ -1,0 +1,19 @@
+{
+  "architecture": "aarch64",
+  "compute_capability": "8.7",
+  "container_image": "openvla-cached:latest",
+  "container_python": "3.12.3",
+  "cpu_cores": 12,
+  "cuda_runtime": "12.8",
+  "device": "Orin",
+  "host": "NVIDIA Jetson AGX Orin (ubuntu)",
+  "host_ram_available_gib_at_audit": 45,
+  "host_ram_total_gib": 61,
+  "jetpack": "R36.4.4",
+  "kernel": "5.15.148-tegra",
+  "memory_note": "Jetson unified/shared memory; CUDA-reported capacity is not discrete VRAM.",
+  "project_filesystem_free_gib_at_audit": 714,
+  "telemetry_note": "Host resource snapshot before the isolated benchmark.",
+  "torch": "2.6.0",
+  "torch_reported_memory_mib": 62840
+}

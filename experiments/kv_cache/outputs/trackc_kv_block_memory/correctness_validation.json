@@ -1,0 +1,279 @@
+{
+  "all_cases_passed": true,
+  "cuda_available": true,
+  "cuda_runtime": "12.8",
+  "device": "Orin",
+  "passed_cases": [
+    {
+      "case": "all_fresh",
+      "logical_tensor_exact": true,
+      "page_count": 39,
+      "page_tokens": 1,
+      "pool_pages": 39,
+      "refcounts_returned_to_source_only": true,
+      "source_immutable": true
+    },
+    {
+      "case": "all_reused",
+      "logical_tensor_exact": true,
+      "page_count": 39,
+      "page_tokens": 1,
+      "pool_pages": 0,
+      "refcounts_returned_to_source_only": true,
+      "source_immutable": true
+    },
+    {
+      "case": "one_fresh",
+      "logical_tensor_exact": true,
+      "page_count": 39,
+      "page_tokens": 1,
+      "pool_pages": 1,
+      "refcounts_returned_to_source_only": true,
+      "source_immutable": true
+    },
+    {
+      "case": "contiguous_updates",
+      "logical_tensor_exact": true,
+      "page_count": 39,
+      "page_tokens": 1,
+      "pool_pages": 15,
+      "refcounts_returned_to_source_only": true,
+      "source_immutable": true
+    },
+    {
+      "case": "scattered_updates",
+      "logical_tensor_exact": true,
+      "page_count": 39,
+      "page_tokens": 1,
+      "pool_pages": 14,
+      "refcounts_returned_to_source_only": true,
+      "source_immutable": true
+    },
+    {
+      "case": "partial_final_page",
+      "logical_tensor_exact": true,
+      "page_count": 39,
+      "page_tokens": 1,
+      "pool_pages": 11,
+      "refcounts_returned_to_source_only": true,
+      "source_immutable": true
+    },
+    {
+      "case": "all_fresh",
+      "logical_tensor_exact": true,
+      "page_count": 10,
+      "page_tokens": 4,
+      "pool_pages": 10,
+      "refcounts_returned_to_source_only": true,
+      "source_immutable": true
+    },
+    {
+      "case": "all_reused",
+      "logical_tensor_exact": true,
+      "page_count": 10,
+      "page_tokens": 4,
+      "pool_pages": 0,
+      "refcounts_returned_to_source_only": true,
+      "source_immutable": true
+    },
+    {
+      "case": "one_fresh",
+      "logical_tensor_exact": true,
+      "page_count": 10,
+      "page_tokens": 4,
+      "pool_pages": 1,
+      "refcounts_returned_to_source_only": true,
+      "source_immutable": true
+    },
+    {
+      "case": "contiguous_updates",
+      "logical_tensor_exact": true,
+      "page_count": 10,
+      "page_tokens": 4,
+      "pool_pages": 5,
+      "refcounts_returned_to_source_only": true,
+      "source_immutable": true
+    },
+    {
+      "case": "scattered_updates",
+      "logical_tensor_exact": true,
+      "page_count": 10,
+      "page_tokens": 4,
+      "pool_pages": 10,
+      "refcounts_returned_to_source_only": true,
+      "source_immutable": true
+    },
+    {
+      "case": "partial_final_page",
+      "logical_tensor_exact": true,
+      "page_count": 10,
+      "page_tokens": 4,
+      "pool_pages": 10,
+      "refcounts_returned_to_source_only": true,
+      "source_immutable": true
+    },
+    {
+      "case": "all_fresh",
+      "logical_tensor_exact": true,
+      "page_count": 5,
+      "page_tokens": 8,
+      "pool_pages": 5,
+      "refcounts_returned_to_source_only": true,
+      "source_immutable": true
+    },
+    {
+      "case": "all_reused",
+      "logical_tensor_exact": true,
+      "page_count": 5,
+      "page_tokens": 8,
+      "pool_pages": 0,
+      "refcounts_returned_to_source_only": true,
+      "source_immutable": true
+    },
+    {
+      "case": "one_fresh",
+      "logical_tensor_exact": true,
+      "page_count": 5,
+      "page_tokens": 8,
+      "pool_pages": 1,
+      "refcounts_returned_to_source_only": true,
+      "source_immutable": true
+    },
+    {
+      "case": "contiguous_updates",
+      "logical_tensor_exact": true,
+      "page_count": 5,
+      "page_tokens": 8,
+      "pool_pages": 3,
+      "refcounts_returned_to_source_only": true,
+      "source_immutable": true
+    },
+    {
+      "case": "scattered_updates",
+      "logical_tensor_exact": true,
+      "page_count": 5,
+      "page_tokens": 8,
+      "pool_pages": 5,
+      "refcounts_returned_to_source_only": true,
+      "source_immutable": true
+    },
+    {
+      "case": "partial_final_page",
+      "logical_tensor_exact": true,
+      "page_count": 5,
+      "page_tokens": 8,
+      "pool_pages": 5,
+      "refcounts_returned_to_source_only": true,
+      "source_immutable": true
+    },
+    {
+      "case": "all_fresh",
+      "logical_tensor_exact": true,
+      "page_count": 3,
+      "page_tokens": 16,
+      "pool_pages": 3,
+      "refcounts_returned_to_source_only": true,
+      "source_immutable": true
+    },
+    {
+      "case": "all_reused",
+      "logical_tensor_exact": true,
+      "page_count": 3,
+      "page_tokens": 16,
+      "pool_pages": 0,
+      "refcounts_returned_to_source_only": true,
+      "source_immutable": true
+    },
+    {
+      "case": "one_fresh",
+      "logical_tensor_exact": true,
+      "page_count": 3,
+      "page_tokens": 16,
+      "pool_pages": 1,
+      "refcounts_returned_to_source_only": true,
+      "source_immutable": true
+    },
+    {
+      "case": "contiguous_updates",
+      "logical_tensor_exact": true,
+      "page_count": 3,
+      "page_tokens": 16,
+      "pool_pages": 2,
+      "refcounts_returned_to_source_only": true,
+      "source_immutable": true
+    },
+    {
+      "case": "scattered_updates",
+      "logical_tensor_exact": true,
+      "page_count": 3,
+      "page_tokens": 16,
+      "pool_pages": 3,
+      "refcounts_returned_to_source_only": true,
+      "source_immutable": true
+    },
+    {
+      "case": "partial_final_page",
+      "logical_tensor_exact": true,
+      "page_count": 3,
+      "page_tokens": 16,
+      "pool_pages": 3,
+      "refcounts_returned_to_source_only": true,
+      "source_immutable": true
+    },
+    {
+      "case": "all_fresh",
+      "logical_tensor_exact": true,
+      "page_count": 2,
+      "page_tokens": 32,
+      "pool_pages": 2,
+      "refcounts_returned_to_source_only": true,
+      "source_immutable": true
+    },
+    {
+      "case": "all_reused",
+      "logical_tensor_exact": true,
+      "page_count": 2,
+      "page_tokens": 32,
+      "pool_pages": 0,
+      "refcounts_returned_to_source_only": true,
+      "source_immutable": true
+    },
+    {
+      "case": "one_fresh",
+      "logical_tensor_exact": true,
+      "page_count": 2,
+      "page_tokens": 32,
+      "pool_pages": 1,
+      "refcounts_returned_to_source_only": true,
+      "source_immutable": true
+    },
+    {
+      "case": "contiguous_updates",
+      "logical_tensor_exact": true,
+      "page_count": 2,
+      "page_tokens": 32,
+      "pool_pages": 1,
+      "refcounts_returned_to_source_only": true,
+      "source_immutable": true
+    },
+    {
+      "case": "scattered_updates",
+      "logical_tensor_exact": true,
+      "page_count": 2,
+      "page_tokens": 32,
+      "pool_pages": 2,
+      "refcounts_returned_to_source_only": true,
+      "source_immutable": true
+    },
+    {
+      "case": "partial_final_page",
+      "logical_tensor_exact": true,
+      "page_count": 2,
+      "page_tokens": 32,
+      "pool_pages": 2,
+      "refcounts_returned_to_source_only": true,
+      "source_immutable": true
+    }
+  ],
+  "torch_version": "2.6.0"
+}

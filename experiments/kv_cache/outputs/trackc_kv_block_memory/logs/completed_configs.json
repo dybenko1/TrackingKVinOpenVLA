@@ -1,0 +1,369 @@
+{
+  "completed": [
+    {
+      "attempt_id": "06bfef93-2a0",
+      "condition": "A_dense_clone_index_copy",
+      "cuda_event_mean_ms": 13.249676856994629,
+      "cuda_event_median_ms": 13.242496013641357,
+      "n": 50,
+      "page_tokens": 1,
+      "peak_allocated_bytes_max": 398648832,
+      "peak_reserved_bytes_max": 423624704,
+      "wall_mean_ms": 13.398503918433562,
+      "wall_median_ms": 13.39032399118878,
+      "wall_p95_ms": 13.445170014165342
+    },
+    {
+      "condition": "refresh_source_pageify_and_pool_setup",
+      "cow_pool_bytes": 86507520,
+      "one_time_wall_ms": 32.68312499858439,
+      "page_tokens": 1,
+      "source_page_pool_bytes": 239599616,
+      "source_pages_bytes": 153092096
+    },
+    {
+      "attempt_id": "a88d4f80-92d",
+      "condition": "B_COW_page_update_no_materialization",
+      "cuda_event_mean_ms": 19.211910972595216,
+      "cuda_event_median_ms": 19.230607986450195,
+      "n": 50,
+      "page_tokens": 1,
+      "peak_allocated_bytes_max": 491981824,
+      "peak_reserved_bytes_max": 507510784,
+      "wall_mean_ms": 19.39628610969521,
+      "wall_median_ms": 19.33094405103475,
+      "wall_p95_ms": 19.873779034242034
+    },
+    {
+      "condition": "refresh_source_pageify_and_pool_setup",
+      "cow_pool_bytes": 86507520,
+      "one_time_wall_ms": 18.34472903283313,
+      "page_tokens": 1,
+      "source_page_pool_bytes": 239599616,
+      "source_pages_bytes": 153092096
+    },
+    {
+      "attempt_id": "5a3e2d52-04e",
+      "condition": "C_COW_plus_dense_SDPA_materialization",
+      "cuda_event_mean_ms": 163.2511669921875,
+      "cuda_event_median_ms": 163.24954986572266,
+      "n": 50,
+      "page_tokens": 1,
+      "peak_allocated_bytes_max": 648997888,
+      "peak_reserved_bytes_max": 675282944,
+      "wall_mean_ms": 163.9270685974043,
+      "wall_median_ms": 163.9263260003645,
+      "wall_p95_ms": 165.29401997104287
+    },
+    {
+      "condition": "refresh_source_preparation",
+      "dense_snapshot_clone_cuda_median_ms": 5.491055965423584,
+      "dense_snapshot_clone_wall_median_ms": 6.232965999515727,
+      "dense_snapshot_payload_bytes": 153092096,
+      "dense_to_pages_wall_ms_once": 36.024356028065085,
+      "page_pool_payload_bytes": 153092096,
+      "page_tokens": 1
+    },
+    {
+      "attempt_id": "31b041e2-4e3",
+      "condition": "A_dense_clone_index_copy",
+      "cuda_event_mean_ms": 11.807511024475097,
+      "cuda_event_median_ms": 13.105008125305176,
+      "n": 50,
+      "page_tokens": 4,
+      "peak_allocated_bytes_max": 404891136,
+      "peak_reserved_bytes_max": 442499072,
+      "wall_mean_ms": 11.973135540029034,
+      "wall_median_ms": 13.329846493434161,
+      "wall_p95_ms": 13.461939000990242
+    },
+    {
+      "condition": "refresh_source_pageify_and_pool_setup",
+      "cow_pool_bytes": 121634816,
+      "one_time_wall_ms": 27.681971027050167,
+      "page_tokens": 4,
+      "source_page_pool_bytes": 274726912,
+      "source_pages_bytes": 153092096
+    },
+    {
+      "attempt_id": "a756e40b-351",
+      "condition": "B_COW_page_update_no_materialization",
+      "cuda_event_mean_ms": 38.11611877441406,
+      "cuda_event_median_ms": 38.22060775756836,
+      "n": 50,
+      "page_tokens": 4,
+      "peak_allocated_bytes_max": 528330752,
+      "peak_reserved_bytes_max": 547356672,
+      "wall_mean_ms": 38.17804685444571,
+      "wall_median_ms": 38.27991700381972,
+      "wall_p95_ms": 38.58189401216805
+    },
+    {
+      "condition": "refresh_source_pageify_and_pool_setup",
+      "cow_pool_bytes": 121634816,
+      "one_time_wall_ms": 18.37877801153809,
+      "page_tokens": 4,
+      "source_page_pool_bytes": 274726912,
+      "source_pages_bytes": 153092096
+    },
+    {
+      "attempt_id": "d14bc746-74d",
+      "condition": "C_COW_plus_dense_SDPA_materialization",
+      "cuda_event_mean_ms": 92.18150756835938,
+      "cuda_event_median_ms": 92.03441619873047,
+      "n": 50,
+      "page_tokens": 4,
+      "peak_allocated_bytes_max": 684601344,
+      "peak_reserved_bytes_max": 736100352,
+      "wall_mean_ms": 92.53017285373062,
+      "wall_median_ms": 92.38910948624834,
+      "wall_p95_ms": 94.11258797626942
+    },
+    {
+      "condition": "refresh_source_preparation",
+      "dense_snapshot_clone_cuda_median_ms": 5.594735860824585,
+      "dense_snapshot_clone_wall_median_ms": 5.7398419885430485,
+      "dense_snapshot_payload_bytes": 153092096,
+      "dense_to_pages_wall_ms_once": 32.59909898042679,
+      "page_pool_payload_bytes": 153092096,
+      "page_tokens": 4
+    },
+    {
+      "attempt_id": "f0cf29b5-171",
+      "condition": "A_dense_clone_index_copy",
+      "cuda_event_mean_ms": 11.939566669464112,
+      "cuda_event_median_ms": 13.223999977111816,
+      "n": 50,
+      "page_tokens": 8,
+      "peak_allocated_bytes_max": 406586880,
+      "peak_reserved_bytes_max": 421527552,
+      "wall_mean_ms": 12.081687723984942,
+      "wall_median_ms": 13.377557508647442,
+      "wall_p95_ms": 13.42350902268663
+    },
+    {
+      "condition": "refresh_source_pageify_and_pool_setup",
+      "cow_pool_bytes": 150994944,
+      "one_time_wall_ms": 29.434313997626305,
+      "page_tokens": 8,
+      "source_page_pool_bytes": 306184192,
+      "source_pages_bytes": 155189248
+    },
+    {
+      "attempt_id": "79515d4c-e39",
+      "condition": "B_COW_page_update_no_materialization",
+      "cuda_event_mean_ms": 50.845133743286134,
+      "cuda_event_median_ms": 50.86044883728027,
+      "n": 50,
+      "page_tokens": 8,
+      "peak_allocated_bytes_max": 561515008,
+      "peak_reserved_bytes_max": 589299712,
+      "wall_mean_ms": 51.33469214080833,
+      "wall_median_ms": 51.42425149097107,
+      "wall_p95_ms": 52.3334929603152
+    },
+    {
+      "condition": "refresh_source_pageify_and_pool_setup",
+      "cow_pool_bytes": 150994944,
+      "one_time_wall_ms": 21.709640976041555,
+      "page_tokens": 8,
+      "source_page_pool_bytes": 306184192,
+      "source_pages_bytes": 155189248
+    },
+    {
+      "attempt_id": "77c977d9-a74",
+      "condition": "C_COW_plus_dense_SDPA_materialization",
+      "cuda_event_mean_ms": 73.71133895874023,
+      "cuda_event_median_ms": 73.56105422973633,
+      "n": 50,
+      "page_tokens": 8,
+      "peak_allocated_bytes_max": 717033472,
+      "peak_reserved_bytes_max": 778043392,
+      "wall_mean_ms": 74.25907958182506,
+      "wall_median_ms": 74.10946901654825,
+      "wall_p95_ms": 75.53564402041957
+    },
+    {
+      "condition": "refresh_source_preparation",
+      "dense_snapshot_clone_cuda_median_ms": 4.19819188117981,
+      "dense_snapshot_clone_wall_median_ms": 4.754506517201662,
+      "dense_snapshot_payload_bytes": 153092096,
+      "dense_to_pages_wall_ms_once": 28.00625399686396,
+      "page_pool_payload_bytes": 155189248,
+      "page_tokens": 8
+    },
+    {
+      "attempt_id": "99f3d6b3-9d7",
+      "condition": "A_dense_clone_index_copy",
+      "cuda_event_mean_ms": 10.127172508239745,
+      "cuda_event_median_ms": 10.116591930389404,
+      "n": 50,
+      "page_tokens": 16,
+      "peak_allocated_bytes_max": 406136320,
+      "peak_reserved_bytes_max": 442499072,
+      "wall_mean_ms": 10.249662455171347,
+      "wall_median_ms": 10.242323973216116,
+      "wall_p95_ms": 10.296194988768548
+    },
+    {
+      "condition": "refresh_source_pageify_and_pool_setup",
+      "cow_pool_bytes": 159383552,
+      "one_time_wall_ms": 31.013891973998398,
+      "page_tokens": 16,
+      "source_page_pool_bytes": 318767104,
+      "source_pages_bytes": 159383552
+    },
+    {
+      "attempt_id": "7278e5e0-3f6",
+      "condition": "B_COW_page_update_no_materialization",
+      "cuda_event_mean_ms": 53.25773452758789,
+      "cuda_event_median_ms": 53.48068809509277,
+      "n": 50,
+      "page_tokens": 16,
+      "peak_allocated_bytes_max": 590604800,
+      "peak_reserved_bytes_max": 610271232,
+      "wall_mean_ms": 53.85138820158318,
+      "wall_median_ms": 54.0649889735505,
+      "wall_p95_ms": 55.491242033895105
+    },
+    {
+      "condition": "refresh_source_pageify_and_pool_setup",
+      "cow_pool_bytes": 159383552,
+      "one_time_wall_ms": 22.81659102300182,
+      "page_tokens": 16,
+      "source_page_pool_bytes": 318767104,
+      "source_pages_bytes": 159383552
+    },
+    {
+      "attempt_id": "1bdb2cdf-79a",
+      "condition": "C_COW_plus_dense_SDPA_materialization",
+      "cuda_event_mean_ms": 68.12133544921875,
+      "cuda_event_median_ms": 68.07512283325195,
+      "n": 50,
+      "page_tokens": 16,
+      "peak_allocated_bytes_max": 745697280,
+      "peak_reserved_bytes_max": 778043392,
+      "wall_mean_ms": 68.66997403791174,
+      "wall_median_ms": 68.62277598702349,
+      "wall_p95_ms": 69.15001198649406
+    },
+    {
+      "condition": "refresh_source_preparation",
+      "dense_snapshot_clone_cuda_median_ms": 4.153856039047241,
+      "dense_snapshot_clone_wall_median_ms": 4.762522992677987,
+      "dense_snapshot_payload_bytes": 153092096,
+      "dense_to_pages_wall_ms_once": 29.498699004761875,
+      "page_pool_payload_bytes": 159383552,
+      "page_tokens": 16
+    },
+    {
+      "attempt_id": "8d6f7a3d-4e9",
+      "condition": "A_dense_clone_index_copy",
+      "cuda_event_mean_ms": 10.112198429107666,
+      "cuda_event_median_ms": 10.109119892120361,
+      "n": 50,
+      "page_tokens": 32,
+      "peak_allocated_bytes_max": 406586880,
+      "peak_reserved_bytes_max": 421527552,
+      "wall_mean_ms": 10.271589469630271,
+      "wall_median_ms": 10.234756482532248,
+      "wall_p95_ms": 10.62245899811387
+    },
+    {
+      "condition": "refresh_source_pageify_and_pool_setup",
+      "cow_pool_bytes": 167772160,
+      "one_time_wall_ms": 32.569312024861574,
+      "page_tokens": 32,
+      "source_page_pool_bytes": 335544320,
+      "source_pages_bytes": 167772160
+    },
+    {
+      "attempt_id": "52087b61-794",
+      "condition": "B_COW_page_update_no_materialization",
+      "cuda_event_mean_ms": 42.46722434997559,
+      "cuda_event_median_ms": 42.474159240722656,
+      "n": 50,
+      "page_tokens": 32,
+      "peak_allocated_bytes_max": 590916096,
+      "peak_reserved_bytes_max": 610271232,
+      "wall_mean_ms": 42.537426761118695,
+      "wall_median_ms": 42.53829948720522,
+      "wall_p95_ms": 42.996286996640265
+    },
+    {
+      "condition": "refresh_source_pageify_and_pool_setup",
+      "cow_pool_bytes": 167772160,
+      "one_time_wall_ms": 18.40294001158327,
+      "page_tokens": 32,
+      "source_page_pool_bytes": 335544320,
+      "source_pages_bytes": 167772160
+    },
+    {
+      "attempt_id": "77a54e6e-512",
+      "condition": "C_COW_plus_dense_SDPA_materialization",
+      "cuda_event_mean_ms": 57.23134971618652,
+      "cuda_event_median_ms": 57.200735092163086,
+      "n": 50,
+      "page_tokens": 32,
+      "peak_allocated_bytes_max": 745877504,
+      "peak_reserved_bytes_max": 778043392,
+      "wall_mean_ms": 57.778320723446086,
+      "wall_median_ms": 57.749766478082165,
+      "wall_p95_ms": 58.2326510339044
+    },
+    {
+      "condition": "refresh_source_preparation",
+      "dense_snapshot_clone_cuda_median_ms": 4.154527902603149,
+      "dense_snapshot_clone_wall_median_ms": 4.761499003507197,
+      "dense_snapshot_payload_bytes": 153092096,
+      "dense_to_pages_wall_ms_once": 29.950528987683356,
+      "page_pool_payload_bytes": 167772160,
+      "page_tokens": 32
+    }
+  ],
+  "configuration": {
+    "attention_backend_requirement": "Transformers DynamicCache and SDPA path consume dense [batch, heads, sequence, head_dim] K/V tensors; C therefore measures full concatenation/materialization before attention.",
+    "conditions": [
+      "A_dense_clone_index_copy",
+      "B_COW_page_update_no_materialization",
+      "C_COW_plus_dense_SDPA_materialization"
+    ],
+    "device": {
+      "capability": [
+        8,
+        7
+      ],
+      "name": "Orin",
+      "total_memory_bytes": 65893367808
+    },
+    "model": {
+      "config_id": "openvla/openvla-7b-finetuned-libero-spatial",
+      "dtype": "bfloat16",
+      "head_dim": 128,
+      "kv_heads": 32,
+      "layers": 32,
+      "model_id": "openvla/openvla-7b-finetuned-libero-spatial",
+      "query_heads": 32
+    },
+    "pool_allocation": "COW page pools allocated once as fixed-capacity buffers; per-step page assignment/refcounts and GPU page writes included in wall-time. Pool initialization/pageification reported separately.",
+    "repetitions": 50,
+    "semantics": "R5 source is immutable full refresh; every row outside exact logged reusable visual positions is current/fresh.",
+    "trace_case": {
+      "fresh_sequence_rows": 165,
+      "page_sizes": [
+        1,
+        4,
+        8,
+        16,
+        32
+      ],
+      "reused_visual_tokens": 127,
+      "scenario": "task4_state0",
+      "sequence_length": 292,
+      "source_age": 1,
+      "step": 1
+    },
+    "warmups": 20
+  },
+  "configuration_sha256": "e9975a733799ac71d516b7a7d0967cad33d0bba01357bed02f7d6d9ad51b49c3"
+}

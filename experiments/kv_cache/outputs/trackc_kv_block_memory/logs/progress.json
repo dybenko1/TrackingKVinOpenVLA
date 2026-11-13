@@ -1,0 +1,86 @@
+{
+  "exit_code": 0,
+  "experiment": "Track C Experiment 1 \u2014 KV Block Memory Management",
+  "finished_at_utc": "2026-11-13T09:45:16.872789+00:00",
+  "hardware": {
+    "cuda_available": true,
+    "cuda_runtime": "12.8",
+    "device": {
+      "compute_capability": [
+        8,
+        7
+      ],
+      "name": "Orin",
+      "total_memory_bytes": 65893367808
+    },
+    "hostname": "ubuntu",
+    "python": "3.12.3 (main, Feb  4 2025, 14:48:35) [GCC 13.3.0]",
+    "started_at_utc": "2026-11-13T09:44:02.209538+00:00",
+    "torch": "2.6.0"
+  },
+  "host_reboot_persistence_configured": false,
+  "measured_repetitions": 50,
+  "output_directory": "/opt/openvla/experiments/kv_cache/outputs/trackc_kv_block_memory",
+  "phase": "aggregation",
+  "phase_started_at_utc": "2026-11-13T09:45:15.633758+00:00",
+  "phases": [
+    {
+      "command": [
+        "/opt/venv/bin/python3",
+        "/opt/openvla/experiments/kv_cache/experiments/trackc_kv_block_memory/analyze_traces.py",
+        "--out",
+        "/opt/openvla/experiments/kv_cache/outputs/trackc_kv_block_memory"
+      ],
+      "exit_code": 0,
+      "finished_at_utc": "2026-11-13T09:44:07.314365+00:00",
+      "name": "trace_analysis"
+    },
+    {
+      "command": [
+        "/opt/venv/bin/python3",
+        "/opt/openvla/experiments/kv_cache/experiments/trackc_kv_block_memory/gpu_benchmark.py",
+        "--out",
+        "/opt/openvla/experiments/kv_cache/outputs/trackc_kv_block_memory",
+        "--warmups",
+        "20",
+        "--repetitions",
+        "50",
+        "--validate-only"
+      ],
+      "exit_code": 0,
+      "finished_at_utc": "2026-11-13T09:44:11.215429+00:00",
+      "name": "correctness_validation"
+    },
+    {
+      "command": [
+        "/opt/venv/bin/python3",
+        "/opt/openvla/experiments/kv_cache/experiments/trackc_kv_block_memory/gpu_benchmark.py",
+        "--out",
+        "/opt/openvla/experiments/kv_cache/outputs/trackc_kv_block_memory",
+        "--warmups",
+        "20",
+        "--repetitions",
+        "50"
+      ],
+      "exit_code": 0,
+      "finished_at_utc": "2026-11-13T09:45:15.624465+00:00",
+      "name": "gpu_benchmark"
+    },
+    {
+      "command": [
+        "/opt/venv/bin/python3",
+        "/opt/openvla/experiments/kv_cache/experiments/trackc_kv_block_memory/summarize_results.py",
+        "--out",
+        "/opt/openvla/experiments/kv_cache/outputs/trackc_kv_block_memory"
+      ],
+      "exit_code": 0,
+      "finished_at_utc": "2026-11-13T09:45:16.870169+00:00",
+      "name": "aggregation"
+    }
+  ],
+  "pid": 1,
+  "ssh_disconnect_persistent": true,
+  "started_at_utc": "2026-11-13T09:44:00.184369+00:00",
+  "state": "complete",
+  "warmups": 20
+}

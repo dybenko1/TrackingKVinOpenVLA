@@ -1,0 +1,10 @@
+{
+  "command": [
+    "/opt/venv/bin/python3",
+    "/opt/openvla/experiments/kv_cache/experiments/trackc_kv_block_memory/summarize_results.py",
+    "--out",
+    "/opt/openvla/experiments/kv_cache/outputs/trackc_kv_block_memory"
+  ],
+  "phase": "aggregation",
+  "pid": 130
+}

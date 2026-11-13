@@ -1,0 +1,53 @@
+{
+  "attention_backend_requirement": "Transformers DynamicCache and SDPA path consume dense [batch, heads, sequence, head_dim] K/V tensors; C therefore measures full concatenation/materialization before attention.",
+  "conditions": [
+    "A_dense_clone_index_copy",
+    "B_COW_page_update_no_materialization",
+    "C_COW_plus_dense_SDPA_materialization"
+  ],
+  "device": {
+    "capability": [
+      8,
+      7
+    ],
+    "name": "Orin",
+    "total_memory_bytes": 65893367808
+  },
+  "model": {
+    "config_id": "openvla/openvla-7b-finetuned-libero-spatial",
+    "dtype": "bfloat16",
+    "head_dim": 128,
+    "kv_heads": 32,
+    "layers": 32,
+    "model_id": "openvla/openvla-7b-finetuned-libero-spatial",
+    "query_heads": 32
+  },
+  "pool_allocation": "COW page pools allocated once as fixed-capacity buffers; per-step page assignment/refcounts and GPU page writes included in wall-time. Pool initialization/pageification reported separately.",
+  "provenance": {
+    "benchmark_implementation_commit": "c0c489c6e1602d998e9e48bd73c07f4a650a5021",
+    "container_id": "6ee4a4f91218784fca52848b8bc8d132b489acc96c8509c0f91faff9799b8556",
+    "container_image": "openvla-cached:latest",
+    "experiment_branch": "thesis/trackc-kv-block-memory",
+    "final_report_generator_commit": "eb2840bfeb40a3c67c128d56de2c01de517f188a",
+    "initial_harness_commit": "8726d58ed9f84a338dda70b39dd1c396f93cc4b5",
+    "trace_results_commit": "4b0c1f7"
+  },
+  "repetitions": 50,
+  "semantics": "R5 source is immutable full refresh; every row outside exact logged reusable visual positions is current/fresh.",
+  "trace_case": {
+    "fresh_sequence_rows": 165,
+    "page_sizes": [
+      1,
+      4,
+      8,
+      16,
+      32
+    ],
+    "reused_visual_tokens": 127,
+    "scenario": "task4_state0",
+    "sequence_length": 292,
+    "source_age": 1,
+    "step": 1
+  },
+  "warmups": 20
+}

@@ -1,0 +1,165 @@
+{
+  "actual_model_dims": {
+    "batch": 1,
+    "dtype": "bfloat16",
+    "head_dim": 128,
+    "kv_heads": 32,
+    "layers": 32,
+    "source_config": "OpenVLAConfig.text_config for llama2-7b-pure; local-only load verified in openvla-cached:latest"
+  },
+  "age_summary": [
+    {
+      "age": 1,
+      "mean_cow_pages_by_block": {
+        "1": 0.0,
+        "16": 16.315315315315317,
+        "32": 8.45045045045045,
+        "4": 34.126126126126124,
+        "8": 29.5
+      },
+      "mean_newly_affected_pages_by_block": {
+        "1": 173.8108108108108,
+        "16": 18.22972972972973,
+        "32": 9.364864864864865,
+        "4": 59.33783783783784,
+        "8": 34.846846846846844
+      },
+      "mean_repeatedly_affected_pages_by_block": {
+        "1": 0.0,
+        "16": 0.0,
+        "32": 0.0,
+        "4": 0.0,
+        "8": 0.0
+      },
+      "mean_reused_visual_tokens": 115.28378378378379,
+      "mean_shared_pages_by_block": {
+        "1": 115.28378378378379,
+        "16": 0.13513513513513514,
+        "32": 0.0,
+        "4": 13.027027027027026,
+        "8": 1.518018018018018
+      },
+      "reuse_steps": 222
+    },
+    {
+      "age": 2,
+      "mean_cow_pages_by_block": {
+        "1": 0.0,
+        "16": 16.312217194570135,
+        "32": 8.452488687782806,
+        "4": 34.09049773755656,
+        "8": 29.520361990950228
+      },
+      "mean_newly_affected_pages_by_block": {
+        "1": 0.6606334841628959,
+        "16": 0.0,
+        "32": 0.0,
+        "4": 0.10407239819004525,
+        "8": 0.004524886877828055
+      },
+      "mean_repeatedly_affected_pages_by_block": {
+        "1": 173.26244343891403,
+        "16": 18.23076923076923,
+        "32": 9.366515837104073,
+        "4": 59.262443438914026,
+        "8": 34.841628959276015
+      },
+      "mean_reused_visual_tokens": 115.18099547511312,
+      "mean_shared_pages_by_block": {
+        "1": 115.18099547511312,
+        "16": 0.13574660633484162,
+        "32": 0.0,
+        "4": 13.0,
+        "8": 1.5203619909502262
+      },
+      "reuse_steps": 221
+    },
+    {
+      "age": 3,
+      "mean_cow_pages_by_block": {
+        "1": 0.0,
+        "16": 16.292237442922374,
+        "32": 8.447488584474886,
+        "4": 34.146118721461185,
+        "8": 29.515981735159816
+      },
+      "mean_newly_affected_pages_by_block": {
+        "1": 0.7625570776255708,
+        "16": 0.0,
+        "32": 0.0,
+        "4": 0.1232876712328767,
+        "8": 0.0091324200913242
+      },
+      "mean_repeatedly_affected_pages_by_block": {
+        "1": 173.26940639269407,
+        "16": 18.21917808219178,
+        "32": 9.365296803652969,
+        "4": 59.269406392694066,
+        "8": 34.8310502283105
+      },
+      "mean_reused_visual_tokens": 115.06392694063926,
+      "mean_shared_pages_by_block": {
+        "1": 115.06392694063926,
+        "16": 0.1461187214611872,
+        "32": 0.0,
+        "4": 12.972602739726028,
+        "8": 1.5251141552511416
+      },
+      "reuse_steps": 219
+    },
+    {
+      "age": 4,
+      "mean_cow_pages_by_block": {
+        "1": 0.0,
+        "16": 16.294930875576036,
+        "32": 8.44700460829493,
+        "4": 33.99078341013825,
+        "8": 29.447004608294932
+      },
+      "mean_newly_affected_pages_by_block": {
+        "1": 0.7327188940092166,
+        "16": 0.004608294930875576,
+        "32": 0.0,
+        "4": 0.1152073732718894,
+        "8": 0.018433179723502304
+      },
+      "mean_repeatedly_affected_pages_by_block": {
+        "1": 173.38709677419354,
+        "16": 18.216589861751153,
+        "32": 9.36405529953917,
+        "4": 59.25345622119816,
+        "8": 34.8294930875576
+      },
+      "mean_reused_visual_tokens": 114.97235023041475,
+      "mean_shared_pages_by_block": {
+        "1": 114.97235023041475,
+        "16": 0.14285714285714285,
+        "32": 0.0,
+        "4": 12.995391705069125,
+        "8": 1.5161290322580645
+      },
+      "reuse_steps": 217
+    }
+  ],
+  "bytes_model": "traffic counts source reads + destination writes; fresh projected row read/write included. COW assumes full physical page copy for mixed pages; materialization reads all page values and writes dense K/V for current SDPA interface.",
+  "components": [
+    "K",
+    "V"
+  ],
+  "layers": 32,
+  "output_rows": 17580,
+  "page_sizes_tokens": [
+    1,
+    4,
+    8,
+    16,
+    32
+  ],
+  "r5_cycle_summary_rows": 1110,
+  "r5_semantics": "reuse always references most recent full fresh refresh; reuse outputs are not promoted",
+  "reuse_observations": 879,
+  "scenarios": 9,
+  "source": "Stage 3C protect_10 per-scenario results.json; exact reuse-index traces",
+  "status": "trace_analysis_complete",
+  "synthetic_masks": "same reusable visual-token count as each actual reuse record; clustered contiguous run, evenly dispersed, seeded random; not policy masks"
+}
