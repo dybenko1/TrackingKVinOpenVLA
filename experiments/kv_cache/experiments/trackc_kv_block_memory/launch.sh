@@ -14,7 +14,7 @@ if docker inspect "$CONTAINER_NAME" >/dev/null 2>&1; then
 fi
 
 mkdir -p "$OUT_HOST/logs"
-docker run -d \
+container_id=$(docker run -d \
   --name "$CONTAINER_NAME" \
   --runtime nvidia \
   --network host \
@@ -30,7 +30,10 @@ docker run -d \
   -v /tmp:/tmp \
   -w /opt/openvla \
   openvla-cached:latest \
-  python3 "$SCRIPT" --warmups 20 --repetitions 50
+  python3 "$SCRIPT" --warmups 20 --repetitions 50)
+
+printf '%s\n' "$container_id" > "$OUT_HOST/logs/process.pid"
+printf 'Detached launch %s image=openvla-cached:latest at %s\n' "$container_id" "$(date -u +%FT%TZ)" >> "$OUT_HOST/logs/launcher.log"
 
 echo "Launched detached container: $CONTAINER_NAME"
 echo "Logs: docker logs -f $CONTAINER_NAME"

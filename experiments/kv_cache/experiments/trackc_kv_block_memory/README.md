@@ -34,6 +34,8 @@ tail -f experiments/kv_cache/outputs/trackc_kv_block_memory/logs/experiment.log
 cat experiments/kv_cache/outputs/trackc_kv_block_memory/logs/progress.json
 ```
 
+If the host account cannot read Docker-created files on a particular mount, use the status reader inside the running container: `docker exec trackc-exp1 python3 /opt/openvla/experiments/kv_cache/experiments/trackc_kv_block_memory/status.py /opt/openvla/experiments/kv_cache/outputs/trackc_kv_block_memory/logs/progress.json`. New atomic JSON files are written mode 0644 by the supervisor and benchmark.
+
 If the container exits nonzero, inspect the phase and error in `progress.json`. Once that container is stopped, remove **only the stopped container** and resume with the same configuration (existing result files remain on the bind mount):
 
 ```bash

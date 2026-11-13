@@ -36,6 +36,7 @@ def atomic_json(path: Path, data: dict) -> None:
         with os.fdopen(fd, "w") as f:
             json.dump(data, f, indent=2, sort_keys=True)
             f.write("\n"); f.flush(); os.fsync(f.fileno())
+        os.chmod(temp_name, 0o644)
         os.replace(temp_name, path)
     finally:
         if os.path.exists(temp_name): os.unlink(temp_name)
