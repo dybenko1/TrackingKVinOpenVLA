@@ -1,0 +1,15 @@
+{
+  "batch_size": 128,
+  "epochs": 10,
+  "execute_required": true,
+  "feature_definition": "talk2dino_final_layer_cls_attention_weighted_patch_mean_v1",
+  "lr": 0.0001,
+  "optimizer": "Adam",
+  "preflight": "passed",
+  "seed": 123,
+  "train_annotations": 4002,
+  "train_missing_image_feature_rows": 0,
+  "train_validation_visual_definition_identical": true,
+  "val_annotations": 1000,
+  "val_missing_image_feature_rows": 0
+}

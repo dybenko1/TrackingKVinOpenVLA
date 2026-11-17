@@ -1,0 +1,206 @@
+{
+  "created_at_utc": "2026-11-17T08:37:53.805459+00:00",
+  "disk_free_bytes_after_features": 893583282176,
+  "experiment": "talk2dino_siglip_pilot_1000",
+  "extraction_total_seconds": 176.1425651429454,
+  "feature_storage_bytes": 1154219043,
+  "gpu_utilization": "not measured; tegrastats is unavailable in the isolated container",
+  "stages": {
+    "dino_visual_extraction": {
+      "checkpoint": "openvla/openvla-7b-finetuned-libero-spatial",
+      "cuda": {
+        "allocated_after_bytes": 1483852800,
+        "peak_allocated_bytes": 1499933696,
+        "peak_reserved_bytes": 1541406720
+      },
+      "device": "cuda:0",
+      "encoder_state_sha256_after": "ef9126ef49dd36eb657a86d22cd98c0dc647bce2e65c7c0236d83ed61c9ffd32",
+      "encoder_state_sha256_before": "ef9126ef49dd36eb657a86d22cd98c0dc647bce2e65c7c0236d83ed61c9ffd32",
+      "encoder_unchanged": true,
+      "images_per_second_pipeline": 22.91641585742969,
+      "model_forward_ms": {
+        "mean": 29.818396989721805,
+        "median": 27.667727030348033,
+        "p95": 33.36100491578691
+      },
+      "model_load_and_initial_hash_seconds": 12.503626364050433,
+      "per_image_pipeline_ms": {
+        "mean": 43.63684121554252,
+        "median": 42.635457750293426,
+        "p95": 48.795275506563485
+      },
+      "per_image_pipeline_units_corrected": "seconds to milliseconds",
+      "process_peak_rss_bytes": 4346232832,
+      "reextraction": [
+        {
+          "attention_max_abs": 0.0,
+          "exact_equal": true,
+          "images": 2,
+          "patches_max_abs": 0.0,
+          "regions_max_abs": 0.0,
+          "split": "train"
+        },
+        {
+          "attention_max_abs": 0.0,
+          "exact_equal": true,
+          "images": 2,
+          "patches_max_abs": 0.0,
+          "regions_max_abs": 0.0,
+          "split": "val"
+        }
+      ],
+      "splits": {
+        "train": {
+          "attention_heads": 16,
+          "completed": 800,
+          "count": 800,
+          "dino_model": "vit_large_patch14_reg4_dinov2.lvd142m",
+          "dino_revision": "962318cec55ac10993ff0f5f43eda9a270b4c873",
+          "dtype": "float32",
+          "feature_definition": "talk2dino_final_layer_cls_attention_weighted_patch_mean_v1",
+          "feature_dim": 1024,
+          "output_dtype": "float32",
+          "patch_grid": [
+            16,
+            16
+          ],
+          "preprocessing": "Resize(short edge, bicubic, 224); CenterCrop(224); ToTensor; ImageNet mean/std",
+          "region_shape": [
+            800,
+            16,
+            1024
+          ],
+          "source_image_ids_sha256": "d379da3487b2e6c5ad455fe9e1e194d2bb4476e1e913296058eb0428879f0e62",
+          "split": "train",
+          "talk2dino_code_path": "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/experiments/trackb_talk2dino_siglip/dino_features.py"
+        },
+        "val": {
+          "attention_heads": 16,
+          "completed": 200,
+          "count": 200,
+          "dino_model": "vit_large_patch14_reg4_dinov2.lvd142m",
+          "dino_revision": "962318cec55ac10993ff0f5f43eda9a270b4c873",
+          "dtype": "float32",
+          "feature_definition": "talk2dino_final_layer_cls_attention_weighted_patch_mean_v1",
+          "feature_dim": 1024,
+          "output_dtype": "float32",
+          "patch_grid": [
+            16,
+            16
+          ],
+          "preprocessing": "Resize(short edge, bicubic, 224); CenterCrop(224); ToTensor; ImageNet mean/std",
+          "region_shape": [
+            200,
+            16,
+            1024
+          ],
+          "source_image_ids_sha256": "cf1356759d8ebb728f73390d62d45d722aaf19731adcc241b30d0cd7115c9ca3",
+          "split": "val",
+          "talk2dino_code_path": "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/experiments/trackb_talk2dino_siglip/dino_features.py"
+        }
+      },
+      "standard_openvla_before_after_exact": true,
+      "standard_openvla_max_abs": 0.0,
+      "status": "passed",
+      "timing_mode": "initial extraction (persisted from completed DINO stage)",
+      "torch_version": "2.6.0",
+      "total_images": 1000,
+      "total_stage_seconds_including_load_validation": 64.42313810996711,
+      "total_visual_wall_seconds": 43.63684121554252
+    },
+    "mlp_training": {
+      "cuda_peak_allocated_bytes": 80904704,
+      "cuda_peak_reserved_bytes": 111149056,
+      "epochs": 10,
+      "process_peak_rss_bytes": 1110089728,
+      "seconds": 13.530674187000841,
+      "status": "complete"
+    },
+    "qualitative": {
+      "figures": [
+        "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/pilot_1000/qualitative_results/val_image_46551_attention_comparison.png",
+        "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/pilot_1000/qualitative_results/val_image_58141_attention_comparison.png",
+        "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/pilot_1000/qualitative_results/val_image_88634_attention_comparison.png",
+        "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/pilot_1000/qualitative_results/val_image_96473_attention_comparison.png",
+        "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/pilot_1000/qualitative_results/val_image_195538_attention_comparison.png",
+        "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/pilot_1000/qualitative_results/val_image_293611_attention_comparison.png",
+        "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/pilot_1000/qualitative_results/val_image_309813_attention_comparison.png",
+        "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/pilot_1000/qualitative_results/val_image_577522_attention_comparison.png"
+      ],
+      "held_out_images": 8,
+      "overview": "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/pilot_1000/qualitative_results/pilot_qualitative_overview.png",
+      "status": "complete"
+    },
+    "siglip_text_extraction": {
+      "caption_count": 5002,
+      "captions_per_second_encoder_only": 55.90639492478055,
+      "checkpoint": {
+        "checkpoint_dir": "/opt/openvla/cache/models/timm/ViT-SO400M-14-SigLIP-384",
+        "checkpoint_repository_expected": "timm/ViT-SO400M-14-SigLIP-384",
+        "checkpoint_revision": "ac16108d567c4389e6cd2b11c9b8585f7474435b",
+        "frozen": true,
+        "missing_text_keys": [],
+        "open_clip_version": "2.32.0",
+        "strict_text_state_load": true,
+        "text_context_length": 64,
+        "text_heads": 16,
+        "text_layers": 27,
+        "text_output_dim": 1152,
+        "text_positional_embedding_shape": [
+          64,
+          1152
+        ],
+        "text_state_tensor_count": 330,
+        "text_width": 1152,
+        "tokenizer": {
+          "canonicalization": "OpenCLIP HFTokenizer.clean_fn from checkpoint configuration",
+          "checkpoint_dir": "/opt/openvla/cache/models/timm/ViT-SO400M-14-SigLIP-384",
+          "clean": "canonicalize",
+          "context_length": 64,
+          "eos_token_id": 1,
+          "pad_token_id": 1,
+          "tokenizer_class": "T5TokenizerFast"
+        },
+        "torch_version": "2.6.0",
+        "unexpected_text_keys": [],
+        "visual_tower_loaded": false,
+        "weights_path": "/opt/openvla/cache/models/timm/ViT-SO400M-14-SigLIP-384/open_clip_model.safetensors"
+      },
+      "cuda": {
+        "allocated_after_bytes": 1830684672,
+        "peak_allocated_bytes": 2048899072,
+        "peak_reserved_bytes": 2222981120
+      },
+      "deterministic_reextraction": [
+        {
+          "captions": 64,
+          "exact_equal": true,
+          "max_abs": 0.0,
+          "split": "train"
+        },
+        {
+          "captions": 64,
+          "exact_equal": true,
+          "max_abs": 0.0,
+          "split": "val"
+        }
+      ],
+      "device": "cuda:0",
+      "encoder_state_sha256_after": "bd0cc73835498a259b94ada676b928c3c158939cfcdcb84c50f3e05cadef4a0e",
+      "encoder_state_sha256_before": "bd0cc73835498a259b94ada676b928c3c158939cfcdcb84c50f3e05cadef4a0e",
+      "encoder_unchanged": true,
+      "encoding_seconds_total": 89.47098103410099,
+      "initialization_seconds": 14.948877513990737,
+      "mean_encoding_ms_per_caption": 17.88704139026409,
+      "process_peak_rss_bytes": 4189818880,
+      "status": "passed",
+      "timing_mode": "full-set saved-feature verification pass",
+      "tokenizer_seconds_total": 2.889040968613699,
+      "total_stage_seconds_including_load_validation": 111.71942703297827,
+      "truncated_count": 0,
+      "verified_existing_captions": 5002
+    }
+  },
+  "total_pipeline_wall_seconds": 27.113297477015294,
+  "worker_peak_rss_bytes": 982343680
+}

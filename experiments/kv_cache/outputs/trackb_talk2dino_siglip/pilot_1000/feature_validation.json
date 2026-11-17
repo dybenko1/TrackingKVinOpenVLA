@@ -1,0 +1,87 @@
+{
+  "float32_storage": true,
+  "selected_captions": 5002,
+  "selected_images": 1000,
+  "splits": {
+    "train": {
+      "all_finite": true,
+      "all_visual_and_text_rows_complete": true,
+      "attention_shape": [
+        800,
+        16,
+        256
+      ],
+      "attention_sum_max_abs_error": 2.384185791015625e-07,
+      "caption_id_image_id_join_valid": true,
+      "captions": 4002,
+      "checksums": {
+        "attention": "1689d0850ab6acee531870caeb0d4f89016f40fda36805e3081a72ab28551b9a",
+        "caption_ids": "cbaf5da9693a4b35030b3031b20683acd82ca685250526603426076bd580f846",
+        "image_ids": "16562fda519989990242a99d0c9562cda4689a94d704714dc45284c6d6379144",
+        "patches": "bb150cdfe17e5771781e360b161869b1f47e24d6af65922bd6c3348a0953fa82",
+        "regions": "c93a712819849547fe56be1ed13522cbae5e5ca4c19d20725e3beb528fe9b31d",
+        "texts": "fa553c742fd147bf437b20fac20829697c0f14dff52870c4b7b897aaac6dead2"
+      },
+      "dtype": "float32",
+      "images": 800,
+      "minimum_region_l2_norm": 0.03611175715923309,
+      "patch_shape": [
+        800,
+        256,
+        1024
+      ],
+      "region_shape": [
+        800,
+        16,
+        1024
+      ],
+      "text_shape": [
+        4002,
+        1152
+      ],
+      "truncated_captions": 0
+    },
+    "val": {
+      "all_finite": true,
+      "all_visual_and_text_rows_complete": true,
+      "attention_shape": [
+        200,
+        16,
+        256
+      ],
+      "attention_sum_max_abs_error": 2.384185791015625e-07,
+      "caption_id_image_id_join_valid": true,
+      "captions": 1000,
+      "checksums": {
+        "attention": "6e8243964aad4398d912391e11ec486e66f90d6fb922cdb3001752fbb05f8c0e",
+        "caption_ids": "24a76529e9609420b0941d368c284b8839492f4ef5a06fc7be5a942fdfe46623",
+        "image_ids": "236b64f002395241caaae8ef6e2071db6379728b3b0f7ae89f25a88726b1baa1",
+        "patches": "f22b7336247b152f351df0b2ef2083f2699b927d9ecea0069f39360525d21a49",
+        "regions": "7b780a8dffe07bd68c9cf01557275b68dcd11854524f0126b0c5ba01040c7d72",
+        "texts": "5f6d8255ce7b888eabba26cd6fb33b8c52fb47884bf02a394710441b2aa5d42e"
+      },
+      "dtype": "float32",
+      "images": 200,
+      "minimum_region_l2_norm": 0.03778746724128723,
+      "patch_shape": [
+        200,
+        256,
+        1024
+      ],
+      "region_shape": [
+        200,
+        16,
+        1024
+      ],
+      "text_shape": [
+        1000,
+        1152
+      ],
+      "truncated_captions": 0
+    }
+  },
+  "status": "passed",
+  "train_validation_image_disjoint": true,
+  "train_validation_image_ids_disjoint": true,
+  "unique_annotation_ids": 5002
+}

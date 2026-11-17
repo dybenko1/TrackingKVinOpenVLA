@@ -1,0 +1,194 @@
+{
+  "contains_all_16_cls_attention_heads": true,
+  "each_image_caption_count_visualized": 2,
+  "examples": [
+    {
+      "figure": "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/pilot_1000/qualitative_results/val_image_46551_attention_comparison.png",
+      "image_id": 46551,
+      "queries": [
+        {
+          "annotation_id": 289912,
+          "caption": "A group of people in a bar playing Wii",
+          "trained_head": 2,
+          "trained_similarity_max": 0.34007716178894043,
+          "trained_similarity_min": -0.046670883893966675,
+          "untrained_head": 13
+        },
+        {
+          "annotation_id": 291982,
+          "caption": "A man holding a Nintendo Wii game controller in a bar.",
+          "trained_head": 1,
+          "trained_similarity_max": 0.2934124767780304,
+          "trained_similarity_min": 0.03746602684259415,
+          "untrained_head": 1
+        }
+      ],
+      "relative_image_path": "val2014/COCO_val2014_000000046551.jpg"
+    },
+    {
+      "figure": "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/pilot_1000/qualitative_results/val_image_58141_attention_comparison.png",
+      "image_id": 58141,
+      "queries": [
+        {
+          "annotation_id": 196850,
+          "caption": "People walk through the street with umbrellas to shade the sun.",
+          "trained_head": 6,
+          "trained_similarity_max": 0.42121201753616333,
+          "trained_similarity_min": 0.06334181874990463,
+          "untrained_head": 14
+        },
+        {
+          "annotation_id": 199331,
+          "caption": "A couple of women walking down a street holding umbrellas.",
+          "trained_head": 6,
+          "trained_similarity_max": 0.412112832069397,
+          "trained_similarity_min": 0.042512405663728714,
+          "untrained_head": 2
+        }
+      ],
+      "relative_image_path": "val2014/COCO_val2014_000000058141.jpg"
+    },
+    {
+      "figure": "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/pilot_1000/qualitative_results/val_image_88634_attention_comparison.png",
+      "image_id": 88634,
+      "queries": [
+        {
+          "annotation_id": 135370,
+          "caption": "A kitchen with a black stove top oven.",
+          "trained_head": 1,
+          "trained_similarity_max": 0.30292826890945435,
+          "trained_similarity_min": 0.053763508796691895,
+          "untrained_head": 1
+        },
+        {
+          "annotation_id": 139234,
+          "caption": "A small kitchen nook has been furnished with stainless appliances.",
+          "trained_head": 1,
+          "trained_similarity_max": 0.26012077927589417,
+          "trained_similarity_min": 0.0658520981669426,
+          "untrained_head": 7
+        }
+      ],
+      "relative_image_path": "val2014/COCO_val2014_000000088634.jpg"
+    },
+    {
+      "figure": "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/pilot_1000/qualitative_results/val_image_96473_attention_comparison.png",
+      "image_id": 96473,
+      "queries": [
+        {
+          "annotation_id": 100220,
+          "caption": "Plate of mixed colorful vegetables sitting on white table. ",
+          "trained_head": 15,
+          "trained_similarity_max": 0.35735195875167847,
+          "trained_similarity_min": 0.07997635751962662,
+          "untrained_head": 3
+        },
+        {
+          "annotation_id": 102035,
+          "caption": "A plate of shredded carrots, pork and celery.",
+          "trained_head": 15,
+          "trained_similarity_max": 0.4030227065086365,
+          "trained_similarity_min": 0.06148751080036163,
+          "untrained_head": 10
+        }
+      ],
+      "relative_image_path": "val2014/COCO_val2014_000000096473.jpg"
+    },
+    {
+      "figure": "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/pilot_1000/qualitative_results/val_image_195538_attention_comparison.png",
+      "image_id": 195538,
+      "queries": [
+        {
+          "annotation_id": 714657,
+          "caption": "a desk with a keyboard, monitor and a laptop on the top",
+          "trained_head": 13,
+          "trained_similarity_max": 0.4348904490470886,
+          "trained_similarity_min": -0.03418765217065811,
+          "untrained_head": 13
+        },
+        {
+          "annotation_id": 715914,
+          "caption": "An aerial shot of a vintage desk shows a pair of booties resting under the desk, and on the top of it, a computer, laptop, peripheral equipment, and a few less tidily scattered small items of a non-electronic naturel. l",
+          "trained_head": 1,
+          "trained_similarity_max": 0.29552966356277466,
+          "trained_similarity_min": -0.04332422837615013,
+          "untrained_head": 0
+        }
+      ],
+      "relative_image_path": "val2014/COCO_val2014_000000195538.jpg"
+    },
+    {
+      "figure": "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/pilot_1000/qualitative_results/val_image_293611_attention_comparison.png",
+      "image_id": 293611,
+      "queries": [
+        {
+          "annotation_id": 195732,
+          "caption": "A kitchen with a sink, bottles, jars and a dishwasher.",
+          "trained_head": 4,
+          "trained_similarity_max": 0.3821908235549927,
+          "trained_similarity_min": -0.052129607647657394,
+          "untrained_head": 5
+        },
+        {
+          "annotation_id": 201276,
+          "caption": "A clean kitchen with hardwood floors and a large window over the sink.",
+          "trained_head": 4,
+          "trained_similarity_max": 0.3495349884033203,
+          "trained_similarity_min": -0.015313878655433655,
+          "untrained_head": 5
+        }
+      ],
+      "relative_image_path": "val2014/COCO_val2014_000000293611.jpg"
+    },
+    {
+      "figure": "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/pilot_1000/qualitative_results/val_image_309813_attention_comparison.png",
+      "image_id": 309813,
+      "queries": [
+        {
+          "annotation_id": 227822,
+          "caption": "A white plate filled with pasta. and a fork.",
+          "trained_head": 6,
+          "trained_similarity_max": 0.2609102725982666,
+          "trained_similarity_min": 0.05751197040081024,
+          "untrained_head": 0
+        },
+        {
+          "annotation_id": 249380,
+          "caption": "A fork sticking into a plate of pasta, mushrooms and other foods.",
+          "trained_head": 6,
+          "trained_similarity_max": 0.3716345727443695,
+          "trained_similarity_min": 0.08148501068353653,
+          "untrained_head": 14
+        }
+      ],
+      "relative_image_path": "val2014/COCO_val2014_000000309813.jpg"
+    },
+    {
+      "figure": "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/pilot_1000/qualitative_results/val_image_577522_attention_comparison.png",
+      "image_id": 577522,
+      "queries": [
+        {
+          "annotation_id": 811654,
+          "caption": "a bird stands on top of a laptop keyboard ",
+          "trained_head": 0,
+          "trained_similarity_max": 0.3729384243488312,
+          "trained_similarity_min": 0.020372483879327774,
+          "untrained_head": 5
+        },
+        {
+          "annotation_id": 812965,
+          "caption": "A bird who is sitting on a computer keyboard.",
+          "trained_head": 0,
+          "trained_similarity_max": 0.34656089544296265,
+          "trained_similarity_min": 0.050613418221473694,
+          "untrained_head": 3
+        }
+      ],
+      "relative_image_path": "val2014/COCO_val2014_000000577522.jpg"
+    }
+  ],
+  "held_out_images": 8,
+  "status": "complete",
+  "trained_and_initial_mlp_comparison": true,
+  "warning": "Similarity and attention maps are exploratory; they are not validated segmentation masks."
+}

@@ -1,0 +1,7 @@
+{
+  "status": "blocked_missing_required_checkpoint",
+  "required_checkpoint": "timm/ViT-SO400M-14-SigLIP-384",
+  "checkpoint_dir": "/home/oscar/projects/TrackingKVinOpenVLA/openvla/cache/models/timm/ViT-SO400M-14-SigLIP-384",
+  "reason": "Missing local checkpoint config: /home/oscar/projects/TrackingKVinOpenVLA/openvla/cache/models/timm/ViT-SO400M-14-SigLIP-384/open_clip_config.json",
+  "note": "No 224/context-16 substitute was used; caption counts for context 64 remain pending."
+}

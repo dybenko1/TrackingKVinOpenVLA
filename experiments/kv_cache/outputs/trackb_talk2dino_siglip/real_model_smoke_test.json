@@ -1,0 +1,263 @@
+{
+  "checkpoint": {
+    "config": {
+      "clean": "canonicalize",
+      "context_length": 64,
+      "embed_dim": 1152,
+      "heads": 16,
+      "layers": 27,
+      "width": 1152
+    },
+    "path": "/opt/openvla/cache/models/timm/ViT-SO400M-14-SigLIP-384",
+    "repository": "timm/ViT-SO400M-14-SigLIP-384",
+    "revision": "ac16108d567c4389e6cd2b11c9b8585f7474435b",
+    "tokenizer_shape": [
+      3,
+      64
+    ]
+  },
+  "cross_modal_smoke": {
+    "frozen_backbone_gradients_absent": true,
+    "loss": 1.1335973739624023,
+    "loss_finite": true,
+    "mlp_gradients_finite": true,
+    "optimizer_contains_only_mlp": true,
+    "region_shape": [
+      3,
+      16,
+      1024
+    ],
+    "similarities_finite": true,
+    "similarity_shape": [
+      3,
+      3
+    ],
+    "text_shape": [
+      3,
+      1152
+    ]
+  },
+  "dino_smoke": {
+    "device": "cuda:0",
+    "images": [
+      "/opt/openvla/experiments/kv_cache/outputs/track_b_segmentation/data/samples/task4_state0_step0048/policy_rgb.png",
+      "/opt/openvla/experiments/kv_cache/outputs/track_b_segmentation/data/samples/task5_state2_step0032/policy_rgb.png",
+      "/opt/openvla/experiments/kv_cache/outputs/track_b_segmentation/data/samples/task7_state0_step0051/policy_rgb.png"
+    ],
+    "openvla_checkpoint": "openvla/openvla-7b-finetuned-libero-spatial",
+    "samples": [
+      {
+        "attention_entropy_mean": 4.403775215148926,
+        "attention_max": 0.22445982694625854,
+        "attention_min": 3.9653832573094405e-06,
+        "attention_patch_sum_max": 1.0000001192092896,
+        "attention_patch_sum_min": 0.9999998807907104,
+        "cls_patch_attention_shape": [
+          1,
+          16,
+          256
+        ],
+        "dino_input_dtype": "torch.bfloat16",
+        "final_patch_shape": [
+          1,
+          256,
+          1024
+        ],
+        "final_path_ms": 117.08783695939928,
+        "image_path": "/opt/openvla/experiments/kv_cache/outputs/track_b_segmentation/data/samples/task4_state0_step0048/policy_rgb.png",
+        "patch_mean_abs": 0.5684083700180054,
+        "patch_mean_l2": 25.20321273803711,
+        "peak_cuda_allocated_bytes": 1500488704,
+        "region_shape": [
+          1,
+          16,
+          1024
+        ],
+        "standard_openvla_fused_shape": null,
+        "standard_repeat_exact": null,
+        "standard_repeat_max_abs_diff": null,
+        "standard_two_pass_mean_ms": null,
+        "talk2dino_pixels_shape": [
+          1,
+          3,
+          224,
+          224
+        ],
+        "talk2dino_preprocessing": "Resize(short edge, bicubic, 224); CenterCrop(224); ToTensor; ImageNet mean/std"
+      },
+      {
+        "attention_entropy_mean": 4.343245029449463,
+        "attention_max": 0.30191221833229065,
+        "attention_min": 3.174456878696219e-06,
+        "attention_patch_sum_max": 1.0000001192092896,
+        "attention_patch_sum_min": 0.9999999403953552,
+        "cls_patch_attention_shape": [
+          1,
+          16,
+          256
+        ],
+        "dino_input_dtype": "torch.bfloat16",
+        "final_patch_shape": [
+          1,
+          256,
+          1024
+        ],
+        "final_path_ms": 24.73602199461311,
+        "image_path": "/opt/openvla/experiments/kv_cache/outputs/track_b_segmentation/data/samples/task5_state2_step0032/policy_rgb.png",
+        "patch_mean_abs": 0.5778398513793945,
+        "patch_mean_l2": 25.608749389648438,
+        "peak_cuda_allocated_bytes": 1501627392,
+        "region_shape": [
+          1,
+          16,
+          1024
+        ],
+        "standard_openvla_fused_shape": null,
+        "standard_repeat_exact": null,
+        "standard_repeat_max_abs_diff": null,
+        "standard_two_pass_mean_ms": null,
+        "talk2dino_pixels_shape": [
+          1,
+          3,
+          224,
+          224
+        ],
+        "talk2dino_preprocessing": "Resize(short edge, bicubic, 224); CenterCrop(224); ToTensor; ImageNet mean/std"
+      },
+      {
+        "attention_entropy_mean": 4.015405178070068,
+        "attention_max": 0.37825459241867065,
+        "attention_min": 3.827170530712465e-06,
+        "attention_patch_sum_max": 1.0,
+        "attention_patch_sum_min": 0.9999999403953552,
+        "cls_patch_attention_shape": [
+          1,
+          16,
+          256
+        ],
+        "dino_input_dtype": "torch.bfloat16",
+        "final_patch_shape": [
+          1,
+          256,
+          1024
+        ],
+        "final_path_ms": 27.393014053814113,
+        "image_path": "/opt/openvla/experiments/kv_cache/outputs/track_b_segmentation/data/samples/task7_state0_step0051/policy_rgb.png",
+        "patch_mean_abs": 0.5669700503349304,
+        "patch_mean_l2": 24.99715232849121,
+        "peak_cuda_allocated_bytes": 1501627392,
+        "region_shape": [
+          1,
+          16,
+          1024
+        ],
+        "standard_openvla_fused_shape": null,
+        "standard_repeat_exact": null,
+        "standard_repeat_max_abs_diff": null,
+        "standard_two_pass_mean_ms": null,
+        "talk2dino_pixels_shape": [
+          1,
+          3,
+          224,
+          224
+        ],
+        "talk2dino_preprocessing": "Resize(short edge, bicubic, 224); CenterCrop(224); ToTensor; ImageNet mean/std"
+      }
+    ],
+    "standard_route_before_after_sidecar": [
+      {
+        "allclose_atol_2e-5_rtol_1e-5": true,
+        "exact_equal": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      {
+        "allclose_atol_2e-5_rtol_1e-5": true,
+        "exact_equal": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "relative_l2": 0.0
+      },
+      {
+        "allclose_atol_2e-5_rtol_1e-5": true,
+        "exact_equal": true,
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "relative_l2": 0.0
+      }
+    ]
+  },
+  "full_checkpoint_reference": {
+    "loaded_device": "cpu",
+    "open_clip_version": "2.32.0",
+    "reference_load_and_text_seconds": 17.767107718042098,
+    "state_tensor_count": 674,
+    "strict_full_state_load": true,
+    "text_only_vs_full": {
+      "allclose_atol_2e-5_rtol_1e-5": true,
+      "exact_equal": true,
+      "max_abs": 0.0,
+      "mean_abs": 0.0,
+      "relative_l2": 0.0
+    },
+    "vision_tower_loaded_to_gpu": false
+  },
+  "full_feature_extraction_started": false,
+  "libero_rollouts_started": false,
+  "policy_actions_generated": false,
+  "resource_usage": {
+    "cuda_live_allocated_after_openvla_load_bytes": 1475333120,
+    "cuda_peak_allocated_bytes_after_model_load": 1501627392,
+    "cuda_peak_reserved_bytes_after_model_load": 1539309568,
+    "cuda_version": "12.8",
+    "gpu_name": "Orin",
+    "process_peak_rss_bytes": 7600218112
+  },
+  "status": "passed",
+  "text_only_tower": {
+    "checkpoint_dir": "/opt/openvla/cache/models/timm/ViT-SO400M-14-SigLIP-384",
+    "checkpoint_repository_expected": "timm/ViT-SO400M-14-SigLIP-384",
+    "checkpoint_revision": "ac16108d567c4389e6cd2b11c9b8585f7474435b",
+    "embedding_shape": [
+      3,
+      1152
+    ],
+    "finite": true,
+    "frozen": true,
+    "missing_text_keys": [],
+    "open_clip_version": "2.32.0",
+    "repeat": {
+      "allclose_atol_2e-5_rtol_1e-5": true,
+      "exact_equal": true,
+      "max_abs": 0.0,
+      "mean_abs": 0.0,
+      "relative_l2": 0.0
+    },
+    "strict_text_state_load": true,
+    "text_context_length": 64,
+    "text_heads": 16,
+    "text_layers": 27,
+    "text_output_dim": 1152,
+    "text_positional_embedding_shape": [
+      64,
+      1152
+    ],
+    "text_state_tensor_count": 330,
+    "text_width": 1152,
+    "tokenizer": {
+      "canonicalization": "OpenCLIP HFTokenizer.clean_fn from checkpoint configuration",
+      "checkpoint_dir": "/opt/openvla/cache/models/timm/ViT-SO400M-14-SigLIP-384",
+      "clean": "canonicalize",
+      "context_length": 64,
+      "eos_token_id": 1,
+      "pad_token_id": 1,
+      "tokenizer_class": "T5TokenizerFast"
+    },
+    "torch_version": "2.6.0",
+    "unexpected_text_keys": [],
+    "visual_tower_loaded": false,
+    "weights_path": "/opt/openvla/cache/models/timm/ViT-SO400M-14-SigLIP-384/open_clip_model.safetensors"
+  },
+  "training_started": false
+}

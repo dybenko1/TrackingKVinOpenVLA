@@ -1,0 +1,47 @@
+experiment: trackb_talk2dino_siglip
+seed: 123
+data:
+  root: /opt/openvla/cache/datasets/talk2dino/coco2014
+  annotations: annotations2014
+  images: {train: train2014, val: val2014}
+  feature_cache: features
+  dino_region_heads: 16
+  patch_grid: [16, 16]
+  dino_feature_dim: 1024
+  siglip_text_feature_dim: 1152
+  feature_dtype: float16
+  text_context_length_from_checkpoint: true
+  training_semantics: one-row-per-caption-annotation
+models:
+  openvla_checkpoint: openvla/openvla-7b-finetuned-libero-spatial
+  dino_timm_backbone: vit_large_patch14_reg4_dinov2.lvd142m
+  dino_visual_checkpoint: OpenVLA fine-tuned DINOv2 branch; frozen
+  siglip_text_repository: timm/ViT-SO400M-14-SigLIP-384
+  siglip_text_revision: ac16108d567c4389e6cd2b11c9b8585f7474435b
+  siglip_text_checkpoint: /opt/openvla/cache/models/timm/ViT-SO400M-14-SigLIP-384
+  siglip_text_context_length: 64
+  siglip_text_checkpoint_policy: required; never substitute the 224/context-16 model
+  siglip_text_vision_tower: not loaded
+feature_extraction:
+  talk2dino_preprocessing: Resize short edge 224 bicubic; CenterCrop 224; ToTensor; ImageNet normalization
+  feature_path: final normalized DINO block output
+  prefix_tokens_excluded: [CLS, register_1, register_2, register_3, register_4]
+  cls_attention: last-block QK with model q_norm/k_norm/scale; CLS query; softmax over spatial keys per head
+  region_definition: mean(attention_head * normalized_patch_embedding, over patches)
+  store_dense_patches_for_training: false
+training:
+  optimizer: Adam
+  learning_rate: 0.0001
+  batch_size: 128
+  epochs: 100
+  seed: 123
+  loss: symmetric_bidirectional_InfoNCE
+  fixed_temperature: 0.07
+  legacy_upstream_extra_batch_square: optional false by default
+  projection_layers: [1152, 1024, 1024]
+  activation: tanh_between_linear_layers
+  trainable_parameters: projection MLP only
+  save_best_model: false
+segmentation:
+  inputs: [one image, multiple text categories]
+  outputs: [per_category_patch_similarity, attention_guided_similarity, semantic_label_map, union_mask, overlay]

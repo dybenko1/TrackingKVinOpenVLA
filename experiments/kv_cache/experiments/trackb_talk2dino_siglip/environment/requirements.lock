@@ -1,0 +1,9 @@
+# Runtime inherited unchanged from openvla-cached:latest on NVIDIA Orin.
+torch==2.6.0
+timm==0.9.16
+transformers==4.49.0
+safetensors==0.5.3
+tokenizers==0.21.0
+open_clip_torch==2.32.0
+ftfy==6.3.1
+# The OpenCLIP package is added only in the isolated derived image above.

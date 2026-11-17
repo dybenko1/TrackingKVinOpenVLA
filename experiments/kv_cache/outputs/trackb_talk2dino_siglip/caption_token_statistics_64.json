@@ -1,0 +1,142 @@
+{
+  "status": "complete",
+  "tokenizer": {
+    "checkpoint_dir": "/opt/openvla/cache/models/timm/ViT-SO400M-14-SigLIP-384",
+    "tokenizer_class": "T5TokenizerFast",
+    "clean": "canonicalize",
+    "canonicalization": "OpenCLIP HFTokenizer.clean_fn from checkpoint configuration",
+    "context_length": 64,
+    "pad_token_id": 1,
+    "eos_token_id": 1
+  },
+  "special_tokens_included": true,
+  "truncated_rule": "raw tokenized length including special tokens > checkpoint context length",
+  "percentile_method": "nearest rank: sorted[ceil(q*n)-1]",
+  "splits": {
+    "train": {
+      "annotation_file": "/opt/openvla/cache/datasets/talk2dino/coco2014/annotations2014/captions_train2014.json",
+      "caption_count": 414113,
+      "within_context_count": 414112,
+      "over_context_count": 1,
+      "over_context_percent": 0.00024147998251684928,
+      "context_length": 64,
+      "token_length_including_special_tokens": {
+        "mean": 13.778874365209496,
+        "median": 13,
+        "p90_nearest_rank": 18,
+        "p99_nearest_rank": 24,
+        "maximum": 65
+      },
+      "longest_over_context_examples": [
+        {
+          "annotation_row": 357974,
+          "token_count": 65,
+          "caption": "A doorway  frames a telescopic view from a far off space with a multi-paned door, a chest of drawers and an oval rug on a wooden floor, up to a yellow room that has an oriental rug, chair, standing lamp, a widescreen T.V.,leather bench and ottoman.",
+          "tokens": [
+            "▁",
+            "a",
+            "▁doorway",
+            "▁frames",
+            "▁",
+            "a",
+            "▁tele",
+            "s",
+            "co",
+            "pic",
+            "▁view",
+            "▁from",
+            "▁",
+            "a",
+            "▁far",
+            "▁off",
+            "▁space",
+            "▁with",
+            "▁",
+            "a",
+            "▁multi",
+            "pan",
+            "ed",
+            "▁door",
+            "▁",
+            "a",
+            "▁chest",
+            "▁of",
+            "▁drawers",
+            "▁and",
+            "▁an",
+            "▁oval",
+            "▁rug",
+            "▁on",
+            "▁",
+            "a",
+            "▁wooden",
+            "▁floor",
+            "▁up",
+            "▁to",
+            "▁",
+            "a",
+            "▁yellow",
+            "▁room",
+            "▁that",
+            "▁has",
+            "▁an",
+            "▁oriental",
+            "▁rug",
+            "▁chair",
+            "▁standing",
+            "▁lamp",
+            "▁",
+            "a",
+            "▁wide",
+            "screen",
+            "▁",
+            "t",
+            "v",
+            "le",
+            "ather",
+            "▁bench",
+            "▁and",
+            "▁ottoman",
+            "</s>"
+          ]
+        }
+      ]
+    },
+    "val": {
+      "annotation_file": "/opt/openvla/cache/datasets/talk2dino/coco2014/annotations2014/captions_val2014.json",
+      "caption_count": 202654,
+      "within_context_count": 202654,
+      "over_context_count": 0,
+      "over_context_percent": 0.0,
+      "context_length": 64,
+      "token_length_including_special_tokens": {
+        "mean": 13.777852892121548,
+        "median": 13.0,
+        "p90_nearest_rank": 18,
+        "p99_nearest_rank": 24,
+        "maximum": 62
+      },
+      "longest_over_context_examples": []
+    }
+  },
+  "checkpoint": {
+    "repository": "timm/ViT-SO400M-14-SigLIP-384",
+    "revision": "ac16108d567c4389e6cd2b11c9b8585f7474435b",
+    "context_length": 64,
+    "tokenizer": "T5TokenizerFast via OpenCLIP HFTokenizer",
+    "clean": "canonicalize"
+  },
+  "historical_context16_comparison": {
+    "source": "Earlier Stage 4A audit using manually written text cleaning; historical and not directly comparable to this checkpoint-tokenizer audit.",
+    "train": {
+      "caption_count": 414113,
+      "over_context_count": 62586,
+      "over_context_percent": 15.1133
+    },
+    "val": {
+      "caption_count": 202654,
+      "over_context_count": 30789,
+      "over_context_percent": 15.1929
+    }
+  }
+}

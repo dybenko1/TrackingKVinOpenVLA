@@ -1,0 +1,27 @@
+{
+  "actual_captions": 5002,
+  "actual_images": 1000,
+  "completed_at_utc": "2026-11-17T08:53:22.778833+00:00",
+  "completed_captions": {
+    "train": 4002,
+    "val": 1000
+  },
+  "completed_images": {
+    "val": 200
+  },
+  "epochs": 10,
+  "exit_code": 0,
+  "experiment": "trackb_talk2dino_siglip_pilot_1000",
+  "last_completed_stage": "qualitative",
+  "pid": 1,
+  "qualitative": "complete",
+  "qualitative_images": 8,
+  "stage": "complete",
+  "state": "complete",
+  "text_captions": 5002,
+  "training": "complete",
+  "training_preflight": "passed",
+  "updated_at_utc": "2026-11-17T08:53:22.778929+00:00",
+  "validation": "passed",
+  "visual_images": 1000
+}

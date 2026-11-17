@@ -1,0 +1,30 @@
+model:
+  act: tanh
+  hidden_layer: true
+  dino_embed_dim: 1024
+  clip_embed_dim: 1152
+  cosine: true
+  num_attn_head: 16
+  alignment_strategy: max_score
+  temperature: 0.07
+  legacy_extra_batch_square: false
+data:
+  root: /opt/openvla/cache/datasets/talk2dino/coco2014
+  feature_root: /opt/openvla/cache/datasets/talk2dino/coco2014/features
+  siglip_text_checkpoint: /opt/openvla/cache/models/timm/ViT-SO400M-14-SigLIP-384
+  siglip_text_revision: ac16108d567c4389e6cd2b11c9b8585f7474435b
+  dino_timm_model: vit_large_patch14_reg4_dinov2.lvd142m
+  image_size: 224
+  image_normalization: imagenet
+train:
+  optimizer: Adam
+  lr: 0.0001
+  batch_size: 128
+  num_epochs: 10
+  seed: 123
+  ltype: infonce
+  save_best_model: false
+  train_and_validation_feature: talk2dino_final_layer_cls_attention_weighted_patch_mean_v1
+  pilot_override: true
+  note: 10-epoch controlled 1,000-image pilot; canonical 100-epoch full-training config
+    unchanged
