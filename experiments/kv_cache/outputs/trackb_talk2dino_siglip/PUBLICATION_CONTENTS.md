@@ -1,5 +1,5 @@
 # Talk2DINO-SigLIP published artifact scope
 
-This directory publishes implementation and human-readable reports, validation summaries, training metrics, a sanitized sample-ID manifest, and qualitative PNG panels.
+This directory publishes the implementation and human-readable reports, validation summaries, training metrics, sanitized sample-ID manifest, and qualitative PNG panels. Phase 2 publishes its concise execution log and the sampler test log for reproducibility.
 
-The local pilot directory also contains large/raw artifacts that are intentionally not tracked: COCO-derived feature arrays (`*.npy`), full caption-bearing manifest, intermediate or trained model checkpoints (`*.pt`), and execution logs. Their local paths and checksums are documented by the report and validation metadata where applicable. The COCO dataset and pretrained model weights are not included.
+The local pilot outputs also contain raw/large artifacts intentionally not tracked: COCO-derived feature arrays (`*.npy`), the full caption-bearing sample manifest, and intermediate or trained projection checkpoints (`*.pt`). The Phase 2 corrected checkpoint remains local at `pilot_1000_phase2/corrected_projection.pt`; its size and SHA-256 are recorded in the run metadata. Full extraction/worker logs also remain local. The COCO dataset and pretrained model weights are not included.

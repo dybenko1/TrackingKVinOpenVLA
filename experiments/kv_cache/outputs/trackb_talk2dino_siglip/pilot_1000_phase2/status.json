@@ -1,0 +1,9 @@
+{
+  "all_train_captions_each_epoch": true,
+  "completed_at_unix": 1794908900.8369393,
+  "epochs": 10,
+  "exit_code": 0,
+  "features_reused": true,
+  "same_image_collisions": 0,
+  "status": "complete"
+}

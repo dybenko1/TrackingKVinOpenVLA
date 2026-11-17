@@ -1,0 +1,16 @@
+{
+  "batch_size": 128,
+  "epochs": 10,
+  "experiment": "Talk2DINO-SigLIP Phase 2 corrected 1000-image pilot",
+  "learning_rate": 0.0001,
+  "optimizer": "Adam",
+  "reextract_features": false,
+  "reuse_cached_features": true,
+  "sampler": "caption-round, at most one caption per image per batch",
+  "seed": 123,
+  "temperature": 0.07,
+  "train_feature_rows": 4002,
+  "training_objective": "canonical symmetric diagonal InfoNCE",
+  "validation": "global multi-positive retrieval and multi-positive InfoNCE diagnostic",
+  "validation_feature_rows": 1000
+}

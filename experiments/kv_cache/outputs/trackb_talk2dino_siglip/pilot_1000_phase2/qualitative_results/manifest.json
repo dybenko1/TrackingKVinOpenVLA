@@ -1,0 +1,199 @@
+{
+  "status": "complete",
+  "images": [
+    {
+      "image_id": 46551,
+      "relative_image_path": "val2014/COCO_val2014_000000046551.jpg",
+      "queries": [
+        {
+          "caption": "A group of people in a bar playing Wii",
+          "annotation_id": 289912,
+          "baseline_head": 2,
+          "corrected_head": 2,
+          "baseline_max_region_score": 0.38565635681152344,
+          "corrected_max_region_score": 0.4044387936592102
+        },
+        {
+          "caption": "A man holding a Nintendo Wii game controller in a bar.",
+          "annotation_id": 291982,
+          "baseline_head": 1,
+          "corrected_head": 1,
+          "baseline_max_region_score": 0.34175610542297363,
+          "corrected_max_region_score": 0.3348506689071655
+        }
+      ],
+      "figure": "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/pilot_1000_phase2/qualitative_results/val_image_46551_baseline_vs_corrected.png",
+      "warning": "Patch cosine and attention-guided maps are exploratory; they are not validated segmentation masks."
+    },
+    {
+      "image_id": 58141,
+      "relative_image_path": "val2014/COCO_val2014_000000058141.jpg",
+      "queries": [
+        {
+          "caption": "People walk through the street with umbrellas to shade the sun.",
+          "annotation_id": 196850,
+          "baseline_head": 6,
+          "corrected_head": 15,
+          "baseline_max_region_score": 0.4560985267162323,
+          "corrected_max_region_score": 0.4431207478046417
+        },
+        {
+          "caption": "A couple of women walking down a street holding umbrellas.",
+          "annotation_id": 199331,
+          "baseline_head": 6,
+          "corrected_head": 6,
+          "baseline_max_region_score": 0.4637187719345093,
+          "corrected_max_region_score": 0.43395572900772095
+        }
+      ],
+      "figure": "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/pilot_1000_phase2/qualitative_results/val_image_58141_baseline_vs_corrected.png",
+      "warning": "Patch cosine and attention-guided maps are exploratory; they are not validated segmentation masks."
+    },
+    {
+      "image_id": 88634,
+      "relative_image_path": "val2014/COCO_val2014_000000088634.jpg",
+      "queries": [
+        {
+          "caption": "A kitchen with a black stove top oven.",
+          "annotation_id": 135370,
+          "baseline_head": 1,
+          "corrected_head": 2,
+          "baseline_max_region_score": 0.4026670753955841,
+          "corrected_max_region_score": 0.3967919647693634
+        },
+        {
+          "caption": "A small kitchen nook has been furnished with stainless appliances.",
+          "annotation_id": 139234,
+          "baseline_head": 1,
+          "corrected_head": 2,
+          "baseline_max_region_score": 0.4025578796863556,
+          "corrected_max_region_score": 0.3826889097690582
+        }
+      ],
+      "figure": "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/pilot_1000_phase2/qualitative_results/val_image_88634_baseline_vs_corrected.png",
+      "warning": "Patch cosine and attention-guided maps are exploratory; they are not validated segmentation masks."
+    },
+    {
+      "image_id": 96473,
+      "relative_image_path": "val2014/COCO_val2014_000000096473.jpg",
+      "queries": [
+        {
+          "caption": "Plate of mixed colorful vegetables sitting on white table. ",
+          "annotation_id": 100220,
+          "baseline_head": 15,
+          "corrected_head": 15,
+          "baseline_max_region_score": 0.46629467606544495,
+          "corrected_max_region_score": 0.47616010904312134
+        },
+        {
+          "caption": "A plate of shredded carrots, pork and celery.",
+          "annotation_id": 102035,
+          "baseline_head": 15,
+          "corrected_head": 8,
+          "baseline_max_region_score": 0.48447149991989136,
+          "corrected_max_region_score": 0.4902031719684601
+        }
+      ],
+      "figure": "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/pilot_1000_phase2/qualitative_results/val_image_96473_baseline_vs_corrected.png",
+      "warning": "Patch cosine and attention-guided maps are exploratory; they are not validated segmentation masks."
+    },
+    {
+      "image_id": 195538,
+      "relative_image_path": "val2014/COCO_val2014_000000195538.jpg",
+      "queries": [
+        {
+          "caption": "a desk with a keyboard, monitor and a laptop on the top",
+          "annotation_id": 714657,
+          "baseline_head": 13,
+          "corrected_head": 13,
+          "baseline_max_region_score": 0.5194061398506165,
+          "corrected_max_region_score": 0.4928472638130188
+        },
+        {
+          "caption": "An aerial shot of a vintage desk shows a pair of booties resting under the desk, and on the top of it, a computer, laptop, peripheral equipment, and a few less tidily scattered small items of a non-electronic naturel. l",
+          "annotation_id": 715914,
+          "baseline_head": 1,
+          "corrected_head": 15,
+          "baseline_max_region_score": 0.36108750104904175,
+          "corrected_max_region_score": 0.34693095088005066
+        }
+      ],
+      "figure": "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/pilot_1000_phase2/qualitative_results/val_image_195538_baseline_vs_corrected.png",
+      "warning": "Patch cosine and attention-guided maps are exploratory; they are not validated segmentation masks."
+    },
+    {
+      "image_id": 293611,
+      "relative_image_path": "val2014/COCO_val2014_000000293611.jpg",
+      "queries": [
+        {
+          "caption": "A kitchen with a sink, bottles, jars and a dishwasher.",
+          "annotation_id": 195732,
+          "baseline_head": 4,
+          "corrected_head": 4,
+          "baseline_max_region_score": 0.5204681754112244,
+          "corrected_max_region_score": 0.5170636177062988
+        },
+        {
+          "caption": "A clean kitchen with hardwood floors and a large window over the sink.",
+          "annotation_id": 201276,
+          "baseline_head": 4,
+          "corrected_head": 4,
+          "baseline_max_region_score": 0.48569297790527344,
+          "corrected_max_region_score": 0.4874778091907501
+        }
+      ],
+      "figure": "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/pilot_1000_phase2/qualitative_results/val_image_293611_baseline_vs_corrected.png",
+      "warning": "Patch cosine and attention-guided maps are exploratory; they are not validated segmentation masks."
+    },
+    {
+      "image_id": 309813,
+      "relative_image_path": "val2014/COCO_val2014_000000309813.jpg",
+      "queries": [
+        {
+          "caption": "A white plate filled with pasta. and a fork.",
+          "annotation_id": 227822,
+          "baseline_head": 6,
+          "corrected_head": 0,
+          "baseline_max_region_score": 0.333013653755188,
+          "corrected_max_region_score": 0.3314288258552551
+        },
+        {
+          "caption": "A fork sticking into a plate of pasta, mushrooms and other foods.",
+          "annotation_id": 249380,
+          "baseline_head": 6,
+          "corrected_head": 0,
+          "baseline_max_region_score": 0.41239044070243835,
+          "corrected_max_region_score": 0.40043455362319946
+        }
+      ],
+      "figure": "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/pilot_1000_phase2/qualitative_results/val_image_309813_baseline_vs_corrected.png",
+      "warning": "Patch cosine and attention-guided maps are exploratory; they are not validated segmentation masks."
+    },
+    {
+      "image_id": 577522,
+      "relative_image_path": "val2014/COCO_val2014_000000577522.jpg",
+      "queries": [
+        {
+          "caption": "a bird stands on top of a laptop keyboard ",
+          "annotation_id": 811654,
+          "baseline_head": 0,
+          "corrected_head": 0,
+          "baseline_max_region_score": 0.4082876443862915,
+          "corrected_max_region_score": 0.4230114221572876
+        },
+        {
+          "caption": "A bird who is sitting on a computer keyboard.",
+          "annotation_id": 812965,
+          "baseline_head": 0,
+          "corrected_head": 0,
+          "baseline_max_region_score": 0.39303451776504517,
+          "corrected_max_region_score": 0.4148486256599426
+        }
+      ],
+      "figure": "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/pilot_1000_phase2/qualitative_results/val_image_577522_baseline_vs_corrected.png",
+      "warning": "Patch cosine and attention-guided maps are exploratory; they are not validated segmentation masks."
+    }
+  ],
+  "overview": "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/pilot_1000_phase2/qualitative_results/phase2_baseline_vs_corrected_overview.png",
+  "scope": "Same eight validation images and two caption queries each; no oracle masks or segmentation thresholds."
+}

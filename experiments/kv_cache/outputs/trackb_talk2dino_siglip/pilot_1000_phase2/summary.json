@@ -1,0 +1,169 @@
+{
+  "baseline_metrics": {
+    "image_to_text": {
+      "recall_at_1": 0.57,
+      "recall_at_10": 0.92,
+      "recall_at_5": 0.86
+    },
+    "image_to_text_rank": {
+      "max": 109,
+      "mean": 3.44,
+      "median": 1.0
+    },
+    "multi_positive_infonce": {
+      "formula": "mean(logsumexp(all) - logsumexp(all positives)) in each direction, averaged",
+      "image_to_text": 2.128037452697754,
+      "symmetric_mean": 2.199578285217285,
+      "temperature": 0.07,
+      "text_to_image": 2.2711191177368164
+    },
+    "score_matrix": {
+      "max": 0.6149308681488037,
+      "mean": 0.07868682593107224,
+      "min": -0.17458266019821167,
+      "negative_pairs": 199000,
+      "positive_pairs": 1000,
+      "shape": [
+        200,
+        1000
+      ],
+      "std": 0.09546458721160889
+    },
+    "text_to_image": {
+      "recall_at_1": 0.452,
+      "recall_at_10": 0.971,
+      "recall_at_5": 0.896
+    },
+    "text_to_image_rank": {
+      "max": 151,
+      "mean": 3.101,
+      "median": 2.0
+    }
+  },
+  "comparison_interpretation": "mixed retrieval changes; corrected checkpoint does not consistently outperform baseline on this 200-image validation subset",
+  "corrected_metrics": {
+    "image_to_text": {
+      "recall_at_1": 0.55,
+      "recall_at_10": 0.935,
+      "recall_at_5": 0.88
+    },
+    "image_to_text_rank": {
+      "max": 70,
+      "mean": 3.255,
+      "median": 1.0
+    },
+    "multi_positive_infonce": {
+      "formula": "mean(logsumexp(all) - logsumexp(all positives)) in each direction, averaged",
+      "image_to_text": 2.1378068923950195,
+      "symmetric_mean": 2.2086684703826904,
+      "temperature": 0.07,
+      "text_to_image": 2.2795300483703613
+    },
+    "score_matrix": {
+      "max": 0.6043949127197266,
+      "mean": 0.07372463494539261,
+      "min": -0.17328467965126038,
+      "negative_pairs": 199000,
+      "positive_pairs": 1000,
+      "shape": [
+        200,
+        1000
+      ],
+      "std": 0.0941549763083458
+    },
+    "text_to_image": {
+      "recall_at_1": 0.46,
+      "recall_at_10": 0.965,
+      "recall_at_5": 0.887
+    },
+    "text_to_image_rank": {
+      "max": 129,
+      "mean": 3.184,
+      "median": 2.0
+    }
+  },
+  "corrected_training": {
+    "batches_per_epoch": [
+      36,
+      36,
+      36,
+      36,
+      36,
+      36,
+      36,
+      36,
+      36,
+      36
+    ],
+    "caption_rows_per_epoch": [
+      4002,
+      4002,
+      4002,
+      4002,
+      4002,
+      4002,
+      4002,
+      4002,
+      4002,
+      4002
+    ],
+    "epochs": 10,
+    "final_epoch_mean_diagonal_infonce": 0.6938566547753148,
+    "first_epoch_mean_diagonal_infonce": 3.5303848163540783,
+    "partial_batches_per_epoch": [
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6
+    ],
+    "same_image_batch_collision_rows_per_epoch": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "data_audit": {
+    "feature_mappings_validated": true,
+    "instance_masks_available": false,
+    "train_caption_annotations": 4002,
+    "train_caption_count_distribution": {
+      "5": 798,
+      "6": 2
+    },
+    "train_exact_duplicate_caption_excess": 6,
+    "train_unique_images": 800,
+    "train_validation_ids_disjoint": true,
+    "validation_caption_annotations": 1000,
+    "validation_caption_count_distribution": {
+      "5": 200
+    },
+    "validation_exact_duplicate_caption_excess": 2,
+    "validation_unique_images": 200
+  },
+  "same_image_batch_collisions_per_epoch": 0,
+  "spatial_instance_annotations_available": {
+    "available_annotation_files": [
+      "captions_train2014.json",
+      "captions_val2014.json",
+      "talk2dino_manifest.json"
+    ],
+    "instances_train2014_json": false,
+    "instances_val2014_json": false
+  },
+  "status": "complete",
+  "train_captions_per_epoch": 4002,
+  "training_epochs": 10
+}

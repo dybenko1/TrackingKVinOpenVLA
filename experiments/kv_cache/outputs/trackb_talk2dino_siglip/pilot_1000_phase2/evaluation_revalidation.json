@@ -1,0 +1,95 @@
+{
+  "checks": {
+    "baseline_multi_positive_validation.json": {
+      "checked_metrics": 18,
+      "metrics": {
+        "image_to_text": {
+          "recall_at_1": 0.57,
+          "recall_at_10": 0.92,
+          "recall_at_5": 0.86
+        },
+        "image_to_text_rank": {
+          "max": 109,
+          "mean": 3.44,
+          "median": 1.0
+        },
+        "multi_positive_infonce": {
+          "formula": "mean(logsumexp(all) - logsumexp(all positives)) in each direction, averaged",
+          "image_to_text": 2.128037452697754,
+          "symmetric_mean": 2.199578285217285,
+          "temperature": 0.07,
+          "text_to_image": 2.2711191177368164
+        },
+        "score_matrix": {
+          "max": 0.6149308681488037,
+          "mean": 0.07868682593107224,
+          "min": -0.17458266019821167,
+          "negative_pairs": 199000,
+          "positive_pairs": 1000,
+          "shape": [
+            200,
+            1000
+          ],
+          "std": 0.09546458721160889
+        },
+        "text_to_image": {
+          "recall_at_1": 0.452,
+          "recall_at_10": 0.971,
+          "recall_at_5": 0.896
+        },
+        "text_to_image_rank": {
+          "max": 151,
+          "mean": 3.101,
+          "median": 2.0
+        }
+      }
+    },
+    "corrected_multi_positive_validation.json": {
+      "checked_metrics": 18,
+      "metrics": {
+        "image_to_text": {
+          "recall_at_1": 0.55,
+          "recall_at_10": 0.935,
+          "recall_at_5": 0.88
+        },
+        "image_to_text_rank": {
+          "max": 70,
+          "mean": 3.255,
+          "median": 1.0
+        },
+        "multi_positive_infonce": {
+          "formula": "mean(logsumexp(all) - logsumexp(all positives)) in each direction, averaged",
+          "image_to_text": 2.1378068923950195,
+          "symmetric_mean": 2.2086684703826904,
+          "temperature": 0.07,
+          "text_to_image": 2.2795300483703613
+        },
+        "score_matrix": {
+          "max": 0.6043949127197266,
+          "mean": 0.07372463494539261,
+          "min": -0.17328467965126038,
+          "negative_pairs": 199000,
+          "positive_pairs": 1000,
+          "shape": [
+            200,
+            1000
+          ],
+          "std": 0.0941549763083458
+        },
+        "text_to_image": {
+          "recall_at_1": 0.46,
+          "recall_at_10": 0.965,
+          "recall_at_5": 0.887
+        },
+        "text_to_image_rank": {
+          "max": 129,
+          "mean": 3.184,
+          "median": 2.0
+        }
+      }
+    }
+  },
+  "device": "cuda",
+  "rank_median_definition": "conventional median (average of the two middle ranks for an even number of queries)",
+  "status": "passed"
+}

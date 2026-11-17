@@ -1,0 +1,48 @@
+{
+  "checkpoint": "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/pilot_1000_phase2/corrected_projection.pt",
+  "checkpoint_sha256": "0e795df4dcad0d0d2fc1b74ecbb97dc4b11292dc9d71e28e604db4036f6454de",
+  "checkpoint_state_sha256": "5d2911a23fa7cc8253dc5248197d368a11fb86bb97ed08bc8aac9388aa3c07fa",
+  "metric_revalidation": "passed; exact metrics except median ranks recomputed with conventional NumPy median",
+  "metrics": {
+    "image_to_text": {
+      "recall_at_1": 0.55,
+      "recall_at_10": 0.935,
+      "recall_at_5": 0.88
+    },
+    "image_to_text_rank": {
+      "max": 70,
+      "mean": 3.255,
+      "median": 1.0
+    },
+    "multi_positive_infonce": {
+      "formula": "mean(logsumexp(all) - logsumexp(all positives)) in each direction, averaged",
+      "image_to_text": 2.1378068923950195,
+      "symmetric_mean": 2.2086684703826904,
+      "temperature": 0.07,
+      "text_to_image": 2.2795300483703613
+    },
+    "score_matrix": {
+      "max": 0.6043949127197266,
+      "mean": 0.07372463494539261,
+      "min": -0.17328467965126038,
+      "negative_pairs": 199000,
+      "positive_pairs": 1000,
+      "shape": [
+        200,
+        1000
+      ],
+      "std": 0.0941549763083458
+    },
+    "text_to_image": {
+      "recall_at_1": 0.46,
+      "recall_at_10": 0.965,
+      "recall_at_5": 0.887
+    },
+    "text_to_image_rank": {
+      "max": 129,
+      "mean": 3.184,
+      "median": 2.0
+    }
+  },
+  "state_sha256": "5d2911a23fa7cc8253dc5248197d368a11fb86bb97ed08bc8aac9388aa3c07fa"
+}

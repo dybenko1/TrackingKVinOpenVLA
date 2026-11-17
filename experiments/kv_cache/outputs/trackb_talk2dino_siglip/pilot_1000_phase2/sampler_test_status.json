@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/opt/venv/bin/python",
+    "-m",
+    "unittest",
+    "experiments.kv_cache.experiments.trackb_talk2dino_siglip.tests.test_caption_round_sampler",
+    "-v"
+  ],
+  "returncode": 0,
+  "status": "passed",
+  "test_count": 5
+}

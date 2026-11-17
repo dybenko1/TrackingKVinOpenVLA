@@ -1,0 +1,110 @@
+{
+  "status": "passed",
+  "train": [
+    800,
+    4002
+  ],
+  "val": [
+    200,
+    1000
+  ],
+  "disjoint": true
+}
+/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/experiments/trackb_talk2dino_siglip/phase2_pilot.py:80: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /opt/pytorch/torch/csrc/utils/tensor_numpy.cpp:203.)
+  image_id_tensor = torch.as_tensor(image_ids, device=device, dtype=torch.long)
+{"epoch": 1, "train_mean_diagonal_infonce": 3.5303848163540783, "validation_historical_diagonal_infonce": 3.341570634841919, "train_caption_rows_used": 4002, "train_caption_rows_total": 4002, "train_batches": 36, "train_partial_batches": 6, "same_image_repeated_rows_in_train_batches": 0, "validation_rows_seen_by_historical_diagonal_loss": 1000, "validation_duplicate_rows_counter_if_diagonal_batched": 784, "elapsed_seconds": 1.0277802220080048}
+{"epoch": 2, "train_mean_diagonal_infonce": 2.084793645269547, "validation_historical_diagonal_infonce": 2.966724287033081, "train_caption_rows_used": 4002, "train_caption_rows_total": 4002, "train_batches": 36, "train_partial_batches": 6, "same_image_repeated_rows_in_train_batches": 0, "validation_rows_seen_by_historical_diagonal_loss": 1000, "validation_duplicate_rows_counter_if_diagonal_batched": 784, "elapsed_seconds": 1.918714578030631}
+{"epoch": 3, "train_mean_diagonal_infonce": 1.5575161794501207, "validation_historical_diagonal_infonce": 2.8212458839416503, "train_caption_rows_used": 4002, "train_caption_rows_total": 4002, "train_batches": 36, "train_partial_batches": 6, "same_image_repeated_rows_in_train_batches": 0, "validation_rows_seen_by_historical_diagonal_loss": 1000, "validation_duplicate_rows_counter_if_diagonal_batched": 784, "elapsed_seconds": 2.822308168048039}
+{"epoch": 4, "train_mean_diagonal_infonce": 1.2799960891688256, "validation_historical_diagonal_infonce": 2.7443270530700685, "train_caption_rows_used": 4002, "train_caption_rows_total": 4002, "train_batches": 36, "train_partial_batches": 6, "same_image_repeated_rows_in_train_batches": 0, "validation_rows_seen_by_historical_diagonal_loss": 1000, "validation_duplicate_rows_counter_if_diagonal_batched": 784, "elapsed_seconds": 3.727514873025939}
+{"epoch": 5, "train_mean_diagonal_infonce": 1.0999403285464902, "validation_historical_diagonal_infonce": 2.7045680274963377, "train_caption_rows_used": 4002, "train_caption_rows_total": 4002, "train_batches": 36, "train_partial_batches": 6, "same_image_repeated_rows_in_train_batches": 0, "validation_rows_seen_by_historical_diagonal_loss": 1000, "validation_duplicate_rows_counter_if_diagonal_batched": 784, "elapsed_seconds": 4.632370098028332}
+{"epoch": 6, "train_mean_diagonal_infonce": 0.977319935207989, "validation_historical_diagonal_infonce": 2.6772395324707032, "train_caption_rows_used": 4002, "train_caption_rows_total": 4002, "train_batches": 36, "train_partial_batches": 6, "same_image_repeated_rows_in_train_batches": 0, "validation_rows_seen_by_historical_diagonal_loss": 1000, "validation_duplicate_rows_counter_if_diagonal_batched": 784, "elapsed_seconds": 5.5530587889952585}
+{"epoch": 7, "train_mean_diagonal_infonce": 0.8820623585517154, "validation_historical_diagonal_infonce": 2.6598951988220216, "train_caption_rows_used": 4002, "train_caption_rows_total": 4002, "train_batches": 36, "train_partial_batches": 6, "same_image_repeated_rows_in_train_batches": 0, "validation_rows_seen_by_historical_diagonal_loss": 1000, "validation_duplicate_rows_counter_if_diagonal_batched": 784, "elapsed_seconds": 6.477304168045521}
+{"epoch": 8, "train_mean_diagonal_infonce": 0.8109188243528123, "validation_historical_diagonal_infonce": 2.6498990516662597, "train_caption_rows_used": 4002, "train_caption_rows_total": 4002, "train_batches": 36, "train_partial_batches": 6, "same_image_repeated_rows_in_train_batches": 0, "validation_rows_seen_by_historical_diagonal_loss": 1000, "validation_duplicate_rows_counter_if_diagonal_batched": 784, "elapsed_seconds": 7.388041947968304}
+{"epoch": 9, "train_mean_diagonal_infonce": 0.7369666709484776, "validation_historical_diagonal_infonce": 2.643254749298096, "train_caption_rows_used": 4002, "train_caption_rows_total": 4002, "train_batches": 36, "train_partial_batches": 6, "same_image_repeated_rows_in_train_batches": 0, "validation_rows_seen_by_historical_diagonal_loss": 1000, "validation_duplicate_rows_counter_if_diagonal_batched": 784, "elapsed_seconds": 8.286427560029551}
+{"epoch": 10, "train_mean_diagonal_infonce": 0.6938566547753148, "validation_historical_diagonal_infonce": 2.6375851421356202, "train_caption_rows_used": 4002, "train_caption_rows_total": 4002, "train_batches": 36, "train_partial_batches": 6, "same_image_repeated_rows_in_train_batches": 0, "validation_rows_seen_by_historical_diagonal_loss": 1000, "validation_duplicate_rows_counter_if_diagonal_batched": 784, "elapsed_seconds": 9.190764587954618}
+{
+  "status": "complete",
+  "baseline": {
+    "image_to_text": {
+      "recall_at_1": 0.57,
+      "recall_at_5": 0.86,
+      "recall_at_10": 0.92
+    },
+    "text_to_image": {
+      "recall_at_1": 0.452,
+      "recall_at_5": 0.896,
+      "recall_at_10": 0.971
+    },
+    "image_to_text_rank": {
+      "mean": 3.44,
+      "median": 1.0,
+      "max": 109
+    },
+    "text_to_image_rank": {
+      "mean": 3.101,
+      "median": 2.0,
+      "max": 151
+    },
+    "multi_positive_infonce": {
+      "image_to_text": 2.128037452697754,
+      "text_to_image": 2.2711191177368164,
+      "symmetric_mean": 2.199578285217285,
+      "temperature": 0.07,
+      "formula": "mean(logsumexp(all) - logsumexp(all positives)) in each direction, averaged"
+    },
+    "score_matrix": {
+      "shape": [
+        200,
+        1000
+      ],
+      "min": -0.17458266019821167,
+      "max": 0.6149308681488037,
+      "mean": 0.07868682593107224,
+      "std": 0.09546458721160889,
+      "positive_pairs": 1000,
+      "negative_pairs": 199000
+    }
+  },
+  "corrected": {
+    "image_to_text": {
+      "recall_at_1": 0.55,
+      "recall_at_5": 0.88,
+      "recall_at_10": 0.935
+    },
+    "text_to_image": {
+      "recall_at_1": 0.46,
+      "recall_at_5": 0.887,
+      "recall_at_10": 0.965
+    },
+    "image_to_text_rank": {
+      "mean": 3.255,
+      "median": 1.0,
+      "max": 70
+    },
+    "text_to_image_rank": {
+      "mean": 3.184,
+      "median": 2.0,
+      "max": 129
+    },
+    "multi_positive_infonce": {
+      "image_to_text": 2.1378068923950195,
+      "text_to_image": 2.2795300483703613,
+      "symmetric_mean": 2.2086684703826904,
+      "temperature": 0.07,
+      "formula": "mean(logsumexp(all) - logsumexp(all positives)) in each direction, averaged"
+    },
+    "score_matrix": {
+      "shape": [
+        200,
+        1000
+      ],
+      "min": -0.17328467965126038,
+      "max": 0.6043949127197266,
+      "mean": 0.07372463494539261,
+      "std": 0.0941549763083458,
+      "positive_pairs": 1000,
+      "negative_pairs": 199000
+    }
+  },
+  "outputs": "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/pilot_1000_phase2"
+}

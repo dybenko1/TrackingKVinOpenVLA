@@ -1,0 +1,451 @@
+{
+  "interpretation": "This sampled subset has caption and image diversity but is not a replacement for broad COCO training. No COCO instance masks are available in the local dataset, so quantitative spatial evaluation requires additional annotations and is not run here.",
+  "sampled_train_validation_image_ids_disjoint": true,
+  "seed": 123,
+  "spatial_annotation_availability": {
+    "available_annotation_files": [
+      "captions_train2014.json",
+      "captions_val2014.json",
+      "talk2dino_manifest.json"
+    ],
+    "instances_train2014_json": false,
+    "instances_val2014_json": false
+  },
+  "splits": {
+    "train": {
+      "caption_annotations": 4002,
+      "caption_vocabulary": {
+        "top_30_tokens": [
+          [
+            "a",
+            6603
+          ],
+          [
+            "on",
+            1396
+          ],
+          [
+            "of",
+            1377
+          ],
+          [
+            "the",
+            1345
+          ],
+          [
+            "in",
+            1220
+          ],
+          [
+            "with",
+            1094
+          ],
+          [
+            "and",
+            972
+          ],
+          [
+            "is",
+            657
+          ],
+          [
+            "man",
+            508
+          ],
+          [
+            "to",
+            471
+          ],
+          [
+            "an",
+            341
+          ],
+          [
+            "sitting",
+            338
+          ],
+          [
+            "two",
+            331
+          ],
+          [
+            "people",
+            305
+          ],
+          [
+            "at",
+            288
+          ],
+          [
+            "standing",
+            288
+          ],
+          [
+            "woman",
+            276
+          ],
+          [
+            "are",
+            276
+          ],
+          [
+            "white",
+            248
+          ],
+          [
+            "next",
+            247
+          ],
+          [
+            "street",
+            239
+          ],
+          [
+            "table",
+            207
+          ],
+          [
+            "it",
+            202
+          ],
+          [
+            "holding",
+            193
+          ],
+          [
+            "that",
+            182
+          ],
+          [
+            "person",
+            180
+          ],
+          [
+            "some",
+            174
+          ],
+          [
+            "large",
+            161
+          ],
+          [
+            "down",
+            159
+          ],
+          [
+            "top",
+            150
+          ]
+        ],
+        "unique_lowercase_alpha_tokens": 2935
+      },
+      "captions_per_image": {
+        "count_distribution": {
+          "5": 798,
+          "6": 2
+        },
+        "iqr": 0.0,
+        "max": 6,
+        "mean": 5.0025,
+        "median": 5.0,
+        "min": 5,
+        "outlier_rule": "Tukey 1.5\u00d7IQR fences over per-image annotation counts",
+        "p25": 5.0,
+        "p75": 5.0,
+        "unusually_few_image_count": 0,
+        "unusually_few_images": [],
+        "unusually_few_rule": "caption count < 5.0",
+        "unusually_many_image_count": 2,
+        "unusually_many_images": [
+          [
+            80739,
+            6
+          ],
+          [
+            397832,
+            6
+          ]
+        ],
+        "unusually_many_rule": "caption count > 5.0"
+      },
+      "exact_duplicate_caption_strings": {
+        "cross_image_repeated_strings": 5,
+        "excess_annotation_rows": 6,
+        "same_image_excess_rows": 0,
+        "unique_strings_repeated": 5
+      },
+      "feature_mapping": {
+        "annotation_image_pairs_match_manifest_in_order": true,
+        "caption_feature_rows": 4002,
+        "image_feature_rows": 800,
+        "image_id_order_matches_manifest": true,
+        "status": "passed"
+      },
+      "representative_examples": [
+        {
+          "annotation_count": 5,
+          "captions_for_image": [
+            "Bicycles, cars and a trash can in a garage.",
+            "Clutter blocks antique cars from leaving the garage",
+            "A garage filled with old cards and old bicycles.",
+            "Some antique cars sit in a garage with some bicycles",
+            "A garage with bicycles, cars and a garbage can."
+          ],
+          "file_name": "COCO_train2014_000000101891.jpg",
+          "image_id": 101891
+        },
+        {
+          "annotation_count": 6,
+          "captions_for_image": [
+            "A giraffe standing in an exhibit by a rock wall.",
+            "A giraffe standing in a zoo exhibit by a rock wall.",
+            "A giraffe is standing behind a stone wall.  ",
+            "A small giraffe standing next to a stone wall.",
+            "a giraffe is standing near a large rock",
+            "A single giraffe standing inside a zoo enclosure."
+          ],
+          "file_name": "COCO_train2014_000000397832.jpg",
+          "image_id": 397832
+        },
+        {
+          "annotation_count": 5,
+          "captions_for_image": [
+            "A man with bunches of bananas stands next to them.",
+            "Man with bananas still on stem in outdoors area",
+            "A man with a large cart filled with bunches of bananas.",
+            "A man holds up a branch of bananas he is trimming with a machete",
+            "A man is next to a large bunch of bananas."
+          ],
+          "file_name": "COCO_train2014_000000179904.jpg",
+          "image_id": 179904
+        },
+        {
+          "annotation_count": 5,
+          "captions_for_image": [
+            "a street sign next to a traffic light with a sky background",
+            "Traffic light and street light for Belmont Avenue",
+            "A traffic light and sign show travelers where to go.",
+            "A photo of a street lamp with a street light and a street sign.",
+            "A stoplight and street sign attached to a street lamp pole."
+          ],
+          "file_name": "COCO_train2014_000000381390.jpg",
+          "image_id": 381390
+        }
+      ],
+      "unique_images": 800
+    },
+    "validation": {
+      "caption_annotations": 1000,
+      "caption_vocabulary": {
+        "top_30_tokens": [
+          [
+            "a",
+            1626
+          ],
+          [
+            "of",
+            343
+          ],
+          [
+            "on",
+            343
+          ],
+          [
+            "the",
+            337
+          ],
+          [
+            "in",
+            289
+          ],
+          [
+            "and",
+            242
+          ],
+          [
+            "with",
+            239
+          ],
+          [
+            "to",
+            143
+          ],
+          [
+            "is",
+            134
+          ],
+          [
+            "an",
+            94
+          ],
+          [
+            "sitting",
+            93
+          ],
+          [
+            "two",
+            87
+          ],
+          [
+            "people",
+            86
+          ],
+          [
+            "are",
+            79
+          ],
+          [
+            "next",
+            77
+          ],
+          [
+            "man",
+            70
+          ],
+          [
+            "white",
+            70
+          ],
+          [
+            "standing",
+            69
+          ],
+          [
+            "it",
+            60
+          ],
+          [
+            "at",
+            59
+          ],
+          [
+            "that",
+            45
+          ],
+          [
+            "kitchen",
+            44
+          ],
+          [
+            "top",
+            44
+          ],
+          [
+            "down",
+            44
+          ],
+          [
+            "table",
+            44
+          ],
+          [
+            "street",
+            43
+          ],
+          [
+            "train",
+            43
+          ],
+          [
+            "holding",
+            42
+          ],
+          [
+            "baseball",
+            42
+          ],
+          [
+            "black",
+            41
+          ]
+        ],
+        "unique_lowercase_alpha_tokens": 1423
+      },
+      "captions_per_image": {
+        "count_distribution": {
+          "5": 200
+        },
+        "iqr": 0.0,
+        "max": 5,
+        "mean": 5,
+        "median": 5.0,
+        "min": 5,
+        "outlier_rule": "Tukey 1.5\u00d7IQR fences over per-image annotation counts",
+        "p25": 5.0,
+        "p75": 5.0,
+        "unusually_few_image_count": 0,
+        "unusually_few_images": [],
+        "unusually_few_rule": "caption count < 5.0",
+        "unusually_many_image_count": 0,
+        "unusually_many_images": [],
+        "unusually_many_rule": "caption count > 5.0"
+      },
+      "exact_duplicate_caption_strings": {
+        "cross_image_repeated_strings": 2,
+        "excess_annotation_rows": 2,
+        "same_image_excess_rows": 0,
+        "unique_strings_repeated": 2
+      },
+      "feature_mapping": {
+        "annotation_image_pairs_match_manifest_in_order": true,
+        "caption_feature_rows": 1000,
+        "image_feature_rows": 200,
+        "image_id_order_matches_manifest": true,
+        "status": "passed"
+      },
+      "representative_examples": [
+        {
+          "annotation_count": 5,
+          "captions_for_image": [
+            "The young man is stirring his pot of food with a wooden spoon.",
+            "A man enjoys cooking food in a pan",
+            "A smiling man is cooking in his kitchen.",
+            "A man smiles as he stirs his food in the pot.",
+            "A boy smiles while holding a pot and spoon."
+          ],
+          "file_name": "COCO_val2014_000000410627.jpg",
+          "image_id": 410627
+        },
+        {
+          "annotation_count": 5,
+          "captions_for_image": [
+            "four people sitting at a table eating and laughing",
+            "The people are at a table eating breakfast. ",
+            "a couple of people are sitting around a table",
+            "A group of people are smiling at a table.",
+            "Four smiling people are sitting around a dining table."
+          ],
+          "file_name": "COCO_val2014_000000353435.jpg",
+          "image_id": 353435
+        },
+        {
+          "annotation_count": 5,
+          "captions_for_image": [
+            "A sequential shot of a tennis player slamming a ball.",
+            "Three shots of a man swinging at a tennis ball",
+            "A woman standing on a tennis court holding a racquet.",
+            "A time lapse image of a tennis player in action.",
+            "a split photo of a person hitting a tennis ball "
+          ],
+          "file_name": "COCO_val2014_000000185865.jpg",
+          "image_id": 185865
+        },
+        {
+          "annotation_count": 5,
+          "captions_for_image": [
+            "The tailgate of a car open and two suitcases inside.",
+            "A couple of pieces of brown luggage sitting in a backseat.",
+            "Two suitcases in the back of a vehicle.",
+            "A car trunk with two pieces of luggage in it.",
+            "A green car with vintage luggage in the back of it."
+          ],
+          "file_name": "COCO_val2014_000000391300.jpg",
+          "image_id": 391300
+        }
+      ],
+      "unique_images": 200
+    }
+  },
+  "status": "passed",
+  "train_validation_overlap_count": 0
+}

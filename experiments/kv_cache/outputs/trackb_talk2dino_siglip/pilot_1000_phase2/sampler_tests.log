@@ -1,0 +1,10 @@
+test_all_rows_once_and_no_repeated_image_in_any_batch (experiments.kv_cache.experiments.trackb_talk2dino_siglip.tests.test_caption_round_sampler.CaptionRoundBatchSamplerTests.test_all_rows_once_and_no_repeated_image_in_any_batch) ... ok
+test_different_epochs_rotate_captions (experiments.kv_cache.experiments.trackb_talk2dino_siglip.tests.test_caption_round_sampler.CaptionRoundBatchSamplerTests.test_different_epochs_rotate_captions) ... ok
+test_partial_batches_are_preserved (experiments.kv_cache.experiments.trackb_talk2dino_siglip.tests.test_caption_round_sampler.CaptionRoundBatchSamplerTests.test_partial_batches_are_preserved) ... ok
+test_same_seed_and_epoch_repeats_exactly (experiments.kv_cache.experiments.trackb_talk2dino_siglip.tests.test_caption_round_sampler.CaptionRoundBatchSamplerTests.test_same_seed_and_epoch_repeats_exactly) ... ok
+test_single_caption_images_and_small_partial_round (experiments.kv_cache.experiments.trackb_talk2dino_siglip.tests.test_caption_round_sampler.CaptionRoundBatchSamplerTests.test_single_caption_images_and_small_partial_round) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+OK
