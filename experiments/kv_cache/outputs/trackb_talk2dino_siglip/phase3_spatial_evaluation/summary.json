@@ -1,0 +1,215 @@
+{
+  "category_image_pairs": 240,
+  "evaluation_images": 80,
+  "implementation_validation": "7 CPU/synthetic unit tests pass; upstream weighted-cleaning parity max abs error 0; mask transform exactly matches installed torchvision for 5 aspect ratios; 6 selected crowd RLEs validated against encoded runs.",
+  "lambda_bg": 0.2,
+  "limitations": [
+    "bg_thresh=0.54 is upstream CLIP-era reference, not SigLIP-calibrated",
+    "100 selected from existing 200-image feature subset; only 80 final evaluation images",
+    "categories are prompted using ground-truth image category list for category-localization evaluation; this does not test open-set class discovery",
+    "COCO crowd regions included in semantic unions",
+    "224 and 16x16 grid limit small-object boundaries",
+    "no latency-only benchmark; recorded duration includes text tower load, scoring, PAMR and artifact generation"
+  ],
+  "manifest": {
+    "development_count": 20,
+    "eligible_count": 128,
+    "eligible_criterion": "image has at least two annotated categories whose category-union mask occupies >=2 cells after exact short-edge resize/center-crop and nearest 16x16 projection",
+    "evaluation_count": 80,
+    "seed": 20261117,
+    "selected_count": 100,
+    "selection_used_model_predictions": false,
+    "source": "existing 200-image COCO val feature subset"
+  },
+  "metrics": {
+    "original_pilot": {
+      "cleaned": {
+        "macro_mean_category_iou": 0.220952619538563,
+        "mean_auroc": 0.7893463073167479,
+        "mean_iou_224": 0.15562555332857328,
+        "mean_pair_iou": 0.1588248687832791,
+        "mean_pointing_accuracy": 0.4666666666666667,
+        "mean_precision": 0.2546317348859516,
+        "mean_recall": 0.2741700186193984,
+        "n_category_image_pairs": 240
+      },
+      "pamr": {
+        "macro_mean_category_iou": 0.22198310622462986,
+        "mean_auroc": 0.8251817330915203,
+        "mean_iou_224": 0.15674363447107892,
+        "mean_pair_iou": 0.15759453752165295,
+        "mean_pointing_accuracy": 0.5666666666666667,
+        "mean_precision": 0.23187660812970748,
+        "mean_recall": 0.23516679072713356,
+        "n_category_image_pairs": 240
+      },
+      "raw": {
+        "macro_mean_category_iou": 0.25200394150336297,
+        "mean_auroc": 0.7887311756640697,
+        "mean_iou_224": 0.19220526414926956,
+        "mean_pair_iou": 0.19308235195920473,
+        "mean_pointing_accuracy": 0.475,
+        "mean_precision": 0.28884708763305617,
+        "mean_recall": 0.3975426521683976,
+        "n_category_image_pairs": 240
+      }
+    },
+    "phase2_corrected": {
+      "cleaned": {
+        "macro_mean_category_iou": 0.22773388486335228,
+        "mean_auroc": 0.792862682393124,
+        "mean_iou_224": 0.15983377870226861,
+        "mean_pair_iou": 0.16130195110686904,
+        "mean_pointing_accuracy": 0.475,
+        "mean_precision": 0.25210709846549434,
+        "mean_recall": 0.26109883422727614,
+        "n_category_image_pairs": 240
+      },
+      "pamr": {
+        "macro_mean_category_iou": 0.2405305280822325,
+        "mean_auroc": 0.826446856387763,
+        "mean_iou_224": 0.16399012129147691,
+        "mean_pair_iou": 0.16460453452473048,
+        "mean_pointing_accuracy": 0.5375,
+        "mean_precision": 0.24473790748140586,
+        "mean_recall": 0.2296271285736335,
+        "n_category_image_pairs": 240
+      },
+      "raw": {
+        "macro_mean_category_iou": 0.26477025223491957,
+        "mean_auroc": 0.7923759060974317,
+        "mean_iou_224": 0.19933691836451725,
+        "mean_pair_iou": 0.20012268213510745,
+        "mean_pointing_accuracy": 0.475,
+        "mean_precision": 0.30303169482359676,
+        "mean_recall": 0.3962669291923643,
+        "n_category_image_pairs": 240
+      }
+    },
+    "untrained": {
+      "cleaned": {
+        "macro_mean_category_iou": 0.0,
+        "mean_auroc": 0.5461503501015572,
+        "mean_iou_224": 0.0,
+        "mean_pair_iou": 0.0,
+        "mean_pointing_accuracy": 0.20416666666666666,
+        "mean_precision": 0.0,
+        "mean_recall": 0.0,
+        "n_category_image_pairs": 240
+      },
+      "pamr": {
+        "macro_mean_category_iou": 0.0,
+        "mean_auroc": 0.5631687160662938,
+        "mean_iou_224": 0.0,
+        "mean_pair_iou": 0.0,
+        "mean_pointing_accuracy": 0.22916666666666666,
+        "mean_precision": 0.0,
+        "mean_recall": 0.0,
+        "n_category_image_pairs": 240
+      },
+      "raw": {
+        "macro_mean_category_iou": 0.0,
+        "mean_auroc": 0.5452994429603192,
+        "mean_iou_224": 0.0,
+        "mean_pair_iou": 0.0,
+        "mean_pointing_accuracy": 0.19583333333333333,
+        "mean_precision": 0.0,
+        "mean_recall": 0.0,
+        "n_category_image_pairs": 240
+      }
+    }
+  },
+  "paired_phase2_minus_original_pilot": {
+    "cleaned": {
+      "bootstrap_95_percentile_ci": [
+        -0.0016684675924408742,
+        0.012233494187116351
+      ],
+      "bootstrap_resamples": 10000,
+      "mean_phase2_minus_original": 0.004805379926180967,
+      "paired_images": 80,
+      "seed": 20261119
+    },
+    "pamr": {
+      "bootstrap_95_percentile_ci": [
+        0.0009325885012124365,
+        0.017973254146136413
+      ],
+      "bootstrap_resamples": 10000,
+      "mean_phase2_minus_original": 0.009044834281652248,
+      "paired_images": 80,
+      "seed": 20261119
+    },
+    "raw": {
+      "bootstrap_95_percentile_ci": [
+        -0.0019688418205070016,
+        0.015031272167553993
+      ],
+      "bootstrap_resamples": 10000,
+      "mean_phase2_minus_original": 0.006671562101255052,
+      "paired_images": 80,
+      "seed": 20261119
+    }
+  },
+  "resource_metrics": {
+    "cached_vision_forward_rerun": false,
+    "cuda_peak_allocated_bytes": 2077685760,
+    "cuda_peak_reserved_bytes": 2350907392,
+    "device": "cuda:0",
+    "elapsed_seconds_including_text_encoder_load_and_evaluation": 206.59974083397537,
+    "fresh_dino_feature_extraction": false,
+    "pamr_enabled": true,
+    "peak_process_rss_bytes": 5713113088,
+    "text_tower_metadata": {
+      "checkpoint_dir": "/opt/openvla/cache/models/timm/ViT-SO400M-14-SigLIP-384",
+      "checkpoint_repository_expected": "timm/ViT-SO400M-14-SigLIP-384",
+      "checkpoint_revision": "ac16108d567c4389e6cd2b11c9b8585f7474435b",
+      "frozen": true,
+      "missing_text_keys": [],
+      "open_clip_version": "2.32.0",
+      "strict_text_state_load": true,
+      "text_context_length": 64,
+      "text_heads": 16,
+      "text_layers": 27,
+      "text_output_dim": 1152,
+      "text_positional_embedding_shape": [
+        64,
+        1152
+      ],
+      "text_state_tensor_count": 330,
+      "text_width": 1152,
+      "tokenizer": {
+        "canonicalization": "OpenCLIP HFTokenizer.clean_fn from checkpoint configuration",
+        "checkpoint_dir": "/opt/openvla/cache/models/timm/ViT-SO400M-14-SigLIP-384",
+        "clean": "canonicalize",
+        "context_length": 64,
+        "eos_token_id": 1,
+        "pad_token_id": 1,
+        "tokenizer_class": "T5TokenizerFast"
+      },
+      "torch_version": "2.6.0",
+      "unexpected_text_keys": [],
+      "visual_tower_loaded": false,
+      "weights_path": "/opt/openvla/cache/models/timm/ViT-SO400M-14-SigLIP-384/open_clip_model.safetensors"
+    }
+  },
+  "selected_crowd_rle_annotations": 6,
+  "selected_rle_annotation_area_mismatch_count": 6,
+  "status": "complete",
+  "threshold": 0.54,
+  "threshold_note": "upstream bg_thresh=0.54 applied to sigmoid(cosine) maps",
+  "union_iou": {
+    "original_pilot": {
+      "cleaned": 0.2875978190737397,
+      "raw": 0.36625924133724447
+    },
+    "phase2_corrected": {
+      "cleaned": 0.2965183196209526,
+      "raw": 0.38340150561326747
+    },
+    "untrained": {
+      "cleaned": 0.0,
+      "raw": 0.0
+    }
+  }
+}

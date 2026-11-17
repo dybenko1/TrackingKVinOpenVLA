@@ -1,0 +1,106 @@
+{
+  "branch": "thesis/trackb-talk2dino-siglip",
+  "data": {
+    "annotation_file": "/opt/openvla/cache/datasets/talk2dino/coco2014/annotations2014/instances_val2014.json",
+    "annotation_sha256": "e1b4d1bc54906827b1a029981b1c77f2088bd4462569b7615db7929070c3ab47",
+    "dataset": "COCO 2014 validation",
+    "development_images": 20,
+    "eligible_images": 128,
+    "evaluation_images": 80,
+    "image_source": "existing 200-image validation feature cache and corresponding cached COCO val JPEGs",
+    "manifest_seed": 20261117,
+    "selected_images": 100,
+    "selection_uses_model_predictions": false,
+    "target_categories": "per-image annotated categories whose union GT occupies at least 2 cells on the 16x16 grid"
+  },
+  "dino_text": {
+    "checkpoint": "timm/ViT-SO400M-14-SigLIP-384",
+    "revision": "ac16108d567c4389e6cd2b11c9b8585f7474435b",
+    "template_features": "Encode each COCO category template; average seven template embeddings per class before each MLP text projection.",
+    "template_source": "Talk2DINO sub_imagenet_template",
+    "templates": [
+      "itap of a {}.",
+      "a bad photo of a {}.",
+      "a origami {}.",
+      "a photo of the large {}.",
+      "a {} in a video game.",
+      "art of the {}.",
+      "a photo of the small {}."
+    ],
+    "text_context": 64,
+    "text_dim": 1152
+  },
+  "experiment": "Track B Talk2DINO-SigLIP Phase 3 spatial segmentation validation",
+  "feature_cache": {
+    "attention_shape": [
+      200,
+      16,
+      256
+    ],
+    "definition": "talk2dino_final_layer_cls_attention_weighted_patch_mean_v1",
+    "fresh_dino_forward": false,
+    "normal_openvla_policy_changed": false,
+    "patches_shape": [
+      200,
+      256,
+      1024
+    ]
+  },
+  "geometry": {
+    "input": "224x224 Talk2DINO transform: bicubic short-edge resize, torchvision CenterCrop geometry, ImageNet mean/std on image path",
+    "mask": "same short-edge resize/crop geometry, nearest-neighbor discrete IDs, then nearest 16x16 grid",
+    "scores": "bilinear upsample to aligned 224x224 using align_corners=True"
+  },
+  "mlp_states": {
+    "original_pilot": {
+      "path": "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/pilot_1000/pilot_mlp_checkpoint/final_projection.pt",
+      "sha256": "d42ade8c8eb4734652f27b7af2479855288f4b75b5194c43c2ffae9c467ed920"
+    },
+    "phase2_corrected": {
+      "path": "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/pilot_1000_phase2/corrected_projection.pt",
+      "sha256": "0e795df4dcad0d0d2fc1b74ecbb97dc4b11292dc9d71e28e604db4036f6454de"
+    },
+    "untrained": {
+      "path": "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/pilot_1000/pilot_mlp_checkpoint/initial_projection.pt",
+      "sha256": "b3ebdb00f554440314eb861e1633434198e729b73571a03d737e7199b67421c2"
+    }
+  },
+  "outputs": {
+    "auroc": "rank AUROC of soft maps vs binary masks",
+    "bootstrap": "paired image resampling, 10000 draws for corrected-vs-original, seed 20261119",
+    "metrics": "16x16 and aligned 224x224",
+    "pointing": "argmax score cell/pixel lies in target mask",
+    "size_bins": "small 2-3 positive grid cells; medium 4-15; large >=16"
+  },
+  "reference_commit": "ca9fb6cc6264bef3c8447bec39424b2547523e9f",
+  "reference_talk2dino_commit": "6dac47dbe3500df63f3b3df20dd28334290919cc",
+  "runtime": {
+    "container": "openvla-talk2dino-siglip:20261116",
+    "device": "cuda:0",
+    "open_clip": "2.32.0",
+    "pamr": true,
+    "torch": "2.6.0"
+  },
+  "segmentation": {
+    "background_cleaning": "Talk2DINO similarity_assignment_weighted exact operation; lambda_bg=0.2",
+    "pAMR": {
+      "dilations": [
+        1,
+        2,
+        4,
+        8,
+        12,
+        24
+      ],
+      "enabled": true,
+      "iterations": 10,
+      "source_map": "background-cleaned score map"
+    },
+    "raw_similarity": "cosine between normalized cached final DINO patch descriptors and normalized projected category text vectors",
+    "semantic_union": "all instances per category are unioned; crowd regions included; this is semantic category localization, not individual instance segmentation",
+    "soft_map": "sigmoid(raw cosine), upstream DINOTextSim2Mask soft-mask path",
+    "threshold": 0.54,
+    "threshold_origin": "Upstream COCO-object evaluation configuration bg_thresh=0.54, carried over as reference and not calibrated for SigLIP"
+  },
+  "worktree": "/home/oscar/projects/TrackingKVinOpenVLA/openvla/cache/worktrees/trackb-talk2dino-siglip"
+}

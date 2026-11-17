@@ -1,0 +1,61 @@
+{
+  "attention": {
+    "per_head_softmax_over_spatial_patches": true,
+    "shape": [
+      1,
+      16,
+      256
+    ]
+  },
+  "mask_preprocessing_alignment": {
+    "cases_passed": 5,
+    "exact_comparison_to_installed_torchvision_pil_transform": true,
+    "method": "torchvision Resize(short edge=224, NEAREST) + CenterCrop(224), then nearest 16x16",
+    "shapes_checked": [
+      [
+        427,
+        640
+      ],
+      [
+        640,
+        427
+      ],
+      [
+        480,
+        640
+      ],
+      [
+        640,
+        480
+      ],
+      [
+        224,
+        224
+      ]
+    ]
+  },
+  "scope_checks": {
+    "no_policy_or_LIBERO_inference": true,
+    "no_training": true,
+    "no_visual_feature_reextraction": true
+  },
+  "selected_rle": {
+    "all_run_lengths_cover_image": true,
+    "annotation_area_metadata_used": false,
+    "count": 6,
+    "decoded_mask_pixels_equal_odd_run_sum": true,
+    "uncompressed": true
+  },
+  "sigmoid_mask_conversion": "torch.sigmoid exact operation",
+  "unit_tests": {
+    "failed": 0,
+    "passed": 7,
+    "test_log": "logs/phase3_unit_and_alignment_tests.log"
+  },
+  "upstream_weighted_background_cleaning": {
+    "allclose_atol": 1e-07,
+    "max_abs_error": 0.0,
+    "rtol": 1e-06,
+    "source": "Talk2DINO DINOText.similarity_assignment_weighted"
+  }
+}

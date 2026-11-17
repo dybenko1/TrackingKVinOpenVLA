@@ -1,0 +1,30 @@
+{
+  "annotation_file": "/opt/openvla/cache/datasets/talk2dino/coco2014/annotations2014/instances_val2014.json",
+  "annotation_images": 40504,
+  "annotation_instances": 291875,
+  "annotation_sha256": "e1b4d1bc54906827b1a029981b1c77f2088bd4462569b7615db7929070c3ab47",
+  "archive": "/opt/openvla/cache/datasets/talk2dino/coco2014/archives/annotations_trainval2014.zip",
+  "archive_listing_confirmed_instances_train2014": true,
+  "archive_listing_confirmed_instances_val2014": true,
+  "archive_sha256": "031296bbc80c45a1d1f76bf9a90ead27e94e99ec629208449507a4917a3bf009",
+  "cached_feature_images": 200,
+  "cached_image_files_found": 200,
+  "category_count": 80,
+  "crowd_instances_included_in_category_unions": 3460,
+  "eligible_images_in_cached_sample": 128,
+  "rle_note": "The selected evaluation set includes 6 uncompressed COCO crowd RLE masks; decoded foreground pixel counts equal the odd-indexed run lengths and all runs sum to image size. The annotation area metadata differs for these crowd regions and was not used. Compressed RLE decoding is covered by synthetic tests. Crowd masks are included in semantic category unions; this is not COCO instance-AP ignore handling.",
+  "segmentation_format_counts": {
+    "polygon": 288415,
+    "rle": 3460
+  },
+  "selected_crowd_area_metadata_used_as_ground_truth": false,
+  "selected_image_segmentation_format_counts": {
+    "polygon": 925,
+    "rle": 6
+  },
+  "selected_images": 100,
+  "selected_rle_annotation_area_metadata_used": false,
+  "selected_rle_annotation_area_mismatch_count": 6,
+  "selected_rle_run_sum_and_decoded_mask_checks_passed": true,
+  "selected_uncompressed_rle_validations": 6
+}

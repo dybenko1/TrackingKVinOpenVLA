@@ -1,0 +1,13 @@
+{
+  "development_images": 20,
+  "evaluation_images_processed": 80,
+  "evaluation_manifest_images": 100,
+  "finished_unix_time": 1794913802.5312881,
+  "pamr": true,
+  "scored_checkpoints": [
+    "untrained",
+    "original_pilot",
+    "phase2_corrected"
+  ],
+  "status": "complete"
+}

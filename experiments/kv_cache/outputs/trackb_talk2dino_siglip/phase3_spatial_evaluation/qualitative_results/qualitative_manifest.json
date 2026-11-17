@@ -1,0 +1,177 @@
+{
+  "binary_threshold": 0.54,
+  "images": [
+    {
+      "categories": [
+        1,
+        10,
+        31
+      ],
+      "category_names": [
+        "person",
+        "traffic light",
+        "handbag"
+      ],
+      "file": "comparison_01_image_35891.png",
+      "image_id": 35891
+    },
+    {
+      "categories": [
+        1,
+        28
+      ],
+      "category_names": [
+        "person",
+        "umbrella"
+      ],
+      "file": "comparison_02_image_58141.png",
+      "image_id": 58141
+    },
+    {
+      "categories": [
+        3,
+        47,
+        73
+      ],
+      "category_names": [
+        "car",
+        "cup",
+        "laptop"
+      ],
+      "file": "comparison_03_image_77811.png",
+      "image_id": 77811
+    },
+    {
+      "categories": [
+        1,
+        28,
+        58,
+        67
+      ],
+      "category_names": [
+        "person",
+        "umbrella",
+        "hot dog",
+        "dining table"
+      ],
+      "file": "comparison_04_image_151826.png",
+      "image_id": 151826
+    },
+    {
+      "categories": [
+        1,
+        4,
+        31
+      ],
+      "category_names": [
+        "person",
+        "motorcycle",
+        "handbag"
+      ],
+      "file": "comparison_05_image_172710.png",
+      "image_id": 172710
+    },
+    {
+      "categories": [
+        15,
+        16,
+        62
+      ],
+      "category_names": [
+        "bench",
+        "bird",
+        "chair"
+      ],
+      "file": "comparison_06_image_177468.png",
+      "image_id": 177468
+    },
+    {
+      "categories": [
+        1,
+        39,
+        40,
+        62
+      ],
+      "category_names": [
+        "person",
+        "baseball bat",
+        "baseball glove",
+        "chair"
+      ],
+      "file": "comparison_07_image_223020.png",
+      "image_id": 223020
+    },
+    {
+      "categories": [
+        1,
+        6,
+        7
+      ],
+      "category_names": [
+        "person",
+        "bus",
+        "train"
+      ],
+      "file": "comparison_08_image_279521.png",
+      "image_id": 279521
+    },
+    {
+      "categories": [
+        1,
+        27
+      ],
+      "category_names": [
+        "person",
+        "backpack"
+      ],
+      "file": "comparison_09_image_308793.png",
+      "image_id": 308793
+    },
+    {
+      "categories": [
+        49,
+        61
+      ],
+      "category_names": [
+        "knife",
+        "cake"
+      ],
+      "file": "comparison_10_image_536274.png",
+      "image_id": 536274
+    },
+    {
+      "categories": [
+        49,
+        53,
+        67,
+        73
+      ],
+      "category_names": [
+        "knife",
+        "apple",
+        "dining table",
+        "laptop"
+      ],
+      "file": "comparison_11_image_579201.png",
+      "image_id": 579201
+    },
+    {
+      "categories": [
+        1,
+        40
+      ],
+      "category_names": [
+        "person",
+        "baseball glove"
+      ],
+      "file": "comparison_12_image_273684.png",
+      "image_id": 273684
+    }
+  ],
+  "interpretation": "Class/category masks union all COCO instances of that category; not individual-instance separation.",
+  "panel_count": 12,
+  "raw_cosine_display_range": [
+    -0.12,
+    0.35
+  ]
+}
