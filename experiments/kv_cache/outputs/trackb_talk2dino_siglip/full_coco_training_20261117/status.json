@@ -1,16 +1,14 @@
 {
   "completed_at": "2026-11-18",
   "detail": "100-epoch caption-round training; atomic epoch checkpoints",
-  "error": "Command exit 1: ['/opt/venv/bin/python', PosixPath('/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/experiments/trackb_talk2dino_siglip/full_train.py'), '--feature-root', PosixPath('/opt/openvla/cache/datasets/talk2dino/coco2014/features_full_coco_20261117'), '--output', PosixPath('/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/full_coco_training_20261117'), '--pilot-validation-features', PosixPath('/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/pilot_1000/features'), '--epochs', '100', '--batch-size', '128', '--seed', '123', '--lr', '0.0001']",
   "exit_code": 0,
-  "failed_at": "2026-11-17T17:44:59+0000",
   "host": "container",
   "job": "trackb_talk2dino_full_20261117",
   "pid": 25,
-  "recovery": "spatial evaluation resumed and completed from epoch-100 checkpoint",
+  "recovery": "The first post-training evaluator call lacked max_eval_images. It was corrected and rerun from the completed epoch-100 checkpoint; training was not repeated.",
   "spatial_evaluation": "complete",
   "stage": "complete",
   "started_at": "2026-11-17T11:46:00+0000",
   "status": "complete",
-  "updated_at": "2026-11-17T15:08:56+0000"
+  "updated_at": "2026-11-18T11:42:26+08:00"
 }
