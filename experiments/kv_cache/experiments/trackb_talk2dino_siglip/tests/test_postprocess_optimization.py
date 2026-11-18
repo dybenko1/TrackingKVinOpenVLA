@@ -38,3 +38,14 @@ def test_metric_returns_binary_and_threshold_independent_measures():
     assert result["recall"] == 1.0
     assert result["pointing_accuracy"] == 1.0
     assert 0.5 <= result["auroc"] <= 1.0
+
+
+def test_vectorized_auc_matches_upstream_tie_aware_auc():
+    rng = np.random.default_rng(14)
+    for _ in range(5):
+        # Quantization deliberately creates ties, as in upsampled patch maps.
+        scores = rng.integers(0, 8, size=(31, 29)).astype(np.float32) / 7
+        target = rng.random((31, 29)) > 0.63
+        expected = MODULE.phase3.rank_auc(scores.ravel(), target.ravel())
+        actual = MODULE.fast_auc(scores, target)
+        np.testing.assert_allclose(actual, expected, rtol=0, atol=1e-14)

@@ -223,10 +223,41 @@ def calibrate(dev_records, image_by_id, anns_by_image, category_by_id, class_ids
     return thresholds, dev_scores
 
 
-def one_metrics(scores, target, threshold):
-    item = phase3.binary_metrics(np.asarray(scores), np.asarray(target), float(threshold))
-    item["pointing_accuracy"] = phase3.pointing(np.asarray(scores), np.asarray(target))
-    return item
+def one_metrics(scores, target, threshold, shared=None):
+    scores = np.asarray(scores, dtype=np.float32)
+    target = np.asarray(target, dtype=bool)
+    pred = scores >= float(threshold)
+    tp = int(np.logical_and(pred, target).sum())
+    fp = int(np.logical_and(pred, ~target).sum())
+    fn = int(np.logical_and(~pred, target).sum())
+    result = {"iou": tp / (tp + fp + fn) if tp + fp + fn else float("nan"),
+        "precision": tp / (tp + fp) if tp + fp else 0.0,
+        "recall": tp / (tp + fn) if tp + fn else 0.0,
+        "tp": tp, "fp": fp, "fn": fn}
+    if shared is None:
+        result["auroc"] = fast_auc(scores, target)
+        result["pointing_accuracy"] = phase3.pointing(scores, target)
+    else:
+        result.update(shared)
+    return result
+
+
+def fast_auc(scores: np.ndarray, labels: np.ndarray) -> float:
+    """Tie-aware Mann–Whitney AUROC with vectorized average ranks."""
+    x = np.asarray(scores, dtype=np.float64).ravel()
+    y = np.asarray(labels, dtype=bool).ravel()
+    npos = int(y.sum()); nneg = len(y) - npos
+    if not npos or not nneg:
+        return float("nan")
+    order = np.argsort(x, kind="mergesort")
+    sorted_x = x[order]
+    starts = np.r_[0, np.flatnonzero(sorted_x[1:] != sorted_x[:-1]) + 1]
+    ends = np.r_[starts[1:], len(x)]
+    average_ranks = (starts + 1 + ends) / 2.0
+    sorted_ranks = np.repeat(average_ranks, ends - starts)
+    ranks = np.empty(len(x), dtype=np.float64)
+    ranks[order] = sorted_ranks
+    return float((ranks[y].sum() - npos * (npos + 1) / 2.0) / (npos * nneg))
 
 
 def aggregate_rows(rows):
@@ -451,13 +482,17 @@ def main():
                     for si, scale in enumerate(SCALES):
                         score = maps[method][scale][ci]
                         target = gt[cid][si]
+                        shared_auc = fast_auc(score, target)
+                        shared_pointing = phase3.pointing(np.asarray(score), np.asarray(target))
                         tests = {
                             "historical_phase3_0.54": HISTORICAL_THRESHOLD,
                             "upstream_0.55": UPSTREAM_THRESHOLD,
                             "development_calibrated": float(thresholds[cp][method][scale]["threshold"]),
                         }
                         for label, threshold in tests.items():
-                            category_result["methods"][method][f"{scale}__{label}"] = one_metrics(score, target, threshold)
+                            metric = one_metrics(score, target, threshold,
+                                {"auroc": shared_auc, "pointing_accuracy": shared_pointing})
+                            category_result["methods"][method][f"{scale}__{label}"] = metric
                         category_result["methods"][method][f"{scale}__calibrated_threshold"] = tests["development_calibrated"]
                     if iid in gallery_ids:
                         gallery_maps.setdefault(cp, {})[method] = {
