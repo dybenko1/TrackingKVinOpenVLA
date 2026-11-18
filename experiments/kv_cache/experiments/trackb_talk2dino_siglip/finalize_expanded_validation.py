@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Assemble compact final report from completed full-val retrieval/segmentation."""
-import argparse,json,hashlib,subprocess
+import argparse,json,hashlib,subprocess,gzip,shutil
 from pathlib import Path
 
 def file_sha(path):
@@ -77,7 +77,13 @@ def main():
  prior=0.30588934948829305
  current=seg['evaluation_aggregate']['epoch_100']['cleaned']['grid16']['historical_phase3_0.54']['macro_mean_category_iou']
  lines += [f"For historical context only, epoch-100 cleaned at the fixed 0.54 threshold scored {current:.4f} on this new final holdout versus the prior 0.3059 on the previously examined 80-image subset (descriptive difference {current-prior:+.4f}). The subsets differ, so this is not a paired estimate of improvement.", '']
- lines += ['', 'Per-category and per-image metrics are in `segmentation/per_category_metrics.csv` and `segmentation/per_image_metrics.jsonl`. The gallery contains example RGB/GT/raw/cleaned/PAMR maps for the final evaluation subset.', '',
+ image_metrics=segdir/'per_image_metrics.jsonl'
+ compressed_metrics=segdir/'per_image_metrics.jsonl.gz'
+ if image_metrics.is_file() and not compressed_metrics.is_file():
+  compressed_tmp=compressed_metrics.with_suffix('.gz.tmp')
+  with image_metrics.open('rb') as src, gzip.open(compressed_tmp,'wb',compresslevel=6) as dst: shutil.copyfileobj(src,dst)
+  compressed_tmp.replace(compressed_metrics)
+ lines += ['', 'Per-category metrics are in `segmentation/per_category_metrics.csv`; per-image metrics are retained locally in `segmentation/per_image_metrics.jsonl` and in compressed form as `segmentation/per_image_metrics.jsonl.gz`. The gallery contains example RGB/GT/raw/cleaned/PAMR maps for the final evaluation subset.', '',
   '## Limits','',
   '- This is semantic category-union evaluation against COCO instance masks projected to the 16×16 patch grid and aligned 224×224 view; it is not instance segmentation AP.',
   '- The evaluation subset was selected from annotation availability and geometric visibility, without model predictions. It excludes the older 100-image Phase 3 manifest but remains one COCO dataset/domain.',
@@ -106,5 +112,15 @@ def main():
   'best_dev_selected_native_grid16':best,'threshold_calibration':thresholds['calibrated_thresholds'],
   'historical_phase3_0_3059_note':'Previously examined 80-image subset; descriptive context only, not a matched holdout baseline.'}
  tmp=o/'summary.json.tmp';tmp.write_text(json.dumps(summary,indent=2,sort_keys=True)+'\n');tmp.replace(o/'summary.json')
+ include=[o/'POSTPROCESS_ABLATION_REPORT.md',o/'summary.json',o/'configuration.json',o/'validation_split_manifest.json',
+  o/'segmentation_manifest.json',o/'FULL_FEATURE_VALIDATION.json',o/'full_val2014_retrieval_summary.json',
+  *o.glob('retrieval_development_epoch*.json'),*o.glob('retrieval_evaluation_epoch*.json'),
+  segdir/'summary.json',segdir/'configuration.json',segdir/'checkpoint_integrity.json',segdir/'threshold_calibration.json',
+  segdir/'development_selection.json',segdir/'per_category_metrics.csv',compressed_metrics]
+ include += list((segdir/'qualitative_results').glob('*.png')) if (segdir/'qualitative_results').is_dir() else []
+ include += list((o/'libero_feasibility').rglob('*')) if (o/'libero_feasibility').is_dir() else []
+ inventory=[]
+ for file in sorted({p for p in include if p.is_file()}): inventory.append({'path':str(file.relative_to(o)),'size_bytes':file.stat().st_size,'sha256':file_sha(file)})
+ (o/'publication_manifest.json').write_text(json.dumps({'files':inventory,'raw_per_image_jsonl_path':str(image_metrics.relative_to(o)),'raw_per_image_jsonl_published_compressed':compressed_metrics.is_file()},indent=2,sort_keys=True)+'\n')
  print(o/'POSTPROCESS_ABLATION_REPORT.md')
 if __name__=='__main__':main()
