@@ -1,7 +1,13 @@
 #!/usr/bin/env python3
 """Assemble compact final report from completed full-val retrieval/segmentation."""
-import argparse,json
+import argparse,json,hashlib,subprocess
 from pathlib import Path
+
+def file_sha(path):
+ h=hashlib.sha256()
+ with path.open('rb') as stream:
+  for block in iter(lambda:stream.read(8*1024*1024),b''):h.update(block)
+ return h.hexdigest()
 
 def main():
  p=argparse.ArgumentParser();p.add_argument('--output-dir',type=Path,required=True);a=p.parse_args();o=a.output_dir
@@ -13,6 +19,24 @@ def main():
  thresholds=json.loads((segdir/'threshold_calibration.json').read_text())
  best=json.loads((segdir/'development_selection.json').read_text())['selected_primary_native_grid16']
  selected_eval=seg['evaluation_aggregate'][best['checkpoint']]
+ feature_validation=json.loads((o/'FULL_FEATURE_VALIDATION.json').read_text())
+ split_manifest=json.loads((o/'validation_split_manifest.json').read_text())
+ seg_manifest=json.loads((o/'segmentation_manifest.json').read_text())
+ dino_status=json.loads(Path('/opt/openvla/cache/datasets/talk2dino/coco2014/features_full_validation_20261117/full_val2014_extraction_status.json').read_text())
+ git_sha=subprocess.check_output(['git','rev-parse','HEAD'],cwd=Path(__file__).resolve().parents[4],text=True).strip()
+ config={'code_commit':git_sha,'dataset':'COCO val2014','dataset_counts':{'images':40504,'captions':202654},
+  'dataset_root':'/opt/openvla/cache/datasets/talk2dino/coco2014','caption_annotations_sha256':split_manifest['annotation_sha256'],
+  'instance_annotations_sha256':file_sha(Path('/opt/openvla/cache/datasets/talk2dino/coco2014/annotations2014/instances_val2014.json')),
+  'retrieval_split_manifest_sha256':hashlib.sha256((o/'validation_split_manifest.json').read_bytes()).hexdigest(),
+  'segmentation_manifest_sha256':hashlib.sha256((o/'segmentation_manifest.json').read_bytes()).hexdigest(),
+  'segmentation_split':seg_manifest['selection'],'retrieval_split':{'development':split_manifest['development'],'evaluation':split_manifest['evaluation']},
+  'model':{'openvla_checkpoint':'openvla/openvla-7b-finetuned-libero-spatial','vision':'fine-tuned DINOv2 ViT-L/14 reg4 TIMM backbone','vision_feature_definition':'final normalized DINO patches and final-block CLS-to-patch attention for segmentation; Talk2DINO 16-head weighted region descriptors for retrieval','input_resolution':224,'grid':'16x16','text':'timm/ViT-SO400M-14-SigLIP-384','text_checkpoint_metadata':seg['siglip_text_metadata'],'text_context':64,'no_448':True},
+  'checkpoints':retrieval['epochs'],'segmentation_configuration':seg['runtime'],'feature_validation':feature_validation,
+  'visual_feature_extraction':dino_status,'threshold_candidates':thresholds['calibrated_thresholds'],
+  'methods':['raw','attention_cleaned_lambda_bg_0.2','pamr_raw','attention_cleaned_then_pamr'],'pamr':{'iterations':10,'dilations':[1,2,4,8,12,24]},
+  'selection_policy':'Choose checkpoint and postprocess by development native 16x16 macro class mIoU; final evaluation is reported separately.',
+  'no_training':True,'no_policy_rollouts':True,'no_kv_changes':True}
+ (o/'configuration.json').write_text(json.dumps(config,indent=2,sort_keys=True)+'\n')
  lines=['# Full COCO val2014 retrieval and segmentation validation','',
   '## Design and split integrity','',
   f"- Retrieval covered **{split['image_count']:,} images and {split['caption_count']:,} captions**. Development: {split['development']['image_count']:,} images / {split['development']['caption_count']:,} captions; final evaluation: {split['evaluation']['image_count']:,} images / {split['evaluation']['caption_count']:,} captions.",
@@ -73,9 +97,9 @@ def main():
   '- `validation_split_manifest.json`, `segmentation_manifest.json` — frozen image-level splits and selection criteria.',
   '- `full_val2014_retrieval_summary.json` — full retrieval metrics.',
   '- `segmentation/summary.json`, `segmentation/threshold_calibration.json`, `segmentation/per_category_metrics.csv`, `segmentation/per_image_metrics.jsonl` — segmentation metrics.',
-  '- `configuration.json` and `run_status.json` — exact data paths, hashes, and completion status.', '']
+  '- `configuration.json` and `run_status.json` — exact data paths, hashes, software/checkpoint identities, and completion status.', '']
  (o/'POSTPROCESS_ABLATION_REPORT.md').write_text('\n'.join(lines))
- summary={'status':'complete','retrieval':retrieval,'segmentation':seg,'libero_feasibility':libero,
+ summary={'status':'complete','retrieval':retrieval,'segmentation':seg,'libero_feasibility':libero,'configuration':config,
   'split':{'retrieval_images':split['image_count'],'retrieval_captions':split['caption_count'],
     'retrieval_dev_images':split['development']['image_count'],'retrieval_eval_images':split['evaluation']['image_count'],
     'retrieval_dev_captions':split['development']['caption_count'],'retrieval_eval_captions':split['evaluation']['caption_count']},
