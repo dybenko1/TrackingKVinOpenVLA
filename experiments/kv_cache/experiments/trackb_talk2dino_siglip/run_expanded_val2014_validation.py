@@ -80,11 +80,19 @@ def retrieval_artifacts_complete():
 def segmentation_artifacts_complete():
     summary_path=OUT/'segmentation/summary.json'
     status_path=OUT/'segmentation/status.json'
-    if not summary_path.is_file() or not status_path.is_file(): return False
+    calibration_path=OUT/'segmentation/threshold_calibration.json'
+    selection_path=OUT/'segmentation/development_selection.json'
+    if not summary_path.is_file() or not status_path.is_file() or not calibration_path.is_file() or not selection_path.is_file(): return False
     summary=json.loads(summary_path.read_text()); status=json.loads(status_path.read_text())
     return (summary.get('status')=='complete' and summary.get('development_images')==500
-        and summary.get('evaluation_images')==2000 and status.get('status')=='complete'
-        and status.get('evaluation_images_completed')==2000)
+        and summary.get('evaluation_images')==2000 and status.get('status')=='complete')
+
+def libero_artifacts_complete():
+    summary_path=OUT/'libero_feasibility/summary.json'
+    if not summary_path.is_file(): return False
+    summary=json.loads(summary_path.read_text())
+    images=list((OUT/'libero_feasibility/visualizations').glob('*.png'))
+    return summary.get('status')=='complete' and summary.get('frames')==27 and len(images)==27
 
 def skip(stage,detail):
     atomic(STATUS,{'status':'running','stage':stage,'detail':detail,'pid':os.getpid(),'updated_unix':time.time(),'skipped_verified':True})
@@ -123,7 +131,10 @@ def main():
             skip('segmentation','500 development and all 2,000 final evaluation images are complete')
         else:
             run('segmentation',[PYTHON,'-u',str(SRC/'postprocess_optimization.py'),'--dataset-root',str(DATA),'--manifest',str(OUT/'segmentation_manifest.json'),'--feature-root',str(FEATURES),'--output-dir',str(OUT/'segmentation'),'--device','cuda:0','--resume'],'500 dev images for thresholds; 2000 held-out test images')
-        run('libero_feasibility',[PYTHON,'-u',str(SRC/'libero_mask_feasibility.py'),'--dataset-root',str(DATA),'--optimization-dir',str(OUT/'segmentation'),'--output-dir',str(OUT/'libero_feasibility'),'--device','cuda:0'],'offline frozen-mask review on saved LIBERO images; no policy or KV experiment')
+        if libero_artifacts_complete():
+            skip('libero_feasibility','all 27 saved-frame mask visualizations and temporal diagnostics are complete')
+        else:
+            run('libero_feasibility',[PYTHON,'-u',str(SRC/'libero_mask_feasibility.py'),'--dataset-root',str(DATA),'--optimization-dir',str(OUT/'segmentation'),'--output-dir',str(OUT/'libero_feasibility'),'--device','cuda:0'],'offline frozen-mask review on saved LIBERO images; no policy or KV experiment')
         run('report',[PYTHON,'-u',str(SRC/'finalize_expanded_validation.py'),'--output-dir',str(OUT)],'aggregate retrieval and segmentation artifacts')
         atomic(STATUS,{'status':'complete','stage':'complete','exit_code':0,'finished_unix':time.time(),'pid':os.getpid()})
         print(f'\n[{time.strftime("%F %T")}] ALL VALIDATION STAGES COMPLETE',flush=True)

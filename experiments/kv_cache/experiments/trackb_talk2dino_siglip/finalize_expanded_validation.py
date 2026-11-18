@@ -13,6 +13,7 @@ def main():
  p=argparse.ArgumentParser();p.add_argument('--output-dir',type=Path,required=True);a=p.parse_args();o=a.output_dir
  retrieval=json.loads((o/'full_val2014_retrieval_summary.json').read_text())
  segdir=o/'segmentation'; seg=json.loads((segdir/'summary.json').read_text())
+ seg_config=json.loads((segdir/'configuration.json').read_text())
  libero_path=o/'libero_feasibility'/'summary.json'
  libero=json.loads(libero_path.read_text()) if libero_path.is_file() else None
  split=json.loads((o/'validation_split_manifest.json').read_text())
@@ -30,8 +31,8 @@ def main():
   'retrieval_split_manifest_sha256':hashlib.sha256((o/'validation_split_manifest.json').read_bytes()).hexdigest(),
   'segmentation_manifest_sha256':hashlib.sha256((o/'segmentation_manifest.json').read_bytes()).hexdigest(),
   'segmentation_split':seg_manifest['selection'],'retrieval_split':{'development':split_manifest['development'],'evaluation':split_manifest['evaluation']},
-  'model':{'openvla_checkpoint':'openvla/openvla-7b-finetuned-libero-spatial','vision':'fine-tuned DINOv2 ViT-L/14 reg4 TIMM backbone','vision_feature_definition':'final normalized DINO patches and final-block CLS-to-patch attention for segmentation; Talk2DINO 16-head weighted region descriptors for retrieval','sidecar_preprocessing':'224 short-edge bicubic resize; center crop; tensor conversion; ImageNet mean/std; same as existing training/Phase 3 extraction','standard_openvla_policy_preprocessing_changed':False,'input_resolution':224,'grid':'16x16','text':'timm/ViT-SO400M-14-SigLIP-384','text_checkpoint_metadata':seg['siglip_text_metadata'],'text_context':64,'no_448':True},
-  'checkpoints':retrieval['epochs'],'segmentation_configuration':seg['runtime'],'feature_validation':feature_validation,
+  'model':{'openvla_checkpoint':'openvla/openvla-7b-finetuned-libero-spatial','vision':'fine-tuned DINOv2 ViT-L/14 reg4 TIMM backbone','vision_feature_definition':'final normalized DINO patches and final-block CLS-to-patch attention for segmentation; Talk2DINO 16-head weighted region descriptors for retrieval','sidecar_preprocessing':'224 short-edge bicubic resize; center crop; tensor conversion; ImageNet mean/std; same as existing training/Phase 3 extraction','standard_openvla_policy_preprocessing_changed':False,'input_resolution':224,'grid':'16x16','text':'timm/ViT-SO400M-14-SigLIP-384','text_checkpoint_metadata':seg_config['siglip_text_metadata'],'text_context':64,'no_448':True},
+  'checkpoints':retrieval['epochs'],'segmentation_configuration':seg_config,'feature_validation':feature_validation,
   'visual_feature_extraction':dino_status,'threshold_candidates':thresholds['calibrated_thresholds'],
   'methods':['raw','attention_cleaned_lambda_bg_0.2','pamr_raw','attention_cleaned_then_pamr'],'pamr':{'iterations':10,'dilations':[1,2,4,8,12,24]},
   'selection_policy':'Choose checkpoint and postprocess by development native 16x16 macro class mIoU; final evaluation is reported separately.',
