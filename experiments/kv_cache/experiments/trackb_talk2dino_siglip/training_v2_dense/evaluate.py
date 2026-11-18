@@ -203,9 +203,9 @@ def aggregate(records,thresholds=None):
     return summary,rows
 
 @torch.inference_mode()
-def retrieval_diagnostic(models,cache,split,patch_ids,penultimate,final,device,out):
+def retrieval_diagnostic(models,cache,caption_cache,split,patch_ids,penultimate,final,device,out):
     dev_ids=list(map(int,split["development"]["image_ids"])); pos_by_id={iid:i for i,iid in enumerate(dev_ids)}
-    cap_ids=np.load(cache/"caption_ids_val2014.npy",mmap_mode="r"); text=np.load(cache/"text_features_val2014_fp16.npy",mmap_mode="r")
+    cap_ids=np.load(caption_cache/"caption_ids_val2014.npy",mmap_mode="r"); text=np.load(caption_cache/"text_features_val2014_fp16.npy",mmap_mode="r")
     cap_rows=np.asarray([r for r,(_,iid) in enumerate(cap_ids) if int(iid) in pos_by_id],dtype=np.int64)
     cap_iids=np.asarray([int(cap_ids[r,1]) for r in cap_rows],dtype=np.int64)
     cap_text=np.asarray(text[cap_rows],dtype=np.float16)
@@ -241,7 +241,7 @@ def retrieval_diagnostic(models,cache,split,patch_ids,penultimate,final,device,o
     return output
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument("--dataset-root",type=Path,required=True);p.add_argument("--cache-root",type=Path,required=True);p.add_argument("--output-dir",type=Path,required=True);p.add_argument("--split-manifest",type=Path,required=True);p.add_argument("--train-output",type=Path,required=True);p.add_argument("--checkpoint-dir",type=Path,required=True);p.add_argument("--v1-checkpoint",type=Path,required=True);p.add_argument("--resume",action="store_true");a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument("--dataset-root",type=Path,required=True);p.add_argument("--cache-root",type=Path,required=True);p.add_argument("--text-cache-root",type=Path,required=True);p.add_argument("--output-dir",type=Path,required=True);p.add_argument("--split-manifest",type=Path,required=True);p.add_argument("--train-output",type=Path,required=True);p.add_argument("--checkpoint-dir",type=Path,required=True);p.add_argument("--v1-checkpoint",type=Path,required=True);p.add_argument("--resume",action="store_true");a=p.parse_args()
     dev=torch.device("cuda:0" if torch.cuda.is_available() else "cpu");a.output_dir.mkdir(parents=True,exist_ok=True)
     split=json.loads(a.split_manifest.read_text());atomic_json(a.output_dir/"validation_manifest.json",split)
     cats=json.loads((a.output_dir/"categories.json").read_text());category_text=np.load(a.cache_root/"category_text_features_fp16.npy",mmap_mode="r")
@@ -259,7 +259,7 @@ def main():
     patch_ids=np.load(a.cache_root/"image_ids_val2014.npy",mmap_mode="r")
     penultimate=np.load(a.cache_root/"patch_features_val2014_fp16.npy",mmap_mode="r")
     final=np.load(a.cache_root/"patch_features_val2014_final_norm_fp16.npy",mmap_mode="r")
-    retrieval_diagnostic({"v1":v1,"v2":v2},a.cache_root,split,patch_ids,penultimate,final,dev,a.output_dir)
+    retrieval_diagnostic({"v1":v1,"v2":v2},a.cache_root,a.text_cache_root,split,patch_ids,penultimate,final,dev,a.output_dir)
     allrows={}
     for name in ("development","evaluation"):
         ids=split[name]["image_ids"]

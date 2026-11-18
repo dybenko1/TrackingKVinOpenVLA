@@ -57,8 +57,8 @@ def run_training(a):
     device=torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     root,out,ckdir=a.cache_root,a.output_dir,a.checkpoint_dir; out.mkdir(parents=True,exist_ok=True); ckdir.mkdir(parents=True,exist_ok=True)
     ids=np.load(root/"image_ids_train2014.npy",mmap_mode="r")
-    capids=np.load(root/"caption_ids_train2014.npy",mmap_mode="r")
-    text=np.load(root/"text_features_train2014_fp16.npy",mmap_mode="r")
+    capids=np.load(a.text_cache_root/"caption_ids_train2014.npy",mmap_mode="r")
+    text=np.load(a.text_cache_root/"text_features_train2014_fp16.npy",mmap_mode="r")
     patches=np.load(root/"patch_features_train2014_fp16.npy",mmap_mode="r")
     occ=np.load(root/"masks/occupancy_train2014_fp16.npy",mmap_mode="r")
     valid=np.load(root/"masks/valid_train2014_fp16.npy",mmap_mode="r")
@@ -163,5 +163,5 @@ def run_training(a):
     atomic_json(out/"training_completion.json",{"status":"complete","epochs_completed":len(history),"best":best,"initial_sha256":init_hash,"best_checkpoint_sha256":sha256(out/"best_projection.pt"),"checkpoint":str(out/"best_projection.pt"),"elapsed_seconds":time.time()-start,"device":str(device)})
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument("--cache-root",type=Path,required=True);p.add_argument("--output-dir",type=Path,required=True);p.add_argument("--checkpoint-dir",type=Path,required=True);p.add_argument("--split-manifest",type=Path,required=True);p.add_argument("--categories-json",type=Path,required=True);p.add_argument("--captions-train",type=Path,required=True);p.add_argument("--batch-size",type=int,default=128);p.add_argument("--resume",action="store_true");run_training(p.parse_args())
+    p=argparse.ArgumentParser();p.add_argument("--cache-root",type=Path,required=True);p.add_argument("--text-cache-root",type=Path,required=True);p.add_argument("--output-dir",type=Path,required=True);p.add_argument("--checkpoint-dir",type=Path,required=True);p.add_argument("--split-manifest",type=Path,required=True);p.add_argument("--categories-json",type=Path,required=True);p.add_argument("--captions-train",type=Path,required=True);p.add_argument("--batch-size",type=int,default=128);p.add_argument("--resume",action="store_true");run_training(p.parse_args())
 if __name__=="__main__":main()

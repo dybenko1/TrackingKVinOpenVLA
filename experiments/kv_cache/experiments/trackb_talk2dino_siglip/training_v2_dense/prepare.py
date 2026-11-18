@@ -19,8 +19,8 @@ def prepare(a):
     split_path=a.output_dir/"validation_manifest.json"
     split=create_split_manifest(a.dataset_root/"annotations2014/captions_val2014.json",annotations["annotations/instances_val2014.json"],a.previous_output,split_path)
     # Validate train caption mappings against the pre-existing SigLIP feature cache.
-    cache=a.cache_root
-    ids=np.load(cache/"image_ids_train2014.npy",mmap_mode="r"); capids=np.load(cache/"caption_ids_train2014.npy",mmap_mode="r"); text=np.load(cache/"text_features_train2014_fp16.npy",mmap_mode="r")
+    cache=a.cache_root; source=a.train_text_cache_root
+    ids=np.load(source/"image_ids_train2014.npy",mmap_mode="r"); capids=np.load(source/"caption_ids_train2014.npy",mmap_mode="r"); text=np.load(source/"text_features_train2014_fp16.npy",mmap_mode="r")
     if len(ids)!=82783 or len(capids)!=414113 or text.shape!=(414113,1152): raise RuntimeError("Reusable V1 text cache does not match full COCO train2014")
     wanted=np.asarray([int(x["id"]) for x in train_caps["images"]],dtype=np.int64)
     if not np.array_equal(ids,wanted): raise RuntimeError("Existing image IDs do not match caption annotation order")
@@ -61,5 +61,5 @@ def prepare(a):
     return split_path,cat_path
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument("--dataset-root",type=Path,required=True);p.add_argument("--cache-root",type=Path,required=True);p.add_argument("--output-dir",type=Path,required=True);p.add_argument("--previous-output",type=Path,required=True);p.add_argument("--status",type=Path,required=True);p.add_argument("--batch-size",type=int,default=4);prepare(p.parse_args())
+    p=argparse.ArgumentParser();p.add_argument("--dataset-root",type=Path,required=True);p.add_argument("--cache-root",type=Path,required=True);p.add_argument("--train-text-cache-root",type=Path,required=True);p.add_argument("--output-dir",type=Path,required=True);p.add_argument("--previous-output",type=Path,required=True);p.add_argument("--status",type=Path,required=True);p.add_argument("--batch-size",type=int,default=4);prepare(p.parse_args())
 if __name__=="__main__":main()
