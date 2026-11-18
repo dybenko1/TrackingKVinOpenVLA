@@ -547,10 +547,26 @@ def main():
                     subset = [r for r in rows if r["checkpoint"] == cp and r["method"] == method
                               and r["scale"] == scale and r["threshold_policy"] == label]
                     aggregate.setdefault(cp, {}).setdefault(method, {}).setdefault(scale, {})[label] = aggregate_rows(subset)
+    category_rows = []
+    for cp, methods in aggregate.items():
+        for method, scales in methods.items():
+            for scale, policies in scales.items():
+                for label, result in policies.items():
+                    calibrated_threshold = (thresholds[cp][method][scale]["threshold"]
+                        if label == "development_calibrated" else HISTORICAL_THRESHOLD
+                        if label == "historical_phase3_0.54" else UPSTREAM_THRESHOLD)
+                    for cid, metrics in result["per_category"].items():
+                        category_rows.append({"checkpoint": cp, "method": method, "scale": scale,
+                            "threshold_policy": label, "threshold": calibrated_threshold,
+                            "category_id": int(cid), "category": metrics["category"],
+                            "image_category_pairs": metrics["n_images"], "iou": metrics["iou"],
+                            "auroc": metrics["auroc"], "precision": metrics["precision"],
+                            "recall": metrics["recall"], "pointing_accuracy": metrics["pointing_accuracy"]})
     with (DEST / "per_category_metrics.csv").open("w", newline="") as stream:
-        writer = csv.DictWriter(stream, fieldnames=list(rows[0].keys()))
-        writer.writeheader()
-        writer.writerows(rows)
+        fields = ["checkpoint", "method", "scale", "threshold_policy", "threshold", "category_id",
+                  "category", "image_category_pairs", "iou", "auroc", "precision", "recall", "pointing_accuracy"]
+        writer = csv.DictWriter(stream, fieldnames=fields)
+        writer.writeheader(); writer.writerows(category_rows)
     selected_eval = aggregate[best["checkpoint"]][best["method"]]["grid16"]["development_calibrated"]
     summary = {
         "status": "complete" if args.max_evaluation_images is None else "smoke_test_partial",
