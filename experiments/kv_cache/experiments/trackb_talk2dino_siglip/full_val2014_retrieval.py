@@ -104,9 +104,8 @@ def main():
     if not np.isfinite(regions).all() or not np.isfinite(texts).all(): raise FloatingPointError('Nonfinite full val features')
     splits={name:set(map(int,split[name]['image_ids'])) for name in ('development','evaluation')}
     if splits['development']&splits['evaluation'] or len(splits['development']|splits['evaluation'])!=40504: raise RuntimeError('Retrieval split is not a disjoint full partition')
-    checkpoints={20:Path('/opt/openvla/experiments/kv_cache/outputs/trackb_talk2dino_siglip/full_coco_training_20261117/checkpoints/epoch_020.pt'),
-      50:Path('/opt/openvla/experiments/kv_cache/outputs/trackb_talk2dino_siglip/full_coco_training_20261117/checkpoints/epoch_050.pt'),
-      100:Path('/opt/openvla/experiments/kv_cache/outputs/trackb_talk2dino_siglip/full_coco_training_20261117/checkpoints/epoch_100.pt')}
+    checkpoint_root=REPO/'experiments/kv_cache/outputs/trackb_talk2dino_siglip/full_coco_training_20261117/checkpoints'
+    checkpoints={epoch:checkpoint_root/f'epoch_{epoch:03d}.pt' for epoch in (20,50,100)}
     summaries={}; t=time.time()
     for epoch,path in checkpoints.items():
       digest=sha256(path); ck=torch.load(path,map_location='cpu',weights_only=False)
