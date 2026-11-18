@@ -68,7 +68,13 @@ def main():
       'selection_used_model_predictions':False,'overlap_count':0,
       'prior_80_image_evaluation_had_been_examined':True,'prior_phase3_manifest_excluded_ids':len(excluded),
       'excluded_phase3_manifest_sha256':hashlib.sha256(a.exclude_manifest.read_bytes()).hexdigest() if a.exclude_manifest.is_file() else None},
-      'images':[dict(x,subset=subset,feature_row=i) for subset in ('development','evaluation') for i,x in enumerate(valid[subset])],
+      # Feature rows address one concatenated spatial cache ordered as
+      # development followed by evaluation.  Keep the row global across both
+      # subsets; resetting enumerate() per subset silently aliases evaluation
+      # rows onto the development prefix.
+      'images':[dict(x,subset=subset,feature_row=offset+i)
+        for subset,offset in (('development',0),('evaluation',len(valid['development'])))
+        for i,x in enumerate(valid[subset])],
       'annotation_sha256':retrieval['annotation_sha256']}
     a.output_dir.mkdir(parents=True,exist_ok=True)
     (a.output_dir/'validation_split_manifest.json').write_text(json.dumps(retrieval,indent=2)+'\n')
