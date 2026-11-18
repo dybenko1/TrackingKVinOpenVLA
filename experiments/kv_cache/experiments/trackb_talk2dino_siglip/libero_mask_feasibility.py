@@ -18,7 +18,7 @@ def main():
  ap=argparse.ArgumentParser();ap.add_argument('--dataset-root',type=Path,default=Path('/opt/openvla/cache/datasets/talk2dino/coco2014'))
  ap.add_argument('--frames-root',type=Path,default=ROOT/'experiments/kv_cache/outputs/trackb_dinov2_segmentation_visual_trial/visualizations')
  ap.add_argument('--optimization-dir',type=Path,required=True);ap.add_argument('--output-dir',type=Path,required=True);ap.add_argument('--device',default='cuda:0')
- a=ap.parse_args();out=a.output_dir;out.mkdir(parents=True,exist_ok=True);dev=torch.device(a.device)
+ a=ap.parse_args();out=a.output_dir;out.mkdir(parents=True,exist_ok=True);(out/'visualizations').mkdir(parents=True,exist_ok=True);dev=torch.device(a.device)
  selection=json.loads((a.optimization_dir/'development_selection.json').read_text())['selected_primary_native_grid16']
  thresholds=json.loads((a.optimization_dir/'threshold_calibration.json').read_text())['calibrated_thresholds']
  cp=selection['checkpoint'];method=selection['method'];threshold=float(thresholds[cp][method]['grid16']['threshold'])
@@ -59,8 +59,12 @@ def main():
   rgb=Image.open(path).convert('RGB');_,rgb_tensor=post.rgb224_tensor(rgb,dev)
   patch_t=torch.from_numpy(patch.astype(np.float32)).to(dev);attn_t=torch.from_numpy(attn.astype(np.float32)).to(dev)
   maps,_=post.make_maps(model,patch_t,attn_t,class_text,indices,rgb_tensor,pamr)
-  phrase_list=prompts[i];indices_i=torch.tensor([pos[p] for p in phrase_list],device=dev)
-  scores=maps[method]['grid16'][indices_i];masks=scores>=threshold
+  phrase_list=prompts[i]
+  # `make_maps` intentionally returns host NumPy arrays.  Index those with
+  # host indices, then move the selected maps back to the inference device.
+  indices_i=np.asarray([pos[p] for p in phrase_list],dtype=np.int64)
+  scores=torch.from_numpy(maps[method]['grid16'][indices_i]).to(dev)
+  masks=scores>=threshold
   target=(masks[0]|masks[1]|masks[2])
   item={'sample_id':row['sample_id'],'task_id':int(row['task_id']),'state_id':int(row['state_id']),'time_step':int(row['time_step']),
     'task_instruction':row['task_description'],'target_prompt':phrase_list[0],'selected_checkpoint':cp,'postprocessing':method,'threshold':threshold,
@@ -71,11 +75,11 @@ def main():
   import matplotlib;matplotlib.use('Agg');import matplotlib.pyplot as plt
   fig,axs=plt.subplots(2,6,figsize=(20,7));axs[0,0].imshow(rgb);axs[0,0].set_title(f"{row['sample_id']}\nRGB")
   for j,(phrase,score,mask) in enumerate(zip(phrase_list,scores,masks),1):
-   axs[0,j].imshow(rgb);heat=F.interpolate(torch.from_numpy(score)[None,None],(224,224),mode='nearest')[0,0].numpy()
+   axs[0,j].imshow(rgb);heat=F.interpolate(score.detach().float()[None,None],(224,224),mode='nearest')[0,0].cpu().numpy()
    axs[0,j].imshow(heat,cmap='magma',alpha=.55,vmin=0,vmax=1);axs[0,j].set_title(f'{phrase} score')
-   ax=axs[1,j];ax.imshow(rgb);visual=F.interpolate(mask.float()[None,None],(224,224),mode='nearest')[0,0].numpy()
+   ax=axs[1,j];ax.imshow(rgb);visual=F.interpolate(mask.float()[None,None],(224,224),mode='nearest')[0,0].cpu().numpy()
    ax.imshow(np.ma.masked_where(visual<.5,visual),cmap='winter',alpha=.5,vmin=0,vmax=1);ax.set_title(f'{phrase} fresh mask: {int(mask.sum())}/256')
-  union=F.interpolate((masks[0]|masks[1]|masks[2]).float()[None,None],(224,224),mode='nearest')[0,0].numpy()
+  union=F.interpolate((masks[0]|masks[1]|masks[2]).float()[None,None],(224,224),mode='nearest')[0,0].cpu().numpy()
   axs[1,0].imshow(rgb);axs[1,0].imshow(np.ma.masked_where(union<.5,union),cmap='cool',alpha=.48,vmin=0,vmax=1);axs[1,0].set_title('candidate fresh=target+robot')
   for ax in axs.ravel():ax.axis('off')
   fig.suptitle('Exploratory LIBERO mask feasibility — no policy or cache intervention');fig.tight_layout()

@@ -77,6 +77,15 @@ def retrieval_artifacts_complete():
             if not result.get('checkpoint_sha256','').startswith(prefix): return False
     return True
 
+def segmentation_artifacts_complete():
+    summary_path=OUT/'segmentation/summary.json'
+    status_path=OUT/'segmentation/status.json'
+    if not summary_path.is_file() or not status_path.is_file(): return False
+    summary=json.loads(summary_path.read_text()); status=json.loads(status_path.read_text())
+    return (summary.get('status')=='complete' and summary.get('development_images')==500
+        and summary.get('evaluation_images')==2000 and status.get('status')=='complete'
+        and status.get('evaluation_images_completed')==2000)
+
 def skip(stage,detail):
     atomic(STATUS,{'status':'running','stage':stage,'detail':detail,'pid':os.getpid(),'updated_unix':time.time(),'skipped_verified':True})
     print(f'\n[{time.strftime("%F %T")}] SKIP {stage}: verified existing artifacts ({detail})',flush=True)
@@ -110,7 +119,10 @@ def main():
             skip('retrieval','all six dev/final retrieval reports match the pinned checkpoints and split manifest')
         else:
             run('retrieval',[PYTHON,'-u',str(SRC/'full_val2014_retrieval.py'),'--feature-root',str(FEATURES),'--split-manifest',str(OUT/'validation_split_manifest.json'),'--output-dir',str(OUT),'--scratch-dir',str(FEATURES/'retrieval_scratch'),'--device','cuda:0','--image-chunk','64','--caption-chunk','8192'],'exhaustive multi-positive retrieval at epochs 20, 50 and 100')
-        run('segmentation',[PYTHON,'-u',str(SRC/'postprocess_optimization.py'),'--dataset-root',str(DATA),'--manifest',str(OUT/'segmentation_manifest.json'),'--feature-root',str(FEATURES),'--output-dir',str(OUT/'segmentation'),'--device','cuda:0','--resume'],'500 dev images for thresholds; 2000 held-out test images')
+        if segmentation_artifacts_complete():
+            skip('segmentation','500 development and all 2,000 final evaluation images are complete')
+        else:
+            run('segmentation',[PYTHON,'-u',str(SRC/'postprocess_optimization.py'),'--dataset-root',str(DATA),'--manifest',str(OUT/'segmentation_manifest.json'),'--feature-root',str(FEATURES),'--output-dir',str(OUT/'segmentation'),'--device','cuda:0','--resume'],'500 dev images for thresholds; 2000 held-out test images')
         run('libero_feasibility',[PYTHON,'-u',str(SRC/'libero_mask_feasibility.py'),'--dataset-root',str(DATA),'--optimization-dir',str(OUT/'segmentation'),'--output-dir',str(OUT/'libero_feasibility'),'--device','cuda:0'],'offline frozen-mask review on saved LIBERO images; no policy or KV experiment')
         run('report',[PYTHON,'-u',str(SRC/'finalize_expanded_validation.py'),'--output-dir',str(OUT)],'aggregate retrieval and segmentation artifacts')
         atomic(STATUS,{'status':'complete','stage':'complete','exit_code':0,'finished_unix':time.time(),'pid':os.getpid()})
