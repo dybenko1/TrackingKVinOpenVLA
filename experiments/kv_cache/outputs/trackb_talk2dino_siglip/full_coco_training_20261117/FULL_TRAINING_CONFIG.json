@@ -1,0 +1,12 @@
+{
+  "epochs": 100,
+  "batch_size": 128,
+  "seed": 123,
+  "lr": 0.0001,
+  "feature_root": "/opt/openvla/cache/datasets/talk2dino/coco2014/features_full_coco_20261117",
+  "optimizer": "Adam",
+  "loss": "symmetric_diagonal_infonce",
+  "temperature": 0.07,
+  "sampler": "caption_round_no_same_image_collisions_v1",
+  "training_rows": 414113
+}

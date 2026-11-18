@@ -1,0 +1,42 @@
+{
+  "cached_vision_forward_rerun": false,
+  "cuda_peak_allocated_bytes": 2086606848,
+  "cuda_peak_reserved_bytes": 2269118464,
+  "device": "cuda:0",
+  "elapsed_seconds_including_text_encoder_load_and_evaluation": 166.97812084504403,
+  "fresh_dino_feature_extraction": false,
+  "pamr_enabled": false,
+  "peak_process_rss_bytes": 5843779584,
+  "text_tower_metadata": {
+    "checkpoint_dir": "/opt/openvla/cache/models/timm/ViT-SO400M-14-SigLIP-384",
+    "checkpoint_repository_expected": "timm/ViT-SO400M-14-SigLIP-384",
+    "checkpoint_revision": "ac16108d567c4389e6cd2b11c9b8585f7474435b",
+    "frozen": true,
+    "missing_text_keys": [],
+    "open_clip_version": "2.32.0",
+    "strict_text_state_load": true,
+    "text_context_length": 64,
+    "text_heads": 16,
+    "text_layers": 27,
+    "text_output_dim": 1152,
+    "text_positional_embedding_shape": [
+      64,
+      1152
+    ],
+    "text_state_tensor_count": 330,
+    "text_width": 1152,
+    "tokenizer": {
+      "canonicalization": "OpenCLIP HFTokenizer.clean_fn from checkpoint configuration",
+      "checkpoint_dir": "/opt/openvla/cache/models/timm/ViT-SO400M-14-SigLIP-384",
+      "clean": "canonicalize",
+      "context_length": 64,
+      "eos_token_id": 1,
+      "pad_token_id": 1,
+      "tokenizer_class": "T5TokenizerFast"
+    },
+    "torch_version": "2.6.0",
+    "unexpected_text_keys": [],
+    "visual_tower_loaded": false,
+    "weights_path": "/opt/openvla/cache/models/timm/ViT-SO400M-14-SigLIP-384/open_clip_model.safetensors"
+  }
+}

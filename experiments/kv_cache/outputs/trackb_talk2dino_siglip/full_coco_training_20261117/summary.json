@@ -1,0 +1,207 @@
+{
+  "checkpoint": {
+    "path": "final_projection.pt",
+    "sha256": "eef3c4b9ab278d5cb6334518c69c411d035e4b1f7281973edc8cffd23cad4f7e"
+  },
+  "dataset": {
+    "captions_per_epoch": 414113,
+    "train_captions": 414113,
+    "train_images": 82783,
+    "unique_caption_ids": 414113
+  },
+  "feature_integrity": "passed",
+  "job": "Track B Full COCO Talk2DINO-SigLIP Training",
+  "recovery_note": "Initial post-training spatial-evaluation invocation failed due to a missing max_eval_images argument. Resumed from completed epoch-100 checkpoint; no optimizer epochs were repeated. Evaluation then completed.",
+  "spatial_evaluation": {
+    "category_image_pairs": 240,
+    "cleaned_auroc": {
+      "full_coco": 0.8230851416379248,
+      "original_pilot": 0.7893463073167479,
+      "phase2_corrected": 0.792862682393124,
+      "untrained": 0.5461503501015572
+    },
+    "cleaned_pointing_accuracy": {
+      "full_coco": 0.5375,
+      "original_pilot": 0.4666666666666667,
+      "phase2_corrected": 0.475,
+      "untrained": 0.20416666666666666
+    },
+    "development_images": 20,
+    "evaluation_images": 80,
+    "fixed_threshold": 0.54,
+    "macro_category_iou": {
+      "full_coco": {
+        "cleaned": 0.30588934948829305,
+        "raw": 0.2880160638586433
+      },
+      "original_pilot": {
+        "cleaned": 0.220952619538563,
+        "raw": 0.25200394150336297
+      },
+      "phase2_corrected": {
+        "cleaned": 0.22773388486335228,
+        "raw": 0.26477025223491957
+      },
+      "untrained": {
+        "cleaned": 0.0,
+        "raw": 0.0
+      }
+    },
+    "manifest_images": 100,
+    "pamr": false
+  },
+  "status": "complete",
+  "training": {
+    "aggregate_epoch_seconds": 9208.257401704788,
+    "batches_per_epoch": 3238,
+    "epochs": 100,
+    "final_train_loss": 0.7005131779514074,
+    "first_train_loss": 1.2326191213049524,
+    "peak_cuda_allocated_bytes": 103193088,
+    "peak_cuda_reserved_bytes": 134217728,
+    "peak_process_rss_bytes": 5180346368,
+    "same_image_batch_collisions": 0
+  },
+  "validation_retrieval_every_5_epochs": {
+    "10": {
+      "image_to_text_r1": 0.825,
+      "image_to_text_r5": 0.985,
+      "multi_positive_loss": 1.1950929164886475,
+      "text_to_image_r1": 0.689,
+      "text_to_image_r5": 0.958
+    },
+    "100": {
+      "image_to_text_r1": 0.8,
+      "image_to_text_r5": 0.975,
+      "multi_positive_loss": 1.2518610954284668,
+      "text_to_image_r1": 0.681,
+      "text_to_image_r5": 0.954
+    },
+    "15": {
+      "image_to_text_r1": 0.825,
+      "image_to_text_r5": 0.985,
+      "multi_positive_loss": 1.193126916885376,
+      "text_to_image_r1": 0.684,
+      "text_to_image_r5": 0.955
+    },
+    "20": {
+      "image_to_text_r1": 0.8,
+      "image_to_text_r5": 0.99,
+      "multi_positive_loss": 1.1900758743286133,
+      "text_to_image_r1": 0.691,
+      "text_to_image_r5": 0.956
+    },
+    "25": {
+      "image_to_text_r1": 0.815,
+      "image_to_text_r5": 0.985,
+      "multi_positive_loss": 1.1910948753356934,
+      "text_to_image_r1": 0.698,
+      "text_to_image_r5": 0.957
+    },
+    "30": {
+      "image_to_text_r1": 0.795,
+      "image_to_text_r5": 0.98,
+      "multi_positive_loss": 1.2047560214996338,
+      "text_to_image_r1": 0.697,
+      "text_to_image_r5": 0.956
+    },
+    "35": {
+      "image_to_text_r1": 0.78,
+      "image_to_text_r5": 0.98,
+      "multi_positive_loss": 1.2060883045196533,
+      "text_to_image_r1": 0.696,
+      "text_to_image_r5": 0.958
+    },
+    "40": {
+      "image_to_text_r1": 0.815,
+      "image_to_text_r5": 0.98,
+      "multi_positive_loss": 1.2061176300048828,
+      "text_to_image_r1": 0.691,
+      "text_to_image_r5": 0.952
+    },
+    "45": {
+      "image_to_text_r1": 0.805,
+      "image_to_text_r5": 0.98,
+      "multi_positive_loss": 1.2165029048919678,
+      "text_to_image_r1": 0.69,
+      "text_to_image_r5": 0.957
+    },
+    "5": {
+      "image_to_text_r1": 0.815,
+      "image_to_text_r5": 0.99,
+      "multi_positive_loss": 1.2302272319793701,
+      "text_to_image_r1": 0.685,
+      "text_to_image_r5": 0.956
+    },
+    "50": {
+      "image_to_text_r1": 0.79,
+      "image_to_text_r5": 0.975,
+      "multi_positive_loss": 1.2169477939605713,
+      "text_to_image_r1": 0.693,
+      "text_to_image_r5": 0.957
+    },
+    "55": {
+      "image_to_text_r1": 0.795,
+      "image_to_text_r5": 0.975,
+      "multi_positive_loss": 1.2264246940612793,
+      "text_to_image_r1": 0.683,
+      "text_to_image_r5": 0.956
+    },
+    "60": {
+      "image_to_text_r1": 0.805,
+      "image_to_text_r5": 0.975,
+      "multi_positive_loss": 1.2239911556243896,
+      "text_to_image_r1": 0.681,
+      "text_to_image_r5": 0.952
+    },
+    "65": {
+      "image_to_text_r1": 0.79,
+      "image_to_text_r5": 0.97,
+      "multi_positive_loss": 1.2300715446472168,
+      "text_to_image_r1": 0.686,
+      "text_to_image_r5": 0.955
+    },
+    "70": {
+      "image_to_text_r1": 0.8,
+      "image_to_text_r5": 0.975,
+      "multi_positive_loss": 1.2345685958862305,
+      "text_to_image_r1": 0.696,
+      "text_to_image_r5": 0.953
+    },
+    "75": {
+      "image_to_text_r1": 0.795,
+      "image_to_text_r5": 0.975,
+      "multi_positive_loss": 1.2395660877227783,
+      "text_to_image_r1": 0.687,
+      "text_to_image_r5": 0.958
+    },
+    "80": {
+      "image_to_text_r1": 0.785,
+      "image_to_text_r5": 0.97,
+      "multi_positive_loss": 1.2374690771102905,
+      "text_to_image_r1": 0.691,
+      "text_to_image_r5": 0.95
+    },
+    "85": {
+      "image_to_text_r1": 0.805,
+      "image_to_text_r5": 0.975,
+      "multi_positive_loss": 1.244373083114624,
+      "text_to_image_r1": 0.686,
+      "text_to_image_r5": 0.955
+    },
+    "90": {
+      "image_to_text_r1": 0.79,
+      "image_to_text_r5": 0.97,
+      "multi_positive_loss": 1.2507662773132324,
+      "text_to_image_r1": 0.685,
+      "text_to_image_r5": 0.947
+    },
+    "95": {
+      "image_to_text_r1": 0.775,
+      "image_to_text_r5": 0.97,
+      "multi_positive_loss": 1.2551616430282593,
+      "text_to_image_r1": 0.684,
+      "text_to_image_r5": 0.953
+    }
+  }
+}

@@ -155,7 +155,7 @@ def extract_full(args: argparse.Namespace) -> None:
 
     root = args.dataset_root
     splits = ("train", "val") if args.split == "all" else (args.split,)
-    feature_root = root / "features"
+    feature_root = args.feature_root if args.feature_root is not None else root / "features"
     feature_root.mkdir(parents=True, exist_ok=True)
     model, processor, device, torch = load_vision()
     dino = model.vision_backbone.featurizer
@@ -209,6 +209,8 @@ def extract_full(args: argparse.Namespace) -> None:
 def main() -> None:
     p = argparse.ArgumentParser()
     p.add_argument("--dataset-root", type=Path, default=Path("/opt/openvla/cache/datasets/talk2dino/coco2014"))
+    p.add_argument("--feature-root", type=Path, default=None,
+                   help="Isolated feature directory; defaults to DATASET_ROOT/features for backwards compatibility")
     p.add_argument("--split", choices=("train", "val", "all"), default="train")
     p.add_argument("--batch-size", type=int, default=1)
     p.add_argument("--limit", type=int, default=0, help="bounded validation only; 0 means all images")

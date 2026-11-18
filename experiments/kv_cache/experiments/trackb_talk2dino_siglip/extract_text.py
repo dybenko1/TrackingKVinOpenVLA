@@ -33,7 +33,7 @@ def run(args: argparse.Namespace) -> None:
 
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     root = args.dataset_root
-    feature_root = root / "features"
+    feature_root = args.feature_root if args.feature_root is not None else root / "features"
     if not (args.checkpoint_dir / "open_clip_config.json").is_file() or not (args.checkpoint_dir / "open_clip_model.safetensors").is_file():
         raise FileNotFoundError(
             f"Required local SigLIP-384 checkpoint is incomplete at {args.checkpoint_dir}; "
@@ -103,6 +103,8 @@ def run(args: argparse.Namespace) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--dataset-root", type=Path, default=Path("/opt/openvla/cache/datasets/talk2dino/coco2014"))
+    parser.add_argument("--feature-root", type=Path, default=None,
+                        help="Isolated feature directory; defaults to DATASET_ROOT/features for backwards compatibility")
     parser.add_argument("--checkpoint-dir", type=Path, default=DEFAULT_CHECKPOINT)
     parser.add_argument("--split", choices=("train", "val", "all"), default="all")
     parser.add_argument("--batch-size", type=int, default=128)

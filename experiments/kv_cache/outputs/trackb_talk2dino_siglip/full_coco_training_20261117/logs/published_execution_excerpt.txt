@@ -1,0 +1,11 @@
+Track B Full COCO Talk2DINO-SigLIP — execution excerpt
+Container: trackb_talk2dino_full_20261117
+Image: openvla-talk2dino-siglip:20261116
+Dataset integrity: 82,783 unique train images; 414,113 captions; SigLIP-384 SHA-256 verified.
+Feature extraction: DINO region features and SigLIP caption features completed; all completion flags and finite-value checks passed.
+Caption-round sampler: 3,238 batches/epoch; 414,113 captions/epoch; zero repeated-image collisions in all 100 epochs.
+Training: epoch 1 loss=1.232619; epoch 100 loss=0.700513; epoch checkpoints verified.
+First final-evaluation invocation: failed after training due to missing max_eval_images argument in the wrapper.
+Recovery: resumed at epoch 101 from completed epoch-100 checkpoint; no retraining performed.
+Spatial evaluation: frozen Phase 3 manifest; 20 development + 80 evaluation images; all 80 evaluation images completed; four checkpoints scored; PAMR disabled.
+Final status: complete. Full logs remain local and are excluded from publication.

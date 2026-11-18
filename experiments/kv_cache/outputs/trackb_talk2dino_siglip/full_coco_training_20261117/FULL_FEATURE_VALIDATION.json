@@ -1,0 +1,53 @@
+{
+  "all_finite": true,
+  "checked": {
+    "caption_ids_train2014.npy": {
+      "bytes": 6625936,
+      "dtype": "int64",
+      "finite": true,
+      "shape": [
+        414113,
+        2
+      ]
+    },
+    "image_ids_train2014.npy": {
+      "bytes": 662392,
+      "dtype": "int64",
+      "finite": true,
+      "shape": [
+        82783
+      ]
+    },
+    "region_done_train2014.npy": {
+      "completed": 82783,
+      "expected": 82783
+    },
+    "region_features_train2014.npy": {
+      "bytes": 2712633472,
+      "dtype": "float16",
+      "finite": true,
+      "shape": [
+        82783,
+        16,
+        1024
+      ]
+    },
+    "text_done_train2014.npy": {
+      "completed": 414113,
+      "expected": 414113
+    },
+    "text_features_train2014_fp16.npy": {
+      "bytes": 954116480,
+      "dtype": "float16",
+      "finite": true,
+      "shape": [
+        414113,
+        1152
+      ]
+    }
+  },
+  "complete": true,
+  "integrity": "passed",
+  "train_captions": 414113,
+  "train_images": 82783
+}

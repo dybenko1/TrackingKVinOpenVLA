@@ -1,0 +1,3688 @@
+{
+  "feature_cache": {
+    "attention_maps": "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/pilot_1000/features/attention_maps_val2014.npy",
+    "attention_shape": [
+      200,
+      16,
+      256
+    ],
+    "feature_definition": "talk2dino_final_layer_cls_attention_weighted_patch_mean_v1",
+    "image_ids": "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/pilot_1000/features/image_ids_val2014.npy",
+    "patch_features": "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/pilot_1000/features/patch_features_val2014.npy",
+    "patches_shape": [
+      200,
+      256,
+      1024
+    ]
+  },
+  "images": [
+    {
+      "category_areas": [
+        {
+          "category_id": 16,
+          "grid_cells": 39,
+          "pixel_area_original": 58554
+        },
+        {
+          "category_id": 73,
+          "grid_cells": 165,
+          "pixel_area_original": 265023
+        }
+      ],
+      "category_ids": [
+        16,
+        73
+      ],
+      "category_names": [
+        "bird",
+        "laptop"
+      ],
+      "feature_row": 196,
+      "file_name": "COCO_val2014_000000577522.jpg",
+      "height": 640,
+      "image_id": 577522,
+      "subset": "development",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 59,
+          "grid_cells": 21,
+          "pixel_area_original": 19721
+        },
+        {
+          "category_id": 79,
+          "grid_cells": 183,
+          "pixel_area_original": 199058
+        }
+      ],
+      "category_ids": [
+        59,
+        79
+      ],
+      "category_names": [
+        "pizza",
+        "oven"
+      ],
+      "feature_row": 67,
+      "file_name": "COCO_val2014_000000192191.jpg",
+      "height": 640,
+      "image_id": 192191,
+      "subset": "development",
+      "width": 480
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 8,
+          "pixel_area_original": 3758
+        },
+        {
+          "category_id": 6,
+          "grid_cells": 31,
+          "pixel_area_original": 28713
+        },
+        {
+          "category_id": 8,
+          "grid_cells": 41,
+          "pixel_area_original": 41853
+        }
+      ],
+      "category_ids": [
+        1,
+        6,
+        8
+      ],
+      "category_names": [
+        "person",
+        "bus",
+        "truck"
+      ],
+      "feature_row": 37,
+      "file_name": "COCO_val2014_000000138040.jpg",
+      "height": 427,
+      "image_id": 138040,
+      "subset": "development",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 103,
+          "pixel_area_original": 84509
+        },
+        {
+          "category_id": 47,
+          "grid_cells": 6,
+          "pixel_area_original": 3559
+        },
+        {
+          "category_id": 51,
+          "grid_cells": 7,
+          "pixel_area_original": 6285
+        },
+        {
+          "category_id": 81,
+          "grid_cells": 6,
+          "pixel_area_original": 3100
+        }
+      ],
+      "category_ids": [
+        1,
+        47,
+        51,
+        81
+      ],
+      "category_names": [
+        "person",
+        "cup",
+        "bowl",
+        "sink"
+      ],
+      "feature_row": 80,
+      "file_name": "COCO_val2014_000000225963.jpg",
+      "height": 426,
+      "image_id": 225963,
+      "subset": "development",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 17,
+          "grid_cells": 51,
+          "pixel_area_original": 48456
+        },
+        {
+          "category_id": 62,
+          "grid_cells": 159,
+          "pixel_area_original": 169585
+        }
+      ],
+      "category_ids": [
+        17,
+        62
+      ],
+      "category_names": [
+        "cat",
+        "chair"
+      ],
+      "feature_row": 91,
+      "file_name": "COCO_val2014_000000281598.jpg",
+      "height": 640,
+      "image_id": 281598,
+      "subset": "development",
+      "width": 491
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 161,
+          "pixel_area_original": 164688
+        },
+        {
+          "category_id": 72,
+          "grid_cells": 4,
+          "pixel_area_original": 12419
+        },
+        {
+          "category_id": 75,
+          "grid_cells": 3,
+          "pixel_area_original": 3292
+        },
+        {
+          "category_id": 85,
+          "grid_cells": 2,
+          "pixel_area_original": 955
+        }
+      ],
+      "category_ids": [
+        1,
+        72,
+        75,
+        85
+      ],
+      "category_names": [
+        "person",
+        "tv",
+        "remote",
+        "clock"
+      ],
+      "feature_row": 9,
+      "file_name": "COCO_val2014_000000046551.jpg",
+      "height": 428,
+      "image_id": 46551,
+      "subset": "development",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 19,
+          "pixel_area_original": 10311
+        },
+        {
+          "category_id": 27,
+          "grid_cells": 2,
+          "pixel_area_original": 546
+        },
+        {
+          "category_id": 37,
+          "grid_cells": 1,
+          "pixel_area_original": 452
+        },
+        {
+          "category_id": 62,
+          "grid_cells": 1,
+          "pixel_area_original": 759
+        }
+      ],
+      "category_ids": [
+        1,
+        27
+      ],
+      "category_names": [
+        "person",
+        "backpack"
+      ],
+      "feature_row": 151,
+      "file_name": "COCO_val2014_000000434873.jpg",
+      "height": 360,
+      "image_id": 434873,
+      "subset": "development",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 63,
+          "grid_cells": 19,
+          "pixel_area_original": 14136
+        },
+        {
+          "category_id": 72,
+          "grid_cells": 12,
+          "pixel_area_original": 8102
+        },
+        {
+          "category_id": 84,
+          "grid_cells": 1,
+          "pixel_area_original": 332
+        }
+      ],
+      "category_ids": [
+        63,
+        72
+      ],
+      "category_names": [
+        "couch",
+        "tv"
+      ],
+      "feature_row": 96,
+      "file_name": "COCO_val2014_000000292617.jpg",
+      "height": 375,
+      "image_id": 292617,
+      "subset": "development",
+      "width": 500
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 52,
+          "grid_cells": 1,
+          "pixel_area_original": 720
+        },
+        {
+          "category_id": 62,
+          "grid_cells": 1,
+          "pixel_area_original": 2461
+        },
+        {
+          "category_id": 72,
+          "grid_cells": 62,
+          "pixel_area_original": 54976
+        },
+        {
+          "category_id": 73,
+          "grid_cells": 33,
+          "pixel_area_original": 29035
+        },
+        {
+          "category_id": 74,
+          "grid_cells": 4,
+          "pixel_area_original": 4371
+        },
+        {
+          "category_id": 76,
+          "grid_cells": 15,
+          "pixel_area_original": 11539
+        },
+        {
+          "category_id": 77,
+          "grid_cells": 2,
+          "pixel_area_original": 2093
+        }
+      ],
+      "category_ids": [
+        72,
+        73,
+        74,
+        76,
+        77
+      ],
+      "category_names": [
+        "tv",
+        "laptop",
+        "mouse",
+        "keyboard",
+        "cell phone"
+      ],
+      "feature_row": 86,
+      "file_name": "COCO_val2014_000000270096.jpg",
+      "height": 480,
+      "image_id": 270096,
+      "subset": "development",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 78,
+          "pixel_area_original": 86913
+        },
+        {
+          "category_id": 39,
+          "grid_cells": 2,
+          "pixel_area_original": 926
+        },
+        {
+          "category_id": 40,
+          "grid_cells": 2,
+          "pixel_area_original": 1499
+        }
+      ],
+      "category_ids": [
+        1,
+        39,
+        40
+      ],
+      "category_names": [
+        "person",
+        "baseball bat",
+        "baseball glove"
+      ],
+      "feature_row": 144,
+      "file_name": "COCO_val2014_000000417857.jpg",
+      "height": 427,
+      "image_id": 417857,
+      "subset": "development",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 47,
+          "grid_cells": 5,
+          "pixel_area_original": 4975
+        },
+        {
+          "category_id": 72,
+          "grid_cells": 35,
+          "pixel_area_original": 27498
+        },
+        {
+          "category_id": 73,
+          "grid_cells": 6,
+          "pixel_area_original": 20030
+        },
+        {
+          "category_id": 74,
+          "grid_cells": 1,
+          "pixel_area_original": 1071
+        },
+        {
+          "category_id": 76,
+          "grid_cells": 16,
+          "pixel_area_original": 13572
+        }
+      ],
+      "category_ids": [
+        47,
+        72,
+        73,
+        76
+      ],
+      "category_names": [
+        "cup",
+        "tv",
+        "laptop",
+        "keyboard"
+      ],
+      "feature_row": 68,
+      "file_name": "COCO_val2014_000000195538.jpg",
+      "height": 480,
+      "image_id": 195538,
+      "subset": "development",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 41,
+          "pixel_area_original": 52389
+        },
+        {
+          "category_id": 67,
+          "grid_cells": 2,
+          "pixel_area_original": 3550
+        },
+        {
+          "category_id": 79,
+          "grid_cells": 18,
+          "pixel_area_original": 22857
+        }
+      ],
+      "category_ids": [
+        1,
+        67,
+        79
+      ],
+      "category_names": [
+        "person",
+        "dining table",
+        "oven"
+      ],
+      "feature_row": 84,
+      "file_name": "COCO_val2014_000000253579.jpg",
+      "height": 640,
+      "image_id": 253579,
+      "subset": "development",
+      "width": 599
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 3,
+          "grid_cells": 2,
+          "pixel_area_original": 2140
+        },
+        {
+          "category_id": 6,
+          "grid_cells": 156,
+          "pixel_area_original": 230355
+        }
+      ],
+      "category_ids": [
+        3,
+        6
+      ],
+      "category_names": [
+        "car",
+        "bus"
+      ],
+      "feature_row": 160,
+      "file_name": "COCO_val2014_000000453954.jpg",
+      "height": 612,
+      "image_id": 453954,
+      "subset": "development",
+      "width": 612
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 2,
+          "grid_cells": 28,
+          "pixel_area_original": 6761
+        },
+        {
+          "category_id": 7,
+          "grid_cells": 39,
+          "pixel_area_original": 25826
+        },
+        {
+          "category_id": 33,
+          "grid_cells": 7,
+          "pixel_area_original": 1572
+        }
+      ],
+      "category_ids": [
+        2,
+        7,
+        33
+      ],
+      "category_names": [
+        "bicycle",
+        "train",
+        "suitcase"
+      ],
+      "feature_row": 116,
+      "file_name": "COCO_val2014_000000346596.jpg",
+      "height": 215,
+      "image_id": 346596,
+      "subset": "development",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 130,
+          "pixel_area_original": 110301
+        },
+        {
+          "category_id": 50,
+          "grid_cells": 6,
+          "pixel_area_original": 10550
+        },
+        {
+          "category_id": 51,
+          "grid_cells": 5,
+          "pixel_area_original": 29038
+        },
+        {
+          "category_id": 72,
+          "grid_cells": 4,
+          "pixel_area_original": 2424
+        },
+        {
+          "category_id": 80,
+          "grid_cells": 22,
+          "pixel_area_original": 18728
+        }
+      ],
+      "category_ids": [
+        1,
+        50,
+        51,
+        72,
+        80
+      ],
+      "category_names": [
+        "person",
+        "spoon",
+        "bowl",
+        "tv",
+        "toaster"
+      ],
+      "feature_row": 141,
+      "file_name": "COCO_val2014_000000410627.jpg",
+      "height": 640,
+      "image_id": 410627,
+      "subset": "development",
+      "width": 427
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 51,
+          "grid_cells": 3,
+          "pixel_area_original": 709
+        },
+        {
+          "category_id": 62,
+          "grid_cells": 31,
+          "pixel_area_original": 12672
+        },
+        {
+          "category_id": 63,
+          "grid_cells": 38,
+          "pixel_area_original": 19109
+        }
+      ],
+      "category_ids": [
+        51,
+        62,
+        63
+      ],
+      "category_names": [
+        "bowl",
+        "chair",
+        "couch"
+      ],
+      "feature_row": 188,
+      "file_name": "COCO_val2014_000000570101.jpg",
+      "height": 295,
+      "image_id": 570101,
+      "subset": "development",
+      "width": 444
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 46,
+          "grid_cells": 1,
+          "pixel_area_original": 498
+        },
+        {
+          "category_id": 62,
+          "grid_cells": 7,
+          "pixel_area_original": 2738
+        },
+        {
+          "category_id": 64,
+          "grid_cells": 4,
+          "pixel_area_original": 5306
+        },
+        {
+          "category_id": 79,
+          "grid_cells": 11,
+          "pixel_area_original": 7263
+        },
+        {
+          "category_id": 82,
+          "grid_cells": 56,
+          "pixel_area_original": 29560
+        },
+        {
+          "category_id": 84,
+          "grid_cells": 5,
+          "pixel_area_original": 3088
+        }
+      ],
+      "category_ids": [
+        62,
+        64,
+        79,
+        82,
+        84
+      ],
+      "category_names": [
+        "chair",
+        "potted plant",
+        "oven",
+        "refrigerator",
+        "book"
+      ],
+      "feature_row": 81,
+      "file_name": "COCO_val2014_000000228335.jpg",
+      "height": 377,
+      "image_id": 228335,
+      "subset": "development",
+      "width": 500
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 46,
+          "pixel_area_original": 55305
+        },
+        {
+          "category_id": 44,
+          "grid_cells": 2,
+          "pixel_area_original": 1419
+        },
+        {
+          "category_id": 47,
+          "grid_cells": 2,
+          "pixel_area_original": 835
+        },
+        {
+          "category_id": 51,
+          "grid_cells": 7,
+          "pixel_area_original": 5623
+        },
+        {
+          "category_id": 79,
+          "grid_cells": 1,
+          "pixel_area_original": 1058
+        }
+      ],
+      "category_ids": [
+        1,
+        44,
+        47,
+        51
+      ],
+      "category_names": [
+        "person",
+        "bottle",
+        "cup",
+        "bowl"
+      ],
+      "feature_row": 134,
+      "file_name": "COCO_val2014_000000392320.jpg",
+      "height": 480,
+      "image_id": 392320,
+      "subset": "development",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 49,
+          "grid_cells": 22,
+          "pixel_area_original": 22557
+        },
+        {
+          "category_id": 57,
+          "grid_cells": 13,
+          "pixel_area_original": 11858
+        }
+      ],
+      "category_ids": [
+        49,
+        57
+      ],
+      "category_names": [
+        "knife",
+        "carrot"
+      ],
+      "feature_row": 79,
+      "file_name": "COCO_val2014_000000223090.jpg",
+      "height": 480,
+      "image_id": 223090,
+      "subset": "development",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 179,
+          "pixel_area_original": 173406
+        },
+        {
+          "category_id": 50,
+          "grid_cells": 4,
+          "pixel_area_original": 2460
+        },
+        {
+          "category_id": 51,
+          "grid_cells": 14,
+          "pixel_area_original": 11384
+        },
+        {
+          "category_id": 67,
+          "grid_cells": 53,
+          "pixel_area_original": 72947
+        }
+      ],
+      "category_ids": [
+        1,
+        50,
+        51,
+        67
+      ],
+      "category_names": [
+        "person",
+        "spoon",
+        "bowl",
+        "dining table"
+      ],
+      "feature_row": 15,
+      "file_name": "COCO_val2014_000000060623.jpg",
+      "height": 427,
+      "image_id": 60623,
+      "subset": "development",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 49,
+          "grid_cells": 6,
+          "pixel_area_original": 5230
+        },
+        {
+          "category_id": 61,
+          "grid_cells": 94,
+          "pixel_area_original": 95073
+        }
+      ],
+      "category_ids": [
+        49,
+        61
+      ],
+      "category_names": [
+        "knife",
+        "cake"
+      ],
+      "feature_row": 180,
+      "file_name": "COCO_val2014_000000536274.jpg",
+      "height": 513,
+      "image_id": 536274,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 43,
+          "pixel_area_original": 36279
+        },
+        {
+          "category_id": 6,
+          "grid_cells": 143,
+          "pixel_area_original": 104730
+        },
+        {
+          "category_id": 7,
+          "grid_cells": 147,
+          "pixel_area_original": 105282
+        }
+      ],
+      "category_ids": [
+        1,
+        6,
+        7
+      ],
+      "category_names": [
+        "person",
+        "bus",
+        "train"
+      ],
+      "feature_row": 90,
+      "file_name": "COCO_val2014_000000279521.jpg",
+      "height": 338,
+      "image_id": 279521,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 14,
+          "pixel_area_original": 25575
+        },
+        {
+          "category_id": 10,
+          "grid_cells": 3,
+          "pixel_area_original": 3224
+        },
+        {
+          "category_id": 31,
+          "grid_cells": 2,
+          "pixel_area_original": 2047
+        }
+      ],
+      "category_ids": [
+        1,
+        10,
+        31
+      ],
+      "category_names": [
+        "person",
+        "traffic light",
+        "handbag"
+      ],
+      "feature_row": 5,
+      "file_name": "COCO_val2014_000000035891.jpg",
+      "height": 480,
+      "image_id": 35891,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 20,
+          "pixel_area_original": 27585
+        },
+        {
+          "category_id": 27,
+          "grid_cells": 2,
+          "pixel_area_original": 480
+        },
+        {
+          "category_id": 35,
+          "grid_cells": 1,
+          "pixel_area_original": 2181
+        }
+      ],
+      "category_ids": [
+        1,
+        27
+      ],
+      "category_names": [
+        "person",
+        "backpack"
+      ],
+      "feature_row": 103,
+      "file_name": "COCO_val2014_000000308793.jpg",
+      "height": 480,
+      "image_id": 308793,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 48,
+          "pixel_area_original": 45434
+        },
+        {
+          "category_id": 28,
+          "grid_cells": 17,
+          "pixel_area_original": 15658
+        }
+      ],
+      "category_ids": [
+        1,
+        28
+      ],
+      "category_names": [
+        "person",
+        "umbrella"
+      ],
+      "feature_row": 13,
+      "file_name": "COCO_val2014_000000058141.jpg",
+      "height": 495,
+      "image_id": 58141,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 106,
+          "pixel_area_original": 113328
+        },
+        {
+          "category_id": 37,
+          "grid_cells": 1,
+          "pixel_area_original": 584
+        },
+        {
+          "category_id": 40,
+          "grid_cells": 14,
+          "pixel_area_original": 13009
+        }
+      ],
+      "category_ids": [
+        1,
+        40
+      ],
+      "category_names": [
+        "person",
+        "baseball glove"
+      ],
+      "feature_row": 88,
+      "file_name": "COCO_val2014_000000273684.jpg",
+      "height": 512,
+      "image_id": 273684,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 3,
+          "grid_cells": 45,
+          "pixel_area_original": 42886
+        },
+        {
+          "category_id": 47,
+          "grid_cells": 2,
+          "pixel_area_original": 6789
+        },
+        {
+          "category_id": 73,
+          "grid_cells": 228,
+          "pixel_area_original": 263291
+        }
+      ],
+      "category_ids": [
+        3,
+        47,
+        73
+      ],
+      "category_names": [
+        "car",
+        "cup",
+        "laptop"
+      ],
+      "feature_row": 19,
+      "file_name": "COCO_val2014_000000077811.jpg",
+      "height": 480,
+      "image_id": 77811,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 15,
+          "grid_cells": 102,
+          "pixel_area_original": 119639
+        },
+        {
+          "category_id": 16,
+          "grid_cells": 5,
+          "pixel_area_original": 5331
+        },
+        {
+          "category_id": 62,
+          "grid_cells": 13,
+          "pixel_area_original": 28045
+        }
+      ],
+      "category_ids": [
+        15,
+        16,
+        62
+      ],
+      "category_names": [
+        "bench",
+        "bird",
+        "chair"
+      ],
+      "feature_row": 58,
+      "file_name": "COCO_val2014_000000177468.jpg",
+      "height": 480,
+      "image_id": 177468,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 49,
+          "grid_cells": 21,
+          "pixel_area_original": 21905
+        },
+        {
+          "category_id": 53,
+          "grid_cells": 57,
+          "pixel_area_original": 47044
+        },
+        {
+          "category_id": 67,
+          "grid_cells": 29,
+          "pixel_area_original": 35305
+        },
+        {
+          "category_id": 73,
+          "grid_cells": 132,
+          "pixel_area_original": 161368
+        }
+      ],
+      "category_ids": [
+        49,
+        53,
+        67,
+        73
+      ],
+      "category_names": [
+        "knife",
+        "apple",
+        "dining table",
+        "laptop"
+      ],
+      "feature_row": 197,
+      "file_name": "COCO_val2014_000000579201.jpg",
+      "height": 427,
+      "image_id": 579201,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 117,
+          "pixel_area_original": 167438
+        },
+        {
+          "category_id": 31,
+          "grid_cells": 1,
+          "pixel_area_original": 2270
+        },
+        {
+          "category_id": 39,
+          "grid_cells": 4,
+          "pixel_area_original": 1874
+        },
+        {
+          "category_id": 40,
+          "grid_cells": 2,
+          "pixel_area_original": 1687
+        },
+        {
+          "category_id": 62,
+          "grid_cells": 9,
+          "pixel_area_original": 11019
+        }
+      ],
+      "category_ids": [
+        1,
+        39,
+        40,
+        62
+      ],
+      "category_names": [
+        "person",
+        "baseball bat",
+        "baseball glove",
+        "chair"
+      ],
+      "feature_row": 78,
+      "file_name": "COCO_val2014_000000223020.jpg",
+      "height": 512,
+      "image_id": 223020,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 216,
+          "pixel_area_original": 249995
+        },
+        {
+          "category_id": 28,
+          "grid_cells": 13,
+          "pixel_area_original": 10899
+        },
+        {
+          "category_id": 58,
+          "grid_cells": 38,
+          "pixel_area_original": 37033
+        },
+        {
+          "category_id": 67,
+          "grid_cells": 2,
+          "pixel_area_original": 1174
+        }
+      ],
+      "category_ids": [
+        1,
+        28,
+        58,
+        67
+      ],
+      "category_names": [
+        "person",
+        "umbrella",
+        "hot dog",
+        "dining table"
+      ],
+      "feature_row": 47,
+      "file_name": "COCO_val2014_000000151826.jpg",
+      "height": 640,
+      "image_id": 151826,
+      "subset": "evaluation",
+      "width": 480
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 29,
+          "pixel_area_original": 29179
+        },
+        {
+          "category_id": 4,
+          "grid_cells": 53,
+          "pixel_area_original": 52886
+        },
+        {
+          "category_id": 31,
+          "grid_cells": 18,
+          "pixel_area_original": 17124
+        }
+      ],
+      "category_ids": [
+        1,
+        4,
+        31
+      ],
+      "category_names": [
+        "person",
+        "motorcycle",
+        "handbag"
+      ],
+      "feature_row": 56,
+      "file_name": "COCO_val2014_000000172710.jpg",
+      "height": 512,
+      "image_id": 172710,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 44,
+          "grid_cells": 5,
+          "pixel_area_original": 6387
+        },
+        {
+          "category_id": 51,
+          "grid_cells": 2,
+          "pixel_area_original": 2605
+        },
+        {
+          "category_id": 78,
+          "grid_cells": 56,
+          "pixel_area_original": 46560
+        },
+        {
+          "category_id": 80,
+          "grid_cells": 44,
+          "pixel_area_original": 43090
+        },
+        {
+          "category_id": 84,
+          "grid_cells": 17,
+          "pixel_area_original": 16590
+        }
+      ],
+      "category_ids": [
+        44,
+        51,
+        78,
+        80,
+        84
+      ],
+      "category_names": [
+        "bottle",
+        "bowl",
+        "microwave",
+        "toaster",
+        "book"
+      ],
+      "feature_row": 85,
+      "file_name": "COCO_val2014_000000256309.jpg",
+      "height": 480,
+      "image_id": 256309,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 2,
+          "pixel_area_original": 7979
+        },
+        {
+          "category_id": 3,
+          "grid_cells": 239,
+          "pixel_area_original": 214293
+        },
+        {
+          "category_id": 8,
+          "grid_cells": 2,
+          "pixel_area_original": 16052
+        },
+        {
+          "category_id": 33,
+          "grid_cells": 24,
+          "pixel_area_original": 17849
+        }
+      ],
+      "category_ids": [
+        1,
+        3,
+        8,
+        33
+      ],
+      "category_names": [
+        "person",
+        "car",
+        "truck",
+        "suitcase"
+      ],
+      "feature_row": 133,
+      "file_name": "COCO_val2014_000000391300.jpg",
+      "height": 427,
+      "image_id": 391300,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 47,
+          "grid_cells": 32,
+          "pixel_area_original": 47943
+        },
+        {
+          "category_id": 51,
+          "grid_cells": 31,
+          "pixel_area_original": 48641
+        },
+        {
+          "category_id": 54,
+          "grid_cells": 158,
+          "pixel_area_original": 170698
+        },
+        {
+          "category_id": 67,
+          "grid_cells": 53,
+          "pixel_area_original": 69862
+        }
+      ],
+      "category_ids": [
+        47,
+        51,
+        54,
+        67
+      ],
+      "category_names": [
+        "cup",
+        "bowl",
+        "sandwich",
+        "dining table"
+      ],
+      "feature_row": 168,
+      "file_name": "COCO_val2014_000000479858.jpg",
+      "height": 480,
+      "image_id": 479858,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 19,
+          "grid_cells": 12,
+          "pixel_area_original": 7533
+        },
+        {
+          "category_id": 62,
+          "grid_cells": 96,
+          "pixel_area_original": 72021
+        }
+      ],
+      "category_ids": [
+        19,
+        62
+      ],
+      "category_names": [
+        "horse",
+        "chair"
+      ],
+      "feature_row": 34,
+      "file_name": "COCO_val2014_000000127576.jpg",
+      "height": 425,
+      "image_id": 127576,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 26,
+          "pixel_area_original": 30388
+        },
+        {
+          "category_id": 27,
+          "grid_cells": 2,
+          "pixel_area_original": 2427
+        },
+        {
+          "category_id": 28,
+          "grid_cells": 24,
+          "pixel_area_original": 21651
+        }
+      ],
+      "category_ids": [
+        1,
+        27,
+        28
+      ],
+      "category_names": [
+        "person",
+        "backpack",
+        "umbrella"
+      ],
+      "feature_row": 25,
+      "file_name": "COCO_val2014_000000094360.jpg",
+      "height": 396,
+      "image_id": 94360,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 19,
+          "pixel_area_original": 11363
+        },
+        {
+          "category_id": 4,
+          "grid_cells": 68,
+          "pixel_area_original": 47583
+        }
+      ],
+      "category_ids": [
+        1,
+        4
+      ],
+      "category_names": [
+        "person",
+        "motorcycle"
+      ],
+      "feature_row": 173,
+      "file_name": "COCO_val2014_000000499622.jpg",
+      "height": 456,
+      "image_id": 499622,
+      "subset": "evaluation",
+      "width": 412
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 10,
+          "pixel_area_original": 7417
+        },
+        {
+          "category_id": 3,
+          "grid_cells": 24,
+          "pixel_area_original": 28902
+        }
+      ],
+      "category_ids": [
+        1,
+        3
+      ],
+      "category_names": [
+        "person",
+        "car"
+      ],
+      "feature_row": 51,
+      "file_name": "COCO_val2014_000000161602.jpg",
+      "height": 429,
+      "image_id": 161602,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 6,
+          "pixel_area_original": 6711
+        },
+        {
+          "category_id": 15,
+          "grid_cells": 24,
+          "pixel_area_original": 22048
+        }
+      ],
+      "category_ids": [
+        1,
+        15
+      ],
+      "category_names": [
+        "person",
+        "bench"
+      ],
+      "feature_row": 69,
+      "file_name": "COCO_val2014_000000202653.jpg",
+      "height": 640,
+      "image_id": 202653,
+      "subset": "evaluation",
+      "width": 427
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 17,
+          "grid_cells": 3,
+          "pixel_area_original": 3074
+        },
+        {
+          "category_id": 44,
+          "grid_cells": 11,
+          "pixel_area_original": 5959
+        },
+        {
+          "category_id": 47,
+          "grid_cells": 1,
+          "pixel_area_original": 317
+        },
+        {
+          "category_id": 51,
+          "grid_cells": 10,
+          "pixel_area_original": 9003
+        },
+        {
+          "category_id": 67,
+          "grid_cells": 26,
+          "pixel_area_original": 25356
+        },
+        {
+          "category_id": 79,
+          "grid_cells": 9,
+          "pixel_area_original": 8111
+        }
+      ],
+      "category_ids": [
+        17,
+        44,
+        51,
+        67,
+        79
+      ],
+      "category_names": [
+        "cat",
+        "bottle",
+        "bowl",
+        "dining table",
+        "oven"
+      ],
+      "feature_row": 118,
+      "file_name": "COCO_val2014_000000347113.jpg",
+      "height": 480,
+      "image_id": 347113,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 1,
+          "pixel_area_original": 432
+        },
+        {
+          "category_id": 3,
+          "grid_cells": 15,
+          "pixel_area_original": 12834
+        },
+        {
+          "category_id": 18,
+          "grid_cells": 74,
+          "pixel_area_original": 100278
+        }
+      ],
+      "category_ids": [
+        3,
+        18
+      ],
+      "category_names": [
+        "car",
+        "dog"
+      ],
+      "feature_row": 186,
+      "file_name": "COCO_val2014_000000559950.jpg",
+      "height": 480,
+      "image_id": 559950,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 5,
+          "pixel_area_original": 3179
+        },
+        {
+          "category_id": 44,
+          "grid_cells": 6,
+          "pixel_area_original": 1857
+        },
+        {
+          "category_id": 48,
+          "grid_cells": 1,
+          "pixel_area_original": 379
+        },
+        {
+          "category_id": 49,
+          "grid_cells": 1,
+          "pixel_area_original": 666
+        },
+        {
+          "category_id": 50,
+          "grid_cells": 10,
+          "pixel_area_original": 2642
+        },
+        {
+          "category_id": 51,
+          "grid_cells": 57,
+          "pixel_area_original": 24777
+        },
+        {
+          "category_id": 55,
+          "grid_cells": 18,
+          "pixel_area_original": 6679
+        },
+        {
+          "category_id": 79,
+          "grid_cells": 15,
+          "pixel_area_original": 27234
+        },
+        {
+          "category_id": 81,
+          "grid_cells": 11,
+          "pixel_area_original": 24389
+        }
+      ],
+      "category_ids": [
+        1,
+        44,
+        50,
+        51,
+        55,
+        79,
+        81
+      ],
+      "category_names": [
+        "person",
+        "bottle",
+        "spoon",
+        "bowl",
+        "orange",
+        "oven",
+        "sink"
+      ],
+      "feature_row": 132,
+      "file_name": "COCO_val2014_000000391132.jpg",
+      "height": 333,
+      "image_id": 391132,
+      "subset": "evaluation",
+      "width": 500
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 17,
+          "grid_cells": 120,
+          "pixel_area_original": 141363
+        },
+        {
+          "category_id": 51,
+          "grid_cells": 33,
+          "pixel_area_original": 33418
+        }
+      ],
+      "category_ids": [
+        17,
+        51
+      ],
+      "category_names": [
+        "cat",
+        "bowl"
+      ],
+      "feature_row": 41,
+      "file_name": "COCO_val2014_000000146767.jpg",
+      "height": 524,
+      "image_id": 146767,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 15,
+          "grid_cells": 32,
+          "pixel_area_original": 32124
+        },
+        {
+          "category_id": 17,
+          "grid_cells": 81,
+          "pixel_area_original": 73149
+        }
+      ],
+      "category_ids": [
+        15,
+        17
+      ],
+      "category_names": [
+        "bench",
+        "cat"
+      ],
+      "feature_row": 183,
+      "file_name": "COCO_val2014_000000553761.jpg",
+      "height": 480,
+      "image_id": 553761,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 3,
+          "grid_cells": 3,
+          "pixel_area_original": 2879
+        },
+        {
+          "category_id": 5,
+          "grid_cells": 33,
+          "pixel_area_original": 30501
+        }
+      ],
+      "category_ids": [
+        3,
+        5
+      ],
+      "category_names": [
+        "car",
+        "airplane"
+      ],
+      "feature_row": 0,
+      "file_name": "COCO_val2014_000000020784.jpg",
+      "height": 480,
+      "image_id": 20784,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 59,
+          "pixel_area_original": 95259
+        },
+        {
+          "category_id": 32,
+          "grid_cells": 2,
+          "pixel_area_original": 2802
+        },
+        {
+          "category_id": 47,
+          "grid_cells": 2,
+          "pixel_area_original": 4918
+        },
+        {
+          "category_id": 63,
+          "grid_cells": 85,
+          "pixel_area_original": 145589
+        },
+        {
+          "category_id": 67,
+          "grid_cells": 3,
+          "pixel_area_original": 4898
+        },
+        {
+          "category_id": 73,
+          "grid_cells": 16,
+          "pixel_area_original": 26894
+        },
+        {
+          "category_id": 77,
+          "grid_cells": 1,
+          "pixel_area_original": 1556
+        }
+      ],
+      "category_ids": [
+        1,
+        32,
+        47,
+        63,
+        67,
+        73
+      ],
+      "category_names": [
+        "person",
+        "tie",
+        "cup",
+        "couch",
+        "dining table",
+        "laptop"
+      ],
+      "feature_row": 170,
+      "file_name": "COCO_val2014_000000490280.jpg",
+      "height": 640,
+      "image_id": 490280,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 64,
+          "grid_cells": 7,
+          "pixel_area_original": 5783
+        },
+        {
+          "category_id": 82,
+          "grid_cells": 28,
+          "pixel_area_original": 22212
+        }
+      ],
+      "category_ids": [
+        64,
+        82
+      ],
+      "category_names": [
+        "potted plant",
+        "refrigerator"
+      ],
+      "feature_row": 60,
+      "file_name": "COCO_val2014_000000180490.jpg",
+      "height": 640,
+      "image_id": 180490,
+      "subset": "evaluation",
+      "width": 480
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 82,
+          "pixel_area_original": 94073
+        },
+        {
+          "category_id": 25,
+          "grid_cells": 88,
+          "pixel_area_original": 103543
+        }
+      ],
+      "category_ids": [
+        1,
+        25
+      ],
+      "category_names": [
+        "person",
+        "giraffe"
+      ],
+      "feature_row": 164,
+      "file_name": "COCO_val2014_000000470714.jpg",
+      "height": 480,
+      "image_id": 470714,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 47,
+          "grid_cells": 4,
+          "pixel_area_original": 4616
+        },
+        {
+          "category_id": 56,
+          "grid_cells": 65,
+          "pixel_area_original": 50447
+        },
+        {
+          "category_id": 59,
+          "grid_cells": 133,
+          "pixel_area_original": 114674
+        }
+      ],
+      "category_ids": [
+        47,
+        56,
+        59
+      ],
+      "category_names": [
+        "cup",
+        "broccoli",
+        "pizza"
+      ],
+      "feature_row": 24,
+      "file_name": "COCO_val2014_000000092660.jpg",
+      "height": 427,
+      "image_id": 92660,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 55,
+          "grid_cells": 30,
+          "pixel_area_original": 26764
+        },
+        {
+          "category_id": 87,
+          "grid_cells": 14,
+          "pixel_area_original": 13254
+        }
+      ],
+      "category_ids": [
+        55,
+        87
+      ],
+      "category_names": [
+        "orange",
+        "scissors"
+      ],
+      "feature_row": 156,
+      "file_name": "COCO_val2014_000000443301.jpg",
+      "height": 480,
+      "image_id": 443301,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 2,
+          "grid_cells": 2,
+          "pixel_area_original": 1702
+        },
+        {
+          "category_id": 67,
+          "grid_cells": 101,
+          "pixel_area_original": 122510
+        },
+        {
+          "category_id": 86,
+          "grid_cells": 23,
+          "pixel_area_original": 23129
+        }
+      ],
+      "category_ids": [
+        2,
+        67,
+        86
+      ],
+      "category_names": [
+        "bicycle",
+        "dining table",
+        "vase"
+      ],
+      "feature_row": 35,
+      "file_name": "COCO_val2014_000000132375.jpg",
+      "height": 480,
+      "image_id": 132375,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 48,
+          "grid_cells": 9,
+          "pixel_area_original": 8832
+        },
+        {
+          "category_id": 56,
+          "grid_cells": 15,
+          "pixel_area_original": 11145
+        }
+      ],
+      "category_ids": [
+        48,
+        56
+      ],
+      "category_names": [
+        "fork",
+        "broccoli"
+      ],
+      "feature_row": 104,
+      "file_name": "COCO_val2014_000000309813.jpg",
+      "height": 640,
+      "image_id": 309813,
+      "subset": "evaluation",
+      "width": 461
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 80,
+          "pixel_area_original": 75254
+        },
+        {
+          "category_id": 47,
+          "grid_cells": 2,
+          "pixel_area_original": 2380
+        },
+        {
+          "category_id": 49,
+          "grid_cells": 2,
+          "pixel_area_original": 1293
+        },
+        {
+          "category_id": 51,
+          "grid_cells": 1,
+          "pixel_area_original": 969
+        },
+        {
+          "category_id": 79,
+          "grid_cells": 22,
+          "pixel_area_original": 26265
+        }
+      ],
+      "category_ids": [
+        1,
+        47,
+        49,
+        79
+      ],
+      "category_names": [
+        "person",
+        "cup",
+        "knife",
+        "oven"
+      ],
+      "feature_row": 55,
+      "file_name": "COCO_val2014_000000170178.jpg",
+      "height": 480,
+      "image_id": 170178,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 5,
+          "grid_cells": 42,
+          "pixel_area_original": 32961
+        },
+        {
+          "category_id": 8,
+          "grid_cells": 2,
+          "pixel_area_original": 1773
+        }
+      ],
+      "category_ids": [
+        5,
+        8
+      ],
+      "category_names": [
+        "airplane",
+        "truck"
+      ],
+      "feature_row": 174,
+      "file_name": "COCO_val2014_000000503292.jpg",
+      "height": 427,
+      "image_id": 503292,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 5,
+          "pixel_area_original": 4942
+        },
+        {
+          "category_id": 43,
+          "grid_cells": 2,
+          "pixel_area_original": 1767
+        }
+      ],
+      "category_ids": [
+        1,
+        43
+      ],
+      "category_names": [
+        "person",
+        "tennis racket"
+      ],
+      "feature_row": 193,
+      "file_name": "COCO_val2014_000000575174.jpg",
+      "height": 427,
+      "image_id": 575174,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 24,
+          "pixel_area_original": 19823
+        },
+        {
+          "category_id": 4,
+          "grid_cells": 34,
+          "pixel_area_original": 29792
+        }
+      ],
+      "category_ids": [
+        1,
+        4
+      ],
+      "category_names": [
+        "person",
+        "motorcycle"
+      ],
+      "feature_row": 21,
+      "file_name": "COCO_val2014_000000084447.jpg",
+      "height": 480,
+      "image_id": 84447,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 29,
+          "pixel_area_original": 22918
+        },
+        {
+          "category_id": 10,
+          "grid_cells": 1,
+          "pixel_area_original": 1041
+        },
+        {
+          "category_id": 28,
+          "grid_cells": 6,
+          "pixel_area_original": 5644
+        },
+        {
+          "category_id": 31,
+          "grid_cells": 4,
+          "pixel_area_original": 3014
+        }
+      ],
+      "category_ids": [
+        1,
+        28,
+        31
+      ],
+      "category_names": [
+        "person",
+        "umbrella",
+        "handbag"
+      ],
+      "feature_row": 77,
+      "file_name": "COCO_val2014_000000222662.jpg",
+      "height": 480,
+      "image_id": 222662,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 60,
+          "pixel_area_original": 94483
+        },
+        {
+          "category_id": 40,
+          "grid_cells": 5,
+          "pixel_area_original": 7658
+        }
+      ],
+      "category_ids": [
+        1,
+        40
+      ],
+      "category_names": [
+        "person",
+        "baseball glove"
+      ],
+      "feature_row": 181,
+      "file_name": "COCO_val2014_000000548361.jpg",
+      "height": 626,
+      "image_id": 548361,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 74,
+          "pixel_area_original": 85458
+        },
+        {
+          "category_id": 27,
+          "grid_cells": 3,
+          "pixel_area_original": 2941
+        },
+        {
+          "category_id": 44,
+          "grid_cells": 4,
+          "pixel_area_original": 4462
+        },
+        {
+          "category_id": 47,
+          "grid_cells": 3,
+          "pixel_area_original": 2909
+        },
+        {
+          "category_id": 51,
+          "grid_cells": 2,
+          "pixel_area_original": 1512
+        },
+        {
+          "category_id": 52,
+          "grid_cells": 3,
+          "pixel_area_original": 1159
+        },
+        {
+          "category_id": 62,
+          "grid_cells": 11,
+          "pixel_area_original": 11999
+        },
+        {
+          "category_id": 67,
+          "grid_cells": 23,
+          "pixel_area_original": 30315
+        }
+      ],
+      "category_ids": [
+        1,
+        27,
+        44,
+        47,
+        51,
+        52,
+        62,
+        67
+      ],
+      "category_names": [
+        "person",
+        "backpack",
+        "bottle",
+        "cup",
+        "bowl",
+        "banana",
+        "chair",
+        "dining table"
+      ],
+      "feature_row": 131,
+      "file_name": "COCO_val2014_000000389644.jpg",
+      "height": 480,
+      "image_id": 389644,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 72,
+          "grid_cells": 45,
+          "pixel_area_original": 32938
+        },
+        {
+          "category_id": 73,
+          "grid_cells": 8,
+          "pixel_area_original": 6943
+        },
+        {
+          "category_id": 74,
+          "grid_cells": 2,
+          "pixel_area_original": 1036
+        },
+        {
+          "category_id": 76,
+          "grid_cells": 3,
+          "pixel_area_original": 2038
+        },
+        {
+          "category_id": 77,
+          "grid_cells": 2,
+          "pixel_area_original": 975
+        }
+      ],
+      "category_ids": [
+        72,
+        73,
+        74,
+        76,
+        77
+      ],
+      "category_names": [
+        "tv",
+        "laptop",
+        "mouse",
+        "keyboard",
+        "cell phone"
+      ],
+      "feature_row": 54,
+      "file_name": "COCO_val2014_000000164170.jpg",
+      "height": 427,
+      "image_id": 164170,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 8,
+          "pixel_area_original": 6318
+        },
+        {
+          "category_id": 21,
+          "grid_cells": 11,
+          "pixel_area_original": 8281
+        }
+      ],
+      "category_ids": [
+        1,
+        21
+      ],
+      "category_names": [
+        "person",
+        "cow"
+      ],
+      "feature_row": 120,
+      "file_name": "COCO_val2014_000000354241.jpg",
+      "height": 425,
+      "image_id": 354241,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 2,
+          "pixel_area_original": 2020
+        },
+        {
+          "category_id": 7,
+          "grid_cells": 75,
+          "pixel_area_original": 69790
+        }
+      ],
+      "category_ids": [
+        1,
+        7
+      ],
+      "category_names": [
+        "person",
+        "train"
+      ],
+      "feature_row": 108,
+      "file_name": "COCO_val2014_000000312692.jpg",
+      "height": 450,
+      "image_id": 312692,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 95,
+          "pixel_area_original": 85407
+        },
+        {
+          "category_id": 44,
+          "grid_cells": 4,
+          "pixel_area_original": 2709
+        },
+        {
+          "category_id": 47,
+          "grid_cells": 2,
+          "pixel_area_original": 1829
+        },
+        {
+          "category_id": 50,
+          "grid_cells": 1,
+          "pixel_area_original": 235
+        },
+        {
+          "category_id": 51,
+          "grid_cells": 4,
+          "pixel_area_original": 2183
+        },
+        {
+          "category_id": 54,
+          "grid_cells": 1,
+          "pixel_area_original": 347
+        },
+        {
+          "category_id": 62,
+          "grid_cells": 20,
+          "pixel_area_original": 27170
+        },
+        {
+          "category_id": 67,
+          "grid_cells": 23,
+          "pixel_area_original": 20059
+        },
+        {
+          "category_id": 85,
+          "grid_cells": 1,
+          "pixel_area_original": 104
+        }
+      ],
+      "category_ids": [
+        1,
+        44,
+        47,
+        51,
+        62,
+        67
+      ],
+      "category_names": [
+        "person",
+        "bottle",
+        "cup",
+        "bowl",
+        "chair",
+        "dining table"
+      ],
+      "feature_row": 119,
+      "file_name": "COCO_val2014_000000353435.jpg",
+      "height": 425,
+      "image_id": 353435,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 9,
+          "pixel_area_original": 6451
+        },
+        {
+          "category_id": 19,
+          "grid_cells": 44,
+          "pixel_area_original": 29023
+        }
+      ],
+      "category_ids": [
+        1,
+        19
+      ],
+      "category_names": [
+        "person",
+        "horse"
+      ],
+      "feature_row": 184,
+      "file_name": "COCO_val2014_000000553990.jpg",
+      "height": 400,
+      "image_id": 553990,
+      "subset": "evaluation",
+      "width": 600
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 42,
+          "pixel_area_original": 33230
+        },
+        {
+          "category_id": 27,
+          "grid_cells": 6,
+          "pixel_area_original": 3774
+        },
+        {
+          "category_id": 35,
+          "grid_cells": 6,
+          "pixel_area_original": 4788
+        }
+      ],
+      "category_ids": [
+        1,
+        27,
+        35
+      ],
+      "category_names": [
+        "person",
+        "backpack",
+        "skis"
+      ],
+      "feature_row": 139,
+      "file_name": "COCO_val2014_000000409178.jpg",
+      "height": 426,
+      "image_id": 409178,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 11,
+          "pixel_area_original": 10612
+        },
+        {
+          "category_id": 8,
+          "grid_cells": 67,
+          "pixel_area_original": 60026
+        },
+        {
+          "category_id": 10,
+          "grid_cells": 3,
+          "pixel_area_original": 3736
+        }
+      ],
+      "category_ids": [
+        1,
+        8,
+        10
+      ],
+      "category_names": [
+        "person",
+        "truck",
+        "traffic light"
+      ],
+      "feature_row": 109,
+      "file_name": "COCO_val2014_000000323561.jpg",
+      "height": 640,
+      "image_id": 323561,
+      "subset": "evaluation",
+      "width": 480
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 106,
+          "pixel_area_original": 98240
+        },
+        {
+          "category_id": 70,
+          "grid_cells": 28,
+          "pixel_area_original": 47570
+        }
+      ],
+      "category_ids": [
+        1,
+        70
+      ],
+      "category_names": [
+        "person",
+        "toilet"
+      ],
+      "feature_row": 123,
+      "file_name": "COCO_val2014_000000368212.jpg",
+      "height": 640,
+      "image_id": 368212,
+      "subset": "evaluation",
+      "width": 478
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 51,
+          "grid_cells": 206,
+          "pixel_area_original": 239369
+        },
+        {
+          "category_id": 56,
+          "grid_cells": 47,
+          "pixel_area_original": 49508
+        },
+        {
+          "category_id": 67,
+          "grid_cells": 18,
+          "pixel_area_original": 40632
+        }
+      ],
+      "category_ids": [
+        51,
+        56,
+        67
+      ],
+      "category_names": [
+        "bowl",
+        "broccoli",
+        "dining table"
+      ],
+      "feature_row": 73,
+      "file_name": "COCO_val2014_000000214919.jpg",
+      "height": 480,
+      "image_id": 214919,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 77,
+          "grid_cells": 124,
+          "pixel_area_original": 72894
+        },
+        {
+          "category_id": 84,
+          "grid_cells": 43,
+          "pixel_area_original": 27336
+        }
+      ],
+      "category_ids": [
+        77,
+        84
+      ],
+      "category_names": [
+        "cell phone",
+        "book"
+      ],
+      "feature_row": 153,
+      "file_name": "COCO_val2014_000000436426.jpg",
+      "height": 375,
+      "image_id": 436426,
+      "subset": "evaluation",
+      "width": 500
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 17,
+          "grid_cells": 58,
+          "pixel_area_original": 32189
+        },
+        {
+          "category_id": 51,
+          "grid_cells": 6,
+          "pixel_area_original": 3575
+        }
+      ],
+      "category_ids": [
+        17,
+        51
+      ],
+      "category_names": [
+        "cat",
+        "bowl"
+      ],
+      "feature_row": 167,
+      "file_name": "COCO_val2014_000000479440.jpg",
+      "height": 500,
+      "image_id": 479440,
+      "subset": "evaluation",
+      "width": 375
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 28,
+          "grid_cells": 22,
+          "pixel_area_original": 31953
+        },
+        {
+          "category_id": 62,
+          "grid_cells": 16,
+          "pixel_area_original": 14719
+        },
+        {
+          "category_id": 84,
+          "grid_cells": 27,
+          "pixel_area_original": 43537
+        }
+      ],
+      "category_ids": [
+        28,
+        62,
+        84
+      ],
+      "category_names": [
+        "umbrella",
+        "chair",
+        "book"
+      ],
+      "feature_row": 113,
+      "file_name": "COCO_val2014_000000337379.jpg",
+      "height": 640,
+      "image_id": 337379,
+      "subset": "evaluation",
+      "width": 480
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 48,
+          "grid_cells": 2,
+          "pixel_area_original": 4108
+        },
+        {
+          "category_id": 57,
+          "grid_cells": 15,
+          "pixel_area_original": 13516
+        },
+        {
+          "category_id": 67,
+          "grid_cells": 240,
+          "pixel_area_original": 306561
+        }
+      ],
+      "category_ids": [
+        48,
+        57,
+        67
+      ],
+      "category_names": [
+        "fork",
+        "carrot",
+        "dining table"
+      ],
+      "feature_row": 171,
+      "file_name": "COCO_val2014_000000493799.jpg",
+      "height": 483,
+      "image_id": 493799,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 95,
+          "pixel_area_original": 141203
+        },
+        {
+          "category_id": 46,
+          "grid_cells": 4,
+          "pixel_area_original": 5265
+        },
+        {
+          "category_id": 48,
+          "grid_cells": 4,
+          "pixel_area_original": 4845
+        },
+        {
+          "category_id": 61,
+          "grid_cells": 18,
+          "pixel_area_original": 27110
+        },
+        {
+          "category_id": 67,
+          "grid_cells": 42,
+          "pixel_area_original": 72909
+        }
+      ],
+      "category_ids": [
+        1,
+        46,
+        48,
+        61,
+        67
+      ],
+      "category_names": [
+        "person",
+        "wine glass",
+        "fork",
+        "cake",
+        "dining table"
+      ],
+      "feature_row": 115,
+      "file_name": "COCO_val2014_000000346089.jpg",
+      "height": 612,
+      "image_id": 346089,
+      "subset": "evaluation",
+      "width": 612
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 18,
+          "pixel_area_original": 67218
+        },
+        {
+          "category_id": 22,
+          "grid_cells": 40,
+          "pixel_area_original": 35767
+        }
+      ],
+      "category_ids": [
+        1,
+        22
+      ],
+      "category_names": [
+        "person",
+        "elephant"
+      ],
+      "feature_row": 124,
+      "file_name": "COCO_val2014_000000368961.jpg",
+      "height": 480,
+      "image_id": 368961,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 84,
+          "pixel_area_original": 60742
+        },
+        {
+          "category_id": 77,
+          "grid_cells": 7,
+          "pixel_area_original": 4471
+        }
+      ],
+      "category_ids": [
+        1,
+        77
+      ],
+      "category_names": [
+        "person",
+        "cell phone"
+      ],
+      "feature_row": 155,
+      "file_name": "COCO_val2014_000000438848.jpg",
+      "height": 421,
+      "image_id": 438848,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 173,
+          "pixel_area_original": 153574
+        },
+        {
+          "category_id": 59,
+          "grid_cells": 4,
+          "pixel_area_original": 2510
+        },
+        {
+          "category_id": 62,
+          "grid_cells": 8,
+          "pixel_area_original": 12028
+        },
+        {
+          "category_id": 63,
+          "grid_cells": 7,
+          "pixel_area_original": 33391
+        },
+        {
+          "category_id": 64,
+          "grid_cells": 7,
+          "pixel_area_original": 6268
+        },
+        {
+          "category_id": 67,
+          "grid_cells": 2,
+          "pixel_area_original": 2959
+        }
+      ],
+      "category_ids": [
+        1,
+        59,
+        62,
+        63,
+        64,
+        67
+      ],
+      "category_names": [
+        "person",
+        "pizza",
+        "chair",
+        "couch",
+        "potted plant",
+        "dining table"
+      ],
+      "feature_row": 105,
+      "file_name": "COCO_val2014_000000310369.jpg",
+      "height": 422,
+      "image_id": 310369,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 16,
+          "grid_cells": 2,
+          "pixel_area_original": 2649
+        },
+        {
+          "category_id": 65,
+          "grid_cells": 240,
+          "pixel_area_original": 217418
+        },
+        {
+          "category_id": 88,
+          "grid_cells": 30,
+          "pixel_area_original": 15432
+        }
+      ],
+      "category_ids": [
+        16,
+        65,
+        88
+      ],
+      "category_names": [
+        "bird",
+        "bed",
+        "teddy bear"
+      ],
+      "feature_row": 126,
+      "file_name": "COCO_val2014_000000372009.jpg",
+      "height": 360,
+      "image_id": 372009,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 12,
+          "pixel_area_original": 13515
+        },
+        {
+          "category_id": 11,
+          "grid_cells": 10,
+          "pixel_area_original": 9298
+        },
+        {
+          "category_id": 31,
+          "grid_cells": 2,
+          "pixel_area_original": 411
+        }
+      ],
+      "category_ids": [
+        1,
+        11,
+        31
+      ],
+      "category_names": [
+        "person",
+        "fire hydrant",
+        "handbag"
+      ],
+      "feature_row": 165,
+      "file_name": "COCO_val2014_000000476253.jpg",
+      "height": 426,
+      "image_id": 476253,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 78,
+          "grid_cells": 20,
+          "pixel_area_original": 12677
+        },
+        {
+          "category_id": 79,
+          "grid_cells": 44,
+          "pixel_area_original": 25145
+        },
+        {
+          "category_id": 82,
+          "grid_cells": 63,
+          "pixel_area_original": 36235
+        }
+      ],
+      "category_ids": [
+        78,
+        79,
+        82
+      ],
+      "category_names": [
+        "microwave",
+        "oven",
+        "refrigerator"
+      ],
+      "feature_row": 22,
+      "file_name": "COCO_val2014_000000088634.jpg",
+      "height": 384,
+      "image_id": 88634,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 28,
+          "grid_cells": 6,
+          "pixel_area_original": 5995
+        },
+        {
+          "category_id": 62,
+          "grid_cells": 4,
+          "pixel_area_original": 1561
+        }
+      ],
+      "category_ids": [
+        28,
+        62
+      ],
+      "category_names": [
+        "umbrella",
+        "chair"
+      ],
+      "feature_row": 125,
+      "file_name": "COCO_val2014_000000369982.jpg",
+      "height": 427,
+      "image_id": 369982,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 10,
+          "pixel_area_original": 14202
+        },
+        {
+          "category_id": 3,
+          "grid_cells": 8,
+          "pixel_area_original": 5606
+        },
+        {
+          "category_id": 8,
+          "grid_cells": 1,
+          "pixel_area_original": 1888
+        },
+        {
+          "category_id": 13,
+          "grid_cells": 3,
+          "pixel_area_original": 4958
+        },
+        {
+          "category_id": 31,
+          "grid_cells": 1,
+          "pixel_area_original": 723
+        }
+      ],
+      "category_ids": [
+        1,
+        3,
+        13
+      ],
+      "category_names": [
+        "person",
+        "car",
+        "stop sign"
+      ],
+      "feature_row": 161,
+      "file_name": "COCO_val2014_000000459103.jpg",
+      "height": 480,
+      "image_id": 459103,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 64,
+          "pixel_area_original": 59973
+        },
+        {
+          "category_id": 19,
+          "grid_cells": 96,
+          "pixel_area_original": 76337
+        }
+      ],
+      "category_ids": [
+        1,
+        19
+      ],
+      "category_names": [
+        "person",
+        "horse"
+      ],
+      "feature_row": 20,
+      "file_name": "COCO_val2014_000000078490.jpg",
+      "height": 425,
+      "image_id": 78490,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 17,
+          "grid_cells": 129,
+          "pixel_area_original": 131712
+        },
+        {
+          "category_id": 65,
+          "grid_cells": 116,
+          "pixel_area_original": 133599
+        }
+      ],
+      "category_ids": [
+        17,
+        65
+      ],
+      "category_names": [
+        "cat",
+        "bed"
+      ],
+      "feature_row": 154,
+      "file_name": "COCO_val2014_000000438667.jpg",
+      "height": 427,
+      "image_id": 438667,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 18,
+          "grid_cells": 32,
+          "pixel_area_original": 43765
+        },
+        {
+          "category_id": 62,
+          "grid_cells": 11,
+          "pixel_area_original": 15984
+        }
+      ],
+      "category_ids": [
+        18,
+        62
+      ],
+      "category_names": [
+        "dog",
+        "chair"
+      ],
+      "feature_row": 23,
+      "file_name": "COCO_val2014_000000089188.jpg",
+      "height": 640,
+      "image_id": 89188,
+      "subset": "evaluation",
+      "width": 480
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 147,
+          "pixel_area_original": 114674
+        },
+        {
+          "category_id": 40,
+          "grid_cells": 5,
+          "pixel_area_original": 4237
+        },
+        {
+          "category_id": 62,
+          "grid_cells": 48,
+          "pixel_area_original": 37745
+        }
+      ],
+      "category_ids": [
+        1,
+        40,
+        62
+      ],
+      "category_names": [
+        "person",
+        "baseball glove",
+        "chair"
+      ],
+      "feature_row": 150,
+      "file_name": "COCO_val2014_000000427518.jpg",
+      "height": 400,
+      "image_id": 427518,
+      "subset": "evaluation",
+      "width": 500
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 12,
+          "pixel_area_original": 4028
+        },
+        {
+          "category_id": 35,
+          "grid_cells": 2,
+          "pixel_area_original": 429
+        }
+      ],
+      "category_ids": [
+        1,
+        35
+      ],
+      "category_names": [
+        "person",
+        "skis"
+      ],
+      "feature_row": 44,
+      "file_name": "COCO_val2014_000000150314.jpg",
+      "height": 333,
+      "image_id": 150314,
+      "subset": "evaluation",
+      "width": 500
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 19,
+          "pixel_area_original": 14475
+        },
+        {
+          "category_id": 19,
+          "grid_cells": 39,
+          "pixel_area_original": 21069
+        }
+      ],
+      "category_ids": [
+        1,
+        19
+      ],
+      "category_names": [
+        "person",
+        "horse"
+      ],
+      "feature_row": 152,
+      "file_name": "COCO_val2014_000000436164.jpg",
+      "height": 379,
+      "image_id": 436164,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 66,
+          "pixel_area_original": 71249
+        },
+        {
+          "category_id": 5,
+          "grid_cells": 41,
+          "pixel_area_original": 36862
+        },
+        {
+          "category_id": 8,
+          "grid_cells": 8,
+          "pixel_area_original": 9048
+        },
+        {
+          "category_id": 31,
+          "grid_cells": 2,
+          "pixel_area_original": 1132
+        }
+      ],
+      "category_ids": [
+        1,
+        5,
+        8,
+        31
+      ],
+      "category_names": [
+        "person",
+        "airplane",
+        "truck",
+        "handbag"
+      ],
+      "feature_row": 122,
+      "file_name": "COCO_val2014_000000362122.jpg",
+      "height": 459,
+      "image_id": 362122,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 56,
+          "grid_cells": 30,
+          "pixel_area_original": 27774
+        },
+        {
+          "category_id": 57,
+          "grid_cells": 27,
+          "pixel_area_original": 25236
+        },
+        {
+          "category_id": 67,
+          "grid_cells": 240,
+          "pixel_area_original": 293713
+        }
+      ],
+      "category_ids": [
+        56,
+        57,
+        67
+      ],
+      "category_names": [
+        "broccoli",
+        "carrot",
+        "dining table"
+      ],
+      "feature_row": 149,
+      "file_name": "COCO_val2014_000000423984.jpg",
+      "height": 480,
+      "image_id": 423984,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 18,
+          "pixel_area_original": 13420
+        },
+        {
+          "category_id": 36,
+          "grid_cells": 5,
+          "pixel_area_original": 5178
+        }
+      ],
+      "category_ids": [
+        1,
+        36
+      ],
+      "category_names": [
+        "person",
+        "snowboard"
+      ],
+      "feature_row": 38,
+      "file_name": "COCO_val2014_000000143107.jpg",
+      "height": 427,
+      "image_id": 143107,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 11,
+          "pixel_area_original": 26677
+        },
+        {
+          "category_id": 4,
+          "grid_cells": 18,
+          "pixel_area_original": 21107
+        }
+      ],
+      "category_ids": [
+        1,
+        4
+      ],
+      "category_names": [
+        "person",
+        "motorcycle"
+      ],
+      "feature_row": 114,
+      "file_name": "COCO_val2014_000000339022.jpg",
+      "height": 425,
+      "image_id": 339022,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 2,
+          "grid_cells": 7,
+          "pixel_area_original": 6818
+        },
+        {
+          "category_id": 42,
+          "grid_cells": 21,
+          "pixel_area_original": 23677
+        }
+      ],
+      "category_ids": [
+        2,
+        42
+      ],
+      "category_names": [
+        "bicycle",
+        "surfboard"
+      ],
+      "feature_row": 53,
+      "file_name": "COCO_val2014_000000164115.jpg",
+      "height": 500,
+      "image_id": 164115,
+      "subset": "evaluation",
+      "width": 500
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 43,
+          "pixel_area_original": 40656
+        },
+        {
+          "category_id": 3,
+          "grid_cells": 8,
+          "pixel_area_original": 6297
+        },
+        {
+          "category_id": 10,
+          "grid_cells": 1,
+          "pixel_area_original": 950
+        }
+      ],
+      "category_ids": [
+        1,
+        3
+      ],
+      "category_names": [
+        "person",
+        "car"
+      ],
+      "feature_row": 121,
+      "file_name": "COCO_val2014_000000359851.jpg",
+      "height": 640,
+      "image_id": 359851,
+      "subset": "evaluation",
+      "width": 480
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 37,
+          "pixel_area_original": 59286
+        },
+        {
+          "category_id": 44,
+          "grid_cells": 1,
+          "pixel_area_original": 942
+        },
+        {
+          "category_id": 47,
+          "grid_cells": 1,
+          "pixel_area_original": 889
+        },
+        {
+          "category_id": 62,
+          "grid_cells": 5,
+          "pixel_area_original": 8501
+        },
+        {
+          "category_id": 72,
+          "grid_cells": 41,
+          "pixel_area_original": 39275
+        },
+        {
+          "category_id": 82,
+          "grid_cells": 2,
+          "pixel_area_original": 1747
+        }
+      ],
+      "category_ids": [
+        1,
+        62,
+        72,
+        82
+      ],
+      "category_names": [
+        "person",
+        "chair",
+        "tv",
+        "refrigerator"
+      ],
+      "feature_row": 31,
+      "file_name": "COCO_val2014_000000120792.jpg",
+      "height": 480,
+      "image_id": 120792,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 118,
+          "pixel_area_original": 117003
+        },
+        {
+          "category_id": 15,
+          "grid_cells": 8,
+          "pixel_area_original": 16240
+        }
+      ],
+      "category_ids": [
+        1,
+        15
+      ],
+      "category_names": [
+        "person",
+        "bench"
+      ],
+      "feature_row": 111,
+      "file_name": "COCO_val2014_000000328008.jpg",
+      "height": 480,
+      "image_id": 328008,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 44,
+          "grid_cells": 29,
+          "pixel_area_original": 27755
+        },
+        {
+          "category_id": 72,
+          "grid_cells": 47,
+          "pixel_area_original": 57655
+        },
+        {
+          "category_id": 74,
+          "grid_cells": 13,
+          "pixel_area_original": 11952
+        },
+        {
+          "category_id": 76,
+          "grid_cells": 32,
+          "pixel_area_original": 27576
+        }
+      ],
+      "category_ids": [
+        44,
+        72,
+        74,
+        76
+      ],
+      "category_names": [
+        "bottle",
+        "tv",
+        "mouse",
+        "keyboard"
+      ],
+      "feature_row": 117,
+      "file_name": "COCO_val2014_000000346638.jpg",
+      "height": 480,
+      "image_id": 346638,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 136,
+          "pixel_area_original": 103529
+        },
+        {
+          "category_id": 62,
+          "grid_cells": 2,
+          "pixel_area_original": 895
+        },
+        {
+          "category_id": 88,
+          "grid_cells": 69,
+          "pixel_area_original": 31324
+        }
+      ],
+      "category_ids": [
+        1,
+        62,
+        88
+      ],
+      "category_names": [
+        "person",
+        "chair",
+        "teddy bear"
+      ],
+      "feature_row": 110,
+      "file_name": "COCO_val2014_000000326479.jpg",
+      "height": 335,
+      "image_id": 326479,
+      "subset": "evaluation",
+      "width": 500
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 3,
+          "grid_cells": 2,
+          "pixel_area_original": 1363
+        },
+        {
+          "category_id": 20,
+          "grid_cells": 53,
+          "pixel_area_original": 47621
+        }
+      ],
+      "category_ids": [
+        3,
+        20
+      ],
+      "category_names": [
+        "car",
+        "sheep"
+      ],
+      "feature_row": 130,
+      "file_name": "COCO_val2014_000000389566.jpg",
+      "height": 427,
+      "image_id": 389566,
+      "subset": "evaluation",
+      "width": 640
+    },
+    {
+      "category_areas": [
+        {
+          "category_id": 1,
+          "grid_cells": 81,
+          "pixel_area_original": 87620
+        },
+        {
+          "category_id": 2,
+          "grid_cells": 21,
+          "pixel_area_original": 24288
+        },
+        {
+          "category_id": 3,
+          "grid_cells": 6,
+          "pixel_area_original": 6281
+        },
+        {
+          "category_id": 28,
+          "grid_cells": 9,
+          "pixel_area_original": 5066
+        },
+        {
+          "category_id": 47,
+          "grid_cells": 9,
+          "pixel_area_original": 5029
+        },
+        {
+          "category_id": 58,
+          "grid_cells": 4,
+          "pixel_area_original": 1882
+        },
+        {
+          "category_id": 62,
+          "grid_cells": 16,
+          "pixel_area_original": 11027
+        },
+        {
+          "category_id": 67,
+          "grid_cells": 54,
+          "pixel_area_original": 40037
+        }
+      ],
+      "category_ids": [
+        1,
+        2,
+        3,
+        28,
+        47,
+        58,
+        62,
+        67
+      ],
+      "category_names": [
+        "person",
+        "bicycle",
+        "car",
+        "umbrella",
+        "cup",
+        "hot dog",
+        "chair",
+        "dining table"
+      ],
+      "feature_row": 128,
+      "file_name": "COCO_val2014_000000375769.jpg",
+      "height": 383,
+      "image_id": 375769,
+      "subset": "evaluation",
+      "width": 640
+    }
+  ],
+  "selection": {
+    "development_count": 20,
+    "eligible_count": 128,
+    "eligible_criterion": "image has at least two annotated categories whose category-union mask occupies >=2 cells after exact short-edge resize/center-crop and nearest 16x16 projection",
+    "evaluation_count": 80,
+    "seed": 20261117,
+    "selected_count": 100,
+    "selection_used_model_predictions": false,
+    "source": "existing 200-image COCO val feature subset"
+  }
+}

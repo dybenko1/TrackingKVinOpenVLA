@@ -1,0 +1,27 @@
+{
+  "attention_shape": [
+    1,
+    16,
+    16
+  ],
+  "attention_sums_to_one": true,
+  "category_order_invariant": true,
+  "lambda_bg": 0.2,
+  "mask_shape": [
+    1,
+    3,
+    4,
+    4
+  ],
+  "mask_transform_shape": [
+    1,
+    1,
+    224,
+    224
+  ],
+  "sigmoid_conversion": "torch.sigmoid(cosine_similarity), matching DINOTextSim2Mask soft path",
+  "upstream_ast_method": "DINOText.similarity_assignment_weighted",
+  "upstream_method_source": "/opt/openvla/cache/references/Talk2DINO/src/open_vocabulary_segmentation/models/dinotext/dinotext.py",
+  "weighted_cleaning_allclose_atol_1e-7_rtol_1e-6": true,
+  "weighted_cleaning_max_abs_error": 0.0
+}

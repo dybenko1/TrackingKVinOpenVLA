@@ -1,0 +1,11 @@
+{
+  "status": "complete",
+  "output": "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/full_coco_training_20261117/spatial_evaluation",
+  "manifest_source": "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/phase3_spatial_evaluation/evaluation_manifest.json",
+  "checkpoints": [
+    "untrained",
+    "original_pilot",
+    "phase2_corrected",
+    "full_coco"
+  ]
+}

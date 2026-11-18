@@ -1,0 +1,17 @@
+{
+  "batch_size": 128,
+  "captions": 414113,
+  "container_image": "openvla-talk2dino-siglip:20261116",
+  "dataset": "COCO Captions 2014 train",
+  "epochs": 100,
+  "feature_root": "/opt/openvla/cache/datasets/talk2dino/coco2014/features_full_coco_20261117",
+  "images": 82783,
+  "loss": "symmetric diagonal InfoNCE",
+  "lr": 0.0001,
+  "optimizer": "Adam",
+  "seed": 123,
+  "temperature": 0.07,
+  "text_checkpoint": "/opt/openvla/cache/models/timm/ViT-SO400M-14-SigLIP-384/open_clip_model.safetensors",
+  "text_checkpoint_sha256": "97faeafa0576c1ba4c92bae739ca06ef5f5d0c2db92f86a6086653d82a262043",
+  "visual_backbone": "vit_large_patch14_reg4_dinov2.lvd142m"
+}
