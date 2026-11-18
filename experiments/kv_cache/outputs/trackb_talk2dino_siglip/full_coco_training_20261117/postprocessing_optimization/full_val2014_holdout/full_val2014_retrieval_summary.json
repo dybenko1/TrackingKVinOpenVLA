@@ -1,0 +1,260 @@
+{
+  "captions": 202654,
+  "cuda": "12.8",
+  "development_image_count": 8101,
+  "device": "cuda:0",
+  "elapsed_seconds": 1458.8413474559784,
+  "epochs": {
+    "100": {
+      "checkpoint": "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/full_coco_training_20261117/checkpoints/epoch_100.pt",
+      "completed_epoch": 100,
+      "development": {
+        "candidate_pairs": 328430742,
+        "captions": 40542,
+        "checkpoint_epoch": 100,
+        "checkpoint_sha256": "f07ec19c1660c155dbc8579692e96369c82e1cfe1fec0ac20d265249f25b2503",
+        "elapsed_seconds": 22.377851486206055,
+        "image_to_text": {
+          "rank_mean": 18.967534872237994,
+          "rank_median": 6.0,
+          "recall_at_1": 0.12233057647204049,
+          "recall_at_10": 0.638439698802617,
+          "recall_at_5": 0.48549561782495987
+        },
+        "images": 8101,
+        "multi_positive_infonce": {
+          "image_to_text": 4.423174811081225,
+          "symmetric_mean": 4.536333197989588,
+          "temperature": 0.07,
+          "text_to_image": 4.649491584897953
+        },
+        "projected_text_sha256": "3b63ca2f90085f84bbbf33467bbe016d8a6504b1f83f1b03bef4df795aa78ee7",
+        "rank_definition": "1 + number of all candidates with score strictly greater than the best positive (image->text), or matching-image positive (text->image); ties are treated as not outranking positive",
+        "score_matrix_statistics": {
+          "mean": 0.08399748015378354,
+          "pair_count": 328430742,
+          "std": 0.10168093469165189
+        },
+        "split": "development",
+        "split_manifest_sha256": "65520ed67e117a52a7c0594de2ddb96429fe05853649833d5b92893771a142fe",
+        "status": "complete",
+        "text_to_image": {
+          "rank_mean": 41.3953431009817,
+          "rank_median": 10.0,
+          "recall_at_1": 0.09210201766069755,
+          "recall_at_10": 0.5139361649647279,
+          "recall_at_5": 0.3799763208524493
+        }
+      },
+      "evaluation": {
+        "candidate_pairs": 5252915136,
+        "captions": 162112,
+        "checkpoint_epoch": 100,
+        "checkpoint_sha256": "f07ec19c1660c155dbc8579692e96369c82e1cfe1fec0ac20d265249f25b2503",
+        "elapsed_seconds": 431.10203218460083,
+        "image_to_text": {
+          "rank_mean": 72.92062463352158,
+          "rank_median": 19.0,
+          "recall_at_1": 0.055766441378884674,
+          "recall_at_10": 0.3839150695923217,
+          "recall_at_5": 0.2658395827546832
+        },
+        "images": 32403,
+        "multi_positive_infonce": {
+          "image_to_text": 5.785905455006419,
+          "symmetric_mean": 5.897634597361556,
+          "temperature": 0.07,
+          "text_to_image": 6.009363739716692
+        },
+        "projected_text_sha256": "52e736a2585e97a0ee491f60c5380dede0efb75e78c0f7d5ff29315667e1707d",
+        "rank_definition": "1 + number of all candidates with score strictly greater than the best positive (image->text), or matching-image positive (text->image); ties are treated as not outranking positive",
+        "score_matrix_statistics": {
+          "mean": 0.08358398680152901,
+          "pair_count": 5252915136,
+          "std": 0.10130515479370994
+        },
+        "split": "evaluation",
+        "split_manifest_sha256": "65520ed67e117a52a7c0594de2ddb96429fe05853649833d5b92893771a142fe",
+        "status": "complete",
+        "text_to_image": {
+          "rank_mean": 161.8976941867351,
+          "rank_median": 35.0,
+          "recall_at_1": 0.04475301026450849,
+          "recall_at_10": 0.2953945420450059,
+          "recall_at_5": 0.20474116660086852
+        }
+      },
+      "sha256": "f07ec19c1660c155dbc8579692e96369c82e1cfe1fec0ac20d265249f25b2503"
+    },
+    "20": {
+      "checkpoint": "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/full_coco_training_20261117/checkpoints/epoch_020.pt",
+      "completed_epoch": 20,
+      "development": {
+        "candidate_pairs": 328430742,
+        "captions": 40542,
+        "checkpoint_epoch": 20,
+        "checkpoint_sha256": "6364efd9f36a0341cbfb9e06c94b7245141d376c15817f7bc996136b9d305f38",
+        "elapsed_seconds": 26.055969953536987,
+        "image_to_text": {
+          "rank_mean": 16.279841994815456,
+          "rank_median": 5.0,
+          "recall_at_1": 0.14899395136402913,
+          "recall_at_10": 0.6811504752499692,
+          "recall_at_5": 0.5358597703987162
+        },
+        "images": 8101,
+        "multi_positive_infonce": {
+          "image_to_text": 4.340752041064327,
+          "symmetric_mean": 4.450432445079713,
+          "temperature": 0.07,
+          "text_to_image": 4.560112849095099
+        },
+        "projected_text_sha256": "9b736cf3ff2cd10b4215a89a98ec43d768b39470588fbb595256326657d524bd",
+        "rank_definition": "1 + number of all candidates with score strictly greater than the best positive (image->text), or matching-image positive (text->image); ties are treated as not outranking positive",
+        "score_matrix_statistics": {
+          "mean": 0.08364182532597031,
+          "pair_count": 328430742,
+          "std": 0.10117658656748965
+        },
+        "split": "development",
+        "split_manifest_sha256": "65520ed67e117a52a7c0594de2ddb96429fe05853649833d5b92893771a142fe",
+        "status": "complete",
+        "text_to_image": {
+          "rank_mean": 37.0812490750333,
+          "rank_median": 9.0,
+          "recall_at_1": 0.09881110946672586,
+          "recall_at_10": 0.5323615016526072,
+          "recall_at_5": 0.39891963889299986
+        }
+      },
+      "evaluation": {
+        "candidate_pairs": 5252915136,
+        "captions": 162112,
+        "checkpoint_epoch": 20,
+        "checkpoint_sha256": "6364efd9f36a0341cbfb9e06c94b7245141d376c15817f7bc996136b9d305f38",
+        "elapsed_seconds": 418.84738874435425,
+        "image_to_text": {
+          "rank_mean": 62.33058667407339,
+          "rank_median": 15.0,
+          "recall_at_1": 0.07320309847853594,
+          "recall_at_10": 0.43236737339135267,
+          "recall_at_5": 0.3109588618337808
+        },
+        "images": 32403,
+        "multi_positive_infonce": {
+          "image_to_text": 5.6999752588085775,
+          "symmetric_mean": 5.8082369719456395,
+          "temperature": 0.07,
+          "text_to_image": 5.916498685082701
+        },
+        "projected_text_sha256": "d9bc1db922ae6ea3847169273841ab65d5ccaca41f0500e636b894648f7436c5",
+        "rank_definition": "1 + number of all candidates with score strictly greater than the best positive (image->text), or matching-image positive (text->image); ties are treated as not outranking positive",
+        "score_matrix_statistics": {
+          "mean": 0.08331676354586402,
+          "pair_count": 5252915136,
+          "std": 0.10073746949927807
+        },
+        "split": "evaluation",
+        "split_manifest_sha256": "65520ed67e117a52a7c0594de2ddb96429fe05853649833d5b92893771a142fe",
+        "status": "complete",
+        "text_to_image": {
+          "rank_mean": 145.81283310303988,
+          "rank_median": 31.0,
+          "recall_at_1": 0.0497742301618634,
+          "recall_at_10": 0.31593589617054874,
+          "recall_at_5": 0.22199467035136203
+        }
+      },
+      "sha256": "6364efd9f36a0341cbfb9e06c94b7245141d376c15817f7bc996136b9d305f38"
+    },
+    "50": {
+      "checkpoint": "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/full_coco_training_20261117/checkpoints/epoch_050.pt",
+      "completed_epoch": 50,
+      "development": {
+        "candidate_pairs": 328430742,
+        "captions": 40542,
+        "checkpoint_epoch": 50,
+        "checkpoint_sha256": "f1c57d5e3a52fde5ed6d17b5fad47aadaa6ce25dc58cab72a3aba9a180d015b1",
+        "elapsed_seconds": 25.933814525604248,
+        "image_to_text": {
+          "rank_mean": 17.593877299098878,
+          "rank_median": 5.0,
+          "recall_at_1": 0.13047771880014813,
+          "recall_at_10": 0.6659671645475868,
+          "recall_at_5": 0.5056165905443772
+        },
+        "images": 8101,
+        "multi_positive_infonce": {
+          "image_to_text": 4.380131826327566,
+          "symmetric_mean": 4.487976909692522,
+          "temperature": 0.07,
+          "text_to_image": 4.595821993057479
+        },
+        "projected_text_sha256": "043847da70bc9ee0b6097ace23fa68e0f0b98c15fee533d4ecf63f40ce997405",
+        "rank_definition": "1 + number of all candidates with score strictly greater than the best positive (image->text), or matching-image positive (text->image); ties are treated as not outranking positive",
+        "score_matrix_statistics": {
+          "mean": 0.08689736899957232,
+          "pair_count": 328430742,
+          "std": 0.10130255971940394
+        },
+        "split": "development",
+        "split_manifest_sha256": "65520ed67e117a52a7c0594de2ddb96429fe05853649833d5b92893771a142fe",
+        "status": "complete",
+        "text_to_image": {
+          "rank_mean": 38.555670662522814,
+          "rank_median": 9.0,
+          "recall_at_1": 0.0980958018844655,
+          "recall_at_10": 0.5286369690691135,
+          "recall_at_5": 0.39455379606334173
+        }
+      },
+      "evaluation": {
+        "candidate_pairs": 5252915136,
+        "captions": 162112,
+        "checkpoint_epoch": 50,
+        "checkpoint_sha256": "f1c57d5e3a52fde5ed6d17b5fad47aadaa6ce25dc58cab72a3aba9a180d015b1",
+        "elapsed_seconds": 406.4000072479248,
+        "image_to_text": {
+          "rank_mean": 66.94188809678116,
+          "rank_median": 17.0,
+          "recall_at_1": 0.06320402431873592,
+          "recall_at_10": 0.4075548560318489,
+          "recall_at_5": 0.28784371817424315
+        },
+        "images": 32403,
+        "multi_positive_infonce": {
+          "image_to_text": 5.739346429610907,
+          "symmetric_mean": 5.846064666968537,
+          "temperature": 0.07,
+          "text_to_image": 5.952782904326169
+        },
+        "projected_text_sha256": "f83562cfb679a133a156a201676f2365e09259387dc306ec9e0795b3b027c338",
+        "rank_definition": "1 + number of all candidates with score strictly greater than the best positive (image->text), or matching-image positive (text->image); ties are treated as not outranking positive",
+        "score_matrix_statistics": {
+          "mean": 0.0865050334302374,
+          "pair_count": 5252915136,
+          "std": 0.10090956872673186
+        },
+        "split": "evaluation",
+        "split_manifest_sha256": "65520ed67e117a52a7c0594de2ddb96429fe05853649833d5b92893771a142fe",
+        "status": "complete",
+        "text_to_image": {
+          "rank_mean": 149.58724215357284,
+          "rank_median": 32.0,
+          "recall_at_1": 0.048460323726806157,
+          "recall_at_10": 0.3103224930911962,
+          "recall_at_5": 0.21736207066719304
+        }
+      },
+      "sha256": "f1c57d5e3a52fde5ed6d17b5fad47aadaa6ce25dc58cab72a3aba9a180d015b1"
+    }
+  },
+  "evaluation_image_count": 32403,
+  "images": 40504,
+  "score_chunks": {
+    "caption": 8192,
+    "image": 64
+  },
+  "status": "complete",
+  "torch": "2.6.0"
+}

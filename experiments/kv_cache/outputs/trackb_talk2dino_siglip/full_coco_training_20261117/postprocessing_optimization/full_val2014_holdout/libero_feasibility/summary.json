@@ -1,0 +1,644 @@
+{
+  "status": "complete",
+  "frames": 27,
+  "tasks": [
+    4,
+    5,
+    7
+  ],
+  "states": [
+    0,
+    1,
+    2
+  ],
+  "checkpoint": "epoch_050",
+  "postprocessing": "pamr_raw",
+  "threshold_from_coco_development_only": 0.55,
+  "prompt_set": [
+    "background scene",
+    "black bowl",
+    "robot arm",
+    "robot gripper",
+    "table"
+  ],
+  "per_frame": [
+    {
+      "sample_id": "task4_state0_step0000",
+      "task_id": 4,
+      "state_id": 0,
+      "time_step": 0,
+      "task_instruction": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+      "target_prompt": "black bowl",
+      "selected_checkpoint": "epoch_050",
+      "postprocessing": "pamr_raw",
+      "threshold": 0.55,
+      "mask_counts": {
+        "black bowl": 34,
+        "robot arm": 77,
+        "robot gripper": 34,
+        "table": 0,
+        "background scene": 63
+      },
+      "fresh_token_count_target_plus_robot_arm_gripper": 77,
+      "candidate_background_tokens": 179,
+      "ground_truth_available": false
+    },
+    {
+      "sample_id": "task4_state0_step0072",
+      "task_id": 4,
+      "state_id": 0,
+      "time_step": 72,
+      "task_instruction": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+      "target_prompt": "black bowl",
+      "selected_checkpoint": "epoch_050",
+      "postprocessing": "pamr_raw",
+      "threshold": 0.55,
+      "mask_counts": {
+        "black bowl": 0,
+        "robot arm": 53,
+        "robot gripper": 26,
+        "table": 0,
+        "background scene": 34
+      },
+      "fresh_token_count_target_plus_robot_arm_gripper": 53,
+      "candidate_background_tokens": 203,
+      "ground_truth_available": false
+    },
+    {
+      "sample_id": "task4_state0_step0139",
+      "task_id": 4,
+      "state_id": 0,
+      "time_step": 139,
+      "task_instruction": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+      "target_prompt": "black bowl",
+      "selected_checkpoint": "epoch_050",
+      "postprocessing": "pamr_raw",
+      "threshold": 0.55,
+      "mask_counts": {
+        "black bowl": 42,
+        "robot arm": 52,
+        "robot gripper": 35,
+        "table": 0,
+        "background scene": 3
+      },
+      "fresh_token_count_target_plus_robot_arm_gripper": 84,
+      "candidate_background_tokens": 172,
+      "ground_truth_available": false
+    },
+    {
+      "sample_id": "task4_state1_step0000",
+      "task_id": 4,
+      "state_id": 1,
+      "time_step": 0,
+      "task_instruction": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+      "target_prompt": "black bowl",
+      "selected_checkpoint": "epoch_050",
+      "postprocessing": "pamr_raw",
+      "threshold": 0.55,
+      "mask_counts": {
+        "black bowl": 35,
+        "robot arm": 65,
+        "robot gripper": 44,
+        "table": 0,
+        "background scene": 74
+      },
+      "fresh_token_count_target_plus_robot_arm_gripper": 69,
+      "candidate_background_tokens": 187,
+      "ground_truth_available": false
+    },
+    {
+      "sample_id": "task4_state1_step0072",
+      "task_id": 4,
+      "state_id": 1,
+      "time_step": 72,
+      "task_instruction": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+      "target_prompt": "black bowl",
+      "selected_checkpoint": "epoch_050",
+      "postprocessing": "pamr_raw",
+      "threshold": 0.55,
+      "mask_counts": {
+        "black bowl": 0,
+        "robot arm": 58,
+        "robot gripper": 32,
+        "table": 0,
+        "background scene": 6
+      },
+      "fresh_token_count_target_plus_robot_arm_gripper": 61,
+      "candidate_background_tokens": 195,
+      "ground_truth_available": false
+    },
+    {
+      "sample_id": "task4_state1_step0144",
+      "task_id": 4,
+      "state_id": 1,
+      "time_step": 144,
+      "task_instruction": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+      "target_prompt": "black bowl",
+      "selected_checkpoint": "epoch_050",
+      "postprocessing": "pamr_raw",
+      "threshold": 0.55,
+      "mask_counts": {
+        "black bowl": 43,
+        "robot arm": 57,
+        "robot gripper": 22,
+        "table": 0,
+        "background scene": 4
+      },
+      "fresh_token_count_target_plus_robot_arm_gripper": 72,
+      "candidate_background_tokens": 184,
+      "ground_truth_available": false
+    },
+    {
+      "sample_id": "task4_state2_step0000",
+      "task_id": 4,
+      "state_id": 2,
+      "time_step": 0,
+      "task_instruction": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+      "target_prompt": "black bowl",
+      "selected_checkpoint": "epoch_050",
+      "postprocessing": "pamr_raw",
+      "threshold": 0.55,
+      "mask_counts": {
+        "black bowl": 37,
+        "robot arm": 77,
+        "robot gripper": 40,
+        "table": 0,
+        "background scene": 57
+      },
+      "fresh_token_count_target_plus_robot_arm_gripper": 77,
+      "candidate_background_tokens": 179,
+      "ground_truth_available": false
+    },
+    {
+      "sample_id": "task4_state2_step0062",
+      "task_id": 4,
+      "state_id": 2,
+      "time_step": 62,
+      "task_instruction": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+      "target_prompt": "black bowl",
+      "selected_checkpoint": "epoch_050",
+      "postprocessing": "pamr_raw",
+      "threshold": 0.55,
+      "mask_counts": {
+        "black bowl": 0,
+        "robot arm": 60,
+        "robot gripper": 31,
+        "table": 0,
+        "background scene": 31
+      },
+      "fresh_token_count_target_plus_robot_arm_gripper": 61,
+      "candidate_background_tokens": 195,
+      "ground_truth_available": false
+    },
+    {
+      "sample_id": "task4_state2_step0129",
+      "task_id": 4,
+      "state_id": 2,
+      "time_step": 129,
+      "task_instruction": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+      "target_prompt": "black bowl",
+      "selected_checkpoint": "epoch_050",
+      "postprocessing": "pamr_raw",
+      "threshold": 0.55,
+      "mask_counts": {
+        "black bowl": 40,
+        "robot arm": 61,
+        "robot gripper": 52,
+        "table": 0,
+        "background scene": 11
+      },
+      "fresh_token_count_target_plus_robot_arm_gripper": 74,
+      "candidate_background_tokens": 182,
+      "ground_truth_available": false
+    },
+    {
+      "sample_id": "task5_state0_step0000",
+      "task_id": 5,
+      "state_id": 0,
+      "time_step": 0,
+      "task_instruction": "pick up the black bowl on the ramekin and place it on the plate",
+      "target_prompt": "black bowl",
+      "selected_checkpoint": "epoch_050",
+      "postprocessing": "pamr_raw",
+      "threshold": 0.55,
+      "mask_counts": {
+        "black bowl": 35,
+        "robot arm": 49,
+        "robot gripper": 37,
+        "table": 0,
+        "background scene": 77
+      },
+      "fresh_token_count_target_plus_robot_arm_gripper": 75,
+      "candidate_background_tokens": 181,
+      "ground_truth_available": false
+    },
+    {
+      "sample_id": "task5_state0_step0052",
+      "task_id": 5,
+      "state_id": 0,
+      "time_step": 52,
+      "task_instruction": "pick up the black bowl on the ramekin and place it on the plate",
+      "target_prompt": "black bowl",
+      "selected_checkpoint": "epoch_050",
+      "postprocessing": "pamr_raw",
+      "threshold": 0.55,
+      "mask_counts": {
+        "black bowl": 31,
+        "robot arm": 48,
+        "robot gripper": 48,
+        "table": 0,
+        "background scene": 31
+      },
+      "fresh_token_count_target_plus_robot_arm_gripper": 88,
+      "candidate_background_tokens": 168,
+      "ground_truth_available": false
+    },
+    {
+      "sample_id": "task5_state0_step0104",
+      "task_id": 5,
+      "state_id": 0,
+      "time_step": 104,
+      "task_instruction": "pick up the black bowl on the ramekin and place it on the plate",
+      "target_prompt": "black bowl",
+      "selected_checkpoint": "epoch_050",
+      "postprocessing": "pamr_raw",
+      "threshold": 0.55,
+      "mask_counts": {
+        "black bowl": 30,
+        "robot arm": 60,
+        "robot gripper": 48,
+        "table": 0,
+        "background scene": 19
+      },
+      "fresh_token_count_target_plus_robot_arm_gripper": 92,
+      "candidate_background_tokens": 164,
+      "ground_truth_available": false
+    },
+    {
+      "sample_id": "task5_state1_step0000",
+      "task_id": 5,
+      "state_id": 1,
+      "time_step": 0,
+      "task_instruction": "pick up the black bowl on the ramekin and place it on the plate",
+      "target_prompt": "black bowl",
+      "selected_checkpoint": "epoch_050",
+      "postprocessing": "pamr_raw",
+      "threshold": 0.55,
+      "mask_counts": {
+        "black bowl": 36,
+        "robot arm": 48,
+        "robot gripper": 40,
+        "table": 0,
+        "background scene": 82
+      },
+      "fresh_token_count_target_plus_robot_arm_gripper": 75,
+      "candidate_background_tokens": 181,
+      "ground_truth_available": false
+    },
+    {
+      "sample_id": "task5_state1_step0042",
+      "task_id": 5,
+      "state_id": 1,
+      "time_step": 42,
+      "task_instruction": "pick up the black bowl on the ramekin and place it on the plate",
+      "target_prompt": "black bowl",
+      "selected_checkpoint": "epoch_050",
+      "postprocessing": "pamr_raw",
+      "threshold": 0.55,
+      "mask_counts": {
+        "black bowl": 31,
+        "robot arm": 56,
+        "robot gripper": 54,
+        "table": 0,
+        "background scene": 17
+      },
+      "fresh_token_count_target_plus_robot_arm_gripper": 92,
+      "candidate_background_tokens": 164,
+      "ground_truth_available": false
+    },
+    {
+      "sample_id": "task5_state1_step0084",
+      "task_id": 5,
+      "state_id": 1,
+      "time_step": 84,
+      "task_instruction": "pick up the black bowl on the ramekin and place it on the plate",
+      "target_prompt": "black bowl",
+      "selected_checkpoint": "epoch_050",
+      "postprocessing": "pamr_raw",
+      "threshold": 0.55,
+      "mask_counts": {
+        "black bowl": 28,
+        "robot arm": 55,
+        "robot gripper": 59,
+        "table": 0,
+        "background scene": 7
+      },
+      "fresh_token_count_target_plus_robot_arm_gripper": 94,
+      "candidate_background_tokens": 162,
+      "ground_truth_available": false
+    },
+    {
+      "sample_id": "task5_state2_step0000",
+      "task_id": 5,
+      "state_id": 2,
+      "time_step": 0,
+      "task_instruction": "pick up the black bowl on the ramekin and place it on the plate",
+      "target_prompt": "black bowl",
+      "selected_checkpoint": "epoch_050",
+      "postprocessing": "pamr_raw",
+      "threshold": 0.55,
+      "mask_counts": {
+        "black bowl": 34,
+        "robot arm": 46,
+        "robot gripper": 36,
+        "table": 0,
+        "background scene": 76
+      },
+      "fresh_token_count_target_plus_robot_arm_gripper": 71,
+      "candidate_background_tokens": 185,
+      "ground_truth_available": false
+    },
+    {
+      "sample_id": "task5_state2_step0042",
+      "task_id": 5,
+      "state_id": 2,
+      "time_step": 42,
+      "task_instruction": "pick up the black bowl on the ramekin and place it on the plate",
+      "target_prompt": "black bowl",
+      "selected_checkpoint": "epoch_050",
+      "postprocessing": "pamr_raw",
+      "threshold": 0.55,
+      "mask_counts": {
+        "black bowl": 23,
+        "robot arm": 35,
+        "robot gripper": 47,
+        "table": 0,
+        "background scene": 19
+      },
+      "fresh_token_count_target_plus_robot_arm_gripper": 75,
+      "candidate_background_tokens": 181,
+      "ground_truth_available": false
+    },
+    {
+      "sample_id": "task5_state2_step0089",
+      "task_id": 5,
+      "state_id": 2,
+      "time_step": 89,
+      "task_instruction": "pick up the black bowl on the ramekin and place it on the plate",
+      "target_prompt": "black bowl",
+      "selected_checkpoint": "epoch_050",
+      "postprocessing": "pamr_raw",
+      "threshold": 0.55,
+      "mask_counts": {
+        "black bowl": 28,
+        "robot arm": 54,
+        "robot gripper": 58,
+        "table": 0,
+        "background scene": 26
+      },
+      "fresh_token_count_target_plus_robot_arm_gripper": 97,
+      "candidate_background_tokens": 159,
+      "ground_truth_available": false
+    },
+    {
+      "sample_id": "task7_state0_step0000",
+      "task_id": 7,
+      "state_id": 0,
+      "time_step": 0,
+      "task_instruction": "pick up the black bowl on the stove and place it on the plate",
+      "target_prompt": "black bowl",
+      "selected_checkpoint": "epoch_050",
+      "postprocessing": "pamr_raw",
+      "threshold": 0.55,
+      "mask_counts": {
+        "black bowl": 32,
+        "robot arm": 60,
+        "robot gripper": 37,
+        "table": 0,
+        "background scene": 54
+      },
+      "fresh_token_count_target_plus_robot_arm_gripper": 68,
+      "candidate_background_tokens": 188,
+      "ground_truth_available": false
+    },
+    {
+      "sample_id": "task7_state0_step0052",
+      "task_id": 7,
+      "state_id": 0,
+      "time_step": 52,
+      "task_instruction": "pick up the black bowl on the stove and place it on the plate",
+      "target_prompt": "black bowl",
+      "selected_checkpoint": "epoch_050",
+      "postprocessing": "pamr_raw",
+      "threshold": 0.55,
+      "mask_counts": {
+        "black bowl": 32,
+        "robot arm": 63,
+        "robot gripper": 33,
+        "table": 0,
+        "background scene": 11
+      },
+      "fresh_token_count_target_plus_robot_arm_gripper": 76,
+      "candidate_background_tokens": 180,
+      "ground_truth_available": false
+    },
+    {
+      "sample_id": "task7_state0_step0109",
+      "task_id": 7,
+      "state_id": 0,
+      "time_step": 109,
+      "task_instruction": "pick up the black bowl on the stove and place it on the plate",
+      "target_prompt": "black bowl",
+      "selected_checkpoint": "epoch_050",
+      "postprocessing": "pamr_raw",
+      "threshold": 0.55,
+      "mask_counts": {
+        "black bowl": 32,
+        "robot arm": 70,
+        "robot gripper": 62,
+        "table": 0,
+        "background scene": 14
+      },
+      "fresh_token_count_target_plus_robot_arm_gripper": 97,
+      "candidate_background_tokens": 159,
+      "ground_truth_available": false
+    },
+    {
+      "sample_id": "task7_state1_step0000",
+      "task_id": 7,
+      "state_id": 1,
+      "time_step": 0,
+      "task_instruction": "pick up the black bowl on the stove and place it on the plate",
+      "target_prompt": "black bowl",
+      "selected_checkpoint": "epoch_050",
+      "postprocessing": "pamr_raw",
+      "threshold": 0.55,
+      "mask_counts": {
+        "black bowl": 34,
+        "robot arm": 65,
+        "robot gripper": 51,
+        "table": 0,
+        "background scene": 72
+      },
+      "fresh_token_count_target_plus_robot_arm_gripper": 73,
+      "candidate_background_tokens": 183,
+      "ground_truth_available": false
+    },
+    {
+      "sample_id": "task7_state1_step0062",
+      "task_id": 7,
+      "state_id": 1,
+      "time_step": 62,
+      "task_instruction": "pick up the black bowl on the stove and place it on the plate",
+      "target_prompt": "black bowl",
+      "selected_checkpoint": "epoch_050",
+      "postprocessing": "pamr_raw",
+      "threshold": 0.55,
+      "mask_counts": {
+        "black bowl": 34,
+        "robot arm": 74,
+        "robot gripper": 55,
+        "table": 0,
+        "background scene": 8
+      },
+      "fresh_token_count_target_plus_robot_arm_gripper": 76,
+      "candidate_background_tokens": 180,
+      "ground_truth_available": false
+    },
+    {
+      "sample_id": "task7_state1_step0119",
+      "task_id": 7,
+      "state_id": 1,
+      "time_step": 119,
+      "task_instruction": "pick up the black bowl on the stove and place it on the plate",
+      "target_prompt": "black bowl",
+      "selected_checkpoint": "epoch_050",
+      "postprocessing": "pamr_raw",
+      "threshold": 0.55,
+      "mask_counts": {
+        "black bowl": 33,
+        "robot arm": 60,
+        "robot gripper": 75,
+        "table": 0,
+        "background scene": 9
+      },
+      "fresh_token_count_target_plus_robot_arm_gripper": 93,
+      "candidate_background_tokens": 163,
+      "ground_truth_available": false
+    },
+    {
+      "sample_id": "task7_state2_step0000",
+      "task_id": 7,
+      "state_id": 2,
+      "time_step": 0,
+      "task_instruction": "pick up the black bowl on the stove and place it on the plate",
+      "target_prompt": "black bowl",
+      "selected_checkpoint": "epoch_050",
+      "postprocessing": "pamr_raw",
+      "threshold": 0.55,
+      "mask_counts": {
+        "black bowl": 34,
+        "robot arm": 60,
+        "robot gripper": 46,
+        "table": 0,
+        "background scene": 65
+      },
+      "fresh_token_count_target_plus_robot_arm_gripper": 71,
+      "candidate_background_tokens": 185,
+      "ground_truth_available": false
+    },
+    {
+      "sample_id": "task7_state2_step0112",
+      "task_id": 7,
+      "state_id": 2,
+      "time_step": 112,
+      "task_instruction": "pick up the black bowl on the stove and place it on the plate",
+      "target_prompt": "black bowl",
+      "selected_checkpoint": "epoch_050",
+      "postprocessing": "pamr_raw",
+      "threshold": 0.55,
+      "mask_counts": {
+        "black bowl": 30,
+        "robot arm": 64,
+        "robot gripper": 68,
+        "table": 0,
+        "background scene": 52
+      },
+      "fresh_token_count_target_plus_robot_arm_gripper": 99,
+      "candidate_background_tokens": 157,
+      "ground_truth_available": false
+    },
+    {
+      "sample_id": "task7_state2_step0219",
+      "task_id": 7,
+      "state_id": 2,
+      "time_step": 219,
+      "task_instruction": "pick up the black bowl on the stove and place it on the plate",
+      "target_prompt": "black bowl",
+      "selected_checkpoint": "epoch_050",
+      "postprocessing": "pamr_raw",
+      "threshold": 0.55,
+      "mask_counts": {
+        "black bowl": 31,
+        "robot arm": 21,
+        "robot gripper": 22,
+        "table": 0,
+        "background scene": 38
+      },
+      "fresh_token_count_target_plus_robot_arm_gripper": 59,
+      "candidate_background_tokens": 197,
+      "ground_truth_available": false
+    }
+  ],
+  "temporal_pairs": 90,
+  "mean_mask_iou_by_prompt": {
+    "background scene": 0.24485668040941114,
+    "black bowl": 0.6040870849225448,
+    "robot arm": 0.4810399841147012,
+    "robot gripper": 0.41860056966435527,
+    "table": 1.0
+  },
+  "mean_flip_tokens_by_prompt": {
+    "background scene": 39.05555555555556,
+    "black bowl": 14.88888888888889,
+    "robot arm": 40.05555555555556,
+    "robot gripper": 35.77777777777778,
+    "table": 0.0
+  },
+  "ground_truth_masks_available": false,
+  "limitation": "RGB observations come from prior LIBERO replay visualization; no paired oracle mask or simulator segmentation frame is available in these saved artifacts. Temporal snapshots are sparse early/middle/late frames, not adjacent control steps. No policy rollout or cache intervention was run.",
+  "dino_model_load_reused_openvla_checkpoint": true,
+  "text_checkpoint_metadata": {
+    "checkpoint_dir": "/opt/openvla/cache/models/timm/ViT-SO400M-14-SigLIP-384",
+    "checkpoint_repository_expected": "timm/ViT-SO400M-14-SigLIP-384",
+    "checkpoint_revision": "ac16108d567c4389e6cd2b11c9b8585f7474435b",
+    "weights_path": "/opt/openvla/cache/models/timm/ViT-SO400M-14-SigLIP-384/open_clip_model.safetensors",
+    "text_context_length": 64,
+    "text_width": 1152,
+    "text_output_dim": 1152,
+    "text_layers": 27,
+    "text_heads": 16,
+    "text_positional_embedding_shape": [
+      64,
+      1152
+    ],
+    "text_state_tensor_count": 330,
+    "strict_text_state_load": true,
+    "missing_text_keys": [],
+    "unexpected_text_keys": [],
+    "open_clip_version": "2.32.0",
+    "torch_version": "2.6.0",
+    "tokenizer": {
+      "checkpoint_dir": "/opt/openvla/cache/models/timm/ViT-SO400M-14-SigLIP-384",
+      "tokenizer_class": "T5TokenizerFast",
+      "clean": "canonicalize",
+      "canonicalization": "OpenCLIP HFTokenizer.clean_fn from checkpoint configuration",
+      "context_length": 64,
+      "pad_token_id": 1,
+      "eos_token_id": 1
+    },
+    "visual_tower_loaded": false,
+    "frozen": true
+  },
+  "elapsed_seconds": 46.24546408653259
+}

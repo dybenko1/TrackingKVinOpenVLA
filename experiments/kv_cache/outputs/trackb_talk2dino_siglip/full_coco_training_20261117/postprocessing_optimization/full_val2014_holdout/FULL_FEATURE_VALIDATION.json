@@ -1,0 +1,86 @@
+{
+  "all_caption_image_ids_resolve": true,
+  "arrays": {
+    "attention_maps_spatial_val2014.npy": {
+      "complete": true,
+      "dtype": "float16",
+      "shape": [
+        2500,
+        16,
+        256
+      ]
+    },
+    "caption_ids_val2014.npy": {
+      "complete": true,
+      "dtype": "int64",
+      "shape": [
+        202654,
+        2
+      ]
+    },
+    "image_ids_full_val2014.npy": {
+      "complete": true,
+      "dtype": "int64",
+      "shape": [
+        40504
+      ]
+    },
+    "patch_features_spatial_val2014.npy": {
+      "complete": true,
+      "dtype": "float16",
+      "shape": [
+        2500,
+        256,
+        1024
+      ]
+    },
+    "region_done_full_val2014.npy": {
+      "complete": true,
+      "dtype": "uint8",
+      "shape": [
+        40504
+      ]
+    },
+    "region_features_full_val2014_fp16.npy": {
+      "complete": true,
+      "dtype": "float16",
+      "shape": [
+        40504,
+        16,
+        1024
+      ]
+    },
+    "spatial_done_val2014.npy": {
+      "complete": true,
+      "dtype": "uint8",
+      "shape": [
+        2500
+      ]
+    },
+    "spatial_image_ids_val2014.npy": {
+      "complete": true,
+      "dtype": "int64",
+      "shape": [
+        2500
+      ]
+    },
+    "text_done_val2014.npy": {
+      "complete": true,
+      "dtype": "uint8",
+      "shape": [
+        202654
+      ]
+    },
+    "text_features_val2014_fp16.npy": {
+      "complete": true,
+      "dtype": "float16",
+      "shape": [
+        202654,
+        1152
+      ]
+    }
+  },
+  "captions": 202654,
+  "status": "complete",
+  "unique_images": 40504
+}

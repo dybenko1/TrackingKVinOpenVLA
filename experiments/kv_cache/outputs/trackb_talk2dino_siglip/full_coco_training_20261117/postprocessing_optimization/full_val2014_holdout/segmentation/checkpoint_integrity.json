@@ -1,0 +1,20 @@
+{
+  "epoch_020": {
+    "completed_epoch": 20,
+    "path": "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/full_coco_training_20261117/checkpoints/epoch_020.pt",
+    "sha256": "6364efd9f36a0341cbfb9e06c94b7245141d376c15817f7bc996136b9d305f38",
+    "strict_load": true
+  },
+  "epoch_050": {
+    "completed_epoch": 50,
+    "path": "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/full_coco_training_20261117/checkpoints/epoch_050.pt",
+    "sha256": "f1c57d5e3a52fde5ed6d17b5fad47aadaa6ce25dc58cab72a3aba9a180d015b1",
+    "strict_load": true
+  },
+  "epoch_100": {
+    "completed_epoch": 100,
+    "path": "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/full_coco_training_20261117/checkpoints/epoch_100.pt",
+    "sha256": "f07ec19c1660c155dbc8579692e96369c82e1cfe1fec0ac20d265249f25b2503",
+    "strict_load": true
+  }
+}

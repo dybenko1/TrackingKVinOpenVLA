@@ -1,0 +1,38 @@
+{
+  "candidate_pairs": 5252915136,
+  "captions": 162112,
+  "checkpoint_epoch": 50,
+  "checkpoint_sha256": "f1c57d5e3a52fde5ed6d17b5fad47aadaa6ce25dc58cab72a3aba9a180d015b1",
+  "elapsed_seconds": 406.4000072479248,
+  "image_to_text": {
+    "rank_mean": 66.94188809678116,
+    "rank_median": 17.0,
+    "recall_at_1": 0.06320402431873592,
+    "recall_at_10": 0.4075548560318489,
+    "recall_at_5": 0.28784371817424315
+  },
+  "images": 32403,
+  "multi_positive_infonce": {
+    "image_to_text": 5.739346429610907,
+    "symmetric_mean": 5.846064666968537,
+    "temperature": 0.07,
+    "text_to_image": 5.952782904326169
+  },
+  "projected_text_sha256": "f83562cfb679a133a156a201676f2365e09259387dc306ec9e0795b3b027c338",
+  "rank_definition": "1 + number of all candidates with score strictly greater than the best positive (image->text), or matching-image positive (text->image); ties are treated as not outranking positive",
+  "score_matrix_statistics": {
+    "mean": 0.0865050334302374,
+    "pair_count": 5252915136,
+    "std": 0.10090956872673186
+  },
+  "split": "evaluation",
+  "split_manifest_sha256": "65520ed67e117a52a7c0594de2ddb96429fe05853649833d5b92893771a142fe",
+  "status": "complete",
+  "text_to_image": {
+    "rank_mean": 149.58724215357284,
+    "rank_median": 32.0,
+    "recall_at_1": 0.048460323726806157,
+    "recall_at_10": 0.3103224930911962,
+    "recall_at_5": 0.21736207066719304
+  }
+}
