@@ -87,7 +87,11 @@ def main():
       "offline_libero_diagnostic":out/"libero_diagnostic/summary.json"}
     try:
         if not a.resume or not sp.exists():status={"job":JOB,"status":"preflight","host":socket.gethostname(),"pid":os.getpid(),"started_at":time.strftime("%Y-%m-%dT%H:%M:%S%z"),"branch":"thesis/trackb-dense-grounding-v2","stage":"preflight","latest_checkpoint":None,"error":None}
-        else:status=json.loads(sp.read_text())
+        else:
+            status=json.loads(sp.read_text())
+            for key in ("error","traceback","failed_stage","exit_code"):
+                status.pop(key,None)
+            status.update({"status":"preflight","stage":"preflight","retry_of_previous_failure":True})
         status["source_commit"]=subprocess.check_output(["git","-C",str(a.repo),"rev-parse","HEAD"],text=True).strip();atomic_json(sp,status)
         caps=json.loads((a.dataset_root/"annotations2014/captions_train2014.json").read_text());vcaps=json.loads((a.dataset_root/"annotations2014/captions_val2014.json").read_text())
         if len(caps["images"])!=82783 or len(caps["annotations"])!=414113:raise RuntimeError("COCO train2014 counts mismatch")
