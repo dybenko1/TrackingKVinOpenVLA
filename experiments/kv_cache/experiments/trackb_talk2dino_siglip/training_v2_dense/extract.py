@@ -86,6 +86,19 @@ def extract_patches(dataset_root:Path, feature_root:Path, split:str="train", bat
     ids_path=feature_root/f"image_ids_{split}2014.npy"; feat_path=feature_root/f"patch_features_{split}2014_fp16.npy"; done_path=feature_root/f"patch_done_{split}2014.npy"
     if ids_path.exists() and not np.array_equal(np.load(ids_path,mmap_mode="r"),ids): raise RuntimeError("Native DINO cache image-ID order differs from COCO caption metadata")
     if not ids_path.exists(): np.save(ids_path,ids,allow_pickle=False)
+    manifest_path=feature_root/f"patch_features_{split}2014_manifest.json"
+    final_path=feature_root/f"patch_features_{split}2014_final_norm_fp16.npy" if keep_v1_final else None
+    if done_path.exists() and manifest_path.exists() and feat_path.exists():
+        prior=json.loads(manifest_path.read_text())
+        done_existing=np.load(done_path,mmap_mode="r")
+        cached=np.load(feat_path,mmap_mode="r")
+        valid_cache=(prior.get("status")=="complete" and prior.get("count")==len(ids)
+            and np.all(done_existing==1) and cached.shape==(len(ids),256,1024)
+            and prior.get("image_ids_sha256")==hashlib.sha256(ids.tobytes()).hexdigest())
+        if keep_v1_final:
+            valid_cache=valid_cache and final_path.exists() and np.load(final_path,mmap_mode="r").shape==(len(ids),256,1024)
+        if valid_cache:
+            return prior
     model,processor,vision,dino,geometry,torch=load_native_dino(); device=next(dino.parameters()).device
     # Audit the actual policy processor output; no approximate transform is substituted.
     first=Image.open(entries[0][1]).convert("RGB")
@@ -95,7 +108,6 @@ def extract_patches(dataset_root:Path, feature_root:Path, split:str="train", bat
         raise RuntimeError(f"Policy processor DINO input split mismatch: {tuple(policy_slice.shape)} vs {tuple(policy_dino_pixels.shape)}")
     expected=(len(ids),256,1024)
     feat=np.lib.format.open_memmap(feat_path,mode="r+" if feat_path.exists() else "w+",dtype=np.float16,shape=expected)
-    final_path=feature_root/f"patch_features_{split}2014_final_norm_fp16.npy" if keep_v1_final else None
     final_feat=np.lib.format.open_memmap(final_path,mode="r+" if final_path.exists() else "w+",dtype=np.float16,shape=expected) if keep_v1_final else None
     done=np.lib.format.open_memmap(done_path,mode="r+" if done_path.exists() else "w+",dtype=np.uint8,shape=(len(ids),))
     if not done_path.exists(): done[:]=0; done.flush()
@@ -122,7 +134,7 @@ def extract_patches(dataset_root:Path, feature_root:Path, split:str="train", bat
     manifest={"status":"complete","split":split,"count":len(ids),"patch_features":str(feat_path),"shape":list(expected),"dtype":"float16","definition":"OpenVLA DinoSigLIPViTBackbone.dino_featurizer forward; standard penultimate block output (len(blocks)-2), exact PrismaticImageProcessor DINO channel slice, pre-normalization output as returned by policy backbone","model_id":VLA_ID,"timm_dino_id":"vit_large_patch14_reg4_dinov2.lvd142m","grid":[16,16],"feature_dim":1024,"image_ids_sha256":hashlib.sha256(ids.tobytes()).hexdigest(),"preprocessing_geometry":geometry,"policy_processor_dino_slice_exact":True,"completed_rows":len(ids)}
     manifest["selected_ids"]=selected_ids is not None
     manifest["v1_final_norm_features"]=str(final_path) if final_path else None
-    atomic_json(feature_root/f"patch_features_{split}2014_manifest.json",manifest)
+    atomic_json(manifest_path,manifest)
     return manifest
 
 def main():

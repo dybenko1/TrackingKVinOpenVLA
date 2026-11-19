@@ -48,7 +48,7 @@ def prepare(a):
     if not category_path.exists():
         model,tokenizer,meta=load_siglip_text_tower(device="cuda:0")
         prompts=[f"a photo of a {c['name']}" for c in categories]
-        tokens=tokenizer(prompts)
+        tokens=tokenizer(prompts).to(next(model.parameters()).device)
         import torch
         with torch.inference_mode(): emb=model(tokens)
         if emb.shape!=(80,1152) or not torch.isfinite(emb).all(): raise RuntimeError(f"Category embeddings malformed: {tuple(emb.shape)}")

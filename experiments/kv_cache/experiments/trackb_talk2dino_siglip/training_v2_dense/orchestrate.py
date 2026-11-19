@@ -128,7 +128,7 @@ def main():
                     except Exception: done=False
                     if done:
                         lf_line=f"===== SKIP verified completed stage {stage} =====\n"
-                        with log.open("a") as lf:lf.write(lf_line)
+                        lf.write(lf_line);lf.flush()
                         atomic_json(sp,{**status,"stage_completed":stage,"stage_exit_code":0,"skipped_verified":True,"updated_at":time.time()})
                         continue
                 lf.write("\n===== BEGIN "+stage+" "+time.strftime("%Y-%m-%dT%H:%M:%S%z")+" =====\n");lf.write("COMMAND: "+" ".join(cmd)+"\n")
