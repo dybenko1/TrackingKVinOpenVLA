@@ -87,7 +87,10 @@ def main():
     raw_features=features.float()
     patch_norm_timing=timed(lambda:F.normalize(raw_features,dim=-1),device,n=a.repeats)
     patch=F.normalize(raw_features,dim=-1)
-    projection_timing=timed(lambda:F.normalize(projection.text_projection(text_emb),dim=-1),device,n=a.repeats)
+    def project_task_text():
+        with torch.inference_mode():
+            return F.normalize(projection.text_projection(text_emb),dim=-1)
+    projection_timing=timed(project_task_text,device,n=a.repeats)
     with torch.inference_mode():proj_text=F.normalize(projection.text_projection(text_emb),dim=-1)
     def score():
         with torch.inference_mode():
