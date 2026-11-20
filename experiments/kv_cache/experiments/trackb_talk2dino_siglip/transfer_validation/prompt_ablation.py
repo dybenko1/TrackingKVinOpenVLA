@@ -54,7 +54,14 @@ def sha256(path: Path) -> str:
 
 def load_frozen_projection(path: Path, device):
     """Read V1's full epoch checkpoint or a projection-only state safely."""
-    raw = torch.load(path, map_location="cpu", weights_only=True)
+    # V1 epoch checkpoints contain NumPy RNG and PyTorch version metadata in
+    # addition to tensors. Keep the restricted loader and allow only those
+    # inert metadata types; never enable arbitrary pickle execution.
+    safe = [np.core.multiarray._reconstruct, np.ndarray, np.dtype, torch.torch_version.TorchVersion]
+    if hasattr(np, "dtypes") and hasattr(np.dtypes, "UInt32DType"):
+        safe.append(np.dtypes.UInt32DType)
+    with torch.serialization.safe_globals(safe):
+        raw = torch.load(path, map_location="cpu", weights_only=True)
     state = raw.get("model", raw.get("state_dict", raw)) if isinstance(raw, dict) else raw
     model = RegionTextProjection()
     model.load_state_dict(state, strict=True)
