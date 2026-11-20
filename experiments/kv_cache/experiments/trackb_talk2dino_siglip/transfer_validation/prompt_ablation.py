@@ -177,6 +177,7 @@ def score_split(split_name, ids, *, output_dir, split_hash, dataset_root, featur
                                 "occupied_patch_equivalents": area, "methods": {}}
                 for method, values in pmap.items():
                     sweep = {}
+                    small_sweep = {}
                     # Keep the published V1 threshold as a fixed reference in
                     # the summary, while retaining a dev-only sweep for its
                     # separately named recalibrated diagnostic.
@@ -184,10 +185,12 @@ def score_split(split_name, ids, *, output_dir, split_hash, dataset_root, featur
                     for threshold in method_thresholds:
                         tp, fp, fn, tn = confusion(values, gt, valid, threshold)
                         sweep[f"{threshold:.2f}"] = [tp, fp, fn]
+                        small_sweep[f"{threshold:.2f}"] = [tp, fp, fn] if 0.0 < area < 4.0 else None
                     binary_threshold = .55 if method == "V1_seven_template" else .50
                     tp, fp, fn, _ = confusion(values, gt, valid, binary_threshold)
                     category_row["methods"][method] = {
                         "threshold_sweep_tp_fp_fn": sweep,
+                        "small_object_threshold_sweep_tp_fp_fn": small_sweep,
                         "fixed_threshold": binary_threshold,
                         "fixed_iou": tp / max(1e-12, tp + fp + fn),
                         "fixed_precision": tp / max(1e-12, tp + fp),
@@ -269,8 +272,23 @@ def aggregate(records, threshold_by_method):
                 tp, fp, fn = tpf
                 pair_ious[cid][method].append(tp / max(1e-12, tp + fp + fn))
                 points[cid][method].append(m.get("fixed_pointing"))
-                empty[cid][method].append(m.get("fixed_empty_mask"))
-                if m.get("small_fixed_tp_fp_fn") is not None:
+                if f"{threshold:.2f}" in m.get("threshold_sweep_tp_fp_fn", {}):
+                    empty[cid][method].append(int(tpf[0] + tpf[1] == 0))
+                elif m.get("fixed_empty_mask") is not None:
+                    empty[cid][method].append(m["fixed_empty_mask"])
+                small_sweep = m.get("small_object_threshold_sweep_tp_fp_fn", {})
+                small_tpf = small_sweep.get(f"{threshold:.2f}")
+                if small_tpf is None and m.get("small_object"):
+                    # Older per-image records already contain the complete
+                    # threshold sweep plus a per-pair small-object flag. Use
+                    # those exact counts so small-object metrics match the
+                    # selected threshold without re-running the model.
+                    small_tpf = m.get("threshold_sweep_tp_fp_fn", {}).get(f"{threshold:.2f}")
+                if small_tpf is not None:
+                    small_counts[cid][method] = [x + y for x, y in zip(small_counts[cid][method], small_tpf)]
+                elif m.get("small_fixed_tp_fp_fn") is not None:
+                    # Backward-compatible fallback for old cached records; this
+                    # value is explicitly tied to the legacy fixed threshold.
                     small_counts[cid][method] = [x + y for x, y in zip(small_counts[cid][method], m["small_fixed_tp_fp_fn"])]
                 if m.get("fixed_auroc") is not None:
                     aurocs[cid][method].append(m["fixed_auroc"])

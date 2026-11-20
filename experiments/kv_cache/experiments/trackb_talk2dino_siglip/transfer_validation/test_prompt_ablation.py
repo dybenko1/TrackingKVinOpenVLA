@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-from .prompt_ablation import METHODS, choose_thresholds, make_probabilities
+from .prompt_ablation import METHODS, aggregate, choose_thresholds, make_probabilities
 
 class Projection(nn.Module):
     def __init__(self):
@@ -26,3 +26,16 @@ def test_dev_threshold_selection_deterministic_including_v1_calibration():
     assert thresholds["A_training_prompt"]==.45
     assert thresholds["V1_development_recalibrated"]==.45
     assert details["V1_development_recalibrated"]["derived_from"]=="V1 seven-template development sweep"
+
+def test_aggregate_uses_selected_threshold_for_small_iou_and_empty_masks():
+    record={"categories":{"bowl":{"occupied_patch_equivalents":2.0,"methods":{"A":{
+        "threshold_sweep_tp_fp_fn":{"0.20":[2,1,1],"0.50":[0,0,4]},
+        "small_object":True,"fixed_pointing":1.0,"fixed_auroc":0.8,"fixed_empty_mask":True,
+    }}}}}
+    metrics=aggregate([record],{"A":0.20})["A"]
+    assert metrics["pooled_macro_iou"]==.5
+    assert metrics["small_object_pooled_macro_iou"]==.5
+    assert metrics["empty_mask_frequency"]==0.0
+    metrics_at_high=aggregate([record],{"A":0.50})["A"]
+    assert metrics_at_high["empty_mask_frequency"]==1.0
+    assert metrics_at_high["small_object_pooled_macro_iou"]==0.0
