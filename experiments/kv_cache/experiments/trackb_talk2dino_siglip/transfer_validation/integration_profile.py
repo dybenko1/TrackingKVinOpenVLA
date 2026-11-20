@@ -32,10 +32,11 @@ def main():
     from transformers import AutoModelForVision2Seq,AutoProcessor
     from experiments.kv_cache.experiments.trackb_talk2dino_siglip.text_encoder import encode_text_embeddings,load_siglip_text_tower
     from experiments.kv_cache.experiments.trackb_talk2dino_siglip.projection import RegionTextProjection
+    device=torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+    dtype=torch.bfloat16 if device.type=="cuda" else torch.float32
     t=time.perf_counter();processor=AutoProcessor.from_pretrained("openvla/openvla-7b-finetuned-libero-spatial",trust_remote_code=True)
-    model=AutoModelForVision2Seq.from_pretrained("openvla/openvla-7b-finetuned-libero-spatial",torch_dtype=torch.bfloat16,low_cpu_mem_usage=True,trust_remote_code=True).eval()
-    load_seconds=time.perf_counter()-t;device=torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-    if not torch.cuda.is_available():model.to(device)
+    model=AutoModelForVision2Seq.from_pretrained("openvla/openvla-7b-finetuned-libero-spatial",torch_dtype=dtype,low_cpu_mem_usage=True,trust_remote_code=True).to(device).eval()
+    load_seconds=time.perf_counter()-t
     vision=model.vision_backbone;dino=getattr(vision,"dino_featurizer",getattr(vision,"featurizer",None))
     if dino is None:raise RuntimeError("Native OpenVLA vision backbone has no DINO featurizer")
     image=Image.open(a.image).convert("RGB")
