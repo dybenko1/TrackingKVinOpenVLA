@@ -14,8 +14,10 @@ def main():
     status=out/"RUN_STATUS.json";log=logs/"pipeline.log"
     manifest=a.training_output/"validation_manifest.json"
     feature_manifest=a.feature_root/"patch_features_val2014_manifest.json"
-    try: source_commit=subprocess.check_output(["git","-C",str(a.repo),"rev-parse","HEAD"],text=True).strip()
-    except Exception: source_commit="unavailable"
+    source_commit=os.environ.get("TRANSFER_SOURCE_COMMIT")
+    if not source_commit:
+        try: source_commit=subprocess.check_output(["git","-C",str(a.repo),"rev-parse","HEAD"],text=True).strip()
+        except Exception: source_commit="unavailable"
     contract={"branch_expected":"thesis/trackb-dense-grounding-v2","reference_commit":"e1b06f93924bd1c11dcbdb20800fedbdf51f293f","source_commit":source_commit,"no_training":True,"no_policy_rollouts":True,"no_KV_changes":True,"immutable_validation_manifest":str(manifest),"stages":["prompt_ablation","libero_ground_truth_audit","native_integration_profile"]}
     (out/"EXPERIMENT_CONTRACT.json").write_text(json.dumps(contract,indent=2)+"\n")
     if not manifest.is_file():raise FileNotFoundError(manifest)
