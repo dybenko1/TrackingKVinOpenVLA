@@ -1,0 +1,21 @@
+{
+  "branch_expected": "thesis/trackb-dense-grounding-v2",
+  "reference_commit": "e1b06f93924bd1c11dcbdb20800fedbdf51f293f",
+  "source_commit": "bc1df0f45b3cafdd6b47d153e669e0749b2ff7f0",
+  "no_training": true,
+  "no_policy_rollouts": true,
+  "no_KV_changes": true,
+  "immutable_validation_manifest": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/validation_manifest.json",
+  "stages": [
+    "prompt_ablation",
+    "libero_ground_truth_audit",
+    "native_integration_profile"
+  ],
+  "source_commits_by_stage": {
+    "prompt_ablation_inference": "bc1df0f45b3cafdd6b47d153e669e0749b2ff7f0",
+    "libero_ground_truth_audit_artifact": "reused existing verified output",
+    "native_integration_profile": "37adb3511b9cbed6cc3fe0f1740cc26fcab53bf6",
+    "threshold_metric_correction": "7b49733e0770a6bdf3ab5185afcbabfbc47562d4",
+    "report_finalization": "4f967c17874d72b8ea0ebe724321662179ee178a"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "current_stage": null,
+  "development_images": 1000,
+  "finished_at": "2026-11-20T05:28:31Z",
+  "host": "ubuntu",
+  "last_error": null,
+  "pid": 1,
+  "secondary_previous_holdout_images": 3000,
+  "stages": {
+    "libero_ground_truth_audit": {
+      "resumed_from_verified_artifact": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/transfer_validation_20261120/experiment2_libero_ground_truth/libero_task_manifest.json",
+      "state": "complete"
+    },
+    "native_integration_profile": {
+      "exit_code": 0,
+      "finished_at": 1795152511.339637,
+      "started_at": 1795152464.7740526,
+      "state": "complete"
+    },
+    "prompt_ablation": {
+      "resumed_from_verified_artifact": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/transfer_validation_20261120/experiment1_prompt_ablation/prompt_ablation_metrics.json",
+      "state": "complete"
+    }
+  },
+  "started_at": "2026-11-20T05:27:44Z",
+  "state": "complete",
+  "training_or_rollouts": false
+}

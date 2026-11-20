@@ -1,0 +1,58 @@
+{
+  "calibration": {
+    "A_training_prompt": {
+      "development_pooled_macro_iou": 0.4928486095098677,
+      "threshold": 0.2,
+      "tie_break": "nearest 0.50, then lower"
+    },
+    "B_natural_description": {
+      "development_pooled_macro_iou": 0.3815807969581441,
+      "threshold": 0.35,
+      "tie_break": "nearest 0.50, then lower"
+    },
+    "C_picture_phrase": {
+      "development_pooled_macro_iou": 0.465351628372333,
+      "threshold": 0.3,
+      "tie_break": "nearest 0.50, then lower"
+    },
+    "D_noun_phrase": {
+      "development_pooled_macro_iou": 0.41559444002028967,
+      "threshold": 0.3,
+      "tie_break": "nearest 0.50, then lower"
+    },
+    "E_embedding_ensemble": {
+      "development_pooled_macro_iou": 0.4651619678875306,
+      "threshold": 0.3,
+      "tie_break": "nearest 0.50, then lower"
+    },
+    "F_score_ensemble": {
+      "development_pooled_macro_iou": 0.4556770465549361,
+      "threshold": 0.3,
+      "tie_break": "nearest 0.50, then lower"
+    },
+    "V1_development_recalibrated": {
+      "derived_from": "V1 seven-template development sweep",
+      "development_pooled_macro_iou": 0.3986837766902692,
+      "threshold": 0.55,
+      "tie_break": "nearest 0.50, then lower"
+    },
+    "V1_seven_template": {
+      "development_pooled_macro_iou": 0.3986837766902692,
+      "threshold": 0.55,
+      "tie_break": "nearest 0.50, then lower"
+    }
+  },
+  "manifest_sha256": "552502523d125ef0b941b57c125ddab2c109b4a772acc9c60e115512e6157f8a",
+  "method": "maximize native-grid pooled category IoU on development only; thresholds fixed before secondary previously inspected evaluation",
+  "metric_schema": "threshold-consistent-v2",
+  "selected_thresholds": {
+    "A_training_prompt": 0.2,
+    "B_natural_description": 0.35,
+    "C_picture_phrase": 0.3,
+    "D_noun_phrase": 0.3,
+    "E_embedding_ensemble": 0.3,
+    "F_score_ensemble": 0.3,
+    "V1_development_recalibrated": 0.55,
+    "V1_seven_template": 0.55
+  }
+}

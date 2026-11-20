@@ -1,0 +1,11 @@
+{
+  "status": "not_evaluated_missing_consecutive_LIBERO_task_trajectories",
+  "per_role_metrics": null,
+  "task_relevant_foreground_recall": null,
+  "false_background_rate": null,
+  "candidate_background_fraction": null,
+  "temporal_age_1_to_4_metrics": null,
+  "available_init_state_files": 130,
+  "saved_sparse_rgb_frames": 27,
+  "reason": "No recorded LIBERO demonstration sequences with paired simulator states were found. Exact same-state segmentation can be rendered from initial state files, but the requested >=32 consecutive task-motion observations per trajectory cannot be represented by the available saved observations. No model performance values are inferred from RGB-only files."
+}
