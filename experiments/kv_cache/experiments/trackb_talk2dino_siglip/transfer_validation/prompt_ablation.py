@@ -362,7 +362,7 @@ def main():
     atomic_json(out/"configuration.json",{"seed":0,"manifests":{"development_sha256":split_hash,"development_images":len(split["development"]["image_ids"]),"evaluation_sha256":split_hash,"evaluation_images":len(split["evaluation"]["image_ids"])},
         "checkpoint_v2_sha256":v2_hash,"checkpoint_v1_sha256":v1_hash,"v2_checkpoint_epoch":40,"v2_scoring":"sigmoid(10*(cosine-0.20)); no PAMR",
         "prompt_conditions":{"A":prompts[0],"B":prompts[1],"C":prompts[2],"D":prompts[3],"E":"mean four raw text embeddings, then MLP projection", "F":"mean four probability maps"},
-        "v1_prompt_templates":list(V1_TEMPLATES),"threshold_grid":THRESHOLDS.tolist(),"v1_fixed_threshold":0.55,
+        "v1_prompt_templates":list(V1_TEMPLATES),"threshold_grid":list(THRESHOLDS),"v1_fixed_threshold":0.55,
         "feature_source":"cached OpenVLA penultimate DINO for V2, cached V1 final-normalized DINO for V1","text_encoder":text_meta,
         "unseen_concept_caveat":"COCO category wording tests are known-category rewording; attributes and genuinely unseen concepts require independent masks and are not claimed from COCO."})
     files={"train":json.loads((a.feature_root/"patch_features_train2014_manifest.json").read_text()),"val":json.loads((a.feature_root/"patch_features_val2014_manifest.json").read_text())}
