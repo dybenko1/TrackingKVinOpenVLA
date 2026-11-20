@@ -1,0 +1,1805 @@
+[
+  {
+    "bddl_path": "/opt/LIBERO/libero/libero/bddl_files/libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket.bddl",
+    "bddl_sha256": "df088984da13131f8332ee0f13a7896c6a97afd02ee5007a42e8fc5e0893571e",
+    "camera_keys_by_episode": {
+      "demo_0": [
+        "agentview_rgb",
+        "ee_ori",
+        "ee_pos",
+        "ee_states",
+        "eye_in_hand_rgb",
+        "gripper_states",
+        "joint_states"
+      ]
+    },
+    "episode_names": [
+      "demo_0",
+      "demo_1",
+      "demo_10",
+      "demo_11",
+      "demo_12",
+      "demo_13",
+      "demo_14",
+      "demo_15",
+      "demo_16",
+      "demo_17",
+      "demo_18",
+      "demo_19",
+      "demo_2",
+      "demo_20",
+      "demo_21",
+      "demo_22",
+      "demo_23",
+      "demo_24",
+      "demo_25",
+      "demo_26",
+      "demo_27",
+      "demo_28",
+      "demo_29",
+      "demo_3",
+      "demo_30",
+      "demo_31",
+      "demo_32",
+      "demo_33",
+      "demo_34",
+      "demo_35",
+      "demo_36",
+      "demo_37",
+      "demo_38",
+      "demo_39",
+      "demo_4",
+      "demo_40",
+      "demo_41",
+      "demo_42",
+      "demo_43",
+      "demo_44",
+      "demo_45",
+      "demo_46",
+      "demo_47",
+      "demo_48",
+      "demo_49",
+      "demo_5",
+      "demo_6",
+      "demo_7",
+      "demo_8",
+      "demo_9"
+    ],
+    "file_name": "pick_up_the_alphabet_soup_and_place_it_in_the_basket_demo.hdf5",
+    "hdf5_path": "/opt/openvla/cache/datasets/libero_ground_truth_v2_official/libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket_demo.hdf5",
+    "hdf5_repo_path": "libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket_demo.hdf5",
+    "hdf5_schema": {
+      "bddl_file_name": "libero/libero/bddl_files/libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket.bddl",
+      "data_attributes": [
+        "bddl_file_name",
+        "env_args",
+        "env_name",
+        "macros_image_convention",
+        "num_demos",
+        "problem_info",
+        "tag",
+        "total"
+      ],
+      "env": "",
+      "env_info_present": false,
+      "episode_count": 50,
+      "episodes": [
+        {
+          "action_shape": [
+            148,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_0",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 148,
+          "state_shape": [
+            148,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            179,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_1",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 179,
+          "state_shape": [
+            179,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            157,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_10",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 157,
+          "state_shape": [
+            157,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            152,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_11",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 152,
+          "state_shape": [
+            152,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            172,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_12",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 172,
+          "state_shape": [
+            172,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            146,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_13",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 146,
+          "state_shape": [
+            146,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            149,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_14",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 149,
+          "state_shape": [
+            149,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            154,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_15",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 154,
+          "state_shape": [
+            154,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            155,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_16",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 155,
+          "state_shape": [
+            155,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            154,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_17",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 154,
+          "state_shape": [
+            154,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            152,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_18",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 152,
+          "state_shape": [
+            152,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            157,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_19",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 157,
+          "state_shape": [
+            157,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            136,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_2",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 136,
+          "state_shape": [
+            136,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            154,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_20",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 154,
+          "state_shape": [
+            154,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            163,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_21",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 163,
+          "state_shape": [
+            163,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            146,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_22",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 146,
+          "state_shape": [
+            146,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            161,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_23",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 161,
+          "state_shape": [
+            161,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            177,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_24",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 177,
+          "state_shape": [
+            177,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            143,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_25",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 143,
+          "state_shape": [
+            143,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            136,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_26",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 136,
+          "state_shape": [
+            136,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            154,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_27",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 154,
+          "state_shape": [
+            154,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            136,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_28",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 136,
+          "state_shape": [
+            136,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            175,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_29",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 175,
+          "state_shape": [
+            175,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            146,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_3",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 146,
+          "state_shape": [
+            146,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            155,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_30",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 155,
+          "state_shape": [
+            155,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            179,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_31",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 179,
+          "state_shape": [
+            179,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            153,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_32",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 153,
+          "state_shape": [
+            153,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            152,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_33",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 152,
+          "state_shape": [
+            152,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            160,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_34",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 160,
+          "state_shape": [
+            160,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            150,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_35",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 150,
+          "state_shape": [
+            150,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            151,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_36",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 151,
+          "state_shape": [
+            151,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            149,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_37",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 149,
+          "state_shape": [
+            149,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            157,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_38",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 157,
+          "state_shape": [
+            157,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            171,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_39",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 171,
+          "state_shape": [
+            171,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            153,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_4",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 153,
+          "state_shape": [
+            153,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            137,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_40",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 137,
+          "state_shape": [
+            137,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            151,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_41",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 151,
+          "state_shape": [
+            151,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            160,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_42",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 160,
+          "state_shape": [
+            160,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            151,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_43",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 151,
+          "state_shape": [
+            151,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            150,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_44",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 150,
+          "state_shape": [
+            150,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            149,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_45",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 149,
+          "state_shape": [
+            149,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            189,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_46",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 189,
+          "state_shape": [
+            189,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            196,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_47",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 196,
+          "state_shape": [
+            196,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            151,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_48",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 151,
+          "state_shape": [
+            151,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            148,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_49",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 148,
+          "state_shape": [
+            148,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            150,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_5",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 150,
+          "state_shape": [
+            150,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            156,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_6",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 156,
+          "state_shape": [
+            156,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            153,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_7",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 153,
+          "state_shape": [
+            153,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            194,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_8",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 194,
+          "state_shape": [
+            194,
+            110
+          ]
+        },
+        {
+          "action_shape": [
+            141,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_9",
+          "model_xml_sha256": "203f7f01e1a9fd85459d3d062b342dc5a1274feac22fd2ac7e189ee35dee0ed5",
+          "recorded_samples_attr": 141,
+          "state_shape": [
+            141,
+            110
+          ]
+        }
+      ],
+      "language_instruction": "pick up the alphabet soup and place it in the basket",
+      "problem_info_present": true,
+      "repository_version": "",
+      "root_groups": [
+        "data"
+      ]
+    },
+    "hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d",
+    "hdf5_size_bytes": 780145352,
+    "hdf5_verified": true,
+    "hf_blob_id": "ebede098a6565c67ae75b0c795f853a174b15227",
+    "instruction": "pick up the alphabet soup and place it in the basket",
+    "language_instruction_from_bddl": "Pick the alphabet soup and place it in the basket",
+    "prompt_specs_preview": [
+      {
+        "phrase": "alphabet soup",
+        "role": "manipulated_object",
+        "rule": "pick-object",
+        "source": "task_instruction"
+      },
+      {
+        "phrase": "basket",
+        "role": "destination_or_fixture",
+        "rule": "pronoun-target",
+        "source": "task_instruction"
+      },
+      {
+        "phrase": "robot arm",
+        "role": "robot_arm",
+        "rule": "always-include-robot-roles",
+        "source": "fixed_robot_role_prompt"
+      },
+      {
+        "phrase": "robot gripper",
+        "role": "robot_gripper",
+        "rule": "always-include-robot-roles",
+        "source": "fixed_robot_role_prompt"
+      }
+    ],
+    "role_ground_truth": {
+      "fixture_ids": [
+        "floor"
+      ],
+      "fixtures_by_type": {
+        "floor": [
+          "floor"
+        ]
+      },
+      "goal_calls": [
+        {
+          "args": [
+            "alphabet_soup_1",
+            "basket_1_contain_region"
+          ],
+          "predicate": "in"
+        }
+      ],
+      "obj_of_interest_symbols": [
+        "alphabet_soup_1",
+        "basket_1"
+      ],
+      "object_ids": [
+        "alphabet_soup_1",
+        "basket_1",
+        "butter_1",
+        "cream_cheese_1",
+        "milk_1",
+        "salad_dressing_1",
+        "tomato_sauce_1"
+      ],
+      "objects_by_type": {
+        "alphabet_soup": [
+          "alphabet_soup_1"
+        ],
+        "basket": [
+          "basket_1"
+        ],
+        "butter": [
+          "butter_1"
+        ],
+        "cream_cheese": [
+          "cream_cheese_1"
+        ],
+        "milk": [
+          "milk_1"
+        ],
+        "salad_dressing": [
+          "salad_dressing_1"
+        ],
+        "tomato_sauce": [
+          "tomato_sauce_1"
+        ]
+      },
+      "role_instance_names": {
+        "destination_objects": [],
+        "manipulated_objects": [
+          "alphabet_soup_1",
+          "basket_1"
+        ],
+        "task_relevant_fixtures": [],
+        "task_relevant_objects": [
+          "alphabet_soup_1",
+          "basket_1"
+        ]
+      }
+    },
+    "split": "development",
+    "suite": "libero_object",
+    "task_id": "libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket"
+  },
+  {
+    "bddl_path": "/opt/LIBERO/libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate.bddl",
+    "bddl_sha256": "9b59eb1287802868ad9bc78d58e6d36d4ba31134e679cfdbdf4b0feb660c959b",
+    "camera_keys_by_episode": {
+      "demo_0": [
+        "agentview_rgb",
+        "ee_ori",
+        "ee_pos",
+        "ee_states",
+        "eye_in_hand_rgb",
+        "gripper_states",
+        "joint_states"
+      ]
+    },
+    "episode_names": [
+      "demo_0",
+      "demo_1",
+      "demo_10",
+      "demo_11",
+      "demo_12",
+      "demo_13",
+      "demo_14",
+      "demo_15",
+      "demo_16",
+      "demo_17",
+      "demo_18",
+      "demo_19",
+      "demo_2",
+      "demo_20",
+      "demo_21",
+      "demo_22",
+      "demo_23",
+      "demo_24",
+      "demo_25",
+      "demo_26",
+      "demo_27",
+      "demo_28",
+      "demo_29",
+      "demo_3",
+      "demo_30",
+      "demo_31",
+      "demo_32",
+      "demo_33",
+      "demo_34",
+      "demo_35",
+      "demo_36",
+      "demo_37",
+      "demo_38",
+      "demo_39",
+      "demo_4",
+      "demo_40",
+      "demo_41",
+      "demo_42",
+      "demo_43",
+      "demo_44",
+      "demo_45",
+      "demo_46",
+      "demo_47",
+      "demo_48",
+      "demo_49",
+      "demo_5",
+      "demo_6",
+      "demo_7",
+      "demo_8",
+      "demo_9"
+    ],
+    "file_name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_demo.hdf5",
+    "hdf5_path": "/opt/openvla/cache/datasets/libero_ground_truth_v2_official/libero_spatial/pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_demo.hdf5",
+    "hdf5_repo_path": "libero_spatial/pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_demo.hdf5",
+    "hdf5_schema": {
+      "bddl_file_name": "libero/libero/bddl_files/libero_spatial/pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate.bddl",
+      "data_attributes": [
+        "bddl_file_name",
+        "env_args",
+        "env_name",
+        "macros_image_convention",
+        "num_demos",
+        "problem_info",
+        "tag",
+        "total"
+      ],
+      "env": "",
+      "env_info_present": false,
+      "episode_count": 50,
+      "episodes": [
+        {
+          "action_shape": [
+            98,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_0",
+          "model_xml_sha256": "1442a29d61f2ab2ea6045406d44544ba5899223bb81902a3fa01a28e7edb8846",
+          "recorded_samples_attr": 98,
+          "state_shape": [
+            98,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            84,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_1",
+          "model_xml_sha256": "6579b001b857899ccc2c1d25aeab8c852f80ca57b1249394deb8d7adf62cf218",
+          "recorded_samples_attr": 84,
+          "state_shape": [
+            84,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            93,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_10",
+          "model_xml_sha256": "6ddfd6469a87ac2a3de69c8801cf05d215b8b17eb32fc2cab8f70db9a0716993",
+          "recorded_samples_attr": 93,
+          "state_shape": [
+            93,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            128,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_11",
+          "model_xml_sha256": "8e1b3537dc399bdc32402321596f21212d49ecea80c05a760ffe0dac3fa8096c",
+          "recorded_samples_attr": 128,
+          "state_shape": [
+            128,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            86,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_12",
+          "model_xml_sha256": "e1188f0bbdce785d68e790d0c1a5d02bfb517dbe2f8eb7363717a0ab76e3e949",
+          "recorded_samples_attr": 86,
+          "state_shape": [
+            86,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            88,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_13",
+          "model_xml_sha256": "4530ed96f0ee468d85704896a226dd57c01c58b3a7e1ccd59c7a437ff355a88c",
+          "recorded_samples_attr": 88,
+          "state_shape": [
+            88,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            112,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_14",
+          "model_xml_sha256": "9d888c05b7b53477235a4f3caa30e1f27fa89218ceab3dd5863067726d548a13",
+          "recorded_samples_attr": 112,
+          "state_shape": [
+            112,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            84,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_15",
+          "model_xml_sha256": "d9b141bb3848fd220f2ed8fb827c1af08f443e83f4211fe8e1e51677616de68a",
+          "recorded_samples_attr": 84,
+          "state_shape": [
+            84,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            89,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_16",
+          "model_xml_sha256": "5ab15794b5807a81d156b5b1c112a83e2885f07c558b17e0e3b8c9fbac951f09",
+          "recorded_samples_attr": 89,
+          "state_shape": [
+            89,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            97,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_17",
+          "model_xml_sha256": "fc700efb81a70184cd8f79070fe2018615cc8bd3f9e781c25254924020c0d5c1",
+          "recorded_samples_attr": 97,
+          "state_shape": [
+            97,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            75,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_18",
+          "model_xml_sha256": "54f35e04d751eef11ea1749ce1aad719a8da154db64c793d0e36a1b1d4f9b899",
+          "recorded_samples_attr": 75,
+          "state_shape": [
+            75,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            99,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_19",
+          "model_xml_sha256": "efafe65c8a47b7e3f61196669362c244a6a8161ac56da1b3c7bb738ebaab3a3f",
+          "recorded_samples_attr": 99,
+          "state_shape": [
+            99,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            90,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_2",
+          "model_xml_sha256": "7256aab0997a870a2acf6b88aee5d402216d7fea84062c5aadc9a5541d423dc1",
+          "recorded_samples_attr": 90,
+          "state_shape": [
+            90,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            87,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_20",
+          "model_xml_sha256": "fb44a2e71e64189e1499909d26d86cfd6b93a32fb66ff973ac9db6aa1ba4decd",
+          "recorded_samples_attr": 87,
+          "state_shape": [
+            87,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            121,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_21",
+          "model_xml_sha256": "18afd3ac820f12250f2199beba43440e412cd179d8066df92966748785cf102f",
+          "recorded_samples_attr": 121,
+          "state_shape": [
+            121,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            96,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_22",
+          "model_xml_sha256": "7d28a6100821837d0bf6568c84c99a8252a50a09fd1df1714bcf42394e88e312",
+          "recorded_samples_attr": 96,
+          "state_shape": [
+            96,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            85,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_23",
+          "model_xml_sha256": "cfaa63c8ae22f6fffb8826ffd8aecec164505833c168286001b41bd62bb862f3",
+          "recorded_samples_attr": 85,
+          "state_shape": [
+            85,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            100,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_24",
+          "model_xml_sha256": "50aaa1a309f61c2f96ce7fb142dafe300f9399aebb33de567f842fbdb6b609f7",
+          "recorded_samples_attr": 100,
+          "state_shape": [
+            100,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            91,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_25",
+          "model_xml_sha256": "adbd47ebd6169ce42e4b9ef8d5dde6c9a9fca9a918cdacbd817da7e9331bb8b6",
+          "recorded_samples_attr": 91,
+          "state_shape": [
+            91,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            105,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_26",
+          "model_xml_sha256": "41a5ea4b34fdebcd7c3b870693b407e7887f997f641ed19507480ae530205422",
+          "recorded_samples_attr": 105,
+          "state_shape": [
+            105,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            113,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_27",
+          "model_xml_sha256": "fd016782104d57cadf090c2954f573bf0c28c4ae9cd1bbb86ea1cca0d1d5c2ed",
+          "recorded_samples_attr": 113,
+          "state_shape": [
+            113,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            92,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_28",
+          "model_xml_sha256": "2a926fac69c78bd3690e2581f762b5cce0e1e40a235a32654fbcec60c35069aa",
+          "recorded_samples_attr": 92,
+          "state_shape": [
+            92,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            124,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_29",
+          "model_xml_sha256": "5b197987ad85b95c16da26b473af32a04bbf4a9151e146498a9a850da4289fb1",
+          "recorded_samples_attr": 124,
+          "state_shape": [
+            124,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            97,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_3",
+          "model_xml_sha256": "2b313600a0c832c71c430ff5390a3a0d9ddd48e89439c72744bff7756307ab94",
+          "recorded_samples_attr": 97,
+          "state_shape": [
+            97,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            127,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_30",
+          "model_xml_sha256": "680e6b411add891fb6bf51325e57f88b930a04ebb4faac08eba47b5249e84364",
+          "recorded_samples_attr": 127,
+          "state_shape": [
+            127,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            151,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_31",
+          "model_xml_sha256": "cf7ca1e7f15ce75c337e70b7a54e4f29ddbef045fda33852162e0a6e17d222a6",
+          "recorded_samples_attr": 151,
+          "state_shape": [
+            151,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            93,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_32",
+          "model_xml_sha256": "496f3e7d4c593400ef9a793089ad53eef861bb080a74d307def401b637d538b2",
+          "recorded_samples_attr": 93,
+          "state_shape": [
+            93,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            111,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_33",
+          "model_xml_sha256": "b4515a8b8350aec038bb2b96b76191184122df159e2be841314b9a1411c1269c",
+          "recorded_samples_attr": 111,
+          "state_shape": [
+            111,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            167,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_34",
+          "model_xml_sha256": "1f77263fb6c5d4e9808131f4f77eaa7b7f0bfbb1a713e6246f9719301760560b",
+          "recorded_samples_attr": 167,
+          "state_shape": [
+            167,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            89,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_35",
+          "model_xml_sha256": "14ef7b3524fb4f33b543a3dc1423d28a33c6b64075aae07800882a7c1fc60382",
+          "recorded_samples_attr": 89,
+          "state_shape": [
+            89,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            102,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_36",
+          "model_xml_sha256": "18c0d5b8472c355934f3c83b2e46ac85051d73c90e09c9386a8f3d3289d6109e",
+          "recorded_samples_attr": 102,
+          "state_shape": [
+            102,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            168,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_37",
+          "model_xml_sha256": "c8cd81f9096f8f8c4fc5686035deff5bccbd7ba3b24353a89b477b24b849f99a",
+          "recorded_samples_attr": 168,
+          "state_shape": [
+            168,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            89,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_38",
+          "model_xml_sha256": "743273bcda9d4e0c549948d10c524e16cb178bebe6091cad862b533174651ddb",
+          "recorded_samples_attr": 89,
+          "state_shape": [
+            89,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            108,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_39",
+          "model_xml_sha256": "b056b48095b4c270eba1fec95aeac4ad94acb95ba25f2b2e497900291e0b02f6",
+          "recorded_samples_attr": 108,
+          "state_shape": [
+            108,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            105,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_4",
+          "model_xml_sha256": "1badd44c75867b7fd84739706c04fabe2707b70ecdc5f64294c66b4f9bbb5e6a",
+          "recorded_samples_attr": 105,
+          "state_shape": [
+            105,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            95,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_40",
+          "model_xml_sha256": "c11f369fd9d5a31364fe7fca896aaebfdb7f278acd9cf7b32c252ef6331d1d76",
+          "recorded_samples_attr": 95,
+          "state_shape": [
+            95,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            95,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_41",
+          "model_xml_sha256": "78ea2ea074b66f0e179985f7d634ded33f2c77b396e3ea9b93306faa708253fe",
+          "recorded_samples_attr": 95,
+          "state_shape": [
+            95,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            109,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_42",
+          "model_xml_sha256": "223980fce32b39377ffff0611146ec6f0e525829e61f76bbf87890eca2663b9d",
+          "recorded_samples_attr": 109,
+          "state_shape": [
+            109,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            96,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_43",
+          "model_xml_sha256": "e8491ac650a6da4034718cf80eea204243b42ec5eb9c90aeedf9c94b637e104e",
+          "recorded_samples_attr": 96,
+          "state_shape": [
+            96,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            88,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_44",
+          "model_xml_sha256": "0259fb8e1e4da6dd0e4c2b9b9a9e3b7064734347e06452854d5e468ef6855f4c",
+          "recorded_samples_attr": 88,
+          "state_shape": [
+            88,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            90,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_45",
+          "model_xml_sha256": "5bc815097a0520b7b173f9220c5bd81fed8bfb8f134bd3682b77e2ea92706338",
+          "recorded_samples_attr": 90,
+          "state_shape": [
+            90,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            85,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_46",
+          "model_xml_sha256": "9e8196c560147d5654c99407d07e5f66aa69f0a10e41c6e86baecbf30e98ed39",
+          "recorded_samples_attr": 85,
+          "state_shape": [
+            85,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            92,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_47",
+          "model_xml_sha256": "334a7dec518f118f5cb02c517561f7156d10fc3b6f25cc048127ef6686c88a3f",
+          "recorded_samples_attr": 92,
+          "state_shape": [
+            92,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            96,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_48",
+          "model_xml_sha256": "225e1b3d7bf37956d4b9d5dc5360dbf8f13e521f2d3643b68c562a5c6edd1c15",
+          "recorded_samples_attr": 96,
+          "state_shape": [
+            96,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            92,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_49",
+          "model_xml_sha256": "85158c3c34a459d7c5143f79be8bb87123a9178cc7086a300d5b89a2afbeecdf",
+          "recorded_samples_attr": 92,
+          "state_shape": [
+            92,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            134,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_5",
+          "model_xml_sha256": "7c73611dae4bd96948b9bd6bac3d5c01d0d4cf35c66ab520a3cc4fcf06d31836",
+          "recorded_samples_attr": 134,
+          "state_shape": [
+            134,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            92,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_6",
+          "model_xml_sha256": "8c1b82f9cf4aea46c40a61bac730f0be5834eda232fd093de251ac1d3625f183",
+          "recorded_samples_attr": 92,
+          "state_shape": [
+            92,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            92,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_7",
+          "model_xml_sha256": "f752d8509814828976231ecdd2e978b9820602174733a9e140c890368d669cfc",
+          "recorded_samples_attr": 92,
+          "state_shape": [
+            92,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            79,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_8",
+          "model_xml_sha256": "9f7a7e9eb412dafaae3ead6c4e42a0768be94b382d7d036c2850c27b34054f4a",
+          "recorded_samples_attr": 79,
+          "state_shape": [
+            79,
+            92
+          ]
+        },
+        {
+          "action_shape": [
+            89,
+            7
+          ],
+          "actions_used_for_replay": false,
+          "demo": "demo_9",
+          "model_xml_sha256": "452266dab68fc204f62b455d774383c1e19db2d6e08047c76ae8c3ba7d38741a",
+          "recorded_samples_attr": 89,
+          "state_shape": [
+            89,
+            92
+          ]
+        }
+      ],
+      "language_instruction": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+      "problem_info_present": true,
+      "repository_version": "",
+      "root_groups": [
+        "data"
+      ]
+    },
+    "hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead",
+    "hdf5_size_bytes": 508779600,
+    "hdf5_verified": true,
+    "hf_blob_id": "14a6c94a96c2daad4348295c06e228608a236fdb",
+    "instruction": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+    "language_instruction_from_bddl": "Pick the akita black bowl between the plate and the ramekin and place it on the plate",
+    "prompt_specs_preview": [
+      {
+        "phrase": "bowl",
+        "role": "manipulated_object",
+        "rule": "pick-object",
+        "source": "task_instruction"
+      },
+      {
+        "phrase": "plate",
+        "role": "destination_or_fixture",
+        "rule": "pronoun-target",
+        "source": "task_instruction"
+      },
+      {
+        "phrase": "plate",
+        "role": "mentioned_context_object",
+        "rule": "between-context",
+        "source": "task_instruction"
+      },
+      {
+        "phrase": "ramekin",
+        "role": "mentioned_context_object",
+        "rule": "between-context",
+        "source": "task_instruction"
+      },
+      {
+        "phrase": "robot arm",
+        "role": "robot_arm",
+        "rule": "always-include-robot-roles",
+        "source": "fixed_robot_role_prompt"
+      },
+      {
+        "phrase": "robot gripper",
+        "role": "robot_gripper",
+        "rule": "always-include-robot-roles",
+        "source": "fixed_robot_role_prompt"
+      }
+    ],
+    "role_ground_truth": {
+      "fixture_ids": [
+        "flat_stove_1",
+        "main_table",
+        "wooden_cabinet_1"
+      ],
+      "fixtures_by_type": {
+        "flat_stove": [
+          "flat_stove_1"
+        ],
+        "table": [
+          "main_table"
+        ],
+        "wooden_cabinet": [
+          "wooden_cabinet_1"
+        ]
+      },
+      "goal_calls": [
+        {
+          "args": [
+            "akita_black_bowl_1",
+            "plate_1"
+          ],
+          "predicate": "on"
+        }
+      ],
+      "obj_of_interest_symbols": [
+        "akita_black_bowl_1",
+        "plate_1"
+      ],
+      "object_ids": [
+        "akita_black_bowl_1",
+        "akita_black_bowl_2",
+        "cookies_1",
+        "glazed_rim_porcelain_ramekin_1",
+        "plate_1"
+      ],
+      "objects_by_type": {
+        "akita_black_bowl": [
+          "akita_black_bowl_1",
+          "akita_black_bowl_2"
+        ],
+        "cookies": [
+          "cookies_1"
+        ],
+        "glazed_rim_porcelain_ramekin": [
+          "glazed_rim_porcelain_ramekin_1"
+        ],
+        "plate": [
+          "plate_1"
+        ]
+      },
+      "role_instance_names": {
+        "destination_objects": [
+          "plate_1"
+        ],
+        "manipulated_objects": [
+          "akita_black_bowl_1"
+        ],
+        "task_relevant_fixtures": [],
+        "task_relevant_objects": [
+          "akita_black_bowl_1",
+          "plate_1"
+        ]
+      }
+    },
+    "split": "development",
+    "suite": "libero_spatial",
+    "task_id": "libero_spatial/pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate"
+  }
+]

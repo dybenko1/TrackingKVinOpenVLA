@@ -1,0 +1,68 @@
+{
+  "all_backbones_and_projections_frozen": true,
+  "policy_image_processor_geometry": {
+    "crop_size": [
+      224,
+      224
+    ],
+    "letterbox": false,
+    "letterbox_fill": null,
+    "processor_type": "PrismaticImageProcessor",
+    "resize_interpolation": 3,
+    "resize_size": [
+      224,
+      224
+    ],
+    "resize_strategy": "resize-naive"
+  },
+  "text_checkpoint": {
+    "checkpoint_dir": "/opt/openvla/cache/models/timm/ViT-SO400M-14-SigLIP-384",
+    "checkpoint_repository_expected": "timm/ViT-SO400M-14-SigLIP-384",
+    "checkpoint_revision": "ac16108d567c4389e6cd2b11c9b8585f7474435b",
+    "frozen": true,
+    "missing_text_keys": [],
+    "open_clip_version": "2.32.0",
+    "strict_text_state_load": true,
+    "text_context_length": 64,
+    "text_heads": 16,
+    "text_layers": 27,
+    "text_output_dim": 1152,
+    "text_positional_embedding_shape": [
+      64,
+      1152
+    ],
+    "text_state_tensor_count": 330,
+    "text_width": 1152,
+    "tokenizer": {
+      "canonicalization": "OpenCLIP HFTokenizer.clean_fn from checkpoint configuration",
+      "checkpoint_dir": "/opt/openvla/cache/models/timm/ViT-SO400M-14-SigLIP-384",
+      "clean": "canonicalize",
+      "context_length": 64,
+      "eos_token_id": 1,
+      "pad_token_id": 1,
+      "tokenizer_class": "T5TokenizerFast"
+    },
+    "torch_version": "2.6.0",
+    "unexpected_text_keys": [],
+    "visual_tower_loaded": false,
+    "weights_path": "/opt/openvla/cache/models/timm/ViT-SO400M-14-SigLIP-384/open_clip_model.safetensors"
+  },
+  "v1_checkpoint": "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/full_coco_training_20261117/checkpoints/epoch_050.pt",
+  "v1_fixed_threshold": 0.55,
+  "v1_prompt_templates": [
+    "itap of a {}.",
+    "a bad photo of a {}.",
+    "a origami {}.",
+    "a photo of the large {}.",
+    "a {} in a video game.",
+    "art of the {}.",
+    "a photo of the small {}."
+  ],
+  "v1_sha256": "f1c57d5e3a52fde5ed6d17b5fad47aadaa6ce25dc58cab72a3aba9a180d015b1",
+  "v1_visual_features": "final-normalized OpenVLA DINO DINOv2 patches from get_intermediate_layers(norm=True)",
+  "v2_checkpoint": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/best_projection.pt",
+  "v2_fixed_probability_threshold": 0.2,
+  "v2_prompt_template": "a photo of a {instruction-derived phrase}",
+  "v2_sha256": "8232ec8f657da47645d73741b16560a1140bfea89cce6826948b9457ce4854d4",
+  "v2_visual_features": "OpenVLA fine-tuned DINO penultimate layer as emitted by dino_featurizer forward"
+}

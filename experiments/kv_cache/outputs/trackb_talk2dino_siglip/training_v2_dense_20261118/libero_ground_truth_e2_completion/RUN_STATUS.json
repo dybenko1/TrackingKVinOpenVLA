@@ -1,0 +1,231 @@
+{
+  "completed_at_utc": "2026-11-20T07:53:04Z",
+  "completed_sequences": [
+    {
+      "demo": "demo_0",
+      "split": "development",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate"
+    },
+    {
+      "demo": "demo_1",
+      "split": "development",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate"
+    },
+    {
+      "demo": "demo_10",
+      "split": "development",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate"
+    },
+    {
+      "demo": "demo_0",
+      "split": "development",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate"
+    },
+    {
+      "demo": "demo_1",
+      "split": "development",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate"
+    },
+    {
+      "demo": "demo_10",
+      "split": "development",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate"
+    },
+    {
+      "demo": "demo_0",
+      "split": "development",
+      "task_id": "libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_1",
+      "split": "development",
+      "task_id": "libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_10",
+      "split": "development",
+      "task_id": "libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_0",
+      "split": "development",
+      "task_id": "libero_object/pick_up_the_butter_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_1",
+      "split": "development",
+      "task_id": "libero_object/pick_up_the_butter_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_10",
+      "split": "development",
+      "task_id": "libero_object/pick_up_the_butter_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_0",
+      "split": "development",
+      "task_id": "libero_goal/open_the_middle_drawer_of_the_cabinet"
+    },
+    {
+      "demo": "demo_1",
+      "split": "development",
+      "task_id": "libero_goal/open_the_middle_drawer_of_the_cabinet"
+    },
+    {
+      "demo": "demo_10",
+      "split": "development",
+      "task_id": "libero_goal/open_the_middle_drawer_of_the_cabinet"
+    },
+    {
+      "demo": "demo_0",
+      "split": "development",
+      "task_id": "libero_goal/put_the_bowl_on_the_plate"
+    },
+    {
+      "demo": "demo_1",
+      "split": "development",
+      "task_id": "libero_goal/put_the_bowl_on_the_plate"
+    },
+    {
+      "demo": "demo_10",
+      "split": "development",
+      "task_id": "libero_goal/put_the_bowl_on_the_plate"
+    },
+    {
+      "demo": "demo_0",
+      "split": "held_out",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate"
+    },
+    {
+      "demo": "demo_1",
+      "split": "held_out",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate"
+    },
+    {
+      "demo": "demo_10",
+      "split": "held_out",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate"
+    },
+    {
+      "demo": "demo_0",
+      "split": "held_out",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate"
+    },
+    {
+      "demo": "demo_1",
+      "split": "held_out",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate"
+    },
+    {
+      "demo": "demo_10",
+      "split": "held_out",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate"
+    },
+    {
+      "demo": "demo_0",
+      "split": "held_out",
+      "task_id": "libero_object/pick_up_the_salad_dressing_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_1",
+      "split": "held_out",
+      "task_id": "libero_object/pick_up_the_salad_dressing_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_10",
+      "split": "held_out",
+      "task_id": "libero_object/pick_up_the_salad_dressing_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_0",
+      "split": "held_out",
+      "task_id": "libero_object/pick_up_the_tomato_sauce_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_1",
+      "split": "held_out",
+      "task_id": "libero_object/pick_up_the_tomato_sauce_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_10",
+      "split": "held_out",
+      "task_id": "libero_object/pick_up_the_tomato_sauce_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_0",
+      "split": "held_out",
+      "task_id": "libero_goal/open_the_top_drawer_and_put_the_bowl_inside"
+    },
+    {
+      "demo": "demo_1",
+      "split": "held_out",
+      "task_id": "libero_goal/open_the_top_drawer_and_put_the_bowl_inside"
+    },
+    {
+      "demo": "demo_10",
+      "split": "held_out",
+      "task_id": "libero_goal/open_the_top_drawer_and_put_the_bowl_inside"
+    },
+    {
+      "demo": "demo_0",
+      "split": "held_out",
+      "task_id": "libero_goal/put_the_wine_bottle_on_the_rack"
+    },
+    {
+      "demo": "demo_1",
+      "split": "held_out",
+      "task_id": "libero_goal/put_the_wine_bottle_on_the_rack"
+    },
+    {
+      "demo": "demo_10",
+      "split": "held_out",
+      "task_id": "libero_goal/put_the_wine_bottle_on_the_rack"
+    }
+  ],
+  "completed_tasks": [
+    "libero_spatial/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate",
+    "libero_spatial/pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate",
+    "libero_spatial/pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate",
+    "libero_object/pick_up_the_butter_and_place_it_in_the_basket",
+    "libero_object/pick_up_the_salad_dressing_and_place_it_in_the_basket",
+    "libero_object/pick_up_the_tomato_sauce_and_place_it_in_the_basket",
+    "libero_goal/open_the_middle_drawer_of_the_cabinet",
+    "libero_goal/put_the_bowl_on_the_plate",
+    "libero_goal/open_the_top_drawer_and_put_the_bowl_inside",
+    "libero_goal/put_the_wine_bottle_on_the_rack",
+    "libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+    "libero_spatial/pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate"
+  ],
+  "development_calibration": {
+    "development_candidate_background_coverage": 0.1312934160232544,
+    "development_predicted_foreground_fraction": 0.8687065839767456,
+    "development_task_relevant_recall": 0.9919661130722224,
+    "selection_rule": "largest threshold on 0.01 grid achieving >=0.98 weighted patch-occupancy recall on development tasks; task-level split frozen before inference",
+    "threshold": 0.08
+  },
+  "development_frames": 576,
+  "development_sequences": 18,
+  "estimated_selected_bytes": 8591172122,
+  "final_metrics_path": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/libero_ground_truth_e2_completion/libero_ground_truth_metrics.json",
+  "free_disk_bytes_preflight": 776444510208,
+  "ground_truth_role_mapping_revision": "region-aware-bddl-v2",
+  "heldout_frames": 576,
+  "heldout_metrics_materialized_and_inspected_before_role_audit": true,
+  "heldout_scoring_started": true,
+  "heldout_sequences": 18,
+  "host": "ubuntu",
+  "host_worker_exit_code": 0,
+  "initial_smoke": "passed",
+  "last_error": null,
+  "libero_revision": "8f1084e3132a39270c3a13ebe37270a43ece2a01",
+  "metrics_reconciled_from_saved_scores": true,
+  "pid": 26,
+  "robosuite_revision": "1b8b97ece22de6c7905adae88228c2ca1bcce3f2",
+  "source_repository": "yifengzhu-hf/LIBERO-datasets",
+  "source_revision": "f13aa24a3da8c43c7225569f28c562979fa0e35a",
+  "stage": null,
+  "started_at_utc": "2026-11-20T07:46:46Z",
+  "status": "complete",
+  "task_manifest_sha256": "d9cf911a1cb81b8bd635b8991d49e1977c2a50e164fc38cb38ebb1d5a371d156",
+  "training_or_policy_rollouts": false
+}
