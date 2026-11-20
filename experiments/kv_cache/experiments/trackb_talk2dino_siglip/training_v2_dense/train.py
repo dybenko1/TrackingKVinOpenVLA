@@ -36,7 +36,13 @@ def eval_dev(model, patches, occupancy, valid, rows, device, batch=16):
         x=F.normalize(torch.from_numpy(np.array(patches[rr],dtype=np.float32,copy=True)).to(device),dim=-1)
         y=np.array(occupancy[rr],dtype=np.float32,copy=True); v=np.array(valid[rr],dtype=np.float32,copy=True)
         prob=torch.sigmoid(10*(torch.einsum("bpd,cd->bcp",x,cat_text)-.20)).cpu().numpy()
-        y*=v[:,None,:]; gt_area+=y.sum((0,2)); small=(y.sum(-1)<4)
+        y*=v[:,None,:]
+        gt_area+=y.sum((0,2))
+        # Small-object IoU must exclude absent image/category pairs. Counting
+        # zero-occupancy categories here adds true negatives to the denominator
+        # and can make the tie-break metric look artificially strong.
+        occupied=y.sum(-1)
+        small=(occupied>0)&(occupied<4)
         for ti,t in enumerate(thresholds):
             pred=(prob>=t).astype(np.float32)*v[:,None,:]
             inter[ti]+=(pred*y).sum((0,2)); union[ti]+=(pred+y-pred*y).sum((0,2))

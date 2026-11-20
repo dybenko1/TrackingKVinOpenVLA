@@ -1,0 +1,14 @@
+{
+  "device": "cuda:0",
+  "images": {
+    "development": 1000,
+    "evaluation": 3000
+  },
+  "status": "complete",
+  "v1_checkpoint": "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/full_coco_training_20261117/checkpoints/epoch_050.pt",
+  "v1_checkpoint_sha256": "f1c57d5e3a52fde5ed6d17b5fad47aadaa6ce25dc58cab72a3aba9a180d015b1",
+  "v1_prompt_template_count": 7,
+  "v2_checkpoint": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/best_projection.pt",
+  "v2_checkpoint_sha256": "8232ec8f657da47645d73741b16560a1140bfea89cce6826948b9457ce4854d4",
+  "v2_prompt_template_count": 1
+}

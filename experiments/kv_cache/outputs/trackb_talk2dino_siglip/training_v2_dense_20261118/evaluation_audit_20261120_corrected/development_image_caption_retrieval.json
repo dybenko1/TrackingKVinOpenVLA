@@ -1,0 +1,44 @@
+{
+  "metrics": {
+    "V1_epoch50": {
+      "captions": 5000,
+      "contrastive_temperature": 0.07,
+      "image_to_text": {
+        "R@1": 0.475,
+        "R@10": 0.907,
+        "R@5": 0.816
+      },
+      "images": 1000,
+      "multi_positive_symmetric_infonce": 3.9788256687815258,
+      "pooling": "tau=0.10 patch log-mean-exp",
+      "score_mean": 0.031039487570524216,
+      "score_std": 0.05865252763032913,
+      "text_to_image": {
+        "R@1": 0.3592,
+        "R@10": 0.865,
+        "R@5": 0.7354
+      }
+    },
+    "V2_best": {
+      "captions": 5000,
+      "contrastive_temperature": 0.07,
+      "image_to_text": {
+        "R@1": 0.372,
+        "R@10": 0.818,
+        "R@5": 0.696
+      },
+      "images": 1000,
+      "multi_positive_symmetric_infonce": 3.7150316984029654,
+      "pooling": "tau=0.10 patch log-mean-exp",
+      "score_mean": 0.005712510086596012,
+      "score_std": 0.05653991922736168,
+      "text_to_image": {
+        "R@1": 0.2356,
+        "R@10": 0.7814,
+        "R@5": 0.601
+      }
+    }
+  },
+  "split": "development only",
+  "status": "complete"
+}

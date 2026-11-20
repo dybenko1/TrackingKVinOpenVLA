@@ -1,0 +1,115 @@
+{
+  "github_candidate_files": [
+    "AUDIT_REPORT.md",
+    "summary.json",
+    "per_category_metrics.csv",
+    "development_metrics.json",
+    "evaluation_metrics.json",
+    "development_thresholds.json",
+    "evaluation_metadata.json",
+    "evaluation_complete.json",
+    "corrected_training_dev_metrics.json",
+    "validation_manifest.json",
+    "development_image_caption_retrieval.json",
+    "RUN_STATUS.json",
+    "artifact_manifest.json",
+    "../TRAINING_V2_REPORT.md"
+  ],
+  "kept_local_with_integrity_hashes": [
+    {
+      "bytes": 35359788,
+      "path": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/evaluation_audit_20261120_corrected/development_per_image.jsonl",
+      "sha256": "e4b05cc98eb611fa9d2650efa94bd1e6afa4de4f31e8363eb2a3b3644b640753"
+    },
+    {
+      "bytes": 15049875,
+      "path": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/evaluation_audit_20261120_corrected/evaluation_per_image.jsonl",
+      "sha256": "8c69da03fa6f1cd2c13bae46caaed0fdc4d8f2f23764c58130e628568c71b86e"
+    },
+    {
+      "bytes": 4596,
+      "path": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/evaluation_audit_20261120_corrected/logs/audit_pipeline.log",
+      "sha256": "4dec8edf4c032c3f4cdced46d51e948b3ecabcf1453a47d7bc554b9ba2943209"
+    },
+    {
+      "bytes": 774818,
+      "path": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/evaluation_audit_20261120_corrected/qualitative_results/image_111968.png",
+      "sha256": "f557ae290e391220c12388cf6b4f7134cd5df62609a5fbf6e7b9dca81ed7707e"
+    },
+    {
+      "bytes": 577874,
+      "path": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/evaluation_audit_20261120_corrected/qualitative_results/image_171062.png",
+      "sha256": "d8d9d2f5db3ccb94bfa684ef55bb2146256bcd82b3449b128fb8ad29ceaf5d4a"
+    },
+    {
+      "bytes": 555297,
+      "path": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/evaluation_audit_20261120_corrected/qualitative_results/image_192730.png",
+      "sha256": "f3577b2edc215dd897cc3a856fd3c3c19fee4f7ca3da4fd31ff6c07fc63dada2"
+    },
+    {
+      "bytes": 688912,
+      "path": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/evaluation_audit_20261120_corrected/qualitative_results/image_208002.png",
+      "sha256": "3a1304ef4d404fa94e05a10dca31ad0846b5a2c208c302936ebbcdfa1bf15644"
+    },
+    {
+      "bytes": 427873,
+      "path": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/evaluation_audit_20261120_corrected/qualitative_results/image_247206.png",
+      "sha256": "6d6db729d73458ff5e89658e451ac18def6815019cc825fd9f17f2a327b55685"
+    },
+    {
+      "bytes": 551915,
+      "path": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/evaluation_audit_20261120_corrected/qualitative_results/image_253177.png",
+      "sha256": "c81334e54eacf3c7e37aeb30561ae8d37bb2efa631fef32d8f2bf1b10ed3d9a9"
+    },
+    {
+      "bytes": 701428,
+      "path": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/evaluation_audit_20261120_corrected/qualitative_results/image_288603.png",
+      "sha256": "4c0d6f8375aae6d14de919fc890c1edbd6d6f97f41b63f794e0edf2aa9df3b41"
+    },
+    {
+      "bytes": 829624,
+      "path": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/evaluation_audit_20261120_corrected/qualitative_results/image_290355.png",
+      "sha256": "8de008faac1d54b55a80ae7b7a36557979325aa276a6eb665da7b004e3db0597"
+    },
+    {
+      "bytes": 617449,
+      "path": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/evaluation_audit_20261120_corrected/qualitative_results/image_34418.png",
+      "sha256": "8daadf37bfe3536c7bcb2ffd15a4d48d2fe154389a6579f9ae5c88668eb61dbf"
+    },
+    {
+      "bytes": 569283,
+      "path": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/evaluation_audit_20261120_corrected/qualitative_results/image_423529.png",
+      "sha256": "2f6a50729268ab740c2a91282afb67c3a62a1ac7ccbbf3d3742658ca8fe40938"
+    },
+    {
+      "bytes": 632432,
+      "path": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/evaluation_audit_20261120_corrected/qualitative_results/image_430073.png",
+      "sha256": "f93d672da45adc6a42694cbb5e64e296680e09da993183e45277e8e0e168f2f6"
+    },
+    {
+      "bytes": 684232,
+      "path": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/evaluation_audit_20261120_corrected/qualitative_results/image_47367.png",
+      "sha256": "4ebfe5720658e9dec74cb47bcdddaedec64b4e69f41a2f06b7af6e81c381827c"
+    },
+    {
+      "bytes": 853979,
+      "path": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/evaluation_audit_20261120_corrected/qualitative_results/image_492658.png",
+      "sha256": "383a6a3cf7827dfbce8a373014626f3a913baf8612eecf65a5c314dd228cf971"
+    },
+    {
+      "bytes": 787879,
+      "path": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/evaluation_audit_20261120_corrected/qualitative_results/image_502410.png",
+      "sha256": "daef709722e087a78cf31185de2fa291b759a7f7f681c51996782011ee73ef24"
+    },
+    {
+      "bytes": 596604,
+      "path": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/evaluation_audit_20261120_corrected/qualitative_results/image_557346.png",
+      "sha256": "2afce7619358cd935c384b374f67a1442a99b36f835a1362ec83c2bd0d730a81"
+    },
+    {
+      "bytes": 826797,
+      "path": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/evaluation_audit_20261120_corrected/qualitative_results/image_566941.png",
+      "sha256": "590422aee8a68b7833f65e0d3825f6110faeabeafe5367fbaaf5eb290362718d"
+    }
+  ]
+}

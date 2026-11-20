@@ -1,0 +1,12 @@
+{
+  "completed_at": 1795145908.619368,
+  "exit_code": 0,
+  "images": {
+    "development": 1000,
+    "evaluation": 3000
+  },
+  "no_training": true,
+  "report": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/evaluation_audit_20261120_corrected/AUDIT_REPORT.md",
+  "stage": "complete",
+  "status": "complete"
+}

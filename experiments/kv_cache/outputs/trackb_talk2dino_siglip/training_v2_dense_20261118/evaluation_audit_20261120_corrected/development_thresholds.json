@@ -1,0 +1,26 @@
+{
+  "calibration": {
+    "v1_raw_pamr": {
+      "development_macro_category_miou": 0.3986837766902692,
+      "threshold": 0.55,
+      "tie_break": "closest to 0.50, then lower threshold"
+    },
+    "v2_pamr": {
+      "development_macro_category_miou": 0.45243618241255873,
+      "threshold": 0.20000001788139343,
+      "tie_break": "closest to 0.50, then lower threshold"
+    },
+    "v2_raw": {
+      "development_macro_category_miou": 0.4928332356573913,
+      "threshold": 0.20000001788139343,
+      "tie_break": "closest to 0.50, then lower threshold"
+    }
+  },
+  "manifest_sha256": "552502523d125ef0b941b57c125ddab2c109b4a772acc9c60e115512e6157f8a",
+  "rule": "maximize native-grid pooled per-category IoU on the fixed 1,000-image development split; V1 threshold fixed at 0.55; ties prefer threshold nearest 0.50 then lower threshold",
+  "selected_thresholds": {
+    "v1_raw_pamr": 0.55,
+    "v2_pamr": 0.20000001788139343,
+    "v2_raw": 0.20000001788139343
+  }
+}

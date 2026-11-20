@@ -1,0 +1,51 @@
+{
+  "category_aggregation": "Pooled per-category IoU sums TP/FP/FN over all positive image/category pairs for that category; absent-category images are excluded. Also report macro mean per-positive-image/category IoU, matching the V1 Phase 3 aggregation.",
+  "ground_truth": "COCO val2014 instance masks; non-crowd instances unioned by category; crowd pixels excluded; fractional 16x16 occupancy and aligned binary 224 targets",
+  "split_manifest_sha256": "552502523d125ef0b941b57c125ddab2c109b4a772acc9c60e115512e6157f8a",
+  "v1_embedding_aggregation": "mean raw text embedding across seven templates before V1 MLP projection and L2 normalization",
+  "v1_encoder_metadata": {
+    "checkpoint_dir": "/opt/openvla/cache/models/timm/ViT-SO400M-14-SigLIP-384",
+    "checkpoint_repository_expected": "timm/ViT-SO400M-14-SigLIP-384",
+    "checkpoint_revision": "ac16108d567c4389e6cd2b11c9b8585f7474435b",
+    "frozen": true,
+    "missing_text_keys": [],
+    "open_clip_version": "2.32.0",
+    "strict_text_state_load": true,
+    "text_context_length": 64,
+    "text_heads": 16,
+    "text_layers": 27,
+    "text_output_dim": 1152,
+    "text_positional_embedding_shape": [
+      64,
+      1152
+    ],
+    "text_state_tensor_count": 330,
+    "text_width": 1152,
+    "tokenizer": {
+      "canonicalization": "OpenCLIP HFTokenizer.clean_fn from checkpoint configuration",
+      "checkpoint_dir": "/opt/openvla/cache/models/timm/ViT-SO400M-14-SigLIP-384",
+      "clean": "canonicalize",
+      "context_length": 64,
+      "eos_token_id": 1,
+      "pad_token_id": 1,
+      "tokenizer_class": "T5TokenizerFast"
+    },
+    "torch_version": "2.6.0",
+    "unexpected_text_keys": [],
+    "visual_tower_loaded": false,
+    "weights_path": "/opt/openvla/cache/models/timm/ViT-SO400M-14-SigLIP-384/open_clip_model.safetensors"
+  },
+  "v1_prompt_source": "existing Phase 3 encode_class_templates implementation",
+  "v1_prompt_templates": [
+    "itap of a {}.",
+    "a bad photo of a {}.",
+    "a origami {}.",
+    "a photo of the large {}.",
+    "a {} in a video game.",
+    "art of the {}.",
+    "a photo of the small {}."
+  ],
+  "v1_visual_features": "final-layer normalized DINO patch features from the cached V1-compatible extraction",
+  "v2_prompt_source": "single training prompt: a photo of a <category>",
+  "v2_visual_features": "OpenVLA penultimate DINO patch features from the standard 224x224 path"
+}

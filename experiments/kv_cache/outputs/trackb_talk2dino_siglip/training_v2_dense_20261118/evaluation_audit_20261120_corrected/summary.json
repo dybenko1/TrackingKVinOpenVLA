@@ -1,0 +1,527 @@
+{
+  "artifact_manifest": {
+    "github_candidate_files": [
+      "AUDIT_REPORT.md",
+      "summary.json",
+      "per_category_metrics.csv",
+      "development_metrics.json",
+      "evaluation_metrics.json",
+      "development_thresholds.json",
+      "evaluation_metadata.json",
+      "evaluation_complete.json",
+      "corrected_training_dev_metrics.json"
+    ],
+    "kept_local_with_integrity_hashes": [
+      {
+        "bytes": 35359788,
+        "path": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/evaluation_audit_20261120_corrected/development_per_image.jsonl",
+        "sha256": "e4b05cc98eb611fa9d2650efa94bd1e6afa4de4f31e8363eb2a3b3644b640753"
+      },
+      {
+        "bytes": 15049875,
+        "path": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/evaluation_audit_20261120_corrected/evaluation_per_image.jsonl",
+        "sha256": "8c69da03fa6f1cd2c13bae46caaed0fdc4d8f2f23764c58130e628568c71b86e"
+      },
+      {
+        "bytes": 4596,
+        "path": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/evaluation_audit_20261120_corrected/logs/audit_pipeline.log",
+        "sha256": "4dec8edf4c032c3f4cdced46d51e948b3ecabcf1453a47d7bc554b9ba2943209"
+      },
+      {
+        "bytes": 774818,
+        "path": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/evaluation_audit_20261120_corrected/qualitative_results/image_111968.png",
+        "sha256": "f557ae290e391220c12388cf6b4f7134cd5df62609a5fbf6e7b9dca81ed7707e"
+      },
+      {
+        "bytes": 577874,
+        "path": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/evaluation_audit_20261120_corrected/qualitative_results/image_171062.png",
+        "sha256": "d8d9d2f5db3ccb94bfa684ef55bb2146256bcd82b3449b128fb8ad29ceaf5d4a"
+      },
+      {
+        "bytes": 555297,
+        "path": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/evaluation_audit_20261120_corrected/qualitative_results/image_192730.png",
+        "sha256": "f3577b2edc215dd897cc3a856fd3c3c19fee4f7ca3da4fd31ff6c07fc63dada2"
+      },
+      {
+        "bytes": 688912,
+        "path": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/evaluation_audit_20261120_corrected/qualitative_results/image_208002.png",
+        "sha256": "3a1304ef4d404fa94e05a10dca31ad0846b5a2c208c302936ebbcdfa1bf15644"
+      },
+      {
+        "bytes": 427873,
+        "path": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/evaluation_audit_20261120_corrected/qualitative_results/image_247206.png",
+        "sha256": "6d6db729d73458ff5e89658e451ac18def6815019cc825fd9f17f2a327b55685"
+      },
+      {
+        "bytes": 551915,
+        "path": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/evaluation_audit_20261120_corrected/qualitative_results/image_253177.png",
+        "sha256": "c81334e54eacf3c7e37aeb30561ae8d37bb2efa631fef32d8f2bf1b10ed3d9a9"
+      },
+      {
+        "bytes": 701428,
+        "path": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/evaluation_audit_20261120_corrected/qualitative_results/image_288603.png",
+        "sha256": "4c0d6f8375aae6d14de919fc890c1edbd6d6f97f41b63f794e0edf2aa9df3b41"
+      },
+      {
+        "bytes": 829624,
+        "path": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/evaluation_audit_20261120_corrected/qualitative_results/image_290355.png",
+        "sha256": "8de008faac1d54b55a80ae7b7a36557979325aa276a6eb665da7b004e3db0597"
+      },
+      {
+        "bytes": 617449,
+        "path": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/evaluation_audit_20261120_corrected/qualitative_results/image_34418.png",
+        "sha256": "8daadf37bfe3536c7bcb2ffd15a4d48d2fe154389a6579f9ae5c88668eb61dbf"
+      },
+      {
+        "bytes": 569283,
+        "path": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/evaluation_audit_20261120_corrected/qualitative_results/image_423529.png",
+        "sha256": "2f6a50729268ab740c2a91282afb67c3a62a1ac7ccbbf3d3742658ca8fe40938"
+      },
+      {
+        "bytes": 632432,
+        "path": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/evaluation_audit_20261120_corrected/qualitative_results/image_430073.png",
+        "sha256": "f93d672da45adc6a42694cbb5e64e296680e09da993183e45277e8e0e168f2f6"
+      },
+      {
+        "bytes": 684232,
+        "path": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/evaluation_audit_20261120_corrected/qualitative_results/image_47367.png",
+        "sha256": "4ebfe5720658e9dec74cb47bcdddaedec64b4e69f41a2f06b7af6e81c381827c"
+      },
+      {
+        "bytes": 853979,
+        "path": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/evaluation_audit_20261120_corrected/qualitative_results/image_492658.png",
+        "sha256": "383a6a3cf7827dfbce8a373014626f3a913baf8612eecf65a5c314dd228cf971"
+      },
+      {
+        "bytes": 787879,
+        "path": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/evaluation_audit_20261120_corrected/qualitative_results/image_502410.png",
+        "sha256": "daef709722e087a78cf31185de2fa291b759a7f7f681c51996782011ee73ef24"
+      },
+      {
+        "bytes": 596604,
+        "path": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/evaluation_audit_20261120_corrected/qualitative_results/image_557346.png",
+        "sha256": "2afce7619358cd935c384b374f67a1442a99b36f835a1362ec83c2bd0d730a81"
+      },
+      {
+        "bytes": 826797,
+        "path": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/evaluation_audit_20261120_corrected/qualitative_results/image_566941.png",
+        "sha256": "590422aee8a68b7833f65e0d3825f6110faeabeafe5367fbaaf5eb290362718d"
+      }
+    ]
+  },
+  "corrected_training_dev_metric": {
+    "active_categories": 80,
+    "best_macro_category_miou": 0.2794143148723514,
+    "best_small_object_iou": 0.12623175110533888,
+    "best_threshold": 0.44999998807907104,
+    "checkpoint": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/best_projection.pt",
+    "checkpoint_epoch": 40,
+    "checkpoint_files_available": [
+      "best_dev.pt",
+      "initial_mlp.pt",
+      "latest.pt"
+    ],
+    "checkpoint_sha256": "8232ec8f657da47645d73741b16560a1140bfea89cce6826948b9457ce4854d4",
+    "development_images": 1000,
+    "development_manifest_sha256": "552502523d125ef0b941b57c125ddab2c109b4a772acc9c60e115512e6157f8a",
+    "device": "cuda:0",
+    "image_count": 1000,
+    "macro_category_miou": [
+      0.009686288132952307,
+      0.051146195730476365,
+      0.11509674281766395,
+      0.17048594422180888,
+      0.21806996170582207,
+      0.251723231019545,
+      0.27084575476252704,
+      0.2790627854941109,
+      0.2794143148723514,
+      0.27469764525367524,
+      0.2637301150539496,
+      0.2505218648004262,
+      0.2327407318696284,
+      0.20558864704834418,
+      0.1728623751314889,
+      0.13457883336645124,
+      0.0908205909966284,
+      0.045738061034884814,
+      0.006672561901753429
+    ],
+    "macro_definition": "pooled intersection/union per category over development images, then macro-averaged over categories with positive valid ground truth",
+    "metric": "native 16x16 fractional-occupancy IoU; binary predictions at development-calibrated threshold",
+    "selection_caveat": "This recomputes corrected metrics for the saved checkpoint only. Earlier epoch model weights are unavailable, so it cannot retroactively reselect the checkpoint.",
+    "small_object_definition": "effective valid fractional occupancy > 0 and < 4 patch equivalents; absent categories excluded",
+    "small_object_iou": [
+      0.0196048085248392,
+      0.04671324544143205,
+      0.07573777933821461,
+      0.10348682748921158,
+      0.12087444669343127,
+      0.13367323800608147,
+      0.1388300758073966,
+      0.13871431170073426,
+      0.12623175110533888,
+      0.11579702234939027,
+      0.10328373336662003,
+      0.08714621577309839,
+      0.072282421740474,
+      0.05777985597594919,
+      0.04081652704484648,
+      0.026257611843836418,
+      0.01415497883816478,
+      0.005443283477903578,
+      0.0004974023868672044
+    ],
+    "status": "complete",
+    "thresholds": [
+      0.05000000074505806,
+      0.10000000149011612,
+      0.15000000596046448,
+      0.20000000298023224,
+      0.25,
+      0.30000001192092896,
+      0.3499999940395355,
+      0.4000000059604645,
+      0.44999998807907104,
+      0.5,
+      0.550000011920929,
+      0.6000000238418579,
+      0.6499999761581421,
+      0.699999988079071,
+      0.75,
+      0.800000011920929,
+      0.8500000238418579,
+      0.8999999761581421,
+      0.949999988079071
+    ]
+  },
+  "development_metrics": {
+    "v1_raw_pamr": {
+      "224": {
+        "candidate_background_coverage": 0.8948205311135337,
+        "false_negative_foreground_rate": 0.47957629208511,
+        "macro_category_miou_pooled": 0.42529113055272383,
+        "macro_mean_positive_image_category_iou": 0.26790689466573453,
+        "micro_iou": 0.3537427879493009,
+        "positive_image_category_pairs": 3647,
+        "precision": 0.5248237637302535,
+        "recall": 0.52042370791489,
+        "small_object_iou": 0.03758945721430659
+      },
+      "diagnostics": {
+        "grid16_auroc": 0.7910455177454948,
+        "pointing_224": 0.49163696188648204,
+        "pointing_grid16": 0.6588977241568412
+      },
+      "grid16": {
+        "candidate_background_coverage": 0.883805938300263,
+        "false_negative_foreground_rate": 0.46067371213034886,
+        "macro_category_miou_pooled": 0.3986837766902692,
+        "macro_mean_positive_image_category_iou": 0.26732847829733275,
+        "micro_iou": 0.34637632756463954,
+        "positive_image_category_pairs": 3647,
+        "precision": 0.49191580962188736,
+        "recall": 0.5393262878696511,
+        "small_object_iou": 0.047519420455438256
+      }
+    },
+    "v2_pamr": {
+      "224": {
+        "candidate_background_coverage": 0.8425421051326576,
+        "false_negative_foreground_rate": 0.131567819832132,
+        "macro_category_miou_pooled": 0.5044980059568869,
+        "macro_mean_positive_image_category_iou": 0.33274798957326635,
+        "micro_iou": 0.5373771828989642,
+        "positive_image_category_pairs": 3647,
+        "precision": 0.5850040321660896,
+        "recall": 0.8684321801678679,
+        "small_object_iou": 0.09412866386442205
+      },
+      "diagnostics": {
+        "grid16_auroc": 0.8782668717709462,
+        "pointing_224": 0.580751302440362,
+        "pointing_grid16": 0.6882369070468879
+      },
+      "grid16": {
+        "candidate_background_coverage": 0.8439476254699056,
+        "false_negative_foreground_rate": 0.17043942530445538,
+        "macro_category_miou_pooled": 0.45243618241255873,
+        "macro_mean_positive_image_category_iou": 0.27427081856384855,
+        "micro_iou": 0.504933010714524,
+        "positive_image_category_pairs": 3647,
+        "precision": 0.563379249568544,
+        "recall": 0.8295605746955447,
+        "small_object_iou": 0.06282218022396184
+      }
+    },
+    "v2_raw": {
+      "224": {
+        "candidate_background_coverage": 0.8394491805698641,
+        "false_negative_foreground_rate": 0.13901523857166667,
+        "macro_category_miou_pooled": 0.47891487365296187,
+        "macro_mean_positive_image_category_iou": 0.3194400519139099,
+        "micro_iou": 0.5209677933238411,
+        "positive_image_category_pairs": 3647,
+        "precision": 0.5688140703857923,
+        "recall": 0.8609847614283334,
+        "small_object_iou": 0.09734455356916659
+      },
+      "diagnostics": {
+        "grid16_auroc": 0.8672653115874166,
+        "pointing_224": 0.5747189470797917,
+        "pointing_grid16": 0.7598025774609268
+      },
+      "grid16": {
+        "candidate_background_coverage": 0.8540790857054481,
+        "false_negative_foreground_rate": 0.16857442972999886,
+        "macro_category_miou_pooled": 0.4928332356573913,
+        "macro_mean_positive_image_category_iou": 0.34222752481368657,
+        "micro_iou": 0.5379831391177572,
+        "positive_image_category_pairs": 3647,
+        "precision": 0.6038498453309405,
+        "recall": 0.8314255702700012,
+        "small_object_iou": 0.10393149025119337
+      }
+    }
+  },
+  "evaluation_counts": {
+    "development": 1000,
+    "evaluation": 3000
+  },
+  "final_metrics": {
+    "v1_raw_pamr": {
+      "224": {
+        "candidate_background_coverage": 0.8978069667395016,
+        "false_negative_foreground_rate": 0.47235463166953195,
+        "macro_category_miou_pooled": 0.42435864030444853,
+        "macro_mean_positive_image_category_iou": 0.2756505464007944,
+        "micro_iou": 0.3700674741280212,
+        "positive_image_category_pairs": 10649,
+        "precision": 0.5534041642935446,
+        "recall": 0.527645368330468,
+        "small_object_iou": 0.04028871499850274
+      },
+      "diagnostics": {
+        "grid16_auroc": 0.8000806865136301,
+        "pointing_224": 0.504648323786271,
+        "pointing_grid16": 0.6706733026575266
+      },
+      "grid16": {
+        "candidate_background_coverage": 0.8861953396490184,
+        "false_negative_foreground_rate": 0.45451579844605206,
+        "macro_category_miou_pooled": 0.3972117403101772,
+        "macro_mean_positive_image_category_iou": 0.26811874710757416,
+        "micro_iou": 0.3593946175616823,
+        "positive_image_category_pairs": 10649,
+        "precision": 0.5130248952039053,
+        "recall": 0.545484201553948,
+        "small_object_iou": 0.04785094073912072
+      }
+    },
+    "v2_pamr": {
+      "224": {
+        "candidate_background_coverage": 0.8371721740713981,
+        "false_negative_foreground_rate": 0.12653718387033505,
+        "macro_category_miou_pooled": 0.5061492847661623,
+        "macro_mean_positive_image_category_iou": 0.3408194916903657,
+        "micro_iou": 0.5307515139000267,
+        "positive_image_category_pairs": 10649,
+        "precision": 0.5749596663002828,
+        "recall": 0.8734628161296649,
+        "small_object_iou": 0.08707614571352353
+      },
+      "diagnostics": {
+        "grid16_auroc": 0.8828699289460812,
+        "pointing_224": 0.596018405484083,
+        "pointing_grid16": 0.707672081885623
+      },
+      "grid16": {
+        "candidate_background_coverage": 0.8391834489827981,
+        "false_negative_foreground_rate": 0.16567102600378156,
+        "macro_category_miou_pooled": 0.45039994056813243,
+        "macro_mean_positive_image_category_iou": 0.275321807114177,
+        "micro_iou": 0.5001459939417103,
+        "positive_image_category_pairs": 10649,
+        "precision": 0.5552938867837715,
+        "recall": 0.8343289739962183,
+        "small_object_iou": 0.05676427589826781
+      }
+    },
+    "v2_raw": {
+      "224": {
+        "candidate_background_coverage": 0.834815559745389,
+        "false_negative_foreground_rate": 0.1339853184390776,
+        "macro_category_miou_pooled": 0.4770301030399475,
+        "macro_mean_positive_image_category_iou": 0.32138757562860387,
+        "micro_iou": 0.5169790305490887,
+        "positive_image_category_pairs": 10649,
+        "precision": 0.5619241549738456,
+        "recall": 0.8660146815609224,
+        "small_object_iou": 0.09277963250535849
+      },
+      "diagnostics": {
+        "grid16_auroc": 0.871803766452656,
+        "pointing_224": 0.5853131749460043,
+        "pointing_grid16": 0.7742511033899897
+      },
+      "grid16": {
+        "candidate_background_coverage": 0.8502390340340795,
+        "false_negative_foreground_rate": 0.16412319033667808,
+        "macro_category_miou_pooled": 0.4925638962917104,
+        "macro_mean_positive_image_category_iou": 0.3437692154427525,
+        "micro_iou": 0.5346766835082389,
+        "positive_image_category_pairs": 10649,
+        "precision": 0.597392758933915,
+        "recall": 0.835876809663322,
+        "small_object_iou": 0.09807264746162873
+      }
+    }
+  },
+  "final_set_disclosure": "The earlier evaluator processed the final split and its one-row aggregate was inspected. Its per-image JSONL was repeatedly truncated, leaving one row per split. This corrected recomputation uses development-only threshold calibration but the final split is no longer an uninspected blind set.",
+  "legacy_invalid_artifact": {
+    "path": "../evaluation/evaluation_complete.json",
+    "reason": "The per-image JSONL writer reopened in write mode on every iteration; this artifact is preserved but invalid for aggregate claims.",
+    "recorded_images": {
+      "development": 1,
+      "evaluation": 1
+    }
+  },
+  "metric_scope": "Pooled per-category IoU aggregates pixel TP/FP/FN over positive image/category pairs for each class; absent-category images are excluded. The separate macro mean positive-pair IoU averages each positive image/category IoU within class and then across classes. Small-object selection excludes zero-occupancy categories.",
+  "selection_limitation": "Epoch 40 was originally selected using the old development tie-break metric. Only best_dev.pt, latest.pt and the initial weights are available; earlier epoch model snapshots are unavailable, so corrected metrics cannot retroactively select another epoch.",
+  "split_manifest_sha256": "552502523d125ef0b941b57c125ddab2c109b4a772acc9c60e115512e6157f8a",
+  "status": "complete",
+  "superseded_audit_attempt": {
+    "path": "../evaluation_audit_20261120/",
+    "reason": "Its final V2 metrics were calculated at 0.55 rather than the development-selected 0.20, and report finalization initially stopped on a CSV field-name mismatch. The complete files are preserved locally with INVALID_RUN.md; the corrected run is this directory."
+  },
+  "thresholds": {
+    "v1_raw_pamr": 0.55,
+    "v2_pamr": 0.20000001788139343,
+    "v2_raw": 0.20000001788139343
+  },
+  "v1_checkpoint_sha256": "f1c57d5e3a52fde5ed6d17b5fad47aadaa6ce25dc58cab72a3aba9a180d015b1",
+  "v1_epoch50_prior_2000_image_holdout": {
+    "category_image_pairs": 4934,
+    "grid16_macro_mean_positive_image_iou": 0.3290353316357367,
+    "grid16_mean_positive_pair_iou": 0.2832587791603359,
+    "method": "PAMR raw",
+    "source_summary": "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/full_coco_training_20261117/postprocessing_optimization/full_val2014_holdout/segmentation/summary.json"
+  },
+  "v1_prompt_templates": [
+    "itap of a {}.",
+    "a bad photo of a {}.",
+    "a origami {}.",
+    "a photo of the large {}.",
+    "a {} in a video game.",
+    "art of the {}.",
+    "a photo of the small {}."
+  ],
+  "v1_published_baseline": {
+    "category_image_pairs": 240,
+    "checkpoint": "full COCO V1 epoch 100",
+    "cleaned_auroc": 0.8231,
+    "cleaned_macro_category_miou": 0.3059,
+    "cleaned_pointing_accuracy": 0.5375,
+    "images": 80,
+    "pamr": false,
+    "raw_macro_category_miou": 0.288,
+    "source_report": "/opt/openvla/cache/worktrees/trackb-talk2dino-siglip/experiments/kv_cache/outputs/trackb_talk2dino_siglip/full_coco_training_20261117/FULL_TRAINING_REPORT.md",
+    "threshold": 0.54
+  },
+  "v1_recomputed_new_holdout": {
+    "224": {
+      "candidate_background_coverage": 0.8978069667395016,
+      "false_negative_foreground_rate": 0.47235463166953195,
+      "macro_category_miou_pooled": 0.42435864030444853,
+      "macro_mean_positive_image_category_iou": 0.2756505464007944,
+      "micro_iou": 0.3700674741280212,
+      "positive_image_category_pairs": 10649,
+      "precision": 0.5534041642935446,
+      "recall": 0.527645368330468,
+      "small_object_iou": 0.04028871499850274
+    },
+    "diagnostics": {
+      "grid16_auroc": 0.8000806865136301,
+      "pointing_224": 0.504648323786271,
+      "pointing_grid16": 0.6706733026575266
+    },
+    "grid16": {
+      "candidate_background_coverage": 0.8861953396490184,
+      "false_negative_foreground_rate": 0.45451579844605206,
+      "macro_category_miou_pooled": 0.3972117403101772,
+      "macro_mean_positive_image_category_iou": 0.26811874710757416,
+      "micro_iou": 0.3593946175616823,
+      "positive_image_category_pairs": 10649,
+      "precision": 0.5130248952039053,
+      "recall": 0.545484201553948,
+      "small_object_iou": 0.04785094073912072
+    }
+  },
+  "v2_best_epoch_original_selection": {
+    "epoch": 40,
+    "miou": 0.2794143148723514,
+    "small": 0.004794293190571137,
+    "threshold": 0.44999998807907104
+  },
+  "v2_checkpoint_sha256": "8232ec8f657da47645d73741b16560a1140bfea89cce6826948b9457ce4854d4",
+  "v2_recomputed_new_holdout": {
+    "pamr": {
+      "224": {
+        "candidate_background_coverage": 0.8371721740713981,
+        "false_negative_foreground_rate": 0.12653718387033505,
+        "macro_category_miou_pooled": 0.5061492847661623,
+        "macro_mean_positive_image_category_iou": 0.3408194916903657,
+        "micro_iou": 0.5307515139000267,
+        "positive_image_category_pairs": 10649,
+        "precision": 0.5749596663002828,
+        "recall": 0.8734628161296649,
+        "small_object_iou": 0.08707614571352353
+      },
+      "diagnostics": {
+        "grid16_auroc": 0.8828699289460812,
+        "pointing_224": 0.596018405484083,
+        "pointing_grid16": 0.707672081885623
+      },
+      "grid16": {
+        "candidate_background_coverage": 0.8391834489827981,
+        "false_negative_foreground_rate": 0.16567102600378156,
+        "macro_category_miou_pooled": 0.45039994056813243,
+        "macro_mean_positive_image_category_iou": 0.275321807114177,
+        "micro_iou": 0.5001459939417103,
+        "positive_image_category_pairs": 10649,
+        "precision": 0.5552938867837715,
+        "recall": 0.8343289739962183,
+        "small_object_iou": 0.05676427589826781
+      }
+    },
+    "raw": {
+      "224": {
+        "candidate_background_coverage": 0.834815559745389,
+        "false_negative_foreground_rate": 0.1339853184390776,
+        "macro_category_miou_pooled": 0.4770301030399475,
+        "macro_mean_positive_image_category_iou": 0.32138757562860387,
+        "micro_iou": 0.5169790305490887,
+        "positive_image_category_pairs": 10649,
+        "precision": 0.5619241549738456,
+        "recall": 0.8660146815609224,
+        "small_object_iou": 0.09277963250535849
+      },
+      "diagnostics": {
+        "grid16_auroc": 0.871803766452656,
+        "pointing_224": 0.5853131749460043,
+        "pointing_grid16": 0.7742511033899897
+      },
+      "grid16": {
+        "candidate_background_coverage": 0.8502390340340795,
+        "false_negative_foreground_rate": 0.16412319033667808,
+        "macro_category_miou_pooled": 0.4925638962917104,
+        "macro_mean_positive_image_category_iou": 0.3437692154427525,
+        "micro_iou": 0.5346766835082389,
+        "positive_image_category_pairs": 10649,
+        "precision": 0.597392758933915,
+        "recall": 0.835876809663322,
+        "small_object_iou": 0.09807264746162873
+      }
+    }
+  }
+}
