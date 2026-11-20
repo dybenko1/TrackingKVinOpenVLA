@@ -71,7 +71,7 @@ def main():
     profile_lines += [f"| {h} | {amortized[str(h)]:.3f} |" for h in (5,10,20,50)]
     profile_lines += [
         "", "## Memory and limitations", "",
-        f"- Device: {e3['memory']['cuda_device']}; peak CUDA allocation {e3['memory']['cuda_peak_allocated_bytes']/1e9:.2f} GB; reserved {e3['memory']['cuda_reserved_bytes_after_profile']/1e9:.2f} GB; allocated {e3['memory']['cuda_allocated_bytes']/1e9:.2f} GB after profiling.",
+        f"- Device: {e3['memory']['cuda_device']}; peak CUDA allocation {e3['memory']['cuda_peak_allocated_bytes']/1e9:.2f} GB; reserved {e3['memory']['cuda_reserved_bytes_after_profile']/1e9:.2f} GB; allocated {e3['memory']['cuda_allocated_bytes_after_profile']/1e9:.2f} GB after profiling.",
         f"- SigLIP text parameters occupy {e3['memory']['siglip_text_parameter_dtype_bytes']/1e9:.2f} GB at the loaded dtype. This is a parameter-footprint estimate; incremental allocator usage for text-only residency was not isolated.",
         f"- The full-policy-prefill single samples were {prefill_base:.1f} ms baseline and {prefill_hook:.1f} ms with the hook. Their order/warmup sensitivity makes them non-comparable; they are retained in JSON but excluded from timing conclusions.",
         "- No isolated K/V saved-computation timing was measured. Therefore no net acceleration is claimed; measured selection overhead is the minimum work that a future cache implementation must save to break even.",
