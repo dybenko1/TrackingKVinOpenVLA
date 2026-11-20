@@ -1,0 +1,186 @@
+{
+  "e2_manifest_sha256": "15e3eb12d954dc12660ff7a8e6ba671c306593c1a8d6ff5e51c6687efe996d75",
+  "role_audit_sha256": "23db6033b17517fa415bf9e094d33cf6e1c67b75e2b0959bb16db64bad43f51d",
+  "examples": [
+    {
+      "file": "01_libero_goal_open_the_middle_drawer_of_the_cabinet_demo_10_s107.png",
+      "task": "libero_goal/open_the_middle_drawer_of_the_cabinet",
+      "split": "development",
+      "demo": "demo_10",
+      "frame_state": 107,
+      "cache_sha256": "dc4f62baa6138f9117d3983ea257da49d6ae6a7922585a2f899823baea05384a",
+      "hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737",
+      "selection": "task_median_fn"
+    },
+    {
+      "file": "02_libero_goal_open_the_top_drawer_and_put_the_bowl_inside_demo_1_s095.png",
+      "task": "libero_goal/open_the_top_drawer_and_put_the_bowl_inside",
+      "split": "held_out",
+      "demo": "demo_1",
+      "frame_state": 95,
+      "cache_sha256": "367711f134707afc89aabddc1155f9f2fe176af29ee504dd14e0d1e49c54cf39",
+      "hdf5_sha256": "1b50d99a053a7e4547c9ae9ccd2e3cd762543d27be78f240f13440d7ae487ae8",
+      "selection": "task_median_fn"
+    },
+    {
+      "file": "03_libero_goal_put_the_bowl_on_the_plate_demo_0_s024.png",
+      "task": "libero_goal/put_the_bowl_on_the_plate",
+      "split": "development",
+      "demo": "demo_0",
+      "frame_state": 24,
+      "cache_sha256": "dfb29d9c087e6f30353a89284fe0698593d45ca93af2c710ec2355a56f15b4ea",
+      "hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406",
+      "selection": "task_median_fn"
+    },
+    {
+      "file": "04_libero_goal_put_the_wine_bottle_on_the_rack_demo_0_s020.png",
+      "task": "libero_goal/put_the_wine_bottle_on_the_rack",
+      "split": "held_out",
+      "demo": "demo_0",
+      "frame_state": 20,
+      "cache_sha256": "d39a866a4edfcbd0d430059761332af77c8518f76a844437587476e91e76a6e9",
+      "hdf5_sha256": "f9092aa70734fc4083e97fc58c3ba25f87c614d18326182ddc7a455f0ab4da2e",
+      "selection": "task_median_fn"
+    },
+    {
+      "file": "05_libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket_demo_10_s147.png",
+      "task": "libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+      "split": "development",
+      "demo": "demo_10",
+      "frame_state": 147,
+      "cache_sha256": "dfe1b310ede5c9fe803967a002d7dcb186fdddca3ed9bffb098e0ecfb7bf6fe3",
+      "hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d",
+      "selection": "task_median_fn"
+    },
+    {
+      "file": "06_libero_object_pick_up_the_butter_and_place_it_in_the_basket_demo_10_s140.png",
+      "task": "libero_object/pick_up_the_butter_and_place_it_in_the_basket",
+      "split": "development",
+      "demo": "demo_10",
+      "frame_state": 140,
+      "cache_sha256": "4b6ac71bbfdcf387a8673988a885981bd25c4f8d20b3633b3a06423ae65dd5b2",
+      "hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9",
+      "selection": "task_median_fn"
+    },
+    {
+      "file": "07_libero_object_pick_up_the_salad_dressing_and_place_it_in_the_basket_demo_10_s143.png",
+      "task": "libero_object/pick_up_the_salad_dressing_and_place_it_in_the_basket",
+      "split": "held_out",
+      "demo": "demo_10",
+      "frame_state": 143,
+      "cache_sha256": "49690a846a79017c02f38ed6b1c3c461b608effe296fc8af91d9efb3d792b27a",
+      "hdf5_sha256": "45960606a85b9c68980eb8130e0fe16bf3621539cf5d4147f35aa8139573c5ac",
+      "selection": "task_median_fn"
+    },
+    {
+      "file": "08_libero_object_pick_up_the_tomato_sauce_and_place_it_in_the_basket_demo_1_s086.png",
+      "task": "libero_object/pick_up_the_tomato_sauce_and_place_it_in_the_basket",
+      "split": "held_out",
+      "demo": "demo_1",
+      "frame_state": 86,
+      "cache_sha256": "6ddc1079bb823d38074d70612d982b355f242d31f2a06f95c6ddbdff2c2ceb50",
+      "hdf5_sha256": "43c52bdaa78b4c6aff3afb54d932d6a0e065f5c30c8e30a6c17f78749d487ea9",
+      "selection": "task_median_fn"
+    },
+    {
+      "file": "09_libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_demo_0_s020.png",
+      "task": "libero_spatial/pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+      "split": "development",
+      "demo": "demo_0",
+      "frame_state": 20,
+      "cache_sha256": "3d3c927359050081ffcd846a8d0207184e83629f07f00730fb7baf675ca50929",
+      "hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead",
+      "selection": "task_median_fn"
+    },
+    {
+      "file": "10_libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_demo_1_s069.png",
+      "task": "libero_spatial/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate",
+      "split": "development",
+      "demo": "demo_1",
+      "frame_state": 69,
+      "cache_sha256": "c7a7c2d65d5a89d1fa1a8afe79263c1ca9170713d5e28d04d6efba829c4d36e8",
+      "hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3",
+      "selection": "task_median_fn"
+    },
+    {
+      "file": "11_libero_spatial_pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_demo_0_s015.png",
+      "task": "libero_spatial/pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate",
+      "split": "held_out",
+      "demo": "demo_0",
+      "frame_state": 15,
+      "cache_sha256": "46360f4e08270bb2733d46862c97b44ea96b0bacd782bb261fc63a96e0d74c76",
+      "hdf5_sha256": "7ff1ee60447875c152d8c7819f499d23dbc0eb4d4bf045225d5d87a2cdad99bd",
+      "selection": "task_median_fn"
+    },
+    {
+      "file": "12_libero_spatial_pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate_demo_0_s000.png",
+      "task": "libero_spatial/pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate",
+      "split": "held_out",
+      "demo": "demo_0",
+      "frame_state": 0,
+      "cache_sha256": "d694ff3306309da77942cdd7397983f10632e0982ac7c60f26a4b6a57e88bb03",
+      "hdf5_sha256": "1fcb3990cf9fd6185f56531cc9f6dec0a77a59bfa0c7f39dff95b7e43cf6aeaa",
+      "selection": "task_median_fn"
+    },
+    {
+      "file": "13_libero_spatial_pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_demo_1_s067.png",
+      "task": "libero_spatial/pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate",
+      "split": "held_out",
+      "demo": "demo_1",
+      "frame_state": 67,
+      "cache_sha256": "5854d36a677761c5f1d6457833c9e21c3223d41aea9e5ec741b1e4659c92477b",
+      "hdf5_sha256": "7ff1ee60447875c152d8c7819f499d23dbc0eb4d4bf045225d5d87a2cdad99bd",
+      "selection": "worst_role_fn"
+    },
+    {
+      "file": "14_libero_spatial_pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate_demo_1_s074.png",
+      "task": "libero_spatial/pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate",
+      "split": "held_out",
+      "demo": "demo_1",
+      "frame_state": 74,
+      "cache_sha256": "5854d36a677761c5f1d6457833c9e21c3223d41aea9e5ec741b1e4659c92477b",
+      "hdf5_sha256": "7ff1ee60447875c152d8c7819f499d23dbc0eb4d4bf045225d5d87a2cdad99bd",
+      "selection": "worst_role_fn"
+    },
+    {
+      "file": "15_libero_object_pick_up_the_butter_and_place_it_in_the_basket_demo_10_s120.png",
+      "task": "libero_object/pick_up_the_butter_and_place_it_in_the_basket",
+      "split": "development",
+      "demo": "demo_10",
+      "frame_state": 120,
+      "cache_sha256": "4b6ac71bbfdcf387a8673988a885981bd25c4f8d20b3633b3a06423ae65dd5b2",
+      "hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9",
+      "selection": "worst_role_fn"
+    },
+    {
+      "file": "16_libero_object_pick_up_the_butter_and_place_it_in_the_basket_demo_10_s121.png",
+      "task": "libero_object/pick_up_the_butter_and_place_it_in_the_basket",
+      "split": "development",
+      "demo": "demo_10",
+      "frame_state": 121,
+      "cache_sha256": "4b6ac71bbfdcf387a8673988a885981bd25c4f8d20b3633b3a06423ae65dd5b2",
+      "hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9",
+      "selection": "worst_role_fn"
+    },
+    {
+      "file": "17_libero_goal_put_the_wine_bottle_on_the_rack_demo_10_s142.png",
+      "task": "libero_goal/put_the_wine_bottle_on_the_rack",
+      "split": "held_out",
+      "demo": "demo_10",
+      "frame_state": 142,
+      "cache_sha256": "4006fcaa8f69069cc36cc8df32675da38fb982a1f943b02728017b39f58934d9",
+      "hdf5_sha256": "f9092aa70734fc4083e97fc58c3ba25f87c614d18326182ddc7a455f0ab4da2e",
+      "selection": "v1_beats_v2"
+    },
+    {
+      "file": "18_libero_goal_open_the_top_drawer_and_put_the_bowl_inside_demo_1_s092.png",
+      "task": "libero_goal/open_the_top_drawer_and_put_the_bowl_inside",
+      "split": "held_out",
+      "demo": "demo_1",
+      "frame_state": 92,
+      "cache_sha256": "367711f134707afc89aabddc1155f9f2fe176af29ee504dd14e0d1e49c54cf39",
+      "hdf5_sha256": "1b50d99a053a7e4547c9ae9ccd2e3cd762543d27be78f240f13440d7ae487ae8",
+      "selection": "high_recall_low_reuse"
+    }
+  ]
+}
