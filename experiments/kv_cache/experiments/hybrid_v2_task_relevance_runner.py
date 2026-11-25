@@ -95,15 +95,28 @@ class DINOFeatureTap:
             self.handle.remove()
 
 
-def v2_probabilities(features: torch.Tensor, projected_text: torch.Tensor) -> np.ndarray:
+def v2_probabilities(features: torch.Tensor, projected_text: torch.Tensor) -> tuple[np.ndarray, dict[str, float]]:
     if tuple(features.shape) != (1, 256, 1024):
         raise RuntimeError(f"Expected native DINO [1,256,1024], got {tuple(features.shape)}")
+    host_start = time.perf_counter()
+    gpu_start = gpu_end = None
+    if features.device.type == "cuda":
+        gpu_start = torch.cuda.Event(enable_timing=True)
+        gpu_end = torch.cuda.Event(enable_timing=True)
+        gpu_start.record()
     patch = F.normalize(features.float(), dim=-1)[0]
     text = F.normalize(projected_text.float(), dim=-1)
     probs = torch.sigmoid(10.0 * (patch @ text.T - 0.20)).T
-    if tuple(probs.shape) != (projected_text.shape[0], 256) or not torch.isfinite(probs).all():
+    finite = torch.isfinite(probs).all()
+    if gpu_end is not None:
+        gpu_end.record()
+    if tuple(probs.shape) != (projected_text.shape[0], 256) or not bool(finite.item()):
         raise RuntimeError("V2 probability maps have invalid shape or nonfinite values")
-    return probs.detach().cpu().numpy()
+    result = probs.detach().cpu().numpy()
+    host_ms = (time.perf_counter() - host_start) * 1000.0
+    gpu_ms = float(gpu_start.elapsed_time(gpu_end)) if gpu_start is not None else 0.0
+    return result, {"scoring_gpu_ms": gpu_ms, "scoring_and_cpu_transfer_wall_ms": host_ms,
+                    "cpu_sync_transfer_and_python_ms": max(host_ms - gpu_ms, 0.0)}
 
 
 def get_task_text(description: str, text_model, tokenizer, projection, device):
@@ -179,6 +192,7 @@ def one_episode(task_id, state_id, model, processor, device, unnorm_key,
             sidecar = RefreshAttentionSidecar(model) if refresh else None
             selected = {}
             current_probs = {}
+            selection_timing = {}
             if not refresh:
                 expected_anchor = step - step % R
                 if source is None or source["step"] != expected_anchor:
@@ -188,10 +202,15 @@ def one_episode(task_id, state_id, model, processor, device, unnorm_key,
                 context = LiveMaskedKVProjectionSkip(model, source["cache"], source["layout"], np.zeros(256, dtype=bool))
 
                 def select_from_live_dino(features):
-                    p = v2_probabilities(features, text_projected)
+                    p, score_times = v2_probabilities(features, text_projected)
+                    compose_start = time.perf_counter()
                     selection = compose_hybrid_mask(p, source["attention"], .20, .10)
+                    compose_ms = (time.perf_counter() - compose_start) * 1000.0
                     selected["value"] = selection
                     current_probs["value"] = p
+                    selection_timing.update(score_times)
+                    selection_timing["mask_union_threshold_and_ranking_ms"] = compose_ms
+                    selection_timing["complete_hybrid_selection_ms"] = score_times["scoring_and_cpu_transfer_wall_ms"] + compose_ms
                     context.set_selection(selection["fresh_visual"])
 
                 tap = DINOFeatureTap(model, select_from_live_dino)
@@ -211,12 +230,18 @@ def one_episode(task_id, state_id, model, processor, device, unnorm_key,
             if refresh:
                 if sidecar.scores is None or sidecar.scores.shape != (256,) or not np.isfinite(sidecar.scores).all():
                     raise RuntimeError("Refresh attention sidecar did not return 256 finite scores")
-                probs = v2_probabilities(tap.features, text_projected)
+                probs, score_times = v2_probabilities(tap.features, text_projected)
+                compose_start = time.perf_counter()
                 selection = compose_hybrid_mask(probs, sidecar.scores, .20, .10)
+                compose_ms = (time.perf_counter() - compose_start) * 1000.0
+                selection_timing.update(score_times)
+                selection_timing["mask_union_threshold_and_ranking_ms"] = compose_ms
+                selection_timing["complete_hybrid_selection_ms"] = score_times["scoring_and_cpu_transfer_wall_ms"] + compose_ms
                 source_cache = clone_prefill_cache(pred["cache"])
                 assert_independent_cache_clone(source_cache, pred["cache"])
                 source = {"cache": source_cache, "layout": dict(pred["layout"]), "step": step,
                           "fresh": True, "attention": sidecar.scores.copy(),
+                          "v2_foreground": selection["v2_foreground"].copy(),
                           "versions": cache_storage_versions(source_cache)}
                 selected["value"] = selection
                 current_probs["value"] = probs
@@ -267,6 +292,10 @@ def one_episode(task_id, state_id, model, processor, device, unnorm_key,
             if step in (0, 1):
                 render_hybrid_masks(OUT / "mask_visualizations" / f"task{task_id}_state{state_id}_step{step}.png",
                                     image, selection, f"Task {task_id}, state {state_id}, step {step}; score age {age}")
+            actual_reused = 0 if refresh else int(selection["reusable_visual"].sum())
+            source_v2_fg_reused = (0 if refresh else int(np.logical_and(
+                selection["reusable_visual"], source["v2_foreground"]).sum()))
+            end_to_end_decision_ms = wall_ms + (selection_timing["complete_hybrid_selection_ms"] if refresh else 0.0)
             record = {"step": step, "type": "refresh" if refresh else "reuse",
                       "source_step": source["step"], "source_age": age,
                       "prompt_phrases": phrases, "visual_positions": [1, 256],
@@ -276,11 +305,17 @@ def one_episode(task_id, state_id, model, processor, device, unnorm_key,
                       "attention_additional_count": selection["counts"]["attention_only_protected"],
                       "fresh_visual_count": selection["counts"]["fresh_visual"],
                       "reusable_visual_count": selection["counts"]["reusable_visual"],
+                      "actual_reused_visual_tokens": actual_reused,
+                      "actual_reuse_coverage": actual_reused / 256.0,
+                      "source_v2_foreground_count": int(source["v2_foreground"].sum()),
+                      "reused_tokens_v2_foreground_at_source": source_v2_fg_reused,
                       "k_skipped_rows_per_layer": 0 if refresh else selection["counts"]["reusable_visual"],
                       "v_skipped_rows_per_layer": 0 if refresh else selection["counts"]["reusable_visual"],
                       "total_k_skipped_rows": 0 if refresh else 32 * selection["counts"]["reusable_visual"],
                       "total_v_skipped_rows": 0 if refresh else 32 * selection["counts"]["reusable_visual"],
                       "policy_ms": wall_ms, "attention_capture_ms": sidecar.capture_ms if refresh else None,
+                      **selection_timing,
+                      "end_to_end_decision_ms": end_to_end_decision_ms,
                       "layers_validated": 32 if refresh else len(ctx_diag["layers"]),
                       "action_token_ids": pred["action_token_ids"], "policy_action": pred["policy_action"].tolist(),
                       "anchor_immutable": True, "fresh_anchor_only": True}
@@ -386,7 +421,7 @@ def main():
         status["scenario_summary"] = [{"task_id": r["task_id"], "state_id": r["state_id"],
                                         "success": r["success"], "steps": r["steps"]} for r in results]
         atomic_json(OUT / "RUN_STATUS.json", status)
-        write_report(config, results, status)
+        write_detailed_report(config, results, status)
     except Exception as exc:
         status.update({"status": "failed", "error": repr(exc), "traceback": traceback.format_exc(),
                        "failed_unix": time.time()})
@@ -474,6 +509,164 @@ def write_report(config, results, status):
              "The runtime asserts one native DINO hook call per policy input, 256 aligned DINO patch positions mapped to LLM positions 1–256, finite V2 probabilities, fresh action/logit parity during smoke validation, all 32 patched layers, full Q projection, exact fresh K/V row counts, source-cache immutability, and source age 1–4.", "",
              "The mask labels denote cache freshness priority. They are not ground-truth physical segmentation. Skipped projection counts are structural savings; synchronized wall-time measurements include policy execution and do not by themselves establish acceleration.", "",
              "## Artifacts", "", "- `RUN_STATUS.json` — persistent status and completed scenarios.", "- `scenario_results/` — per-scenario actions and per-step cache diagnostics.", "- `mask_visualizations/` — V2, attention-only, and reuse-candidate masks.", "- `configuration.json` — fixed experiment configuration and checkpoint identity.", ""]
+    (OUT / "HYBRID_V2_TASK_RELEVANCE_REPORT.md").write_text("\n".join(text))
+
+
+def write_detailed_report(config, results, status):
+    """Write full reuse, overhead, latency, and historical-comparison metrics."""
+    rows = [r for ep in results for r in ep["records"]]
+    refresh = [r for r in rows if r["type"] == "refresh"]
+    reuse = [r for r in rows if r["type"] == "reuse"]
+
+    def stats(values):
+        values = np.asarray(list(values), dtype=np.float64)
+        if not values.size:
+            return {"count": 0, "mean": None, "p50": None, "p95": None}
+        return {"count": int(values.size), "mean": float(values.mean()),
+                "p50": float(np.median(values)), "p95": float(np.percentile(values, 95))}
+
+    # Historical references are loaded without modifying or rerunning them.
+    references = {}
+    stage3c_by_scenario = {}
+    stage3c_csv = REPO / "experiments/kv_cache/outputs/stage3c_oracle_task_relevance/per_scenario_metrics.csv"
+    stage4a_summary = REPO / "experiments/kv_cache/outputs/stage4a_oracle_free_attention/summary.json"
+    if stage3c_csv.is_file():
+        with stage3c_csv.open(newline="") as f:
+            stage3c_rows = [x for x in csv.DictReader(f) if x["protection_percent"] == "10"]
+        for x in stage3c_rows:
+            key = f"{int(x['task_id'])}:{int(x['state_id'])}"
+            stage3c_by_scenario[key] = {
+                "fresh_success": x["fresh_success"] == "True", "fresh_steps": int(x["fresh_steps"]),
+                "stage3c_success": x["stage3c_success"] == "True", "stage3c_steps": int(x["stage3c_steps"])}
+        references["stage3c_and_fresh"] = {"source": str(stage3c_csv), "per_scenario": stage3c_by_scenario}
+    stage4a_rows = []
+    stage4a_aggregates = []
+    if stage4a_summary.is_file():
+        old = json.loads(stage4a_summary.read_text())
+        stage4a_rows = [x for x in old.get("scenarios", []) if x.get("mask_method") == "attention"]
+        stage4a_aggregates = [x for x in old.get("budget_method_aggregates", []) if x.get("method") == "attention"]
+        references["stage4a_attention_only"] = {
+            "source": str(stage4a_summary), "aggregates": stage4a_aggregates,
+            "per_scenario": stage4a_rows}
+
+    total_decisions = len(rows)
+    total_actual_reuse = sum(int(x["actual_reused_visual_tokens"]) for x in rows)
+    total_reused = sum(int(x["actual_reused_visual_tokens"]) for x in reuse)
+    source_fg_reused = sum(int(x["reused_tokens_v2_foreground_at_source"]) for x in reuse)
+    total_k = sum(int(x["total_k_skipped_rows"]) for x in reuse)
+    total_v = sum(int(x["total_v_skipped_rows"]) for x in reuse)
+    refresh_attention_ms = [float(x["attention_capture_ms"]) for x in refresh if x.get("attention_capture_ms") is not None]
+
+    latency = {
+        "policy_call_refresh_ms": stats(x["policy_ms"] for x in refresh),
+        "policy_call_reuse_ms": stats(x["policy_ms"] for x in reuse),
+        "end_to_end_refresh_decision_ms": stats(x["end_to_end_decision_ms"] for x in refresh),
+        "end_to_end_reuse_decision_ms": stats(x["end_to_end_decision_ms"] for x in reuse),
+        "policy_call_definition": "Synchronized _policy_call wall time; includes the in-call V2 selection on reuse decisions and refresh-side attention sidecar capture.",
+        "end_to_end_definition": "Policy-call wall time plus V2 selection measured after the prefill on refresh decisions; reuse selection is already inside the policy call.",
+        "historical_comparison": "No latency speedup is claimed; baseline timing paths and conditions are not established as directly comparable."}
+    overhead = {
+        "complete_hybrid_selection_ms": stats(x["complete_hybrid_selection_ms"] for x in rows),
+        "v2_gpu_scoring_ms": stats(x["scoring_gpu_ms"] for x in rows),
+        "v2_scoring_and_cpu_transfer_wall_ms": stats(x["scoring_and_cpu_transfer_wall_ms"] for x in rows),
+        "cpu_sync_transfer_and_python_residual_ms": stats(x["cpu_sync_transfer_and_python_ms"] for x in rows),
+        "mask_union_threshold_and_ranking_ms": stats(x["mask_union_threshold_and_ranking_ms"] for x in rows),
+        "refresh_only_attention_capture_ms": stats(refresh_attention_ms),
+        "attention_capture_amortized_ms_per_policy_decision": float(sum(refresh_attention_ms) / max(total_decisions, 1)),
+        "attention_refresh_count": len(refresh_attention_ms)}
+
+    scenario_rows = []
+    for ep in results:
+        recs = ep["records"]
+        rf = [x for x in recs if x["type"] == "refresh"]
+        rr = [x for x in recs if x["type"] == "reuse"]
+        actual = sum(int(x["actual_reused_visual_tokens"]) for x in recs)
+        source_fg = sum(int(x["reused_tokens_v2_foreground_at_source"]) for x in rr)
+        reused = sum(int(x["actual_reused_visual_tokens"]) for x in rr)
+        scenario_rows.append({
+            "task_id": ep["task_id"], "state_id": ep["state_id"], "success": ep["success"], "steps": ep["steps"],
+            "refresh_steps": len(rf), "reuse_steps": len(rr),
+            "actual_reused_tokens_mean_all_decisions": actual / max(len(recs), 1),
+            "actual_reuse_coverage_all_decisions": actual / max(256 * len(recs), 1),
+            "reuse_candidate_tokens_mean_reuse_steps": float(np.mean([x["reusable_visual_count"] for x in rr])) if rr else 0.0,
+            "mean_v2_foreground_tokens_per_decision": float(np.mean([x["v2_foreground_count"] for x in recs])),
+            "mean_attention_additional_tokens_per_decision": float(np.mean([x["attention_additional_count"] for x in recs])),
+            "reused_tokens_v2_foreground_at_source": source_fg,
+            "fraction_reused_tokens_v2_foreground_at_source": source_fg / max(reused, 1),
+            "k_projection_rows_skipped": sum(int(x["total_k_skipped_rows"]) for x in rr),
+            "v_projection_rows_skipped": sum(int(x["total_v_skipped_rows"]) for x in rr),
+            "refresh_policy_call_ms": stats(x["policy_ms"] for x in rf),
+            "reuse_policy_call_ms": stats(x["policy_ms"] for x in rr),
+            "refresh_end_to_end_decision_ms": stats(x["end_to_end_decision_ms"] for x in rf),
+            "reuse_end_to_end_decision_ms": stats(x["end_to_end_decision_ms"] for x in rr),
+            "selection_ms": stats(x["complete_hybrid_selection_ms"] for x in recs),
+            "attention_refresh_ms": stats(x["attention_capture_ms"] for x in rf if x.get("attention_capture_ms") is not None),
+            "attention_amortized_ms_per_decision": sum(float(x.get("attention_capture_ms") or 0) for x in rf) / max(len(recs), 1)})
+
+    csv_rows = []
+    for row in scenario_rows:
+        flat = {}
+        for key, value in row.items():
+            if isinstance(value, dict):
+                for subkey, subval in value.items():
+                    flat[f"{key}_{subkey}"] = subval
+            else:
+                flat[key] = value
+        csv_rows.append(flat)
+    with (OUT / "per_scenario_metrics.csv").open("w", newline="") as f:
+        fields = list(csv_rows[0]) if csv_rows else []
+        writer = csv.DictWriter(f, fieldnames=fields, lineterminator="\n")
+        if fields:
+            writer.writeheader()
+            writer.writerows(csv_rows)
+
+    summary = {
+        "status": status["status"], "configuration": config, "scenario_count": len(results),
+        "successes": sum(bool(x["success"]) for x in results), "total_policy_decisions": total_decisions,
+        "mean_actual_reused_tokens_per_decision_including_full_refreshes": total_actual_reuse / max(total_decisions, 1),
+        "actual_reuse_coverage_including_full_refreshes": total_actual_reuse / max(256 * total_decisions, 1),
+        "mean_reuse_candidates_per_reuse_decision": float(np.mean([x["reusable_visual_count"] for x in reuse])) if reuse else None,
+        "total_k_projection_rows_skipped": total_k, "total_v_projection_rows_skipped": total_v,
+        "mean_k_projection_rows_skipped_per_policy_decision": total_k / max(total_decisions, 1),
+        "mean_v_projection_rows_skipped_per_policy_decision": total_v / max(total_decisions, 1),
+        "reused_tokens_classified_v2_foreground_at_source_refresh": source_fg_reused,
+        "fraction_reused_tokens_classified_v2_foreground_at_source_refresh": source_fg_reused / max(total_reused, 1),
+        "latency": latency, "overhead": overhead, "references": references,
+        "scenario_summary": [{"task_id": e["task_id"], "state_id": e["state_id"], "success": e["success"], "steps": e["steps"]} for e in results]}
+    atomic_json(OUT / "summary.json", summary)
+    atomic_json(OUT / "comparison_references.json", references)
+
+    stage4a_lookup = {(int(x["task_id"]), int(x["state_id"]), int(x["fresh_budget_pct"])): x
+                      for x in stage4a_rows}
+    text = ["# Hybrid V2 + Task-Relevance KV Reuse", "",
+        f"Execution status: **{status['status']}**. Completed scenarios: **{len(results)}/9**, successes: **{summary['successes']}/9**.", "",
+        "Frozen V2 epoch 40 at probability threshold 0.20 marks foreground. The top 10% of current V2-background tokens ranked by the latest Stage 3C layer-15 text-to-visual scores are additionally protected. V2 selection is recomputed each frame; attention scores refresh only at independent R5 anchors. Reused K/V comes only from the latest independent full refresh.", "",
+        "## Success and completion-step comparison", "",
+        "Historical outcomes use the same scenario identifiers/seeds but are not paired trajectories; different actions change subsequent scenes.", "",
+        "| Task | State | Hybrid | Fresh | Stage 3C oracle + 10% | Stage 4A attention 90% fresh | Stage 4A 75% fresh | Stage 4A 60% fresh |",
+        "|---:|---:|---|---|---|---|---|---|"]
+    for ep in results:
+        base = stage3c_by_scenario.get(f"{ep['task_id']}:{ep['state_id']}", {})
+        def old_cell(success, steps):
+            return f"{'success' if success else 'failure'} / {steps} steps" if steps is not None else "—"
+        def a_cell(budget):
+            v = stage4a_lookup.get((ep["task_id"], ep["state_id"], budget))
+            return old_cell(bool(v["success"]), v["steps"]) if v else "—"
+        text.append(f"| {ep['task_id']} | {ep['state_id']} | {old_cell(bool(ep['success']), ep['steps'])} | "
+                    f"{old_cell(base.get('fresh_success'), base.get('fresh_steps'))} | "
+                    f"{old_cell(base.get('stage3c_success'), base.get('stage3c_steps'))} | "
+                    f"{a_cell(90)} | {a_cell(75)} | {a_cell(60)} |")
+    text += ["", "## Reuse and actual projection skipping", "",
+        f"Across {total_decisions} decisions (full refreshes counted as zero reuse), mean actual reuse was {summary['mean_actual_reused_tokens_per_decision_including_full_refreshes']:.2f}/256 tokens, or {summary['actual_reuse_coverage_including_full_refreshes']:.1%}. Reuse decisions alone averaged {summary['mean_reuse_candidates_per_reuse_decision']:.2f} candidate tokens. Actual skipped rows: K {total_k:,}, V {total_v:,}; all-layer totals are accumulated over 32 Llama layers.", "",
+        f"{source_fg_reused:,} reused tokens ({summary['fraction_reused_tokens_classified_v2_foreground_at_source_refresh']:.2%}) were V2 foreground at the source refresh. This is a diagnostic only; it did not affect selection.", "",
+        "## Selection overhead and latency", "",
+        f"Complete V2 hybrid selection averaged {overhead['complete_hybrid_selection_ms']['mean']:.3f} ms (p50 {overhead['complete_hybrid_selection_ms']['p50']:.3f}, p95 {overhead['complete_hybrid_selection_ms']['p95']:.3f}), including CPU transfer/synchronization and mask union/threshold/ranking. GPU scoring averaged {overhead['v2_gpu_scoring_ms']['mean']:.3f} ms; scoring plus CPU transfer wall time averaged {overhead['v2_scoring_and_cpu_transfer_wall_ms']['mean']:.3f} ms; ranking/composition averaged {overhead['mask_union_threshold_and_ranking_ms']['mean']:.3f} ms.", "",
+        f"Refresh-only attention capture averaged {overhead['refresh_only_attention_capture_ms']['mean']:.2f} ms per refresh and {overhead['attention_capture_amortized_ms_per_policy_decision']:.2f} ms amortized per policy decision.", "",
+        f"End-to-end refresh decision latency mean/p50/p95: {latency['end_to_end_refresh_decision_ms']['mean']:.2f}/{latency['end_to_end_refresh_decision_ms']['p50']:.2f}/{latency['end_to_end_refresh_decision_ms']['p95']:.2f} ms. Reuse decision latency: {latency['end_to_end_reuse_decision_ms']['mean']:.2f}/{latency['end_to_end_reuse_decision_ms']['p50']:.2f}/{latency['end_to_end_reuse_decision_ms']['p95']:.2f} ms. Historical latency runs are not treated as directly comparable; no speedup claim is made.", "",
+        "Per-scenario coverage, latency distributions, source-mask overlap, and projection-row counts are in `per_scenario_metrics.csv`. Per-step diagnostics are preserved in local scenario records.", "",
+        "## Validation and interpretation", "",
+        "The smoke validation confirmed fresh logits/action-token parity, passive one-pass DINO capture, 256-position alignment, all 32 patched layers, full Q, true K/V skip rows, immutable anchors, and ages 1–4. This is a small fixed scenario matrix, not evidence of broad generalization. Projection rows skipped are structural counts, not a latency claim.", "",
+        "## Artifacts", "", "- `RUN_STATUS.json` — persistent job status.", "- `per_scenario_metrics.csv` — outcome, coverage, projection rows, and timing by scenario.", "- `scenario_results/` — per-scenario/per-step records.", "- `mask_visualizations/` — representative hybrid masks.", "- `configuration.json` — frozen configuration and checkpoint identity.", ""]
     (OUT / "HYBRID_V2_TASK_RELEVANCE_REPORT.md").write_text("\n".join(text))
 
 
