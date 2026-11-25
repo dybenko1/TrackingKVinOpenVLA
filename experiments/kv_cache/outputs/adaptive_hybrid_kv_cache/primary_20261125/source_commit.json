@@ -1,0 +1,10 @@
+{
+  "branch": "thesis/trackb-dense-grounding-v2",
+  "finalization_source_commit": "c4e27bb258f9739c4e70554d5d031b233ad05dcd",
+  "policy_execution_source_commit": "4315ef667965f46c9c1a8d8a49317b616bd1c000",
+  "remote": "git@github.com:dybenko1/TrackingKVinOpenVLA.git",
+  "remote_source_commit_verified": "c4e27bb258f9739c4e70554d5d031b233ad05dcd",
+  "source_commit": "c4e27bb258f9739c4e70554d5d031b233ad05dcd",
+  "starting_reference_commit": "168dd80eefd1b0a6d6926d89f309f8be6db45d13",
+  "v2_checkpoint_sha256": "8232ec8f657da47645d73741b16560a1140bfea89cce6826948b9457ce4854d4"
+}
