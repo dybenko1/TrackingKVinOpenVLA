@@ -114,6 +114,7 @@ def publish():
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "logs").mkdir(exist_ok=True)
+    (OUT / "runtime").mkdir(exist_ok=True)
     lock = (OUT / "runtime/supervisor.lock").open("a+")
     try:
         fcntl.flock(lock.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)

@@ -383,7 +383,8 @@ def main():
             atomic_json(OUT / "RUN_STATUS.json", status)
         status["status"] = "complete"
         status["finished_unix"] = time.time()
-        status["results"] = results
+        status["scenario_summary"] = [{"task_id": r["task_id"], "state_id": r["state_id"],
+                                        "success": r["success"], "steps": r["steps"]} for r in results]
         atomic_json(OUT / "RUN_STATUS.json", status)
         write_report(config, results, status)
     except Exception as exc:
@@ -465,7 +466,9 @@ def write_report(config, results, status):
         "p95_policy_ms": float(np.percentile([x["policy_ms"] for x in rows],95)) if rows else None,
         "total_k_rows_skipped": int(sum(x["total_k_skipped_rows"] for x in reuse)),
         "total_v_rows_skipped": int(sum(x["total_v_skipped_rows"] for x in reuse)),
-        "references": references, "scenarios": results}
+        "references": references,
+        "scenario_summary": [{"task_id": e["task_id"], "state_id": e["state_id"],
+                              "success": e["success"], "steps": e["steps"]} for e in results]}
     atomic_json(OUT / "summary.json", summary)
     text += ["", "## Validation notes", "",
              "The runtime asserts one native DINO hook call per policy input, 256 aligned DINO patch positions mapped to LLM positions 1–256, finite V2 probabilities, fresh action/logit parity during smoke validation, all 32 patched layers, full Q projection, exact fresh K/V row counts, source-cache immutability, and source age 1–4.", "",
