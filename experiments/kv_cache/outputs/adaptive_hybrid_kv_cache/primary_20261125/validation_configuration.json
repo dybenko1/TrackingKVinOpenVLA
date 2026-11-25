@@ -1,0 +1,87 @@
+{
+  "attention_fraction_of_current_background": 0.1,
+  "attention_layer": 15,
+  "attention_source_lag": 1,
+  "branch": "thesis/trackb-dense-grounding-v2",
+  "checkpoint": "/opt/openvla/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/best_projection.pt",
+  "confidence_metric": "mean per-action-token (top1-top2) full-vocabulary softmax probability margin",
+  "confidence_threshold": 0.65,
+  "confidence_trigger_lag": 1,
+  "configuration_sha256": "3a0cedb6d7b2c995949187f786168262891f6640b2862f0bef7cb143414a6e9f",
+  "foreground_probability_threshold": 0.2,
+  "horizon": 220,
+  "maximum_age": null,
+  "mode": "validation",
+  "model_runtime": {
+    "attention_backend": "sdpa",
+    "fused_visual_features_reference_shape": [
+      1,
+      256,
+      2176
+    ],
+    "fused_visual_features_source": "previous E3 live OpenVLA integration profile; default forward unchanged",
+    "image_transform": "existing OpenVLA processor and policy_image_from_observation; no preprocessing changes",
+    "native_dino_expected_features": [
+      1,
+      256,
+      1024
+    ],
+    "native_dino_module_class": "VisionTransformer",
+    "policy_checkpoint_config_class": "OpenVLAConfig",
+    "repository": "openvla/openvla-7b-finetuned-libero-spatial",
+    "revision": "962318cec55ac10993ff0f5f43eda9a270b4c873",
+    "torch_version": "2.6.0",
+    "transformers_version": "4.49.0"
+  },
+  "name": "adaptive hybrid rolling V2 + task relevance",
+  "periodic_refresh": false,
+  "rolling_token_cache": true,
+  "seed": 7,
+  "siglip_runtime": {
+    "checkpoint_dir": "/opt/openvla/cache/models/timm/ViT-SO400M-14-SigLIP-384",
+    "checkpoint_repository_expected": "timm/ViT-SO400M-14-SigLIP-384",
+    "checkpoint_revision": "ac16108d567c4389e6cd2b11c9b8585f7474435b",
+    "frozen": true,
+    "missing_text_keys": [],
+    "open_clip_version": "2.32.0",
+    "strict_text_state_load": true,
+    "text_context_length": 64,
+    "text_heads": 16,
+    "text_layers": 27,
+    "text_output_dim": 1152,
+    "text_positional_embedding_shape": [
+      64,
+      1152
+    ],
+    "text_state_tensor_count": 330,
+    "text_width": 1152,
+    "tokenizer": {
+      "canonicalization": "OpenCLIP HFTokenizer.clean_fn from checkpoint configuration",
+      "checkpoint_dir": "/opt/openvla/cache/models/timm/ViT-SO400M-14-SigLIP-384",
+      "clean": "canonicalize",
+      "context_length": 64,
+      "eos_token_id": 1,
+      "pad_token_id": 1,
+      "tokenizer_class": "T5TokenizerFast"
+    },
+    "torch_version": "2.6.0",
+    "unexpected_text_keys": [],
+    "visual_tower_loaded": false,
+    "weights_path": "/opt/openvla/cache/models/timm/ViT-SO400M-14-SigLIP-384/open_clip_model.safetensors"
+  },
+  "sigmoid_cosine_offset": 0.2,
+  "sigmoid_cosine_scale": 10.0,
+  "states": [
+    0,
+    1,
+    2
+  ],
+  "tasks": [
+    4,
+    5,
+    7
+  ],
+  "transition_rule": "FG_(t-1) AND NOT FG_t",
+  "v2_checkpoint_sha256": "8232ec8f657da47645d73741b16560a1140bfea89cce6826948b9457ce4854d4",
+  "v2_probability_threshold": 0.2
+}

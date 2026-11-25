@@ -22,6 +22,7 @@ from __future__ import annotations
 import argparse
 import json
 import random
+import time
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Sequence, Tuple
 
@@ -117,6 +118,7 @@ def capture_prediction(
     device: torch.device,
     unnorm_key: str,
     intervention: Optional[Any] = None,
+    capture_action_margins: bool = False,
 ) -> Dict[str, Any]:
     """Run greedy policy inference and capture an independent prefill-only cache.
 
@@ -134,9 +136,20 @@ def capture_prediction(
     if prefill_length != int(layout["prefill_length"]):
         raise AssertionError("Snapshot cache length disagrees with derived multimodal layout.")
     with torch.inference_mode():
-        action_ids = greedy_decode_from_prefill(
-            model, logits, clone_prefill_cache(cache), model.get_action_dim(unnorm_key)
+        decoded = greedy_decode_from_prefill(
+            model, logits, clone_prefill_cache(cache), model.get_action_dim(unnorm_key),
+            return_probability_margins=capture_action_margins,
         )
+        if capture_action_margins:
+            action_ids, token_probability_margins, confidence_cost_ms = decoded
+            confidence_scalar_start = time.perf_counter()
+            action_confidence = float(token_probability_margins.mean().item())
+            confidence_cost_ms += (time.perf_counter() - confidence_scalar_start) * 1000.0
+        else:
+            action_ids = decoded
+            token_probability_margins = None
+            action_confidence = None
+            confidence_cost_ms = None
     decoded_action = decode_action_token_ids(model, action_ids, unnorm_key)
     if not np.array_equal(np.asarray(policy_action), decoded_action):
         raise AssertionError("Manual action-token decode does not reproduce predict_action().")
@@ -150,6 +163,10 @@ def capture_prediction(
         "layout": layout,
         "policy_action": np.asarray(policy_action),
         "action_token_ids": action_ids[0].detach().cpu().tolist(),
+        "action_probability_margins": (token_probability_margins[0].detach().cpu().tolist()
+                                        if token_probability_margins is not None else None),
+        "action_confidence_margin": action_confidence,
+        "confidence_compute_ms": confidence_cost_ms,
         "prefill_length": prefill_length,
     }
 

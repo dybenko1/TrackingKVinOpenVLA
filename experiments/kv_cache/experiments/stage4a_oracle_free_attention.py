@@ -219,15 +219,18 @@ def make_env(task_id: int):
     return suite, task, states, env, task_description
 
 
-def _policy_call(model, processor, image, prompt, device, key, intervention=None, monitor=True):
+def _policy_call(model, processor, image, prompt, device, key, intervention=None, monitor=True,
+                 capture_action_margins=False):
     torch.cuda.synchronize(device)
     start = time.perf_counter()
     if monitor:
         with ProjectionRowMonitor(model) as rows:
-            pred = capture_prediction(model, processor, image, prompt, device, key, intervention)
+            pred = capture_prediction(model, processor, image, prompt, device, key, intervention,
+                                      capture_action_margins=capture_action_margins)
     else:
         rows = None
-        pred = capture_prediction(model, processor, image, prompt, device, key, intervention)
+        pred = capture_prediction(model, processor, image, prompt, device, key, intervention,
+                                  capture_action_margins=capture_action_margins)
     torch.cuda.synchronize(device)
     elapsed_ms = (time.perf_counter() - start) * 1000.0
     return pred, elapsed_ms, rows

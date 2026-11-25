@@ -19,6 +19,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import time
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Sequence, Tuple
 
@@ -230,11 +231,32 @@ def greedy_decode_from_prefill(
     prefill_last_logits: torch.Tensor,
     prefill_cache: DynamicCache,
     action_dim: int,
-) -> torch.Tensor:
-    """Continue ordinary cached, greedy one-token forwards from an existing prefill cache."""
+    *,
+    return_probability_margins: bool = False,
+) -> torch.Tensor | tuple[torch.Tensor, torch.Tensor, float]:
+    """Continue greedy decode; optionally retain each action-token distribution margin.
+
+    The optional margins use full-vocabulary softmax exactly as greedy
+    GenerationMixin selection does. No extra decoder forwards are performed.
+    """
     generated_ids: List[torch.Tensor] = []
+    margins: List[torch.Tensor] = []
+    margin_events = []
+    margin_host_ms = 0.0
     logits = prefill_last_logits
     for token_index in range(action_dim):
+        if return_probability_margins:
+            host_start = time.perf_counter()
+            if logits.device.type == "cuda":
+                ev_start = torch.cuda.Event(enable_timing=True); ev_end = torch.cuda.Event(enable_timing=True)
+                ev_start.record()
+            probabilities = torch.softmax(logits.float(), dim=-1)
+            top = torch.topk(probabilities, k=2, dim=-1).values
+            margins.append(top[:, 0] - top[:, 1])
+            if logits.device.type == "cuda":
+                ev_end.record(); margin_events.append((ev_start, ev_end))
+            else:
+                margin_host_ms += (time.perf_counter() - host_start) * 1000.0
         next_token = torch.argmax(logits, dim=-1)
         generated_ids.append(next_token)
         if token_index + 1 == action_dim:
@@ -246,7 +268,15 @@ def greedy_decode_from_prefill(
             return_dict=True,
         )
         logits = output.logits[:, -1, :]
-    return torch.stack(generated_ids, dim=1)
+    token_ids = torch.stack(generated_ids, dim=1)
+    if return_probability_margins:
+        if margin_events:
+            torch.cuda.synchronize(logits.device)
+            margin_gpu_ms = sum(float(start.elapsed_time(end)) for start, end in margin_events)
+        else:
+            margin_gpu_ms = 0.0
+        return token_ids, torch.stack(margins, dim=1), margin_gpu_ms + margin_host_ms
+    return token_ids
 
 
 def decode_action_token_ids(model: Any, token_ids: torch.Tensor, unnorm_key: str) -> np.ndarray:

@@ -1,0 +1,18 @@
+{
+  "confidence_gate_validation_threshold": 0.99,
+  "confidence_trace": "/opt/openvla/experiments/kv_cache/outputs/adaptive_hybrid_kv_cache/validation_prelaunch_20261125_retry9/validation_confidence_gate/partial/task4_state0.json",
+  "exact_fresh_action_and_logits_parity": true,
+  "explicit_full_refresh_reset_at_step_6": true,
+  "full_q_and_layerwise_kv_skip": "checked at every selective forward across 32 layers",
+  "live_confidence_trigger_on_step_1": true,
+  "native_dino_one_pass_per_observation": true,
+  "production_confidence_threshold": 0.65,
+  "r5_periodic_schedule_used": false,
+  "rolling_retained_rows_equal_latest_cache": true,
+  "rolling_trace": "/opt/openvla/experiments/kv_cache/outputs/adaptive_hybrid_kv_cache/validation_prelaunch_20261125_retry9/validation_rolling_age/partial/task4_state0.json",
+  "selective_steps_through_age_5": 5,
+  "source_cache_immutable_during_each_prefill": true,
+  "status": "passed",
+  "token_age_greater_than_four": true,
+  "visual_layout_1_to_256_verified": true
+}
