@@ -1,0 +1,101 @@
+{
+  "fresh_stage3c_reference": {
+    "label": "Fresh OpenVLA",
+    "successes": 8,
+    "scenarios": 9,
+    "source": "experiments/kv_cache/outputs/stage3c_oracle_task_relevance/per_scenario_metrics.csv",
+    "scenario_success": {
+      "4:0": true,
+      "4:1": true,
+      "4:2": true,
+      "5:0": true,
+      "5:1": true,
+      "5:2": true,
+      "7:0": true,
+      "7:1": true,
+      "7:2": false
+    }
+  },
+  "stage3c_oracle_10pct_reference": {
+    "label": "Stage3C oracle+10% attention",
+    "successes": 9,
+    "scenarios": 9,
+    "source": "experiments/kv_cache/outputs/stage3c_oracle_task_relevance/per_scenario_metrics.csv",
+    "scenario_success": {
+      "4:0": true,
+      "4:1": true,
+      "4:2": true,
+      "5:0": true,
+      "5:1": true,
+      "5:2": true,
+      "7:0": true,
+      "7:1": true,
+      "7:2": true
+    }
+  },
+  "stage4a_attention_only": {
+    "budget_method_aggregates": [
+      {
+        "fresh_budget_pct": 90,
+        "method": "attention",
+        "completed_scenarios": 9,
+        "successes": 8,
+        "total": 9,
+        "mean_skipped_k_rows_per_decision": 663.1258952880823,
+        "mean_skipped_v_rows_per_decision": 663.1258952880823,
+        "mean_temporal_reuse_fraction": 0.7970263164520222
+      },
+      {
+        "fresh_budget_pct": 90,
+        "method": "random",
+        "completed_scenarios": 9,
+        "successes": 8,
+        "total": 9,
+        "mean_skipped_k_rows_per_decision": 663.5550735592143,
+        "mean_skipped_v_rows_per_decision": 663.5550735592143,
+        "mean_temporal_reuse_fraction": 0.7975421557202096
+      },
+      {
+        "fresh_budget_pct": 75,
+        "method": "attention",
+        "completed_scenarios": 9,
+        "successes": 9,
+        "total": 9,
+        "mean_skipped_k_rows_per_decision": 1631.636762122765,
+        "mean_skipped_v_rows_per_decision": 1631.636762122765,
+        "mean_temporal_reuse_fraction": 0.7966976377552564
+      },
+      {
+        "fresh_budget_pct": 75,
+        "method": "random",
+        "completed_scenarios": 9,
+        "successes": 4,
+        "total": 9,
+        "mean_skipped_k_rows_per_decision": 1635.9812261210636,
+        "mean_skipped_v_rows_per_decision": 1635.9812261210636,
+        "mean_temporal_reuse_fraction": 0.7988189580669256
+      },
+      {
+        "fresh_budget_pct": 60,
+        "method": "attention",
+        "completed_scenarios": 9,
+        "successes": 8,
+        "total": 9,
+        "mean_skipped_k_rows_per_decision": 2601.103400951035,
+        "mean_skipped_v_rows_per_decision": 2601.103400951035,
+        "mean_temporal_reuse_fraction": 0.7969066792129396
+      },
+      {
+        "fresh_budget_pct": 60,
+        "method": "random",
+        "completed_scenarios": 9,
+        "successes": 6,
+        "total": 9,
+        "mean_skipped_k_rows_per_decision": 2604.7927199300834,
+        "mean_skipped_v_rows_per_decision": 2604.7927199300834,
+        "mean_temporal_reuse_fraction": 0.7980369852726971
+      }
+    ],
+    "source": "experiments/kv_cache/outputs/stage4a_oracle_free_attention/summary.json"
+  }
+}

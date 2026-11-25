@@ -1,0 +1,2 @@
+task_id,state_id,success,steps,refresh_steps,reuse_steps,mean_v2_fg_tokens_per_decision,mean_attention_additional_tokens,mean_reuse_candidates_per_decision,total_k_rows_skipped,total_v_rows_skipped,mean_policy_ms,p50_policy_ms,p95_policy_ms
+4,0,False,5,1,4,54.4,20,182.25,23328,23328,1674.2141676135361,1465.7434499822557,1522.2286458592862

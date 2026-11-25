@@ -1,0 +1,86 @@
+{
+  "status": "passed",
+  "scenario": {
+    "task_id": 4,
+    "state_id": 0
+  },
+  "steps": 5,
+  "refresh_step": 0,
+  "reuse_steps": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "r5_source_ages": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "dino_hook_calls_per_input": 1,
+  "dino_feature_shape": [
+    1,
+    256,
+    1024
+  ],
+  "llm_visual_positions": [
+    1,
+    256
+  ],
+  "attention_score_count": 256,
+  "all_32_layers_validated": true,
+  "q_projection_full_length": true,
+  "fresh_refresh_action_and_logits_parity": "passed (asserted in live runner; exact action tokens and logits)",
+  "anchor_cache_immutable": "passed",
+  "reuse_source_independent_full_refresh": true,
+  "per_step_mask_counts": [
+    {
+      "step": 0,
+      "v2_foreground": 57,
+      "attention_extra": 20,
+      "fresh": 77,
+      "reuse_candidates": 179,
+      "k_skip_rows_per_layer": 0,
+      "v_skip_rows_per_layer": 0
+    },
+    {
+      "step": 1,
+      "v2_foreground": 54,
+      "attention_extra": 20,
+      "fresh": 74,
+      "reuse_candidates": 182,
+      "k_skip_rows_per_layer": 182,
+      "v_skip_rows_per_layer": 182
+    },
+    {
+      "step": 2,
+      "v2_foreground": 55,
+      "attention_extra": 20,
+      "fresh": 75,
+      "reuse_candidates": 181,
+      "k_skip_rows_per_layer": 181,
+      "v_skip_rows_per_layer": 181
+    },
+    {
+      "step": 3,
+      "v2_foreground": 54,
+      "attention_extra": 20,
+      "fresh": 74,
+      "reuse_candidates": 182,
+      "k_skip_rows_per_layer": 182,
+      "v_skip_rows_per_layer": 182
+    },
+    {
+      "step": 4,
+      "v2_foreground": 52,
+      "attention_extra": 20,
+      "fresh": 72,
+      "reuse_candidates": 184,
+      "k_skip_rows_per_layer": 184,
+      "v_skip_rows_per_layer": 184
+    }
+  ],
+  "notes": "Smoke horizon was intentionally limited to one R5 window; task success is not evaluated from this five-action validation."
+}
