@@ -156,7 +156,7 @@ def validate_results():
     text = report.read_text()
     if "## Source and publication provenance" not in text:
         with report.open("a") as f:
-            f.write(f"\n## Source and publication provenance\n\nImplementation source commit: `{provenance['source_commit']}` on `{BRANCH}`. The aggregate result commit and remote verification are recorded in `SUPERVISOR_STATUS.json`.\n")
+            f.write(f"\n## Source and publication provenance\n\nPolicy-execution source commit: `{provenance['policy_execution_source_commit']}`. Finalization/reporting source commit: `{provenance['finalization_source_commit']}` on `{BRANCH}`. The aggregate result commit and remote verification are recorded in `SUPERVISOR_STATUS.json`.\n")
     return {"scenario_files": len(scenario_files), "visualizations": len(visuals),
             "successes": summary["successes"], "scenarios": summary["scenario_count"]}
 
@@ -165,8 +165,15 @@ def publish():
     compact = [OUT / n for n in ("RUN_STATUS.json", "configuration.json", "summary.json",
         "per_scenario_metrics.csv", "ADAPTIVE_HYBRID_KV_REPORT.md", "validation.json",
         "validation_configuration.json", "ADAPTIVE_VALIDATION_REPORT.md", "source_commit.json",
-        "mask_visualizations", "validation_visualizations")]
+        "validation_visualizations")]
     rel = [str(p.relative_to(REPO)) for p in compact if p.exists()]
+    # Keep publication lightweight and interpretable: include step 0 and step
+    # 1 for each scenario; retain all other per-refresh figures locally.
+    representative = [OUT / "mask_visualizations" / f"task{t}_state{s}_step{step:03d}.png"
+                      for t in (4, 5, 7) for s in (0, 1, 2) for step in (0, 1)]
+    missing = [p for p in representative if not p.is_file()]
+    if missing: raise RuntimeError(f"Missing representative mask panels: {missing}")
+    rel.extend(str(p.relative_to(REPO)) for p in representative)
     run("git", "-C", str(REPO), "add", "-f", *rel)
     run("git", "-C", str(REPO), "diff", "--cached", "--check")
     changed = run("git", "-C", str(REPO), "diff", "--cached", "--quiet", check=False)
@@ -189,7 +196,13 @@ def main():
         atomic_json(STATUS, {"status": "preflight", "job": CONTAINER, "started_unix": time.time()})
         try:
             checks = preflight(); set_status("preflight_passed", checks=checks)
+            old_provenance = {}
+            try: old_provenance = json.loads((OUT / "source_commit.json").read_text())
+            except (OSError, ValueError): pass
+            policy_sha = old_provenance.get("policy_execution_source_commit", old_provenance.get("source_commit", checks["source_commit"]))
             atomic_json(OUT / "source_commit.json", {"source_commit": checks["source_commit"],
+                "policy_execution_source_commit": policy_sha,
+                "finalization_source_commit": checks["source_commit"],
                 "starting_reference_commit": "168dd80eefd1b0a6d6926d89f309f8be6db45d13",
                 "remote_source_commit_verified": checks["remote_sha"], "branch": BRANCH,
                 "remote": REMOTE, "v2_checkpoint_sha256": V2_SHA256})

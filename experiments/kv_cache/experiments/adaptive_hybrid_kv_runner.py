@@ -637,7 +637,7 @@ def summarize(out_dir, config, episodes):
                   "refresh_ms_mean", "selective_ms_mean", "end_to_end_refresh_mean", "end_to_end_refresh_p50",
                   "end_to_end_refresh_p95", "end_to_end_selective_mean", "end_to_end_selective_p50",
                   "end_to_end_selective_p95", "refreshes_low_confidence", "refreshes_other"]
-        w = csv.DictWriter(f, fieldnames=fields); w.writeheader()
+        w = csv.DictWriter(f, fieldnames=fields, lineterminator="\n"); w.writeheader()
         for ep in episodes:
             rr = ep["records"]; sl = [r for r in rr if not r["refresh"]]; rf = [r for r in rr if r["refresh"]]
             w.writerow({"task_id": ep["task_id"], "state_id": ep["state_id"], "success": ep["success"], "steps": ep["steps"],
@@ -664,21 +664,22 @@ def summarize(out_dir, config, episodes):
         "Every observation uses passive native penultimate OpenVLA DINO features to compute `sigmoid(10 × (cosine − 0.20))`; foreground is probability ≥ 0.20. During autoregressive decoding, for each of the seven generated action tokens, probability distributions are softmax-normalized over the full model vocabulary, matching greedy GenerationMixin token selection. The confidence is the mean top-1 minus top-2 probability margin. Step t uses step t−1's confidence to decide full refresh; margin < 0.65 triggers a full refresh. This matches the Gated VLA-Cache OpenVLA definition, so the provisional threshold was used as-is without calibration on these nine scenarios.", "",
         "Layer-15 relevance is captured during each prefill. On selective steps it is computed from the same full Q and assembled post-RoPE K tensor used by SDPA, including both retained rolling rows and newly projected rows; skipped K projections are not recomputed. That attention only controls the next decision. At t, top 10% (nearest integer, half up) of current predicted background are attention-protected using scores from t−1. Foreground-to-background transitions are also refreshed. All K/V source entries update per token after successful prefill; no periodic refresh or maximum age is imposed.", "",
         "## Scenario outcomes", "",
-        "| Task | State | Adaptive | Fresh historical | Stage 3C oracle historical | V2 hybrid R5 historical |", "|---:|---:|---|---|---|",
+        "| Task | State | Adaptive | Fresh historical | Stage 3C oracle historical | Stage 4A attention-only 90%-fresh historical | V2 hybrid R5 historical |", "|---:|---:|---|---|---|",
     ]
-    refs = {"4:0": ("success / 140", "success / 129", "success / 149"),
-            "4:1": ("success / 145", "success / 143", "failure / 220"),
-            "4:2": ("success / 130", "success / 131", "success / 135"),
-            "5:0": ("success / 105", "success / 111", "success / 110"),
-            "5:1": ("success / 89", "success / 100", "success / 96"),
-            "5:2": ("success / 90", "success / 88", "success / 183"),
-            "7:0": ("success / 111", "success / 152", "failure / 220"),
-            "7:1": ("success / 120", "success / 124", "success / 118"),
-            "7:2": ("failure / 220", "success / 126", "success / 123")}
+    # Historical comparisons; Stage 4A is its attention-only 90%-fresh condition.
+    refs = {"4:0": ("success / 140", "success / 129", "success / 129", "success / 149"),
+            "4:1": ("success / 145", "success / 143", "failure / 220", "failure / 220"),
+            "4:2": ("success / 130", "success / 131", "success / 131", "success / 135"),
+            "5:0": ("success / 105", "success / 111", "success / 104", "success / 110"),
+            "5:1": ("success / 89", "success / 100", "success / 88", "success / 96"),
+            "5:2": ("success / 90", "success / 88", "success / 84", "success / 183"),
+            "7:0": ("success / 111", "success / 152", "success / 117", "failure / 220"),
+            "7:1": ("success / 120", "success / 124", "success / 140", "success / 118"),
+            "7:2": ("failure / 220", "success / 126", "success / 117", "success / 123")}
     for e in episodes:
         key = f"{e['task_id']}:{e['state_id']}"; hist = refs[key]
-        report.append(f"| {e['task_id']} | {e['state_id']} | {'success' if e['success'] else 'failure'} / {e['steps']} | {hist[0]} | {hist[1]} | {hist[2]} |")
-    report += ["", "Historical trajectories are not paired: different policies change subsequent states. The nine-scenario matrix is small and does not establish generalization.", "",
+        report.append(f"| {e['task_id']} | {e['state_id']} | {'success' if e['success'] else 'failure'} / {e['steps']} | {hist[0]} | {hist[1]} | {hist[2]} | {hist[3]} |")
+    report += ["", "The Stage 4A column is its attention-only, 90%-fresh R5 condition. Historical trajectories are not paired: different policies change subsequent states. The nine-scenario matrix is small and does not establish generalization.", "",
         "## Cache use and confidence gate", "",
         f"Across {decisions} decisions including full refreshes, realized reuse was {aggregate['actual_reuse_coverage_including_full_refreshes']*100:.1f}% ({aggregate['actual_reused_tokens_per_decision_including_refreshes']:.1f}/256 tokens per decision). Selective steps reused {aggregate['mean_reuse_coverage_on_selective_decisions']*100:.1f}% on average. Refreshes: {len(refreshes)}/{decisions} ({aggregate['refresh_frequency']*100:.1f}%). Mean skipped projection rows per decision: K {aggregate['mean_skipped_k_rows_per_decision']:.0f}, V {aggregate['mean_skipped_v_rows_per_decision']:.0f}. Total omitted rows across all layers: K {sum_k:,}, V {sum_v:,}.", "",
         f"Refresh reasons: `{json.dumps(aggregate['refresh_reasons'], sort_keys=True)}`. Action confidence margin p50/p95: {np.percentile(confidence,50):.4f}/{np.percentile(confidence,95):.4f}; threshold .65. Maximum visual-token age was {aggregate['max_token_age']} decisions (there is intentionally no age cap). Mean attention-protected tokens on selective steps: {aggregate['attention_protection_mean_on_selective_steps']:.1f}; mean transition-protected tokens: {aggregate['transition_protection_mean_on_selective_steps']:.1f}.", "",
