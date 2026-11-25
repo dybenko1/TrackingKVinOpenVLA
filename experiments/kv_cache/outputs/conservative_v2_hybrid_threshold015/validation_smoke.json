@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "steps": 5,
+  "scenario": "task4/state0 smoke only",
+  "threshold": 0.15,
+  "full_refresh_action_and_logit_parity": true,
+  "32_layer_kv_skip_and_r5_source_checks": true,
+  "source_status": "live_20261125/validation_smoke/RUN_STATUS.json",
+  "episode_evidence": "live_20261125/validation_smoke/scenario_results/task4_state0.json"
+}

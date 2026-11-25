@@ -1,0 +1,70 @@
+{
+  "status": "complete",
+  "threshold": 0.15,
+  "successes": 5,
+  "scenario_count": 9,
+  "scenario_summary": [
+    {
+      "state_id": 0,
+      "steps": 220,
+      "success": false,
+      "task_id": 4
+    },
+    {
+      "state_id": 1,
+      "steps": 220,
+      "success": false,
+      "task_id": 4
+    },
+    {
+      "state_id": 2,
+      "steps": 220,
+      "success": false,
+      "task_id": 4
+    },
+    {
+      "state_id": 0,
+      "steps": 109,
+      "success": true,
+      "task_id": 5
+    },
+    {
+      "state_id": 1,
+      "steps": 108,
+      "success": true,
+      "task_id": 5
+    },
+    {
+      "state_id": 2,
+      "steps": 101,
+      "success": true,
+      "task_id": 5
+    },
+    {
+      "state_id": 0,
+      "steps": 157,
+      "success": true,
+      "task_id": 7
+    },
+    {
+      "state_id": 1,
+      "steps": 121,
+      "success": true,
+      "task_id": 7
+    },
+    {
+      "state_id": 2,
+      "steps": 220,
+      "success": false,
+      "task_id": 7
+    }
+  ],
+  "actual_reuse_coverage_including_full_refreshes": 0.44774728997289975,
+  "mean_actual_reused_tokens_per_decision_including_full_refreshes": 114.62330623306234,
+  "total_k_projection_rows_skipped": 5413888,
+  "total_v_projection_rows_skipped": 5413888,
+  "offline_threshold_manifest_sha256": "d9cf911a1cb81b8bd635b8991d49e1977c2a50e164fc38cb38ebb1d5a371d156",
+  "offline_threshold_metrics_path": "offline_preflight/offline_threshold_metrics.json",
+  "live_summary_path": "live_20261125/summary.json",
+  "configuration_path": "configuration.json"
+}

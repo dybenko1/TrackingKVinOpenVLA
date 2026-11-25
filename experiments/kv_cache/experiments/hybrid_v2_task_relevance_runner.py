@@ -170,7 +170,7 @@ def render_hybrid_masks(path: Path, image, selection, title):
 
 
 def one_episode(task_id, state_id, model, processor, device, unnorm_key,
-                text_model, tokenizer, projection, *, smoke=False):
+                text_model, tokenizer, projection, *, smoke=False, v2_threshold=0.20):
     seed_everything(SEED)
     suite, task, states, env, description = make_env(task_id)
     prompt = f"In: What action should the robot take to {description.lower()}?\nOut:"
@@ -204,7 +204,7 @@ def one_episode(task_id, state_id, model, processor, device, unnorm_key,
                 def select_from_live_dino(features):
                     p, score_times = v2_probabilities(features, text_projected)
                     compose_start = time.perf_counter()
-                    selection = compose_hybrid_mask(p, source["attention"], .20, .10)
+                    selection = compose_hybrid_mask(p, source["attention"], v2_threshold, .10)
                     compose_ms = (time.perf_counter() - compose_start) * 1000.0
                     selected["value"] = selection
                     current_probs["value"] = p
@@ -232,7 +232,7 @@ def one_episode(task_id, state_id, model, processor, device, unnorm_key,
                     raise RuntimeError("Refresh attention sidecar did not return 256 finite scores")
                 probs, score_times = v2_probabilities(tap.features, text_projected)
                 compose_start = time.perf_counter()
-                selection = compose_hybrid_mask(probs, sidecar.scores, .20, .10)
+                selection = compose_hybrid_mask(probs, sidecar.scores, v2_threshold, .10)
                 compose_ms = (time.perf_counter() - compose_start) * 1000.0
                 selection_timing.update(score_times)
                 selection_timing["mask_union_threshold_and_ranking_ms"] = compose_ms
@@ -362,13 +362,19 @@ def main():
     ap.add_argument("--v2-checkpoint", type=Path, default=V2_CKPT)
     ap.add_argument("--siglip-checkpoint", type=Path, default=SIGLIP)
     ap.add_argument("--output-dir", type=Path, default=OUT)
+    ap.add_argument("--v2-threshold", type=float, default=0.20,
+                    help="External probability cutoff; internal V2 scoring remains sigmoid(10*(cosine-0.20)).")
     args = ap.parse_args()
+    if not 0.0 <= args.v2_threshold <= 1.0:
+        ap.error("--v2-threshold must be in [0,1]")
     OUT = args.output_dir.resolve()
     OUT.mkdir(parents=True, exist_ok=True)
-    config = {"name": "V2@0.20 + top-10%-attention-protected V2 background; R5 full-layer K+V skip",
+    config = {"name": f"V2 probability cutoff {args.v2_threshold:.2f} + top-10%-attention-protected V2 background; R5 full-layer K+V skip",
               "branch": "thesis/trackb-dense-grounding-v2", "seed": SEED, "tasks": list(TASKS),
               "states": list(STATES), "R": R, "layers": list(LAYERS), "v2_checkpoint": str(args.v2_checkpoint),
-              "v2_sha256": V2_SHA256, "threshold": 0.20, "attention_background_fraction": 0.10,
+              "v2_sha256": V2_SHA256, "threshold": args.v2_threshold,
+              "sigmoid_cosine_offset": 0.20, "sigmoid_cosine_scale": 10.0,
+              "attention_background_fraction": 0.10,
               "dino_features": "passive hook on native OpenVLA DINO featurizer, penultimate [1,256,1024]",
               "attention": "Stage 3C layer-15 read-only Q/K sidecar, refreshed at R5 anchor",
               "policy_rollouts_in_smoke": True,
@@ -406,7 +412,8 @@ def main():
                 status["current_scenario"] = {"task_id": task_id, "state_id": state_id}
                 atomic_json(OUT / "RUN_STATUS.json", status)
                 result = one_episode(task_id, state_id, model, processor, device, key,
-                                     text_model, tokenizer, projection, smoke=(args.mode == "smoke"))
+                                     text_model, tokenizer, projection, smoke=(args.mode == "smoke"),
+                                     v2_threshold=args.v2_threshold)
                 result["configuration_sha256"] = config_sha
             results.append(result)
             atomic_json(result_path, result)
@@ -434,7 +441,7 @@ def write_report(config, results, status):
     reuse = [r for r in rows if r["type"] == "reuse"]
     text = ["# Hybrid V2 + Task-Relevance KV Reuse", "",
             f"Execution status: **{status['status']}**.", "",
-            "The frozen V2 epoch-40 mask at probability threshold 0.20 supplies foreground tokens. The top 10% of its predicted background, ranked by the most recent Stage 3C layer-15 text-to-visual relevance vector, is additionally protected. R5 retains an independent full-refresh source and allows four reuse decisions. DINO features are captured passively from the existing OpenVLA vision forward; no second DINO pass is run.", "",
+            f"The frozen V2 epoch-40 mask at probability threshold {config.get('threshold', 0.20):.2f} supplies foreground tokens. The top 10% of its predicted background, ranked by the most recent Stage 3C layer-15 text-to-visual relevance vector, is additionally protected. R5 retains an independent full-refresh source and allows four reuse decisions. DINO features are captured passively from the existing OpenVLA vision forward; no second DINO pass is run.", "",
             "## Results", "",
             f"Completed scenarios: {len(results)} / 9. Successes: {sum(bool(x['success']) for x in results)} / {len(results)}.", "",
             f"Across {len(reuse)} reuse decisions, mean reusable visual tokens: {np.mean([x['reusable_visual_count'] for x in reuse]) if reuse else float('nan'):.2f}/256. Mean skipped K rows per layer and decision: {np.mean([x['k_skipped_rows_per_layer'] for x in reuse]) if reuse else float('nan'):.2f}; same count for V. Mean synchronized policy-call time: {np.mean([x['policy_ms'] for x in rows]):.2f} ms. This is descriptive timing, not a speedup claim.", "",
@@ -640,7 +647,7 @@ def write_detailed_report(config, results, status):
                       for x in stage4a_rows}
     text = ["# Hybrid V2 + Task-Relevance KV Reuse", "",
         f"Execution status: **{status['status']}**. Completed scenarios: **{len(results)}/9**, successes: **{summary['successes']}/9**.", "",
-        "Frozen V2 epoch 40 at probability threshold 0.20 marks foreground. The top 10% of current V2-background tokens ranked by the latest Stage 3C layer-15 text-to-visual scores are additionally protected. V2 selection is recomputed each frame; attention scores refresh only at independent R5 anchors. Reused K/V comes only from the latest independent full refresh.", "",
+        f"Frozen V2 epoch 40 at probability threshold {config.get('threshold', 0.20):.2f} marks foreground. The top 10% of current V2-background tokens ranked by the latest Stage 3C layer-15 text-to-visual scores are additionally protected. V2 selection is recomputed each frame; attention scores refresh only at independent R5 anchors. Reused K/V comes only from the latest independent full refresh.", "",
         "## Success and completion-step comparison", "",
         "Historical outcomes use the same scenario identifiers/seeds but are not paired trajectories; different actions change subsequent scenes.", "",
         "| Task | State | Hybrid | Fresh | Stage 3C oracle + 10% | Stage 4A attention 90% fresh | Stage 4A 75% fresh | Stage 4A 60% fresh |",

@@ -41,6 +41,21 @@ class HybridMaskTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             compose_hybrid_mask(np.zeros(256), np.full(256, np.nan))
 
+    def test_lower_probability_cutoff_adds_semantic_foreground_and_rebudgets_attention(self):
+        probabilities = np.linspace(0.0, 1.0, 256, dtype=np.float32)
+        attention = np.arange(256, dtype=np.float32)
+        hi = compose_hybrid_mask(probabilities, attention, 0.20, 0.10)
+        lo = compose_hybrid_mask(probabilities, attention, 0.15, 0.10)
+        # The external threshold changes only the classification; the scores
+        # entering this helper remain fixed and attention is budgeted over the
+        # resulting current predicted-background set.
+        self.assertTrue(np.all(hi["v2_foreground"] <= lo["v2_foreground"]))
+        self.assertGreaterEqual(lo["counts"]["v2_foreground"], hi["counts"]["v2_foreground"])
+        self.assertEqual(lo["counts"]["attention_only_protected"],
+                         int(np.floor(lo["counts"]["v2_background"] * .10 + .5)))
+        self.assertTrue(np.all(lo["attention_only_protected"] <= ~lo["v2_foreground"]))
+        self.assertEqual(lo["counts"]["fresh_visual"] + lo["counts"]["reusable_visual"], 256)
+
 
 if __name__ == "__main__":
     unittest.main()
