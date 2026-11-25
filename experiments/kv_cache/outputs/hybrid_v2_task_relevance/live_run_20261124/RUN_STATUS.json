@@ -1,0 +1,162 @@
+{
+  "completed": [
+    {
+      "resumed": false,
+      "state_id": 0,
+      "steps": 149,
+      "success": true,
+      "task_id": 4
+    },
+    {
+      "resumed": false,
+      "state_id": 1,
+      "steps": 220,
+      "success": false,
+      "task_id": 4
+    },
+    {
+      "resumed": false,
+      "state_id": 2,
+      "steps": 135,
+      "success": true,
+      "task_id": 4
+    },
+    {
+      "resumed": false,
+      "state_id": 0,
+      "steps": 110,
+      "success": true,
+      "task_id": 5
+    },
+    {
+      "resumed": false,
+      "state_id": 1,
+      "steps": 96,
+      "success": true,
+      "task_id": 5
+    },
+    {
+      "resumed": false,
+      "state_id": 2,
+      "steps": 183,
+      "success": true,
+      "task_id": 5
+    },
+    {
+      "resumed": false,
+      "state_id": 0,
+      "steps": 220,
+      "success": false,
+      "task_id": 7
+    },
+    {
+      "resumed": false,
+      "state_id": 1,
+      "steps": 118,
+      "success": true,
+      "task_id": 7
+    },
+    {
+      "resumed": false,
+      "state_id": 2,
+      "steps": 123,
+      "success": true,
+      "task_id": 7
+    }
+  ],
+  "configuration_sha256": "50a8d90fa1edfb0c512f10304d4697069a2ad7fa0828930725809353e2f24b23",
+  "device": "cuda",
+  "finished_unix": 1795595953.4087195,
+  "gpu": "Orin",
+  "mode": "run-all",
+  "scenario_summary": [
+    {
+      "state_id": 0,
+      "steps": 149,
+      "success": true,
+      "task_id": 4
+    },
+    {
+      "state_id": 1,
+      "steps": 220,
+      "success": false,
+      "task_id": 4
+    },
+    {
+      "state_id": 2,
+      "steps": 135,
+      "success": true,
+      "task_id": 4
+    },
+    {
+      "state_id": 0,
+      "steps": 110,
+      "success": true,
+      "task_id": 5
+    },
+    {
+      "state_id": 1,
+      "steps": 96,
+      "success": true,
+      "task_id": 5
+    },
+    {
+      "state_id": 2,
+      "steps": 183,
+      "success": true,
+      "task_id": 5
+    },
+    {
+      "state_id": 0,
+      "steps": 220,
+      "success": false,
+      "task_id": 7
+    },
+    {
+      "state_id": 1,
+      "steps": 118,
+      "success": true,
+      "task_id": 7
+    },
+    {
+      "state_id": 2,
+      "steps": 123,
+      "success": true,
+      "task_id": 7
+    }
+  ],
+  "started_unix": 1795593793.4892561,
+  "status": "complete",
+  "text_encoder_metadata": {
+    "checkpoint_dir": "/opt/openvla/cache/models/timm/ViT-SO400M-14-SigLIP-384",
+    "checkpoint_repository_expected": "timm/ViT-SO400M-14-SigLIP-384",
+    "checkpoint_revision": "ac16108d567c4389e6cd2b11c9b8585f7474435b",
+    "frozen": true,
+    "missing_text_keys": [],
+    "open_clip_version": "2.32.0",
+    "strict_text_state_load": true,
+    "text_context_length": 64,
+    "text_heads": 16,
+    "text_layers": 27,
+    "text_output_dim": 1152,
+    "text_positional_embedding_shape": [
+      64,
+      1152
+    ],
+    "text_state_tensor_count": 330,
+    "text_width": 1152,
+    "tokenizer": {
+      "canonicalization": "OpenCLIP HFTokenizer.clean_fn from checkpoint configuration",
+      "checkpoint_dir": "/opt/openvla/cache/models/timm/ViT-SO400M-14-SigLIP-384",
+      "clean": "canonicalize",
+      "context_length": 64,
+      "eos_token_id": 1,
+      "pad_token_id": 1,
+      "tokenizer_class": "T5TokenizerFast"
+    },
+    "torch_version": "2.6.0",
+    "unexpected_text_keys": [],
+    "visual_tower_loaded": false,
+    "weights_path": "/opt/openvla/cache/models/timm/ViT-SO400M-14-SigLIP-384/open_clip_model.safetensors"
+  }
+}
