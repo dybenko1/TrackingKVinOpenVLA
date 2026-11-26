@@ -241,7 +241,7 @@ def line_chart(path: Path, title: str, series: list[tuple[str, list[float | None
     im = Image.new("RGB", (w, h), "white"); dr = ImageDraw.Draw(im)
     title_font, label_font, small_font = _font(26), _font(17), _font(14)
     dr.text((w // 2, 24), title, fill="#171717", font=title_font, anchor="mt")
-    left, right, top, bottom = 112, w - 56, 105, h - 110
+    left, right, top, bottom = 112, w - 56, 142, h - 110
     all_vals = [float(v) for _, arr, _ in series for v in arr if v is not None and math.isfinite(float(v))]
     if not all_vals: all_vals = [0.0, 1.0]
     lo = min(all_vals) if y_min is None else y_min; hi = max(all_vals) if y_max is None else y_max
@@ -261,11 +261,7 @@ def line_chart(path: Path, title: str, series: list[tuple[str, list[float | None
         dr.line((x, bottom, x, bottom + 6), fill="#333", width=1)
         dr.text((x, bottom + 10), str(x_tick), fill="#444", font=small_font, anchor="mt")
     dr.text((left + right // 2, h - 38), x_label, fill="#222", font=label_font, anchor="mm")
-    # Rotated y-axis title.
-    ytitle = Image.new("RGBA", (330, 36), (255, 255, 255, 0)); ImageDraw.Draw(ytitle).text((165, 2), y_label, fill="#222", font=label_font, anchor="mt")
-    im.alpha_composite(ytitle.rotate(90, expand=True), (8, (h - ytitle.height) // 2)) if im.mode == "RGBA" else None
-    # Drawing y-axis text unrotated keeps the figure readable with old Pillow.
-    dr.text((8, 62), y_label, fill="#222", font=small_font)
+    dr.text((left, 105), y_label, fill="#222", font=small_font)
     for label, arr, color in series:
         pts = []
         for i, v in enumerate(arr):
