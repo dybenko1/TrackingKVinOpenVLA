@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "scenario_count": 9,
+  "policy_decisions": 1559,
+  "temporal_pairs_excluding_each_scenario_first_observation": 1550,
+  "transition_partition_check": "all rows nonnegative; four cells sum to 256",
+  "full_refresh_pair_count": 352,
+  "selective_pair_count": 1198,
+  "full_refresh_transition_counts_valid": true,
+  "outcomes_match_run_status": true,
+  "no_gpu_or_inference": true,
+  "cross_experiment_transition_metrics": "not computed where only foreground counts were saved",
+  "source_sha256": {
+    "adaptive_runner": "f1d737e1ecc1811678382b596b57147ea2d969fc6ca70d4921dd1e44757687e4",
+    "adaptive_policy": "993904c7b9b00a8b6eb6415c3b398c56142baf76572751d7207e34529ee47777",
+    "adaptive_configuration": "56bbdf48fa32acf42b38275cfb6dc3ad7387d5a8ddc687ee3f0674a0dd42f099",
+    "adaptive_run_status": "cd6e03bccf56630369b61f8529c686a249a5bb0416afc3a9c02451e1ebff9246",
+    "adaptive_scenario_records": {
+      "task4_state0.json": "935927f768c2ac2b6d45ff9ca167c6d00efd44156e208efd2b8136142ee6584f",
+      "task4_state1.json": "8d547f4c7ec65b41693560faca5af3efdad7a08c578e66ef46c8ef2e5736e3c6",
+      "task4_state2.json": "7267a056d2d83ea3b4655c440b82a6008a8d2072d06573cd753efbc01c34113f",
+      "task5_state0.json": "8ed20f873ea80dde911bf0acbe7f3bb140ff9da8811cac40dce9be9c9aa58e91",
+      "task5_state1.json": "0fe80c73e58654f52177c2a733d15628abc8fb9fb116e9cd8739e71039f01016",
+      "task5_state2.json": "7ab72528ad4294dce7e534848e29b8b0c30239d1a7f1b35cd321eb63e5a95e77",
+      "task7_state0.json": "9f1094d9c2d84cbeae795744400eae65e1a04ff6e8dfe1eca147c19a93f48f5b",
+      "task7_state1.json": "391af5d8f527d6e510459c99469fbdfc2db1d4567531c27b1b57bba5923f7dae",
+      "task7_state2.json": "ae36cc71efc50639b4866d3657935f0fddc31bac50664bc6cf1ae070b547a76b"
+    }
+  }
+}
