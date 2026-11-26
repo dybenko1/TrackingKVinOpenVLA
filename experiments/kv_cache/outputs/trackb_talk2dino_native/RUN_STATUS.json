@@ -1,0 +1,11 @@
+{
+  "completed_sequences": 36,
+  "current_sequence": "libero_goal/put_the_wine_bottle_on_the_rack:demo_10",
+  "current_task": "libero_goal/put_the_wine_bottle_on_the_rack",
+  "error": null,
+  "finished_unix": 1795690731.6364098,
+  "frames_scored": 1152,
+  "stage": "complete",
+  "started_unix": 1795690519.8442698,
+  "status": "complete"
+}

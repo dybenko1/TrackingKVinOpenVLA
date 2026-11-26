@@ -1,0 +1,38 @@
+{
+  "frame_count": 4,
+  "note": "No second OpenVLA DINO forward is run for scoring. The B forward timer includes the one ordinary DINO pass with passive hooks; score times are additional. A-vs-B latency is not a policy end-to-end timing comparison.",
+  "per_frame": {
+    "official_dino_forward_ms": {
+      "count": 4,
+      "mean_ms": 38.55921173095703,
+      "median_ms": 39.68718338012695,
+      "p95_ms": 50.32104034423828
+    },
+    "official_talk2dino_scoring_ms": {
+      "count": 4,
+      "mean_ms": 20.71716746687889,
+      "median_ms": 2.245460033416748,
+      "p95_ms": 65.29679045677182
+    },
+    "openvla_dino_sidecar_forward_ms": {
+      "count": 4,
+      "mean_ms": 84.32928657531738,
+      "median_ms": 38.40572738647461,
+      "p95_ms": 206.8179325103759
+    },
+    "openvla_talk2dino_scoring_ms": {
+      "count": 4,
+      "mean_ms": 1.8474547266960144,
+      "median_ms": 1.7726564407348633,
+      "p95_ms": 2.0681180715560914
+    }
+  },
+  "scope": "synchronized CUDA wall time; sidecar captures reuse the normal OpenVLA DINO forward",
+  "task_text_encoding_once_per_task": {
+    "count": 2,
+    "mean_ms": 289.3982696533203,
+    "median_ms": 289.3982696533203,
+    "p95_ms": 351.9359786987305
+  },
+  "task_text_encoding_task_count": 2
+}

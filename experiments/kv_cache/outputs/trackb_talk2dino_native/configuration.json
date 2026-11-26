@@ -1,0 +1,27 @@
+{
+  "actions_applied": false,
+  "cache_location": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring",
+  "conditions": {
+    "A": "official Meta DINOv2 ViT-L/14-register + official OpenAI CLIP text tower + Talk2DINO MLP",
+    "B": "OpenVLA's already-loaded TIMM DINOv2 + same official CLIP text tower + same Talk2DINO MLP"
+  },
+  "experiment": "Native Talk2DINO integration into OpenVLA",
+  "grid": [
+    16,
+    16
+  ],
+  "inference": "seven official sub_imagenet_template prompts averaged in raw CLIP embedding space; original projection; cosine then sigmoid; official head-weighted background cleaning lambda=0.2; global background threshold=0.54",
+  "manifest": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_siglip/training_v2_dense_20261118/libero_ground_truth_e2_completion/libero_task_manifest.json",
+  "metrics": "corrected E2 role/instance masks; fractional occupancy at 16x16; threshold 0.54; fixed protected-token budgets 16/32/64/128 are ranking diagnostics",
+  "no_policy_actions_or_rollouts": true,
+  "preprocessing": "identical OpenVLA DINO pixel tensor, numerically compared with original DINOv2 Resize(224,bicubic)+CenterCrop+ImageNet norm",
+  "resolution": [
+    224,
+    224
+  ],
+  "source_revisions": {
+    "DINOv2": "7764ea0f912e53c92e82eb78a2a1631e92725fc8",
+    "Talk2DINO": "6dac47dbe3500df63f3b3df20dd28334290919cc"
+  },
+  "vla_revision": "962318cec55ac10993ff0f5f43eda9a270b4c873"
+}

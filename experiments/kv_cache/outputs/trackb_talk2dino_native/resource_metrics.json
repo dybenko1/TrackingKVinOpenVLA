@@ -1,0 +1,7 @@
+{
+  "allocated_bytes_at_end": 16004120064,
+  "device": "cuda:0",
+  "peak_allocated_bytes": 16169181184,
+  "peak_reserved_bytes": 16231956480,
+  "reserved_bytes_at_end": 16231956480
+}

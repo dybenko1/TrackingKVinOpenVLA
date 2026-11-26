@@ -1,0 +1,56 @@
+{
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_unix": 1795690029.104684,
+      "ended_unix": 1795690231.03469,
+      "outcome": "resumable_failure",
+      "completed_atomic_segments": 19,
+      "error": "ValueError while stacking per-frame arrays: a role can disappear from an image, producing a ragged role_gt axis.",
+      "action": "fixed the role axis to a stable set with zero masks for absent roles; already written segment caches were retained"
+    },
+    {
+      "attempt": 2,
+      "started_unix": 1795690303.081387,
+      "outcome": "running",
+      "resume_mode": true,
+      "expected_total_segments": 36,
+      "completed_caches_available_at_restart": 19
+    },
+    {
+      "attempt": 2,
+      "started_unix": 1795690303.081387,
+      "ended_unix": 1795690329.6029935,
+      "outcome": "preflight_failure",
+      "completed_atomic_segments": 0,
+      "error": "The newly enabled tokenizer check compared argmax token position to EOT id; tokenization itself correctly emitted EOT 49407. Fixed validation to check EOT token occurrence/value."
+    },
+    {
+      "attempt": 3,
+      "started_unix": 1795690441.8526065,
+      "outcome": "running",
+      "resume_mode": true,
+      "expected_total_segments": 36,
+      "completed_caches_available_at_restart": 19
+    },
+    {
+      "attempt": 3,
+      "started_unix": 1795690453.1191628,
+      "ended_unix": 1795690479.0805151,
+      "outcome": "preflight_failure",
+      "completed_atomic_segments": 0,
+      "error": "NameError: torch was not imported in the newly added text-tower determinism check; import added."
+    },
+    {
+      "attempt": 4,
+      "started_unix": 1795690507.7179015,
+      "outcome": "complete",
+      "resume_mode": true,
+      "expected_total_segments": 36,
+      "completed_caches_available_at_restart": 19,
+      "ended_unix": 1795690803.294896,
+      "completed_atomic_segments": 36,
+      "frames_scored": 1152
+    }
+  ]
+}

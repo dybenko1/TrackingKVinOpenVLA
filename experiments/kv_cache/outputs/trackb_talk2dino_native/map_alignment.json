@@ -1,0 +1,31 @@
+{
+  "cleaned_patch_map_mean_absolute_difference": {
+    "count": 4896,
+    "mean": 0.014946096278483572,
+    "median": 0.013982772827148438,
+    "p05": 0.0077669620513916016,
+    "p95": 0.02489328384399414
+  },
+  "cleaned_patch_map_pearson_correlation": {
+    "count": 4896,
+    "mean": 0.6599471128070356,
+    "median": 0.6784181655465529,
+    "p05": 0.3516236966702813,
+    "p95": 0.8974198817603828
+  },
+  "comparison": "paired same-frame, same-text-prompt patch score maps; A official Meta DINO vs B OpenVLA TIMM DINO",
+  "raw_patch_map_mean_absolute_difference": {
+    "count": 4896,
+    "mean": 0.016330044838338116,
+    "median": 0.015432357788085938,
+    "p05": 0.007437944412231445,
+    "p95": 0.02715778350830078
+  },
+  "raw_patch_map_pearson_correlation": {
+    "count": 4896,
+    "mean": 0.6557903706291179,
+    "median": 0.6790193851293014,
+    "p05": 0.3499135601016352,
+    "p95": 0.8981802077806964
+  }
+}

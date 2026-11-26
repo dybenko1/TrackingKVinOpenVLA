@@ -1,0 +1,58 @@
+{
+  "action_parity": {
+    "action_max_abs_diff": 0.0,
+    "action_outputs_bitwise_equal": true,
+    "attention_shape": [
+      16,
+      256
+    ],
+    "block_calls": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "feature_shape": [
+      1,
+      256,
+      1024
+    ],
+    "final_patch_shape": [
+      1,
+      256,
+      1024
+    ],
+    "fused_visual_shape": [
+      1,
+      256,
+      2176
+    ],
+    "normal_openvla_dino_calls": 1
+  },
+  "expected_layer_execution": "one normal DINO pass; each of 24 blocks called once; final block is not rerun",
+  "no_additional_dino_forward": true,
+  "preprocessing_max_abs_difference": 0.008109807968139648,
+  "registers_excluded_from_maps": 5,
+  "status": "smoke_passed",
+  "visual_positions": 256
+}
