@@ -1,0 +1,153 @@
+[
+  {
+    "clean_metrics": {
+      "bg_coverage": 0.578125,
+      "bg_iou": 0.6106067760900229,
+      "bg_precision": 0.9464302320738096,
+      "bg_recall": 0.632465751050979,
+      "fg_coverage": 0.421875,
+      "fg_fn": 7.928325653076172,
+      "fg_fp": 81.39751052856445,
+      "fg_iou": 0.22947359346019888,
+      "fg_precision": 0.24631934695773655,
+      "fg_recall": 0.7703985375240029,
+      "fg_tn": 140.07167434692383,
+      "fg_tp": 26.602489471435547,
+      "foreground_as_background_rate": 0.22960146247599714,
+      "valid_patch_equivalents": 256.0
+    },
+    "demo": "demo_10",
+    "figure": "libero_goal_multicategory_binary.png",
+    "frame_index": 3,
+    "queries": [
+      "wine bottle",
+      "wine rack",
+      "robot arm",
+      "robot gripper"
+    ],
+    "raw_metrics": {
+      "bg_coverage": 0.60546875,
+      "bg_iou": 0.6333477206225763,
+      "bg_precision": 0.941805661109186,
+      "bg_recall": 0.6591430656774886,
+      "fg_coverage": 0.39453125,
+      "fg_fn": 9.020122528076172,
+      "fg_fp": 75.48930740356445,
+      "fg_iou": 0.23187297023710768,
+      "fg_precision": 0.25258111481619355,
+      "fg_recall": 0.7387804922776574,
+      "fg_tn": 145.97987747192383,
+      "fg_tp": 25.510692596435547,
+      "foreground_as_background_rate": 0.26121950772234254,
+      "valid_patch_equivalents": 256.0
+    },
+    "rgb_binary_gt_patch_rule": "occupancy > 0",
+    "suite": "libero_goal",
+    "task_id": "libero_goal/put_the_wine_bottle_on_the_rack",
+    "thresholds": {
+      "clean": 0.54,
+      "raw": 0.55
+    }
+  },
+  {
+    "clean_metrics": {
+      "bg_coverage": 0.55859375,
+      "bg_iou": 0.6546324538509832,
+      "bg_precision": 1.0,
+      "bg_recall": 0.6546324538509832,
+      "fg_coverage": 0.44140625,
+      "fg_fn": 0.0,
+      "fg_fp": 75.44318771362305,
+      "fg_iou": 0.33236117067590226,
+      "fg_precision": 0.33236117067590226,
+      "fg_recall": 1.0,
+      "fg_tn": 143.0,
+      "fg_tp": 37.55681228637695,
+      "foreground_as_background_rate": 0.0,
+      "valid_patch_equivalents": 256.0
+    },
+    "demo": "demo_10",
+    "figure": "libero_object_multicategory_binary.png",
+    "frame_index": 31,
+    "queries": [
+      "tomato sauce",
+      "basket",
+      "robot arm",
+      "robot gripper"
+    ],
+    "raw_metrics": {
+      "bg_coverage": 0.55859375,
+      "bg_iou": 0.6546324538509832,
+      "bg_precision": 1.0,
+      "bg_recall": 0.6546324538509832,
+      "fg_coverage": 0.44140625,
+      "fg_fn": 0.0,
+      "fg_fp": 75.44318771362305,
+      "fg_iou": 0.33236117067590226,
+      "fg_precision": 0.33236117067590226,
+      "fg_recall": 1.0,
+      "fg_tn": 143.0,
+      "fg_tp": 37.55681228637695,
+      "foreground_as_background_rate": 0.0,
+      "valid_patch_equivalents": 256.0
+    },
+    "rgb_binary_gt_patch_rule": "occupancy > 0",
+    "suite": "libero_object",
+    "task_id": "libero_object/pick_up_the_tomato_sauce_and_place_it_in_the_basket",
+    "thresholds": {
+      "clean": 0.54,
+      "raw": 0.55
+    }
+  },
+  {
+    "clean_metrics": {
+      "bg_coverage": 0.41015625,
+      "bg_iou": 0.48830381309418797,
+      "bg_precision": 1.0,
+      "bg_recall": 0.48830381309418797,
+      "fg_coverage": 0.58984375,
+      "fg_fn": 0.0,
+      "fg_fp": 110.03006362915039,
+      "fg_iou": 0.27132408192615637,
+      "fg_precision": 0.27132408192615637,
+      "fg_recall": 1.0,
+      "fg_tn": 105.0,
+      "fg_tp": 40.96993637084961,
+      "foreground_as_background_rate": 0.0,
+      "valid_patch_equivalents": 256.0
+    },
+    "demo": "demo_1",
+    "figure": "libero_spatial_multicategory_binary.png",
+    "frame_index": 31,
+    "queries": [
+      "black bowl",
+      "plate",
+      "table",
+      "robot arm",
+      "robot gripper"
+    ],
+    "raw_metrics": {
+      "bg_coverage": 0.42578125,
+      "bg_iou": 0.5069058631168237,
+      "bg_precision": 1.0,
+      "bg_recall": 0.5069058631168237,
+      "fg_coverage": 0.57421875,
+      "fg_fn": 0.0,
+      "fg_fp": 106.03006362915039,
+      "fg_iou": 0.27870705014183406,
+      "fg_precision": 0.27870705014183406,
+      "fg_recall": 1.0,
+      "fg_tn": 109.0,
+      "fg_tp": 40.96993637084961,
+      "foreground_as_background_rate": 0.0,
+      "valid_patch_equivalents": 256.0
+    },
+    "rgb_binary_gt_patch_rule": "occupancy > 0",
+    "suite": "libero_spatial",
+    "task_id": "libero_spatial/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate",
+    "thresholds": {
+      "clean": 0.54,
+      "raw": 0.55
+    }
+  }
+]

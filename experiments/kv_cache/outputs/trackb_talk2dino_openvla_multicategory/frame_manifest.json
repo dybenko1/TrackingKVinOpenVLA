@@ -1,0 +1,3969 @@
+{
+  "development_images": 30,
+  "evaluation_images": 60,
+  "frame_records": [
+    {
+      "demo": "demo_0",
+      "local_saved_row": 0,
+      "queries": [
+        {
+          "gt": [
+            "task_relevant_fixtures"
+          ],
+          "role": "task_fixture",
+          "text": "middle drawer of the cabinet"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 0,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_0_s00000.npz",
+      "source_archive_sha256": "dc74fafe434ed5ecba9f24d7859b3d4180c05b45e1c964f19b88e590355495b9",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_goal__open_the_middle_drawer_of_the_cabinet__demo_0.npz",
+      "source_rgb_gt_map_sha256": "0193915a1de34ada395e98ad6d8c6955de2c98a44740ed265704240ec7d1d5f8",
+      "split": "development",
+      "suite": "libero_goal",
+      "task_id": "libero_goal/open_the_middle_drawer_of_the_cabinet"
+    },
+    {
+      "demo": "demo_0",
+      "local_saved_row": 1,
+      "queries": [
+        {
+          "gt": [
+            "task_relevant_fixtures"
+          ],
+          "role": "task_fixture",
+          "text": "middle drawer of the cabinet"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 3,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_0_s00000.npz",
+      "source_archive_sha256": "dc74fafe434ed5ecba9f24d7859b3d4180c05b45e1c964f19b88e590355495b9",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_goal__open_the_middle_drawer_of_the_cabinet__demo_0.npz",
+      "source_rgb_gt_map_sha256": "0193915a1de34ada395e98ad6d8c6955de2c98a44740ed265704240ec7d1d5f8",
+      "split": "development",
+      "suite": "libero_goal",
+      "task_id": "libero_goal/open_the_middle_drawer_of_the_cabinet"
+    },
+    {
+      "demo": "demo_0",
+      "local_saved_row": 2,
+      "queries": [
+        {
+          "gt": [
+            "task_relevant_fixtures"
+          ],
+          "role": "task_fixture",
+          "text": "middle drawer of the cabinet"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 7,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_0_s00000.npz",
+      "source_archive_sha256": "dc74fafe434ed5ecba9f24d7859b3d4180c05b45e1c964f19b88e590355495b9",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_goal__open_the_middle_drawer_of_the_cabinet__demo_0.npz",
+      "source_rgb_gt_map_sha256": "0193915a1de34ada395e98ad6d8c6955de2c98a44740ed265704240ec7d1d5f8",
+      "split": "development",
+      "suite": "libero_goal",
+      "task_id": "libero_goal/open_the_middle_drawer_of_the_cabinet"
+    },
+    {
+      "demo": "demo_0",
+      "local_saved_row": 3,
+      "queries": [
+        {
+          "gt": [
+            "task_relevant_fixtures"
+          ],
+          "role": "task_fixture",
+          "text": "middle drawer of the cabinet"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 10,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_0_s00000.npz",
+      "source_archive_sha256": "dc74fafe434ed5ecba9f24d7859b3d4180c05b45e1c964f19b88e590355495b9",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_goal__open_the_middle_drawer_of_the_cabinet__demo_0.npz",
+      "source_rgb_gt_map_sha256": "0193915a1de34ada395e98ad6d8c6955de2c98a44740ed265704240ec7d1d5f8",
+      "split": "development",
+      "suite": "libero_goal",
+      "task_id": "libero_goal/open_the_middle_drawer_of_the_cabinet"
+    },
+    {
+      "demo": "demo_0",
+      "local_saved_row": 4,
+      "queries": [
+        {
+          "gt": [
+            "task_relevant_fixtures"
+          ],
+          "role": "task_fixture",
+          "text": "middle drawer of the cabinet"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 14,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_0_s00000.npz",
+      "source_archive_sha256": "dc74fafe434ed5ecba9f24d7859b3d4180c05b45e1c964f19b88e590355495b9",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_goal__open_the_middle_drawer_of_the_cabinet__demo_0.npz",
+      "source_rgb_gt_map_sha256": "0193915a1de34ada395e98ad6d8c6955de2c98a44740ed265704240ec7d1d5f8",
+      "split": "development",
+      "suite": "libero_goal",
+      "task_id": "libero_goal/open_the_middle_drawer_of_the_cabinet"
+    },
+    {
+      "demo": "demo_0",
+      "local_saved_row": 5,
+      "queries": [
+        {
+          "gt": [
+            "task_relevant_fixtures"
+          ],
+          "role": "task_fixture",
+          "text": "middle drawer of the cabinet"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 17,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_0_s00000.npz",
+      "source_archive_sha256": "dc74fafe434ed5ecba9f24d7859b3d4180c05b45e1c964f19b88e590355495b9",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_goal__open_the_middle_drawer_of_the_cabinet__demo_0.npz",
+      "source_rgb_gt_map_sha256": "0193915a1de34ada395e98ad6d8c6955de2c98a44740ed265704240ec7d1d5f8",
+      "split": "development",
+      "suite": "libero_goal",
+      "task_id": "libero_goal/open_the_middle_drawer_of_the_cabinet"
+    },
+    {
+      "demo": "demo_0",
+      "local_saved_row": 6,
+      "queries": [
+        {
+          "gt": [
+            "task_relevant_fixtures"
+          ],
+          "role": "task_fixture",
+          "text": "middle drawer of the cabinet"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 21,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_0_s00000.npz",
+      "source_archive_sha256": "dc74fafe434ed5ecba9f24d7859b3d4180c05b45e1c964f19b88e590355495b9",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_goal__open_the_middle_drawer_of_the_cabinet__demo_0.npz",
+      "source_rgb_gt_map_sha256": "0193915a1de34ada395e98ad6d8c6955de2c98a44740ed265704240ec7d1d5f8",
+      "split": "development",
+      "suite": "libero_goal",
+      "task_id": "libero_goal/open_the_middle_drawer_of_the_cabinet"
+    },
+    {
+      "demo": "demo_0",
+      "local_saved_row": 7,
+      "queries": [
+        {
+          "gt": [
+            "task_relevant_fixtures"
+          ],
+          "role": "task_fixture",
+          "text": "middle drawer of the cabinet"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 24,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_0_s00000.npz",
+      "source_archive_sha256": "dc74fafe434ed5ecba9f24d7859b3d4180c05b45e1c964f19b88e590355495b9",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_goal__open_the_middle_drawer_of_the_cabinet__demo_0.npz",
+      "source_rgb_gt_map_sha256": "0193915a1de34ada395e98ad6d8c6955de2c98a44740ed265704240ec7d1d5f8",
+      "split": "development",
+      "suite": "libero_goal",
+      "task_id": "libero_goal/open_the_middle_drawer_of_the_cabinet"
+    },
+    {
+      "demo": "demo_0",
+      "local_saved_row": 8,
+      "queries": [
+        {
+          "gt": [
+            "task_relevant_fixtures"
+          ],
+          "role": "task_fixture",
+          "text": "middle drawer of the cabinet"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 28,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_0_s00000.npz",
+      "source_archive_sha256": "dc74fafe434ed5ecba9f24d7859b3d4180c05b45e1c964f19b88e590355495b9",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_goal__open_the_middle_drawer_of_the_cabinet__demo_0.npz",
+      "source_rgb_gt_map_sha256": "0193915a1de34ada395e98ad6d8c6955de2c98a44740ed265704240ec7d1d5f8",
+      "split": "development",
+      "suite": "libero_goal",
+      "task_id": "libero_goal/open_the_middle_drawer_of_the_cabinet"
+    },
+    {
+      "demo": "demo_0",
+      "local_saved_row": 9,
+      "queries": [
+        {
+          "gt": [
+            "task_relevant_fixtures"
+          ],
+          "role": "task_fixture",
+          "text": "middle drawer of the cabinet"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 31,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_0_s00000.npz",
+      "source_archive_sha256": "dc74fafe434ed5ecba9f24d7859b3d4180c05b45e1c964f19b88e590355495b9",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_goal__open_the_middle_drawer_of_the_cabinet__demo_0.npz",
+      "source_rgb_gt_map_sha256": "0193915a1de34ada395e98ad6d8c6955de2c98a44740ed265704240ec7d1d5f8",
+      "split": "development",
+      "suite": "libero_goal",
+      "task_id": "libero_goal/open_the_middle_drawer_of_the_cabinet"
+    },
+    {
+      "demo": "demo_1",
+      "local_saved_row": 0,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 0,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_goal_put_the_bowl_on_the_plate/demo_1_s00028.npz",
+      "source_archive_sha256": "0eb224e204bde078b3ecc71d66ec5441a6d3ab21c5e89ad88a08ba7255cec449",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_goal__put_the_bowl_on_the_plate__demo_1.npz",
+      "source_rgb_gt_map_sha256": "efafb5be39d5f129c1879ab7553240f74a46d19bb7eaac1587914a81c7fd9e69",
+      "split": "evaluation",
+      "suite": "libero_goal",
+      "task_id": "libero_goal/put_the_bowl_on_the_plate"
+    },
+    {
+      "demo": "demo_1",
+      "local_saved_row": 1,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 3,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_goal_put_the_bowl_on_the_plate/demo_1_s00028.npz",
+      "source_archive_sha256": "0eb224e204bde078b3ecc71d66ec5441a6d3ab21c5e89ad88a08ba7255cec449",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_goal__put_the_bowl_on_the_plate__demo_1.npz",
+      "source_rgb_gt_map_sha256": "efafb5be39d5f129c1879ab7553240f74a46d19bb7eaac1587914a81c7fd9e69",
+      "split": "evaluation",
+      "suite": "libero_goal",
+      "task_id": "libero_goal/put_the_bowl_on_the_plate"
+    },
+    {
+      "demo": "demo_1",
+      "local_saved_row": 2,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 7,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_goal_put_the_bowl_on_the_plate/demo_1_s00028.npz",
+      "source_archive_sha256": "0eb224e204bde078b3ecc71d66ec5441a6d3ab21c5e89ad88a08ba7255cec449",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_goal__put_the_bowl_on_the_plate__demo_1.npz",
+      "source_rgb_gt_map_sha256": "efafb5be39d5f129c1879ab7553240f74a46d19bb7eaac1587914a81c7fd9e69",
+      "split": "evaluation",
+      "suite": "libero_goal",
+      "task_id": "libero_goal/put_the_bowl_on_the_plate"
+    },
+    {
+      "demo": "demo_1",
+      "local_saved_row": 3,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 10,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_goal_put_the_bowl_on_the_plate/demo_1_s00028.npz",
+      "source_archive_sha256": "0eb224e204bde078b3ecc71d66ec5441a6d3ab21c5e89ad88a08ba7255cec449",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_goal__put_the_bowl_on_the_plate__demo_1.npz",
+      "source_rgb_gt_map_sha256": "efafb5be39d5f129c1879ab7553240f74a46d19bb7eaac1587914a81c7fd9e69",
+      "split": "evaluation",
+      "suite": "libero_goal",
+      "task_id": "libero_goal/put_the_bowl_on_the_plate"
+    },
+    {
+      "demo": "demo_1",
+      "local_saved_row": 4,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 14,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_goal_put_the_bowl_on_the_plate/demo_1_s00028.npz",
+      "source_archive_sha256": "0eb224e204bde078b3ecc71d66ec5441a6d3ab21c5e89ad88a08ba7255cec449",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_goal__put_the_bowl_on_the_plate__demo_1.npz",
+      "source_rgb_gt_map_sha256": "efafb5be39d5f129c1879ab7553240f74a46d19bb7eaac1587914a81c7fd9e69",
+      "split": "evaluation",
+      "suite": "libero_goal",
+      "task_id": "libero_goal/put_the_bowl_on_the_plate"
+    },
+    {
+      "demo": "demo_1",
+      "local_saved_row": 5,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 17,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_goal_put_the_bowl_on_the_plate/demo_1_s00028.npz",
+      "source_archive_sha256": "0eb224e204bde078b3ecc71d66ec5441a6d3ab21c5e89ad88a08ba7255cec449",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_goal__put_the_bowl_on_the_plate__demo_1.npz",
+      "source_rgb_gt_map_sha256": "efafb5be39d5f129c1879ab7553240f74a46d19bb7eaac1587914a81c7fd9e69",
+      "split": "evaluation",
+      "suite": "libero_goal",
+      "task_id": "libero_goal/put_the_bowl_on_the_plate"
+    },
+    {
+      "demo": "demo_1",
+      "local_saved_row": 6,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 21,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_goal_put_the_bowl_on_the_plate/demo_1_s00028.npz",
+      "source_archive_sha256": "0eb224e204bde078b3ecc71d66ec5441a6d3ab21c5e89ad88a08ba7255cec449",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_goal__put_the_bowl_on_the_plate__demo_1.npz",
+      "source_rgb_gt_map_sha256": "efafb5be39d5f129c1879ab7553240f74a46d19bb7eaac1587914a81c7fd9e69",
+      "split": "evaluation",
+      "suite": "libero_goal",
+      "task_id": "libero_goal/put_the_bowl_on_the_plate"
+    },
+    {
+      "demo": "demo_1",
+      "local_saved_row": 7,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 24,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_goal_put_the_bowl_on_the_plate/demo_1_s00028.npz",
+      "source_archive_sha256": "0eb224e204bde078b3ecc71d66ec5441a6d3ab21c5e89ad88a08ba7255cec449",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_goal__put_the_bowl_on_the_plate__demo_1.npz",
+      "source_rgb_gt_map_sha256": "efafb5be39d5f129c1879ab7553240f74a46d19bb7eaac1587914a81c7fd9e69",
+      "split": "evaluation",
+      "suite": "libero_goal",
+      "task_id": "libero_goal/put_the_bowl_on_the_plate"
+    },
+    {
+      "demo": "demo_1",
+      "local_saved_row": 8,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 28,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_goal_put_the_bowl_on_the_plate/demo_1_s00028.npz",
+      "source_archive_sha256": "0eb224e204bde078b3ecc71d66ec5441a6d3ab21c5e89ad88a08ba7255cec449",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_goal__put_the_bowl_on_the_plate__demo_1.npz",
+      "source_rgb_gt_map_sha256": "efafb5be39d5f129c1879ab7553240f74a46d19bb7eaac1587914a81c7fd9e69",
+      "split": "evaluation",
+      "suite": "libero_goal",
+      "task_id": "libero_goal/put_the_bowl_on_the_plate"
+    },
+    {
+      "demo": "demo_1",
+      "local_saved_row": 9,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 31,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_goal_put_the_bowl_on_the_plate/demo_1_s00028.npz",
+      "source_archive_sha256": "0eb224e204bde078b3ecc71d66ec5441a6d3ab21c5e89ad88a08ba7255cec449",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_goal__put_the_bowl_on_the_plate__demo_1.npz",
+      "source_rgb_gt_map_sha256": "efafb5be39d5f129c1879ab7553240f74a46d19bb7eaac1587914a81c7fd9e69",
+      "split": "evaluation",
+      "suite": "libero_goal",
+      "task_id": "libero_goal/put_the_bowl_on_the_plate"
+    },
+    {
+      "demo": "demo_10",
+      "local_saved_row": 0,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "wine bottle"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_or_fixture",
+          "text": "wine rack"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 0,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_goal_put_the_wine_bottle_on_the_rack/demo_10_s00125.npz",
+      "source_archive_sha256": "9521d106ce9cfa3b893582b7c2282e1933cc3ade6ee1627c97316e478e8f1f27",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_goal__put_the_wine_bottle_on_the_rack__demo_10.npz",
+      "source_rgb_gt_map_sha256": "9a75e50a3c80c347f5738cef5e45986f02e36ad14cfae6e09d13ce92e9dd60d3",
+      "split": "evaluation",
+      "suite": "libero_goal",
+      "task_id": "libero_goal/put_the_wine_bottle_on_the_rack"
+    },
+    {
+      "demo": "demo_10",
+      "local_saved_row": 1,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "wine bottle"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_or_fixture",
+          "text": "wine rack"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 3,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_goal_put_the_wine_bottle_on_the_rack/demo_10_s00125.npz",
+      "source_archive_sha256": "9521d106ce9cfa3b893582b7c2282e1933cc3ade6ee1627c97316e478e8f1f27",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_goal__put_the_wine_bottle_on_the_rack__demo_10.npz",
+      "source_rgb_gt_map_sha256": "9a75e50a3c80c347f5738cef5e45986f02e36ad14cfae6e09d13ce92e9dd60d3",
+      "split": "evaluation",
+      "suite": "libero_goal",
+      "task_id": "libero_goal/put_the_wine_bottle_on_the_rack"
+    },
+    {
+      "demo": "demo_10",
+      "local_saved_row": 2,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "wine bottle"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_or_fixture",
+          "text": "wine rack"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 7,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_goal_put_the_wine_bottle_on_the_rack/demo_10_s00125.npz",
+      "source_archive_sha256": "9521d106ce9cfa3b893582b7c2282e1933cc3ade6ee1627c97316e478e8f1f27",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_goal__put_the_wine_bottle_on_the_rack__demo_10.npz",
+      "source_rgb_gt_map_sha256": "9a75e50a3c80c347f5738cef5e45986f02e36ad14cfae6e09d13ce92e9dd60d3",
+      "split": "evaluation",
+      "suite": "libero_goal",
+      "task_id": "libero_goal/put_the_wine_bottle_on_the_rack"
+    },
+    {
+      "demo": "demo_10",
+      "local_saved_row": 3,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "wine bottle"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_or_fixture",
+          "text": "wine rack"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 10,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_goal_put_the_wine_bottle_on_the_rack/demo_10_s00125.npz",
+      "source_archive_sha256": "9521d106ce9cfa3b893582b7c2282e1933cc3ade6ee1627c97316e478e8f1f27",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_goal__put_the_wine_bottle_on_the_rack__demo_10.npz",
+      "source_rgb_gt_map_sha256": "9a75e50a3c80c347f5738cef5e45986f02e36ad14cfae6e09d13ce92e9dd60d3",
+      "split": "evaluation",
+      "suite": "libero_goal",
+      "task_id": "libero_goal/put_the_wine_bottle_on_the_rack"
+    },
+    {
+      "demo": "demo_10",
+      "local_saved_row": 4,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "wine bottle"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_or_fixture",
+          "text": "wine rack"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 14,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_goal_put_the_wine_bottle_on_the_rack/demo_10_s00125.npz",
+      "source_archive_sha256": "9521d106ce9cfa3b893582b7c2282e1933cc3ade6ee1627c97316e478e8f1f27",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_goal__put_the_wine_bottle_on_the_rack__demo_10.npz",
+      "source_rgb_gt_map_sha256": "9a75e50a3c80c347f5738cef5e45986f02e36ad14cfae6e09d13ce92e9dd60d3",
+      "split": "evaluation",
+      "suite": "libero_goal",
+      "task_id": "libero_goal/put_the_wine_bottle_on_the_rack"
+    },
+    {
+      "demo": "demo_10",
+      "local_saved_row": 5,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "wine bottle"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_or_fixture",
+          "text": "wine rack"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 17,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_goal_put_the_wine_bottle_on_the_rack/demo_10_s00125.npz",
+      "source_archive_sha256": "9521d106ce9cfa3b893582b7c2282e1933cc3ade6ee1627c97316e478e8f1f27",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_goal__put_the_wine_bottle_on_the_rack__demo_10.npz",
+      "source_rgb_gt_map_sha256": "9a75e50a3c80c347f5738cef5e45986f02e36ad14cfae6e09d13ce92e9dd60d3",
+      "split": "evaluation",
+      "suite": "libero_goal",
+      "task_id": "libero_goal/put_the_wine_bottle_on_the_rack"
+    },
+    {
+      "demo": "demo_10",
+      "local_saved_row": 6,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "wine bottle"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_or_fixture",
+          "text": "wine rack"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 21,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_goal_put_the_wine_bottle_on_the_rack/demo_10_s00125.npz",
+      "source_archive_sha256": "9521d106ce9cfa3b893582b7c2282e1933cc3ade6ee1627c97316e478e8f1f27",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_goal__put_the_wine_bottle_on_the_rack__demo_10.npz",
+      "source_rgb_gt_map_sha256": "9a75e50a3c80c347f5738cef5e45986f02e36ad14cfae6e09d13ce92e9dd60d3",
+      "split": "evaluation",
+      "suite": "libero_goal",
+      "task_id": "libero_goal/put_the_wine_bottle_on_the_rack"
+    },
+    {
+      "demo": "demo_10",
+      "local_saved_row": 7,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "wine bottle"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_or_fixture",
+          "text": "wine rack"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 24,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_goal_put_the_wine_bottle_on_the_rack/demo_10_s00125.npz",
+      "source_archive_sha256": "9521d106ce9cfa3b893582b7c2282e1933cc3ade6ee1627c97316e478e8f1f27",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_goal__put_the_wine_bottle_on_the_rack__demo_10.npz",
+      "source_rgb_gt_map_sha256": "9a75e50a3c80c347f5738cef5e45986f02e36ad14cfae6e09d13ce92e9dd60d3",
+      "split": "evaluation",
+      "suite": "libero_goal",
+      "task_id": "libero_goal/put_the_wine_bottle_on_the_rack"
+    },
+    {
+      "demo": "demo_10",
+      "local_saved_row": 8,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "wine bottle"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_or_fixture",
+          "text": "wine rack"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 28,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_goal_put_the_wine_bottle_on_the_rack/demo_10_s00125.npz",
+      "source_archive_sha256": "9521d106ce9cfa3b893582b7c2282e1933cc3ade6ee1627c97316e478e8f1f27",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_goal__put_the_wine_bottle_on_the_rack__demo_10.npz",
+      "source_rgb_gt_map_sha256": "9a75e50a3c80c347f5738cef5e45986f02e36ad14cfae6e09d13ce92e9dd60d3",
+      "split": "evaluation",
+      "suite": "libero_goal",
+      "task_id": "libero_goal/put_the_wine_bottle_on_the_rack"
+    },
+    {
+      "demo": "demo_10",
+      "local_saved_row": 9,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "wine bottle"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_or_fixture",
+          "text": "wine rack"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 31,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_goal_put_the_wine_bottle_on_the_rack/demo_10_s00125.npz",
+      "source_archive_sha256": "9521d106ce9cfa3b893582b7c2282e1933cc3ade6ee1627c97316e478e8f1f27",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_goal__put_the_wine_bottle_on_the_rack__demo_10.npz",
+      "source_rgb_gt_map_sha256": "9a75e50a3c80c347f5738cef5e45986f02e36ad14cfae6e09d13ce92e9dd60d3",
+      "split": "evaluation",
+      "suite": "libero_goal",
+      "task_id": "libero_goal/put_the_wine_bottle_on_the_rack"
+    },
+    {
+      "demo": "demo_0",
+      "local_saved_row": 0,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "alphabet soup"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_object",
+          "text": "basket"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 0,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_0_s00000.npz",
+      "source_archive_sha256": "5f7c99618a2e3c8ddca429b30a5f4d4d4ac61a897d4c03e2778d7e908e9bf2a6",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__demo_0.npz",
+      "source_rgb_gt_map_sha256": "0043056616494abf6d6897c7ebbca537287076933ca174e633b1886c54bfd037",
+      "split": "development",
+      "suite": "libero_object",
+      "task_id": "libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_0",
+      "local_saved_row": 1,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "alphabet soup"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_object",
+          "text": "basket"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 3,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_0_s00000.npz",
+      "source_archive_sha256": "5f7c99618a2e3c8ddca429b30a5f4d4d4ac61a897d4c03e2778d7e908e9bf2a6",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__demo_0.npz",
+      "source_rgb_gt_map_sha256": "0043056616494abf6d6897c7ebbca537287076933ca174e633b1886c54bfd037",
+      "split": "development",
+      "suite": "libero_object",
+      "task_id": "libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_0",
+      "local_saved_row": 2,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "alphabet soup"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_object",
+          "text": "basket"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 7,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_0_s00000.npz",
+      "source_archive_sha256": "5f7c99618a2e3c8ddca429b30a5f4d4d4ac61a897d4c03e2778d7e908e9bf2a6",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__demo_0.npz",
+      "source_rgb_gt_map_sha256": "0043056616494abf6d6897c7ebbca537287076933ca174e633b1886c54bfd037",
+      "split": "development",
+      "suite": "libero_object",
+      "task_id": "libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_0",
+      "local_saved_row": 3,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "alphabet soup"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_object",
+          "text": "basket"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 10,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_0_s00000.npz",
+      "source_archive_sha256": "5f7c99618a2e3c8ddca429b30a5f4d4d4ac61a897d4c03e2778d7e908e9bf2a6",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__demo_0.npz",
+      "source_rgb_gt_map_sha256": "0043056616494abf6d6897c7ebbca537287076933ca174e633b1886c54bfd037",
+      "split": "development",
+      "suite": "libero_object",
+      "task_id": "libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_0",
+      "local_saved_row": 4,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "alphabet soup"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_object",
+          "text": "basket"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 14,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_0_s00000.npz",
+      "source_archive_sha256": "5f7c99618a2e3c8ddca429b30a5f4d4d4ac61a897d4c03e2778d7e908e9bf2a6",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__demo_0.npz",
+      "source_rgb_gt_map_sha256": "0043056616494abf6d6897c7ebbca537287076933ca174e633b1886c54bfd037",
+      "split": "development",
+      "suite": "libero_object",
+      "task_id": "libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_0",
+      "local_saved_row": 5,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "alphabet soup"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_object",
+          "text": "basket"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 17,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_0_s00000.npz",
+      "source_archive_sha256": "5f7c99618a2e3c8ddca429b30a5f4d4d4ac61a897d4c03e2778d7e908e9bf2a6",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__demo_0.npz",
+      "source_rgb_gt_map_sha256": "0043056616494abf6d6897c7ebbca537287076933ca174e633b1886c54bfd037",
+      "split": "development",
+      "suite": "libero_object",
+      "task_id": "libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_0",
+      "local_saved_row": 6,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "alphabet soup"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_object",
+          "text": "basket"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 21,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_0_s00000.npz",
+      "source_archive_sha256": "5f7c99618a2e3c8ddca429b30a5f4d4d4ac61a897d4c03e2778d7e908e9bf2a6",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__demo_0.npz",
+      "source_rgb_gt_map_sha256": "0043056616494abf6d6897c7ebbca537287076933ca174e633b1886c54bfd037",
+      "split": "development",
+      "suite": "libero_object",
+      "task_id": "libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_0",
+      "local_saved_row": 7,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "alphabet soup"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_object",
+          "text": "basket"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 24,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_0_s00000.npz",
+      "source_archive_sha256": "5f7c99618a2e3c8ddca429b30a5f4d4d4ac61a897d4c03e2778d7e908e9bf2a6",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__demo_0.npz",
+      "source_rgb_gt_map_sha256": "0043056616494abf6d6897c7ebbca537287076933ca174e633b1886c54bfd037",
+      "split": "development",
+      "suite": "libero_object",
+      "task_id": "libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_0",
+      "local_saved_row": 8,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "alphabet soup"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_object",
+          "text": "basket"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 28,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_0_s00000.npz",
+      "source_archive_sha256": "5f7c99618a2e3c8ddca429b30a5f4d4d4ac61a897d4c03e2778d7e908e9bf2a6",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__demo_0.npz",
+      "source_rgb_gt_map_sha256": "0043056616494abf6d6897c7ebbca537287076933ca174e633b1886c54bfd037",
+      "split": "development",
+      "suite": "libero_object",
+      "task_id": "libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_0",
+      "local_saved_row": 9,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "alphabet soup"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_object",
+          "text": "basket"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 31,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_0_s00000.npz",
+      "source_archive_sha256": "5f7c99618a2e3c8ddca429b30a5f4d4d4ac61a897d4c03e2778d7e908e9bf2a6",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_object__pick_up_the_alphabet_soup_and_place_it_in_the_basket__demo_0.npz",
+      "source_rgb_gt_map_sha256": "0043056616494abf6d6897c7ebbca537287076933ca174e633b1886c54bfd037",
+      "split": "development",
+      "suite": "libero_object",
+      "task_id": "libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_1",
+      "local_saved_row": 0,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "butter"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_object",
+          "text": "basket"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 0,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_1_s00058.npz",
+      "source_archive_sha256": "9e7c95d78ed8cbca7b49102a63c550de20778f00d2271428171f06e9ebcdc5cb",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_object__pick_up_the_butter_and_place_it_in_the_basket__demo_1.npz",
+      "source_rgb_gt_map_sha256": "3eb26c91f3f096c1a05faa181d1edc1d57be98ebc49f6f84909b3686a0161ae0",
+      "split": "evaluation",
+      "suite": "libero_object",
+      "task_id": "libero_object/pick_up_the_butter_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_1",
+      "local_saved_row": 1,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "butter"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_object",
+          "text": "basket"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 3,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_1_s00058.npz",
+      "source_archive_sha256": "9e7c95d78ed8cbca7b49102a63c550de20778f00d2271428171f06e9ebcdc5cb",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_object__pick_up_the_butter_and_place_it_in_the_basket__demo_1.npz",
+      "source_rgb_gt_map_sha256": "3eb26c91f3f096c1a05faa181d1edc1d57be98ebc49f6f84909b3686a0161ae0",
+      "split": "evaluation",
+      "suite": "libero_object",
+      "task_id": "libero_object/pick_up_the_butter_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_1",
+      "local_saved_row": 2,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "butter"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_object",
+          "text": "basket"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 7,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_1_s00058.npz",
+      "source_archive_sha256": "9e7c95d78ed8cbca7b49102a63c550de20778f00d2271428171f06e9ebcdc5cb",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_object__pick_up_the_butter_and_place_it_in_the_basket__demo_1.npz",
+      "source_rgb_gt_map_sha256": "3eb26c91f3f096c1a05faa181d1edc1d57be98ebc49f6f84909b3686a0161ae0",
+      "split": "evaluation",
+      "suite": "libero_object",
+      "task_id": "libero_object/pick_up_the_butter_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_1",
+      "local_saved_row": 3,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "butter"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_object",
+          "text": "basket"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 10,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_1_s00058.npz",
+      "source_archive_sha256": "9e7c95d78ed8cbca7b49102a63c550de20778f00d2271428171f06e9ebcdc5cb",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_object__pick_up_the_butter_and_place_it_in_the_basket__demo_1.npz",
+      "source_rgb_gt_map_sha256": "3eb26c91f3f096c1a05faa181d1edc1d57be98ebc49f6f84909b3686a0161ae0",
+      "split": "evaluation",
+      "suite": "libero_object",
+      "task_id": "libero_object/pick_up_the_butter_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_1",
+      "local_saved_row": 4,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "butter"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_object",
+          "text": "basket"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 14,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_1_s00058.npz",
+      "source_archive_sha256": "9e7c95d78ed8cbca7b49102a63c550de20778f00d2271428171f06e9ebcdc5cb",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_object__pick_up_the_butter_and_place_it_in_the_basket__demo_1.npz",
+      "source_rgb_gt_map_sha256": "3eb26c91f3f096c1a05faa181d1edc1d57be98ebc49f6f84909b3686a0161ae0",
+      "split": "evaluation",
+      "suite": "libero_object",
+      "task_id": "libero_object/pick_up_the_butter_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_1",
+      "local_saved_row": 5,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "butter"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_object",
+          "text": "basket"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 17,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_1_s00058.npz",
+      "source_archive_sha256": "9e7c95d78ed8cbca7b49102a63c550de20778f00d2271428171f06e9ebcdc5cb",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_object__pick_up_the_butter_and_place_it_in_the_basket__demo_1.npz",
+      "source_rgb_gt_map_sha256": "3eb26c91f3f096c1a05faa181d1edc1d57be98ebc49f6f84909b3686a0161ae0",
+      "split": "evaluation",
+      "suite": "libero_object",
+      "task_id": "libero_object/pick_up_the_butter_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_1",
+      "local_saved_row": 6,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "butter"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_object",
+          "text": "basket"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 21,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_1_s00058.npz",
+      "source_archive_sha256": "9e7c95d78ed8cbca7b49102a63c550de20778f00d2271428171f06e9ebcdc5cb",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_object__pick_up_the_butter_and_place_it_in_the_basket__demo_1.npz",
+      "source_rgb_gt_map_sha256": "3eb26c91f3f096c1a05faa181d1edc1d57be98ebc49f6f84909b3686a0161ae0",
+      "split": "evaluation",
+      "suite": "libero_object",
+      "task_id": "libero_object/pick_up_the_butter_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_1",
+      "local_saved_row": 7,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "butter"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_object",
+          "text": "basket"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 24,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_1_s00058.npz",
+      "source_archive_sha256": "9e7c95d78ed8cbca7b49102a63c550de20778f00d2271428171f06e9ebcdc5cb",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_object__pick_up_the_butter_and_place_it_in_the_basket__demo_1.npz",
+      "source_rgb_gt_map_sha256": "3eb26c91f3f096c1a05faa181d1edc1d57be98ebc49f6f84909b3686a0161ae0",
+      "split": "evaluation",
+      "suite": "libero_object",
+      "task_id": "libero_object/pick_up_the_butter_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_1",
+      "local_saved_row": 8,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "butter"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_object",
+          "text": "basket"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 28,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_1_s00058.npz",
+      "source_archive_sha256": "9e7c95d78ed8cbca7b49102a63c550de20778f00d2271428171f06e9ebcdc5cb",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_object__pick_up_the_butter_and_place_it_in_the_basket__demo_1.npz",
+      "source_rgb_gt_map_sha256": "3eb26c91f3f096c1a05faa181d1edc1d57be98ebc49f6f84909b3686a0161ae0",
+      "split": "evaluation",
+      "suite": "libero_object",
+      "task_id": "libero_object/pick_up_the_butter_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_1",
+      "local_saved_row": 9,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "butter"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_object",
+          "text": "basket"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 31,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_1_s00058.npz",
+      "source_archive_sha256": "9e7c95d78ed8cbca7b49102a63c550de20778f00d2271428171f06e9ebcdc5cb",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_object__pick_up_the_butter_and_place_it_in_the_basket__demo_1.npz",
+      "source_rgb_gt_map_sha256": "3eb26c91f3f096c1a05faa181d1edc1d57be98ebc49f6f84909b3686a0161ae0",
+      "split": "evaluation",
+      "suite": "libero_object",
+      "task_id": "libero_object/pick_up_the_butter_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_10",
+      "local_saved_row": 0,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "tomato sauce"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_object",
+          "text": "basket"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 0,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_object_pick_up_the_tomato_sauce_and_place_it_in_the_basket/demo_10_s00145.npz",
+      "source_archive_sha256": "9a46bd1414c79466b702488a5e83761e1fc5e247142ff3efd33e39f38c3ab2ad",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_object__pick_up_the_tomato_sauce_and_place_it_in_the_basket__demo_10.npz",
+      "source_rgb_gt_map_sha256": "b08c69fa3d333b8bc2321f7c90d19451d2ff1073b07090a77e0f34b7d581c733",
+      "split": "evaluation",
+      "suite": "libero_object",
+      "task_id": "libero_object/pick_up_the_tomato_sauce_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_10",
+      "local_saved_row": 1,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "tomato sauce"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_object",
+          "text": "basket"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 3,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_object_pick_up_the_tomato_sauce_and_place_it_in_the_basket/demo_10_s00145.npz",
+      "source_archive_sha256": "9a46bd1414c79466b702488a5e83761e1fc5e247142ff3efd33e39f38c3ab2ad",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_object__pick_up_the_tomato_sauce_and_place_it_in_the_basket__demo_10.npz",
+      "source_rgb_gt_map_sha256": "b08c69fa3d333b8bc2321f7c90d19451d2ff1073b07090a77e0f34b7d581c733",
+      "split": "evaluation",
+      "suite": "libero_object",
+      "task_id": "libero_object/pick_up_the_tomato_sauce_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_10",
+      "local_saved_row": 2,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "tomato sauce"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_object",
+          "text": "basket"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 7,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_object_pick_up_the_tomato_sauce_and_place_it_in_the_basket/demo_10_s00145.npz",
+      "source_archive_sha256": "9a46bd1414c79466b702488a5e83761e1fc5e247142ff3efd33e39f38c3ab2ad",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_object__pick_up_the_tomato_sauce_and_place_it_in_the_basket__demo_10.npz",
+      "source_rgb_gt_map_sha256": "b08c69fa3d333b8bc2321f7c90d19451d2ff1073b07090a77e0f34b7d581c733",
+      "split": "evaluation",
+      "suite": "libero_object",
+      "task_id": "libero_object/pick_up_the_tomato_sauce_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_10",
+      "local_saved_row": 3,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "tomato sauce"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_object",
+          "text": "basket"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 10,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_object_pick_up_the_tomato_sauce_and_place_it_in_the_basket/demo_10_s00145.npz",
+      "source_archive_sha256": "9a46bd1414c79466b702488a5e83761e1fc5e247142ff3efd33e39f38c3ab2ad",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_object__pick_up_the_tomato_sauce_and_place_it_in_the_basket__demo_10.npz",
+      "source_rgb_gt_map_sha256": "b08c69fa3d333b8bc2321f7c90d19451d2ff1073b07090a77e0f34b7d581c733",
+      "split": "evaluation",
+      "suite": "libero_object",
+      "task_id": "libero_object/pick_up_the_tomato_sauce_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_10",
+      "local_saved_row": 4,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "tomato sauce"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_object",
+          "text": "basket"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 14,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_object_pick_up_the_tomato_sauce_and_place_it_in_the_basket/demo_10_s00145.npz",
+      "source_archive_sha256": "9a46bd1414c79466b702488a5e83761e1fc5e247142ff3efd33e39f38c3ab2ad",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_object__pick_up_the_tomato_sauce_and_place_it_in_the_basket__demo_10.npz",
+      "source_rgb_gt_map_sha256": "b08c69fa3d333b8bc2321f7c90d19451d2ff1073b07090a77e0f34b7d581c733",
+      "split": "evaluation",
+      "suite": "libero_object",
+      "task_id": "libero_object/pick_up_the_tomato_sauce_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_10",
+      "local_saved_row": 5,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "tomato sauce"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_object",
+          "text": "basket"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 17,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_object_pick_up_the_tomato_sauce_and_place_it_in_the_basket/demo_10_s00145.npz",
+      "source_archive_sha256": "9a46bd1414c79466b702488a5e83761e1fc5e247142ff3efd33e39f38c3ab2ad",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_object__pick_up_the_tomato_sauce_and_place_it_in_the_basket__demo_10.npz",
+      "source_rgb_gt_map_sha256": "b08c69fa3d333b8bc2321f7c90d19451d2ff1073b07090a77e0f34b7d581c733",
+      "split": "evaluation",
+      "suite": "libero_object",
+      "task_id": "libero_object/pick_up_the_tomato_sauce_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_10",
+      "local_saved_row": 6,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "tomato sauce"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_object",
+          "text": "basket"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 21,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_object_pick_up_the_tomato_sauce_and_place_it_in_the_basket/demo_10_s00145.npz",
+      "source_archive_sha256": "9a46bd1414c79466b702488a5e83761e1fc5e247142ff3efd33e39f38c3ab2ad",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_object__pick_up_the_tomato_sauce_and_place_it_in_the_basket__demo_10.npz",
+      "source_rgb_gt_map_sha256": "b08c69fa3d333b8bc2321f7c90d19451d2ff1073b07090a77e0f34b7d581c733",
+      "split": "evaluation",
+      "suite": "libero_object",
+      "task_id": "libero_object/pick_up_the_tomato_sauce_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_10",
+      "local_saved_row": 7,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "tomato sauce"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_object",
+          "text": "basket"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 24,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_object_pick_up_the_tomato_sauce_and_place_it_in_the_basket/demo_10_s00145.npz",
+      "source_archive_sha256": "9a46bd1414c79466b702488a5e83761e1fc5e247142ff3efd33e39f38c3ab2ad",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_object__pick_up_the_tomato_sauce_and_place_it_in_the_basket__demo_10.npz",
+      "source_rgb_gt_map_sha256": "b08c69fa3d333b8bc2321f7c90d19451d2ff1073b07090a77e0f34b7d581c733",
+      "split": "evaluation",
+      "suite": "libero_object",
+      "task_id": "libero_object/pick_up_the_tomato_sauce_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_10",
+      "local_saved_row": 8,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "tomato sauce"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_object",
+          "text": "basket"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 28,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_object_pick_up_the_tomato_sauce_and_place_it_in_the_basket/demo_10_s00145.npz",
+      "source_archive_sha256": "9a46bd1414c79466b702488a5e83761e1fc5e247142ff3efd33e39f38c3ab2ad",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_object__pick_up_the_tomato_sauce_and_place_it_in_the_basket__demo_10.npz",
+      "source_rgb_gt_map_sha256": "b08c69fa3d333b8bc2321f7c90d19451d2ff1073b07090a77e0f34b7d581c733",
+      "split": "evaluation",
+      "suite": "libero_object",
+      "task_id": "libero_object/pick_up_the_tomato_sauce_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_10",
+      "local_saved_row": 9,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "tomato sauce"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_object",
+          "text": "basket"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 31,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_object_pick_up_the_tomato_sauce_and_place_it_in_the_basket/demo_10_s00145.npz",
+      "source_archive_sha256": "9a46bd1414c79466b702488a5e83761e1fc5e247142ff3efd33e39f38c3ab2ad",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_object__pick_up_the_tomato_sauce_and_place_it_in_the_basket__demo_10.npz",
+      "source_rgb_gt_map_sha256": "b08c69fa3d333b8bc2321f7c90d19451d2ff1073b07090a77e0f34b7d581c733",
+      "split": "evaluation",
+      "suite": "libero_object",
+      "task_id": "libero_object/pick_up_the_tomato_sauce_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_0",
+      "local_saved_row": 0,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "black bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "other_objects"
+          ],
+          "role": "mentioned_context_object",
+          "text": "ramekin"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 0,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_0_s00000.npz",
+      "source_archive_sha256": "27c2a65bc7454dc231333b5617a864739ad18787f276ac68028e0554ef7dd55d",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__demo_0.npz",
+      "source_rgb_gt_map_sha256": "e0963bbdb3c9c5deaad08cdafafbfca8eedaa9a7f49331702c6f6570ee824962",
+      "split": "development",
+      "suite": "libero_spatial",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate"
+    },
+    {
+      "demo": "demo_0",
+      "local_saved_row": 1,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "black bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "other_objects"
+          ],
+          "role": "mentioned_context_object",
+          "text": "ramekin"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 3,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_0_s00000.npz",
+      "source_archive_sha256": "27c2a65bc7454dc231333b5617a864739ad18787f276ac68028e0554ef7dd55d",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__demo_0.npz",
+      "source_rgb_gt_map_sha256": "e0963bbdb3c9c5deaad08cdafafbfca8eedaa9a7f49331702c6f6570ee824962",
+      "split": "development",
+      "suite": "libero_spatial",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate"
+    },
+    {
+      "demo": "demo_0",
+      "local_saved_row": 2,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "black bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "other_objects"
+          ],
+          "role": "mentioned_context_object",
+          "text": "ramekin"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 7,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_0_s00000.npz",
+      "source_archive_sha256": "27c2a65bc7454dc231333b5617a864739ad18787f276ac68028e0554ef7dd55d",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__demo_0.npz",
+      "source_rgb_gt_map_sha256": "e0963bbdb3c9c5deaad08cdafafbfca8eedaa9a7f49331702c6f6570ee824962",
+      "split": "development",
+      "suite": "libero_spatial",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate"
+    },
+    {
+      "demo": "demo_0",
+      "local_saved_row": 3,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "black bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "other_objects"
+          ],
+          "role": "mentioned_context_object",
+          "text": "ramekin"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 10,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_0_s00000.npz",
+      "source_archive_sha256": "27c2a65bc7454dc231333b5617a864739ad18787f276ac68028e0554ef7dd55d",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__demo_0.npz",
+      "source_rgb_gt_map_sha256": "e0963bbdb3c9c5deaad08cdafafbfca8eedaa9a7f49331702c6f6570ee824962",
+      "split": "development",
+      "suite": "libero_spatial",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate"
+    },
+    {
+      "demo": "demo_0",
+      "local_saved_row": 4,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "black bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "other_objects"
+          ],
+          "role": "mentioned_context_object",
+          "text": "ramekin"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 14,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_0_s00000.npz",
+      "source_archive_sha256": "27c2a65bc7454dc231333b5617a864739ad18787f276ac68028e0554ef7dd55d",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__demo_0.npz",
+      "source_rgb_gt_map_sha256": "e0963bbdb3c9c5deaad08cdafafbfca8eedaa9a7f49331702c6f6570ee824962",
+      "split": "development",
+      "suite": "libero_spatial",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate"
+    },
+    {
+      "demo": "demo_0",
+      "local_saved_row": 5,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "black bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "other_objects"
+          ],
+          "role": "mentioned_context_object",
+          "text": "ramekin"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 17,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_0_s00000.npz",
+      "source_archive_sha256": "27c2a65bc7454dc231333b5617a864739ad18787f276ac68028e0554ef7dd55d",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__demo_0.npz",
+      "source_rgb_gt_map_sha256": "e0963bbdb3c9c5deaad08cdafafbfca8eedaa9a7f49331702c6f6570ee824962",
+      "split": "development",
+      "suite": "libero_spatial",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate"
+    },
+    {
+      "demo": "demo_0",
+      "local_saved_row": 6,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "black bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "other_objects"
+          ],
+          "role": "mentioned_context_object",
+          "text": "ramekin"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 21,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_0_s00000.npz",
+      "source_archive_sha256": "27c2a65bc7454dc231333b5617a864739ad18787f276ac68028e0554ef7dd55d",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__demo_0.npz",
+      "source_rgb_gt_map_sha256": "e0963bbdb3c9c5deaad08cdafafbfca8eedaa9a7f49331702c6f6570ee824962",
+      "split": "development",
+      "suite": "libero_spatial",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate"
+    },
+    {
+      "demo": "demo_0",
+      "local_saved_row": 7,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "black bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "other_objects"
+          ],
+          "role": "mentioned_context_object",
+          "text": "ramekin"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 24,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_0_s00000.npz",
+      "source_archive_sha256": "27c2a65bc7454dc231333b5617a864739ad18787f276ac68028e0554ef7dd55d",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__demo_0.npz",
+      "source_rgb_gt_map_sha256": "e0963bbdb3c9c5deaad08cdafafbfca8eedaa9a7f49331702c6f6570ee824962",
+      "split": "development",
+      "suite": "libero_spatial",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate"
+    },
+    {
+      "demo": "demo_0",
+      "local_saved_row": 8,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "black bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "other_objects"
+          ],
+          "role": "mentioned_context_object",
+          "text": "ramekin"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 28,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_0_s00000.npz",
+      "source_archive_sha256": "27c2a65bc7454dc231333b5617a864739ad18787f276ac68028e0554ef7dd55d",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__demo_0.npz",
+      "source_rgb_gt_map_sha256": "e0963bbdb3c9c5deaad08cdafafbfca8eedaa9a7f49331702c6f6570ee824962",
+      "split": "development",
+      "suite": "libero_spatial",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate"
+    },
+    {
+      "demo": "demo_0",
+      "local_saved_row": 9,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "black bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "other_objects"
+          ],
+          "role": "mentioned_context_object",
+          "text": "ramekin"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 31,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_0_s00000.npz",
+      "source_archive_sha256": "27c2a65bc7454dc231333b5617a864739ad18787f276ac68028e0554ef7dd55d",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_spatial__pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate__demo_0.npz",
+      "source_rgb_gt_map_sha256": "e0963bbdb3c9c5deaad08cdafafbfca8eedaa9a7f49331702c6f6570ee824962",
+      "split": "development",
+      "suite": "libero_spatial",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate"
+    },
+    {
+      "demo": "demo_1",
+      "local_saved_row": 0,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "black bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "task_relevant_fixtures"
+          ],
+          "role": "spatial_reference",
+          "text": "table"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 0,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_1_s00045.npz",
+      "source_archive_sha256": "801443fbaeba167f04bdcd4ab552375e27776fd06259caf5a686543faeb3c422",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_spatial__pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate__demo_1.npz",
+      "source_rgb_gt_map_sha256": "7d589fdd85d6ae8cac450bc67e279bea7191e27ad39fe96bef8d05b8627ca885",
+      "split": "evaluation",
+      "suite": "libero_spatial",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate"
+    },
+    {
+      "demo": "demo_1",
+      "local_saved_row": 1,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "black bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "task_relevant_fixtures"
+          ],
+          "role": "spatial_reference",
+          "text": "table"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 3,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_1_s00045.npz",
+      "source_archive_sha256": "801443fbaeba167f04bdcd4ab552375e27776fd06259caf5a686543faeb3c422",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_spatial__pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate__demo_1.npz",
+      "source_rgb_gt_map_sha256": "7d589fdd85d6ae8cac450bc67e279bea7191e27ad39fe96bef8d05b8627ca885",
+      "split": "evaluation",
+      "suite": "libero_spatial",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate"
+    },
+    {
+      "demo": "demo_1",
+      "local_saved_row": 2,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "black bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "task_relevant_fixtures"
+          ],
+          "role": "spatial_reference",
+          "text": "table"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 7,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_1_s00045.npz",
+      "source_archive_sha256": "801443fbaeba167f04bdcd4ab552375e27776fd06259caf5a686543faeb3c422",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_spatial__pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate__demo_1.npz",
+      "source_rgb_gt_map_sha256": "7d589fdd85d6ae8cac450bc67e279bea7191e27ad39fe96bef8d05b8627ca885",
+      "split": "evaluation",
+      "suite": "libero_spatial",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate"
+    },
+    {
+      "demo": "demo_1",
+      "local_saved_row": 3,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "black bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "task_relevant_fixtures"
+          ],
+          "role": "spatial_reference",
+          "text": "table"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 10,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_1_s00045.npz",
+      "source_archive_sha256": "801443fbaeba167f04bdcd4ab552375e27776fd06259caf5a686543faeb3c422",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_spatial__pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate__demo_1.npz",
+      "source_rgb_gt_map_sha256": "7d589fdd85d6ae8cac450bc67e279bea7191e27ad39fe96bef8d05b8627ca885",
+      "split": "evaluation",
+      "suite": "libero_spatial",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate"
+    },
+    {
+      "demo": "demo_1",
+      "local_saved_row": 4,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "black bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "task_relevant_fixtures"
+          ],
+          "role": "spatial_reference",
+          "text": "table"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 14,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_1_s00045.npz",
+      "source_archive_sha256": "801443fbaeba167f04bdcd4ab552375e27776fd06259caf5a686543faeb3c422",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_spatial__pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate__demo_1.npz",
+      "source_rgb_gt_map_sha256": "7d589fdd85d6ae8cac450bc67e279bea7191e27ad39fe96bef8d05b8627ca885",
+      "split": "evaluation",
+      "suite": "libero_spatial",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate"
+    },
+    {
+      "demo": "demo_1",
+      "local_saved_row": 5,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "black bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "task_relevant_fixtures"
+          ],
+          "role": "spatial_reference",
+          "text": "table"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 17,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_1_s00045.npz",
+      "source_archive_sha256": "801443fbaeba167f04bdcd4ab552375e27776fd06259caf5a686543faeb3c422",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_spatial__pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate__demo_1.npz",
+      "source_rgb_gt_map_sha256": "7d589fdd85d6ae8cac450bc67e279bea7191e27ad39fe96bef8d05b8627ca885",
+      "split": "evaluation",
+      "suite": "libero_spatial",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate"
+    },
+    {
+      "demo": "demo_1",
+      "local_saved_row": 6,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "black bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "task_relevant_fixtures"
+          ],
+          "role": "spatial_reference",
+          "text": "table"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 21,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_1_s00045.npz",
+      "source_archive_sha256": "801443fbaeba167f04bdcd4ab552375e27776fd06259caf5a686543faeb3c422",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_spatial__pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate__demo_1.npz",
+      "source_rgb_gt_map_sha256": "7d589fdd85d6ae8cac450bc67e279bea7191e27ad39fe96bef8d05b8627ca885",
+      "split": "evaluation",
+      "suite": "libero_spatial",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate"
+    },
+    {
+      "demo": "demo_1",
+      "local_saved_row": 7,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "black bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "task_relevant_fixtures"
+          ],
+          "role": "spatial_reference",
+          "text": "table"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 24,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_1_s00045.npz",
+      "source_archive_sha256": "801443fbaeba167f04bdcd4ab552375e27776fd06259caf5a686543faeb3c422",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_spatial__pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate__demo_1.npz",
+      "source_rgb_gt_map_sha256": "7d589fdd85d6ae8cac450bc67e279bea7191e27ad39fe96bef8d05b8627ca885",
+      "split": "evaluation",
+      "suite": "libero_spatial",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate"
+    },
+    {
+      "demo": "demo_1",
+      "local_saved_row": 8,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "black bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "task_relevant_fixtures"
+          ],
+          "role": "spatial_reference",
+          "text": "table"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 28,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_1_s00045.npz",
+      "source_archive_sha256": "801443fbaeba167f04bdcd4ab552375e27776fd06259caf5a686543faeb3c422",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_spatial__pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate__demo_1.npz",
+      "source_rgb_gt_map_sha256": "7d589fdd85d6ae8cac450bc67e279bea7191e27ad39fe96bef8d05b8627ca885",
+      "split": "evaluation",
+      "suite": "libero_spatial",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate"
+    },
+    {
+      "demo": "demo_1",
+      "local_saved_row": 9,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "black bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "task_relevant_fixtures"
+          ],
+          "role": "spatial_reference",
+          "text": "table"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 31,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_1_s00045.npz",
+      "source_archive_sha256": "801443fbaeba167f04bdcd4ab552375e27776fd06259caf5a686543faeb3c422",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_spatial__pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate__demo_1.npz",
+      "source_rgb_gt_map_sha256": "7d589fdd85d6ae8cac450bc67e279bea7191e27ad39fe96bef8d05b8627ca885",
+      "split": "evaluation",
+      "suite": "libero_spatial",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate"
+    },
+    {
+      "demo": "demo_10",
+      "local_saved_row": 0,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "black bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "task_relevant_fixtures"
+          ],
+          "role": "task_fixture",
+          "text": "stove"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 0,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_spatial_pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate/demo_10_s00108.npz",
+      "source_archive_sha256": "ec15f223703d349dfb2e8eebbd7a1f44debe0b767006d15450f134d3184fb18f",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_spatial__pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate__demo_10.npz",
+      "source_rgb_gt_map_sha256": "ae3044a6053ed7fa7ec27fb2beb608f6b5e679bcb8c5aad618183d24c2c18678",
+      "split": "evaluation",
+      "suite": "libero_spatial",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate"
+    },
+    {
+      "demo": "demo_10",
+      "local_saved_row": 1,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "black bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "task_relevant_fixtures"
+          ],
+          "role": "task_fixture",
+          "text": "stove"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 3,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_spatial_pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate/demo_10_s00108.npz",
+      "source_archive_sha256": "ec15f223703d349dfb2e8eebbd7a1f44debe0b767006d15450f134d3184fb18f",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_spatial__pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate__demo_10.npz",
+      "source_rgb_gt_map_sha256": "ae3044a6053ed7fa7ec27fb2beb608f6b5e679bcb8c5aad618183d24c2c18678",
+      "split": "evaluation",
+      "suite": "libero_spatial",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate"
+    },
+    {
+      "demo": "demo_10",
+      "local_saved_row": 2,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "black bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "task_relevant_fixtures"
+          ],
+          "role": "task_fixture",
+          "text": "stove"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 7,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_spatial_pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate/demo_10_s00108.npz",
+      "source_archive_sha256": "ec15f223703d349dfb2e8eebbd7a1f44debe0b767006d15450f134d3184fb18f",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_spatial__pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate__demo_10.npz",
+      "source_rgb_gt_map_sha256": "ae3044a6053ed7fa7ec27fb2beb608f6b5e679bcb8c5aad618183d24c2c18678",
+      "split": "evaluation",
+      "suite": "libero_spatial",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate"
+    },
+    {
+      "demo": "demo_10",
+      "local_saved_row": 3,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "black bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "task_relevant_fixtures"
+          ],
+          "role": "task_fixture",
+          "text": "stove"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 10,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_spatial_pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate/demo_10_s00108.npz",
+      "source_archive_sha256": "ec15f223703d349dfb2e8eebbd7a1f44debe0b767006d15450f134d3184fb18f",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_spatial__pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate__demo_10.npz",
+      "source_rgb_gt_map_sha256": "ae3044a6053ed7fa7ec27fb2beb608f6b5e679bcb8c5aad618183d24c2c18678",
+      "split": "evaluation",
+      "suite": "libero_spatial",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate"
+    },
+    {
+      "demo": "demo_10",
+      "local_saved_row": 4,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "black bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "task_relevant_fixtures"
+          ],
+          "role": "task_fixture",
+          "text": "stove"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 14,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_spatial_pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate/demo_10_s00108.npz",
+      "source_archive_sha256": "ec15f223703d349dfb2e8eebbd7a1f44debe0b767006d15450f134d3184fb18f",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_spatial__pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate__demo_10.npz",
+      "source_rgb_gt_map_sha256": "ae3044a6053ed7fa7ec27fb2beb608f6b5e679bcb8c5aad618183d24c2c18678",
+      "split": "evaluation",
+      "suite": "libero_spatial",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate"
+    },
+    {
+      "demo": "demo_10",
+      "local_saved_row": 5,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "black bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "task_relevant_fixtures"
+          ],
+          "role": "task_fixture",
+          "text": "stove"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 17,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_spatial_pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate/demo_10_s00108.npz",
+      "source_archive_sha256": "ec15f223703d349dfb2e8eebbd7a1f44debe0b767006d15450f134d3184fb18f",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_spatial__pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate__demo_10.npz",
+      "source_rgb_gt_map_sha256": "ae3044a6053ed7fa7ec27fb2beb608f6b5e679bcb8c5aad618183d24c2c18678",
+      "split": "evaluation",
+      "suite": "libero_spatial",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate"
+    },
+    {
+      "demo": "demo_10",
+      "local_saved_row": 6,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "black bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "task_relevant_fixtures"
+          ],
+          "role": "task_fixture",
+          "text": "stove"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 21,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_spatial_pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate/demo_10_s00108.npz",
+      "source_archive_sha256": "ec15f223703d349dfb2e8eebbd7a1f44debe0b767006d15450f134d3184fb18f",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_spatial__pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate__demo_10.npz",
+      "source_rgb_gt_map_sha256": "ae3044a6053ed7fa7ec27fb2beb608f6b5e679bcb8c5aad618183d24c2c18678",
+      "split": "evaluation",
+      "suite": "libero_spatial",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate"
+    },
+    {
+      "demo": "demo_10",
+      "local_saved_row": 7,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "black bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "task_relevant_fixtures"
+          ],
+          "role": "task_fixture",
+          "text": "stove"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 24,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_spatial_pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate/demo_10_s00108.npz",
+      "source_archive_sha256": "ec15f223703d349dfb2e8eebbd7a1f44debe0b767006d15450f134d3184fb18f",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_spatial__pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate__demo_10.npz",
+      "source_rgb_gt_map_sha256": "ae3044a6053ed7fa7ec27fb2beb608f6b5e679bcb8c5aad618183d24c2c18678",
+      "split": "evaluation",
+      "suite": "libero_spatial",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate"
+    },
+    {
+      "demo": "demo_10",
+      "local_saved_row": 8,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "black bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "task_relevant_fixtures"
+          ],
+          "role": "task_fixture",
+          "text": "stove"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 28,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_spatial_pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate/demo_10_s00108.npz",
+      "source_archive_sha256": "ec15f223703d349dfb2e8eebbd7a1f44debe0b767006d15450f134d3184fb18f",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_spatial__pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate__demo_10.npz",
+      "source_rgb_gt_map_sha256": "ae3044a6053ed7fa7ec27fb2beb608f6b5e679bcb8c5aad618183d24c2c18678",
+      "split": "evaluation",
+      "suite": "libero_spatial",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate"
+    },
+    {
+      "demo": "demo_10",
+      "local_saved_row": 9,
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "black bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "task_relevant_fixtures"
+          ],
+          "role": "task_fixture",
+          "text": "stove"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_index": 31,
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_spatial_pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate/demo_10_s00108.npz",
+      "source_archive_sha256": "ec15f223703d349dfb2e8eebbd7a1f44debe0b767006d15450f134d3184fb18f",
+      "source_rgb_gt_map_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_multicategory_libero/score_maps/libero_spatial__pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate__demo_10.npz",
+      "source_rgb_gt_map_sha256": "ae3044a6053ed7fa7ec27fb2beb608f6b5e679bcb8c5aad618183d24c2c18678",
+      "split": "evaluation",
+      "suite": "libero_spatial",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate"
+    }
+  ],
+  "source_manifest_sha256": "b6f4ad4523768ed46037879c0be65c3f6e5f4182929ed45997df6b1992b03275",
+  "split_by_demo_segment": true,
+  "total_images": 90
+}

@@ -1,0 +1,54 @@
+{
+  "peak_memory": {
+    "allocated_bytes_at_end": 15978844160,
+    "device": "Orin",
+    "peak_allocated_bytes": 16075855872,
+    "peak_reserved_bytes": 16196304896,
+    "reserved_bytes_at_end": 16196304896
+  },
+  "preprocessing": "all matched A/B/C use `processor.image_processor(...)[pixel_values][:, :3][\"dino\"]`; prior A preprocessing delta audit is in summary",
+  "scope": "per-frame DINO and scoring wall time; excludes full policy LLM prefill except one action-parity probe; no net robot inference acceleration claim",
+  "synchronized_wall_time": {
+    "A_official_dino": {
+      "count": 90,
+      "max_ms": 210.1190178655088,
+      "mean_ms": 26.125853588908083,
+      "median_ms": 23.954713018611073,
+      "min_ms": 23.606698028743267,
+      "p95_ms": 24.860990163870156
+    },
+    "A_scoring": {
+      "count": 90,
+      "max_ms": 33.50366302765906,
+      "mean_ms": 1.9682653739841447,
+      "median_ms": 1.6067979158833623,
+      "min_ms": 1.5478248242288828,
+      "p95_ms": 1.683000335469842
+    },
+    "B_C_shared_openvla_dino": {
+      "count": 90,
+      "max_ms": 26.926338206976652,
+      "mean_ms": 24.82310742812438,
+      "median_ms": 24.718482047319412,
+      "min_ms": 24.33981210924685,
+      "p95_ms": 25.446539383847266
+    },
+    "B_scoring": {
+      "count": 90,
+      "max_ms": 1.7602299340069294,
+      "mean_ms": 1.442739512357447,
+      "median_ms": 1.4300389448180795,
+      "min_ms": 1.3734661042690277,
+      "p95_ms": 1.5126588405109942
+    },
+    "C_scoring": {
+      "count": 90,
+      "max_ms": 1.507282955572009,
+      "mean_ms": 1.403281234929131,
+      "median_ms": 1.3967930572107434,
+      "min_ms": 1.3690819032490253,
+      "p95_ms": 1.4528806321322918
+    }
+  },
+  "task_text_encodes": 9
+}
