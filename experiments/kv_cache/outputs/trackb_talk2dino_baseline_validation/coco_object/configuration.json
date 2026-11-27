@@ -1,0 +1,59 @@
+{
+  "background_threshold": 0.54,
+  "class_count": 81,
+  "classnames_sha256": "1f17b53017e442257cad2025ab981ddeb28d048af00dcac8ae810bc25a6a9a77",
+  "clip_sha256": "5806e77cd80f8b59890b7e101eabd078d9fb84e6937f9e85e4ecb61988df416f",
+  "dino_transform": "upstream DINOText Resize(448,448), ImageNet mean/std; MMCV FloatImage crop in BGR then upstream BGR\u2192RGB",
+  "eval_metric": "global 81-class confusion matrix; nanmean over nonempty class unions including background",
+  "evaluated_images": 5000,
+  "expected_images": 5000,
+  "image_size": 448,
+  "lambda_bg": 0.2,
+  "latency_s_per_image": {
+    "mean": 5.439650154845789,
+    "median": 4.98295083118137,
+    "p95": 7.275490601919591
+  },
+  "mlp_sha256": "4e28d24ecb905592c902b04d9c077484346ebafac8547b968bd5af16291d8d69",
+  "official_dino": {
+    "blocks": 24,
+    "heads": 16,
+    "missing_keys": [],
+    "model_identifier": "dinov2_vitl14_reg",
+    "num_register_tokens": 4,
+    "repository": "facebookresearch/dinov2",
+    "source_revision": "7764ea0f912e53c92e82eb78a2a1631e92725fc8",
+    "strict_state_load": true,
+    "unexpected_keys": [],
+    "weights_path": "/opt/openvla/cache/models/dinov2/facebook_dinov2_large/dinov2_vitl14_reg4_pretrain.pth",
+    "weights_sha256": "36e4deffbaef061a2576705b0c36f93621e2ae20bf6274694821b0b492551b51",
+    "width": 1024
+  },
+  "official_miou_note": "The Talk2DINO source model inference functions are used unchanged; single-process code implements the pinned MMSeg slide and confusion-matrix semantics because compatible MMCV/MMseg packages are absent.",
+  "official_repo_revision": "6dac47dbe3500df63f3b3df20dd28334290919cc",
+  "pamr": {
+    "dilations": [
+      1,
+      2,
+      4,
+      8,
+      12,
+      24
+    ],
+    "iter": 10
+  },
+  "peak_cuda_allocated_bytes": 11331267584,
+  "slide_crop": 448,
+  "slide_stride": 224,
+  "smoke": false,
+  "source_config_files": [
+    "configs/coco_object/dinotext_coco_object_vitl_mlp_infonce.yml",
+    "src/open_vocabulary_segmentation/configs/coco_object/eval_coco_object_vitl.yml",
+    "src/open_vocabulary_segmentation/segmentation/configs/_base_/datasets/coco.py"
+  ],
+  "templates": "upstream sub_imagenet_template",
+  "test_scale": [
+    2048,
+    448
+  ]
+}

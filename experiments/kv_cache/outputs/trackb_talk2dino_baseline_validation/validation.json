@@ -1,0 +1,14 @@
+{
+  "checkpoint_sha256_verified": true,
+  "coco_expected_images": 5000,
+  "coco_full_images": 5000,
+  "coco_smoke_images": 5,
+  "coco_smoke_passed": true,
+  "libero_frames": 1152,
+  "libero_gt_union_source": "separate relevant_gt array",
+  "libero_segment_paths_unique": 36,
+  "libero_segments": 36,
+  "mmcv_mmseg_wrapper_available": false,
+  "official_repo_revision": "6dac47dbe3500df63f3b3df20dd28334290919cc",
+  "official_slide_and_confusion_single_process_equivalent": true
+}

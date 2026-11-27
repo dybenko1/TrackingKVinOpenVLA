@@ -1,0 +1,174 @@
+{
+  "frames": 1152,
+  "metrics": {
+    "destination_or_fixture": {
+      "clean": {
+        "fn": 1434.0766944885254,
+        "fp": 23620.722038269043,
+        "iou": 0.20245941219830946,
+        "precision": 0.2121436230189439,
+        "recall": 0.8160108491670689,
+        "tn": 214344.92330551147,
+        "tp": 6360.277961730957
+      },
+      "raw": {
+        "fn": 707.6496391296387,
+        "fp": 39967.294982910156,
+        "iou": 0.14837647088478967,
+        "precision": 0.15060791892484898,
+        "recall": 0.9092099769202866,
+        "tn": 197998.35036087036,
+        "tp": 7086.705017089844
+      }
+    },
+    "manipulated_object": {
+      "clean": {
+        "fn": 544.5377159118652,
+        "fp": 18798.953868865967,
+        "iou": 0.07013789139860607,
+        "precision": 0.0720232071840277,
+        "recall": 0.7282181543264404,
+        "tn": 222397.46228408813,
+        "tp": 1459.0461311340332
+      },
+      "raw": {
+        "fn": 254.2543182373047,
+        "fp": 31504.670471191406,
+        "iou": 0.0522059284913717,
+        "precision": 0.05260508596886371,
+        "recall": 0.8731002355543146,
+        "tn": 209691.7456817627,
+        "tp": 1749.3295288085938
+      }
+    },
+    "robot_arm": {
+      "clean": {
+        "fn": 46.45917510986328,
+        "fp": 96181.63162231445,
+        "iou": 0.2074412598697206,
+        "precision": 0.2075206675374526,
+        "recall": 0.9981587804611808,
+        "tn": 173497.54082489014,
+        "tp": 25186.368377685547
+      },
+      "raw": {
+        "fn": 13.224784851074219,
+        "fp": 117878.39723205566,
+        "iou": 0.17622379240942626,
+        "precision": 0.17624007860308555,
+        "recall": 0.9994758896987108,
+        "tn": 151800.77521514893,
+        "tp": 25219.602767944336
+      }
+    },
+    "robot_gripper": {
+      "clean": {
+        "fn": 3.223949432373047,
+        "fp": 108470.76062011719,
+        "iou": 0.06008444756000353,
+        "precision": 0.06008612607671082,
+        "recall": 0.9995352841118814,
+        "tn": 179503.77605056763,
+        "tp": 6934.2393798828125
+      },
+      "raw": {
+        "fn": 1.1426544189453125,
+        "fp": 129860.67932510376,
+        "iou": 0.05070478692403634,
+        "precision": 0.050705210457073185,
+        "recall": 0.9998352921861055,
+        "tn": 158113.85734558105,
+        "tp": 6936.32067489624
+      }
+    },
+    "task_fixture": {
+      "clean": {
+        "fn": 175.57219696044922,
+        "fp": 37054.814235687256,
+        "iou": 0.19528961461555935,
+        "precision": 0.19603353795427955,
+        "recall": 0.9809383551604932,
+        "tn": 27462.42780303955,
+        "tp": 9035.185764312744
+      },
+      "raw": {
+        "fn": 10.87686538696289,
+        "fp": 48356.11890411377,
+        "iou": 0.1598120585453857,
+        "precision": 0.159842259640806,
+        "recall": 0.998819112885965,
+        "tn": 16161.123134613037,
+        "tp": 9199.88109588623
+      }
+    },
+    "task_relevant_foreground": {
+      "clean": {
+        "fn": 36677.796783447266,
+        "fp": 25689.317764282227,
+        "iou": 0.1838132201275531,
+        "precision": 0.35348388664194724,
+        "recall": 0.2769069178084343,
+        "tn": 218499.20321655273,
+        "tp": 14045.682235717773
+      },
+      "raw": {
+        "fn": 31509.749153137207,
+        "fp": 37335.27013397217,
+        "iou": 0.21819217341611896,
+        "precision": 0.339771346372665,
+        "recall": 0.37879361269301415,
+        "tn": 206853.2508468628,
+        "tp": 19213.729866027832
+      }
+    }
+  },
+  "metrics_are_fractional_patch_occupancy_pooled_not_instance_iou": true,
+  "official_model_identity": {
+    "background_threshold": 0.54,
+    "class_count": 81,
+    "classnames_sha256": "1f17b53017e442257cad2025ab981ddeb28d048af00dcac8ae810bc25a6a9a77",
+    "clip_sha256": "5806e77cd80f8b59890b7e101eabd078d9fb84e6937f9e85e4ecb61988df416f",
+    "dino_transform": "upstream DINOText Resize(448,448), ImageNet mean/std; MMCV FloatImage crop in BGR then upstream BGR\u2192RGB",
+    "eval_metric": "global 81-class confusion matrix; nanmean over nonempty class unions including background",
+    "image_size": 448,
+    "lambda_bg": 0.2,
+    "mlp_sha256": "4e28d24ecb905592c902b04d9c077484346ebafac8547b968bd5af16291d8d69",
+    "official_dino": {
+      "blocks": 24,
+      "heads": 16,
+      "missing_keys": [],
+      "model_identifier": "dinov2_vitl14_reg",
+      "num_register_tokens": 4,
+      "repository": "facebookresearch/dinov2",
+      "source_revision": "7764ea0f912e53c92e82eb78a2a1631e92725fc8",
+      "strict_state_load": true,
+      "unexpected_keys": [],
+      "weights_path": "/opt/openvla/cache/models/dinov2/facebook_dinov2_large/dinov2_vitl14_reg4_pretrain.pth",
+      "weights_sha256": "36e4deffbaef061a2576705b0c36f93621e2ae20bf6274694821b0b492551b51",
+      "width": 1024
+    },
+    "official_repo_revision": "6dac47dbe3500df63f3b3df20dd28334290919cc",
+    "pamr": {
+      "dilations": [
+        1,
+        2,
+        4,
+        8,
+        12,
+        24
+      ],
+      "iter": 10
+    },
+    "slide_crop": 448,
+    "slide_stride": 224,
+    "templates": "upstream sub_imagenet_template",
+    "test_scale": [
+      2048,
+      448
+    ]
+  },
+  "resolution": "224 RGB paired frames; upstream DINOText resizes square to 448 internally",
+  "segments": 36,
+  "threshold": 0.54,
+  "threshold_is_official_COCO_setting_not_calibrated_for_LIBERO": true
+}

@@ -1,0 +1,40 @@
+{
+  "clean": {
+    "background_iou": 0.7561288568466368,
+    "classes_nonempty_union": 81,
+    "classes_with_ground_truth": 81,
+    "delta_from_published": 0.015418921759045912,
+    "foreground_miou": 0.3868600475704511,
+    "foreground_precision_micro": 0.5562190936958972,
+    "foreground_recall_micro": 0.5589471639820901,
+    "miou_including_background": 0.3914189217590459,
+    "pixel_accuracy": 0.7675023493158165,
+    "published_reference_miou": 0.376,
+    "valid_pixels": 1312660894
+  },
+  "clean_pamr": {
+    "background_iou": 0.7834703379981489,
+    "classes_nonempty_union": 81,
+    "classes_with_ground_truth": 81,
+    "delta_from_published": 0.017625773832220748,
+    "foreground_miou": 0.4363402167801468,
+    "foreground_precision_micro": 0.6209067304415782,
+    "foreground_recall_micro": 0.5609310084729181,
+    "miou_including_background": 0.44062577383222074,
+    "pixel_accuracy": 0.7939061541053267,
+    "published_reference_miou": 0.423,
+    "valid_pixels": 1312660894
+  },
+  "raw": {
+    "background_iou": 0.6743281825229165,
+    "classes_nonempty_union": 81,
+    "classes_with_ground_truth": 81,
+    "foreground_miou": 0.3457462769455451,
+    "foreground_precision_micro": 0.4556124823608827,
+    "foreground_recall_micro": 0.7269417543785355,
+    "miou_including_background": 0.3498028436810682,
+    "pixel_accuracy": 0.7075238999235396,
+    "published_reference_miou": null,
+    "valid_pixels": 1312660894
+  }
+}
