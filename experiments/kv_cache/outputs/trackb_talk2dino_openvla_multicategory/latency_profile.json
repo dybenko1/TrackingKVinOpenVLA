@@ -143,8 +143,33 @@
       "task_id": "libero_spatial/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate"
     }
   ],
-  "profile_script_sha256": "4204b1699f3941eae0f04b6331453c23e5f9bd1f2d9e6e6f8d8c6f2bf4d76c26",
-  "samples": [],
+  "profile_script_sha256": "0b97d736968b4a2af43c62a1a77f8888daac6206b0e7951b826dd8079387a380",
+  "samples": [
+    {
+      "frame_index": 0,
+      "task_id": "libero_goal/put_the_bowl_on_the_plate"
+    },
+    {
+      "frame_index": 17,
+      "task_id": "libero_goal/put_the_bowl_on_the_plate"
+    },
+    {
+      "frame_index": 0,
+      "task_id": "libero_object/pick_up_the_butter_and_place_it_in_the_basket"
+    },
+    {
+      "frame_index": 17,
+      "task_id": "libero_object/pick_up_the_butter_and_place_it_in_the_basket"
+    },
+    {
+      "frame_index": 0,
+      "task_id": "libero_spatial/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate"
+    },
+    {
+      "frame_index": 17,
+      "task_id": "libero_spatial/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate"
+    }
+  ],
   "scoring_ms_per_frame": {
     "B_cleaning": {
       "count": 6,

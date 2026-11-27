@@ -1,4 +1,203 @@
 {
+  "component_profile": {
+    "additional_block24_execution_count": 0,
+    "attention_logits_extraction": {
+      "block23": {
+        "count": 6,
+        "mean_ms": 0.5056776183967789,
+        "median_ms": 0.48469146713614464,
+        "p95_ms": 0.6291039171628654
+      },
+      "block24": {
+        "count": 6,
+        "mean_ms": 0.5112132057547569,
+        "median_ms": 0.4949464928358793,
+        "p95_ms": 0.6339112878777087
+      }
+    },
+    "deterministic_action_latency_probe": {
+      "action_differences_applied_to_environment": false,
+      "baseline_ms": {
+        "count": 5,
+        "mean_ms": 830.9258766006678,
+        "median_ms": 831.1410448513925,
+        "p95_ms": 831.8727402947843
+      },
+      "mean_instrumentation_delta_ms": 0.8874852675944567,
+      "passive_hook_ms": {
+        "count": 5,
+        "mean_ms": 831.8133618682623,
+        "median_ms": 831.7686570808291,
+        "p95_ms": 832.5209924485534
+      },
+      "repeats": 5,
+      "warmup_pairs": 2
+    },
+    "device": "Orin",
+    "feature_unwrap_and_final_norm": {
+      "count": 6,
+      "mean_ms": 5.307423300109804,
+      "median_ms": 0.5076985107734799,
+      "p95_ms": 22.12463563773781
+    },
+    "incremental_sidecar_estimate_definition": "paired instrumented-minus-uninstrumented DINO traversal + feature unwrap/final norm + separately synchronized attention-logit extraction + RAW score + CLEAN score; component estimate, not a closed-loop speedup claim",
+    "incremental_sidecar_estimate_ms": {
+      "B_final24": 2.925090491771698,
+      "C_native23": 2.987296786159277
+    },
+    "instrumented_native_dino_forward": {
+      "count": 6,
+      "mean_ms": 24.403695482760668,
+      "median_ms": 24.146229960024357,
+      "p95_ms": 25.13550128787756
+    },
+    "model_identity": {
+      "clip_sha256": "5806e77cd80f8b59890b7e101eabd078d9fb84e6937f9e85e4ecb61988df416f",
+      "mlp_sha256": "4e28d24ecb905592c902b04d9c077484346ebafac8547b968bd5af16291d8d69",
+      "openvla_revision": "962318cec55ac10993ff0f5f43eda9a270b4c873"
+    },
+    "native_dino_baseline": {
+      "count": 6,
+      "mean_ms": 24.41684187700351,
+      "median_ms": 23.83375889621675,
+      "p95_ms": 26.5995982917957
+    },
+    "peak_cuda_allocated_bytes": 15555602944,
+    "peak_cuda_reserved_bytes": 15611199488,
+    "per_frame": [
+      {
+        "B_cleaning_ms": 1.536983996629715,
+        "B_raw_scoring_ms": 0.2769848797470331,
+        "C_cleaning_ms": 1.556087052449584,
+        "C_raw_scoring_ms": 0.3818140830844641,
+        "baseline_native_dino_ms": 23.935116827487946,
+        "block23_attention_logits_ms": 0.6679189391434193,
+        "block24_attention_logits_ms": 0.6752780172973871,
+        "feature_unpack_ms": 29.321374837309122,
+        "frame_index": 0,
+        "hooked_native_dino_ms": 25.01320093870163,
+        "task_id": "libero_goal/put_the_bowl_on_the_plate"
+      },
+      {
+        "B_cleaning_ms": 1.2832949869334698,
+        "B_raw_scoring_ms": 0.2930799964815378,
+        "C_cleaning_ms": 1.3145902194082737,
+        "C_raw_scoring_ms": 0.32395985908806324,
+        "baseline_native_dino_ms": 27.37966598942876,
+        "block23_attention_logits_ms": 0.49163494259119034,
+        "block24_attention_logits_ms": 0.5068979226052761,
+        "feature_unpack_ms": 0.507730059325695,
+        "frame_index": 17,
+        "hooked_native_dino_ms": 25.176268070936203,
+        "task_id": "libero_goal/put_the_bowl_on_the_plate"
+      },
+      {
+        "B_cleaning_ms": 1.2431349605321884,
+        "B_raw_scoring_ms": 0.2922159619629383,
+        "C_cleaning_ms": 1.2913260143250227,
+        "C_raw_scoring_ms": 0.3194790333509445,
+        "baseline_native_dino_ms": 23.655603174120188,
+        "block23_attention_logits_ms": 0.44251699000597,
+        "block24_attention_logits_ms": 0.44174795038998127,
+        "feature_unpack_ms": 0.5076669622212648,
+        "frame_index": 0,
+        "hooked_native_dino_ms": 24.12010310217738,
+        "task_id": "libero_object/pick_up_the_butter_and_place_it_in_the_basket"
+      },
+      {
+        "B_cleaning_ms": 1.2515201233327389,
+        "B_raw_scoring_ms": 0.2886319998651743,
+        "C_cleaning_ms": 1.304988982155919,
+        "C_raw_scoring_ms": 0.3161521162837744,
+        "baseline_native_dino_ms": 24.259395198896527,
+        "block23_attention_logits_ms": 0.5126588512212038,
+        "block24_attention_logits_ms": 0.5098110996186733,
+        "feature_unpack_ms": 0.49163494259119034,
+        "frame_index": 17,
+        "hooked_native_dino_ms": 24.11162294447422,
+        "task_id": "libero_object/pick_up_the_butter_and_place_it_in_the_basket"
+      },
+      {
+        "B_cleaning_ms": 1.2813101056963205,
+        "B_raw_scoring_ms": 0.2901370171457529,
+        "C_cleaning_ms": 1.311677973717451,
+        "C_raw_scoring_ms": 0.3290788736194372,
+        "baseline_native_dino_ms": 23.732400964945555,
+        "block23_attention_logits_ms": 0.44158799573779106,
+        "block24_attention_logits_ms": 0.4505491815507412,
+        "feature_unpack_ms": 0.5344180390238762,
+        "frame_index": 0,
+        "hooked_native_dino_ms": 24.172356817871332,
+        "task_id": "libero_spatial/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate"
+      },
+      {
+        "B_cleaning_ms": 1.2296950444579124,
+        "B_raw_scoring_ms": 0.29912800528109074,
+        "C_cleaning_ms": 1.2809259351342916,
+        "C_raw_scoring_ms": 0.3156401216983795,
+        "baseline_native_dino_ms": 23.53886910714209,
+        "block23_attention_logits_ms": 0.47774799168109894,
+        "block24_attention_logits_ms": 0.48299506306648254,
+        "feature_unpack_ms": 0.48171496018767357,
+        "frame_index": 17,
+        "hooked_native_dino_ms": 23.82862102240324,
+        "task_id": "libero_spatial/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate"
+      }
+    ],
+    "profile_script_sha256": "0b97d736968b4a2af43c62a1a77f8888daac6206b0e7951b826dd8079387a380",
+    "samples": [
+      {
+        "frame_index": 0,
+        "task_id": "libero_goal/put_the_bowl_on_the_plate"
+      },
+      {
+        "frame_index": 17,
+        "task_id": "libero_goal/put_the_bowl_on_the_plate"
+      },
+      {
+        "frame_index": 0,
+        "task_id": "libero_object/pick_up_the_butter_and_place_it_in_the_basket"
+      },
+      {
+        "frame_index": 17,
+        "task_id": "libero_object/pick_up_the_butter_and_place_it_in_the_basket"
+      },
+      {
+        "frame_index": 0,
+        "task_id": "libero_spatial/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate"
+      },
+      {
+        "frame_index": 17,
+        "task_id": "libero_spatial/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate"
+      }
+    ],
+    "scoring_ms_per_frame": {
+      "B_cleaning": {
+        "count": 6,
+        "mean_ms": 1.3043232029303908,
+        "median_ms": 1.2664151145145297,
+        "p95_ms": 1.4735617442056537
+      },
+      "B_raw": {
+        "count": 6,
+        "mean_ms": 0.2900296434139212,
+        "median_ms": 0.2911764895543456,
+        "p95_ms": 0.2976160030812025
+      },
+      "C_cleaning": {
+        "count": 6,
+        "mean_ms": 1.343266029531757,
+        "median_ms": 1.308333477936685,
+        "p95_ms": 1.4957128441892564
+      },
+      "C_raw": {
+        "count": 6,
+        "mean_ms": 0.3310206811875105,
+        "median_ms": 0.3217194462195039,
+        "p95_ms": 0.36863028071820736
+      }
+    }
+  },
   "peak_memory": {
     "allocated_bytes_at_end": 15978844160,
     "device": "Orin",

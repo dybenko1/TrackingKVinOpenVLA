@@ -145,7 +145,7 @@ The previous multi-category experiment used the same RGB, queries, oracle labels
 
 ## Synchronized sidecar cost profile
 
-A deterministic component profile used 0 already-saved evaluation frames (two per suite), plus five paired action-decode timing repeats on one saved image after two warmup pairs. CUDA was synchronized around measured operations. The standard DINO forward traversed all 24 blocks exactly once; this sidecar added **zero** block-24 executions. Native DINO measured 23.834 ms median without hooks and 24.146 ms with passive captures.
+A deterministic component profile used 6 already-saved evaluation frames (two per suite), plus five paired action-decode timing repeats on one saved image after two warmup pairs. CUDA was synchronized around measured operations. The standard DINO forward traversed all 24 blocks exactly once; this sidecar added **zero** block-24 executions. Native DINO measured 23.834 ms median without hooks and 24.146 ms with passive captures.
 
 | Component | Median ms | P95 ms |
 |---|---:|---:|

@@ -166,6 +166,7 @@ def main():
         'C_native23':float(np.median(np.array(hook_dino)-np.array(baseline_dino))+np.median(unpack)+np.median(attn23)+np.median(raw_ms['C'])+np.median(clean_ms['C']))}
     summaries['incremental_sidecar_estimate_definition']='paired instrumented-minus-uninstrumented DINO traversal + feature unwrap/final norm + separately synchronized attention-logit extraction + RAW score + CLEAN score; component estimate, not a closed-loop speedup claim'
     summaries['per_frame']=per_frame
+    summaries['samples']=[{'task_id':r['task_id'],'frame_index':r['frame_index']} for r in per_frame]
     summaries['peak_cuda_allocated_bytes']=int(torch.cuda.max_memory_allocated(device));summaries['peak_cuda_reserved_bytes']=int(torch.cuda.max_memory_reserved(device))
     path=exp.OUT/'latency_profile.json';exp.atomic_json(path,summaries)
     # Merge profiled components into the existing main latency artifact.
