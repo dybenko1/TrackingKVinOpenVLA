@@ -1,0 +1,819 @@
+{
+  "background_decision": "max over independently queried category scores at each 16x16 position; below threshold=background",
+  "calibration_metrics": {
+    "clean": {
+      "0.95": {
+        "bg_coverage": 0.38450520833333335,
+        "bg_iou": 0.4592123907745715,
+        "bg_precision": 0.9959090323598353,
+        "bg_recall": 0.4600802585632823,
+        "fg_coverage": 0.6154947916666667,
+        "fg_fn": 12.08062744140625,
+        "fg_fp": 3451.2683334350586,
+        "fg_iou": 0.26919392125209374,
+        "fg_precision": 0.26988189067102103,
+        "fg_recall": 0.990619264077537,
+        "fg_tn": 2940.9193725585938,
+        "fg_tp": 1275.7317085266113,
+        "foreground_as_background_rate": 0.00938073592246306,
+        "method": "clean",
+        "split": "development",
+        "threshold": 0.54,
+        "valid_patch_equivalents": 7680
+      },
+      "0.98": {
+        "bg_coverage": 0.38450520833333335,
+        "bg_iou": 0.4592123907745715,
+        "bg_precision": 0.9959090323598353,
+        "bg_recall": 0.4600802585632823,
+        "fg_coverage": 0.6154947916666667,
+        "fg_fn": 12.08062744140625,
+        "fg_fp": 3451.2683334350586,
+        "fg_iou": 0.26919392125209374,
+        "fg_precision": 0.26988189067102103,
+        "fg_recall": 0.990619264077537,
+        "fg_tn": 2940.9193725585938,
+        "fg_tp": 1275.7317085266113,
+        "foreground_as_background_rate": 0.00938073592246306,
+        "method": "clean",
+        "split": "development",
+        "threshold": 0.54,
+        "valid_patch_equivalents": 7680
+      }
+    },
+    "raw": {
+      "0.95": {
+        "bg_coverage": 0.397265625,
+        "bg_iou": 0.473393731329233,
+        "bg_precision": 0.9944434677157945,
+        "bg_recall": 0.4746492380256171,
+        "fg_coverage": 0.602734375,
+        "fg_fn": 16.952980041503906,
+        "fg_fp": 3358.1406860351562,
+        "fg_iou": 0.27354115504563653,
+        "fg_precision": 0.2745429562337941,
+        "fg_recall": 0.9868358303706101,
+        "fg_tn": 3034.0470275878906,
+        "fg_tp": 1270.8593559265137,
+        "foreground_as_background_rate": 0.013164169629389951,
+        "method": "raw",
+        "split": "development",
+        "threshold": 0.55,
+        "valid_patch_equivalents": 7680
+      },
+      "0.98": {
+        "bg_coverage": 0.397265625,
+        "bg_iou": 0.473393731329233,
+        "bg_precision": 0.9944434677157945,
+        "bg_recall": 0.4746492380256171,
+        "fg_coverage": 0.602734375,
+        "fg_fn": 16.952980041503906,
+        "fg_fp": 3358.1406860351562,
+        "fg_iou": 0.27354115504563653,
+        "fg_precision": 0.2745429562337941,
+        "fg_recall": 0.9868358303706101,
+        "fg_tn": 3034.0470275878906,
+        "fg_tp": 1270.8593559265137,
+        "foreground_as_background_rate": 0.013164169629389951,
+        "method": "raw",
+        "split": "development",
+        "threshold": 0.55,
+        "valid_patch_equivalents": 7680
+      }
+    }
+  },
+  "evaluation_at_calibration": {
+    "clean": {
+      "0.95": {
+        "bg_coverage": 0.5194010416666667,
+        "bg_iou": 0.6071132095511613,
+        "bg_precision": 0.993561304532483,
+        "bg_recall": 0.6095112395764472,
+        "fg_coverage": 0.4805989583333333,
+        "fg_fn": 51.36791229248047,
+        "fg_fp": 5078.266860961914,
+        "fg_iou": 0.3099178082984758,
+        "fg_precision": 0.3120743825253295,
+        "fg_recall": 0.9781886582908512,
+        "fg_tn": 7926.632064819336,
+        "fg_tp": 2303.733070373535,
+        "foreground_as_background_rate": 0.021811341709148748,
+        "method": "clean",
+        "split": "evaluation",
+        "threshold": 0.54,
+        "valid_patch_equivalents": 15360
+      },
+      "0.98": {
+        "bg_coverage": 0.5194010416666667,
+        "bg_iou": 0.6071132095511613,
+        "bg_precision": 0.993561304532483,
+        "bg_recall": 0.6095112395764472,
+        "fg_coverage": 0.4805989583333333,
+        "fg_fn": 51.36791229248047,
+        "fg_fp": 5078.266860961914,
+        "fg_iou": 0.3099178082984758,
+        "fg_precision": 0.3120743825253295,
+        "fg_recall": 0.9781886582908512,
+        "fg_tn": 7926.632064819336,
+        "fg_tp": 2303.733070373535,
+        "foreground_as_background_rate": 0.021811341709148748,
+        "method": "clean",
+        "split": "evaluation",
+        "threshold": 0.54,
+        "valid_patch_equivalents": 15360
+      }
+    },
+    "raw": {
+      "0.95": {
+        "bg_coverage": 0.5280598958333333,
+        "bg_iou": 0.616474957183502,
+        "bg_precision": 0.992845408536078,
+        "bg_recall": 0.619225812183085,
+        "fg_coverage": 0.47194010416666665,
+        "fg_fn": 58.03089141845703,
+        "fg_fp": 4951.929836273193,
+        "fg_iou": 0.3143643633326065,
+        "fg_precision": 0.3168809648523731,
+        "fg_recall": 0.9753594891065923,
+        "fg_tn": 8052.9691162109375,
+        "fg_tp": 2297.0700912475586,
+        "foreground_as_background_rate": 0.024640510893407654,
+        "method": "raw",
+        "split": "evaluation",
+        "threshold": 0.55,
+        "valid_patch_equivalents": 15360
+      },
+      "0.98": {
+        "bg_coverage": 0.5280598958333333,
+        "bg_iou": 0.616474957183502,
+        "bg_precision": 0.992845408536078,
+        "bg_recall": 0.619225812183085,
+        "fg_coverage": 0.47194010416666665,
+        "fg_fn": 58.03089141845703,
+        "fg_fp": 4951.929836273193,
+        "fg_iou": 0.3143643633326065,
+        "fg_precision": 0.3168809648523731,
+        "fg_recall": 0.9753594891065923,
+        "fg_tn": 8052.9691162109375,
+        "fg_tp": 2297.0700912475586,
+        "foreground_as_background_rate": 0.024640510893407654,
+        "method": "raw",
+        "split": "evaluation",
+        "threshold": 0.55,
+        "valid_patch_equivalents": 15360
+      }
+    }
+  },
+  "foreground_recall_at_fixed_protected_token_budgets": {
+    "development": {
+      "clean": {
+        "0.1": {
+          "foreground_recall": 0.3827124990776966,
+          "protected_token_budget": 0.1
+        },
+        "0.25": {
+          "foreground_recall": 0.7649229546800326,
+          "protected_token_budget": 0.25
+        },
+        "0.5": {
+          "foreground_recall": 0.9405506453573285,
+          "protected_token_budget": 0.5
+        },
+        "0.75": {
+          "foreground_recall": 0.9875441759587409,
+          "protected_token_budget": 0.75
+        },
+        "0.9": {
+          "foreground_recall": 1.0,
+          "protected_token_budget": 0.9
+        }
+      },
+      "raw": {
+        "0.1": {
+          "foreground_recall": 0.38267694731654067,
+          "protected_token_budget": 0.1
+        },
+        "0.25": {
+          "foreground_recall": 0.7315067281589501,
+          "protected_token_budget": 0.25
+        },
+        "0.5": {
+          "foreground_recall": 0.9384627421438316,
+          "protected_token_budget": 0.5
+        },
+        "0.75": {
+          "foreground_recall": 0.992298313151281,
+          "protected_token_budget": 0.75
+        },
+        "0.9": {
+          "foreground_recall": 1.0,
+          "protected_token_budget": 0.9
+        }
+      }
+    },
+    "evaluation": {
+      "clean": {
+        "0.1": {
+          "foreground_recall": 0.41316805410732854,
+          "protected_token_budget": 0.1
+        },
+        "0.25": {
+          "foreground_recall": 0.7775546542824777,
+          "protected_token_budget": 0.25
+        },
+        "0.5": {
+          "foreground_recall": 0.9747396265707894,
+          "protected_token_budget": 0.5
+        },
+        "0.75": {
+          "foreground_recall": 0.9999220182970887,
+          "protected_token_budget": 0.75
+        },
+        "0.9": {
+          "foreground_recall": 1.0,
+          "protected_token_budget": 0.9
+        }
+      },
+      "raw": {
+        "0.1": {
+          "foreground_recall": 0.3712321898854725,
+          "protected_token_budget": 0.1
+        },
+        "0.25": {
+          "foreground_recall": 0.7585173224664833,
+          "protected_token_budget": 0.25
+        },
+        "0.5": {
+          "foreground_recall": 0.9733857991587073,
+          "protected_token_budget": 0.5
+        },
+        "0.75": {
+          "foreground_recall": 0.9999155198218461,
+          "protected_token_budget": 0.75
+        },
+        "0.9": {
+          "foreground_recall": 1.0,
+          "protected_token_budget": 0.9
+        }
+      }
+    }
+  },
+  "image_count": 90,
+  "metrics_use_fractional_E2_patch_occupancy": true,
+  "model_identity": {
+    "clip_sha256": "5806e77cd80f8b59890b7e101eabd078d9fb84e6937f9e85e4ecb61988df416f",
+    "dino": {
+      "blocks": 24,
+      "heads": 16,
+      "missing_keys": [],
+      "model_identifier": "dinov2_vitl14_reg",
+      "num_register_tokens": 4,
+      "repository": "facebookresearch/dinov2",
+      "source_revision": "7764ea0f912e53c92e82eb78a2a1631e92725fc8",
+      "strict_state_load": true,
+      "unexpected_keys": [],
+      "weights_path": "/opt/openvla/cache/models/dinov2/facebook_dinov2_large/dinov2_vitl14_reg4_pretrain.pth",
+      "weights_sha256": "36e4deffbaef061a2576705b0c36f93621e2ae20bf6274694821b0b492551b51",
+      "width": 1024
+    },
+    "dino_sha256": "36e4deffbaef061a2576705b0c36f93621e2ae20bf6274694821b0b492551b51",
+    "feature_definition": "original DINOv2 ViT-L/14-register, final block, original DINOText feature and attention cleaning",
+    "lambda_bg": 0.2,
+    "mlp_sha256": "4e28d24ecb905592c902b04d9c077484346ebafac8547b968bd5af16291d8d69",
+    "pamr": false,
+    "patch_grid": [
+      16,
+      16
+    ],
+    "prompt_template": "upstream sub_imagenet_template",
+    "text_encoder": "OpenAI CLIP ViT-B/16",
+    "upstream_revision": "6dac47dbe3500df63f3b3df20dd28334290919cc",
+    "visual_resolution": [
+      224,
+      224
+    ]
+  },
+  "operating_points": {
+    "development_selected_95_recall": {
+      "development": {
+        "clean": {
+          "bg_coverage": 0.38450520833333335,
+          "bg_iou": 0.4592123907745715,
+          "bg_precision": 0.9959090323598353,
+          "bg_recall": 0.4600802585632823,
+          "fg_coverage": 0.6154947916666667,
+          "fg_fn": 12.08062744140625,
+          "fg_fp": 3451.2683334350586,
+          "fg_iou": 0.26919392125209374,
+          "fg_precision": 0.26988189067102103,
+          "fg_recall": 0.990619264077537,
+          "fg_tn": 2940.9193725585938,
+          "fg_tp": 1275.7317085266113,
+          "foreground_as_background_rate": 0.00938073592246306,
+          "method": "clean",
+          "split": "development",
+          "threshold": 0.54,
+          "valid_patch_equivalents": 7680
+        },
+        "raw": {
+          "bg_coverage": 0.397265625,
+          "bg_iou": 0.473393731329233,
+          "bg_precision": 0.9944434677157945,
+          "bg_recall": 0.4746492380256171,
+          "fg_coverage": 0.602734375,
+          "fg_fn": 16.952980041503906,
+          "fg_fp": 3358.1406860351562,
+          "fg_iou": 0.27354115504563653,
+          "fg_precision": 0.2745429562337941,
+          "fg_recall": 0.9868358303706101,
+          "fg_tn": 3034.0470275878906,
+          "fg_tp": 1270.8593559265137,
+          "foreground_as_background_rate": 0.013164169629389951,
+          "method": "raw",
+          "split": "development",
+          "threshold": 0.55,
+          "valid_patch_equivalents": 7680
+        }
+      },
+      "evaluation": {
+        "clean": {
+          "bg_coverage": 0.5194010416666667,
+          "bg_iou": 0.6071132095511613,
+          "bg_precision": 0.993561304532483,
+          "bg_recall": 0.6095112395764472,
+          "fg_coverage": 0.4805989583333333,
+          "fg_fn": 51.36791229248047,
+          "fg_fp": 5078.266860961914,
+          "fg_iou": 0.3099178082984758,
+          "fg_precision": 0.3120743825253295,
+          "fg_recall": 0.9781886582908512,
+          "fg_tn": 7926.632064819336,
+          "fg_tp": 2303.733070373535,
+          "foreground_as_background_rate": 0.021811341709148748,
+          "method": "clean",
+          "split": "evaluation",
+          "threshold": 0.54,
+          "valid_patch_equivalents": 15360
+        },
+        "raw": {
+          "bg_coverage": 0.5280598958333333,
+          "bg_iou": 0.616474957183502,
+          "bg_precision": 0.992845408536078,
+          "bg_recall": 0.619225812183085,
+          "fg_coverage": 0.47194010416666665,
+          "fg_fn": 58.03089141845703,
+          "fg_fp": 4951.929836273193,
+          "fg_iou": 0.3143643633326065,
+          "fg_precision": 0.3168809648523731,
+          "fg_recall": 0.9753594891065923,
+          "fg_tn": 8052.9691162109375,
+          "fg_tp": 2297.0700912475586,
+          "foreground_as_background_rate": 0.024640510893407654,
+          "method": "raw",
+          "split": "evaluation",
+          "threshold": 0.55,
+          "valid_patch_equivalents": 15360
+        }
+      }
+    },
+    "development_selected_98_recall": {
+      "development": {
+        "clean": {
+          "bg_coverage": 0.38450520833333335,
+          "bg_iou": 0.4592123907745715,
+          "bg_precision": 0.9959090323598353,
+          "bg_recall": 0.4600802585632823,
+          "fg_coverage": 0.6154947916666667,
+          "fg_fn": 12.08062744140625,
+          "fg_fp": 3451.2683334350586,
+          "fg_iou": 0.26919392125209374,
+          "fg_precision": 0.26988189067102103,
+          "fg_recall": 0.990619264077537,
+          "fg_tn": 2940.9193725585938,
+          "fg_tp": 1275.7317085266113,
+          "foreground_as_background_rate": 0.00938073592246306,
+          "method": "clean",
+          "split": "development",
+          "threshold": 0.54,
+          "valid_patch_equivalents": 7680
+        },
+        "raw": {
+          "bg_coverage": 0.397265625,
+          "bg_iou": 0.473393731329233,
+          "bg_precision": 0.9944434677157945,
+          "bg_recall": 0.4746492380256171,
+          "fg_coverage": 0.602734375,
+          "fg_fn": 16.952980041503906,
+          "fg_fp": 3358.1406860351562,
+          "fg_iou": 0.27354115504563653,
+          "fg_precision": 0.2745429562337941,
+          "fg_recall": 0.9868358303706101,
+          "fg_tn": 3034.0470275878906,
+          "fg_tp": 1270.8593559265137,
+          "foreground_as_background_rate": 0.013164169629389951,
+          "method": "raw",
+          "split": "development",
+          "threshold": 0.55,
+          "valid_patch_equivalents": 7680
+        }
+      },
+      "evaluation": {
+        "clean": {
+          "bg_coverage": 0.5194010416666667,
+          "bg_iou": 0.6071132095511613,
+          "bg_precision": 0.993561304532483,
+          "bg_recall": 0.6095112395764472,
+          "fg_coverage": 0.4805989583333333,
+          "fg_fn": 51.36791229248047,
+          "fg_fp": 5078.266860961914,
+          "fg_iou": 0.3099178082984758,
+          "fg_precision": 0.3120743825253295,
+          "fg_recall": 0.9781886582908512,
+          "fg_tn": 7926.632064819336,
+          "fg_tp": 2303.733070373535,
+          "foreground_as_background_rate": 0.021811341709148748,
+          "method": "clean",
+          "split": "evaluation",
+          "threshold": 0.54,
+          "valid_patch_equivalents": 15360
+        },
+        "raw": {
+          "bg_coverage": 0.5280598958333333,
+          "bg_iou": 0.616474957183502,
+          "bg_precision": 0.992845408536078,
+          "bg_recall": 0.619225812183085,
+          "fg_coverage": 0.47194010416666665,
+          "fg_fn": 58.03089141845703,
+          "fg_fp": 4951.929836273193,
+          "fg_iou": 0.3143643633326065,
+          "fg_precision": 0.3168809648523731,
+          "fg_recall": 0.9753594891065923,
+          "fg_tn": 8052.9691162109375,
+          "fg_tp": 2297.0700912475586,
+          "foreground_as_background_rate": 0.024640510893407654,
+          "method": "raw",
+          "split": "evaluation",
+          "threshold": 0.55,
+          "valid_patch_equivalents": 15360
+        }
+      }
+    },
+    "official_0.54": {
+      "development": {
+        "clean": {
+          "bg_coverage": 0.38450520833333335,
+          "bg_iou": 0.4592123907745715,
+          "bg_precision": 0.9959090323598353,
+          "bg_recall": 0.4600802585632823,
+          "fg_coverage": 0.6154947916666667,
+          "fg_fn": 12.08062744140625,
+          "fg_fp": 3451.2683334350586,
+          "fg_iou": 0.26919392125209374,
+          "fg_precision": 0.26988189067102103,
+          "fg_recall": 0.990619264077537,
+          "fg_tn": 2940.9193725585938,
+          "fg_tp": 1275.7317085266113,
+          "foreground_as_background_rate": 0.00938073592246306,
+          "method": "clean",
+          "split": "development",
+          "threshold": 0.54,
+          "valid_patch_equivalents": 7680
+        },
+        "raw": {
+          "bg_coverage": 0.3287760416666667,
+          "bg_iou": 0.3947741161444071,
+          "bg_precision": 0.9995656351523824,
+          "bg_recall": 0.39484185146709955,
+          "fg_coverage": 0.6712239583333334,
+          "fg_fn": 1.096771240234375,
+          "fg_fp": 3868.2844772338867,
+          "fg_iou": 0.2495522507322241,
+          "fg_precision": 0.24960534515110108,
+          "fg_recall": 0.9991483454463029,
+          "fg_tn": 2523.9032287597656,
+          "fg_tp": 1286.7155647277832,
+          "foreground_as_background_rate": 0.0008516545536970326,
+          "method": "raw",
+          "split": "development",
+          "threshold": 0.54,
+          "valid_patch_equivalents": 7680
+        }
+      },
+      "evaluation": {
+        "clean": {
+          "bg_coverage": 0.5194010416666667,
+          "bg_iou": 0.6071132095511613,
+          "bg_precision": 0.993561304532483,
+          "bg_recall": 0.6095112395764472,
+          "fg_coverage": 0.4805989583333333,
+          "fg_fn": 51.36791229248047,
+          "fg_fp": 5078.266860961914,
+          "fg_iou": 0.3099178082984758,
+          "fg_precision": 0.3120743825253295,
+          "fg_recall": 0.9781886582908512,
+          "fg_tn": 7926.632064819336,
+          "fg_tp": 2303.733070373535,
+          "foreground_as_background_rate": 0.021811341709148748,
+          "method": "clean",
+          "split": "evaluation",
+          "threshold": 0.54,
+          "valid_patch_equivalents": 15360
+        },
+        "raw": {
+          "bg_coverage": 0.4529947916666667,
+          "bg_iou": 0.5344175789662008,
+          "bg_precision": 0.9992550567273198,
+          "bg_recall": 0.5346305798370525,
+          "fg_coverage": 0.5470052083333333,
+          "fg_fn": 5.183315277099609,
+          "fg_fp": 6052.0822830200195,
+          "fg_iou": 0.2795130774631877,
+          "fg_precision": 0.2796855131229253,
+          "fg_recall": 0.9977991112418322,
+          "fg_tn": 6952.816665649414,
+          "fg_tp": 2349.917667388916,
+          "foreground_as_background_rate": 0.0022008887581678157,
+          "method": "raw",
+          "split": "evaluation",
+          "threshold": 0.54,
+          "valid_patch_equivalents": 15360
+        }
+      }
+    }
+  },
+  "role_recall": {
+    "clean": {
+      "development_selected_95_recall": {
+        "development": {
+          "destination_object": {
+            "foreground_positive_patch_equivalents": 170.04413604736328,
+            "foreground_recall": 0.6612629427685943
+          },
+          "manipulated_object": {
+            "foreground_positive_patch_equivalents": 44.96807861328125,
+            "foreground_recall": 0.260943567553481
+          },
+          "mentioned_context_object": {
+            "foreground_positive_patch_equivalents": 58.788021087646484,
+            "foreground_recall": 0.23100401422964367
+          },
+          "robot_arm": {
+            "foreground_positive_patch_equivalents": 491.1538276672363,
+            "foreground_recall": 0.9996572973828833
+          },
+          "robot_gripper": {
+            "foreground_positive_patch_equivalents": 190.29545211791992,
+            "foreground_recall": 0.9999731982546751
+          },
+          "task_fixture": {
+            "foreground_positive_patch_equivalents": 361.17462158203125,
+            "foreground_recall": 1.0
+          }
+        },
+        "evaluation": {
+          "destination_object": {
+            "foreground_positive_patch_equivalents": 343.6455955505371,
+            "foreground_recall": 0.6215500177827226
+          },
+          "destination_or_fixture": {
+            "foreground_positive_patch_equivalents": 122.33744812011719,
+            "foreground_recall": 0.4221279445094342
+          },
+          "manipulated_object": {
+            "foreground_positive_patch_equivalents": 105.35434341430664,
+            "foreground_recall": 0.43164936328321135
+          },
+          "robot_arm": {
+            "foreground_positive_patch_equivalents": 1441.5621185302734,
+            "foreground_recall": 0.9989311633867506
+          },
+          "robot_gripper": {
+            "foreground_positive_patch_equivalents": 299.28081130981445,
+            "foreground_recall": 0.9982952448629921
+          }
+        }
+      },
+      "official_0.54": {
+        "development": {
+          "destination_object": {
+            "foreground_positive_patch_equivalents": 170.04413604736328,
+            "foreground_recall": 0.6612629427685943
+          },
+          "manipulated_object": {
+            "foreground_positive_patch_equivalents": 44.96807861328125,
+            "foreground_recall": 0.260943567553481
+          },
+          "mentioned_context_object": {
+            "foreground_positive_patch_equivalents": 58.788021087646484,
+            "foreground_recall": 0.23100401422964367
+          },
+          "robot_arm": {
+            "foreground_positive_patch_equivalents": 491.1538276672363,
+            "foreground_recall": 0.9996572973828833
+          },
+          "robot_gripper": {
+            "foreground_positive_patch_equivalents": 190.29545211791992,
+            "foreground_recall": 0.9999731982546751
+          },
+          "task_fixture": {
+            "foreground_positive_patch_equivalents": 361.17462158203125,
+            "foreground_recall": 1.0
+          }
+        },
+        "evaluation": {
+          "destination_object": {
+            "foreground_positive_patch_equivalents": 343.6455955505371,
+            "foreground_recall": 0.6215500177827226
+          },
+          "destination_or_fixture": {
+            "foreground_positive_patch_equivalents": 122.33744812011719,
+            "foreground_recall": 0.4221279445094342
+          },
+          "manipulated_object": {
+            "foreground_positive_patch_equivalents": 105.35434341430664,
+            "foreground_recall": 0.43164936328321135
+          },
+          "robot_arm": {
+            "foreground_positive_patch_equivalents": 1441.5621185302734,
+            "foreground_recall": 0.9989311633867506
+          },
+          "robot_gripper": {
+            "foreground_positive_patch_equivalents": 299.28081130981445,
+            "foreground_recall": 0.9982952448629921
+          }
+        }
+      }
+    },
+    "raw": {
+      "development_selected_95_recall": {
+        "development": {
+          "destination_object": {
+            "foreground_positive_patch_equivalents": 170.04413604736328,
+            "foreground_recall": 0.6612629427685943
+          },
+          "manipulated_object": {
+            "foreground_positive_patch_equivalents": 44.96807861328125,
+            "foreground_recall": 0.11832938132925781
+          },
+          "mentioned_context_object": {
+            "foreground_positive_patch_equivalents": 58.788021087646484,
+            "foreground_recall": 0.19663969597675726
+          },
+          "robot_arm": {
+            "foreground_positive_patch_equivalents": 491.1538276672363,
+            "foreground_recall": 0.9912947834415609
+          },
+          "robot_gripper": {
+            "foreground_positive_patch_equivalents": 190.29545211791992,
+            "foreground_recall": 0.9996247354730882
+          },
+          "task_fixture": {
+            "foreground_positive_patch_equivalents": 361.17462158203125,
+            "foreground_recall": 1.0
+          }
+        },
+        "evaluation": {
+          "destination_object": {
+            "foreground_positive_patch_equivalents": 343.6455955505371,
+            "foreground_recall": 0.5862040551623062
+          },
+          "destination_or_fixture": {
+            "foreground_positive_patch_equivalents": 122.33744812011719,
+            "foreground_recall": 0.37938173923639856
+          },
+          "manipulated_object": {
+            "foreground_positive_patch_equivalents": 105.35434341430664,
+            "foreground_recall": 0.2884900211307774
+          },
+          "robot_arm": {
+            "foreground_positive_patch_equivalents": 1441.5621185302734,
+            "foreground_recall": 0.9988143960762204
+          },
+          "robot_gripper": {
+            "foreground_positive_patch_equivalents": 299.28081130981445,
+            "foreground_recall": 0.9982270781105456
+          }
+        }
+      },
+      "official_0.54": {
+        "development": {
+          "destination_object": {
+            "foreground_positive_patch_equivalents": 170.04413604736328,
+            "foreground_recall": 0.6675037828609758
+          },
+          "manipulated_object": {
+            "foreground_positive_patch_equivalents": 44.96807861328125,
+            "foreground_recall": 0.7059077823488613
+          },
+          "mentioned_context_object": {
+            "foreground_positive_patch_equivalents": 58.788021087646484,
+            "foreground_recall": 0.5679794602881449
+          },
+          "robot_arm": {
+            "foreground_positive_patch_equivalents": 491.1538276672363,
+            "foreground_recall": 1.0
+          },
+          "robot_gripper": {
+            "foreground_positive_patch_equivalents": 190.29545211791992,
+            "foreground_recall": 1.0
+          },
+          "task_fixture": {
+            "foreground_positive_patch_equivalents": 361.17462158203125,
+            "foreground_recall": 1.0
+          }
+        },
+        "evaluation": {
+          "destination_object": {
+            "foreground_positive_patch_equivalents": 343.6455955505371,
+            "foreground_recall": 0.8044014300286139
+          },
+          "destination_or_fixture": {
+            "foreground_positive_patch_equivalents": 122.33744812011719,
+            "foreground_recall": 0.8553682273055702
+          },
+          "manipulated_object": {
+            "foreground_positive_patch_equivalents": 105.35434341430664,
+            "foreground_recall": 0.5400723129607207
+          },
+          "robot_arm": {
+            "foreground_positive_patch_equivalents": 1441.5621185302734,
+            "foreground_recall": 1.0
+          },
+          "robot_gripper": {
+            "foreground_positive_patch_equivalents": 299.28081130981445,
+            "foreground_recall": 0.9998295066415996
+          }
+        }
+      }
+    }
+  },
+  "segment_count": 9,
+  "split_counts": {
+    "development": 30,
+    "evaluation": 60
+  },
+  "threshold_sweep_values": [
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.25,
+    0.3,
+    0.35,
+    0.4,
+    0.45,
+    0.5,
+    0.54,
+    0.55,
+    0.6,
+    0.65,
+    0.7,
+    0.75,
+    0.8,
+    0.85,
+    0.9,
+    0.95
+  ],
+  "thresholds_selected_using_development_only": {
+    "clean": {
+      "0.95": {
+        "constraint_met": true,
+        "development_bg_coverage": 0.38450520833333335,
+        "development_bg_iou": 0.4592123907745715,
+        "development_fg_recall": 0.990619264077537,
+        "selection_metric": "maximum development bg IoU subject to foreground recall floor",
+        "target_recall": 0.95,
+        "threshold": 0.54
+      },
+      "0.98": {
+        "constraint_met": true,
+        "development_bg_coverage": 0.38450520833333335,
+        "development_bg_iou": 0.4592123907745715,
+        "development_fg_recall": 0.990619264077537,
+        "selection_metric": "maximum development bg IoU subject to foreground recall floor",
+        "target_recall": 0.98,
+        "threshold": 0.54
+      }
+    },
+    "raw": {
+      "0.95": {
+        "constraint_met": true,
+        "development_bg_coverage": 0.397265625,
+        "development_bg_iou": 0.473393731329233,
+        "development_fg_recall": 0.9868358303706101,
+        "selection_metric": "maximum development bg IoU subject to foreground recall floor",
+        "target_recall": 0.95,
+        "threshold": 0.55
+      },
+      "0.98": {
+        "constraint_met": true,
+        "development_bg_coverage": 0.397265625,
+        "development_bg_iou": 0.473393731329233,
+        "development_fg_recall": 0.9868358303706101,
+        "selection_metric": "maximum development bg IoU subject to foreground recall floor",
+        "target_recall": 0.98,
+        "threshold": 0.55
+      }
+    }
+  }
+}

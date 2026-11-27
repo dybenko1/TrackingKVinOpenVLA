@@ -1,0 +1,503 @@
+{
+  "development_images": 30,
+  "evaluation_images": 60,
+  "selection": [
+    {
+      "demo": "demo_0",
+      "image_count": 10,
+      "instruction": "open the middle drawer of the cabinet",
+      "queries": [
+        {
+          "gt": [
+            "task_relevant_fixtures"
+          ],
+          "role": "task_fixture",
+          "text": "middle drawer of the cabinet"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_indices": [
+        0,
+        3,
+        7,
+        10,
+        14,
+        17,
+        21,
+        24,
+        28,
+        31
+      ],
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_0_s00000.npz",
+      "source_sha256": "dc74fafe434ed5ecba9f24d7859b3d4180c05b45e1c964f19b88e590355495b9",
+      "source_states_slice_sha256": "f25c65e6edfaf6f8a12266b01a9c4fdc97d552e0fbe8b209aed32b1c58381bb1",
+      "split": "development",
+      "suite": "libero_goal",
+      "task_id": "libero_goal/open_the_middle_drawer_of_the_cabinet"
+    },
+    {
+      "demo": "demo_1",
+      "image_count": 10,
+      "instruction": "put the bowl on the plate",
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_indices": [
+        0,
+        3,
+        7,
+        10,
+        14,
+        17,
+        21,
+        24,
+        28,
+        31
+      ],
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_goal_put_the_bowl_on_the_plate/demo_1_s00028.npz",
+      "source_sha256": "0eb224e204bde078b3ecc71d66ec5441a6d3ab21c5e89ad88a08ba7255cec449",
+      "source_states_slice_sha256": "ef2adce947a5c34c735f6468f5c4c0a028ba597cd9fe4d8e68cdf876169f1b9b",
+      "split": "evaluation",
+      "suite": "libero_goal",
+      "task_id": "libero_goal/put_the_bowl_on_the_plate"
+    },
+    {
+      "demo": "demo_10",
+      "image_count": 10,
+      "instruction": "put the wine bottle on the rack",
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "wine bottle"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_or_fixture",
+          "text": "wine rack"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_indices": [
+        0,
+        3,
+        7,
+        10,
+        14,
+        17,
+        21,
+        24,
+        28,
+        31
+      ],
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_goal_put_the_wine_bottle_on_the_rack/demo_10_s00125.npz",
+      "source_sha256": "9521d106ce9cfa3b893582b7c2282e1933cc3ade6ee1627c97316e478e8f1f27",
+      "source_states_slice_sha256": "dffd03695e6d3d01ea5c21fb879c290eb70d9db4df9662b1378e681bf12a0bf0",
+      "split": "evaluation",
+      "suite": "libero_goal",
+      "task_id": "libero_goal/put_the_wine_bottle_on_the_rack"
+    },
+    {
+      "demo": "demo_0",
+      "image_count": 10,
+      "instruction": "pick up the alphabet soup and place it in the basket",
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "alphabet soup"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_object",
+          "text": "basket"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_indices": [
+        0,
+        3,
+        7,
+        10,
+        14,
+        17,
+        21,
+        24,
+        28,
+        31
+      ],
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_0_s00000.npz",
+      "source_sha256": "5f7c99618a2e3c8ddca429b30a5f4d4d4ac61a897d4c03e2778d7e908e9bf2a6",
+      "source_states_slice_sha256": "10bc46ac02cfe3656cce4c62f393b9a2be8c25e98a4429b70e12e474ad06fc03",
+      "split": "development",
+      "suite": "libero_object",
+      "task_id": "libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_1",
+      "image_count": 10,
+      "instruction": "pick up the butter and place it in the basket",
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "butter"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_object",
+          "text": "basket"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_indices": [
+        0,
+        3,
+        7,
+        10,
+        14,
+        17,
+        21,
+        24,
+        28,
+        31
+      ],
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_1_s00058.npz",
+      "source_sha256": "9e7c95d78ed8cbca7b49102a63c550de20778f00d2271428171f06e9ebcdc5cb",
+      "source_states_slice_sha256": "dbdba13e3c6df7ea8ee7bdd948b2f38e83f41e48c56b297e5591b27b301dd959",
+      "split": "evaluation",
+      "suite": "libero_object",
+      "task_id": "libero_object/pick_up_the_butter_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_10",
+      "image_count": 10,
+      "instruction": "pick up the tomato sauce and place it in the basket",
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "tomato sauce"
+        },
+        {
+          "gt": [
+            "destination_objects",
+            "task_relevant_fixtures"
+          ],
+          "role": "destination_object",
+          "text": "basket"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_indices": [
+        0,
+        3,
+        7,
+        10,
+        14,
+        17,
+        21,
+        24,
+        28,
+        31
+      ],
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_object_pick_up_the_tomato_sauce_and_place_it_in_the_basket/demo_10_s00145.npz",
+      "source_sha256": "9a46bd1414c79466b702488a5e83761e1fc5e247142ff3efd33e39f38c3ab2ad",
+      "source_states_slice_sha256": "f1a92fe67848729ea3db8e6e232487166fff1faf67e0ebea5016951700801e9b",
+      "split": "evaluation",
+      "suite": "libero_object",
+      "task_id": "libero_object/pick_up_the_tomato_sauce_and_place_it_in_the_basket"
+    },
+    {
+      "demo": "demo_0",
+      "image_count": 10,
+      "instruction": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "black bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "other_objects"
+          ],
+          "role": "mentioned_context_object",
+          "text": "ramekin"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_indices": [
+        0,
+        3,
+        7,
+        10,
+        14,
+        17,
+        21,
+        24,
+        28,
+        31
+      ],
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_0_s00000.npz",
+      "source_sha256": "27c2a65bc7454dc231333b5617a864739ad18787f276ac68028e0554ef7dd55d",
+      "source_states_slice_sha256": "cf30ffb263a610b0010c20d161b68f14df89b52930d3605bbec80a6211f576b2",
+      "split": "development",
+      "suite": "libero_spatial",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate"
+    },
+    {
+      "demo": "demo_1",
+      "image_count": 10,
+      "instruction": "pick up the black bowl from table center and place it on the plate",
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "black bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "task_relevant_fixtures"
+          ],
+          "role": "spatial_reference",
+          "text": "table"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_indices": [
+        0,
+        3,
+        7,
+        10,
+        14,
+        17,
+        21,
+        24,
+        28,
+        31
+      ],
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_1_s00045.npz",
+      "source_sha256": "801443fbaeba167f04bdcd4ab552375e27776fd06259caf5a686543faeb3c422",
+      "source_states_slice_sha256": "82a984ef3c043e4ee79a530f25b4754577919f7bb26610cd3315477063115e5f",
+      "split": "evaluation",
+      "suite": "libero_spatial",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate"
+    },
+    {
+      "demo": "demo_10",
+      "image_count": 10,
+      "instruction": "pick up the black bowl on the stove and place it on the plate",
+      "queries": [
+        {
+          "gt": [
+            "manipulated_objects"
+          ],
+          "role": "manipulated_object",
+          "text": "black bowl"
+        },
+        {
+          "gt": [
+            "destination_objects"
+          ],
+          "role": "destination_object",
+          "text": "plate"
+        },
+        {
+          "gt": [
+            "task_relevant_fixtures"
+          ],
+          "role": "task_fixture",
+          "text": "stove"
+        },
+        {
+          "gt": [
+            "robot_arm"
+          ],
+          "role": "robot_arm",
+          "text": "robot arm"
+        },
+        {
+          "gt": [
+            "robot_gripper"
+          ],
+          "role": "robot_gripper",
+          "text": "robot gripper"
+        }
+      ],
+      "selected_frame_indices": [
+        0,
+        3,
+        7,
+        10,
+        14,
+        17,
+        21,
+        24,
+        28,
+        31
+      ],
+      "source_archive": "/opt/openvla/cache/datasets/talk2dino_native_e2/scoring/libero_spatial_pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate/demo_10_s00108.npz",
+      "source_sha256": "ec15f223703d349dfb2e8eebbd7a1f44debe0b767006d15450f134d3184fb18f",
+      "source_states_slice_sha256": "3698d22e5d64d7e2c49845fe1f4164bfde47e0d10116978c1455acfbc280d973",
+      "split": "evaluation",
+      "suite": "libero_spatial",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate"
+    }
+  ],
+  "split_by_demo_segment": true,
+  "total_images": 90
+}

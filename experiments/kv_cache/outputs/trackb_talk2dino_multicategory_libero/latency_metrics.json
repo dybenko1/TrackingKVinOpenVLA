@@ -1,0 +1,24 @@
+{
+  "images": 90,
+  "per_frame_raw_and_clean_same_vision_forward_ms": {
+    "mean": 83.01990754488442,
+    "sample_count": 90,
+    "median": null,
+    "p95": null,
+    "min": null,
+    "max": null,
+    "distribution_note": "Original per-image samples were not retained as raw data; a report-only rebuild collapsed aggregate statistics to one value. The preserved mean is retained; unavailable distribution statistics are null."
+  },
+  "per_task_text_embedding_ms": {
+    "mean": 109.08349476651185,
+    "sample_count": 9,
+    "total": 981.7514528986067,
+    "distribution_note": "Per-segment average and total reconstructed from the preserved average and nine segments; per-segment raw samples are unavailable."
+  },
+  "peak_gpu_memory": {
+    "peak_cuda_allocated_gb": 1.472066879272461,
+    "peak_cuda_reserved_gb": 1.556640625
+  },
+  "threshold_sweep_additional_model_inference": false,
+  "timing_scope": "GPU-synchronized upstream single-image DINOText scoring, including simultaneous query maps and original attention cleaning; excludes figure rendering and offline threshold sweep."
+}

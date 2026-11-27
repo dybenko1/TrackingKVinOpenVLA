@@ -1,0 +1,47 @@
+{
+  "all_query_scores_finite": true,
+  "all_score_shapes_aligned_to_256_patches": true,
+  "development_images": 30,
+  "evaluation_images": 60,
+  "images_scored": 90,
+  "model_identity": {
+    "clip_sha256": "5806e77cd80f8b59890b7e101eabd078d9fb84e6937f9e85e4ecb61988df416f",
+    "dino": {
+      "blocks": 24,
+      "heads": 16,
+      "missing_keys": [],
+      "model_identifier": "dinov2_vitl14_reg",
+      "num_register_tokens": 4,
+      "repository": "facebookresearch/dinov2",
+      "source_revision": "7764ea0f912e53c92e82eb78a2a1631e92725fc8",
+      "strict_state_load": true,
+      "unexpected_keys": [],
+      "weights_path": "/opt/openvla/cache/models/dinov2/facebook_dinov2_large/dinov2_vitl14_reg4_pretrain.pth",
+      "weights_sha256": "36e4deffbaef061a2576705b0c36f93621e2ae20bf6274694821b0b492551b51",
+      "width": 1024
+    },
+    "dino_sha256": "36e4deffbaef061a2576705b0c36f93621e2ae20bf6274694821b0b492551b51",
+    "feature_definition": "original DINOv2 ViT-L/14-register, final block, original DINOText feature and attention cleaning",
+    "lambda_bg": 0.2,
+    "mlp_sha256": "4e28d24ecb905592c902b04d9c077484346ebafac8547b968bd5af16291d8d69",
+    "pamr": false,
+    "patch_grid": [
+      16,
+      16
+    ],
+    "prompt_template": "upstream sub_imagenet_template",
+    "text_encoder": "OpenAI CLIP ViT-B/16",
+    "upstream_revision": "6dac47dbe3500df63f3b3df20dd28334290919cc",
+    "visual_resolution": [
+      224,
+      224
+    ]
+  },
+  "openvla_or_siglip_oracle_or_rollouts_used": false,
+  "pamr": false,
+  "queries_encoded_per_task_once": true,
+  "segments": 9,
+  "smoke_passed": true,
+  "status": "passed",
+  "threshold_sweep_reused_saved_score_maps": true
+}
