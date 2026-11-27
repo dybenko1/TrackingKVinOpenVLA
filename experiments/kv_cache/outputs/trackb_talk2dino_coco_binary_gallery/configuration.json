@@ -1,0 +1,79 @@
+{
+  "cleaning_lambda": 0.2,
+  "dataset": "COCO Object val2017 via cached COCO-Stuff164k semantic maps",
+  "image_count": 30,
+  "model_identity": {
+    "background_threshold": 0.54,
+    "binary_threshold": 0.54,
+    "class_count": 81,
+    "classnames_sha256": "1f17b53017e442257cad2025ab981ddeb28d048af00dcac8ae810bc25a6a9a77",
+    "clip_sha256": "5806e77cd80f8b59890b7e101eabd078d9fb84e6937f9e85e4ecb61988df416f",
+    "dino_transform": "upstream DINOText Resize(448,448), ImageNet mean/std; MMCV FloatImage crop in BGR then upstream BGR\u2192RGB",
+    "eval_metric": "global 81-class confusion matrix; nanmean over nonempty class unions including background",
+    "gallery_image_preprocessing": "upstream DINOText Resize((448,448)) square warp; source image loaded RGB then passed BGR as expected by MMCV crop wrapper",
+    "gallery_inference": "one fixed 448x448 full-image DINOText forward per image; no sliding-window; no PAMR",
+    "host_cached_talk2dino_source_revision": "6dac47dbe3500df63f3b3df20dd28334290919cc",
+    "image_size": 448,
+    "lambda_bg": 0.2,
+    "mlp_sha256": "4e28d24ecb905592c902b04d9c077484346ebafac8547b968bd5af16291d8d69",
+    "native_patch_grid": [
+      32,
+      32
+    ],
+    "official_dino": {
+      "blocks": 24,
+      "heads": 16,
+      "missing_keys": [],
+      "model_identifier": "dinov2_vitl14_reg",
+      "num_register_tokens": 4,
+      "repository": "facebookresearch/dinov2",
+      "source_revision": "cached-local-repository",
+      "strict_state_load": true,
+      "unexpected_keys": [],
+      "weights_path": "/opt/openvla/cache/models/dinov2/facebook_dinov2_large/dinov2_vitl14_reg4_pretrain.pth",
+      "weights_sha256": "36e4deffbaef061a2576705b0c36f93621e2ae20bf6274694821b0b492551b51",
+      "width": 1024
+    },
+    "official_repo_revision": "container runtime revision unavailable; host cached source revision 6dac47dbe3500df63f3b3df20dd28334290919cc",
+    "pamr": {
+      "dilations": [
+        1,
+        2,
+        4,
+        8,
+        12,
+        24
+      ],
+      "iter": 10
+    },
+    "revision_provenance_note": "The mounted inference container did not expose usable git metadata for the upstream checkout. The host cached Talk2DINO source revision was independently read from its local Git repository; exact byte-for-byte identity of the container checkout was not independently verified.",
+    "slide_crop": 448,
+    "slide_stride": 224,
+    "templates": "upstream sub_imagenet_template",
+    "test_scale": [
+      2048,
+      448
+    ]
+  },
+  "native_patch_grid": [
+    32,
+    32
+  ],
+  "no_openvla_features": true,
+  "no_training": true,
+  "pamr": false,
+  "prompt_template": "upstream sub_imagenet_template",
+  "selection_seed": 20261126,
+  "size_area_note": "Bins use the queried class's union area in semantic labels as a proxy; instance-level segmentation JSON was not present in the local dataset.",
+  "size_bins_pixel_area": {
+    "large": "area >= 9216",
+    "medium": "1024 <= area < 9216",
+    "small": "0 < area < 1024"
+  },
+  "smoke_mode": false,
+  "threshold": 0.54,
+  "visual_resolution": [
+    448,
+    448
+  ]
+}

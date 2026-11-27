@@ -1,0 +1,1041 @@
+{
+  "by_category": {
+    "bicycle": {
+      "clean": {
+        "patch_binary": {
+          "fn": 98,
+          "fp": 90,
+          "iou": 0.5026455026455027,
+          "precision": 0.6785714285714286,
+          "recall": 0.6597222222222222,
+          "tn": 2694,
+          "tp": 190
+        },
+        "patch_fractional": {
+          "fn": 65.59693882986903,
+          "fp": 139.03061233321205,
+          "iou": 0.4079011467638739,
+          "precision": 0.503462098809957,
+          "recall": 0.6824412771317273,
+          "tn": 2726.403061170131,
+          "tp": 140.96938766678795
+        },
+        "pixel": {
+          "background_coverage_mean_image": 0.9053501757703796,
+          "fn": 14734,
+          "foreground_coverage_mean_image": 0.09464982422962039,
+          "fp": 37654,
+          "iou": 0.43374731130494937,
+          "precision": 0.5159096460666213,
+          "recall": 0.7314401326941654,
+          "tn": 638183,
+          "tp": 40129
+        }
+      },
+      "raw": {
+        "patch_binary": {
+          "fn": 95,
+          "fp": 175,
+          "iou": 0.4168466522678186,
+          "precision": 0.5244565217391305,
+          "recall": 0.6701388888888888,
+          "tn": 2609,
+          "tp": 193
+        },
+        "patch_fractional": {
+          "fn": 62.653061252087355,
+          "fp": 224.08673475543037,
+          "iou": 0.334174485666383,
+          "precision": 0.3910686555558957,
+          "recall": 0.6966927653956159,
+          "tn": 2641.3469387479126,
+          "tp": 143.91326524456963
+        },
+        "pixel": {
+          "background_coverage_mean_image": 0.8665014708723703,
+          "fn": 11279,
+          "foreground_coverage_mean_image": 0.13349852912762986,
+          "fp": 67407,
+          "iou": 0.35645702134620105,
+          "precision": 0.3926804876071033,
+          "recall": 0.7944151796292583,
+          "tn": 608430,
+          "tp": 43584
+        }
+      }
+    },
+    "bottle": {
+      "clean": {
+        "patch_binary": {
+          "fn": 21,
+          "fp": 22,
+          "iou": 0.57,
+          "precision": 0.7215189873417721,
+          "recall": 0.7307692307692307,
+          "tn": 2972,
+          "tp": 57
+        },
+        "patch_fractional": {
+          "fn": 3.520408172160387,
+          "fp": 37.31632633507252,
+          "iou": 0.505131695155504,
+          "precision": 0.5276414387965505,
+          "recall": 0.9221218963179547,
+          "tn": 2989.4795918278396,
+          "tp": 41.68367366492748
+        },
+        "pixel": {
+          "background_coverage_mean_image": 0.9761566052522443,
+          "fn": 1361,
+          "foreground_coverage_mean_image": 0.023843394747755656,
+          "fp": 8950,
+          "iou": 0.5121824289161186,
+          "precision": 0.5474312297734628,
+          "recall": 0.8883236235332732,
+          "tn": 832623,
+          "tp": 10826
+        }
+      },
+      "raw": {
+        "patch_binary": {
+          "fn": 20,
+          "fp": 102,
+          "iou": 0.32222222222222224,
+          "precision": 0.3625,
+          "recall": 0.7435897435897436,
+          "tn": 2892,
+          "tp": 58
+        },
+        "patch_fractional": {
+          "fn": 2.857142884284258,
+          "fp": 117.65306104719639,
+          "iou": 0.26002506370195017,
+          "precision": 0.26466836845502256,
+          "recall": 0.9367945820782029,
+          "tn": 2909.1428571157157,
+          "tp": 42.34693895280361
+        },
+        "pixel": {
+          "background_coverage_mean_image": 0.9585633528086781,
+          "fn": 904,
+          "foreground_coverage_mean_image": 0.04143664719132188,
+          "fp": 23038,
+          "iou": 0.3203122782114975,
+          "precision": 0.3287491623204452,
+          "recall": 0.9258225978501682,
+          "tn": 818535,
+          "tp": 11283
+        }
+      }
+    },
+    "bowl": {
+      "clean": {
+        "patch_binary": {
+          "fn": 378,
+          "fp": 70,
+          "iou": 0.3769123783031989,
+          "precision": 0.7947214076246334,
+          "recall": 0.41756548536209553,
+          "tn": 2353,
+          "tp": 271
+        },
+        "patch_fractional": {
+          "fn": 247.67857175553218,
+          "fp": 84.892856746912,
+          "iou": 0.43505429879897983,
+          "precision": 0.7510473409181466,
+          "recall": 0.5083652347083835,
+          "tn": 2483.321428244468,
+          "tp": 256.107143253088
+        },
+        "pixel": {
+          "background_coverage_mean_image": 0.9107199970657277,
+          "fn": 76064,
+          "foreground_coverage_mean_image": 0.0892800029342723,
+          "fp": 16341,
+          "iou": 0.3864902368258563,
+          "precision": 0.7808136493501268,
+          "recall": 0.43352497840269294,
+          "tn": 736423,
+          "tp": 58212
+        }
+      },
+      "raw": {
+        "patch_binary": {
+          "fn": 305,
+          "fp": 188,
+          "iou": 0.4109916367980884,
+          "precision": 0.6466165413533834,
+          "recall": 0.5300462249614792,
+          "tn": 2235,
+          "tp": 344
+        },
+        "patch_fractional": {
+          "fn": 192.89285741746426,
+          "fp": 221.10714240884408,
+          "iou": 0.4288811158917426,
+          "precision": 0.5843850706600675,
+          "recall": 0.6171132851312314,
+          "tn": 2347.1071425825357,
+          "tp": 310.8928575911559
+        },
+        "pixel": {
+          "background_coverage_mean_image": 0.8412728781543427,
+          "fn": 57638,
+          "foreground_coverage_mean_image": 0.15872712184565727,
+          "fp": 58986,
+          "iou": 0.39654976146371246,
+          "precision": 0.5650769775261015,
+          "recall": 0.5707497989216241,
+          "tn": 693778,
+          "tp": 76638
+        }
+      }
+    },
+    "bus": {
+      "clean": {
+        "patch_binary": {
+          "fn": 60,
+          "fp": 13,
+          "iou": 0.7787878787878788,
+          "precision": 0.9518518518518518,
+          "recall": 0.8107255520504731,
+          "tn": 2742,
+          "tp": 257
+        },
+        "patch_fractional": {
+          "fn": 27.83163265651092,
+          "fp": 41.76530624553561,
+          "iou": 0.766321198721317,
+          "precision": 0.8453136805720903,
+          "recall": 0.8913108449416252,
+          "tn": 2774.168367343489,
+          "tp": 228.2346937544644
+        },
+        "pixel": {
+          "background_coverage_mean_image": 0.9099634893530534,
+          "fn": 6966,
+          "foreground_coverage_mean_image": 0.09003651064694669,
+          "fp": 12494,
+          "iou": 0.7842285004656939,
+          "precision": 0.8498714282281128,
+          "recall": 0.9103405668391381,
+          "tn": 864196,
+          "tp": 70728
+        }
+      },
+      "raw": {
+        "patch_binary": {
+          "fn": 56,
+          "fp": 49,
+          "iou": 0.7131147540983607,
+          "precision": 0.8419354838709677,
+          "recall": 0.8233438485804416,
+          "tn": 2706,
+          "tp": 261
+        },
+        "patch_fractional": {
+          "fn": 25.903061238583177,
+          "fp": 79.83673482760787,
+          "iou": 0.6852074057429122,
+          "precision": 0.742462145717394,
+          "recall": 0.8988423757171027,
+          "tn": 2736.096938761417,
+          "tp": 230.16326517239213
+        },
+        "pixel": {
+          "background_coverage_mean_image": 0.897988941941899,
+          "fn": 5275,
+          "foreground_coverage_mean_image": 0.102011058058101,
+          "fp": 22069,
+          "iou": 0.7259104076661688,
+          "precision": 0.7664359495385658,
+          "recall": 0.932105439287461,
+          "tn": 854621,
+          "tp": 72419
+        }
+      }
+    },
+    "car": {
+      "clean": {
+        "patch_binary": {
+          "fn": 28,
+          "fp": 189,
+          "iou": 0.3904494382022472,
+          "precision": 0.42378048780487804,
+          "recall": 0.8323353293413174,
+          "tn": 2716,
+          "tp": 139
+        },
+        "patch_fractional": {
+          "fn": 9.433673467021435,
+          "fp": 231.91836741147563,
+          "iou": 0.2847422772046334,
+          "precision": 0.2929318066723304,
+          "recall": 0.9105942652333746,
+          "tn": 2734.5663265329786,
+          "tp": 96.08163258852437
+        },
+        "pixel": {
+          "background_coverage_mean_image": 0.891800465044148,
+          "fn": 1988,
+          "foreground_coverage_mean_image": 0.10819953495585204,
+          "fp": 67570,
+          "iou": 0.2983578114912847,
+          "precision": 0.304463293119776,
+          "recall": 0.9370208452132041,
+          "tn": 791104,
+          "tp": 29578
+        }
+      },
+      "raw": {
+        "patch_binary": {
+          "fn": 22,
+          "fp": 237,
+          "iou": 0.3589108910891089,
+          "precision": 0.3795811518324607,
+          "recall": 0.8682634730538922,
+          "tn": 2668,
+          "tp": 145
+        },
+        "patch_fractional": {
+          "fn": 6.969387756194919,
+          "fp": 283.4540817006491,
+          "iou": 0.25335134692172545,
+          "precision": 0.257973608113484,
+          "recall": 0.9339490352942154,
+          "tn": 2683.030612243805,
+          "tp": 98.54591829935089
+        },
+        "pixel": {
+          "background_coverage_mean_image": 0.8673904885481116,
+          "fn": 1009,
+          "foreground_coverage_mean_image": 0.13260951145188837,
+          "fp": 88239,
+          "iou": 0.25505613288260087,
+          "precision": 0.2572224654028755,
+          "recall": 0.9680352277767218,
+          "tn": 770435,
+          "tp": 30557
+        }
+      }
+    },
+    "cup": {
+      "clean": {
+        "patch_binary": {
+          "fn": 27,
+          "fp": 54,
+          "iou": 0.4873417721518987,
+          "precision": 0.5877862595419847,
+          "recall": 0.7403846153846154,
+          "tn": 2914,
+          "tp": 77
+        },
+        "patch_fractional": {
+          "fn": 9.357142947614193,
+          "fp": 73.91326540149748,
+          "iou": 0.4067248263938311,
+          "precision": 0.4357765999885688,
+          "recall": 0.8591722323682919,
+          "tn": 2931.642857052386,
+          "tp": 57.08673459850252
+        },
+        "pixel": {
+          "background_coverage_mean_image": 0.9624674479166666,
+          "fn": 3073,
+          "foreground_coverage_mean_image": 0.03753255208333333,
+          "fp": 17730,
+          "iou": 0.4476541964262008,
+          "precision": 0.48742411101474414,
+          "recall": 0.8458335423669292,
+          "tn": 883937,
+          "tp": 16860
+        }
+      },
+      "raw": {
+        "patch_binary": {
+          "fn": 17,
+          "fp": 185,
+          "iou": 0.30103806228373703,
+          "precision": 0.31985294117647056,
+          "recall": 0.8365384615384616,
+          "tn": 2783,
+          "tp": 87
+        },
+        "patch_fractional": {
+          "fn": 5.7346939370036125,
+          "fp": 211.2908163908869,
+          "iou": 0.21858696423027107,
+          "precision": 0.2231955279746805,
+          "recall": 0.9136911608895292,
+          "tn": 2794.2653060629964,
+          "tp": 60.7091836091131
+        },
+        "pixel": {
+          "background_coverage_mean_image": 0.9253884548611112,
+          "fn": 1655,
+          "foreground_coverage_mean_image": 0.07461154513888889,
+          "fp": 50484,
+          "iou": 0.2595680020449607,
+          "precision": 0.26581542130828073,
+          "recall": 0.9169718557166507,
+          "tn": 851183,
+          "tp": 18278
+        }
+      }
+    },
+    "fork": {
+      "clean": {
+        "patch_binary": {
+          "fn": 12,
+          "fp": 565,
+          "iou": 0.1283987915407855,
+          "precision": 0.13076923076923078,
+          "recall": 0.8762886597938144,
+          "tn": 2410,
+          "tp": 85
+        },
+        "patch_fractional": {
+          "fn": 2.020408167503774,
+          "fp": 607.0459183603525,
+          "iou": 0.06587843126010344,
+          "precision": 0.06608320252253459,
+          "recall": 0.9550765739385327,
+          "tn": 2419.979591832496,
+          "tp": 42.954081639647484
+        },
+        "pixel": {
+          "background_coverage_mean_image": 0.7855469719929434,
+          "fn": 3,
+          "foreground_coverage_mean_image": 0.2144530280070566,
+          "fp": 225285,
+          "iou": 0.06838801452283874,
+          "precision": 0.06838886292867097,
+          "recall": 0.9998186324889669,
+          "tn": 916862,
+          "tp": 16538
+        }
+      },
+      "raw": {
+        "patch_binary": {
+          "fn": 5,
+          "fp": 844,
+          "iou": 0.09776833156216791,
+          "precision": 0.09829059829059829,
+          "recall": 0.9484536082474226,
+          "tn": 2131,
+          "tp": 92
+        },
+        "patch_fractional": {
+          "fn": 0.6683673374354839,
+          "fp": 891.6938775302842,
+          "iou": 0.047301824225856944,
+          "precision": 0.04733560092918352,
+          "recall": 0.9851389678837622,
+          "tn": 2135.3316326625645,
+          "tp": 44.306122469715774
+        },
+        "pixel": {
+          "background_coverage_mean_image": 0.6978031880169064,
+          "fn": 0,
+          "foreground_coverage_mean_image": 0.3021968119830936,
+          "fp": 324299,
+          "iou": 0.048530102100692404,
+          "precision": 0.048530102100692404,
+          "recall": 1.0,
+          "tn": 817848,
+          "tp": 16541
+        }
+      }
+    },
+    "knife": {
+      "clean": {
+        "patch_binary": {
+          "fn": 26,
+          "fp": 147,
+          "iou": 0.4054982817869416,
+          "precision": 0.44528301886792454,
+          "recall": 0.8194444444444444,
+          "tn": 2781,
+          "tp": 118
+        },
+        "patch_fractional": {
+          "fn": 4.07653060182929,
+          "fp": 201.85204076766968,
+          "iou": 0.23468401012563456,
+          "precision": 0.23829418578237857,
+          "recall": 0.9393594415980554,
+          "tn": 2802.9234693981707,
+          "tp": 63.14795923233032
+        },
+        "pixel": {
+          "background_coverage_mean_image": 0.9129504980098239,
+          "fn": 1469,
+          "foreground_coverage_mean_image": 0.08704950199017615,
+          "fp": 42294,
+          "iou": 0.23610117125451657,
+          "precision": 0.24231458258688643,
+          "recall": 0.9020340113371124,
+          "tn": 642411,
+          "tp": 13526
+        }
+      },
+      "raw": {
+        "patch_binary": {
+          "fn": 21,
+          "fp": 248,
+          "iou": 0.3137755102040816,
+          "precision": 0.33153638814016173,
+          "recall": 0.8541666666666666,
+          "tn": 2680,
+          "tp": 123
+        },
+        "patch_fractional": {
+          "fn": 3.326530609279871,
+          "fp": 307.10204077512026,
+          "iou": 0.17070112321687428,
+          "precision": 0.17223169602393462,
+          "recall": 0.9505160899326078,
+          "tn": 2697.67346939072,
+          "tp": 63.89795922487974
+        },
+        "pixel": {
+          "background_coverage_mean_image": 0.880878058816057,
+          "fn": 916,
+          "foreground_coverage_mean_image": 0.11912194118394308,
+          "fp": 61718,
+          "iou": 0.1835282155566853,
+          "precision": 0.18574613770993575,
+          "recall": 0.9389129709903301,
+          "tn": 622987,
+          "tp": 14079
+        }
+      }
+    },
+    "spoon": {
+      "clean": {
+        "patch_binary": {
+          "fn": 26,
+          "fp": 457,
+          "iou": 0.13440860215053763,
+          "precision": 0.14097744360902256,
+          "recall": 0.7425742574257426,
+          "tn": 2514,
+          "tp": 75
+        },
+        "patch_fractional": {
+          "fn": 8.147959207184613,
+          "fp": 484.55612237518653,
+          "iou": 0.08783496598682032,
+          "precision": 0.08918022109927344,
+          "recall": 0.8534324521096822,
+          "tn": 2531.8520407928154,
+          "tp": 47.44387762481347
+        },
+        "pixel": {
+          "background_coverage_mean_image": 0.8246427280228573,
+          "fn": 2155,
+          "foreground_coverage_mean_image": 0.1753572719771426,
+          "fp": 132861,
+          "iou": 0.08592628699867305,
+          "precision": 0.08719847753052153,
+          "recall": 0.8548528322219977,
+          "tn": 704772,
+          "tp": 12692
+        }
+      },
+      "raw": {
+        "patch_binary": {
+          "fn": 21,
+          "fp": 630,
+          "iou": 0.1094391244870041,
+          "precision": 0.11267605633802817,
+          "recall": 0.7920792079207921,
+          "tn": 2341,
+          "tp": 80
+        },
+        "patch_fractional": {
+          "fn": 7.760204097721726,
+          "fp": 662.1683672657236,
+          "iou": 0.06664012919802971,
+          "precision": 0.06736849680883994,
+          "recall": 0.8604074889417032,
+          "tn": 2354.2397959022783,
+          "tp": 47.831632734276354
+        },
+        "pixel": {
+          "background_coverage_mean_image": 0.759425905432308,
+          "fn": 2060,
+          "foreground_coverage_mean_image": 0.24057409456769194,
+          "fp": 188172,
+          "iou": 0.0629842527054118,
+          "precision": 0.06362989465512865,
+          "recall": 0.8612514312655756,
+          "tn": 649461,
+          "tp": 12787
+        }
+      }
+    },
+    "wine glass": {
+      "clean": {
+        "patch_binary": {
+          "fn": 23,
+          "fp": 196,
+          "iou": 0.30254777070063693,
+          "precision": 0.32646048109965636,
+          "recall": 0.8050847457627118,
+          "tn": 2758,
+          "tp": 95
+        },
+        "patch_fractional": {
+          "fn": 1.897959212306887,
+          "fp": 230.7704081791453,
+          "iou": 0.20563336112969402,
+          "precision": 0.20697454233970686,
+          "recall": 0.969450603142335,
+          "tn": 2779.102040787693,
+          "tp": 60.229591820854694
+        },
+        "pixel": {
+          "background_coverage_mean_image": 0.9095581086601308,
+          "fn": 638,
+          "foreground_coverage_mean_image": 0.09044189133986928,
+          "fp": 64653,
+          "iou": 0.21328561789088105,
+          "precision": 0.21493795079777545,
+          "recall": 0.9652107530399695,
+          "tn": 803408,
+          "tp": 17701
+        }
+      },
+      "raw": {
+        "patch_binary": {
+          "fn": 20,
+          "fp": 298,
+          "iou": 0.23557692307692307,
+          "precision": 0.2474747474747475,
+          "recall": 0.8305084745762712,
+          "tn": 2656,
+          "tp": 98
+        },
+        "patch_fractional": {
+          "fn": 1.7040816573426127,
+          "fp": 335.57653062418103,
+          "iou": 0.1519307247841604,
+          "precision": 0.15258451862580547,
+          "recall": 0.9725712404721533,
+          "tn": 2674.2959183426574,
+          "tp": 60.42346937581897
+        },
+        "pixel": {
+          "background_coverage_mean_image": 0.8819613970588235,
+          "fn": 324,
+          "foreground_coverage_mean_image": 0.11803860294117646,
+          "fp": 89442,
+          "iou": 0.16714448743284996,
+          "precision": 0.1676484547307295,
+          "recall": 0.9823327335187306,
+          "tn": 778619,
+          "tp": 18015
+        }
+      }
+    }
+  },
+  "by_size": {
+    "large": {
+      "clean": {
+        "patch_binary": {
+          "fn": 535,
+          "fp": 1161,
+          "iou": 0.4104970455335419,
+          "precision": 0.5042698548249359,
+          "recall": 0.6882284382284383,
+          "tn": 7363,
+          "tp": 1181
+        },
+        "patch_fractional": {
+          "fn": 337.0000003557652,
+          "fp": 1395.0357139683329,
+          "iou": 0.35347677712053466,
+          "precision": 0.4043400025754343,
+          "recall": 0.7375316401486914,
+          "tn": 7560.999999644235,
+          "tp": 946.9642860316671
+        },
+        "pixel": {
+          "background_coverage_mean_image": 0.7667473317210677,
+          "fn": 93133,
+          "foreground_coverage_mean_image": 0.23325266827893235,
+          "fp": 430229,
+          "iou": 0.33447441406225165,
+          "precision": 0.3794081839897527,
+          "recall": 0.7385079739442947,
+          "tn": 2114435,
+          "tp": 263027
+        }
+      },
+      "raw": {
+        "patch_binary": {
+          "fn": 445,
+          "fp": 1777,
+          "iou": 0.3638705983395362,
+          "precision": 0.416994750656168,
+          "recall": 0.7406759906759907,
+          "tn": 6747,
+          "tp": 1271
+        },
+        "patch_fractional": {
+          "fn": 273.5153064331971,
+          "fp": 2037.5510200457647,
+          "iou": 0.3042132541124141,
+          "precision": 0.3315121325309171,
+          "recall": 0.7869759234481817,
+          "tn": 6918.484693566803,
+          "tp": 1010.4489799542353
+        },
+        "pixel": {
+          "background_coverage_mean_image": 0.7027843308012478,
+          "fn": 69616,
+          "foreground_coverage_mean_image": 0.29721566919875214,
+          "fp": 601758,
+          "iou": 0.2991320760232087,
+          "precision": 0.32257498013063124,
+          "recall": 0.8045372866127584,
+          "tn": 1942906,
+          "tp": 286544
+        }
+      }
+    },
+    "medium": {
+      "clean": {
+        "patch_binary": {
+          "fn": 126,
+          "fp": 482,
+          "iou": 0.19682959048877147,
+          "precision": 0.23613312202852615,
+          "recall": 0.5418181818181819,
+          "tn": 9483,
+          "tp": 149
+        },
+        "patch_fractional": {
+          "fn": 34.55612258473411,
+          "fp": 554.5816326295026,
+          "iou": 0.11481881809413956,
+          "precision": 0.12110676286925108,
+          "recall": 0.688612017061989,
+          "tn": 9574.443877415266,
+          "tp": 76.41836737049744
+        },
+        "pixel": {
+          "background_coverage_mean_image": 0.9451809573901425,
+          "fn": 13058,
+          "foreground_coverage_mean_image": 0.054819042609857496,
+          "fp": 156311,
+          "iou": 0.11096121947634745,
+          "precision": 0.11912651451112989,
+          "recall": 0.6181536392081177,
+          "tn": 2898420,
+          "tp": 21139
+        }
+      },
+      "raw": {
+        "patch_binary": {
+          "fn": 105,
+          "fp": 890,
+          "iou": 0.1459227467811159,
+          "precision": 0.16037735849056603,
+          "recall": 0.6181818181818182,
+          "tn": 9075,
+          "tp": 170
+        },
+        "patch_fractional": {
+          "fn": 30.112245002295822,
+          "fp": 979.1377550470643,
+          "iou": 0.07417790720511118,
+          "precision": 0.07628513674805257,
+          "recall": 0.728656153189409,
+          "tn": 9149.887754997704,
+          "tp": 80.86224495293573
+        },
+        "pixel": {
+          "background_coverage_mean_image": 0.9000796357907813,
+          "fn": 9574,
+          "foreground_coverage_mean_image": 0.09992036420921871,
+          "fp": 292467,
+          "iou": 0.0753771459358852,
+          "precision": 0.07765303226213378,
+          "recall": 0.7200339211041904,
+          "tn": 2762264,
+          "tp": 24623
+        }
+      }
+    },
+    "small": {
+      "clean": {
+        "patch_binary": {
+          "fn": 38,
+          "fp": 160,
+          "iou": 0.14655172413793102,
+          "precision": 0.17525773195876287,
+          "recall": 0.4722222222222222,
+          "tn": 10008,
+          "tp": 34
+        },
+        "patch_fractional": {
+          "fn": 8.00510207703337,
+          "fp": 183.4438775582239,
+          "iou": 0.052256712000029515,
+          "precision": 0.05441300227719637,
+          "recall": 0.5687190751385391,
+          "tn": 10037.994897922967,
+          "tp": 10.556122441776097
+        },
+        "pixel": {
+          "background_coverage_mean_image": 0.9848186570151825,
+          "fn": 2260,
+          "foreground_coverage_mean_image": 0.015181342984817672,
+          "fp": 39292,
+          "iou": 0.05939876856211518,
+          "precision": 0.06260139326271591,
+          "recall": 0.5372645372645373,
+          "tn": 2801064,
+          "tp": 2624
+        }
+      },
+      "raw": {
+        "patch_binary": {
+          "fn": 32,
+          "fp": 289,
+          "iou": 0.11080332409972299,
+          "precision": 0.12158054711246201,
+          "recall": 0.5555555555555556,
+          "tn": 9879,
+          "tp": 40
+        },
+        "patch_fractional": {
+          "fn": 6.841836751904339,
+          "fp": 317.28061223309487,
+          "iou": 0.03489555643290078,
+          "precision": 0.035621239413085495,
+          "recall": 0.6313908737556082,
+          "tn": 9904.158163248096,
+          "tp": 11.719387766905129
+        },
+        "pixel": {
+          "background_coverage_mean_image": 0.9702882743611532,
+          "fn": 1870,
+          "foreground_coverage_mean_image": 0.029711725638846824,
+          "fp": 79629,
+          "iou": 0.03566315241442145,
+          "precision": 0.03647011846133369,
+          "recall": 0.6171171171171171,
+          "tn": 2760727,
+          "tp": 3014
+        }
+      }
+    }
+  },
+  "image_count": 30,
+  "metric_definitions": {
+    "patch_binary": "32x32 DINO positions; binary GT is positive for any area-pooled occupancy > 0",
+    "patch_fractional": "same 32x32 predictions weighted by GT foreground fractional occupancy",
+    "pixel": "binary mask evaluated at original COCO image size after bilinear score-map resize from 448 square inference output"
+  },
+  "model_identity": {
+    "background_threshold": 0.54,
+    "binary_threshold": 0.54,
+    "class_count": 81,
+    "classnames_sha256": "1f17b53017e442257cad2025ab981ddeb28d048af00dcac8ae810bc25a6a9a77",
+    "clip_sha256": "5806e77cd80f8b59890b7e101eabd078d9fb84e6937f9e85e4ecb61988df416f",
+    "dino_transform": "upstream DINOText Resize(448,448), ImageNet mean/std; MMCV FloatImage crop in BGR then upstream BGR\u2192RGB",
+    "eval_metric": "global 81-class confusion matrix; nanmean over nonempty class unions including background",
+    "gallery_image_preprocessing": "upstream DINOText Resize((448,448)) square warp; source image loaded RGB then passed BGR as expected by MMCV crop wrapper",
+    "gallery_inference": "one fixed 448x448 full-image DINOText forward per image; no sliding-window; no PAMR",
+    "host_cached_talk2dino_source_revision": "6dac47dbe3500df63f3b3df20dd28334290919cc",
+    "image_size": 448,
+    "lambda_bg": 0.2,
+    "mlp_sha256": "4e28d24ecb905592c902b04d9c077484346ebafac8547b968bd5af16291d8d69",
+    "native_patch_grid": [
+      32,
+      32
+    ],
+    "official_dino": {
+      "blocks": 24,
+      "heads": 16,
+      "missing_keys": [],
+      "model_identifier": "dinov2_vitl14_reg",
+      "num_register_tokens": 4,
+      "repository": "facebookresearch/dinov2",
+      "source_revision": "cached-local-repository",
+      "strict_state_load": true,
+      "unexpected_keys": [],
+      "weights_path": "/opt/openvla/cache/models/dinov2/facebook_dinov2_large/dinov2_vitl14_reg4_pretrain.pth",
+      "weights_sha256": "36e4deffbaef061a2576705b0c36f93621e2ae20bf6274694821b0b492551b51",
+      "width": 1024
+    },
+    "official_repo_revision": "container runtime revision unavailable; host cached source revision 6dac47dbe3500df63f3b3df20dd28334290919cc",
+    "pamr": {
+      "dilations": [
+        1,
+        2,
+        4,
+        8,
+        12,
+        24
+      ],
+      "iter": 10
+    },
+    "revision_provenance_note": "The mounted inference container did not expose usable git metadata for the upstream checkout. The host cached Talk2DINO source revision was independently read from its local Git repository; exact byte-for-byte identity of the container checkout was not independently verified.",
+    "slide_crop": 448,
+    "slide_stride": 224,
+    "templates": "upstream sub_imagenet_template",
+    "test_scale": [
+      2048,
+      448
+    ]
+  },
+  "overall": {
+    "all": {
+      "clean": {
+        "patch_binary": {
+          "fn": 699,
+          "fp": 1803,
+          "iou": 0.35281945162959133,
+          "precision": 0.4306915061572466,
+          "recall": 0.6611730489578284,
+          "tn": 26854,
+          "tp": 1364
+        },
+        "patch_fractional": {
+          "fn": 379.5612250175327,
+          "fp": 2133.0612241560593,
+          "iou": 0.29153275814062096,
+          "precision": 0.32647261630689633,
+          "recall": 0.7314741954112453,
+          "tn": 27173.438774982467,
+          "tp": 1033.9387758439407
+        },
+        "pixel": {
+          "background_coverage_mean_image": 0.8989156487087976,
+          "fn": 108451,
+          "foreground_coverage_mean_image": 0.1010843512912025,
+          "fp": 625832,
+          "iou": 0.28087120117758474,
+          "precision": 0.31424839637878554,
+          "recall": 0.7256079202309477,
+          "tn": 7813919,
+          "tp": 286790
+        }
+      },
+      "raw": {
+        "patch_binary": {
+          "fn": 582,
+          "fp": 2956,
+          "iou": 0.2950787009364415,
+          "precision": 0.3337840883479829,
+          "recall": 0.7178865729520116,
+          "tn": 25701,
+          "tp": 1481
+        },
+        "patch_fractional": {
+          "fn": 310.46938818739727,
+          "fp": 3333.969387325924,
+          "iou": 0.23234075303752882,
+          "precision": 0.24859828998739603,
+          "recall": 0.7803541648403408,
+          "tn": 25972.530611812603,
+          "tp": 1103.030612674076
+        },
+        "pixel": {
+          "background_coverage_mean_image": 0.857717413651061,
+          "fn": 81060,
+          "foreground_coverage_mean_image": 0.14228258634893926,
+          "fp": 973854,
+          "iou": 0.22948078840401873,
+          "precision": 0.24392271949131816,
+          "recall": 0.794909941023325,
+          "tn": 7465897,
+          "tp": 314181
+        }
+      }
+    }
+  },
+  "selection_audit": {
+    "eligible_categories": [
+      "bowl",
+      "bottle",
+      "cup",
+      "wine glass",
+      "fork",
+      "knife",
+      "spoon",
+      "bicycle",
+      "bus",
+      "car",
+      "person",
+      "cat",
+      "dog",
+      "bird",
+      "sports ball",
+      "banana",
+      "apple",
+      "sandwich",
+      "toothbrush",
+      "remote",
+      "cell phone",
+      "book",
+      "clock",
+      "vase",
+      "scissors",
+      "teddy bear",
+      "chair",
+      "couch",
+      "dining table",
+      "toilet",
+      "sink",
+      "refrigerator",
+      "backpack"
+    ],
+    "image_count": 5000,
+    "mask_count": 5000,
+    "selected_category_counts_by_size": {
+      "large": {
+        "bicycle": 1,
+        "bottle": 1,
+        "bowl": 1,
+        "bus": 1,
+        "car": 1,
+        "cup": 1,
+        "fork": 1,
+        "knife": 1,
+        "spoon": 1,
+        "wine glass": 1
+      },
+      "medium": {
+        "bicycle": 1,
+        "bottle": 1,
+        "bowl": 1,
+        "bus": 1,
+        "car": 1,
+        "cup": 1,
+        "fork": 1,
+        "knife": 1,
+        "spoon": 1,
+        "wine glass": 1
+      },
+      "small": {
+        "bicycle": 1,
+        "bottle": 1,
+        "bowl": 1,
+        "bus": 1,
+        "car": 1,
+        "cup": 1,
+        "fork": 1,
+        "knife": 1,
+        "spoon": 1,
+        "wine glass": 1
+      }
+    }
+  },
+  "threshold": 0.54
+}

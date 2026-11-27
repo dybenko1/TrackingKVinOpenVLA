@@ -1,0 +1,15 @@
+{
+  "expected_images": 30,
+  "native_patch_grid_shapes": [
+    32,
+    32
+  ],
+  "pixel_masks_aligned_to_original_rgb": true,
+  "raw_clean_maps_finite": true,
+  "score_cache_local_only": true,
+  "selected_unique_images": 30,
+  "selection_used_model_predictions": false,
+  "smoke_image_id": "000000118405",
+  "status": "passed_smoke_and_gallery",
+  "threshold": 0.54
+}
