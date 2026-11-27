@@ -1,0 +1,28 @@
+{
+  "best_checkpoint": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/checkpoints/e2/best_projection.pt",
+  "best_epoch": 9,
+  "best_objective": 0.64202880859375,
+  "checkpoint_sha256": "236f6ab9a3456e544fee8a37e20f0593be914f4d7527033f907656cf38819bb9",
+  "configuration": {
+    "batch_size": 32,
+    "checkpoint_selection": "mean RAW/CLEAN dev BG coverage at >=98% FG recall; threshold calibrated on dev only",
+    "data_manifest_sha256": "f98770d54528af01e9c1f4980606024ad5d94aefbba8f640722cbaa1db4218a4",
+    "dino_lr": 0.0,
+    "early_stopping_patience": 4,
+    "inference": "sigmoid cosine RAW; original lambda_bg=0.2 CLEAN",
+    "input_features": "cached OpenVLA final block24 LayerNorm spatial patches",
+    "learning_rate_schedule": "cosine over epochs, 5% terminal floor; multiplicative factor shared by optimizer groups",
+    "loss": "0.70 weighted BCEWithLogits(cosine, fractional role occupancy; positive weight 4, negative 1) + 0.30 soft Dice; empty query masks skipped",
+    "max_epochs": 20,
+    "optimizer": "Adam",
+    "projection_lr": 5e-05,
+    "seed": 123,
+    "stage": "e2",
+    "text_encoder": "frozen OpenAI CLIP ViT-B/16 seven-template average; raw 512-dimensional embeddings cached per task"
+  },
+  "epochs_completed": 13,
+  "final_loss": 0.6358910501003265,
+  "history_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_openvla_adaptation/training_history_e2.json",
+  "status": "complete",
+  "stopped_early": true
+}

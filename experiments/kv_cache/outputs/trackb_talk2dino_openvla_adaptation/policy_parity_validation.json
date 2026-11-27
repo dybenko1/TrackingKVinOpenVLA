@@ -1,0 +1,61 @@
+{
+  "actions_applied": false,
+  "adapted_parameters": [
+    "DINO block 24",
+    "sidecar Talk2DINO projection MLP"
+  ],
+  "all_action_outputs_bitwise_equal": true,
+  "all_fused_visual_outputs_bitwise_equal": true,
+  "observations": [
+    {
+      "action_bitwise_equal": true,
+      "action_max_abs_delta": 0.0,
+      "action_shape": [
+        7
+      ],
+      "actions_applied": false,
+      "fused_shape": [
+        1,
+        256,
+        2176
+      ],
+      "fused_visual_bitwise_equal": true,
+      "fused_visual_max_abs_delta": 0.0,
+      "task_id": "libero_goal/put_the_bowl_on_the_plate"
+    },
+    {
+      "action_bitwise_equal": true,
+      "action_max_abs_delta": 0.0,
+      "action_shape": [
+        7
+      ],
+      "actions_applied": false,
+      "fused_shape": [
+        1,
+        256,
+        2176
+      ],
+      "fused_visual_bitwise_equal": true,
+      "fused_visual_max_abs_delta": 0.0,
+      "task_id": "libero_object/pick_up_the_butter_and_place_it_in_the_basket"
+    },
+    {
+      "action_bitwise_equal": true,
+      "action_max_abs_delta": 0.0,
+      "action_shape": [
+        7
+      ],
+      "actions_applied": false,
+      "fused_shape": [
+        1,
+        256,
+        2176
+      ],
+      "fused_visual_bitwise_equal": true,
+      "fused_visual_max_abs_delta": 0.0,
+      "task_id": "libero_spatial/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate"
+    }
+  ],
+  "policy_uses_frozen_block23_output": true,
+  "status": "passed"
+}

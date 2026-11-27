@@ -1,0 +1,31 @@
+{
+  "clean_shape": [
+    2,
+    3,
+    256
+  ],
+  "device": "cuda:0",
+  "finite_scores": true,
+  "metric_fields": [
+    "bg_coverage",
+    "bg_iou",
+    "bg_precision",
+    "bg_recall",
+    "fg_coverage",
+    "fg_iou",
+    "fg_precision",
+    "fg_recall",
+    "fn",
+    "foreground_as_background",
+    "fp",
+    "tn",
+    "tp"
+  ],
+  "no_data_or_models_loaded": true,
+  "raw_shape": [
+    2,
+    3,
+    256
+  ],
+  "status": "passed"
+}

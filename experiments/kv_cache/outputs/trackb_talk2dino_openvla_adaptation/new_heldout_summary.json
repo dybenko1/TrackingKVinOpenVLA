@@ -1,0 +1,199 @@
+{
+  "benchmark_demo_overlap": false,
+  "complete_demo_holdout": true,
+  "dataset_manifest_sha256": "f98770d54528af01e9c1f4980606024ad5d94aefbba8f640722cbaa1db4218a4",
+  "frame_count": 336,
+  "metric_scope": "fractional patch occupancy pooled over all valid patch cells",
+  "raw_role_query_recall": {
+    "E2": {
+      "destination_or_fixture": {
+        "mean_query_frame_recall": 0.0,
+        "query_frame_count": 280
+      },
+      "manipulated_object": {
+        "mean_query_frame_recall": 0.0,
+        "query_frame_count": 280
+      },
+      "mentioned_context_object": {
+        "mean_query_frame_recall": 0.0,
+        "query_frame_count": 112
+      },
+      "robot_arm": {
+        "mean_query_frame_recall": 0.25887544052634853,
+        "query_frame_count": 336
+      },
+      "robot_gripper": {
+        "mean_query_frame_recall": 0.0,
+        "query_frame_count": 336
+      },
+      "task_fixture": {
+        "mean_query_frame_recall": 0.47207450946324186,
+        "query_frame_count": 112
+      }
+    },
+    "E3": {
+      "destination_or_fixture": {
+        "mean_query_frame_recall": 0.0,
+        "query_frame_count": 280
+      },
+      "manipulated_object": {
+        "mean_query_frame_recall": 0.0,
+        "query_frame_count": 280
+      },
+      "mentioned_context_object": {
+        "mean_query_frame_recall": 0.0,
+        "query_frame_count": 112
+      },
+      "robot_arm": {
+        "mean_query_frame_recall": 0.036556883515130825,
+        "query_frame_count": 336
+      },
+      "robot_gripper": {
+        "mean_query_frame_recall": 0.0,
+        "query_frame_count": 336
+      },
+      "task_fixture": {
+        "mean_query_frame_recall": 0.44134518222964625,
+        "query_frame_count": 112
+      }
+    }
+  },
+  "results": {
+    "E2": {
+      "clean": {
+        "dev_recall98": {
+          "bg_coverage": 0.6405552455357143,
+          "bg_iou": 0.7691547481083364,
+          "bg_precision": 0.9953422709088424,
+          "bg_recall": 0.7719331508195252,
+          "fg_iou": 0.4720240083082751,
+          "fg_precision": 0.4759419931848142,
+          "fg_recall": 0.9828590114176394,
+          "fn": 256.6315574645996,
+          "foreground_as_background": 0.017140988582360538,
+          "fp": 16202.825454711914,
+          "tn": 54841.3684425354,
+          "tp": 14715.174545288086
+        },
+        "fixed_0.54": {
+          "bg_coverage": 0.97509765625,
+          "bg_iou": 0.8441068901588995,
+          "bg_precision": 0.8454470725081908,
+          "bg_recall": 0.998125587322619,
+          "fg_iou": 0.13299156266738743,
+          "fg_precision": 0.9378309347827672,
+          "fg_recall": 0.13417445086570734,
+          "fn": 12962.972240447998,
+          "foreground_as_background": 0.8658255491342927,
+          "fp": 133.1661376953125,
+          "tn": 70911.027759552,
+          "tp": 2008.8338623046875
+        }
+      },
+      "raw": {
+        "dev_recall98": {
+          "bg_coverage": 0.6423223586309523,
+          "bg_iou": 0.771200628086177,
+          "bg_precision": 0.9952924736333648,
+          "bg_recall": 0.7740239722865524,
+          "fg_iou": 0.47417237804054885,
+          "fg_precision": 0.47818095530768034,
+          "fg_recall": 0.982627958846677,
+          "fn": 260.0908317565918,
+          "foreground_as_background": 0.01737204115332298,
+          "fp": 16054.284729003906,
+          "tn": 54989.90916824341,
+          "tp": 14711.715270996094
+        },
+        "fixed_0.54": {
+          "bg_coverage": 0.9486955915178571,
+          "bg_iou": 0.8575351937408909,
+          "bg_precision": 0.8635701095745417,
+          "bg_recall": 0.9919165492050401,
+          "fg_iou": 0.24692499285596115,
+          "fg_precision": 0.8698657952331779,
+          "fg_recall": 0.2563964379460027,
+          "fn": 11133.088348388672,
+          "foreground_as_background": 0.7436035620539972,
+          "fp": 574.2822456359863,
+          "tn": 70469.91165161133,
+          "tp": 3838.7177543640137
+        }
+      }
+    },
+    "E3": {
+      "clean": {
+        "dev_recall98": {
+          "bg_coverage": 0.6162690662202381,
+          "bg_iou": 0.7397939941877435,
+          "bg_precision": 0.9951105090271928,
+          "bg_recall": 0.7424929481122076,
+          "fg_iou": 0.4422694751233078,
+          "fg_precision": 0.4457423902740372,
+          "fg_recall": 0.9826883259642345,
+          "fn": 259.18702697753906,
+          "foreground_as_background": 0.017311674035765497,
+          "fp": 18294.380924224854,
+          "tn": 52749.81297302246,
+          "tp": 14712.619075775146
+        },
+        "fixed_0.54": {
+          "bg_coverage": 0.9904552641369048,
+          "bg_iou": 0.833765269470959,
+          "bg_precision": 0.8338269730102317,
+          "bg_recall": 0.9999112533861705,
+          "fg_iou": 0.05439237741585979,
+          "fg_precision": 0.9923204243110536,
+          "fg_recall": 0.05441528315074738,
+          "fn": 14157.11103439331,
+          "foreground_as_background": 0.9455847168492526,
+          "fp": 6.304931640625,
+          "tn": 71037.88896560669,
+          "tp": 814.695068359375
+        }
+      },
+      "raw": {
+        "dev_recall98": {
+          "bg_coverage": 0.6173735119047619,
+          "bg_iou": 0.7410296401782263,
+          "bg_precision": 0.995044687707297,
+          "bg_recall": 0.7437744057231914,
+          "fg_iou": 0.4433638000557342,
+          "fg_precision": 0.4469087019555477,
+          "fg_recall": 0.9824238370317047,
+          "fn": 263.1469039916992,
+          "foreground_as_background": 0.017576162968295294,
+          "fp": 18203.340801239014,
+          "tn": 52840.8530960083,
+          "tp": 14708.659198760986
+        },
+        "fixed_0.54": {
+          "bg_coverage": 0.97412109375,
+          "bg_iou": 0.8444063462429885,
+          "bg_precision": 0.8459984508131523,
+          "bg_recall": 0.9977762615782259,
+          "fg_iou": 0.13668506455500037,
+          "fg_precision": 0.9290279857981666,
+          "fg_recall": 0.1381273763628623,
+          "fn": 12903.789806365967,
+          "foreground_as_background": 0.8618726236371377,
+          "fp": 157.98370361328125,
+          "tn": 70886.21019363403,
+          "tp": 2068.0162963867188
+        }
+      }
+    }
+  },
+  "role_query_frame_count": 5824,
+  "status": "complete",
+  "task_count": 6,
+  "task_disjoint": false,
+  "task_ids": [
+    "libero_spatial/pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+    "libero_spatial/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate",
+    "libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+    "libero_object/pick_up_the_butter_and_place_it_in_the_basket",
+    "libero_goal/open_the_middle_drawer_of_the_cabinet",
+    "libero_goal/put_the_bowl_on_the_plate"
+  ]
+}

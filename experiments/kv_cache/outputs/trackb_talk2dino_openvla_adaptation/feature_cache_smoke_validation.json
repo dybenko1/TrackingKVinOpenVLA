@@ -1,0 +1,13 @@
+{
+  "benchmark_manifest_sha256": "b6f4ad4523768ed46037879c0be65c3f6e5f4182929ed45997df6b1992b03275",
+  "cuda_peak_allocated_bytes": 15122607616,
+  "dataset_manifest_sha256": "f93d7caa205889d0ce3f55e87702036e81c6e64e16f077c127ef468bec0bee75",
+  "feature_arrays": [
+    "block23_tokens [B,261,1024] fp16",
+    "final_features [B,256,1024] fp16",
+    "attention_logits [B,16,256] fp16"
+  ],
+  "openvla_revision": "962318cec55ac10993ff0f5f43eda9a270b4c873",
+  "source_processing": "OpenVLA processor.image_processor, first three DINO channels, 224x224",
+  "status": "complete"
+}

@@ -1,0 +1,29 @@
+{
+  "attention_shape": [
+    1,
+    16,
+    256
+  ],
+  "block23_sequence_shape": [
+    1,
+    261,
+    1024
+  ],
+  "block23_to_block24_max_abs_delta": 0.0,
+  "cuda_peak_allocated_bytes": 15120167936,
+  "final_patch_shape": [
+    1,
+    256,
+    1024
+  ],
+  "native_dino_revision": "962318cec55ac10993ff0f5f43eda9a270b4c873",
+  "one_forward_24_block_calls": true,
+  "policy_block23_shape": [
+    1,
+    256,
+    1024
+  ],
+  "policy_max_abs_delta": 0.0,
+  "status": "passed",
+  "tolerance": 0.002
+}

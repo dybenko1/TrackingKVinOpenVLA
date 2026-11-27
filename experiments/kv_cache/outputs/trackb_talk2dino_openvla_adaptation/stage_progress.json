@@ -1,0 +1,10 @@
+{
+  "completed_demo_chunks": 294,
+  "completed_frames": 2352,
+  "dataset_manifest_sha256": "f98770d54528af01e9c1f4980606024ad5d94aefbba8f640722cbaa1db4218a4",
+  "error": null,
+  "stage": "render_oracle_complete",
+  "status": "complete",
+  "total_demo_chunks": 294,
+  "updated_unix": 1795780430.1775203
+}

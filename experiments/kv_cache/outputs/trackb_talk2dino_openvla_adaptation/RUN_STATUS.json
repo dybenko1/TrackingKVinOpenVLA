@@ -1,0 +1,31 @@
+{
+  "command": [
+    "python",
+    "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/experiments/trackb_talk2dino_openvla_adaptation/evaluate_final.py"
+  ],
+  "completed_stages": [
+    "e1_calibration",
+    "simulator_label_preparation",
+    "native_feature_cache",
+    "e2_training",
+    "e3_training",
+    "paired_final_evaluation"
+  ],
+  "container": "trackb-v1-coco-object-20261126",
+  "current_epoch": 4,
+  "error_utc": "2026-11-27T12:04:22Z",
+  "last_error": "CalledProcessError: Command '['git', 'diff', '--cached', '--check']' returned non-zero exit status 2.",
+  "latest_checkpoint": null,
+  "latest_log_line": "[E3] epoch=4/12 loss=0.57688 dev98cov=0.5393 best=0.6193@1 patience=3/3 sec=20.0",
+  "pid": 14410,
+  "publication_status": "failed",
+  "publication_updated_utc": "2026-11-27T12:09:33Z",
+  "report_path": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_openvla_adaptation/EXPERIMENT_REPORT.md",
+  "resume_command": "none; evaluation and artifact gates completed; publisher watcher handles commit/push",
+  "stage": "publication",
+  "stage_status": "ready",
+  "started_utc": "2026-11-27T11:53:17Z",
+  "status": "complete_waiting_publication",
+  "total_epochs": 12,
+  "updated_utc": "2026-11-27T12:08:52Z"
+}

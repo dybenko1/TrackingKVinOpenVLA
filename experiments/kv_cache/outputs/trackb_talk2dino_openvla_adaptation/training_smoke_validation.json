@@ -1,0 +1,35 @@
+{
+  "E2": {
+    "atomic_checkpoint_restore": true,
+    "bce": 0.7295893430709839,
+    "dice": 0.9457788467407227,
+    "gradient_norm": 0.4424179494380951,
+    "loss": 0.7944461703300476
+  },
+  "E3": {
+    "atomic_checkpoint_written": true,
+    "bce": 0.7138833999633789,
+    "block24_fp32_sidecar_trainable": true,
+    "block24_parameter_changed": true,
+    "dice": 0.9452332258224487,
+    "gradient_norm": 0.9082874655723572,
+    "initial_block24_values_exact_bf16_cast": true,
+    "loss": 0.7832883596420288,
+    "policy_dino_frozen_no_grad": true
+  },
+  "data_rows": 1,
+  "no_policy_actions_applied": true,
+  "score_shapes": {
+    "clean": [
+      1,
+      6,
+      256
+    ],
+    "raw": [
+      1,
+      6,
+      256
+    ]
+  },
+  "status": "passed"
+}

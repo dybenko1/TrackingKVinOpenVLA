@@ -1,0 +1,32 @@
+{
+  "best_checkpoint": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/checkpoints/e3/best_block24_projection.pt",
+  "best_epoch": 1,
+  "best_objective": 0.6192694769965278,
+  "checkpoint_sha256": "990bd4573b4568b952760dff6fd41006ac40f9a4ad2429071d94859ea5cf01b2",
+  "configuration": {
+    "batch_size": 8,
+    "block24_train_precision": "FP32 sidecar initialized by exact OpenVLA BF16-to-FP32 cast",
+    "checkpoint_selection": "mean RAW/CLEAN dev BG coverage at >=98% FG recall; threshold calibrated on dev only",
+    "data_manifest_sha256": "f98770d54528af01e9c1f4980606024ad5d94aefbba8f640722cbaa1db4218a4",
+    "dino_block24_lr": 1e-06,
+    "early_stopping_patience": 3,
+    "final_layernorm": "frozen FP32 copy of original OpenVLA BF16 values; policy module untouched",
+    "inference": "sigmoid cosine RAW; original lambda_bg=0.2 CLEAN",
+    "input_features": "cached exact OpenVLA block23 261-token sequence; FP32 block24 sidecar",
+    "learning_rate_schedule": "cosine over epochs, 5% terminal floor; multiplicative factor shared by optimizer groups",
+    "loss": "0.70 weighted BCEWithLogits(cosine, fractional role occupancy; positive weight 4, negative 1) + 0.30 soft Dice; empty query masks skipped",
+    "max_epochs": 12,
+    "optimizer": "AdamW",
+    "projection_lr": 5e-05,
+    "seed": 123,
+    "stage": "e3",
+    "text_encoder": "frozen OpenAI CLIP ViT-B/16 seven-template average; raw 512-dimensional embeddings cached per task",
+    "weight_decay_block24": 0.01,
+    "weight_decay_projection": 0.0
+  },
+  "epochs_completed": 4,
+  "final_loss": 0.5768781227094156,
+  "history_file": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_openvla_adaptation/training_history_e3.json",
+  "status": "complete",
+  "stopped_early": true
+}

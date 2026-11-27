@@ -1,0 +1,99 @@
+{
+  "clean_increment_median_wall_ms": {
+    "E2": 0.968675478361547,
+    "E3": 0.9967550868168473
+  },
+  "components": {
+    "E2_raw_plus_CLEAN_on_cached_features": {
+      "cuda_event": {
+        "mean_ms": 1.6827552020549774,
+        "median_ms": 1.6765599846839905,
+        "p95_ms": 1.7214816212654114
+      },
+      "repeats": 20,
+      "synchronized_wall": {
+        "mean_ms": 1.735828968230635,
+        "median_ms": 1.729337964206934,
+        "p95_ms": 1.774127408862114
+      },
+      "warmup": 5
+    },
+    "E2_raw_score_only_on_cached_features": {
+      "cuda_event": {
+        "mean_ms": 0.7118048012256623,
+        "median_ms": 0.7104319930076599,
+        "p95_ms": 0.7584127932786942
+      },
+      "repeats": 20,
+      "synchronized_wall": {
+        "mean_ms": 0.7673087529838085,
+        "median_ms": 0.760662485845387,
+        "p95_ms": 0.8366188034415245
+      },
+      "warmup": 5
+    },
+    "E3_FP32_block24_plus_attention": {
+      "cuda_event": {
+        "mean_ms": 7.7970815896987915,
+        "median_ms": 5.36955189704895,
+        "p95_ms": 12.772793674468994
+      },
+      "repeats": 20,
+      "synchronized_wall": {
+        "mean_ms": 7.945114118047059,
+        "median_ms": 5.515769007615745,
+        "p95_ms": 12.937920319382101
+      },
+      "warmup": 5
+    },
+    "E3_block24_attention_RAW_and_CLEAN_end_to_end": {
+      "cuda_event": {
+        "mean_ms": 4.5640416264534,
+        "median_ms": 4.553264141082764,
+        "p95_ms": 5.743153691291809
+      },
+      "repeats": 20,
+      "synchronized_wall": {
+        "mean_ms": 4.648097138851881,
+        "median_ms": 4.630068549886346,
+        "p95_ms": 5.84039221284911
+      },
+      "warmup": 5
+    },
+    "E3_raw_plus_CLEAN_on_cached_features": {
+      "cuda_event": {
+        "mean_ms": 1.6551248013973237,
+        "median_ms": 1.6507359743118286,
+        "p95_ms": 1.6928079664707183
+      },
+      "repeats": 20,
+      "synchronized_wall": {
+        "mean_ms": 1.704453257843852,
+        "median_ms": 1.6993541503325105,
+        "p95_ms": 1.7410425818525255
+      },
+      "warmup": 5
+    },
+    "E3_raw_score_only_on_cached_features": {
+      "cuda_event": {
+        "mean_ms": 0.6580383956432343,
+        "median_ms": 0.6558879911899567,
+        "p95_ms": 0.6696528285741806
+      },
+      "repeats": 20,
+      "synchronized_wall": {
+        "mean_ms": 0.7047716178931296,
+        "median_ms": 0.7025990635156631,
+        "p95_ms": 0.7268294459208846
+      },
+      "warmup": 5
+    }
+  },
+  "device": "cuda:0",
+  "interpretation": "Incremental scoring timings use cached block24 features. The E3 end-to-end entry includes its FP32 block24 sidecar plus attention and scoring; it is not a full OpenVLA policy latency or a speedup claim.",
+  "measurement": "one observation, batch 1; five warmups and 20 synchronized repeats; wall time includes Python/hooks/synchronization; CUDA events report device interval",
+  "peak_cuda_allocated_bytes": 15456583168,
+  "peak_cuda_reserved_bytes": 15533604864,
+  "query_count": 3,
+  "status": "complete"
+}

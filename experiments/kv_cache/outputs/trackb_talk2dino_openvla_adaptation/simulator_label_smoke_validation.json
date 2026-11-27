@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "frames_rendered": 2,
+  "demo_chunks": 1,
+  "sample_count_by_split": {
+    "development": 0,
+    "new_heldout": 0,
+    "train": 2
+  },
+  "recorded_actions_applied": false,
+  "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead",
+  "task_id": "libero_spatial/pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+  "split_unit": "complete HDF5 demonstration",
+  "frame_selection": "8 unique evenly-spaced simulator states per complete demonstration",
+  "libero_config_path": "persistent ignored experiment cache",
+  "numba_cache_path": "persistent ignored experiment cache"
+}

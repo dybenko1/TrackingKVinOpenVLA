@@ -1,0 +1,87 @@
+{
+  "baseline_report": "/opt/openvla/cache/worktrees/trackb-dense-grounding-v2/experiments/kv_cache/outputs/trackb_talk2dino_openvla_multicategory/EXPERIMENT_REPORT.md",
+  "configuration_sha256": "c1febb90395ca29ea5e19daee35abfd0be0240ffe402e2e8e92ec037a3295bd9",
+  "dataset_split": {
+    "demonstrations_in_existing_90_frame_benchmark_excluded": true,
+    "frames_per_demo": 8,
+    "recorded_actions_applied": false,
+    "remaining_demo_split": {
+      "development": 0.13,
+      "new_heldout": 0.13,
+      "train": 0.74
+    },
+    "six predeclared held-out tasks": "excluded from training and selection",
+    "task_scope": "six predeclared LIBERO development tasks",
+    "unit": "complete demonstration"
+  },
+  "dino": {
+    "blocks": 24,
+    "frozen_blocks_e2": "1-24",
+    "identifier": "vit_large_patch14_reg4_dinov2.lvd142m",
+    "native_policy_features": "block 23 output unchanged",
+    "spatial_grid": [
+      16,
+      16
+    ],
+    "trainable_blocks_e3": "24 only"
+  },
+  "e1": {
+    "dev_only_selection": true,
+    "foreground_recall_constraints": [
+      0.95,
+      0.98,
+      0.99
+    ],
+    "thresholds": "0.450-0.600 step 0.001"
+  },
+  "e2": {
+    "batch_size": 32,
+    "early_stopping": true,
+    "lr": 5e-05,
+    "max_epochs": 20,
+    "objective": "0.70 asymmetric BCE + 0.30 soft Dice",
+    "trainable": "projection MLP only"
+  },
+  "e3": {
+    "batch_size": 8,
+    "block24_lr": 1e-06,
+    "early_stopping": true,
+    "initialization": "OpenVLA block 24 + best E2 MLP",
+    "max_epochs": 12,
+    "projection_lr": 5e-05,
+    "trainable": [
+      "DINO block 24",
+      "projection MLP"
+    ]
+  },
+  "evaluation": "same frozen 90-frame benchmark; 30 development/60 previously inspected evaluation frames",
+  "experiment": "Talk2DINO threshold calibration and OpenVLA DINOv2 adaptation",
+  "implementation_files_sha256": {
+    "cache_features.py": "1950f0b8e9dbc7c78b76515fcd9c4f979ab31be0f226fe2a5f65921585d0661c",
+    "evaluate_final.py": "7516abf795f4cf17ae3449231dd92871d78480d6d931fb7fef6d2dfa4f77eb92",
+    "finalize_evaluation.py": "3d63c0e46fa338aca8ca13fc9255a4b0b38ab43a2dda79e0c45ac8c17aeda7d0",
+    "orchestrate_pipeline.py": "c62e6def28e3f36353a7479149f1b6fd3214af66b8ba1ff15c32825bee76cd0a",
+    "prepare_libero_data.py": "02ea801d98f1a07e569062b90c1f364b4d999d8a2834399f577e9d1929f3a337",
+    "publish_when_ready.py": "11214c231d1936472b577e7e7695503936debb7fad869cef4f9db252d546c79a",
+    "run_e1_calibration.py": "0e2af37abe487adaa09899590db314fc68b1de6767a46a982f06aa2b65f54532",
+    "train_adaptation.py": "6938df416c45a22fb227d00be1f9e9584a6bb90d55cb4b384d99ad333be9b00d"
+  },
+  "implementation_source_sha256": "2612b492bbc3d090dadc37c772a4f172da65a6c44f150ee30586ac18f25e7e63",
+  "large_features_and_checkpoints_local_ignored_cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1",
+  "no_kv_cache_changes": true,
+  "no_new_policy_rollouts": true,
+  "openvla_checkpoint": "openvla/openvla-7b-finetuned-libero-spatial",
+  "openvla_revision": "962318cec55ac10993ff0f5f43eda9a270b4c873",
+  "projection": {
+    "initialization": "original Talk2DINO ViT-L MLP",
+    "sha256": "4e28d24ecb905592c902b04d9c077484346ebafac8547b968bd5af16291d8d69"
+  },
+  "starting_branch": "thesis/trackb-dense-grounding-v2",
+  "starting_commit": "f815553ab0831c5b57b2c4895ea2b984cae1ee68",
+  "text": {
+    "encoder": "OpenAI CLIP ViT-B/16",
+    "frozen": true,
+    "sha256": "5806e77cd80f8b59890b7e101eabd078d9fb84e6937f9e85e4ecb61988df416f",
+    "templates": 7
+  }
+}

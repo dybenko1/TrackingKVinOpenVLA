@@ -1,0 +1,19 @@
+{
+  "baseline_manifest_sha256": "5d37bf6b7d05dfe8e863f85f45795d17590c38ae0db52bd5fdf2807b0718c60f",
+  "cuda": true,
+  "development_tasks": [
+    "libero_spatial/pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+    "libero_spatial/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate",
+    "libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket",
+    "libero_object/pick_up_the_butter_and_place_it_in_the_basket",
+    "libero_goal/open_the_middle_drawer_of_the_cabinet",
+    "libero_goal/put_the_bowl_on_the_plate"
+  ],
+  "disk_free_bytes": 690544582656,
+  "gpu_free_bytes": 48602566656,
+  "gpu_total_bytes": 65893367808,
+  "hdf5_task_files": 6,
+  "status": "passed",
+  "task_manifest_sha256": "d9cf911a1cb81b8bd635b8991d49e1977c2a50e164fc38cb38ebb1d5a371d156",
+  "torch": "2.6.0"
+}

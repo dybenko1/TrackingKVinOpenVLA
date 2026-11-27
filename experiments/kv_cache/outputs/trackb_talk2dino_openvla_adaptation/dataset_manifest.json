@@ -1,0 +1,2224 @@
+{
+  "existing_90_demo_segments_excluded": true,
+  "frame_selection": "8 unique evenly-spaced simulator states per complete demonstration",
+  "image_size": [
+    224,
+    224
+  ],
+  "manifest_sha256": "f98770d54528af01e9c1f4980606024ad5d94aefbba8f640722cbaa1db4218a4",
+  "patch_grid": [
+    16,
+    16
+  ],
+  "recorded_actions_applied": false,
+  "sample_count_by_split": {
+    "development": 288,
+    "new_heldout": 336,
+    "train": 1728
+  },
+  "schema_version": 1,
+  "source_benchmark_manifest_sha256": "5d37bf6b7d05dfe8e863f85f45795d17590c38ae0db52bd5fdf2807b0718c60f",
+  "source_hdf5": [
+    {
+      "path": "/opt/openvla/cache/datasets/libero_ground_truth_v2_official/libero_spatial/pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_demo.hdf5",
+      "sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate"
+    },
+    {
+      "path": "/opt/openvla/cache/datasets/libero_ground_truth_v2_official/libero_spatial/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_demo.hdf5",
+      "sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate"
+    },
+    {
+      "path": "/opt/openvla/cache/datasets/libero_ground_truth_v2_official/libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket_demo.hdf5",
+      "sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d",
+      "task_id": "libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket"
+    },
+    {
+      "path": "/opt/openvla/cache/datasets/libero_ground_truth_v2_official/libero_object/pick_up_the_butter_and_place_it_in_the_basket_demo.hdf5",
+      "sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9",
+      "task_id": "libero_object/pick_up_the_butter_and_place_it_in_the_basket"
+    },
+    {
+      "path": "/opt/openvla/cache/datasets/libero_ground_truth_v2_official/libero_goal/open_the_middle_drawer_of_the_cabinet_demo.hdf5",
+      "sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737",
+      "task_id": "libero_goal/open_the_middle_drawer_of_the_cabinet"
+    },
+    {
+      "path": "/opt/openvla/cache/datasets/libero_ground_truth_v2_official/libero_goal/put_the_bowl_on_the_plate_demo.hdf5",
+      "sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406",
+      "task_id": "libero_goal/put_the_bowl_on_the_plate"
+    }
+  ],
+  "source_task_manifest_sha256": "d9cf911a1cb81b8bd635b8991d49e1977c2a50e164fc38cb38ebb1d5a371d156",
+  "split_unit": "complete HDF5 demonstration",
+  "status": "complete",
+  "tasks": [
+    {
+      "excluded_benchmark_demos": [
+        "demo_0"
+      ],
+      "hdf5_path": "/opt/openvla/cache/datasets/libero_ground_truth_v2_official/libero_spatial/pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate_demo.hdf5",
+      "hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead",
+      "instruction": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+      "splits": {
+        "development": [
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/development/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_4.npz",
+            "cached": true,
+            "demo": "demo_4",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/development/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_31.npz",
+            "cached": true,
+            "demo": "demo_31",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/development/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_47.npz",
+            "cached": true,
+            "demo": "demo_47",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/development/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_24.npz",
+            "cached": true,
+            "demo": "demo_24",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/development/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_18.npz",
+            "cached": true,
+            "demo": "demo_18",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/development/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_20.npz",
+            "cached": true,
+            "demo": "demo_20",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          }
+        ],
+        "new_heldout": [
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/new_heldout/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_5.npz",
+            "cached": true,
+            "demo": "demo_5",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/new_heldout/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_14.npz",
+            "cached": true,
+            "demo": "demo_14",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/new_heldout/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_3.npz",
+            "cached": true,
+            "demo": "demo_3",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/new_heldout/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_34.npz",
+            "cached": true,
+            "demo": "demo_34",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/new_heldout/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_41.npz",
+            "cached": true,
+            "demo": "demo_41",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/new_heldout/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_32.npz",
+            "cached": true,
+            "demo": "demo_32",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/new_heldout/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_21.npz",
+            "cached": true,
+            "demo": "demo_21",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          }
+        ],
+        "train": [
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_23.npz",
+            "cached": true,
+            "demo": "demo_23",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_43.npz",
+            "cached": true,
+            "demo": "demo_43",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_46.npz",
+            "cached": true,
+            "demo": "demo_46",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_16.npz",
+            "cached": true,
+            "demo": "demo_16",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_45.npz",
+            "cached": true,
+            "demo": "demo_45",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_11.npz",
+            "cached": true,
+            "demo": "demo_11",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_30.npz",
+            "cached": true,
+            "demo": "demo_30",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_35.npz",
+            "cached": true,
+            "demo": "demo_35",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_29.npz",
+            "cached": true,
+            "demo": "demo_29",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_25.npz",
+            "cached": true,
+            "demo": "demo_25",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_40.npz",
+            "cached": true,
+            "demo": "demo_40",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_48.npz",
+            "cached": true,
+            "demo": "demo_48",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_1.npz",
+            "cached": true,
+            "demo": "demo_1",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_12.npz",
+            "cached": true,
+            "demo": "demo_12",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_9.npz",
+            "cached": true,
+            "demo": "demo_9",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_8.npz",
+            "cached": true,
+            "demo": "demo_8",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_22.npz",
+            "cached": true,
+            "demo": "demo_22",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_37.npz",
+            "cached": true,
+            "demo": "demo_37",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_28.npz",
+            "cached": true,
+            "demo": "demo_28",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_27.npz",
+            "cached": true,
+            "demo": "demo_27",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_26.npz",
+            "cached": true,
+            "demo": "demo_26",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_33.npz",
+            "cached": true,
+            "demo": "demo_33",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_19.npz",
+            "cached": true,
+            "demo": "demo_19",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_44.npz",
+            "cached": true,
+            "demo": "demo_44",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_38.npz",
+            "cached": true,
+            "demo": "demo_38",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_10.npz",
+            "cached": true,
+            "demo": "demo_10",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_7.npz",
+            "cached": true,
+            "demo": "demo_7",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_42.npz",
+            "cached": true,
+            "demo": "demo_42",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_39.npz",
+            "cached": true,
+            "demo": "demo_39",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_13.npz",
+            "cached": true,
+            "demo": "demo_13",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_36.npz",
+            "cached": true,
+            "demo": "demo_36",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_49.npz",
+            "cached": true,
+            "demo": "demo_49",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_6.npz",
+            "cached": true,
+            "demo": "demo_6",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_2.npz",
+            "cached": true,
+            "demo": "demo_2",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_15.npz",
+            "cached": true,
+            "demo": "demo_15",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/demo_17.npz",
+            "cached": true,
+            "demo": "demo_17",
+            "frame_count": 8,
+            "source_hdf5_sha256": "ff6f26121653c77280eb40a38773a74141c11a8509f3466058cb56dd2cc60ead"
+          }
+        ]
+      },
+      "suite": "libero_spatial",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate"
+    },
+    {
+      "excluded_benchmark_demos": [
+        "demo_1"
+      ],
+      "hdf5_path": "/opt/openvla/cache/datasets/libero_ground_truth_v2_official/libero_spatial/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate_demo.hdf5",
+      "hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3",
+      "instruction": "pick up the black bowl from table center and place it on the plate",
+      "splits": {
+        "development": [
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/development/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_48.npz",
+            "cached": true,
+            "demo": "demo_48",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/development/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_19.npz",
+            "cached": true,
+            "demo": "demo_19",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/development/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_9.npz",
+            "cached": true,
+            "demo": "demo_9",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/development/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_8.npz",
+            "cached": true,
+            "demo": "demo_8",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/development/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_35.npz",
+            "cached": true,
+            "demo": "demo_35",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/development/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_26.npz",
+            "cached": true,
+            "demo": "demo_26",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          }
+        ],
+        "new_heldout": [
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/new_heldout/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_37.npz",
+            "cached": true,
+            "demo": "demo_37",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/new_heldout/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_21.npz",
+            "cached": true,
+            "demo": "demo_21",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/new_heldout/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_16.npz",
+            "cached": true,
+            "demo": "demo_16",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/new_heldout/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_18.npz",
+            "cached": true,
+            "demo": "demo_18",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/new_heldout/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_31.npz",
+            "cached": true,
+            "demo": "demo_31",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/new_heldout/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_32.npz",
+            "cached": true,
+            "demo": "demo_32",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/new_heldout/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_40.npz",
+            "cached": true,
+            "demo": "demo_40",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          }
+        ],
+        "train": [
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_34.npz",
+            "cached": true,
+            "demo": "demo_34",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_24.npz",
+            "cached": true,
+            "demo": "demo_24",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_20.npz",
+            "cached": true,
+            "demo": "demo_20",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_27.npz",
+            "cached": true,
+            "demo": "demo_27",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_23.npz",
+            "cached": true,
+            "demo": "demo_23",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_14.npz",
+            "cached": true,
+            "demo": "demo_14",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_10.npz",
+            "cached": true,
+            "demo": "demo_10",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_49.npz",
+            "cached": true,
+            "demo": "demo_49",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_22.npz",
+            "cached": true,
+            "demo": "demo_22",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_30.npz",
+            "cached": true,
+            "demo": "demo_30",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_41.npz",
+            "cached": true,
+            "demo": "demo_41",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_33.npz",
+            "cached": true,
+            "demo": "demo_33",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_45.npz",
+            "cached": true,
+            "demo": "demo_45",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_29.npz",
+            "cached": true,
+            "demo": "demo_29",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_47.npz",
+            "cached": true,
+            "demo": "demo_47",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_42.npz",
+            "cached": true,
+            "demo": "demo_42",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_7.npz",
+            "cached": true,
+            "demo": "demo_7",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_0.npz",
+            "cached": true,
+            "demo": "demo_0",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_25.npz",
+            "cached": true,
+            "demo": "demo_25",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_28.npz",
+            "cached": true,
+            "demo": "demo_28",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_13.npz",
+            "cached": true,
+            "demo": "demo_13",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_12.npz",
+            "cached": true,
+            "demo": "demo_12",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_6.npz",
+            "cached": true,
+            "demo": "demo_6",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_44.npz",
+            "cached": true,
+            "demo": "demo_44",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_46.npz",
+            "cached": true,
+            "demo": "demo_46",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_4.npz",
+            "cached": true,
+            "demo": "demo_4",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_43.npz",
+            "cached": true,
+            "demo": "demo_43",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_15.npz",
+            "cached": true,
+            "demo": "demo_15",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_17.npz",
+            "cached": true,
+            "demo": "demo_17",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_11.npz",
+            "cached": true,
+            "demo": "demo_11",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_38.npz",
+            "cached": true,
+            "demo": "demo_38",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_5.npz",
+            "cached": true,
+            "demo": "demo_5",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_39.npz",
+            "cached": true,
+            "demo": "demo_39",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_2.npz",
+            "cached": true,
+            "demo": "demo_2",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_3.npz",
+            "cached": true,
+            "demo": "demo_3",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_spatial_pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate/demo_36.npz",
+            "cached": true,
+            "demo": "demo_36",
+            "frame_count": 8,
+            "source_hdf5_sha256": "75ede0cf5fbfc925093671b55032ad80f1b1f1cf35442ec6c663460d37d3e0b3"
+          }
+        ]
+      },
+      "suite": "libero_spatial",
+      "task_id": "libero_spatial/pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate"
+    },
+    {
+      "excluded_benchmark_demos": [
+        "demo_0"
+      ],
+      "hdf5_path": "/opt/openvla/cache/datasets/libero_ground_truth_v2_official/libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket_demo.hdf5",
+      "hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d",
+      "instruction": "pick up the alphabet soup and place it in the basket",
+      "splits": {
+        "development": [
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/development/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_43.npz",
+            "cached": true,
+            "demo": "demo_43",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/development/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_18.npz",
+            "cached": true,
+            "demo": "demo_18",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/development/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_46.npz",
+            "cached": true,
+            "demo": "demo_46",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/development/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_4.npz",
+            "cached": true,
+            "demo": "demo_4",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/development/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_20.npz",
+            "cached": true,
+            "demo": "demo_20",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/development/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_42.npz",
+            "cached": true,
+            "demo": "demo_42",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          }
+        ],
+        "new_heldout": [
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/new_heldout/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_27.npz",
+            "cached": true,
+            "demo": "demo_27",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/new_heldout/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_34.npz",
+            "cached": true,
+            "demo": "demo_34",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/new_heldout/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_15.npz",
+            "cached": true,
+            "demo": "demo_15",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/new_heldout/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_25.npz",
+            "cached": true,
+            "demo": "demo_25",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/new_heldout/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_2.npz",
+            "cached": true,
+            "demo": "demo_2",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/new_heldout/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_12.npz",
+            "cached": true,
+            "demo": "demo_12",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/new_heldout/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_39.npz",
+            "cached": true,
+            "demo": "demo_39",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          }
+        ],
+        "train": [
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_5.npz",
+            "cached": true,
+            "demo": "demo_5",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_38.npz",
+            "cached": true,
+            "demo": "demo_38",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_40.npz",
+            "cached": true,
+            "demo": "demo_40",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_16.npz",
+            "cached": true,
+            "demo": "demo_16",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_19.npz",
+            "cached": true,
+            "demo": "demo_19",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_45.npz",
+            "cached": true,
+            "demo": "demo_45",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_37.npz",
+            "cached": true,
+            "demo": "demo_37",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_21.npz",
+            "cached": true,
+            "demo": "demo_21",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_10.npz",
+            "cached": true,
+            "demo": "demo_10",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_24.npz",
+            "cached": true,
+            "demo": "demo_24",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_11.npz",
+            "cached": true,
+            "demo": "demo_11",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_26.npz",
+            "cached": true,
+            "demo": "demo_26",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_32.npz",
+            "cached": true,
+            "demo": "demo_32",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_29.npz",
+            "cached": true,
+            "demo": "demo_29",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_33.npz",
+            "cached": true,
+            "demo": "demo_33",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_36.npz",
+            "cached": true,
+            "demo": "demo_36",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_6.npz",
+            "cached": true,
+            "demo": "demo_6",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_30.npz",
+            "cached": true,
+            "demo": "demo_30",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_47.npz",
+            "cached": true,
+            "demo": "demo_47",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_49.npz",
+            "cached": true,
+            "demo": "demo_49",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_1.npz",
+            "cached": true,
+            "demo": "demo_1",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_8.npz",
+            "cached": true,
+            "demo": "demo_8",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_23.npz",
+            "cached": true,
+            "demo": "demo_23",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_7.npz",
+            "cached": true,
+            "demo": "demo_7",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_31.npz",
+            "cached": true,
+            "demo": "demo_31",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_13.npz",
+            "cached": true,
+            "demo": "demo_13",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_17.npz",
+            "cached": true,
+            "demo": "demo_17",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_3.npz",
+            "cached": true,
+            "demo": "demo_3",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_41.npz",
+            "cached": true,
+            "demo": "demo_41",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_9.npz",
+            "cached": true,
+            "demo": "demo_9",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_14.npz",
+            "cached": true,
+            "demo": "demo_14",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_48.npz",
+            "cached": true,
+            "demo": "demo_48",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_22.npz",
+            "cached": true,
+            "demo": "demo_22",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_44.npz",
+            "cached": true,
+            "demo": "demo_44",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_28.npz",
+            "cached": true,
+            "demo": "demo_28",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_alphabet_soup_and_place_it_in_the_basket/demo_35.npz",
+            "cached": true,
+            "demo": "demo_35",
+            "frame_count": 8,
+            "source_hdf5_sha256": "42189d4415d4c51aaaf0708300653fccc39239cd3f2709079a713cd8d1678a8d"
+          }
+        ]
+      },
+      "suite": "libero_object",
+      "task_id": "libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket"
+    },
+    {
+      "excluded_benchmark_demos": [
+        "demo_1"
+      ],
+      "hdf5_path": "/opt/openvla/cache/datasets/libero_ground_truth_v2_official/libero_object/pick_up_the_butter_and_place_it_in_the_basket_demo.hdf5",
+      "hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9",
+      "instruction": "pick up the butter and place it in the basket",
+      "splits": {
+        "development": [
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/development/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_9.npz",
+            "cached": true,
+            "demo": "demo_9",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/development/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_2.npz",
+            "cached": true,
+            "demo": "demo_2",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/development/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_35.npz",
+            "cached": true,
+            "demo": "demo_35",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/development/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_23.npz",
+            "cached": true,
+            "demo": "demo_23",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/development/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_39.npz",
+            "cached": true,
+            "demo": "demo_39",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/development/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_32.npz",
+            "cached": true,
+            "demo": "demo_32",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          }
+        ],
+        "new_heldout": [
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/new_heldout/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_7.npz",
+            "cached": true,
+            "demo": "demo_7",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/new_heldout/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_44.npz",
+            "cached": true,
+            "demo": "demo_44",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/new_heldout/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_40.npz",
+            "cached": true,
+            "demo": "demo_40",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/new_heldout/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_4.npz",
+            "cached": true,
+            "demo": "demo_4",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/new_heldout/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_43.npz",
+            "cached": true,
+            "demo": "demo_43",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/new_heldout/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_28.npz",
+            "cached": true,
+            "demo": "demo_28",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/new_heldout/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_3.npz",
+            "cached": true,
+            "demo": "demo_3",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          }
+        ],
+        "train": [
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_29.npz",
+            "cached": true,
+            "demo": "demo_29",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_14.npz",
+            "cached": true,
+            "demo": "demo_14",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_33.npz",
+            "cached": true,
+            "demo": "demo_33",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_24.npz",
+            "cached": true,
+            "demo": "demo_24",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_31.npz",
+            "cached": true,
+            "demo": "demo_31",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_46.npz",
+            "cached": true,
+            "demo": "demo_46",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_0.npz",
+            "cached": true,
+            "demo": "demo_0",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_20.npz",
+            "cached": true,
+            "demo": "demo_20",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_6.npz",
+            "cached": true,
+            "demo": "demo_6",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_19.npz",
+            "cached": true,
+            "demo": "demo_19",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_45.npz",
+            "cached": true,
+            "demo": "demo_45",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_37.npz",
+            "cached": true,
+            "demo": "demo_37",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_30.npz",
+            "cached": true,
+            "demo": "demo_30",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_42.npz",
+            "cached": true,
+            "demo": "demo_42",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_26.npz",
+            "cached": true,
+            "demo": "demo_26",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_38.npz",
+            "cached": true,
+            "demo": "demo_38",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_11.npz",
+            "cached": true,
+            "demo": "demo_11",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_18.npz",
+            "cached": true,
+            "demo": "demo_18",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_8.npz",
+            "cached": true,
+            "demo": "demo_8",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_27.npz",
+            "cached": true,
+            "demo": "demo_27",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_10.npz",
+            "cached": true,
+            "demo": "demo_10",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_34.npz",
+            "cached": true,
+            "demo": "demo_34",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_12.npz",
+            "cached": true,
+            "demo": "demo_12",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_21.npz",
+            "cached": true,
+            "demo": "demo_21",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_15.npz",
+            "cached": true,
+            "demo": "demo_15",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_36.npz",
+            "cached": true,
+            "demo": "demo_36",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_47.npz",
+            "cached": true,
+            "demo": "demo_47",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_5.npz",
+            "cached": true,
+            "demo": "demo_5",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_22.npz",
+            "cached": true,
+            "demo": "demo_22",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_17.npz",
+            "cached": true,
+            "demo": "demo_17",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_16.npz",
+            "cached": true,
+            "demo": "demo_16",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_41.npz",
+            "cached": true,
+            "demo": "demo_41",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_13.npz",
+            "cached": true,
+            "demo": "demo_13",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_49.npz",
+            "cached": true,
+            "demo": "demo_49",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_48.npz",
+            "cached": true,
+            "demo": "demo_48",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_object_pick_up_the_butter_and_place_it_in_the_basket/demo_25.npz",
+            "cached": true,
+            "demo": "demo_25",
+            "frame_count": 8,
+            "source_hdf5_sha256": "07f48f1c0c06b5e10bc219e63701f0240d8205f85ccd0daab3ff9bd27bc35fb9"
+          }
+        ]
+      },
+      "suite": "libero_object",
+      "task_id": "libero_object/pick_up_the_butter_and_place_it_in_the_basket"
+    },
+    {
+      "excluded_benchmark_demos": [
+        "demo_0"
+      ],
+      "hdf5_path": "/opt/openvla/cache/datasets/libero_ground_truth_v2_official/libero_goal/open_the_middle_drawer_of_the_cabinet_demo.hdf5",
+      "hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737",
+      "instruction": "open the middle drawer of the cabinet",
+      "splits": {
+        "development": [
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/development/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_22.npz",
+            "cached": true,
+            "demo": "demo_22",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/development/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_23.npz",
+            "cached": true,
+            "demo": "demo_23",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/development/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_13.npz",
+            "cached": true,
+            "demo": "demo_13",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/development/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_12.npz",
+            "cached": true,
+            "demo": "demo_12",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/development/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_29.npz",
+            "cached": true,
+            "demo": "demo_29",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/development/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_8.npz",
+            "cached": true,
+            "demo": "demo_8",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          }
+        ],
+        "new_heldout": [
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/new_heldout/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_6.npz",
+            "cached": true,
+            "demo": "demo_6",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/new_heldout/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_40.npz",
+            "cached": true,
+            "demo": "demo_40",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/new_heldout/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_3.npz",
+            "cached": true,
+            "demo": "demo_3",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/new_heldout/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_14.npz",
+            "cached": true,
+            "demo": "demo_14",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/new_heldout/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_39.npz",
+            "cached": true,
+            "demo": "demo_39",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/new_heldout/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_4.npz",
+            "cached": true,
+            "demo": "demo_4",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/new_heldout/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_21.npz",
+            "cached": true,
+            "demo": "demo_21",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          }
+        ],
+        "train": [
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_18.npz",
+            "cached": true,
+            "demo": "demo_18",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_10.npz",
+            "cached": true,
+            "demo": "demo_10",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_46.npz",
+            "cached": true,
+            "demo": "demo_46",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_25.npz",
+            "cached": true,
+            "demo": "demo_25",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_24.npz",
+            "cached": true,
+            "demo": "demo_24",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_47.npz",
+            "cached": true,
+            "demo": "demo_47",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_49.npz",
+            "cached": true,
+            "demo": "demo_49",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_19.npz",
+            "cached": true,
+            "demo": "demo_19",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_17.npz",
+            "cached": true,
+            "demo": "demo_17",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_31.npz",
+            "cached": true,
+            "demo": "demo_31",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_2.npz",
+            "cached": true,
+            "demo": "demo_2",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_36.npz",
+            "cached": true,
+            "demo": "demo_36",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_44.npz",
+            "cached": true,
+            "demo": "demo_44",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_48.npz",
+            "cached": true,
+            "demo": "demo_48",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_27.npz",
+            "cached": true,
+            "demo": "demo_27",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_30.npz",
+            "cached": true,
+            "demo": "demo_30",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_33.npz",
+            "cached": true,
+            "demo": "demo_33",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_37.npz",
+            "cached": true,
+            "demo": "demo_37",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_45.npz",
+            "cached": true,
+            "demo": "demo_45",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_38.npz",
+            "cached": true,
+            "demo": "demo_38",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_16.npz",
+            "cached": true,
+            "demo": "demo_16",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_7.npz",
+            "cached": true,
+            "demo": "demo_7",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_41.npz",
+            "cached": true,
+            "demo": "demo_41",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_26.npz",
+            "cached": true,
+            "demo": "demo_26",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_34.npz",
+            "cached": true,
+            "demo": "demo_34",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_11.npz",
+            "cached": true,
+            "demo": "demo_11",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_42.npz",
+            "cached": true,
+            "demo": "demo_42",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_20.npz",
+            "cached": true,
+            "demo": "demo_20",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_43.npz",
+            "cached": true,
+            "demo": "demo_43",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_1.npz",
+            "cached": true,
+            "demo": "demo_1",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_32.npz",
+            "cached": true,
+            "demo": "demo_32",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_5.npz",
+            "cached": true,
+            "demo": "demo_5",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_15.npz",
+            "cached": true,
+            "demo": "demo_15",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_35.npz",
+            "cached": true,
+            "demo": "demo_35",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_9.npz",
+            "cached": true,
+            "demo": "demo_9",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_open_the_middle_drawer_of_the_cabinet/demo_28.npz",
+            "cached": true,
+            "demo": "demo_28",
+            "frame_count": 8,
+            "source_hdf5_sha256": "20252c7cf98cd7437061f7f200ae7b6cb6219fabbd53b4536dfaa8abda6ab737"
+          }
+        ]
+      },
+      "suite": "libero_goal",
+      "task_id": "libero_goal/open_the_middle_drawer_of_the_cabinet"
+    },
+    {
+      "excluded_benchmark_demos": [
+        "demo_1"
+      ],
+      "hdf5_path": "/opt/openvla/cache/datasets/libero_ground_truth_v2_official/libero_goal/put_the_bowl_on_the_plate_demo.hdf5",
+      "hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406",
+      "instruction": "put the bowl on the plate",
+      "splits": {
+        "development": [
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/development/libero_goal_put_the_bowl_on_the_plate/demo_33.npz",
+            "cached": true,
+            "demo": "demo_33",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/development/libero_goal_put_the_bowl_on_the_plate/demo_18.npz",
+            "cached": true,
+            "demo": "demo_18",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/development/libero_goal_put_the_bowl_on_the_plate/demo_13.npz",
+            "cached": true,
+            "demo": "demo_13",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/development/libero_goal_put_the_bowl_on_the_plate/demo_35.npz",
+            "cached": true,
+            "demo": "demo_35",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/development/libero_goal_put_the_bowl_on_the_plate/demo_39.npz",
+            "cached": true,
+            "demo": "demo_39",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/development/libero_goal_put_the_bowl_on_the_plate/demo_29.npz",
+            "cached": true,
+            "demo": "demo_29",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          }
+        ],
+        "new_heldout": [
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/new_heldout/libero_goal_put_the_bowl_on_the_plate/demo_47.npz",
+            "cached": true,
+            "demo": "demo_47",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/new_heldout/libero_goal_put_the_bowl_on_the_plate/demo_31.npz",
+            "cached": true,
+            "demo": "demo_31",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/new_heldout/libero_goal_put_the_bowl_on_the_plate/demo_6.npz",
+            "cached": true,
+            "demo": "demo_6",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/new_heldout/libero_goal_put_the_bowl_on_the_plate/demo_32.npz",
+            "cached": true,
+            "demo": "demo_32",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/new_heldout/libero_goal_put_the_bowl_on_the_plate/demo_42.npz",
+            "cached": true,
+            "demo": "demo_42",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/new_heldout/libero_goal_put_the_bowl_on_the_plate/demo_49.npz",
+            "cached": true,
+            "demo": "demo_49",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/new_heldout/libero_goal_put_the_bowl_on_the_plate/demo_0.npz",
+            "cached": true,
+            "demo": "demo_0",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          }
+        ],
+        "train": [
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_put_the_bowl_on_the_plate/demo_22.npz",
+            "cached": true,
+            "demo": "demo_22",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_put_the_bowl_on_the_plate/demo_25.npz",
+            "cached": true,
+            "demo": "demo_25",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_put_the_bowl_on_the_plate/demo_12.npz",
+            "cached": true,
+            "demo": "demo_12",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_put_the_bowl_on_the_plate/demo_46.npz",
+            "cached": true,
+            "demo": "demo_46",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_put_the_bowl_on_the_plate/demo_16.npz",
+            "cached": true,
+            "demo": "demo_16",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_put_the_bowl_on_the_plate/demo_15.npz",
+            "cached": true,
+            "demo": "demo_15",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_put_the_bowl_on_the_plate/demo_14.npz",
+            "cached": true,
+            "demo": "demo_14",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_put_the_bowl_on_the_plate/demo_37.npz",
+            "cached": true,
+            "demo": "demo_37",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_put_the_bowl_on_the_plate/demo_48.npz",
+            "cached": true,
+            "demo": "demo_48",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_put_the_bowl_on_the_plate/demo_7.npz",
+            "cached": true,
+            "demo": "demo_7",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_put_the_bowl_on_the_plate/demo_43.npz",
+            "cached": true,
+            "demo": "demo_43",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_put_the_bowl_on_the_plate/demo_5.npz",
+            "cached": true,
+            "demo": "demo_5",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_put_the_bowl_on_the_plate/demo_4.npz",
+            "cached": true,
+            "demo": "demo_4",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_put_the_bowl_on_the_plate/demo_44.npz",
+            "cached": true,
+            "demo": "demo_44",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_put_the_bowl_on_the_plate/demo_24.npz",
+            "cached": true,
+            "demo": "demo_24",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_put_the_bowl_on_the_plate/demo_28.npz",
+            "cached": true,
+            "demo": "demo_28",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_put_the_bowl_on_the_plate/demo_27.npz",
+            "cached": true,
+            "demo": "demo_27",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_put_the_bowl_on_the_plate/demo_34.npz",
+            "cached": true,
+            "demo": "demo_34",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_put_the_bowl_on_the_plate/demo_17.npz",
+            "cached": true,
+            "demo": "demo_17",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_put_the_bowl_on_the_plate/demo_10.npz",
+            "cached": true,
+            "demo": "demo_10",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_put_the_bowl_on_the_plate/demo_11.npz",
+            "cached": true,
+            "demo": "demo_11",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_put_the_bowl_on_the_plate/demo_45.npz",
+            "cached": true,
+            "demo": "demo_45",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_put_the_bowl_on_the_plate/demo_26.npz",
+            "cached": true,
+            "demo": "demo_26",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_put_the_bowl_on_the_plate/demo_30.npz",
+            "cached": true,
+            "demo": "demo_30",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_put_the_bowl_on_the_plate/demo_9.npz",
+            "cached": true,
+            "demo": "demo_9",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_put_the_bowl_on_the_plate/demo_36.npz",
+            "cached": true,
+            "demo": "demo_36",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_put_the_bowl_on_the_plate/demo_23.npz",
+            "cached": true,
+            "demo": "demo_23",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_put_the_bowl_on_the_plate/demo_3.npz",
+            "cached": true,
+            "demo": "demo_3",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_put_the_bowl_on_the_plate/demo_8.npz",
+            "cached": true,
+            "demo": "demo_8",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_put_the_bowl_on_the_plate/demo_40.npz",
+            "cached": true,
+            "demo": "demo_40",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_put_the_bowl_on_the_plate/demo_21.npz",
+            "cached": true,
+            "demo": "demo_21",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_put_the_bowl_on_the_plate/demo_2.npz",
+            "cached": true,
+            "demo": "demo_2",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_put_the_bowl_on_the_plate/demo_20.npz",
+            "cached": true,
+            "demo": "demo_20",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_put_the_bowl_on_the_plate/demo_41.npz",
+            "cached": true,
+            "demo": "demo_41",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_put_the_bowl_on_the_plate/demo_19.npz",
+            "cached": true,
+            "demo": "demo_19",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          },
+          {
+            "cache": "/opt/openvla/cache/datasets/talk2dino_openvla_adaptation_v1/train/libero_goal_put_the_bowl_on_the_plate/demo_38.npz",
+            "cached": true,
+            "demo": "demo_38",
+            "frame_count": 8,
+            "source_hdf5_sha256": "e69528b0cf10dfc59b20698e12ec2affc03f3887309034d3eb74cac3ec929406"
+          }
+        ]
+      },
+      "suite": "libero_goal",
+      "task_id": "libero_goal/put_the_bowl_on_the_plate"
+    }
+  ]
+}
